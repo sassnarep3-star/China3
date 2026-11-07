@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "checked": "2026-11-07",
+    "thesis": "There is no 'conversion tax' in either country. The cost of getting money out of China is the sum of five separate things, and only two of them are taxes. The largest single number on the page is a US reporting penalty, not a Chinese conversion charge.",
+    "layers": [
+      {
+        "layer": 1,
+        "name": "FX spread and fees",
+        "type": "Transaction cost",
+        "nature": "Unavoidable, small, and set by your bank",
+        "status": "Rates not published by any regulator — see the model below"
+      },
+      {
+        "layer": 2,
+        "name": "PRC tax on the source of the money",
+        "type": "Tax",
+        "nature": "20% flat on property transfer, interest, dividends, rent; 3%–45% on salary",
+        "status": "Verified rates; whether it applies depends on what created the balance"
+      },
+      {
+        "layer": 3,
+        "name": "US tax on foreign-currency gain",
+        "type": "Tax",
+        "nature": "Only on a personal-transaction conversion gain above USD 200",
+        "status": "Verified statutory text (third-party mirror)"
+      },
+      {
+        "layer": 4,
+        "name": "Chinese FX-violation fines",
+        "type": "Penalty",
+        "nature": "0% if you stay lawful; up to 30%, or 30%–100% if serious, on the amount involved",
+        "status": "Verified"
+      },
+      {
+        "layer": 5,
+        "name": "US information-reporting penalties",
+        "type": "Penalty",
+        "nature": "The dominant number: up to 50% of the account balance for a willful FBAR violation",
+        "status": "Verified"
+      }
+    ],
+    "model_note": "Layer 1 cannot be stated as a number honestly: SAFE publishes no retail spread and every bank's tariff differs. The formula and a calculator are given instead, with every rate left for your own bank's quote."
+  },
+  "penalties": [
+    {
+      "id": "N01",
+      "jurisdiction": "PRC",
+      "layer": 4,
+      "provision": "外汇管理条例 Art. 39 — evasion of exchange control (逃汇)",
+      "trigger": "Moving domestic FX or domestic capital out of the country in breach of the rules, including by false means",
+      "penalty": "Order to repatriate; fine of up to 30% of the amount evaded; where serious, 30% to 100% of the amount; criminal liability if it constitutes a crime",
+      "max_pct": 100,
+      "verified": true,
+      "sources": ["S05"],
+      "severity": "Severe"
+    },
+    {
+      "id": "N02",
+      "jurisdiction": "PRC",
+      "layer": 4,
+      "provision": "外汇管理条例 Art. 40 — illegal arbitrage of FX (非法套汇)",
+      "trigger": "Settling RMB-denominated obligations in FX, or using false or invalid transaction documents to buy FX from a bank",
+      "penalty": "Forced re-conversion; fine of up to 30% of the amount; where serious, 30% to 100%; criminal liability if it constitutes a crime",
+      "max_pct": 100,
+      "verified": true,
+      "sources": ["S05"],
+      "severity": "Severe"
+    },
+    {
+      "id": "N03",
+      "jurisdiction": "PRC",
+      "layer": 4,
+      "provision": "外汇管理条例 Art. 45 — private or disguised FX trading / underground banking",
+      "trigger": "Buying or selling FX privately, in disguised form, as a dealer, or introducing such trades, where the amount is relatively large",
+      "penalty": "Warning, confiscation of illegal gains, fine of up to 30% of the amount; where serious, 30% to 100%; criminal liability if it constitutes a crime",
+      "max_pct": 100,
+      "verified": true,
+      "sources": ["S05"],
+      "severity": "Severe"
+    },
+    {
+      "id": "N04",
+      "jurisdiction": "PRC",
+      "layer": 4,
+      "provision": "外汇管理条例 Art. 42 — unlawful carriage of FX across the border",
+      "trigger": "Carrying FX in or out in breach of the cash rules",
+      "penalty": "Warning, and a fine of up to 20% of the amount; customs action where a law or regulation so provides",
+      "max_pct": 20,
+      "verified": true,
+      "sources": ["S05", "S07"],
+      "severity": "Moderate"
+    },
+    {
+      "id": "N05",
+      "jurisdiction": "PRC",
+      "layer": 4,
+      "provision": "外汇管理条例 Art. 48 — false documents, failure to declare",
+      "trigger": "Not filing the balance-of-payments declaration, or submitting invalid or untrue documents, or breaching account/registration rules",
+      "penalty": "Order to correct, warning, and for an individual a fine of up to RMB 50,000",
+      "max_pct": null,
+      "verified": true,
+      "sources": ["S05"],
+      "severity": "Moderate"
+    },
+    {
+      "id": "N06",
+      "jurisdiction": "PRC",
+      "layer": 4,
+      "provision": "Criminal Law Art. 225(4) — illegal business operation, via 法释〔2019〕1号",
+      "trigger": "Unlawful FX dealing or disguised FX dealing that disturbs financial order, at RMB 5,000,000 of turnover or RMB 100,000 of illegal gains (RMB 25,000,000 / RMB 500,000 for 'especially serious')",
+      "penalty": "Prosecution as a crime; the 2019 interpretation also applies the heavier of the illegal-business and money-laundering provisions where both are made out",
+      "max_pct": null,
+      "verified": true,
+      "sources": ["S10", "S05"],
+      "severity": "Criminal"
+    },
+    {
+      "id": "N07",
+      "jurisdiction": "PRC",
+      "layer": 4,
+      "provision": "个人外汇管理办法 Art. 7 — splitting (分拆) to evade limits",
+      "trigger": "Using splitting, or false commercial documents, to get around limit supervision or authenticity checks",
+      "penalty": "The prohibition is express; the sanction is the one prescribed by the FX Regulations (N01/N02/N05)",
+      "max_pct": null,
+      "verified": true,
+      "sources": ["S01", "S05"],
+      "severity": "Severe"
+    },
+    {
+      "id": "N08",
+      "jurisdiction": "US",
+      "layer": 5,
+      "provision": "31 U.S.C. 5321(a)(5)(B) — non-willful FBAR violation",
+      "trigger": "Failing to file an FBAR when required, without willfulness",
+      "penalty": "Up to USD 16,536 per violation (inflation-adjusted, penalties assessed from 17 January 2025); a reasonable-cause exception applies",
+      "max_pct": null,
+      "verified": true,
+      "sources": ["S13", "S14", "S12"],
+      "severity": "Moderate"
+    },
+    {
+      "id": "N09",
+      "jurisdiction": "US",
+      "layer": 5,
+      "provision": "31 U.S.C. 5321(a)(5)(C) — willful FBAR violation",
+      "trigger": "Willfully failing to file, or willfully causing a violation",
+      "penalty": "Up to USD 165,353, or 50% of the balance in the account at the time of the violation, whichever is greater; the reasonable-cause defence is unavailable",
+      "max_pct": 50,
+      "verified": true,
+      "sources": ["S13", "S14", "S12"],
+      "severity": "Severe"
+    },
+    {
+      "id": "N10",
+      "jurisdiction": "US",
+      "layer": 5,
+      "provision": "26 U.S.C. 6038D — failure to file Form 8938",
+      "trigger": "Not filing Form 8938 when the threshold is met",
+      "penalty": "",
+      "max_pct": null,
+      "verified": false,
+      "sources": [],
+      "severity": "Unverified",
+      "flag": "The penalty provision exists; the exact escalating amount was not confirmed from an official source in this pass. Left blank."
+    },
+    {
+      "id": "N11",
+      "jurisdiction": "US",
+      "layer": 5,
+      "provision": "Streamlined domestic offshore penalty",
+      "trigger": "Electing the streamlined procedures while living in the US",
+      "penalty": "5% of the highest aggregate balance of the unreported assets, in place of information-return and FBAR penalties",
+      "max_pct": 5,
+      "verified": true,
+      "sources": ["S18"],
+      "severity": "Low"
+    },
+    {
+      "id": "N12",
+      "jurisdiction": "US",
+      "layer": 5,
+      "provision": "Streamlined foreign offshore procedures",
+      "trigger": "Electing the foreign procedures while meeting the non-residency test",
+      "penalty": "No miscellaneous offshore penalty, and no failure-to-file, accuracy-related, information-return or FBAR penalties absent fraud or willfulness",
+      "max_pct": 0,
+      "verified": true,
+      "sources": ["S19"],
+      "severity": "None"
+    },
+    {
+      "id": "N13",
+      "jurisdiction": "US",
+      "layer": 5,
+      "provision": "31 CFR 1010.340 — unreported cross-border currency",
+      "trigger": "Physically moving more than USD 10,000 in or out without a FinCEN Form 105",
+      "penalty": "",
+      "max_pct": null,
+      "verified": false,
+      "sources": ["S15"],
+      "severity": "Unverified",
+      "flag": "The reporting duty is verified; the specific civil and criminal penalty amounts were not confirmed from an official source in this pass. Left blank."
+    },
+    {
+      "id": "N14",
+      "jurisdiction": "PRC",
+      "layer": 2,
+      "provision": "IIT Law Art. 3(3) — flat rate on the categories that matter",
+      "trigger": "Realising interest, dividends, rent, property-transfer or incidental income",
+      "penalty": "20% of the taxable amount (property transfer: proceeds less original cost and reasonable expenses)",
+      "max_pct": 20,
+      "verified": true,
+      "sources": ["S09"],
+      "severity": "Tax"
+    },
+    {
+      "id": "N15",
+      "jurisdiction": "US",
+      "layer": 3,
+      "provision": "26 U.S.C. 988(e)(2) — personal-transaction currency gain",
+      "trigger": "Converting RMB where the exchange-rate gain on that transaction exceeds USD 200",
+      "penalty": "The USD 200 exclusion switches off entirely, so the whole gain is in play",
+      "max_pct": null,
+      "verified": true,
+      "sources": ["S24"],
+      "severity": "Tax",
+      "flag": "Statute read from a non-government mirror — confirm before relying on it."
+    }
+  ],
+  "cost_model": {
+    "formula": "Net USD received = (CNY × rate_bank) − outbound wire fee − correspondent/intermediary deductions − receiving bank fee",
+    "effective_cost_pct": "((CNY × rate_mid) − net USD received) ÷ (CNY × rate_mid) × 100",
+    "components": [
+      {
+        "name": "Bank buying rate vs mid-market rate",
+        "typical_source": "Chinese bank's published 现汇买入价 on the day",
+        "value": "",
+        "verified": false,
+        "flag": "No regulator publishes retail spreads; every bank's tariff differs and changes. Left blank."
+      },
+      {
+        "name": "Outbound telegraphic transfer fee",
+        "typical_source": "The remitting bank's published tariff",
+        "value": "",
+        "verified": false,
+        "flag": "Not published by any regulator. Left blank."
+      },
+      {
+        "name": "Correspondent / intermediary bank deduction",
+        "typical_source": "The intermediary bank in the payment chain",
+        "value": "",
+        "verified": false,
+        "flag": "Not determinable in advance. Left blank."
+      },
+      {
+        "name": "Receiving bank incoming wire fee",
+        "typical_source": "Your US bank's schedule of fees",
+        "value": "",
+        "verified": false,
+        "flag": "Set by your own bank. Left blank."
+      },
+      {
+        "name": "SAFE application cost (approved routes)",
+        "typical_source": "Statutory fees, if any",
+        "value": "",
+        "verified": false,
+        "flag": "No fee schedule found in the sources reviewed. Left blank."
+      }
+    ]
+  },
+  "scenarios": {
+    "note": "Worst-case statutory exposure as a percentage of the amount moved, by route. Percentages are from the provisions above; they are not predictions.",
+    "rows": [
+      { "route": "C01 Emigrant property transfer", "china_penalty_pct": 0, "us_penalty_pct": 0, "basis": "Lawful route, documents in order", "sources": ["S03"] },
+      { "route": "C03 Current-account income conversion", "china_penalty_pct": 0, "us_penalty_pct": 0, "basis": "Lawful route, documents in order", "sources": ["S01"] },
+      { "route": "C07 USD 50,000 annual quota", "china_penalty_pct": 0, "us_penalty_pct": 0, "basis": "Lawful route within the cap", "sources": ["S02"] },
+      { "route": "C20 Smurfing / pooling quotas", "china_penalty_pct": 100, "us_penalty_pct": 50, "basis": "Art. 39 (30%–100% if serious) plus willful FBAR", "sources": ["S05", "S13"] },
+      { "route": "C19 Underground bank", "china_penalty_pct": 100, "us_penalty_pct": 50, "basis": "Art. 45 (30%–100%) plus willful FBAR; criminal from RMB 5m", "sources": ["S05", "S10", "S13"] },
+      { "route": "C21 False trade documents", "china_penalty_pct": 100, "us_penalty_pct": 50, "basis": "Art. 40 plus willful FBAR", "sources": ["S05", "S13"] },
+      { "route": "C18 Crypto / stablecoin", "china_penalty_pct": null, "us_penalty_pct": null, "basis": "Illegal financial activity; penalty percentage not fixed by the notice — see flag", "sources": ["S08"] },
+      { "route": "C13 Overseas ATM cash", "china_penalty_pct": 100, "us_penalty_pct": null, "basis": "Over-cap withdrawals: suspension plus FX Regulations sanction", "sources": ["S06", "S05"] },
+      { "route": "C14 Carrying cash", "china_penalty_pct": 20, "us_penalty_pct": null, "basis": "Art. 42 — up to 20% of the amount", "sources": ["S05", "S07"] }
+    ]
+  }
+}

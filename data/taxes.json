@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "checked": "2026-11-07",
+    "kinds": {
+      "rule": "A rule stated in a statute, regulation, treaty or agency guidance.",
+      "analysis": "Reasoning drawn from the rules. Not a quotation. Shown so you can check the logic; flagged for professional review."
+    },
+    "note": "Amounts are left blank where no official source could confirm them. 'Split' means China and the US each tax a different thing."
+  },
+  "items": [
+    {
+      "id": "T01",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "Worldwide income",
+      "what_it_means": "Being abroad or holding foreign money changes nothing: a US citizen reports and pays US tax on income from all sources.",
+      "amount": "All worldwide income",
+      "verified": true,
+      "sources": ["S22"],
+      "flag": ""
+    },
+    {
+      "id": "T02",
+      "jurisdiction": "US",
+      "kind": "analysis",
+      "item": "Wiring your own money is not itself a taxable event",
+      "what_it_means": "US tax attaches to income, not to the movement of your own after-tax principal. No provision in the sources reviewed imposes tax on the remittance as such. What is taxable is the income that created the balance (if not yet taxed) and any foreign-currency gain on conversion (T03).",
+      "amount": "0% on principal",
+      "verified": false,
+      "sources": ["S22", "S23"],
+      "flag": "Analysis, not a quoted rule — have a preparer confirm for your facts."
+    },
+    {
+      "id": "T03",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "Foreign-currency gain on the conversion itself",
+      "what_it_means": "Disposing of a nonfunctional currency is a section 988 transaction. For an individual's personal transaction, exchange-rate gain is not recognised — unless the gain on that transaction exceeds USD 200, in which case the exclusion does not apply at all.",
+      "amount": "USD 200 per transaction (cliff, not an allowance)",
+      "verified": true,
+      "sources": ["S24"],
+      "flag": "Statute text read from a non-government mirror of 26 U.S.C. § 988 — confirm on uscode.house.gov. The IRS position that a personal-transaction gain over USD 200 is reported as a capital gain was not verified from an official IRS page in this pass."
+    },
+    {
+      "id": "T04",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "FBAR filing threshold",
+      "what_it_means": "A US person with a financial interest in, or signature authority over, foreign accounts whose aggregate value exceeded USD 10,000 at any time in the calendar year must file FinCEN Form 114. Whether the account earned anything is irrelevant.",
+      "amount": "USD 10,000 aggregate, any time in the year",
+      "verified": true,
+      "sources": ["S12"],
+      "flag": ""
+    },
+    {
+      "id": "T05",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "FBAR penalties",
+      "what_it_means": "Inflation-adjusted maximums for penalties assessed on or after 17 January 2025. A willful violation is capped at the greater of the adjusted statutory amount or 50% of the account balance at the time of the violation.",
+      "amount": "Non-willful up to USD 16,536 per violation; willful up to USD 165,353 or 50% of the balance",
+      "verified": true,
+      "sources": ["S13", "S14"],
+      "flag": ""
+    },
+    {
+      "id": "T06",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "Form 8938 (FATCA) thresholds",
+      "what_it_means": "A US citizen is a specified individual. Thresholds depend on filing status and where you live; living abroad raises them sharply.",
+      "amount": "Living in the US: USD 50,000 year-end / 75,000 any time (single), 100,000 / 150,000 (joint). Living abroad: 200,000 / 300,000 (single), 400,000 / 600,000 (joint)",
+      "verified": true,
+      "sources": ["S16"],
+      "flag": ""
+    },
+    {
+      "id": "T07",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "Form 8938 penalty",
+      "what_it_means": "The statute imposing a penalty for failing to file Form 8938 exists (26 U.S.C. § 6038D), but the exact escalating amount was not confirmed from an official source in this pass.",
+      "amount": "",
+      "verified": false,
+      "sources": [],
+      "flag": "Unverified — left blank deliberately."
+    },
+    {
+      "id": "T08",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "Form 3520 — large gifts from a foreign person",
+      "what_it_means": "Receiving more than USD 100,000 in gifts or bequests from a nonresident alien individual or foreign estate triggers Form 3520. Relevant if a relative in China gifts you money rather than you moving your own.",
+      "amount": "More than USD 100,000 in the year",
+      "verified": true,
+      "sources": ["S22"],
+      "flag": ""
+    },
+    {
+      "id": "T09",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "Carrying cash in",
+      "what_it_means": "Physically transporting, mailing or shipping more than USD 10,000 at one time into or out of the US requires a report (FinCEN Form 105). Bank wires are outside this rule.",
+      "amount": "More than USD 10,000",
+      "verified": true,
+      "sources": ["S15"],
+      "flag": ""
+    },
+    {
+      "id": "T10",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "Streamlined domestic offshore penalty",
+      "what_it_means": "If you live in the US and your non-compliance was non-willful, this route replaces information-return and FBAR penalties with a single miscellaneous penalty.",
+      "amount": "5% of the highest aggregate balance of the unreported assets",
+      "verified": true,
+      "sources": ["S18", "S17"],
+      "flag": ""
+    },
+    {
+      "id": "T11",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "Streamlined foreign offshore penalty",
+      "what_it_means": "If you meet the non-residency test (no US abode and 330 full days abroad in at least one of the last three years) and certify non-willful conduct, no miscellaneous offshore penalty is imposed, and failure-to-file, accuracy-related, information-return and FBAR penalties are waived absent fraud or willfulness.",
+      "amount": "0% miscellaneous offshore penalty",
+      "verified": true,
+      "sources": ["S19", "S17"],
+      "flag": ""
+    },
+    {
+      "id": "T12",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "FATCA status of China",
+      "what_it_means": "Treasury lists China as 'Agreement in Substance', Model 1, treated as having an IGA in effect since 30 June 2014. A signed agreement is not linked. Practically: Chinese institutions are treated as FATCA-compliant, and you should assume the account is knowable to the IRS rather than assume it is invisible.",
+      "amount": "Model 1 — agreement in substance",
+      "verified": true,
+      "sources": ["S21"],
+      "flag": "Treasury publishes no per-year exchange statistics for China; the operational reality of reporting is not publicly verifiable."
+    },
+    {
+      "id": "T13",
+      "jurisdiction": "US–PRC",
+      "kind": "rule",
+      "item": "Treaty cap on dividends",
+      "what_it_means": "China may tax dividends paid to a US beneficial owner at no more than 10% of the gross amount.",
+      "amount": "10% of gross",
+      "verified": true,
+      "sources": ["S20"],
+      "flag": ""
+    },
+    {
+      "id": "T14",
+      "jurisdiction": "US–PRC",
+      "kind": "rule",
+      "item": "Treaty cap on interest",
+      "what_it_means": "China may tax interest arising in China and paid to a US beneficial owner at no more than 10% of the gross amount.",
+      "amount": "10% of gross",
+      "verified": true,
+      "sources": ["S20"],
+      "flag": ""
+    },
+    {
+      "id": "T15",
+      "jurisdiction": "US–PRC",
+      "kind": "rule",
+      "item": "Saving clause",
+      "what_it_means": "The treaty does not stop the US from taxing its own citizens as if the treaty did not exist. So the treaty limits China's tax; it does not limit yours. Relief on the US side comes from the foreign tax credit, not the treaty.",
+      "amount": "US may tax citizens regardless",
+      "verified": true,
+      "sources": ["S20", "S27"],
+      "flag": ""
+    },
+    {
+      "id": "T16",
+      "jurisdiction": "US",
+      "kind": "rule",
+      "item": "Foreign tax credit",
+      "what_it_means": "Individuals claim a credit for foreign income tax paid on foreign-source income, which is how double taxation is actually relieved.",
+      "amount": "Credit, claimed on Form 1116",
+      "verified": true,
+      "sources": ["S27"],
+      "flag": ""
+    },
+    {
+      "id": "T17",
+      "jurisdiction": "PRC",
+      "kind": "rule",
+      "item": "IIT rates that could touch the balance",
+      "what_it_means": "Comprehensive income 3%–45%; business income 5%–35%; and a flat 20% on interest, dividends, rent, property transfer and incidental income.",
+      "amount": "Flat 20% on the categories that matter here",
+      "verified": true,
+      "sources": ["S09"],
+      "flag": ""
+    },
+    {
+      "id": "T18",
+      "jurisdiction": "PRC",
+      "kind": "rule",
+      "item": "Who China taxes",
+      "what_it_means": "A non-resident (no domicile and fewer than 183 days in the tax year) is taxed only on China-source income. A US citizen living in the US is a non-resident of China.",
+      "amount": "China-source income only for non-residents",
+      "verified": true,
+      "sources": ["S09"],
+      "flag": ""
+    },
+    {
+      "id": "T19",
+      "jurisdiction": "PRC",
+      "kind": "rule",
+      "item": "The six-year rule for foreign individuals",
+      "what_it_means": "A non-domiciled individual who has been resident 183+ days for six consecutive years, without a single absence of more than 30 days in any of them, becomes taxable on worldwide salary income from the seventh year. The count starts in 2019.",
+      "amount": "Worldwide salary from year 7",
+      "verified": true,
+      "sources": ["S11"],
+      "flag": "Only bites if you are actually living in China; it does not apply to a non-resident."
+    },
+    {
+      "id": "T20",
+      "jurisdiction": "PRC",
+      "kind": "rule",
+      "item": "Tax settlement before cancelling household registration",
+      "what_it_means": "A person who cancels PRC household registration because they are emigrating must complete a tax settlement before the cancellation. That is the sequencing trap: the emigrant transfer route needs the cancellation certificate, and the certificate needs the tax clearance first.",
+      "amount": "Settlement required before cancellation",
+      "verified": true,
+      "sources": ["S09"],
+      "flag": ""
+    },
+    {
+      "id": "T21",
+      "jurisdiction": "PRC",
+      "kind": "rule",
+      "item": "Tax on a property sale",
+      "what_it_means": "Property-transfer income is taxed at 20% of proceeds less original cost and reasonable expenses, and the registration authority checks the tax-clearance certificate before it will register the transfer.",
+      "amount": "20% of the gain",
+      "verified": true,
+      "sources": ["S09"],
+      "flag": ""
+    },
+    {
+      "id": "T22",
+      "jurisdiction": "PRC",
+      "kind": "rule",
+      "item": "Tax clearance before an outward transfer",
+      "what_it_means": "The outward property-transfer application must include a tax certificate or tax-payment certificate from the competent tax authority; below RMB 150,000 in total the tax certificate is not demanded.",
+      "amount": "Certificate required; waived under RMB 150,000",
+      "verified": true,
+      "sources": ["S03", "S04"],
+      "flag": ""
+    },
+    {
+      "id": "T23",
+      "jurisdiction": "PRC",
+      "kind": "analysis",
+      "item": "Converting RMB into USD is not on the list of taxable items",
+      "what_it_means": "The IIT Law sets out a closed list of nine income categories. Currency conversion is not one of them, and there is no separate conversion tax. What can be taxed is the underlying income that produced the RMB, and any gain embedded in the asset sold.",
+      "amount": "No conversion tax",
+      "verified": false,
+      "sources": ["S09"],
+      "flag": "Analysis from the statutory list, not an express statement — flagged for review."
+    },
+    {
+      "id": "T24",
+      "jurisdiction": "PRC",
+      "kind": "rule",
+      "item": "Tax on savings-deposit interest",
+      "what_it_means": "Interest income is on the 20% list (T17). A temporary exemption for individual savings-deposit interest is widely described, but it was not confirmed from an official source in this pass.",
+      "amount": "",
+      "verified": false,
+      "sources": [],
+      "flag": "Unverified — left blank deliberately."
+    },
+    {
+      "id": "T25",
+      "jurisdiction": "PRC",
+      "kind": "analysis",
+      "item": "No individual exit tax identified",
+      "what_it_means": "The IIT Law's closed list of taxable events contains no deemed-disposal charge on ceasing to be resident; the emigration charge that does exist is the pre-cancellation tax settlement (T20) and the 20% property-transfer tax (T21).",
+      "amount": "No exit tax identified",
+      "verified": false,
+      "sources": ["S09"],
+      "flag": "Analysis of an absence — flagged; confirm with a PRC adviser if the balance is large."
+    }
+  ]
+}
