@@ -1,3 +1,22 @@
-__pycache__/
-*.pyc
+# OS / editor
 .DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# build scratch
+.cache/
+tmp/
+*.log
+
+# node (only ever used for local DOM smoke tests, never part of the site)
+node_modules/
+package-lock.json

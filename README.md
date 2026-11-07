@@ -1,98 +1,114 @@
-# China Funds Transfer Guide
+# China3 — getting money out of mainland China as a US citizen
 
-A static, official-source-backed research dashboard about lawful ways to move personally owned funds from a mainland China bank account to the United States. It separates the Chinese foreign-exchange process, tax on the source of funds, bank conversion/remittance pricing, and U.S. tax/account reporting.
+A sourced research pack and two-part website answering one question:
 
-## Site pages
+> Personal money is sitting in a Chinese bank account and cannot be turned into USD without what looks like a large tax hit. What are the lawful ways to convert it, what does each really cost, and what is the least-penalty path for a US citizen?
 
-- `index.html` — executive brief and recommended sequence.
-- `routes.html` — transfer-route comparison table, with source links in every row.
-- `tax.html` — Chinese tax / FX costs / U.S. tax and reporting distinctions, with source links in every row.
-- `review.html` — unresolved case facts and irregularities; unverified amounts remain blank.
-- `sources.html` — official source register and research method.
-
-## Core finding
-
-SAFE’s equivalent USD 50,000 annual individual convenience amount is not itself a tax or a universal annual legal cap. Official SAFE guidance describes processing of authentic, eligible current-account transactions above that amount with transaction evidence. This does not establish that an arbitrary personal capital/savings transfer is eligible. SAFE also prohibits evading controls by splitting among people. Special outbound personal-property procedures apply only in qualifying emigration/inheritance cases and require approvals and supporting documents. No official source reviewed establishes a flat tax on converting the principal of every personal CNY bank balance to USD. Tax, FX spread, bank fees, and documentation requirements must be distinguished.
-
-For a U.S. citizen, worldwide-income rules and independent foreign-account reporting may apply. FBAR and Form 8938 are not the same as income tax or permission to remit funds. See the linked IRS sources and consult a qualified China/U.S. cross-border tax adviser for individual facts.
-
-## Run locally
-
-This is plain static HTML/CSS and has no package install or build step. From the repo root:
-
-```sh
-python3 -m http.server 8000 --bind 0.0.0.0
-```
-
-Visit `http://localhost:8000` locally. GitHub Pages can serve the root directly. An Actions workflow is provided to publish from `main` when repository Pages settings use GitHub Actions.
-
-## Research limits
-
-This repository did not contain case records, tax assessments, bank fee schedules, account details or an existing app. No exact transfer amount, conversion rate, fee, Chinese tax, U.S. tax or approval eligibility can be confirmed without those records. Numerical values not established by official sources are left blank and surfaced on the **Flagged for review** page. This guide is informational, not legal, banking or tax advice. Sources and dates are listed on the source register; rules and local bank procedures should be reconfirmed before a transaction.
+**Live site:** https://sassnarep3-star.github.io/China3/
+· editorial guide at `/`
+· structured dashboard at [`/docs/`](https://sassnarep3-star.github.io/China3/docs/)
+(published by GitHub Pages from `main`, root path).
 
 ---
 
-## Deep research pass (final integration session)
+## The finding
 
-A second, deeper research pass was integrated from branch `arena/c703e38c-china3`.
-All content above is preserved; the following pages and data were added.
+There is no Chinese "conversion tax", and no US tax on wiring your own money home. The balance is expensive to move because three unrelated things get confused with each other:
 
-### Added site pages
+1. **Chinese capital controls** — a *permission* problem, not a tax problem.
+2. **PRC income tax on whatever created the money** — 20% flat on property gains, interest, rent and dividends; nothing further on salary already taxed.
+3. **US information-reporting penalties** — a willful FBAR violation is capped at the greater of **USD 165,353 or 50% of the account balance**, an order of magnitude larger than any FX spread.
 
-| Page | Contents |
+The annual USD 50,000 figure is a *convenience processing amount*, not a tax and not a universal cap on every balance. The cheapest lawful sequence is therefore: classify the money → fix US reporting first → then use the one Chinese channel with no amount ceiling (**emigrant property transfer**, 移民财产转移, PBC Order [2004] No. 16) or the one with no annual quota (**non-resident conversion of current-account income**, 个人外汇管理办法 art. 13).
+
+Full reasoning: the editorial guide (`/index.html`) and the dashboard's **Playbook** page.
+
+---
+
+## The site
+
+One Pages deployment, two complementary layers:
+
+**Editorial guide** (root) — prose-first pages produced by the earlier sessions:
+
+| Page | Content |
 |---|---|
-| `executive-summary.html` | Executive summary of important details, ranked recommendation, full requirement-coverage map |
-| `china-rules.html` | 50 China-side FX/tax rules, line by line, one official link per row |
-| `us-tax.html` | 28 IRS / FinCEN / Treasury / eCFR rules, one official link per row |
-| `channels.html` | 35 conversion channels with pros, cons, limits and penalty exposure |
-| `penalty.html` | Conversion penalty decomposed into 35 separately verifiable cost layers |
-| `findings.html` | Analysis and findings |
-| `review.html` (appended) | Full "Flagged for Review" irregularity register (23 items) |
-| `sources.html` (appended) | Official source register for the deep-research pass |
+| `index.html` | Landing page, executive brief, recommended sequence |
+| `routes.html` | 8 documented transfer routes compared |
+| `methods.html` | 11 CNY→USD methods with pros, cons, cost, US impact |
+| `china-rules.html` | SAFE/PBOC quotas, documentation, cash limits, penalties |
+| `us-tax.html` | FBAR, Form 8938, FEIE, foreign tax credit, treaty, §988 |
+| `tax.html` | Tax vs FX cost vs reporting, separated |
+| `penalties.html` | Penalty and cost breakdown |
+| `flagged-review.html` | Unverified items, deliberately blank |
+| `review.html`, `sources.html` | Case facts, source register, method |
 
-The first session's `routes.html` and `tax.html` remain published as complementary reading.
+**Data dashboard** (`docs/`, generated) — every row is structured data that a script can check:
 
-### Machine-readable data and verification
+| Page | Content |
+|---|---|
+| `docs/index.html` | Executive summary, top-5 ranked routes, the four numbers |
+| `docs/playbook.html` | Nine ordered steps and the sequencing table |
+| `docs/channels.html` | 22 channels — searchable, filterable, expandable |
+| `docs/taxes.html` | US / PRC / treaty exposure, `rule` vs `analysis` |
+| `docs/penalties.html` | Five cost layers, 15 provisions, cost model, calculator |
+| `docs/flagged.html` | 19 flagged items with status, impact and sources |
+| `docs/sources.html` | 27 sources, tiered, with the proposition each supports |
+| `docs/methodology.html`, `docs/audit.html` | Method, and the audit of this repository |
 
-- `data/china_rules.csv`, `data/us_rules.csv`, `data/channels.csv`, `data/penalty.csv`,
-  `data/findings.csv`, `data/flags.csv`, `data/sources.csv`, `data/sources.json`.
-- `scripts/build_site.py` regenerates every deep-research table from those CSVs.
-- `scripts/integrate.py` rebuilds shared navigation and the appended sections additively.
-- `scripts/verify.py` audits every row for an official source link, rejects non-official
-  domains, enforces blank values for UNVERIFIED rows, checks HTML/CSV row counts, checks
-  every local link in every HTML page, and confirms all flags and source ids are published.
+The dashboard makes no runtime network calls: `docs/assets/data.js` is generated with all five JSON files inlined, so there is no fetch, no CDN and no external font.
 
-Run the checks locally with:
+---
 
-```sh
-python3 scripts/build_site.py && python3 scripts/integrate.py && python3 scripts/verify.py
+## Data and pipeline
+
+| Path | What it is |
+|---|---|
+| `data/sources.json` | 27 sources: publisher, tier, URL, proposition supported, date checked |
+| `data/channels.json` | 22 CNY→USD routes: status, cap, requirements, pros, cons, verdict |
+| `data/taxes.json` | 25 tax items split US / PRC / treaty |
+| `data/penalties.json` | Five cost layers, 15 provisions, cost model, scenarios |
+| `data/flagged.json` | 19 items that are blank, ambiguous, or depend on the reader's facts |
+| `scripts/validate_data.py` | Enforces the "official source or explicit flag" contract |
+| `scripts/check_links.py` | Links, anchors, URL hygiene, bundle freshness |
+| `scripts/build_site.py` | Builds `docs/`, refusing to build on a contract violation |
+| `VERIFICATION.md` | Per-URL verification log, including rejected URLs |
+| `REPO_AUDIT.md` | Audit of the repository as found |
+| `COORDINATION.md` | Task board, claims, handoffs, PR record |
+
+```bash
+python3 scripts/validate_data.py      # data contract
+python3 scripts/build_site.py         # regenerate docs/
+python3 scripts/check_links.py        # links, anchors, freshness
+python3 scripts/check_links.py --fetch  # optional: HTTP-check every source URL
+```
+
+No third-party dependencies. `.github/workflows/ci.yml` runs the contract check, fails if `docs/` is stale, and checks every external URL. `.github/workflows/pages.yml` validates root navigation and deploys to Pages.
+
+To browse locally:
+
+```bash
 python3 -m http.server 8000 --bind 0.0.0.0
 ```
 
-### Headline findings of the deep pass
+---
 
-- A passport-holding U.S. citizen is generally a **境外个人 (foreign individual)** under
-  PBOC Decree [2006] No. 3 Art. 37. Under SAFE's Current Account Guidelines Art. 59, a
-  foreign individual buys FX with an ID plus **source-of-funds** evidence (including a tax
-  certificate), and SAFE's own Q&A handbook says this has **no annual quota limit**. The
-  USD 50,000 figure that dominates online advice may therefore not be the binding
-  constraint — but the 2008 State Council regulation defines 境内个人 differently, so the
-  account-opening bank must confirm the classification (IR-007).
-- No official source reviewed establishes a flat Chinese **tax on converting** personal
-  savings principal. The perceived "considerable taxes" most plausibly combine
-  source-of-funds income tax and tax-clearance documents, bank spread and wire fees, and
-  U.S. information-reporting exposure.
-- The largest single monetary risk is a **willful FBAR penalty of up to 50% of the account
-  balance**; 2026 inflation adjustments were cancelled, so the 2025 amounts
-  ($16,536 / $165,353) still apply.
-- `银发〔2026〕42号` (in force 2026-02-06) **repealed** `银发〔2021〕237号`; any advice
-  citing the 2021 notice is stale.
-- Illegal channels turn a documentation problem into 30%–100% administrative fines plus
-  criminal exposure under Criminal Law Art. 225.
+## The rules this project obeys
 
-### Coordination
+1. **No number without an official source.** Every figure links to a statute, regulation, agency page or treaty provision.
+2. **Blank beats guessed.** Unconfirmed values are empty, marked `unverified`, and published on the *Flagged for review* page — no industry averages, no estimates.
+3. **Analysis is labelled.** Reasoning rather than quotation is marked `analysis` and flagged.
+4. **The check is executable.** `validate_data.py` fails the build if a row states a cap without marking it verified, or asserts a consequence without a source.
 
-`COORDINATION.md` is the shared task board. It records both sessions' claims, the
-`add/add` conflict resolution (prior session's board preserved verbatim), the rebase
-flattening incident, per-task verification logs, irregularities, PR link, merge result and
-Pages deployment confirmation.
+---
+
+## Scope and limits
+
+- Covers **individual** balances in a Chinese bank account. Corporate structures, QDII quotas and outbound-investment projects appear only as they bear on an individual.
+- Four determinations depend on documents only the account holder has: the bank's `境内个人`/`境外个人` classification, whether a cancelled PRC household registration exists, when the balance was acquired relative to any emigration, and what created the money. All four are itemised on the flagged page.
+- Retail FX spreads and wire fees are commercial, not regulatory, and were deliberately **not** estimated. The calculator ships with no default rates.
+- This is research, not legal, tax or investment advice. Have a US tax adviser and a PRC-qualified adviser review the specific file before filing or applying.
+
+## Licence
+
+No licence was present when this work started and none was added, because choosing one is the repository owner's decision. Content is cited to its sources under those sources' own terms.

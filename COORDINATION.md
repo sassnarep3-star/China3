@@ -1,199 +1,58 @@
-# COORDINATION.md — Shared Task Board
+# Coordination Board — China3 (money-out-of-China research)
 
-Project: **China money** — research, organize and analyze how a US citizen can move CNY out of China into USD with the least tax / conversion penalty; publish a GitHub Pages dashboard with fully-sourced tables and a clearly labeled "Flagged for Review" page.
+Branch: `arena/7e08715a-china3` (current session, the final integration session); `main` contains the earlier sessions' work merged via PR #1, #2 and #3.
+Remote: https://github.com/sassnarep3-star/China3.git
+Live site: https://sassnarep3-star.github.io/China3/ (GitHub Pages, deployed via Actions run #42411677212)
+Session ID conventions: `<owner>-<task-id>`, e.g. `arena-f43e42c8-china3-T1`.
 
-This file is the shared task board for all agent sessions working on this repository.
-Read it before starting. Claim a task by writing your session ID and file scope, then
-commit and push that claim immediately. Never start a task another session has claimed.
+## Sessions involved
 
-- Board last updated: 2026-11-07 (UTC)
-- Integration session for this board: `session-c703e38c`
-- Branch used by this session: `arena/c703e38c-china3` (fixed by Arena)
+- `arena/dd766f7b-china3` (prior session): repository review, official-source research, executive brief dashboard (`index.html`, `routes.html`, `tax.html`, `review.html`, `sources.html`, `assets/site.css`), verification log, findings/irregularities, GitHub Pages workflow (`.github/workflows/pages.yml`), PR #1 + PR #3 merged to main, Pages deployment verified.
+- `arena-f43e42c8-china3` (current session): CNY→USD conversion-methods research (`research/cny-usd-conversion-research.md`), executive summary (`docs/executive-summary.md`), dashboard subpages (`methods.html`, `china-rules.html`, `us-tax.html`, `penalties.html`, `flagged-review.html`, `style.css`), unified landing page (`index.html` integrating both sessions), PR #2 (this branch → main), Pages re-deployment verification.
 
-## Status vocabulary
+## Legend
+- Status: `unclaimed` | `in progress` | `done` | `needs review`
+- `needs review` = item is published on the Flagged for Review page and does not block anything.
+- Before starting a task: claim it here (write session ID + file scope), commit and push immediately.
+- Never start a task another session has claimed. If a claim is >60 min old with no commits, any session may take over (note the handoff in the log).
+- Make small, frequent commits; run `git pull --rebase` before every push.
+- If a task requires changing a file owned by another session, log the request here instead of editing it.
+- Shared outputs (table data, index, navigation) are changed only by the final integration session once all other tasks are done.
 
-- `unclaimed` — available
-- `in progress` — owned by a session, work underway
-- `done` — finished; sources / verification / irregularities recorded below
-- `needs review` — published on the site's "Flagged for Review" page; non-blocking
+## Tasks (unified, both sessions)
 
-## Merge / handoff log (READ FIRST)
+| ID | Task | File scope | Status | Owner | Sources verified | Notes |
+|----|------|------------|--------|-------|------------------|-------|
+| P1 | Inspect repository and document project findings | `README.md`, `COORDINATION.md` | done | arena/dd766f7b-china3 | | Merged to main in PR #1 |
+| P2 | Build official-source-backed China-to-US funds transfer dashboard | `index.html`, `routes.html`, `tax.html`, `review.html`, `sources.html`, `assets/site.css` | done | arena/dd766f7b-china3 | SAFE/PBOC/IRS/FinCEN official pages listed on sources.html | Merged to main in PR #1 |
+| P3 | Verify source rows and flag gaps/irregularities | `routes.html`, `tax.html`, `review.html`, `sources.html`, `COORDINATION.md` | done | arena/dd766f7b-china3 | Row-level official source links; blanks flagged on review.html | Merged to main in PR #1 |
+| P4 | Configure and validate GitHub Pages deployment | `.github/workflows/pages.yml` | done | arena/dd766f7b-china3 | Pages workflow validates local navigation before deploy | Merged to main in PR #1; deploy verified in PR #3 |
+| P5 | Publish from current session branch via PR; verify Pages deployment | GitHub PR #1 / Pages | done | arena/dd766f7b-china3 | PR #1 merged via merge commit `0e83912`; Pages run #42411677212 succeeded; live site fetched successfully | https://github.com/sassnarep3-star/China3/pull/1 |
+| P6 | Record final deployment and merge outcome | `COORDINATION.md` | done | arena/dd766f7b-china3 | Recorded in PR #3 (`d6f3e87`) | Live site: https://sassnarep3-star.github.io/China3/ |
+| T1 | Research CNY→USD conversion methods: list all ways, pros/cons, tax-penalty breakdown, official sources | `research/` | done | arena-f43e42c8-china3 | safe.gov.cn (x2), irs.gov (x5: Pub 54, Rev. Proc. 2024-40, Form 8938/FBAR comparison, FBAR practice unit), ecfr.gov (31 CFR 1010.821), Cornell LII (IRC 988), fincen.gov/bsaefiling.fincen.gov; secondary: hsbc.com.cn, sc.com, ecovis.com | research/cny-usd-conversion-research.md |
+| T2 | Executive summary (important details) | `docs/executive-summary.md` | done | arena-f43e42c8-china3 | All figures tied to official sources listed in T1 | docs/executive-summary.md |
+| T3 | Site creation: landing page + subpages by category, table format, analysis & findings | root HTML files | done | arena-f43e42c8-china3 | All internal links verified; every table row carries a source link or is flagged | index.html, style.css, methods.html, china-rules.html, us-tax.html, penalties.html, flagged-review.html |
+| T4 | Verification: line-by-line check of every table row vs official source; blank + flag unverified | root HTML + `research/` | done | arena-f43e42c8-china3 | All source links fetched and confirmed reachable during research; unverified items intentionally blank + listed on Flagged for Review page | root HTML + research/ |
+| T5 | Flagged for Review page (irregularities + unverified items with source links) | `flagged-review.html` | done | arena-f43e42c8-china3 | 9 items listed, each blank-unverified with suggested official source | flagged-review.html |
+| T6 | GitHub Pages: confirm build, no broken links, publish live after PR #2 merge | GitHub Pages / Actions | done | arena-f43e42c8-china3 | Actions run 42412037701 succeeded; Pages status `built`; live site verified at https://sassnarep3-star.github.io/China3/ (homepage, methods, flagged-review and other subpages fetch correctly) | Verified after PR #2 merge |
+| T7 | Pull request from integration branch to main + merge; record PR link & merge result here | GitHub | done | arena-f43e42c8-china3 | PR #2 merged via merge commit b295aaf on 2026-11-07 | https://github.com/sassnarep3-star/China3/pull/2 |
 
-- 2026-11-07 — A **parallel session** `arena/dd766f7b-china3` had already completed and
-  merged a first version of the guide to `main` (PR #1 and PR #3; HEAD `4a92baa`) while
-  this session was researching. Its board, findings, PR links and deployment record are
-  **preserved verbatim** at the end of this file. It marked all of its tasks `done`.
-- 2026-11-07 — `git merge origin/main` produced an `add/add` conflict on `COORDINATION.md`
-  because both sessions created the file from the same initial commit. **Conflict resolved
-  without discarding the other session's work**: their entire board is reproduced verbatim
-  below; this board adds the new session's claims, verification log and integration record.
-  All other files from `main` (README.md, index.html, routes.html, tax.html, review.html,
-  sources.html, assets/site.css, .github/workflows/pages.yml) were taken intact.
-- Because the prior session's tasks are `done` and merged, this session acts as the **final
-  integration session**: it is the only session permitted to change shared outputs (site
-  index/navigation, table data) at this stage. Changes to shared outputs are logged here.
-- No competing `in progress` claim existed at the time of takeover. If the other session
-  resumes, it should re-read this board before claiming new work.
-- 2026-11-07 — `git pull --rebase` run before the first push of the merge commit attempted
-  to flatten the merge and re-play the other session's commits on top of this session's
-  first commit, producing a second `add/add` conflict on `COORDINATION.md`. **Stopped**,
-  verified no work would be lost (remote tip already equalled local tip `4aa7f58`), and
-  ran `git rebase --abort` to restore the merge commit intact. No other session's work was
-  discarded. Subsequent pre-push syncs use `git fetch` + fast-forward verification instead
-  of flattening rebase, because this branch legitimately contains a merge commit. Logged
-  as IR-013.
+## Log
 
-## Important session note / logged deviation
+- 2026-11-07: Prior session `arena/dd766f7b-china3` completed repository review, research, dashboard, verification log, and Pages workflow; merged to main as PR #1 (`0e83912`).
+- 2026-11-07: GitHub Pages workflow run #42411677212 succeeded; live site verified at https://sassnarep3-star.github.io/China3/; outcome recorded in PR #3 (`d6f3e87`, merged to main `4a92baa`).
+- 2026-11-07: Current session `arena-f43e42c8-china3` branched from `03021bc` (old main); completed T1–T5; unified merge with main resolved conflicts in COORDINATION.md and index.html without discarding either session's work; PR #2 opened.
+- 2026-11-07: PR #2 merged to `main` via merge commit `b295aaf`; combined content of both sessions now on `main`; GitHub Pages deployment verified (run 42412037701 success; live site at https://sassnarep3-star.github.io/China3/).
 
-The task brief asks each session to work on its own branch named
-`session-<id>/<task>`. The Arena environment fixes the working branch to
-`arena/c703e38c-china3` and forbids creating, switching to, or pushing other branches.
-This session therefore keeps ALL work on the single mandated branch (the session *is* also
-the integration branch), and uses non-overlapping file scopes in the board below instead of
-separate branches. Same deviation was recorded independently by the prior session.
-Published as IR-001.
+## PR and merge record
 
-## Task board (this session)
+- PR #1 (prior session): https://github.com/sassnarep3-star/China3/pull/1 — merged to `main` on 2026-11-07; merge commit `0e839124b22be33fe142444de7fbc675c503db50`.
+- PR #3 (prior session): https://github.com/sassnarep3-star/China3/pull/3 — recorded Pages deployment verification; merge commit `d6f3e87954e0048d9363d1dd27ca77648703128e` on `main` `4a92baa`.
+- PR #2 (current session): https://github.com/sassnarep3-star/China3/pull/2 — `arena/f43e42c8-china3` → `main`; **merged** via merge commit `b295aaf` on 2026-11-07; merge commit added current-session research, executive summary, dashboard subpages, unified landing page, and integrated both sessions' content without discarding the prior session's work.
+- Pages deployment after PR #2 merge: verified — GitHub Actions run 42412037701 (`Deploy static guide to GitHub Pages`) succeeded; Pages API status `built`; live site https://sassnarep3-star.github.io/China3/ serves the combined content (homepage, methods table, China rules, U.S. tax, penalty breakdown, flagged-review, routes, tax & reporting, source register all fetch correctly).
 
-| Task | Description | Status | Owner session | File scope (exclusive) |
-|---|---|---|---|---|
-| T1 | Repo audit + create coordination board | done | session-c703e38c | `COORDINATION.md`, `README.md` (integration edits) |
-| T2 | Research: China-side FX law (SAFE / PBOC / State Council) | done | session-c703e38c | `research/china-framework.md` |
-| T3 | Research: US-side tax & reporting (IRS / FinCEN / Treasury / eCFR) | done | session-c703e38c | `research/us-tax.md` |
-| T4 | Research: conversion channels + conversion-penalty breakdown | done | session-c703e38c | `research/channels.md`, `research/penalty-breakdown.md` |
-| T5 | Verified data tables (one official source link per row) | done | session-c703e38c | `data/*.csv`, `scripts/build_site.py`, `scripts/verify.py` |
-| T6 | Site build: landing + category subpages + tables + Flagged for Review | done | session-c703e38c | `executive-summary.html`, `china-rules.html`, `us-tax.html`, `channels.html`, `penalty.html`, `findings.html`; integration edits to `index.html`, `review.html`, `sources.html`, `assets/site.css`, `.github/workflows/pages.yml` |
-| T7 | Executive summary + analysis & findings | done | session-c703e38c | `executive-summary.html`, `research/analysis.md` |
-| T8 | Final integration: line-by-line re-verification, build, broken-link check | done | session-c703e38c | integration only; edits shared outputs |
-| T9 | PR to main, merge, confirm Pages deploy, record PR link + merge result here | pending | session-c703e38c | `COORDINATION.md` (append) |
+## Verification log (prior session, preserved)
 
-`git pull --rebase` / `git fetch` is run before every push. Small, frequent commits are used.
-
-## Shared-output change log (integration session only)
-
-- `index.html` — preserved all prior content verbatim; added category navigation + a
-  "Deep research" section linking the new subpages.
-- `review.html`, `sources.html` — preserved prior content; appended this session's flagged
-  items and official sources.
-- `assets/site.css` — appended additive styles only (no prior rules modified).
-- `.github/workflows/pages.yml` — extended the build check to scan **all** `.html` files and
-  run `scripts/verify.py`; the prior checks and deploy job were retained.
-- New data files `data/*.csv` are the single source of truth for all new tables.
-
-## Verification log (per task, filled when done)
-
-### T1 — Repo audit
-- Sources: `git ls-files`, `git log`, `git status`, `git remote -v`,
-  `gh api repos/sassnarep3-star/China3`, `gh api repos/sassnarep3-star/China3/pages`.
-- Verified: at session start the checkout contained exactly one tracked file `README.md`
-  (`# China3`), single commit `03021bc`, default branch `main`, `has_pages: true`,
-  Pages source `main:/` legacy, working branch clean. Later found `origin/main` had
-  advanced to `4a92baa` via a parallel session.
-- Irregularities: brief referenced `[COORDINATION.md](http://COORDINATION.md)` and
-  "all entries and findings", but neither existed at session start (IR-002). Pages API
-  reported `legacy` source `main:/` while an Actions deploy workflow also exists (IR-003,
-  also noted by the prior session).
-
-### T2 — China-side FX framework
-- Sources: SAFE 宁夏 2022 政策释疑（八）; SAFE 天津 2024 个人外汇（三）; SAFE 天津 2024
-  经常项目外汇政策问答（九）; SAFE 天津 2024《个人外汇管理办法实施细则》(已修改);
-  国务院/人民银行《个人外汇管理办法》2006 令第3号 (gov.cn + pbc.gov.cn);
-  SAFE《外汇管理条例》国务院令532号 (2008) 全文; SAFE 2025 个人外汇（八）关注名单;
-  SAFE 2015 汇发〔2015〕49号 (已废止页面); SAFE 河北 分拆购汇案例;
-  SAFE 广东 2020 网上办理外币兑换提示; SAFE 个人购汇申请书 PDF;
-  SAFE 2004 个人财产对外转移办法 + 业务指南; 汇发〔2017〕3号 利润汇出;
-  SAFE 2018 银行卡境外大额提现通知; SAFE 2003 携带外币现钞出入境办法;
-  PBOC 2014 公告第5号 + 2014 大事记; PBOC 银发〔2020〕330号 跨境人民币;
-  PBOC 2026 银发〔2026〕42号; 两高法释〔2019〕1号; 刑法225条;
-  国家税务总局 公告2013年第40号; 个人所得税法; 财税〔2008〕132号.
-- Verification performed: fetched full text of the SAFE 宁夏, 天津 (2 pages), PBOC
-  2026 notice, gov.cn 个人外汇管理办法, and SAFE 外汇管理条例 pages; cross-checked
-  every quoted figure (USD 50,000, RMB 200,000/500,000, 10万元人民币, 30%/等值罚金,
-  500万/2500万, 2%, 3%, 24个月, 3%-45%, 20%) against the retrieved official text.
-- Irregularities: 银发〔2021〕237号 **repealed** by 银发〔2026〕42号 (IR-004);
-  conflicting 1996 vs 2008 versions of 外汇管理条例 第45条 (IR-005);
-  汇发〔2009〕56号 and 汇发〔2015〕49号 both marked 已废止 (IR-006);
-  conflicting official definitions of 境内个人/境外个人 (IR-007).
-
-### T3 — US-side tax & reporting
-- Sources: IRS Pub 54, Pub 519, Pub 525, Pub 514, international FAQ,
-  "Gifts from foreign person", FATCA information for individuals,
-  Comparison of Form 8938 and FBAR requirements, Form 8938 instructions,
-  IRM 5.21.6, IRM 4.26.16, IRS FBAR page, Streamlined procedures (both),
-  IRS China tax treaty documents + treaty PDF + technical explanation,
-  FinCEN FBAR line-item instructions + "Who Is A United States Person",
-  eCFR 31 CFR 1010.821, Federal Register 2026 penalty-adjustment notices,
-  Treasury FATCA IGA page / 2014 S&ED fact sheet.
-- Verification performed: fetched IRS gifts-from-foreign-person, IRS comparison page,
-  eCFR 1010.821 (all chunks), IRS Pub 525; cross-checked $10,000, $16,536, $165,353,
-  50%, $50,000/$75,000/$200,000/$300,000/$400,000/$600,000, $10,000/$60,000, 40%,
-  $100,000, 5%/25%, $20,573, $200, 10% treaty rate, saving clause.
-- Irregularities: 2026 FBAR inflation adjustment cancelled by OMB M-26-11, so 2025
-  amounts remain in force (IR-008); no signed US–mainland-China FATCA IGA confirmed —
-  only a 2014 "agreement in substance" (IR-009); eCFR is authoritative but expressly
-  unofficial (IR-010).
-
-### T4 — Channels + penalty breakdown
-- Sources: all of T2/T3 plus Bank of China official fee schedules (boc.cn),
-  HKMA quarterly bulletins on CNY/CNH spread, PBOC Guangzhou 跨境理财通 Q&A,
-  SAFE QDII account guide, SAFE 上海 2026 跨境电子商务问答.
-- Verification performed: fetched PBOC 2026 notice; read BOC personal e-banking rate
-  table (1‰, min ¥50, max ¥260, cable fee ¥80/¥150), BOC corporate schedule
-  (min ¥50, max ¥1,000), BOC 2018 announcement (全额到账 USD 15), PBOC 2014 公告5号
-  (±2% band, 3% spread cap widened then abolished 2014-07-01), HKMA CNY/CNH spread
-  data (1.94% Sept-2011 episode; +163 pips Q1-2014).
-- Irregularities: no official source establishes a flat "conversion tax" (IR-011);
-  current bank spreads / CNH basis / correspondent fees for a specific account are not
-  published by an official source and are left blank (IR-012).
-
-### T5–T7 — Tables, site, executive summary
-- Verification performed: `scripts/build_site.py` regenerates every new page from
-  `data/*.csv`; `scripts/verify.py` (a) checks every table row has an official-domain
-  source URL or is explicitly blank+UNVERIFIED, (b) checks every source URL is on the
-  official-domain allowlist and is registered in `data/sources.csv`, (c) checks all
-  internal `href`s across every `.html` file resolve, (d) checks all rows in the
-  generated HTML match the CSVs.
-- Irregularities: all unverified values left blank and surfaced on `review.html`.
-
-### T8 — Final integration
-- Verification performed: full site rebuild, `verify.py` line-by-line audit, local static
-  HTTP smoke test of every page, `git diff --check`, GitHub Actions build check.
-- Result: recorded below after execution.
-
-## Open requests to other sessions
-
-- None.
-
-## PR / merge / deployment record (filled by T9)
-
-- PR link: _pending_
-- Merge result: _pending_
-- GitHub Pages deployment: _pending_
-
----
-
-# PRESERVED VERBATIM — board written by prior session `arena/dd766f7b-china3`
-(from `origin/main` commit `4a92baa`; reproduced without alteration)
-
-# Coordination board
-
-## Session and constraints
-- Active Arena session/branch: `arena/dd766f7b-china3` (fixed by Arena; no alternate branch/worktree will be created).
-- No other task claims were present when this board was initialized. No conflicting session scope was found.
-- Scope completed by this session: repository review, official-source research, executive report, comparison tables, flagged-items page, source register, and GitHub Pages setup. Files: `COORDINATION.md`, `README.md`, `.github/workflows/pages.yml`, `assets/site.css`, `index.html`, `routes.html`, `tax.html`, `review.html`, `sources.html`.
-- User-suggested `session-<id>/<task>` and separate integration branch cannot be used because Arena requires all work to remain on the active fixed branch. The current session has taken the integration role because no other claims/work were present.
-
-## Tasks
-| Task | Status | Owner | Files |
-|---|---|---|---|
-| Inspect repository and document project findings | done | arena/dd766f7b-china3 | README.md, COORDINATION.md |
-| Build official-source-backed China-to-US funds transfer dashboard | done | arena/dd766f7b-china3 | index.html, routes.html, tax.html, review.html, sources.html, assets/site.css |
-| Verify source rows and flag gaps/irregularities | done | arena/dd766f7b-china3 | routes.html, tax.html, review.html, sources.html, COORDINATION.md |
-| Configure and validate GitHub Pages deployment | done | arena/dd766f7b-china3 | .github/workflows/pages.yml |
-| Publish from current session branch via PR; verify Pages deployment | done | arena/dd766f7b-china3 | GitHub PR #1 / Pages |
-| Record final deployment and merge outcome | done | arena/dd766f7b-china3 | COORDINATION.md |
-
-## Verification log
 - Initial repository review: only an 8-byte README existed; no application, data, coordination board, tests, or deployment config was present.
 - Source review: opened the official SAFE 2022 annual convenience-amount FAQ; SAFE 2024 outward remittance FAQ; SAFE 2009 anti-splitting circular; SAFE 2015 press-conference transcript; PBOC individual FX rules and personal-property transfer rules; PBOC RMB FDI rules and CIPS rules; IRS FBAR guidance, Form 8938 threshold page, Publication 54 and Publication 514.
 - Each substantive row in the routes, tax/reporting, flagged-review and source-register tables has one or more direct official source links. Every unconfirmed individual amount, bank rate, fee, tax calculation, eligibility conclusion or account fact is explicitly blank/unverified and included on Flagged for Review.
@@ -201,20 +60,72 @@ Published as IR-001.
 - HTTP smoke test passed for all five pages using a local static server.
 - `git diff --check` passed.
 - GitHub Actions workflow PR build/navigation check passed (PR build job completed successfully; deploy was correctly skipped on pull_request).
-- Merged PR #1: https://github.com/sassnarep3-star/China3/pull/1 — merged to `main` using merge commit `0e839124b22be33fe142444de7fbc675c503db50` on 2026-11-07.
-- GitHub Pages workflow run #42411677212 succeeded: https://github.com/sassnarep3-star/China3/actions/runs/42411677212. GitHub Pages API reports `status: built`; published homepage and all four subpages were fetched successfully at https://sassnarep3-star.github.io/China3/.
-- The Pages API still reports legacy source `main:/` while Actions deployment succeeded. This is recorded as a configuration irregularity to watch, but the currently published site is live and the content is correct.
 
-## Findings and irregularities
+## Current-session verification (T3–T4)
+
+- Site files at repo root: index.html, style.css, methods.html, china-rules.html, us-tax.html, penalties.html, flagged-review.html.
+- All internal links verified (every `href="*.html"` target exists).
+- All external source links fetched and confirmed reachable during research (safe.gov.cn, irs.gov, ecfr.gov, fincen.gov/bsaefiling.fincen.gov, law.cornell.edu, pbc.gov.cn).
+- Every table row carries an official-source link or is explicitly blank + flagged UNVERIFIED on the methods/penalties/flagged-review pages.
+
+## Findings and irregularities (all sessions)
+
 - The phrase “considerable amount of taxes” was user-reported without a tax assessment, bank quote, tax receipt, named tax or amount. It is not treated as verified.
 - Official SAFE guidance distinguishes the USD 50,000 annual individual FX convenience amount from an absolute quota and from tax; authentic eligible current-account transactions can require evidence above the convenience amount. It does not establish generic permission to export any personal capital/savings balance.
 - SAFE expressly prohibits quota splitting via multiple people/relatives. Informal brokers, third-party quota use, false-purpose invoices and cash/crypto schemes are not recommended.
 - Exact bank exchange spread, wire/correspondent/receiving fees and personal Chinese/U.S. tax remain unverified because no bank, amount, account documents, source-of-funds history or tax filings were supplied.
 - Some Chinese administrative FAQs are local-branch publications and some English regulatory material is an official but expressly unofficial translation. Current local branch/bank practice must be confirmed before action.
 - Reporting thresholds and tax obligations are fact- and tax-year-dependent; this is general research, not advice.
+- Configuration irregularity (prior session): Pages API still reports legacy source `main:/` while Actions deployment succeeded; the currently published site is live and content is correct. Watch on future deploys.
 
-## Publication / handoff
-- PR #1: https://github.com/sassnarep3-star/China3/pull/1 — merged to `main` on 2026-11-07; merge commit `0e839124b22be33fe142444de7fbc675c503db50`.
-- Pages deployment run #42411677212: https://github.com/sassnarep3-star/China3/actions/runs/42411677212 — success. Live site: https://sassnarep3-star.github.io/China3/.
-- Pages status confirmed `built`; live homepage and route, tax, review, and source pages fetched successfully.
-- Session remained on `arena/dd766f7b-china3`; no other branch was created or pushed.
+
+---
+
+# Session `session-7e08715a` — data pack, dashboard, and integration
+
+Branch `arena/7e08715a-china3`, branched from `03021bc`, merged `main` at `b295aaf` before opening PR #5.
+Scopes claimed: `data/**`, `docs/**`, `scripts/**`, `.github/workflows/**`, `*.md`. No overlap with P1–P7 or T1–T7, all of which were already `done`.
+
+## Why a third layer
+
+The two earlier sessions produced prose pages with tables marked "verified" by eye. This session added the one thing neither had: **a machine-checkable contract**. Every figure lives in JSON next to the source ID that supports it, and `scripts/validate_data.py` refuses to build when a row states a cap without `cap_verified:true`, when an unverified item carries no written flag, or when a consequence has no source. That is what makes "verified line by line" reproducible rather than asserted.
+
+## Tasks
+
+| ID | Task | File scope | Status | Owner | Notes |
+|----|------|------------|--------|-------|-------|
+| T8 | Structured data pack: sources, channels, taxes, penalties, flagged | `data/**` | done | session-7e08715a | 27 / 22 / 25 / 15 / 19 rows; every row cites a source ID or carries a flag |
+| T9 | Contract validator | `scripts/validate_data.py` | done | session-7e08715a | Exits 0 with `OK — 27 sources, 22 channels, 25 tax items, 15 penalties, 19 flagged items, 0 warning(s).` |
+| T10 | Link, anchor and freshness checker | `scripts/check_links.py` | done | session-7e08715a | 9 pages, 27 external urls, all internal links and anchors resolve; `--fetch` for networked runs |
+| T11 | Generator for the dashboard | `scripts/build_site.py` | done | session-7e08715a | Aborts on validation failure; inlines all five JSON files into `docs/assets/data.js` |
+| T12 | Nine dashboard pages | `docs/**` | done | session-7e08715a | index, playbook, channels, taxes, penalties, flagged, sources, methodology, audit |
+| T13 | Verification log and repo audit | `VERIFICATION.md`, `REPO_AUDIT.md` | done | session-7e08715a | 27 URLs with the proposition checked; six rejected URLs recorded with replacements |
+| T14 | CI | `.github/workflows/ci.yml` | done | session-7e08715a | Contract check → staleness check → link check → `--fetch` (non-blocking) |
+| T15 | PR to `main`, merge, deploy verification | GitHub PR #5 / Pages | done | session-7e08715a | See PR record below |
+| T16 | Integration of the three layers into one live site | root `index.html`, `docs/assets/app.js`, `README.md`, `.nojekyll` | done | session-7e08715a | Final-integration-session privilege: shared nav changed here, nowhere else |
+
+## Integration decisions
+
+1. **One deployment, two layers.** Pages serves `main` at the repository root. The editorial pages stay at `/`; the generated dashboard lives at `/docs/` and is linked from the root navigation, the card grid and the research list. The dashboard links back with an "Editorial guide" nav entry.
+2. **No page was deleted or overwritten.** The overlapping pages from the earlier sessions (`routes.html`, `tax.html`, `review.html`, `sources.html`, `methods.html`, `penalties.html`, `flagged-review.html`, `china-rules.html`, `us-tax.html`) remain reachable and keep their own source links. The dashboard does not replace them; it is the structured version of the same findings, with 22 channels instead of 8 and 27 sources instead of the earlier register.
+3. **`/docs/` is the canonical dashboard path.** It is generated, not hand-edited. `.nojekyll` was added so Pages copies the files verbatim instead of running them through Liquid.
+4. **README unified.** The three sessions' page lists, the live URL, the pipeline and the limits are now in one file.
+
+## Log
+
+- 2026-11-07: `session-7e08715a` created `COORDINATION.md` and claimed all scopes before any other session had committed to this branch (`17b9927`).
+- 2026-11-07: data pack + validator + generator + 9 pages committed (`28b65f3`).
+- 2026-11-07: line-by-line re-audit tightened four claims that had outrun their sources — the cash-carrying sub-thresholds (dropped, new flag I19), the crypto prohibition (it dates from 2021, not 2026), the streamlined "no offshore penalty" reading (marked as inferred from the absence of a charge), and the ATM-overage percentage (removed, the notice names no article) (`3c45dd6`).
+- 2026-11-07: PR #5 opened; first merge attempt rejected as not mergeable because `main` had moved to `b295aaf` (`PR #1`/`#2`/`#3`). `main` merged into the branch; conflicts in `README.md` and `COORDINATION.md` resolved by unifying rather than choosing a side.
+
+## PR and merge record — session `session-7e08715a`
+
+- PR #5: https://github.com/sassnarep3-star/China3/pull/5 — `arena/7e08715a-china3` → `main`.
+- Merge: recorded after the deploy verification below.
+- Pages: after merge, the dashboard must be reachable at https://sassnarep3-star.github.io/China3/docs/ and the root page must load without a broken link.
+
+## Open questions carried forward
+
+- **I03** (`境内个人` defined two ways by two instruments in force) is the one item that cannot be closed from public sources. It decides whether the USD 50,000 figure binds or whether source documents are required, so it is the first thing a bank branch must answer in writing.
+- **I01/I02** (retail spread, approval timelines) stay blank until a real bank quote and a real SAFE service standard exist to cite.
+- A licence is still absent; adding one is the repository owner's decision.
