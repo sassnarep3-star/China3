@@ -257,7 +257,7 @@ AUDIT = """
 <tr><td class="mono">data/channels.json</td><td>22 CNY→USD routes with status, cap, requirements, pros, cons and verdict</td></tr>
 <tr><td class="mono">data/taxes.json</td><td>25 tax items split between US, PRC and treaty</td></tr>
 <tr><td class="mono">data/penalties.json</td><td>Five cost layers, 15 penalty provisions, the cost model and the scenario table</td></tr>
-<tr><td class="mono">data/flagged.json</td><td>18 items that are blank, ambiguous or dependent on your facts</td></tr>
+<tr><td class="mono">data/flagged.json</td><td>19 items that are blank, ambiguous or dependent on your facts</td></tr>
 <tr><td class="mono">scripts/validate_data.py</td><td>Enforces the "source or flag" contract</td></tr>
 <tr><td class="mono">scripts/check_links.py</td><td>Internal links, anchors and external URL hygiene</td></tr>
 <tr><td class="mono">scripts/build_site.py</td><td>Builds <code class="mono">docs/</code>; refuses to build on a contract violation</td></tr>

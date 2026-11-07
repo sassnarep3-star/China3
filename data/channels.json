@@ -225,7 +225,7 @@
         "The most widely understood route, so bank staff handle it routinely."
       ],
       "cons": [
-        "USD 50,000 a year means 20 years to move USD 1 million — and the rule has not been raised since 2007.",
+        "USD 50,000 a year means 20 years to move USD 1 million. The operative figure is still the one set in 2007 and the rule remains in the current-effective catalogue.",
         "The quota is per person per year and may not be pooled: splitting across family members to evade the limit is expressly prohibited.",
         "It is a current-account facility; using it to fund overseas property or securities is outside what it authorises.",
         "It applies to 境内个人 purchases — a US citizen classified as 境外个人 is not capped by this figure but instead needs source documents."
@@ -424,7 +424,7 @@
       "status_label": "Lawful only up to USD 10,000 after permits",
       "applies_to": "Any traveller",
       "best_for": "Almost nothing — this is a theoretical route only",
-      "cap": "Up to USD 5,000 needs no permit; USD 5,000–10,000 needs a bank-issued 携带证; over USD 10,000 is in principle not allowed and needs a SAFE-issued permit that is reserved for listed special situations.",
+      "cap": "A ceiling of USD 10,000 equivalent is the operative rule: above that, an export traveller may in principle not carry the cash and needs a SAFE-issued permit reserved for listed special situations.",
       "cap_verified": true,
       "requirements": "Passport, visa, bank deposit proof or purchase documents, and the permit where required; US-side CMIR filing above USD 10,000.",
       "pros": [
@@ -443,7 +443,7 @@
         "S05",
         "S15"
       ],
-      "note": "SAFE operations guide citing 汇发[2003]102号; Art. 42 of the FX Regulations; 31 CFR 1010.340 for the US side."
+      "note": "Ceiling and permit procedure: SAFE operations guide citing 汇发[2003]102号 (S07). The finer USD 5,000 / USD 10,000 permit split inside 汇发[2003]102号 was not re-read from an official copy in this pass and is left out rather than asserted — see flagged item I19."
     },
     {
       "id": "C15",
@@ -549,7 +549,7 @@
         "None that survive contact with the rules. In 2021 this was grey; since 6 February 2026 it is expressly illegal financial activity."
       ],
       "cons": [
-        "RMB-to-virtual-currency conversion and related services are illegal financial activities that are strictly prohibited and suppressed.",
+        "RMB-to-virtual-currency conversion has been prohibited since 2021 and the current instrument, 银发〔2026〕42号 of 6 February 2026, restates and widens the ban — adding stablecoins and RWA tokenisation — and repeals the 2021 notice.",
         "Financial institutions may not open accounts, move funds or settle for such activity, so a bank seeing crypto-linked flows will freeze and report.",
         "Investments contrary to public order are void in civil law and the loss falls on the investor.",
         "US side is no better: the IRS treats virtual currency as property, so every trade is a taxable disposition, and an offshore exchange is an FBAR-reportable account."
@@ -559,7 +559,7 @@
       "sources": [
         "S08"
       ],
-      "note": "银发〔2026〕42号, section 1(1) and section 6(19), which replaced 银发〔2021〕237号."
+      "note": "银发〔2026〕42号, section 1(1)–(2) and section 6(18)–(19), which replaced 银发〔2021〕237号 with effect from 6 February 2026."
     },
     {
       "id": "C19",

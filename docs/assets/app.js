@@ -145,7 +145,7 @@
 
     html += '<h2>What not to do</h2>' +
       '<div class="callout bad"><p><strong>Crypto, underground banks, smurfing and false invoices are not shortcuts — they are the expensive branch of this decision tree.</strong> ' +
-      'Virtual-currency conversion became expressly illegal financial activity on 6 February 2026 (银发〔2026〕42号). Disguised FX trading carries a fine of 30%–100% and becomes illegal business operation at RMB 5,000,000 of turnover. Pooling relatives\' quotas is prohibited outright. ' +
+      'Virtual-currency conversion is expressly illegal financial activity, restated and widened by a new notice on 6 February 2026 (银发〔2026〕42号). Disguised FX trading carries a fine of 30%–100% and becomes illegal business operation at RMB 5,000,000 of turnover. Pooling relatives\' quotas is prohibited outright. ' +
       'And on the US side each of these converts a non-willful FBAR problem (5%) into a willful one (50%).</p>' +
       '<p class="small">' + srcChips(["S08", "S05", "S10", "S01", "S13"]) + "</p></div>";
 

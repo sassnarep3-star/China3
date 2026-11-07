@@ -23,7 +23,10 @@
       "status": "Unverified",
       "detail": "Neither the 2004 Measures nor SAFE's Q&A states a service standard for the RMB 500,000 local / headquarters approval split.",
       "impact": "Timeline planning cannot be sourced. Ask the local SAFE branch for its current turnaround in writing.",
-      "sources": ["S03", "S04"]
+      "sources": [
+        "S03",
+        "S04"
+      ]
     },
     {
       "id": "I03",
@@ -31,7 +34,10 @@
       "status": "Needs your facts",
       "detail": "The individual FX Measures define 境内个人 as a Chinese citizen holding a PRC resident ID, and 境外个人 as a foreign passport holder (Art. 37). The FX Regulations define 境内个人 as Chinese citizens AND foreigners who have resided continuously in China for one year or more (Art. 52). A US citizen who lived in China for years can therefore be classified differently depending on which definition the branch applies. The classification decides whether the USD 50,000 annual purchase cap binds you or whether you instead need source documents under Art. 13.",
       "impact": "This single question changes the answer more than anything else in the project. Ask the branch, in writing, which category your account is registered under.",
-      "sources": ["S01", "S05"]
+      "sources": [
+        "S01",
+        "S05"
+      ]
     },
     {
       "id": "I04",
@@ -39,7 +45,9 @@
       "status": "Partially verified",
       "detail": "Treasury's jurisdiction table lists China as Agreement in Substance, Model 1, treated as having an IGA in effect since 30 June 2014, with no agreement PDF linked for China. The table entry is official; what Chinese institutions actually report, and when, is not public.",
       "impact": "Do not plan on the account being invisible to the IRS. Plan on it being visible.",
-      "sources": ["S21"]
+      "sources": [
+        "S21"
+      ]
     },
     {
       "id": "I05",
@@ -47,7 +55,9 @@
       "status": "Partially verified",
       "detail": "26 U.S.C. § 988(e)(2) was read on a Cornell LII reproduction because uscode.house.gov returned a 'temporary format' error and govinfo paths for the section 404'd. The text is consistent with the statutory language, but it is not the official edition, and the IRS's own statement that a personal-transaction gain above USD 200 is reported as a capital gain was not located on an irs.gov page.",
       "impact": "Treat the USD 200 cliff as probable, not certain. A preparer should confirm on uscode.house.gov before it affects a filing.",
-      "sources": ["S24"]
+      "sources": [
+        "S24"
+      ]
     },
     {
       "id": "I06",
@@ -55,7 +65,9 @@
       "status": "Unverified",
       "detail": "The penalty exists under 26 U.S.C. § 6038D, but the escalating figure was not confirmed from an official page in reach.",
       "impact": "Left blank in the penalty table. Do not treat as zero.",
-      "sources": ["S16"]
+      "sources": [
+        "S16"
+      ]
     },
     {
       "id": "I07",
@@ -63,7 +75,9 @@
       "status": "Unverified",
       "detail": "Interest sits in the 20% category in the IIT Law, but a temporary exemption for individual savings-deposit interest is widely described and was not confirmed from an official source in this pass.",
       "impact": "Left blank. Assume interest may be taxable until an adviser confirms the exemption.",
-      "sources": ["S09"]
+      "sources": [
+        "S09"
+      ]
     },
     {
       "id": "I08",
@@ -71,7 +85,9 @@
       "status": "Unverified",
       "detail": "The published PBOC Q&A describes an individual investor quota set by the regulator; the current figure was not confirmed. The scheme was revised after that Q&A.",
       "impact": "Irrelevant to you unless you are a GBA mainland resident — the eligibility gate is the real obstacle.",
-      "sources": ["S25"]
+      "sources": [
+        "S25"
+      ]
     },
     {
       "id": "I09",
@@ -79,7 +95,9 @@
       "status": "Unverified",
       "detail": "QDII capacity is set institution-by-institution; no per-person figure was confirmed from an official source in this pass.",
       "impact": "QDII is not an exit anyway — redemption returns RMB to your China account.",
-      "sources": ["S02"]
+      "sources": [
+        "S02"
+      ]
     },
     {
       "id": "I10",
@@ -87,7 +105,9 @@
       "status": "Unverified",
       "detail": "The USD 10,000 reporting duty in 31 CFR 1010.340 is verified; the penalty schedule was not confirmed from an official page in this pass.",
       "impact": "Left blank in the penalty table.",
-      "sources": ["S15"]
+      "sources": [
+        "S15"
+      ]
     },
     {
       "id": "I11",
@@ -95,7 +115,10 @@
       "status": "Partially verified",
       "detail": "Art. 21 of the implementing rules refers to the SAFE / Ministry of Construction notice on FX in the real-estate market, and Art. 22 of the Measures gives SAFE the approval role. The notice itself was not re-verified in this pass, so the document list for a property-sale remittance is not itemised here.",
       "impact": "If your money is property proceeds, get the document checklist from the bank rather than from this site.",
-      "sources": ["S01", "S02"]
+      "sources": [
+        "S01",
+        "S02"
+      ]
     },
     {
       "id": "I12",
@@ -103,7 +126,10 @@
       "status": "Needs your facts",
       "detail": "The emigrant transfer route requires a 户籍注销证明 issued by the public security authority plus embassy-issued or authenticated proof of settlement abroad. Without those two documents the route cannot start.",
       "impact": "This is the make-or-break document for the only channel without a fixed ceiling.",
-      "sources": ["S03", "S04"]
+      "sources": [
+        "S03",
+        "S04"
+      ]
     },
     {
       "id": "I13",
@@ -111,7 +137,10 @@
       "status": "Needs your facts",
       "detail": "Only property owned before you obtained emigration status can go through the emigrant transfer. Money earned or acquired after that has to find another category.",
       "impact": "Splits the balance into an eligible part and a part that needs another route.",
-      "sources": ["S03", "S04"]
+      "sources": [
+        "S03",
+        "S04"
+      ]
     },
     {
       "id": "I14",
@@ -119,7 +148,10 @@
       "status": "Needs your facts",
       "detail": "Everything turns on the character of the money. Salary already taxed in China, a property gain not yet taxed at 20%, an inheritance, or money you personally carried in as FX each map to a different route and a different tax outcome.",
       "impact": "The playbook branches on this; so does the tax total.",
-      "sources": ["S09", "S01"]
+      "sources": [
+        "S09",
+        "S01"
+      ]
     },
     {
       "id": "I15",
@@ -127,7 +159,9 @@
       "status": "Unverified",
       "detail": "The conclusion rests on the IIT Law's closed list of taxable categories containing no deemed-disposal charge. That is a reading, not a quoted prohibition.",
       "impact": "Confirm with a PRC adviser if the balance is large or if you are close to the six-year threshold.",
-      "sources": ["S09"]
+      "sources": [
+        "S09"
+      ]
     },
     {
       "id": "I16",
@@ -135,7 +169,9 @@
       "status": "Partially verified",
       "detail": "The SAFE page for 汇发[2007]1号 carries an amendment note: Art. 9(2) was amended by 汇发[2016]13号 and Art. 39 was repealed by 汇发[2023]8号. No other amendment is enumerated on the page.",
       "impact": "The provisions relied on here (Arts. 2, 12, 13, 15, 17, 20, 30, 31) are not among the noted amendments, but the page does not certify that the list is exhaustive.",
-      "sources": ["S02"]
+      "sources": [
+        "S02"
+      ]
     },
     {
       "id": "I17",
@@ -143,7 +179,9 @@
       "status": "Unverified",
       "detail": "银发〔2026〕42号 declares the activity illegal and refers sanctions to the relevant provisions; it does not state a percentage of the amount.",
       "impact": "Left blank in the scenario table rather than guessed.",
-      "sources": ["S08"]
+      "sources": [
+        "S08"
+      ]
     },
     {
       "id": "I18",
@@ -152,6 +190,17 @@
       "detail": "The repository contained only a 8-byte README with no trailing newline: no licence, no CI, no tests, no data, no Pages configuration, no .gitignore, and no COORDINATION.md despite the brief requiring one. All were created in this pass; the licence question is left to the owner.",
       "impact": "No code existed to audit, so the 'repo review' is an audit of an empty repository plus the new build.",
       "sources": []
+    },
+    {
+      "id": "I19",
+      "item": "Sub-threshold detail of the 2003 cash-carrying rules",
+      "status": "Partially verified",
+      "detail": "SAFE's own operations guide confirms the operative USD 10,000 ceiling and the SAFE permit route, and cites 汇发[2003]102号. The finer split inside 汇发[2003]102号 — no permit to USD 5,000, bank-issued permit from USD 5,000 to USD 10,000 — was not re-read from an official copy in this pass, so it is stated in the channel note as unverified rather than as a table value.",
+      "impact": "Only affects the cash route, which is useless at scale anyway.",
+      "sources": [
+        "S07",
+        "S05"
+      ]
     }
   ]
 }

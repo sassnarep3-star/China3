@@ -51,7 +51,9 @@
       "penalty": "Order to repatriate; fine of up to 30% of the amount evaded; where serious, 30% to 100% of the amount; criminal liability if it constitutes a crime",
       "max_pct": 100,
       "verified": true,
-      "sources": ["S05"],
+      "sources": [
+        "S05"
+      ],
       "severity": "Severe"
     },
     {
@@ -63,7 +65,9 @@
       "penalty": "Forced re-conversion; fine of up to 30% of the amount; where serious, 30% to 100%; criminal liability if it constitutes a crime",
       "max_pct": 100,
       "verified": true,
-      "sources": ["S05"],
+      "sources": [
+        "S05"
+      ],
       "severity": "Severe"
     },
     {
@@ -75,7 +79,9 @@
       "penalty": "Warning, confiscation of illegal gains, fine of up to 30% of the amount; where serious, 30% to 100%; criminal liability if it constitutes a crime",
       "max_pct": 100,
       "verified": true,
-      "sources": ["S05"],
+      "sources": [
+        "S05"
+      ],
       "severity": "Severe"
     },
     {
@@ -87,7 +93,10 @@
       "penalty": "Warning, and a fine of up to 20% of the amount; customs action where a law or regulation so provides",
       "max_pct": 20,
       "verified": true,
-      "sources": ["S05", "S07"],
+      "sources": [
+        "S05",
+        "S07"
+      ],
       "severity": "Moderate"
     },
     {
@@ -99,7 +108,9 @@
       "penalty": "Order to correct, warning, and for an individual a fine of up to RMB 50,000",
       "max_pct": null,
       "verified": true,
-      "sources": ["S05"],
+      "sources": [
+        "S05"
+      ],
       "severity": "Moderate"
     },
     {
@@ -111,7 +122,10 @@
       "penalty": "Prosecution as a crime; the 2019 interpretation also applies the heavier of the illegal-business and money-laundering provisions where both are made out",
       "max_pct": null,
       "verified": true,
-      "sources": ["S10", "S05"],
+      "sources": [
+        "S10",
+        "S05"
+      ],
       "severity": "Criminal"
     },
     {
@@ -123,7 +137,10 @@
       "penalty": "The prohibition is express; the sanction is the one prescribed by the FX Regulations (N01/N02/N05)",
       "max_pct": null,
       "verified": true,
-      "sources": ["S01", "S05"],
+      "sources": [
+        "S01",
+        "S05"
+      ],
       "severity": "Severe"
     },
     {
@@ -135,7 +152,11 @@
       "penalty": "Up to USD 16,536 per violation (inflation-adjusted, penalties assessed from 17 January 2025); a reasonable-cause exception applies",
       "max_pct": null,
       "verified": true,
-      "sources": ["S13", "S14", "S12"],
+      "sources": [
+        "S13",
+        "S14",
+        "S12"
+      ],
       "severity": "Moderate"
     },
     {
@@ -147,7 +168,11 @@
       "penalty": "Up to USD 165,353, or 50% of the balance in the account at the time of the violation, whichever is greater; the reasonable-cause defence is unavailable",
       "max_pct": 50,
       "verified": true,
-      "sources": ["S13", "S14", "S12"],
+      "sources": [
+        "S13",
+        "S14",
+        "S12"
+      ],
       "severity": "Severe"
     },
     {
@@ -172,7 +197,9 @@
       "penalty": "5% of the highest aggregate balance of the unreported assets, in place of information-return and FBAR penalties",
       "max_pct": 5,
       "verified": true,
-      "sources": ["S18"],
+      "sources": [
+        "S18"
+      ],
       "severity": "Low"
     },
     {
@@ -184,8 +211,11 @@
       "penalty": "No miscellaneous offshore penalty, and no failure-to-file, accuracy-related, information-return or FBAR penalties absent fraud or willfulness",
       "max_pct": 0,
       "verified": true,
-      "sources": ["S19"],
-      "severity": "None"
+      "sources": [
+        "S19"
+      ],
+      "severity": "None",
+      "flag": "Absence of a penalty charge in the foreign procedure, which requires only tax and interest."
     },
     {
       "id": "N13",
@@ -196,7 +226,9 @@
       "penalty": "",
       "max_pct": null,
       "verified": false,
-      "sources": ["S15"],
+      "sources": [
+        "S15"
+      ],
       "severity": "Unverified",
       "flag": "The reporting duty is verified; the specific civil and criminal penalty amounts were not confirmed from an official source in this pass. Left blank."
     },
@@ -209,7 +241,9 @@
       "penalty": "20% of the taxable amount (property transfer: proceeds less original cost and reasonable expenses)",
       "max_pct": 20,
       "verified": true,
-      "sources": ["S09"],
+      "sources": [
+        "S09"
+      ],
       "severity": "Tax"
     },
     {
@@ -221,7 +255,9 @@
       "penalty": "The USD 200 exclusion switches off entirely, so the whole gain is in play",
       "max_pct": null,
       "verified": true,
-      "sources": ["S24"],
+      "sources": [
+        "S24"
+      ],
       "severity": "Tax",
       "flag": "Statute read from a non-government mirror — confirm before relying on it."
     }
@@ -270,15 +306,93 @@
   "scenarios": {
     "note": "Worst-case statutory exposure as a percentage of the amount moved, by route. Percentages are from the provisions above; they are not predictions.",
     "rows": [
-      { "route": "C01 Emigrant property transfer", "china_penalty_pct": 0, "us_penalty_pct": 0, "basis": "Lawful route, documents in order", "sources": ["S03"] },
-      { "route": "C03 Current-account income conversion", "china_penalty_pct": 0, "us_penalty_pct": 0, "basis": "Lawful route, documents in order", "sources": ["S01"] },
-      { "route": "C07 USD 50,000 annual quota", "china_penalty_pct": 0, "us_penalty_pct": 0, "basis": "Lawful route within the cap", "sources": ["S02"] },
-      { "route": "C20 Smurfing / pooling quotas", "china_penalty_pct": 100, "us_penalty_pct": 50, "basis": "Art. 39 (30%–100% if serious) plus willful FBAR", "sources": ["S05", "S13"] },
-      { "route": "C19 Underground bank", "china_penalty_pct": 100, "us_penalty_pct": 50, "basis": "Art. 45 (30%–100%) plus willful FBAR; criminal from RMB 5m", "sources": ["S05", "S10", "S13"] },
-      { "route": "C21 False trade documents", "china_penalty_pct": 100, "us_penalty_pct": 50, "basis": "Art. 40 plus willful FBAR", "sources": ["S05", "S13"] },
-      { "route": "C18 Crypto / stablecoin", "china_penalty_pct": null, "us_penalty_pct": null, "basis": "Illegal financial activity; penalty percentage not fixed by the notice — see flag", "sources": ["S08"] },
-      { "route": "C13 Overseas ATM cash", "china_penalty_pct": 100, "us_penalty_pct": null, "basis": "Over-cap withdrawals: suspension plus FX Regulations sanction", "sources": ["S06", "S05"] },
-      { "route": "C14 Carrying cash", "china_penalty_pct": 20, "us_penalty_pct": null, "basis": "Art. 42 — up to 20% of the amount", "sources": ["S05", "S07"] }
+      {
+        "route": "C01 Emigrant property transfer",
+        "china_penalty_pct": 0,
+        "us_penalty_pct": 0,
+        "basis": "Lawful route, documents in order",
+        "sources": [
+          "S03"
+        ]
+      },
+      {
+        "route": "C03 Current-account income conversion",
+        "china_penalty_pct": 0,
+        "us_penalty_pct": 0,
+        "basis": "Lawful route, documents in order",
+        "sources": [
+          "S01"
+        ]
+      },
+      {
+        "route": "C07 USD 50,000 annual quota",
+        "china_penalty_pct": 0,
+        "us_penalty_pct": 0,
+        "basis": "Lawful route within the cap",
+        "sources": [
+          "S02"
+        ]
+      },
+      {
+        "route": "C20 Smurfing / pooling quotas",
+        "china_penalty_pct": 100,
+        "us_penalty_pct": 50,
+        "basis": "Art. 39 (30%–100% if serious) plus willful FBAR",
+        "sources": [
+          "S05",
+          "S13"
+        ]
+      },
+      {
+        "route": "C19 Underground bank",
+        "china_penalty_pct": 100,
+        "us_penalty_pct": 50,
+        "basis": "Art. 45 (30%–100%) plus willful FBAR; criminal from RMB 5m",
+        "sources": [
+          "S05",
+          "S10",
+          "S13"
+        ]
+      },
+      {
+        "route": "C21 False trade documents",
+        "china_penalty_pct": 100,
+        "us_penalty_pct": 50,
+        "basis": "Art. 40 plus willful FBAR",
+        "sources": [
+          "S05",
+          "S13"
+        ]
+      },
+      {
+        "route": "C18 Crypto / stablecoin",
+        "china_penalty_pct": null,
+        "us_penalty_pct": null,
+        "basis": "Illegal financial activity; penalty percentage not fixed by the notice — see flag",
+        "sources": [
+          "S08"
+        ]
+      },
+      {
+        "route": "C13 Overseas ATM cash",
+        "china_penalty_pct": null,
+        "us_penalty_pct": null,
+        "basis": "Exceeding the cap suspends overseas withdrawals for this and the following year and may be penalised under the FX Regulations; the notice does not specify the article, so no percentage is given",
+        "sources": [
+          "S06",
+          "S05"
+        ]
+      },
+      {
+        "route": "C14 Carrying cash",
+        "china_penalty_pct": 20,
+        "us_penalty_pct": null,
+        "basis": "Art. 42 — up to 20% of the amount",
+        "sources": [
+          "S05",
+          "S07"
+        ]
+      }
     ]
   }
 }

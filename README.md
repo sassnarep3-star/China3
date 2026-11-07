@@ -24,7 +24,7 @@ Full reasoning: `docs/index.html` (executive summary) and `docs/playbook.html` (
 | `data/channels.json` | 22 CNY→USD routes: status, cap, requirements, pros, cons, verdict |
 | `data/taxes.json` | 25 tax items split US / PRC / treaty, each labelled `rule` or `analysis` |
 | `data/penalties.json` | Five cost layers, 15 penalty provisions, cost model, scenario table |
-| `data/flagged.json` | 18 items that are blank, ambiguous, or dependent on the reader's facts |
+| `data/flagged.json` | 19 items that are blank, ambiguous, or dependent on the reader's facts |
 | `docs/` | The generated dashboard (GitHub Pages serves this folder) |
 | `scripts/validate_data.py` | Enforces the "official source or explicit flag" contract |
 | `scripts/check_links.py` | Internal links, anchors, external URL hygiene, bundle freshness |
