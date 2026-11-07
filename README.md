@@ -4,11 +4,16 @@ A static, official-source-backed research dashboard about lawful ways to move pe
 
 ## Site pages
 
-- `index.html` — executive brief and recommended sequence.
+- `index.html` — executive brief, recommended sequence, and unified navigation to all pages.
 - `routes.html` — transfer-route comparison table, with source links in every row.
 - `tax.html` — Chinese tax / FX costs / U.S. tax and reporting distinctions, with source links in every row.
 - `review.html` — unresolved case facts and irregularities; unverified amounts remain blank.
 - `sources.html` — official source register and research method.
+- `methods.html` — 11 CNY→USD conversion methods with pros, cons, costs, U.S. impact, and official sources per row.
+- `china-rules.html` — China FX rules: SAFE/PBOC quotas, documentation, cash limits, circumvention penalties.
+- `us-tax.html` — U.S. tax &amp; reporting: FBAR, Form 8938, FEIE, Foreign Tax Credit, treaty, IRC §988.
+- `penalties.html` — penalty &amp; cost breakdown with verified amounts and flagged blanks.
+- `flagged-review.html` — 9 unverified items deliberately left blank, with suggested official sources.
 
 ## Core finding
 
