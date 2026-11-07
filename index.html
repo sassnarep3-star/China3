@@ -30,6 +30,7 @@
   <a href="tax.html">Tax &amp; reporting (prior session)</a>
   <a href="review.html">Flagged items (prior session)</a>
   <a href="sources.html">Source register (prior session)</a>
+  <a href="docs/index.html"><strong>Data dashboard &amp; calculator</strong></a>
 </nav>
 
 <!-- ============ Executive brief (prior session, preserved) ============ -->
@@ -73,6 +74,11 @@
   <h2>Explore all site pages</h2>
   <p class="small">Pages from both research sessions are linked below. Every table row carries an official-source link or is intentionally blank and flagged UNVERIFIED.</p>
   <div class="grid">
+    <div class="card" style="border:2px solid #0f766e;">
+      <h3>Data dashboard &amp; cost calculator <span class="badge badge-ok">newest</span></h3>
+      <p>Every route, tax item, penalty provision and flagged item as structured data: 22 channels with pros and cons, 27 official sources, 19 flagged items, an effective-cost calculator, and a build that fails if any figure lacks a source.</p>
+      <a class="btn" href="docs/index.html">Open the dashboard</a>
+    </div>
     <div class="card">
       <h3>CNY → USD conversion methods</h3>
       <p>11 routes with pros, cons, estimated costs, U.S. impact, and official sources per row — incl. salary repatriation, bank wire, cash carry, underground banking (avoid), smurfing (avoid).</p>
@@ -122,6 +128,8 @@
     <li>Full research with citations: <a href="research/cny-usd-conversion-research.md" target="_blank">research/cny-usd-conversion-research.md</a> (GitHub)</li>
     <li>Executive summary: <a href="docs/executive-summary.md" target="_blank">docs/executive-summary.md</a> (GitHub)</li>
     <li>Shared task board: <a href="COORDINATION.md" target="_blank">COORDINATION.md</a> (GitHub)</li>
+    <li>Structured data pack: <a href="data/channels.json">data/</a> — sources, channels, taxes, penalties, flagged items (JSON)</li>
+    <li>Build and checks: <code>scripts/validate_data.py</code>, <code>scripts/check_links.py</code>, <code>scripts/build_site.py</code></li>
   </ul>
   <p class="small">Scope: mainland-China bank account to U.S. destination. Source-based general research, not legal, tax, or bank advice. Rules and bank implementation may change; confirm with the bank/SAFE and qualified counsel before acting. The user has not supplied amount, province, residency status in China, account-holder status, source of funds, or bank details, so no personalized route or tax number can be confirmed.</p>
 </section>

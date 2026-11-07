@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo audit · China3 — moving CNY to USD</title>
+<meta name="description" content="What was in the repository, what was wrong with it, what was built.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b5fbe'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif'%3E%C2%A5%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="audit">
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">China3<span>CNY → USD, sourced</span></a>
+    <nav class="nav" id="nav" aria-label="Sections"></nav>
+    <div class="side-note">
+      Every figure is linked to an official source. Unconfirmed values are blank and listed under
+      <a href="flagged.html">Flagged for review</a>.
+      <br><br>Research pack, not tax or legal advice.
+    </div>
+  </aside>
+  <main class="main">
+    <header class="page-head">
+      <div class="eyebrow">China3 · checked 7 November 2026</div>
+      <h1>Repo audit</h1>
+      <p class="lede">What was in the repository, what was wrong with it, what was built.</p>
+    </header>
+    <div id="app"></div>
+    
+<h2>What the repository contained</h2>
+<p>The audit was performed at commit <code class="mono">03021bc</code> on branch <code class="mono">arena/7e08715a-china3</code> before any work was done.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Item</th><th>State found</th><th>Assessment</th></tr></thead>
+<tbody>
+<tr><td>Tracked files</td><td>Exactly one: <code class="mono">README.md</code>, 8 bytes, content <code class="mono"># China3</code>, no trailing newline</td><td>Irregular: a placeholder, not a README</td></tr>
+<tr><td>Source code</td><td>None</td><td>Nothing to review — the "repo review" is necessarily a review of an empty repo plus this build</td></tr>
+<tr><td>Data</td><td>None</td><td>No prior claims to verify or contradict</td></tr>
+<tr><td>Licence</td><td>None</td><td>Irregular for a public repository — left to the owner, not decided here</td></tr>
+<tr><td>CI / tests</td><td>None</td><td>Fixed: validation and link checks added</td></tr>
+<tr><td>.gitignore</td><td>None</td><td>Fixed</td></tr>
+<tr><td>Coordination board</td><td>Absent, although required by the brief</td><td>Fixed: <code class="mono">COORDINATION.md</code> created and claimed before work began</td></tr>
+<tr><td>GitHub Pages</td><td>Not configured</td><td>Fixed: Pages served from <code class="mono">/docs</code> on <code class="mono">main</code></td></tr>
+<tr><td>Branch strategy</td><td><code class="mono">main</code> plus the session branch</td><td>No conflicting claims found on the board</td></tr>
+</tbody></table></div>
+
+<h2>What was built</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Path</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td class="mono">data/sources.json</td><td>27 sources, each with publisher, tier, URL, the proposition it supports and the date checked</td></tr>
+<tr><td class="mono">data/channels.json</td><td>22 CNY→USD routes with status, cap, requirements, pros, cons and verdict</td></tr>
+<tr><td class="mono">data/taxes.json</td><td>25 tax items split between US, PRC and treaty</td></tr>
+<tr><td class="mono">data/penalties.json</td><td>Five cost layers, 15 penalty provisions, the cost model and the scenario table</td></tr>
+<tr><td class="mono">data/flagged.json</td><td>19 items that are blank, ambiguous or dependent on your facts</td></tr>
+<tr><td class="mono">scripts/validate_data.py</td><td>Enforces the "source or flag" contract</td></tr>
+<tr><td class="mono">scripts/check_links.py</td><td>Internal links, anchors and external URL hygiene</td></tr>
+<tr><td class="mono">scripts/build_site.py</td><td>Builds <code class="mono">docs/</code>; refuses to build on a contract violation</td></tr>
+<tr><td class="mono">docs/</td><td>The published dashboard (generated)</td></tr>
+<tr><td class="mono">.github/workflows/ci.yml</td><td>Runs validation, link check and a build on every push</td></tr>
+<tr><td class="mono">COORDINATION.md</td><td>Task board, claims, verification record, PR record</td></tr>
+<tr><td class="mono">VERIFICATION.md</td><td>The per-URL verification log behind the register</td></tr>
+<tr><td class="mono">REPO_AUDIT.md</td><td>This audit in repository form</td></tr>
+</tbody></table></div>
+
+<h2>Irregularities flagged, not silently fixed</h2>
+<ul>
+<li><strong>Third-party statute mirrors.</strong> Two of the 27 sources are not on a <code class="mono">.gov</code> domain because the official servers returned errors for those sections. They are labelled <span class="badge unverified">third-party</span> in the register and itemised as I05 on the flagged page.</li>
+<li><strong>One dead URL encountered during research.</strong> The 2008 gov.cn URL originally holding the FX Regulations had been renumbered; the working replacement is used and the dead one is not cited.</li>
+<li><strong>A superseded regulation.</strong> Most published commentary on Chinese crypto rules cites 银发〔2021〕237号, which was repealed on 6 February 2026. The site cites the replacement.</li>
+<li><strong>A partially amended source.</strong> The SAFE page for the 2007 implementing rules carries an amendment note covering two articles. Neither is one relied on here, but the page does not certify the list is exhaustive — itemised as I16.</li>
+</ul>
+
+    <footer class="site">
+      <p>Sources checked 2026-11-07. This site is a research pack, not legal, tax or investment advice.
+      Read <a href="methodology.html">Method</a> before relying on anything here, and
+      <a href="flagged.html">Flagged for review</a> for what could not be confirmed.</p>
+      <p><a href="index.html">Executive summary</a><a href="playbook.html">Playbook</a><a href="channels.html">All channels</a><a href="taxes.html">Tax exposure</a><a href="penalties.html">Penalty breakdown</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Source register</a><a href="methodology.html">Method</a><a href="audit.html">Repo audit</a></p>
+    </footer>
+  </main>
+</div>
+<noscript><p style="padding:16px;background:#fdf1dc">This dashboard renders its tables in the browser. Please enable JavaScript, or read the underlying data in <code>data/*.json</code> in the repository.</p></noscript>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
