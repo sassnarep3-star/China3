@@ -212,5 +212,9 @@ provincial SAFE branch Q&As.
 ### PR / merge / deployment record (filled by T9)
 
 - PR link: https://github.com/sassnarep3-star/China3/pull/9
-- Merge result: _pending — PR created, checks being confirmed, merge to follow without approval_
-- GitHub Pages deployment: _pending — to be confirmed after merge_
+- PR title: "Integration: deep official-source CNY→USD research dashboard, penalty breakdown, flagged review". Body contains the summary of changes, sources used and flagged irregularities.
+- Merge result: **MERGED** on 2026-11-07T21:02:54Z by `gh pr merge 9 --merge` without waiting for approval. Merge commit `f5542c1de6980b58d04f5f208d6827a296e7ec2a` on `main`. PR state: MERGED.
+- Checks before merge (all passed, no broken site merged): `build` (Pages workflow), `Data contract and link check` (ci.yml), `deploy` (skipped on pull_request), `deep-research` (deep-research-verify.yml). Post-merge push runs: all four workflows (verify, Deploy static guide to GitHub Pages, Verify deep-research dashboard, pages build and deployment) completed with `success`.
+- GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
+- Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
+- Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
