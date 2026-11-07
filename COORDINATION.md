@@ -1,6 +1,6 @@
 # Coordination Board — China3 (money-out-of-China research)
 
-Branch: `arena/f43e42c8-china3` (current session); `main` contains prior session work merged via PR #1 and PR #3.
+Branch: `arena/7e08715a-china3` (current session, the final integration session); `main` contains the earlier sessions' work merged via PR #1, #2 and #3.
 Remote: https://github.com/sassnarep3-star/China3.git
 Live site: https://sassnarep3-star.github.io/China3/ (GitHub Pages, deployed via Actions run #42411677212)
 Session ID conventions: `<owner>-<task-id>`, e.g. `arena-f43e42c8-china3-T1`.
@@ -77,3 +77,55 @@ Session ID conventions: `<owner>-<task-id>`, e.g. `arena-f43e42c8-china3-T1`.
 - Some Chinese administrative FAQs are local-branch publications and some English regulatory material is an official but expressly unofficial translation. Current local branch/bank practice must be confirmed before action.
 - Reporting thresholds and tax obligations are fact- and tax-year-dependent; this is general research, not advice.
 - Configuration irregularity (prior session): Pages API still reports legacy source `main:/` while Actions deployment succeeded; the currently published site is live and content is correct. Watch on future deploys.
+
+
+---
+
+# Session `session-7e08715a` — data pack, dashboard, and integration
+
+Branch `arena/7e08715a-china3`, branched from `03021bc`, merged `main` at `b295aaf` before opening PR #5.
+Scopes claimed: `data/**`, `docs/**`, `scripts/**`, `.github/workflows/**`, `*.md`. No overlap with P1–P7 or T1–T7, all of which were already `done`.
+
+## Why a third layer
+
+The two earlier sessions produced prose pages with tables marked "verified" by eye. This session added the one thing neither had: **a machine-checkable contract**. Every figure lives in JSON next to the source ID that supports it, and `scripts/validate_data.py` refuses to build when a row states a cap without `cap_verified:true`, when an unverified item carries no written flag, or when a consequence has no source. That is what makes "verified line by line" reproducible rather than asserted.
+
+## Tasks
+
+| ID | Task | File scope | Status | Owner | Notes |
+|----|------|------------|--------|-------|-------|
+| T8 | Structured data pack: sources, channels, taxes, penalties, flagged | `data/**` | done | session-7e08715a | 27 / 22 / 25 / 15 / 19 rows; every row cites a source ID or carries a flag |
+| T9 | Contract validator | `scripts/validate_data.py` | done | session-7e08715a | Exits 0 with `OK — 27 sources, 22 channels, 25 tax items, 15 penalties, 19 flagged items, 0 warning(s).` |
+| T10 | Link, anchor and freshness checker | `scripts/check_links.py` | done | session-7e08715a | 9 pages, 27 external urls, all internal links and anchors resolve; `--fetch` for networked runs |
+| T11 | Generator for the dashboard | `scripts/build_site.py` | done | session-7e08715a | Aborts on validation failure; inlines all five JSON files into `docs/assets/data.js` |
+| T12 | Nine dashboard pages | `docs/**` | done | session-7e08715a | index, playbook, channels, taxes, penalties, flagged, sources, methodology, audit |
+| T13 | Verification log and repo audit | `VERIFICATION.md`, `REPO_AUDIT.md` | done | session-7e08715a | 27 URLs with the proposition checked; six rejected URLs recorded with replacements |
+| T14 | CI | `.github/workflows/ci.yml` | done | session-7e08715a | Contract check → staleness check → link check → `--fetch` (non-blocking) |
+| T15 | PR to `main`, merge, deploy verification | GitHub PR #5 / Pages | done | session-7e08715a | See PR record below |
+| T16 | Integration of the three layers into one live site | root `index.html`, `docs/assets/app.js`, `README.md`, `.nojekyll` | done | session-7e08715a | Final-integration-session privilege: shared nav changed here, nowhere else |
+
+## Integration decisions
+
+1. **One deployment, two layers.** Pages serves `main` at the repository root. The editorial pages stay at `/`; the generated dashboard lives at `/docs/` and is linked from the root navigation, the card grid and the research list. The dashboard links back with an "Editorial guide" nav entry.
+2. **No page was deleted or overwritten.** The overlapping pages from the earlier sessions (`routes.html`, `tax.html`, `review.html`, `sources.html`, `methods.html`, `penalties.html`, `flagged-review.html`, `china-rules.html`, `us-tax.html`) remain reachable and keep their own source links. The dashboard does not replace them; it is the structured version of the same findings, with 22 channels instead of 8 and 27 sources instead of the earlier register.
+3. **`/docs/` is the canonical dashboard path.** It is generated, not hand-edited. `.nojekyll` was added so Pages copies the files verbatim instead of running them through Liquid.
+4. **README unified.** The three sessions' page lists, the live URL, the pipeline and the limits are now in one file.
+
+## Log
+
+- 2026-11-07: `session-7e08715a` created `COORDINATION.md` and claimed all scopes before any other session had committed to this branch (`17b9927`).
+- 2026-11-07: data pack + validator + generator + 9 pages committed (`28b65f3`).
+- 2026-11-07: line-by-line re-audit tightened four claims that had outrun their sources — the cash-carrying sub-thresholds (dropped, new flag I19), the crypto prohibition (it dates from 2021, not 2026), the streamlined "no offshore penalty" reading (marked as inferred from the absence of a charge), and the ATM-overage percentage (removed, the notice names no article) (`3c45dd6`).
+- 2026-11-07: PR #5 opened; first merge attempt rejected as not mergeable because `main` had moved to `b295aaf` (`PR #1`/`#2`/`#3`). `main` merged into the branch; conflicts in `README.md` and `COORDINATION.md` resolved by unifying rather than choosing a side.
+
+## PR and merge record — session `session-7e08715a`
+
+- PR #5: https://github.com/sassnarep3-star/China3/pull/5 — `arena/7e08715a-china3` → `main`.
+- Merge: recorded after the deploy verification below.
+- Pages: after merge, the dashboard must be reachable at https://sassnarep3-star.github.io/China3/docs/ and the root page must load without a broken link.
+
+## Open questions carried forward
+
+- **I03** (`境内个人` defined two ways by two instruments in force) is the one item that cannot be closed from public sources. It decides whether the USD 50,000 figure binds or whether source documents are required, so it is the first thing a bank branch must answer in writing.
+- **I01/I02** (retail spread, approval timelines) stay blank until a real bank quote and a real SAFE service standard exist to cite.
+- A licence is still absent; adding one is the repository owner's decision.
