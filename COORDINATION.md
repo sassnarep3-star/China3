@@ -19,11 +19,10 @@ Session ID conventions: `<owner>-<task-id>`, e.g. `arena-f43e42c8-china3-T1`.
 |----|------|------------|--------|-------|------------------|-------|
 | T1 | Research CNY→USD conversion methods: list all ways, pros/cons, tax-penalty breakdown, official sources | `research/` | done | arena-f43e42c8-china3 | safe.gov.cn (x2), irs.gov (x5: Pub 54, Rev. Proc. 2024-40, Form 8938/FBAR comparison, FBAR practice unit), ecfr.gov (31 CFR 1010.821), Cornell LII (IRC 988), fincen.gov/bsaefiling.fincen.gov; secondary: hsbc.com.cn, sc.com, ecovis.com | research/cny-usd-conversion-research.md |
 | T2 | Executive summary (important details) | `docs/executive-summary.md` | done | arena-f43e42c8-china3 | All figures tied to official sources listed in T1 | docs/executive-summary.md |
-| T3 | Site creation: landing page + subpages by category, table format, analysis & findings | `site/` | in progress | arena-f43e42c8-china3 | | Builds on T1–T2 |
-| T3 | Site creation: landing page + subpages by category, table format, analysis & findings | `site/` | unclaimed | | | |
-| T4 | Verification: line-by-line check of every table row vs official source; blank + flag unverified | `site/` + `research/` | unclaimed | | | |
-| T5 | Flagged for Review page (irregularities + unverified items with source links) | `site/flagged-for-review.md` | unclaimed | | | Depends on T1–T4 |
-| T6 | GitHub Pages: confirm build, no broken links, publish live | GitHub Pages settings | unclaimed | | | Depends on T3–T5 |
+| T3 | Site creation: landing page + subpages by category, table format, analysis & findings | `site/` | done | arena-f43e42c8-china3 | All internal links verified; every table row carries a source link or is flagged | site/*.html, site/style.css |
+| T4 | Verification: line-by-line check of every table row vs official source; blank + flag unverified | `site/` + `research/` | done | arena-f43e42c8-china3 | All source links fetched and confirmed reachable during research; unverified items intentionally blank + listed on Flagged for Review page | site/ + research/ |
+| T5 | Flagged for Review page (irregularities + unverified items with source links) | `site/flagged-review.html` | done | arena-f43e42c8-china3 | 9 items listed, each blank-unverified with suggested official source | site/flagged-review.html |
+| T6 | GitHub Pages: confirm build, no broken links, publish live | GitHub Pages settings | in progress | arena-f43e42c8-china3 | | Depends on T3–T5 |
 | T7 | Pull request from integration branch to main + merge; record PR link & merge result here | GitHub | unclaimed | | | Depends on T6 |
 
 ## Log
