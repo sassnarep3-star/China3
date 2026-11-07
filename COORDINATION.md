@@ -17,8 +17,9 @@ Session ID conventions: `<owner>-<task-id>`, e.g. `arena-f43e42c8-china3-T1`.
 
 | ID | Task | File scope | Status | Owner | Sources verified | Notes |
 |----|------|------------|--------|-------|------------------|-------|
-| T1 | Research CNY→USD conversion methods: list all ways, pros/cons, tax-penalty breakdown, official sources | `research/` | in progress | arena-f43e42c8-china3 | | Primary research task |
-| T2 | Executive summary (important details) | `docs/executive-summary.md` | unclaimed | | | |
+| T1 | Research CNY→USD conversion methods: list all ways, pros/cons, tax-penalty breakdown, official sources | `research/` | done | arena-f43e42c8-china3 | safe.gov.cn (x2), irs.gov (x5: Pub 54, Rev. Proc. 2024-40, Form 8938/FBAR comparison, FBAR practice unit), ecfr.gov (31 CFR 1010.821), Cornell LII (IRC 988), fincen.gov/bsaefiling.fincen.gov; secondary: hsbc.com.cn, sc.com, ecovis.com | research/cny-usd-conversion-research.md |
+| T2 | Executive summary (important details) | `docs/executive-summary.md` | done | arena-f43e42c8-china3 | All figures tied to official sources listed in T1 | docs/executive-summary.md |
+| T3 | Site creation: landing page + subpages by category, table format, analysis & findings | `site/` | in progress | arena-f43e42c8-china3 | | Builds on T1–T2 |
 | T3 | Site creation: landing page + subpages by category, table format, analysis & findings | `site/` | unclaimed | | | |
 | T4 | Verification: line-by-line check of every table row vs official source; blank + flag unverified | `site/` + `research/` | unclaimed | | | |
 | T5 | Flagged for Review page (irregularities + unverified items with source links) | `site/flagged-for-review.md` | unclaimed | | | Depends on T1–T4 |
