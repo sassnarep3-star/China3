@@ -211,6 +211,6 @@ provincial SAFE branch Q&As.
 
 ### PR / merge / deployment record (filled by T9)
 
-- PR link: _pending_
-- Merge result: _pending_
-- GitHub Pages deployment: _pending_
+- PR link: https://github.com/sassnarep3-star/China3/pull/9
+- Merge result: _pending — PR created, checks being confirmed, merge to follow without approval_
+- GitHub Pages deployment: _pending — to be confirmed after merge_
