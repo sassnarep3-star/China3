@@ -25,7 +25,9 @@
     { group: "Reference" },
     { href: "sources.html", label: "Source register", page: "sources", count: (DATA.sources.sources || []).length },
     { href: "methodology.html", label: "Method", page: "methodology" },
-    { href: "audit.html", label: "Repo audit", page: "audit" }
+    { href: "audit.html", label: "Repo audit", page: "audit" },
+    { group: "Elsewhere" },
+    { href: "../index.html", label: "Editorial guide", page: "root" }
   ];
 
   function esc(s) {
@@ -213,7 +215,7 @@
 
       var rows = "";
       visible.forEach(function (c) {
-        rows += '<tr class="crow" data-id="' + esc(c.id) + '">' +
+        rows += '<tr class="crow" data-id="' + esc(c.id) + '" tabindex="0" role="button" aria-expanded="false" aria-controls="d-' + esc(c.id) + '">' +
           '<td class="num">' + c.rank + "</td>" +
           "<td><strong>" + esc(c.name) + '</strong><div class="small muted">' + esc(c.name_zh) + "</div></td>" +
           "<td>" + statusBadge(c) + "</td>" +
@@ -237,10 +239,19 @@
       tbody.innerHTML = rows || '<tr><td colspan="8" class="muted">No routes match those filters.</td></tr>';
       countEl.textContent = "Showing " + visible.length + " of " + chans.length + " routes. Click a row to open its pros, cons and requirements.";
 
+      function toggleRow(tr) {
+        var d = document.getElementById("d-" + tr.getAttribute("data-id"));
+        if (!d) return;
+        d.hidden = !d.hidden;
+        tr.setAttribute("aria-expanded", d.hidden ? "false" : "true");
+      }
       Array.prototype.forEach.call(tbody.querySelectorAll(".crow"), function (tr) {
-        tr.addEventListener("click", function () {
-          var d = document.getElementById("d-" + tr.getAttribute("data-id"));
-          if (d) d.hidden = !d.hidden;
+        tr.addEventListener("click", function () { toggleRow(tr); });
+        tr.addEventListener("keydown", function (ev) {
+          if (ev.key === "Enter" || ev.key === " " || ev.key === "Spacebar") {
+            ev.preventDefault();
+            toggleRow(tr);
+          }
         });
       });
     }

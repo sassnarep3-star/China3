@@ -201,3 +201,6 @@ footer.site a { color: var(--ink-soft); }
   .calc { grid-template-columns: 1fr; }
   h1 { font-size: 23px; }
 }
+
+/* keep the hidden attribute authoritative even where tr/td display is set above */
+[hidden] { display: none !important; }
