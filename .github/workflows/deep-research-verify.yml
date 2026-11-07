@@ -1,0 +1,26 @@
+name: Verify deep-research dashboard
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deep-research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Line-by-line verification of deep-research tables and links
+        run: python3 scripts/verify_deep.py
+      - name: Confirm deep-research pages are present and non-empty
+        run: |
+          for f in deep-executive-summary.html deep-china-rules.html deep-us-tax.html                    deep-channels.html deep-penalty.html deep-findings.html                    deep-review.html deep-sources.html assets/deep-research.css assets/deep-app.js; do
+            test -s "$f" || { echo "missing or empty: $f"; exit 1; }
+          done

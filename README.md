@@ -112,3 +112,41 @@ python3 -m http.server 8000 --bind 0.0.0.0
 ## Licence
 
 No licence was present when this work started and none was added, because choosing one is the repository owner's decision. Content is cited to its sources under those sources' own terms.
+
+---
+
+## Deep research pass (integration session `session-c703e38c`)
+
+A second, deeper research pass was integrated without altering any earlier page. All
+deep-research outputs use distinct filenames so that merging `main` never overwrites
+another session's files.
+
+| Page | Contents |
+|---|---|
+| `deep-executive-summary.html` | Executive summary, ranked recommendation, requirement coverage |
+| `deep-china-rules.html` | 50 China-side FX/tax rules, one official link per row |
+| `deep-us-tax.html` | 28 IRS / FinCEN / Treasury / eCFR rules, one official link per row |
+| `deep-channels.html` | 35 conversion channels with pros, cons, limits, penalty exposure |
+| `deep-penalty.html` | Conversion penalty decomposed into 35 verifiable cost layers |
+| `deep-findings.html` | 22 sourced findings and analysis |
+| `deep-review.html` | Clearly labelled **Flagged for Review** register (23 items, each with a source link) |
+| `deep-sources.html` | 84 official sources with verification method |
+
+Machine-readable data: `data/china_rules.csv`, `data/us_rules.csv`, `data/channels.csv`,
+`data/penalty.csv`, `data/findings.csv`, `data/flags.csv`, `data/sources.csv`,
+`data/deep_sources.json`. Research memos: `research/*.md`. Full executive summary:
+`EXECUTIVE_SUMMARY.md`.
+
+Build and verify locally:
+
+```sh
+python3 scripts/build_deep_site.py && python3 scripts/integrate_deep.py && python3 scripts/verify_deep.py
+python3 -m http.server 8000 --bind 0.0.0.0
+```
+
+Headline findings: a passport-holding U.S. citizen is generally a 境外个人 whose FX
+purchase from legitimate, tax-documented RMB income is not limited by the USD 50,000
+convenience amount (but the 2008 State Council regulation defines 境内个人 differently —
+see IR-007); no official source establishes a general tax on converting personal CNY
+principal; the largest single monetary risk is a willful FBAR penalty of up to 50% of the
+account balance; and `银发〔2026〕42号` repealed `银发〔2021〕237号`.
