@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "dataset": "Breakdown of the so-called conversion penalty, with worked arithmetic",
+    "compiled_on": "2026-11-07",
+    "how_to_read": "Every input below is either a cited official figure (with URL) or an explicitly labelled assumption. Nothing here is a tax determination for any individual. Arithmetic is shown so it can be rechecked.",
+    "model_arithmetic_rule": "Costs are expressed as a percentage of the principal moved. Only two of the five cost components have a published rate that can be turned into a number; the rest are stated qualitatively or as a statutory ceiling."
+  },
+  "decomposition": [
+    {
+      "id": "P-1",
+      "component": "PRC income tax triggered by the conversion itself",
+      "rate": "0%",
+      "derivation": "No provision of the Individual Income Tax Law imposes tax on converting one's own funds between currencies. The taxable events are listed exhaustively in IIT Law Art. 2. Bank deposit interest would be the taxable item, and 财税〔2008〕132号 exempts it from 9 October 2008. There is also no PRC estate tax (MOF reply, 2017) and no PRC exit tax on unrealised gains (the pre-departure obligation is a settlement of tax already due, IIT Law Art. 10(5) and 13).",
+      "status": "verified as zero for a bank deposit",
+      "sources": [
+        "https://www.npc.gov.cn/zgrdw/npc/xinwen/2018-08/31/content_2060151.htm",
+        "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203286/content.html",
+        "https://www.gov.cn/gongbao/content/2005/content_64294.htm"
+      ]
+    },
+    {
+      "id": "P-2",
+      "component": "Bank conversion spread (the real, unavoidable cost of a lawful conversion)",
+      "rate": "about 0.42% of principal, one way, at a large state bank",
+      "derivation": "Bank of China published rates, USD, 2026-11-07/08: 现汇买入价 666.48 and 现汇卖出价 669.29 CNY per 100 USD. Spread = 2.81 CNY per 100 USD. As a percentage of the mid-point of 667.885, 2.81 / 667.885 = 0.4207%.",
+      "status": "verified, but it moves daily and differs by bank and by whether the money is 现汇 (transfer) or 现钞 (cash)",
+      "sources": [
+        "https://www.boc.cn/sourcedb/whpj/"
+      ]
+    },
+    {
+      "id": "P-3",
+      "component": "Remittance / wire fee and correspondent-bank charges",
+      "rate": "",
+      "derivation": "Set by each bank's published tariff. No official, citable, uniformly applicable figure was found, so no number is asserted.",
+      "status": "unverified — blank by design. Read the sending bank's tariff schedule before relying on any figure.",
+      "sources": []
+    },
+    {
+      "id": "P-4",
+      "component": "US federal income tax on receipt of the money",
+      "rate": "0% if it is a genuine gift or inheritance",
+      "derivation": "A gift is not gross income; the IRS treats a foreign gift or bequest as an amount the recipient excludes from gross income, and imposes a reporting requirement on Part IV of Form 3520 above the threshold. The US recipient of a gift owes no gift tax — gift tax falls on the donor, and a nonresident alien donor's non-US-situs gifts are outside US gift tax.",
+      "status": "verified for a gift or bequest. Different if the money is payment for services, wages, a sale, or a distribution from a foreign trust — those are income or are reported on Part III of Form 3520.",
+      "sources": [
+        "https://www.irs.gov/businesses/gifts-from-foreign-person",
+        "https://www.law.cornell.edu/uscode/text/26/6039F"
+      ]
+    },
+    {
+      "id": "P-5",
+      "component": "US tax on the foreign-currency gain (IRC §988)",
+      "rate": "ordinary income on the gain; disregarded if the gain on a personal transaction does not exceed USD 200",
+      "derivation": "IRC §988(a)(1)(A) makes foreign-currency gain ordinary income; §988(e)(2) excludes a personal transaction unless the gain would exceed $200. The gain is the USD value at conversion minus the USD value of the RMB when the RMB was acquired — so a deposit accumulated at a stronger yuan and converted at a weaker yuan produces a real, taxable gain even with no investment.",
+      "status": "verified as a rule; the amount depends on the individual's acquisition history, which the project does not have.",
+      "sources": [
+        "https://www.law.cornell.edu/uscode/text/26/988"
+      ]
+    },
+    {
+      "id": "P-6",
+      "component": "PRC exchange-control fine, if the route used is not lawful",
+      "rate": "up to 30% of the amount; 30%-100% if serious",
+      "derivation": "FX Regulations Art. 39 (evasion), Art. 40 (illegal arbitrage), Art. 45 (unauthorised trading), plus repatriation orders. Note the base: the penalty is a percentage of the amount moved, not of any tax avoided.",
+      "status": "verified as a statutory maximum. Actual assessment varies with the facts.",
+      "sources": [
+        "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202411/t20241121_3947210.html"
+      ]
+    },
+    {
+      "id": "P-7",
+      "component": "US information-return penalties, if the required forms are not filed",
+      "rate": "Form 3520: 5% of the gift per month, capped at 25%. FBAR non-willful: up to USD 16,536 per report. FBAR willful: greater of USD 165,353 or 50% of the balance. Form 8938: USD 10,000 plus up to USD 50,000 more.",
+      "derivation": "IRC §6039F(c); 31 CFR 1010.821 Table 1 for the inflation-adjusted FBAR maximums; IRC §6038D(d).",
+      "status": "verified",
+      "sources": [
+        "https://www.law.cornell.edu/uscode/text/26/6039F",
+        "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821",
+        "https://www.law.cornell.edu/uscode/text/26/6038D"
+      ]
+    },
+    {
+      "id": "P-8",
+      "component": "US tax on a PFIC held inside the Chinese account",
+      "rate": "not a flat rate — excess distributions and all disposition gain are spread across the holding period, taxed at the highest rate for each year, plus an interest charge",
+      "derivation": "IRC §1291(a)(1)(C) and (c) deferred tax amount; §1291(a)(2) treats the entire gain on disposition as an excess distribution. QEF (§1295) or mark-to-market (§1296) elections change the result if available.",
+      "status": "verified as a regime; the numeric outcome depends on the fund and the holding period.",
+      "sources": [
+        "https://www.law.cornell.edu/uscode/text/26/1291",
+        "https://www.irs.gov/instructions/i8621"
+      ]
+    }
+  ],
+  "worked_examples": {
+    "assumption_statement": "The principal, the rates and the charge are chosen to make the arithmetic checkable. They are NOT advice and NOT a prediction for any person. Foreign-currency amounts are converted at the 2026-10-30 Federal Reserve H.10 rate of 6.6538 CNY/USD purely so that one arithmetic path is visible.",
+    "fx_rate_used": {
+      "value": 6.6538,
+      "unit": "CNY per USD",
+      "source": "https://www.federalreserve.gov/releases/h10/current/",
+      "date": "2026-10-30"
+    },
+    "boc_spread_used": {
+      "value": 0.4207,
+      "unit": "% one way",
+      "source": "https://www.boc.cn/sourcedb/whpj/",
+      "date": "2026-11-07"
+    },
+    "cases": [
+      {
+        "id": "W-1",
+        "label": "CNY 3,000,000 moved lawfully under a documented current-account or emigrant route, all US forms filed on time",
+        "principal_cny": 3000000,
+        "principal_usd": 450870,
+        "lines": [
+          {
+            "item": "PRC income tax on conversion",
+            "percent": 0.0,
+            "usd": 0
+          },
+          {
+            "item": "Bank FX spread at 0.4207%",
+            "percent": 0.4207,
+            "usd": 1897
+          },
+          {
+            "item": "Remittance and correspondent fees",
+            "percent": null,
+            "usd": null,
+            "note": "unverified — read the bank tariff"
+          },
+          {
+            "item": "US income tax on receipt (gift)",
+            "percent": 0.0,
+            "usd": 0
+          },
+          {
+            "item": "US information-return penalties",
+            "percent": 0.0,
+            "usd": 0,
+            "note": "zero because filed on time"
+          }
+        ],
+        "bottom_line": "The measurable cost is the spread — about USD 1,900 on USD 450,868, i.e. 0.42%. There is no tax component."
+      },
+      {
+        "id": "W-2",
+        "label": "Same sum, same lawful route, but Form 3520 never filed",
+        "principal_cny": 3000000,
+        "principal_usd": 450870,
+        "lines": [
+          {
+            "item": "Bank FX spread at 0.4207%",
+            "percent": 0.4207,
+            "usd": 1897
+          },
+          {
+            "item": "§6039F penalty, 5% per month capped at 25%",
+            "percent": 25.0,
+            "usd": 112718
+          }
+        ],
+        "bottom_line": "The reporting failure costs about 59 times the entire cost of moving the money. This is the number that gets described as a 'conversion penalty'."
+      },
+      {
+        "id": "W-3",
+        "label": "Same sum, willful FBAR failure on the account",
+        "principal_cny": 3000000,
+        "principal_usd": 450870,
+        "lines": [
+          {
+            "item": "FBAR willful maximum, greater of USD 165,353 or 50% of balance",
+            "percent": 50.0,
+            "usd": 225435
+          }
+        ],
+        "bottom_line": "50% of the balance per violation, and violations can be counted for more than one year. Compare with the 5% streamlined domestic penalty and the 0% streamlined foreign penalty."
+      },
+      {
+        "id": "W-4",
+        "label": "Same sum moved through a prohibited channel and caught",
+        "principal_cny": 3000000,
+        "principal_usd": 450870,
+        "lines": [
+          {
+            "item": "FX Regulations Art. 39 / 45 fine at the ordinary maximum of 30%",
+            "percent": 30.0,
+            "usd": 135261
+          },
+          {
+            "item": "Repatriation order",
+            "percent": null,
+            "usd": null,
+            "note": "the funds must be returned to China as well"
+          }
+        ],
+        "bottom_line": "About 71 times the cost of the lawful route, and the money comes back."
+      }
+    ]
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "route": "Bank FX purchase within the USD 50,000 annual quota (CH-01), repeated each year",
+      "effective_cost": "About 0.42% spread plus the bank's wire fee",
+      "why": "Cheapest, fastest, least evidence. Capacity is the constraint, not cost."
+    },
+    {
+      "rank": 2,
+      "route": "Documented over-quota current-account purchase (CH-02) where a genuine current-account event exists",
+      "effective_cost": "About 0.42% spread plus the bank's wire fee",
+      "why": "Same cost as rank 1 and no amount ceiling, but it only works if the purpose is real."
+    },
+    {
+      "rank": 3,
+      "route": "Emigrant transfer (CH-03) or inheritance transfer (CH-04)",
+      "effective_cost": "Spread plus the cost of notarisation, translation, and the tax certificate; 2-year staging for the emigrant route",
+      "why": "The only route designed for moving a whole estate. Cost is administrative, not fiscal."
+    },
+    {
+      "rank": 4,
+      "route": "Property sale proceeds with SAFE approval (CH-05)",
+      "effective_cost": "Spread plus 20% PRC IIT on the property gain",
+      "why": "The 20% is a tax on the gain in the property, not on the conversion. It would have been payable whenever the property was sold."
+    },
+    {
+      "rank": 5,
+      "route": "Card withdrawals (CH-06) and cash (CH-07)",
+      "effective_cost": "Spread plus ATM or cash-handling fees",
+      "why": "Cheap per unit, but the annual ceilings make them supplementary at best."
+    },
+    {
+      "rank": 6,
+      "route": "QDII (CH-09)",
+      "effective_cost": "Fund fees, and US PFIC tax on the wrapper",
+      "why": "It is not a way to get the money out at all."
+    },
+    {
+      "rank": 7,
+      "route": "Structuring (CH-15), underground banks (CH-16), crypto (CH-17)",
+      "effective_cost": "Losing the quota for 3 years, or a fine of 30%-100% of the amount, or both",
+      "why": "75 to 250 times the cost of the lawful route, with the funds repatriated."
+    }
+  ],
+  "the_real_answer": {
+    "finding": "The premise of the question does not survive the evidence. There is no PRC tax on converting CNY to USD, no PRC exit tax, no PRC estate tax, and no US tax on receiving a genuine gift or inheritance. What does exist is (a) a bank spread of about 0.4%, (b) a documentary/eligibility gate that determines whether a large conversion is permitted at all, and (c) a set of information-reporting obligations on the US side whose penalties are orders of magnitude larger than any tax on the money.",
+    "therefore": "The least-tax-penalty route is not a clever channel. It is: use the ordinary bank route, document the purpose honestly or wait for an eligible capital-account route such as the emigrant transfer, and file every US form on time. Filing converts a potential 25%-50% exposure into a 0% one."
+  }
+}

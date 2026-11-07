@@ -1,0 +1,26 @@
+{
+  "generated": "2026-11-07",
+  "pages": [
+    "channels.html",
+    "china-fx-rules.html",
+    "china-tax.html",
+    "executive-summary.html",
+    "flagged.html",
+    "index.html",
+    "penalty-analysis.html",
+    "sources.html",
+    "us-inbound.html"
+  ],
+  "rows": {
+    "china_fx": 25,
+    "china_tax": 12,
+    "us_inbound": 21,
+    "channels": 22
+  },
+  "total_rows": 80,
+  "unique_sources": 42,
+  "source_links_in_tables": 106,
+  "verified": 76,
+  "partial": 2,
+  "unverified": 2
+}

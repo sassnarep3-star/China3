@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sassnarep3-star.github.io/China3/schema/row.schema.json",
+  "title": "China3 finding row",
+  "description": "One verified finding. Either the topic form (a rule) or the channel form (a route). Rules: a row with verification != 'unverified' MUST carry at least one https source URL that points at an official publisher; a row with verification == 'unverified' MUST NOT carry a value.",
+  "type": "object",
+  "oneOf": [
+    { "$ref": "#/$defs/TopicRow" },
+    { "$ref": "#/$defs/ChannelRow" }
+  ],
+  "$defs": {
+    "sourceObject": {
+      "type": "object",
+      "required": ["url"],
+      "properties": {
+        "label": { "type": "string" },
+        "url": { "type": "string", "pattern": "^https://" }
+      },
+      "additionalProperties": false
+    },
+    "verification": {
+      "type": "string",
+      "enum": ["verified", "partial", "unverified"],
+      "description": "verified = the value is stated in the linked official source; partial = part of the finding is confirmed; unverified = nothing confirmable was found, so the value is blank."
+    },
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "TopicRow": {
+      "type": "object",
+      "required": ["id", "topic", "value", "detail", "implication", "source_url", "source_publisher", "source_title", "verified_on", "verification"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^(CN-FX|CN-TAX|US)-\\d{2}$" },
+        "topic": { "type": "string", "minLength": 3 },
+        "value": { "type": "string", "description": "Empty string when verification is 'unverified'. No placeholder text allowed." },
+        "detail": { "type": "string", "description": "The operative wording of the rule, quoted, with the article number." },
+        "implication": { "type": "string", "description": "What the rule means for a US citizen moving CNY to USD." },
+        "source_url": { "type": "string", "pattern": "^https://" },
+        "source_publisher": { "type": "string" },
+        "source_title": { "type": "string" },
+        "verification_note": { "type": "string" },
+        "flagged": { "type": "boolean" },
+        "verified_on": { "$ref": "#/$defs/date" },
+        "verification": { "$ref": "#/$defs/verification" }
+      },
+      "additionalProperties": false
+    },
+    "ChannelRow": {
+      "type": "object",
+      "required": ["id", "name", "category", "legality", "pros", "cons", "sources", "verified_on", "verification"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^CH-\\d{2}$" },
+        "name": { "type": "string", "minLength": 3 },
+        "category": { "type": "string" },
+        "legality": {
+          "type": "string",
+          "enum": ["lawful", "lawful-restricted", "prohibited", "unverified"],
+          "description": "Taken from the official source, not from common practice. 'lawful-restricted' means permitted subject to conditions stated in `restriction`."
+        },
+        "restriction": { "type": "string" },
+        "capacity": { "type": "string", "description": "Published limit. Empty string if none could be sourced." },
+        "cost_published": { "type": "string", "description": "Published cost. Empty string if none could be sourced — never an estimate." },
+        "pros": { "type": "string" },
+        "cons": { "type": "string" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/sourceObject" } },
+        "flagged": { "type": "boolean" },
+        "verified_on": { "$ref": "#/$defs/date" },
+        "verification": { "$ref": "#/$defs/verification" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

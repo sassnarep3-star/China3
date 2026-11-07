@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "dataset": "China-side tax treatment of the money and of the conversion, for an individual",
+    "compiled_on": "2026-11-07",
+    "headline": "China imposes no exit tax and no FX conversion tax on an individual moving their own lawful funds abroad. The Chinese tax that exists attaches to the income (interest, dividends, property gain), and a bank deposit's interest is currently exempt. The large penalties that people experience are US inbound-reporting penalties and PRC exchange-control fines, not PRC income tax.",
+    "official_publishers_only": true
+  },
+  "rows": [
+    {
+      "id": "CN-TAX-01",
+      "topic": "Residence test for individual income tax",
+      "value": "Resident if domiciled in China, or resident 183+ days in a tax year; residents taxed on worldwide income, non-residents on China-source income only",
+      "detail": "Individual Income Tax Law Art. 1 as amended 2018: 在中国境内有住所，或者无住所而一个纳税年度内在中国境内居住累计满一百八十三天的个人，为居民个人。居民个人从中国境内和境外取得的所得…缴纳个人所得税。非居民个人从中国境内取得的所得…缴纳个人所得税。",
+      "implication": "Domicile (住所) — not days — is what captures a Chinese national. A Chinese national who has emigrated may still be domiciled in China for IIT purposes unless the household registration is cancelled and ties are severed. This is a separate question from exchange control and should be confirmed for the specific person.",
+      "source_url": "https://www.npc.gov.cn/zgrdw/npc/xinwen/2018-08/31/content_2060151.htm",
+      "source_publisher": "National People's Congress (中国人大网)",
+      "source_title": "全国人民代表大会常务委员会关于修改《中华人民共和国个人所得税法》的决定 — 第一项",
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CN-TAX-02",
+      "topic": "Is there a PRC exit tax on an individual leaving China?",
+      "value": "No. There is a pre-departure tax settlement obligation, not an exit tax on unrealised gains.",
+      "detail": "IIT Law Art. 10(5) requires a filing where 因移居境外注销中国户籍 (cancelling PRC household registration on emigrating). Art. 13 requires 纳税人因移居境外注销中国户籍的，应当在注销中国户籍前办理税款清算 (settle tax before cancelling household registration). Neither provision imposes a tax on unrealised appreciation; the settlement covers tax already due.",
+      "implication": "This is the single most important China-side finding for the user's question about 'tax penalties'. There is no PRC departure tax to trigger by moving the money out, and no PRC tax on the act of converting CNY to USD. The cost of moving money out lawfully is a bank spread, not a tax.",
+      "source_url": "https://www.npc.gov.cn/zgrdw/npc/xinwen/2018-08/31/content_2060151.htm",
+      "source_publisher": "National People's Congress (中国人大网)",
+      "source_title": "个人所得税法（2018修正）— 第十条、第十三条",
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CN-TAX-03",
+      "topic": "Tax rate on interest, dividends, bonuses, property rental and property transfer",
+      "value": "Proportional rate of 20%",
+      "detail": "IIT Law Art. 3(3): 利息、股息、红利所得，财产租赁所得，财产转让所得和偶然所得，适用比例税率，税率为百分之二十。Art. 6(5): property transfer income is taxed on proceeds less original cost and reasonable expenses, so only the gain is taxed. Art. 6(6): interest/dividend income is taxed on the full amount received, with no cost deduction.",
+      "implication": "A bank deposit's interest would be the taxable event — but see CN-TAX-04. Converting the principal is not a taxable event, and a personal FX gain on conversion is not listed as taxable income under Art. 2.",
+      "source_url": "https://www.npc.gov.cn/zgrdw/npc/xinwen/2018-08/31/content_2060151.htm",
+      "source_publisher": "National People's Congress (中国人大网)",
+      "source_title": "个人所得税法（2018修正）— 第三条、第六条",
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CN-TAX-04",
+      "topic": "Tax on bank deposit interest (储蓄存款利息所得)",
+      "value": "Exempt since 9 October 2008",
+      "detail": "财税〔2008〕132号: 经国务院批准，自2008年10月9日起，对储蓄存款利息所得暂免征收个人所得税…储蓄存款在2008年10月9日后（含10月9日）孳生的利息所得，暂免征收个人所得税。The authority for this is IIT Law Art. 18: 对储蓄存款利息所得开征、减征、停征个人所得税及其具体办法，由国务院规定。",
+      "implication": "An ordinary CNY savings account therefore generates no PRC income tax. If the money is in a deposit, the PRC tax on the money sitting there is zero, which is why a 'conversion penalty' cannot be a PRC income tax.",
+      "source_url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203286/content.html",
+      "source_publisher": "State Taxation Administration (国家税务总局) policy database",
+      "source_title": "财政部 国家税务总局关于储蓄存款利息所得有关个人所得税政策的通知（财税〔2008〕132号）",
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CN-TAX-05",
+      "topic": "Dividends received by a foreign national from a foreign-invested enterprise",
+      "value": "20%, withheld by the paying company",
+      "detail": "财政部 税务总局公告2026年第27号, effective 1 September 2026: 外籍个人从外商投资企业取得的股息红利所得，按照'利息、股息、红利所得'缴纳个人所得税，适用20%税率。The paying FIE must withhold and declare by the 15th of the following month. This announcement repealed the previous exemption in 财税字〔1994〕20号 Art. 2(8).",
+      "implication": "A recent and material change. A US citizen holding equity in a Chinese company now pays 20% PRC tax on dividends where an exemption previously applied. Anyone relying on older commentary will get this wrong.",
+      "source_url": "https://hainan.chinatax.gov.cn/xxgk_6_1/01166844.html",
+      "source_publisher": "Hainan Provincial Tax Service, State Taxation Administration",
+      "source_title": "财政部 税务总局关于外籍个人股息红利个人所得税政策有关事项的公告（2026年第27号）",
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CN-TAX-06",
+      "topic": "PRC inheritance / estate tax",
+      "value": "Not levied. No statute or draft has ever been published.",
+      "detail": "Ministry of Finance reply to CPPCC proposal No. 0107 of the 12th National Committee (published 17 October 2017): 我国目前并未开征遗产税，也从未发布遗产税相关条例或条例草案。提案中提到的'2004年、2010年版《中华人民共和国遗产税暂行条例（草案）》'来源未知。The reply says MOF will keep tracking international trends.",
+      "implication": "An inheritance from China carries no PRC estate tax. The costs on an inherited mainland estate are the property-transfer IIT (CN-TAX-03) at the point of sale, and the US reporting obligations on the receiving end.",
+      "source_url": "https://finance.people.com.cn/n1/2017/1124/c1004-29666564.html",
+      "source_publisher": "人民网 (People's Daily) reporting the Ministry of Finance reply letter",
+      "source_title": "财政部：我国从未发布遗产税相关条例或条例草案",
+      "verified_on": "2026-11-07",
+      "verification": "verified",
+      "verification_note": "The MOF reply letter itself was not retrieved from mof.gov.cn; the text was read from People's Daily's report of it, which quotes the operative sentence verbatim. A 2017 date means this should be re-checked for any later change; no later MOF statement introducing an estate tax was found."
+    },
+    {
+      "id": "CN-TAX-07",
+      "topic": "Tax on a foreign-currency gain made on conversion",
+      "value": "",
+      "detail": "IIT Law Art. 2 lists nine categories of taxable income: wages and salaries, remuneration for personal services, author's remuneration, royalties, business income, interest/dividends/bonuses, property rental, property transfer, and incidental income. A gain arising purely from the exchange-rate movement on an individual's own funds is not identified in any of the nine categories, and this project did not find an official document that taxes it.",
+      "implication": "FLAGGED. The absence of a listed category is strong but negative evidence. No official text was found that expressly addresses individual FX conversion gains, so this is recorded as unconfirmed rather than asserted as exempt.",
+      "source_url": "https://www.npc.gov.cn/zgrdw/npc/xinwen/2018-08/31/content_2060151.htm",
+      "source_publisher": "National People's Congress (中国人大网)",
+      "source_title": "个人所得税法（2018修正）— 第二条",
+      "verified_on": "2026-11-07",
+      "verification": "unverified",
+      "flagged": true
+    },
+    {
+      "id": "CN-TAX-08",
+      "topic": "Is there a PRC tax on the act of transferring money abroad?",
+      "value": "No",
+      "detail": "No provision in the Individual Income Tax Law, the Foreign Exchange Administration Regulations, or the two property-transfer announcements imposes a tax on the transfer itself. Announcement [2004] No. 16 Art. 8(6) requires a tax certificate from the competent tax authority as a documentary condition for the transfer, which confirms the payment has been accounted for — it is not a transfer tax.",
+      "implication": "The 'considerable tax' that the user has been told about is therefore most plausibly one of three things: (a) the PRC exchange-control fine under Art. 39/40/45 if a route was used that is not lawful, (b) US inbound tax or US information-return penalties, or (c) an estimate of tax on income that was never declared in China. It is not a PRC tax on moving the money.",
+      "source_url": "https://www.gov.cn/gongbao/content/2005/content_64294.htm",
+      "source_publisher": "State Council Gazette",
+      "source_title": "个人财产对外转移售付汇管理暂行办法 — 第八条（六）",
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CN-TAX-09",
+      "topic": "Documentary precondition for moving inherited or property-sale funds: the tax certificate",
+      "value": "A 税收证明或完税凭证 from the competent tax authority is a required document",
+      "detail": "Announcement [2004] No. 16 Art. 8(6) (emigrant transfer) and Art. 9(5) (inheritance transfer) both require 主管税务机关开具的税收证明或完税凭证. Art. 12 excludes property whose lawful source cannot be shown.",
+      "implication": "This is the practical bottleneck. If the money's provenance cannot be documented and taxed where a taxable event occurred, the lawful route closes regardless of how much tax one is willing to pay.",
+      "source_url": "https://www.gov.cn/gongbao/content/2005/content_64294.htm",
+      "source_publisher": "State Council Gazette",
+      "source_title": "个人财产对外转移售付汇管理暂行办法 — 第八条、第九条、第十二条",
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CN-TAX-10",
+      "topic": "Anti-avoidance adjustment power (GAAR)",
+      "value": "Tax authorities may recharacterise arrangements without reasonable commercial purpose",
+      "detail": "IIT Law Art. 8: 个人实施其他不具有合理商业目的的安排而获取不当税收利益…税务机关有权按照合理方法进行纳税调整…应当补征税款，并依法加收利息。Art. 8(2) also addresses a resident individual's controlled foreign company that does not distribute profits without reasonable business need.",
+      "implication": "Supports the practical warning that an engineered structure whose only purpose is to avoid the FX or tax rules is exposed to adjustment plus interest.",
+      "source_url": "https://www.npc.gov.cn/zgrdw/npc/xinwen/2018-08/31/content_2060151.htm",
+      "source_publisher": "National People's Congress (中国人大网)",
+      "source_title": "个人所得税法（2018修正）— 第八条",
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CN-TAX-11",
+      "topic": "Monthly broker/agency FX spread actually published (cost benchmark)",
+      "value": "Bank of China USD: 现汇买入价 666.48, 现汇卖出价 669.29, 中行折算价 671.68 CNY per 100 USD, published 2026-11-08 00:00",
+      "detail": "Read directly from the Bank of China published rate table on 2026-11-07. Spread between the bank's cash-remittance buying and selling rates = 669.29 - 666.48 = 2.81 CNY per 100 USD, i.e. 0.42% of the mid-point of those two quotes. The 中行折算价 (conversion reference) sits above both.",
+      "implication": "This is the real, quotable cost of a lawful conversion at a large state bank: about 0.4% round-trip on the spread, not a 20-30% 'tax'. The figure moves daily and must be re-read on the day of the transaction.",
+      "source_url": "https://www.boc.cn/sourcedb/whpj/",
+      "source_publisher": "Bank of China (中国银行) — published FX rate table",
+      "source_title": "中国银行外汇牌价",
+      "verified_on": "2026-11-07",
+      "verification": "verified",
+      "verification_note": "The site prints 2026/11/08 as the publication date because the page rolls over at Beijing midnight; it was fetched on the user's 2026-11-07."
+    },
+    {
+      "id": "CN-TAX-12",
+      "topic": "Market reference rate for the same day (cross-check)",
+      "value": "Federal Reserve H.10, China / yuan, 30 October 2026: 6.6538 CNY per USD",
+      "detail": "Federal Reserve Board statistical release H.10, weekly, release date 2 November 2026, daily figures for 26-30 October 2026.",
+      "implication": "Used only as an independent cross-check on the order of magnitude, and as a defensible rate a US filer could cite. US filers must generally use the rate on the date of the transaction for income items; the IRS publishes yearly average rates separately.",
+      "source_url": "https://www.federalreserve.gov/releases/h10/current/",
+      "source_publisher": "Board of Governors of the Federal Reserve System",
+      "source_title": "Foreign Exchange Rates — H.10",
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    }
+  ]
+}

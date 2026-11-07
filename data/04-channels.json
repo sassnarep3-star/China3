@@ -1,0 +1,389 @@
+{
+  "meta": {
+    "dataset": "Channel catalogue — every route we could identify for turning CNY in a Chinese bank account into USD the account holder can use from the United States",
+    "compiled_on": "2026-11-07",
+    "legality_values": {
+      "lawful": "Expressly permitted by a provision cited in the row.",
+      "lawful-restricted": "Permitted only for a defined class of person or only with documentary conditions; the restriction is cited.",
+      "prohibited": "Expressly prohibited or expressly penalised. Included because these are the routes most often recommended informally, and the user asked for as many routes as possible.",
+      "unverified": "No official source found either permitting or prohibiting it."
+    },
+    "cost_note": "Only costs that could be read from an official published price list are given as numbers. Everything else is blank and flagged. No cost estimate was invented.",
+    "official_publishers_only": true
+  },
+  "rows": [
+    {
+      "id": "CH-01",
+      "name": "Bank FX purchase within the annual facilitation quota (占用年度便利化额度的购汇)",
+      "category": "Bank channel — current account",
+      "legality": "lawful-restricted",
+      "restriction": "境内个人 only, and up to USD 50,000 equivalent per year, and the purpose must be a permitted current-account purpose — the application form's six prohibitions apply",
+      "capacity": "USD 50,000 equivalent per person per calendar year",
+      "cost_published": "About 0.42% on the bank's buying/selling spread for USD (2.81 CNY per 100 USD at BOC on 2026-11-07), plus any remittance fee, which is set by the bank and was not published in a form that could be cited",
+      "pros": "Fast, same-day, no approvals, no external evidence beyond the signed application, any branch, repeatable every year. This is the cheapest and simplest route by a wide margin for the first USD 50,000 each year.",
+      "cons": "Capped per person per year. Requires 境内个人 status (see CN-FX-25 for the ambiguity affecting a US citizen resident in China). The declared purpose is binding: the bank must check that the purchase purpose matches the remittance purpose (Guidelines Art. 64(1)). Using it for overseas property, securities or life/return-of-premium insurance is prohibited.",
+      "sources": [
+        {"label": "Guidelines 2020, Art. 54-55 (quota and ID-only processing)", "url": "https://www.gov.cn/gongbao/content/2020/content_5560296.htm"},
+        {"label": "个人购汇申请书 (six prohibitions)", "url": "https://m.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf"},
+        {"label": "BOC published USD rate table (spread)", "url": "https://www.boc.cn/sourcedb/whpj/"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-02",
+      "name": "Bank FX purchase above the quota, documented (不占用年度便利化额度的经常项目购汇)",
+      "category": "Bank channel — current account",
+      "legality": "lawful-restricted",
+      "restriction": "Requires ID plus documentary evidence of the transaction amount and purpose (有交易额的购汇资金用途材料). Above USD 50,000 per payment the outbound service-trade tax filing also applies.",
+      "capacity": "No statutory ceiling. Practical ceiling is the ability to evidence a genuine current-account transaction.",
+      "cost_published": "Bank spread as in CH-01; above USD 50,000 per payment, the tax filing step applies (a filing, not a fee)",
+      "pros": "The only route that scales to large sums for a person who is not an emigrant. SAFE's own Q&A confirms there is no amount limit for genuine current-account transactions. Fully lawful and auditable.",
+      "cons": "Requires a real underlying current-account event: study fees, medical costs, wages, family support, service fees, a genuine trade. Cannot be used to buy overseas property or securities. Bank discretion on documentary adequacy is real. Needs the STA/SAFE tax filing above USD 50,000 per payment.",
+      "sources": [
+        {"label": "Guidelines 2020, Art. 56 and Art. 64", "url": "https://www.gov.cn/gongbao/content/2020/content_5560296.htm"},
+        {"label": "SAFE Q&A: no amount limit on genuine current-account conversion", "url": "https://www.safe.gov.cn/ningxia/2022/0929/1997.html"},
+        {"label": "STA/SAFE Announcement 2013 No. 40 (tax filing above USD 50k)", "url": "https://m.safe.gov.cn/safe/2013/0724/5435.html"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-03",
+      "name": "Emigrant property transfer (移民财产转移)",
+      "category": "Capital account — SAFE approval",
+      "legality": "lawful-restricted",
+      "restriction": "Only for a person who has emigrated from mainland China or settled in Hong Kong / Macao; requires cancelled PRC household registration, embassy-certified proof of settlement abroad, property-right documents and a PRC tax payment certificate",
+      "capacity": "Whole lawful estate, but staged: up to 50% first, then up to half the remainder after 1 year, then the rest after 2 years. Up to CNY 200,000 equivalent may go in one payment with approval.",
+      "cost_published": "",
+      "pros": "The only route that moves essentially the entire balance without a purpose-matching current-account event. Expressly designed for exactly this problem. Approved by a named government office, so the outcome is documented.",
+      "cons": "Takes at least two years to complete. Requires that household registration has already been cancelled and that the emigration is documented — so it is not available to a Chinese citizen who has not emigrated. The tax certificate is a hard gate. Above CNY 500,000 equivalent, SAFE headquarters (not the local branch) approves. No cash may be handed out; the bank must wire directly to the applicant's own foreign account.",
+      "sources": [
+        {"label": "PBOC Announcement [2004] No. 16, Art. 2, 6, 8, 10, 11, 12", "url": "https://www.gov.cn/gongbao/content/2005/content_64294.htm"},
+        {"label": "Implementing Rules, Art. 20 (cross-reference)", "url": "https://www.safe.gov.cn/big5/big5/www.safe.gov.cn/tianjin/2024/0430/2464.html"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-04",
+      "name": "Inheritance transfer (继承财产转移)",
+      "category": "Capital account — SAFE approval",
+      "legality": "lawful-restricted",
+      "restriction": "Only for a foreign citizen or a Hong Kong / Macao resident who has inherited a mainland estate (Taiwan residents by analogy)",
+      "capacity": "The whole inherited estate, applied for once, paid in one or several instalments",
+      "cost_published": "",
+      "pros": "A US citizen heir has a defined, lawful route for the full amount. No staged waiting period like the emigrant route.",
+      "cons": "Requires inheritance documents (often notarised), the deceased's property-right documents and a tax payment certificate. Not available to a mainland-resident heir who is not a foreign citizen. Property in the estate must first be sold and the transfer IIT settled.",
+      "sources": [
+        {"label": "PBOC Announcement [2004] No. 16, Art. 2, 6, 9, 14", "url": "https://www.gov.cn/gongbao/content/2005/content_64294.htm"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-05",
+      "name": "Sale of mainland residential property by a foreign individual, proceeds remitted with SAFE approval",
+      "category": "Capital account — SAFE approval",
+      "legality": "lawful-restricted",
+      "restriction": "境外个人 (foreign individual) selling mainland commercial housing; requires SAFE approval",
+      "capacity": "The net sale proceeds",
+      "cost_published": "",
+      "pros": "A clean documented path for real estate proceeds, and the only one that works for a foreign owner who has not emigrated.",
+      "cons": "Requires the property to be sold first, with the PRC property-transfer IIT at 20% of the gain payable and verified at the registration stage. Processing time at SAFE is additional to the sale. Bank must be able to see the property transaction documents.",
+      "sources": [
+        {"label": "个人外汇管理办法 (PBOC Order [2006] No. 3) Art. 22", "url": "https://www.safe.gov.cn/big5/big5/www.safe.gov.cn/safe/2022/0818/21330.html"},
+        {"label": "IIT Law Art. 15 (property transfer tax verified at registration)", "url": "https://www.npc.gov.cn/zgrdw/npc/xinwen/2018-08/31/content_2060151.htm"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-06",
+      "name": "Overseas ATM cash withdrawals on a mainland-issued bank card",
+      "category": "Card channel",
+      "legality": "lawful-restricted",
+      "restriction": "CNY 100,000 equivalent per person per calendar year across all cards; CNY 10,000 equivalent per card per day",
+      "capacity": "About USD 14,000 per year at the BOC rate — small",
+      "cost_published": "",
+      "pros": "No application, no stated purpose, works immediately. Uses the card rails rather than the FX purchase system.",
+      "cons": "Hard per-person annual cap; exceeding it suspends overseas cash withdrawal for the rest of that year and the following year. Cash handling and ATM fees on the US side are extra and bank-specific. Borrowing or lending cards to get around the cap is expressly prohibited.",
+      "sources": [
+        {"label": "SAFE 汇发〔2017〕29号, Art. 1 and 4", "url": "https://m.safe.gov.cn/safe/2017/1230/8116.html"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-07",
+      "name": "Carrying foreign cash out of China",
+      "category": "Cash",
+      "legality": "lawful-restricted",
+      "restriction": "Up to USD 5,000 with no permit; USD 5,000-10,000 with a bank-issued 携带证; above USD 10,000 requires a SAFE-issued permit and is in principle not allowed",
+      "capacity": "USD 10,000 per trip in practice",
+      "cost_published": "",
+      "pros": "No tax, no approval for small amounts.",
+      "cons": "Absurdly low capacity for a large balance: USD 1m at USD 10,000 per trip is 100 trips. Physical risk. Must also be declared to CBP above USD 10,000 on arrival. Repeated trips just under the threshold is structuring.",
+      "sources": [
+        {"label": "SAFE / Customs 汇发〔2003〕102号, Art. 5, 7, 9", "url": "https://m.mofcom.gov.cn/article/zcfb/zcwgtz/200309/20030900122517.shtml"},
+        {"label": "CBP: report above USD 10,000 on entry", "url": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-08",
+      "name": "Spending the money abroad on a mainland card instead of converting it",
+      "category": "Card channel",
+      "legality": "lawful",
+      "restriction": "Genuine current-account consumption only",
+      "capacity": "Not capped by the USD 50,000 purchase quota",
+      "cost_published": "",
+      "pros": "SAFE states overseas consumption does not consume the USD 50,000 purchase quota. No conversion step, no purchase application, favourable card FX rates relative to cash.",
+      "cons": "This is not a conversion: you consume the value, you do not obtain USD you can hold or invest. Cannot be used to buy real estate or securities abroad. Useless for moving the balance into a US brokerage or bank account.",
+      "sources": [
+        {"label": "SAFE Q&A on 汇发〔2017〕29号 (consumption does not use the quota)", "url": "https://m.safe.gov.cn/safe/2017/1230/8116.html"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-09",
+      "name": "Qualified Domestic Institutional Investor products (QDII funds / bank products)",
+      "category": "Investment channel",
+      "legality": "lawful",
+      "restriction": "Through qualifying domestic banks, fund managers and other licensed institutions; subscription from the individual's own domestic FX deposits, not foreign cash",
+      "capacity": "Limited by the institution's QDII quota (regulator-controlled, cumulative net outflow cap)",
+      "cost_published": "",
+      "pros": "A lawful way to get USD exposure. Simple to buy from inside China.",
+      "cons": "Does not move money out of China. The asset stays inside a domestic wrapper and cashing out returns RMB or a domestic FX balance. A US citizen holding a QDII fund very likely holds a PFIC, triggering Form 8621 and the §1291 deferred-tax-and-interest regime. QDII quotas are set by SAFE and can be full, which suspends subscriptions.",
+      "sources": [
+        {"label": "Implementing Rules, Art. 17 (QDII route for individuals)", "url": "https://www.safe.gov.cn/big5/big5/www.safe.gov.cn/tianjin/2024/0430/2464.html"},
+        {"label": "SAFE QDII quota approval service guide (quota is capped)", "url": "https://www.safe.gov.cn/anhui/file/file/20180222/9ba50393ea8243ce979357c5344f4e0d.pdf"},
+        {"label": "IRS: PFIC definition and Form 8621", "url": "https://www.irs.gov/instructions/i8621"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-10",
+      "name": "Cross-border e-commerce / market-procurement settlement (跨境电商 / 市场采购贸易)",
+      "category": "Trade channel",
+      "legality": "lawful-restricted",
+      "restriction": "Genuine e-commerce or market-procurement business only, with turnover evidence or electronic transaction information; does not consume the facilitation quota",
+      "capacity": "Bounded by actual trade turnover",
+      "cost_published": "",
+      "pros": "Expressly outside the USD 50,000 quota. Settlement is fast in practice for genuine merchants.",
+      "cons": "Only available if there is a real business with real orders, logistics and platform records. Invoicing fictitious trade to move savings is trade fraud and evasion of FX control, not a planning technique.",
+      "sources": [
+        {"label": "Guidelines 2020, Art. 66(2)(3)", "url": "https://www.gov.cn/gongbao/content/2020/content_5560296.htm"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-11",
+      "name": "Direct outbound investment by an individual (对外直接投资) with SAFE registration",
+      "category": "Capital account",
+      "legality": "lawful-restricted",
+      "restriction": "Requires compliance with the outbound-direct-investment rules and SAFE approval / FX registration",
+      "capacity": "Case-specific",
+      "cost_published": "",
+      "pros": "A registered capital-account route for genuine business investment abroad.",
+      "cons": "Not a personal-wealth transfer mechanism. Requires a real investment, approvals, and in practice an operating business. Using ODI to move personal savings attracts both the FX penalties and the GAAR.",
+      "sources": [
+        {"label": "个人外汇管理办法 Art. 16 and 21", "url": "https://www.safe.gov.cn/big5/big5/www.safe.gov.cn/safe/2022/0818/21330.html"},
+        {"label": "Implementing Rules Art. 16", "url": "https://www.safe.gov.cn/big5/big5/www.safe.gov.cn/tianjin/2024/0430/2464.html"},
+        {"label": "IIT Law Art. 8 (GAAR)", "url": "https://www.npc.gov.cn/zgrdw/npc/xinwen/2018-08/31/content_2060151.htm"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-12",
+      "name": "Employee stock ownership plan / share option proceeds",
+      "category": "Capital account",
+      "legality": "lawful-restricted",
+      "restriction": "Must be applied for collectively by the employer or a domestic agent and approved by SAFE before it can operate",
+      "capacity": "The actual plan proceeds",
+      "cost_published": "",
+      "pros": "A clean route for genuine plan proceeds, and the resulting FX income can be settled or kept in a personal FX savings account.",
+      "cons": "Tied to an employer plan, so it is not generally available. The institution, not the individual, drives the approval.",
+      "sources": [
+        {"label": "Implementing Rules Art. 18", "url": "https://www.safe.gov.cn/big5/big5/www.safe.gov.cn/tianjin/2024/0430/2464.html"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-13",
+      "name": "Leaving the money in China and holding it as RMB",
+      "category": "Do nothing",
+      "legality": "lawful",
+      "restriction": "None",
+      "capacity": "Unlimited",
+      "cost_published": "0% direct cost; the risk is currency exposure, not a fee",
+      "pros": "Zero conversion cost, zero reporting consequence from a transfer, and the deposit interest is exempt from PRC income tax. If the money is not needed in USD, this is genuinely the cheapest option.",
+      "cons": "The balance stays exposed to the CNY/USD rate. It still must be reported on the FBAR and Form 8938 as a foreign account (reporting, not tax). Currency risk is the entire cost, and it is unhedgeable from inside China without an FX product.",
+      "sources": [
+        {"label": "财税〔2008〕132号 (deposit interest exempt)", "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203286/content.html"},
+        {"label": "FBAR threshold", "url": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-14",
+      "name": "Receiving the money as a gift from a relative, sent from their own Chinese account",
+      "category": "Family channel",
+      "legality": "lawful-restricted",
+      "restriction": "The sender must themselves have a lawful basis to convert and remit (CH-01, CH-02, CH-03 or CH-04). Receiving a genuine gift is lawful on the US side. Form 3520 above USD 100,000.",
+      "capacity": "Bounded by each sender's own route and quota",
+      "cost_published": "",
+      "pros": "Lawful when the sender's transfer is itself lawful. No US tax on the gift. Uses several people's quotas legitimately, because each is transferring their own funds.",
+      "cons": "Becomes unlawful the moment the sender is moving your money rather than their own — that is 分拆 (structuring) under Guidelines Art. 62 and is penalised. Above USD 100,000 per year from a foreign individual, Form 3520 Part IV is required, with a 5%-per-month penalty up to 25% for failure.",
+      "sources": [
+        {"label": "Guidelines Art. 62 (structuring prohibition)", "url": "https://www.gov.cn/gongbao/content/2020/content_5560296.htm"},
+        {"label": "IRS Form 3520 gift thresholds", "url": "https://www.irs.gov/businesses/gifts-from-foreign-person"},
+        {"label": "IRC §6039F(c) penalty", "url": "https://www.law.cornell.edu/uscode/text/26/6039F"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-15",
+      "name": "Structuring through relatives' or friends' quotas (分拆 / 'smurfing' / 蚂蚁搬家)",
+      "category": "Prohibited",
+      "legality": "prohibited",
+      "restriction": "Guidelines Art. 62: individuals may not use splitting to evade the quota or the authenticity review. Borrowing another's quota places you on the watch list directly; lending yours twice does the same.",
+      "capacity": "n/a",
+      "cost_published": "Losing the facilitation quota for the year of listing plus 2 years; fines under the FX Regulations up to 30% of the amount, or 30-100% if serious",
+      "pros": "None that survive scrutiny. It is the most commonly recommended method and it is expressly named in the rules.",
+      "cons": "Watch-listing is automatic rather than discretionary for the borrower. Every transaction is recorded in the personal FX monitoring system, so the pattern is visible to the regulator by design. The savings are illusory: the lawful routes cost about 0.4%.",
+      "sources": [
+        {"label": "Guidelines Art. 62-63", "url": "https://www.gov.cn/gongbao/content/2020/content_5560296.htm"},
+        {"label": "个人购汇申请书 prohibition 4", "url": "https://m.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf"},
+        {"label": "FX Regulations Art. 39-40, 48", "url": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202411/t20241121_3947210.html"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-16",
+      "name": "Underground bank / private offset (地下钱庄) — paying RMB in China, receiving USD abroad from a third party",
+      "category": "Prohibited",
+      "legality": "prohibited",
+      "restriction": "FX Regulations Art. 45 penalises 私自买卖外汇、变相买卖外汇、倒买倒卖外汇或者非法介绍买卖外汇. Art. 46 penalises unlicensed FX settlement businesses. The 'offset' structure is the textbook 变相买卖外汇.",
+      "capacity": "n/a",
+      "cost_published": "Warning, confiscation of gains, fine of up to 30% of the amount (30-100% if serious); criminal liability under Art. 45 and Art. 39",
+      "pros": "Fast, no quota, no documentation. This is why it is recommended informally.",
+      "cons": "It is a crime, not a shortcut. The counterparty is unregulated and the funds can be frozen as proceeds of crime. On the US side, receiving funds from an unknown third party creates its own suspicious-activity and source-of-funds problems. The Chinese penalty alone (up to 30-100% of the amount) is 75 to 250 times the cost of the lawful route.",
+      "sources": [
+        {"label": "FX Regulations Art. 39, 45, 46", "url": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202411/t20241121_3947210.html"},
+        {"label": "个人购汇申请书 prohibition 6 (underground banks)", "url": "https://m.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-17",
+      "name": "Crypto / USDT bridge (buy USDT in China, sell it in the US)",
+      "category": "Prohibited",
+      "legality": "prohibited",
+      "restriction": "银发〔2021〕237号 Art. 1(2): conversion between legal tender and virtual currency is an illegal financial activity, strictly prohibited and to be banned. Art. 1(3): offshore exchanges serving PRC residents over the internet are also illegal financial activity. Art. 4(9): banks and payment institutions may not provide account, transfer or clearing services for it.",
+      "capacity": "n/a",
+      "cost_published": "Illegal financial activity; banking rails closed; civil acts contrary to public order are void, with losses borne by the party",
+      "pros": "Widely advocated online as a way around the quota. Technically instant and quote-driven.",
+      "cons": "The activity is prohibited outright, the banking system is barred from facilitating it, and the on/off-ramp is where enforcement catches it. Counterparty and platform risk is severe. On the US side, a large unexplained USD deposit from a crypto exchange invites scrutiny of source of funds and, if reported as a gift, is a misdescription.",
+      "sources": [
+        {"label": "PBOC et al., 银发〔2021〕237号", "url": "https://www.pbc.gov.cn/tiaofasi/144941/3581332/4348658/index.html"},
+        {"label": "State Council reprint of the same notice", "url": "https://www.gov.cn/zhengce/zhengceku/2021-10/08/content_5641404.htm"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-18",
+      "name": "Purchasing overseas life insurance or return-of-premium insurance with converted funds",
+      "category": "Prohibited",
+      "legality": "prohibited",
+      "restriction": "个人购汇申请书 prohibition 5 names 购买人寿保险和投资性返还分红类保险 as an unopened capital-account purpose. A SAFE branch publication confirms these are financial/capital-account transactions not yet opened, and that related dividends or interest cannot be remitted into a domestic account.",
+      "capacity": "n/a",
+      "cost_published": "",
+      "pros": "Frequently marketed by Hong Kong agents as a savings-plus-protection wrapper.",
+      "cons": "The purchase is outside what the FX rules permit, so the funding leg is a false declaration. A US citizen policyholder also faces PFIC-type treatment on a foreign cash-value policy.",
+      "sources": [
+        {"label": "个人购汇申请书 prohibition 5", "url": "https://m.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf"},
+        {"label": "SAFE Xiamen, 个人外汇服务小贴士 (insurance section)", "url": "https://www.safe.gov.cn/xiamen/file/file/20211022/f4794075e84e40dd9394be523a52731b.pdf"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-19",
+      "name": "Buying overseas property with converted funds",
+      "category": "Prohibited",
+      "legality": "prohibited",
+      "restriction": "个人购汇申请书 prohibition 5: 不得用于境外买房",
+      "capacity": "n/a",
+      "cost_published": "",
+      "pros": "The most common reason people want the money out.",
+      "cons": "Named in the prohibition list and is the fact pattern in the reported criminal case law on structuring, where relatives' quotas were used to fund an overseas property purchase. Both the structuring and the false declaration are breaches.",
+      "sources": [
+        {"label": "个人购汇申请书 prohibition 5", "url": "https://m.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf"},
+        {"label": "FX Regulations Art. 44 (misuse of purpose)", "url": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202411/t20241121_3947210.html"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-20",
+      "name": "Overseas securities investment with converted funds (buying US stocks or funds directly)",
+      "category": "Prohibited",
+      "legality": "prohibited",
+      "restriction": "个人购汇申请书 prohibition 5: 不得用于…证券投资. Permitted exposure must go through QDII or another approved channel.",
+      "capacity": "n/a",
+      "cost_published": "",
+      "pros": "None that are lawful directly.",
+      "cons": "Prohibited as a use of purchased FX. The lawful alternatives are QDII (CH-09) or a registered capital-account channel, and both have US PFIC consequences if the wrapper is a foreign fund.",
+      "sources": [
+        {"label": "个人购汇申请书 prohibition 5", "url": "https://m.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf"},
+        {"label": "SAFE: capital projects not yet opened include overseas property, life insurance, stock investment", "url": "https://www.safe.gov.cn/neimenggu/file/file/20200228/fa90770027ed4d919de981c09bc25751.pdf"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-21",
+      "name": "Domestic FX savings account (keeping converted USD inside China)",
+      "category": "Bank channel",
+      "legality": "lawful",
+      "restriction": "None; a personal FX savings account is a standard account type",
+      "capacity": "Unlimited",
+      "cost_published": "",
+      "pros": "Converts the currency without moving the money, so the exchange-rate question is settled while the remittance question is deferred. Outward remittance from the FX account is then a daily USD 50,000 by ID alone (CN-FX-04).",
+      "cons": "The money is still outside the US, so the FBAR and 8938 obligations continue. Domestic transfers between FX accounts are limited to your own accounts and to 近亲属 (spouse, parents, children, siblings, grandparents, grandchildren) — a wider category than the 直系亲属 used by the older Implementing Rules.",
+      "sources": [
+        {"label": "Guidelines Art. 64, 67 (remittance; permitted domestic transfers)", "url": "https://www.gov.cn/gongbao/content/2020/content_5560296.htm"},
+        {"label": "个人外汇管理办法 Art. 27 (account types)", "url": "https://www.safe.gov.cn/big5/big5/www.safe.gov.cn/safe/2022/0818/21330.html"}
+      ],
+      "verified_on": "2026-11-07",
+      "verification": "verified"
+    },
+    {
+      "id": "CH-22",
+      "name": "Mortgage or loan repayment abroad funded from China",
+      "category": "Capital account",
+      "legality": "unverified",
+      "restriction": "",
+      "capacity": "",
+      "cost_published": "",
+      "pros": "",
+      "cons": "No official text was located that expressly classifies repayment of a personal foreign mortgage as either a permitted current-account item or a capital-account item requiring approval. In practice banks treat it as capital-account and refuse without approval, but this project did not find a citable provision either way.",
+      "sources": [],
+      "verified_on": "2026-11-07",
+      "verification": "unverified",
+      "flagged": true
+    }
+  ]
+}

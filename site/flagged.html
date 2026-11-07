@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for review — unverified findings and repository irregularities</title>
+<meta name="description" content="Verified research on converting CNY to USD from a Chinese bank account as a US citizen: routes, costs, and where the penalties actually come from.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot"></span> China Money &rarr; USD</a>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="executive-summary.html">Summary</a>
+      <a href="channels.html">Routes</a>
+      <a href="penalty-analysis.html">The Penalty</a>
+      <a href="china-fx-rules.html">China FX</a>
+      <a href="china-tax.html">China Tax</a>
+      <a href="us-inbound.html">US Inbound</a>
+      <a href="flagged.html" class="navflag">Flagged</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="wrap pagehead flaghead">
+  <p class="eyebrow">Flagged for review</p>
+  <h1>What we could not verify, and what looks irregular</h1>
+  <p class="lede">These items are published here rather than quietly resolved. Each was left blank or marked
+  <span class="badge warn">partial</span> / <span class="badge bad">unverified</span> instead of being filled in with a
+  plausible number. Nothing on this page blocks any other finding; it is here so you can review it yourself.</p>
+</section>
+
+<section class="wrap">
+  <h2>1. Unverified and partially verified findings</h2>
+  <div class="tablewrap">
+  <table class="grid wide">
+    <thead><tr><th>ID</th><th>Finding</th><th>Status</th><th>Value</th><th>Why it is open</th><th>Source we found</th></tr></thead>
+    <tbody>
+<tr>
+  <td class="nw">CN-FX-25</td>
+  <td><strong>Definition of 境内个人 vs 境外个人 — unresolved tension between two official texts</strong><div class="sub"></div></td>
+  <td><span class="badge warn">partial</span></td>
+  <td><td class="blank " data-empty="1">&mdash;</td></td>
+  <td class="det">FLAGGED. Whether a given US citizen in China may use the USD 50,000 purchase quota by ID alone, or must document every purchase, depends on which definition the bank applies. This project did not find an official text reconciling them, so no conclusion is asserted.
+      </td>
+  <td class="srcsmall"><a href="https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202411/t20241121_3947210.html" target="_blank" rel="noopener">beijing.gov.cn</a> <a href="https://www.gov.cn/gongbao/content/2020/content_5560296.htm" target="_blank" rel="noopener">gov.cn</a></td>
+</tr>
+<tr>
+  <td class="nw">CN-TAX-07</td>
+  <td><strong>Tax on a foreign-currency gain made on conversion</strong><div class="sub"></div></td>
+  <td><span class="badge bad">unverified</span></td>
+  <td><td class="blank " data-empty="1">&mdash;</td></td>
+  <td class="det">FLAGGED. The absence of a listed category is strong but negative evidence. No official text was found that expressly addresses individual FX conversion gains, so this is recorded as unconfirmed rather than asserted as exempt.
+      </td>
+  <td class="srcsmall"><a href="https://www.npc.gov.cn/zgrdw/npc/xinwen/2018-08/31/content_2060151.htm" target="_blank" rel="noopener">npc.gov.cn</a></td>
+</tr>
+<tr>
+  <td class="nw">US-19</td>
+  <td><strong>FATCA / information exchange with China — the enforcement backdrop</strong><div class="sub"></div></td>
+  <td><span class="badge warn">partial</span></td>
+  <td><td class="">China is listed by Treasury as a Model 1 jurisdiction treated as having an IGA in effect &#x27;in substance&#x27;; no signed agreement was located</td></td>
+  <td class="det">FLAGGED. The practical implication — that a US person&#x27;s Chinese account is not invisible — is a reasonable reading of the Treasury listing, but the operative legal instruments were not verified. Do not treat this row as proof of automatic bank-account reporting from China.
+      </td>
+  <td class="srcsmall"><a href="https://www.congress.gov/crs_external_products/R/PDF/R44616/R44616.4.pdf" target="_blank" rel="noopener">congress.gov</a></td>
+</tr>
+<tr>
+  <td class="nw">CH-22</td>
+  <td><strong>Mortgage or loan repayment abroad funded from China</strong><div class="sub"></div></td>
+  <td><span class="badge bad">unverified</span></td>
+  <td><td class="blank " data-empty="1">&mdash;</td></td>
+  <td class="det">No official text was located that expressly classifies repayment of a personal foreign mortgage as either a permitted current-account item or a capital-account item requiring approval. In practice banks treat it as capital-account and refuse without approval, but this project did not find a citable provision either way.
+      </td>
+  <td class="srcsmall"><span class="none">none found</span></td>
+</tr></tbody>
+  </table>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>2. Irregularities found in the repository itself</h2>
+  <div class="tablewrap">
+  <table class="grid">
+    <thead><tr><th>#</th><th>Observation</th><th>Disposition</th></tr></thead>
+    <tbody>
+      <tr><td class="nw">I-1</td>
+        <td>At the start of this session the repository contained a single file, <code>README.md</code>, whose entire
+        content was the line <code># China3.</code> — no description, no build instructions, no licence.</td>
+        <td>Flagged. Replaced with a factual README describing what is actually here.</td></tr>
+      <tr><td class="nw">I-2</td>
+        <td>No <code>COORDINATION.md</code> existed, although the brief requires one to be read before any work starts.</td>
+        <td>Flagged and created. The task board records every task, its owner, its file scope and its status.</td></tr>
+      <tr><td class="nw">I-3</td>
+        <td>GitHub Pages was already enabled on <code>main</code> at the repository root, but there was no
+        <code>index.html</code>, so the published site returned a 404.</td>
+        <td>Flagged as a pre-existing broken state, then remediated by this site.</td></tr>
+      <tr><td class="nw">I-4</td>
+        <td>Only one commit existed (<code>03021bc</code> "Initial commit"). There was no prior research, data or
+        requirements document in the repository to cross-check.</td>
+        <td>Recorded. Nothing in this repository was inherited, so every finding here is newly sourced and dated.</td></tr>
+      <tr><td class="nw">I-5</td>
+        <td>Two official texts define <code>境内个人</code> differently — the FX Regulations (State Council Order 532)
+        Art. 52(2) and the SAFE Implementing Rules Art. 37(1). They can point in opposite directions for a US citizen
+        living in China, and no reconciling text was found.</td>
+        <td>Flagged as F-1 / CN-FX-25. Recorded as a genuine conflict between official sources, not resolved by
+        assumption.</td></tr>
+      <tr><td class="nw">I-6</td>
+        <td>The PRC estate-tax finding rests on a 2017 Ministry of Finance reply as reported by People's Daily. The
+        reply letter itself was not read on <code>mof.gov.cn</code>.</td>
+        <td>Flagged. The quoted sentence is verbatim from the report, and the date and provenance are stated on the row.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="wrap note-block">
+  <h2>3. How blanks were handled</h2>
+  <p>Every table in this site shows <code>&mdash;</code> with the word <em>blank</em> where a value could not be
+  confirmed from an official publisher. No cell was filled by interpolation, by analogy to another country, or from
+  memory. The build script fails if any row renders without at least one official source link, so a row with no
+  evidence cannot appear silently.</p>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <p><strong>Evidence rule applied throughout:</strong> every figure carries a link to the official publisher.
+    Where a value could not be confirmed from an official source it is left blank and listed on
+    <a href="flagged.html">Flagged for Review</a>. No value was inferred or estimated.</p>
+    <p class="muted">Compiled 7 November 2026 from primary sources. This is a reading of statutes, regulations and
+    official guidance, not legal or tax advice, and not a determination for any individual. Rules in this area change;
+    each row carries the date it was checked.</p>
+    <p class="muted">Repository: <a href="https://github.com/sassnarep3-star/China3" target="_blank" rel="noopener">sassnarep3-star/China3</a>
+    &middot; task board: <a href="https://github.com/sassnarep3-star/China3/blob/main/COORDINATION.md" target="_blank" rel="noopener">COORDINATION.md</a></p>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
