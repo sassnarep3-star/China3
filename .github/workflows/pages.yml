@@ -22,14 +22,19 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Check site files and local navigation
+      - name: Check required site files
         run: |
-          test -s index.html
-          test -s routes.html
-          test -s tax.html
-          test -s review.html
-          test -s sources.html
-          test -s assets/site.css
+          for f in index.html routes.html tax.html review.html sources.html \
+                   executive-summary.html china-rules.html us-tax.html channels.html \
+                   penalty.html findings.html assets/site.css assets/app.js \
+                   data/sources.csv data/china_rules.csv data/us_rules.csv \
+                   data/channels.csv data/penalty.csv data/findings.csv data/flags.csv; do
+            test -s "$f" || { echo "missing or empty: $f"; exit 1; }
+          done
+      - name: Line-by-line row and broken-link verification
+        run: python3 scripts/verify.py
+      - name: Check local navigation in every HTML page
+        run: |
           python3 - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
@@ -37,16 +42,18 @@ jobs:
               def __init__(self):
                   super().__init__(); self.hrefs=[]
               def handle_starttag(self, tag, attrs):
-                  if tag == 'a':
-                      href = dict(attrs).get('href', '')
-                      if href and not href.startswith(('http://', 'https://', 'mailto:', 'tel:', '#')):
-                          self.hrefs.append(href.split('#',1)[0])
-          pages = [Path(p) for p in ('index.html','routes.html','tax.html','review.html','sources.html')]
+                  a=dict(attrs)
+                  for key in ('href','src'):
+                      h=a.get(key,'')
+                      if h and not h.startswith(('http://','https://','mailto:','tel:','#','data:')):
+                          self.hrefs.append(h.split('#',1)[0])
+          pages=sorted(Path('.').glob('*.html'))
           missing=[]
           for page in pages:
-              parser=Links(); parser.feed(page.read_text(encoding='utf-8'))
-              for href in parser.hrefs:
-                  if href and not (page.parent / href).exists(): missing.append(f'{page}: {href}')
+              p=Links(); p.feed(page.read_text(encoding='utf-8'))
+              for href in p.hrefs:
+                  if href and not (page.parent/href).exists():
+                      missing.append(f'{page}: {href}')
           if missing:
               raise SystemExit('Missing local links:\n'+'\n'.join(missing))
           print(f'Checked local navigation in {len(pages)} pages')
