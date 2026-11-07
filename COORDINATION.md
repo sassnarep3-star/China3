@@ -34,22 +34,22 @@ Session ID conventions: `<owner>-<task-id>`, e.g. `arena-f43e42c8-china3-T1`.
 | T3 | Site creation: landing page + subpages by category, table format, analysis & findings | root HTML files | done | arena-f43e42c8-china3 | All internal links verified; every table row carries a source link or is flagged | index.html, style.css, methods.html, china-rules.html, us-tax.html, penalties.html, flagged-review.html |
 | T4 | Verification: line-by-line check of every table row vs official source; blank + flag unverified | root HTML + `research/` | done | arena-f43e42c8-china3 | All source links fetched and confirmed reachable during research; unverified items intentionally blank + listed on Flagged for Review page | root HTML + research/ |
 | T5 | Flagged for Review page (irregularities + unverified items with source links) | `flagged-review.html` | done | arena-f43e42c8-china3 | 9 items listed, each blank-unverified with suggested official source | flagged-review.html |
-| T6 | GitHub Pages: confirm build, no broken links, publish live after PR #2 merge | GitHub Pages / Actions | in progress | arena-f43e42c8-china3 | | Depends on T7 merge; re-verify deploy of combined content |
-| T7 | Pull request from integration branch to main + merge; record PR link & merge result here | GitHub | in progress | arena-f43e42c8-china3 | PR #2: https://github.com/sassnarep3-star/China3/pull/2 | Depends on T6 prep |
+| T6 | GitHub Pages: confirm build, no broken links, publish live after PR #2 merge | GitHub Pages / Actions | done | arena-f43e42c8-china3 | Actions run 42412037701 succeeded; Pages status `built`; live site verified at https://sassnarep3-star.github.io/China3/ (homepage, methods, flagged-review and other subpages fetch correctly) | Verified after PR #2 merge |
+| T7 | Pull request from integration branch to main + merge; record PR link & merge result here | GitHub | done | arena-f43e42c8-china3 | PR #2 merged via merge commit b295aaf on 2026-11-07 | https://github.com/sassnarep3-star/China3/pull/2 |
 
 ## Log
 
 - 2026-11-07: Prior session `arena/dd766f7b-china3` completed repository review, research, dashboard, verification log, and Pages workflow; merged to main as PR #1 (`0e83912`).
 - 2026-11-07: GitHub Pages workflow run #42411677212 succeeded; live site verified at https://sassnarep3-star.github.io/China3/; outcome recorded in PR #3 (`d6f3e87`, merged to main `4a92baa`).
 - 2026-11-07: Current session `arena-f43e42c8-china3` branched from `03021bc` (old main); completed T1–T5; unified merge with main resolved conflicts in COORDINATION.md and index.html without discarding either session's work; PR #2 opened.
-- Pending: merge PR #2 to main, re-verify GitHub Pages deploys the combined content, record PR link and merge result below.
+- 2026-11-07: PR #2 merged to `main` via merge commit `b295aaf`; combined content of both sessions now on `main`; GitHub Pages deployment verified (run 42412037701 success; live site at https://sassnarep3-star.github.io/China3/).
 
 ## PR and merge record
 
 - PR #1 (prior session): https://github.com/sassnarep3-star/China3/pull/1 — merged to `main` on 2026-11-07; merge commit `0e839124b22be33fe142444de7fbc675c503db50`.
 - PR #3 (prior session): https://github.com/sassnarep3-star/China3/pull/3 — recorded Pages deployment verification; merge commit `d6f3e87954e0048d9363d1dd27ca77648703128e` on `main` `4a92baa`.
-- PR #2 (current session): https://github.com/sassnarep3-star/China3/pull/2 — `arena/f43e42c8-china3` → `main`; merge result: pending (see below).
-- Pages deployment after PR #2 merge: pending — verify Actions run and live site at https://sassnarep3-star.github.io/China3/.
+- PR #2 (current session): https://github.com/sassnarep3-star/China3/pull/2 — `arena/f43e42c8-china3` → `main`; **merged** via merge commit `b295aaf` on 2026-11-07; merge commit added current-session research, executive summary, dashboard subpages, unified landing page, and integrated both sessions' content without discarding the prior session's work.
+- Pages deployment after PR #2 merge: verified — GitHub Actions run 42412037701 (`Deploy static guide to GitHub Pages`) succeeded; Pages API status `built`; live site https://sassnarep3-star.github.io/China3/ serves the combined content (homepage, methods table, China rules, U.S. tax, penalty breakdown, flagged-review, routes, tax & reporting, source register all fetch correctly).
 
 ## Verification log (prior session, preserved)
 
