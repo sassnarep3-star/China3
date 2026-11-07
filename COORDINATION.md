@@ -12,8 +12,9 @@
 | Inspect repository and document project findings | done | arena/dd766f7b-china3 | README.md, COORDINATION.md |
 | Build official-source-backed China-to-US funds transfer dashboard | done | arena/dd766f7b-china3 | index.html, routes.html, tax.html, review.html, sources.html, assets/site.css |
 | Verify source rows and flag gaps/irregularities | done | arena/dd766f7b-china3 | routes.html, tax.html, review.html, sources.html, COORDINATION.md |
-| Configure and validate GitHub Pages deployment | in progress | arena/dd766f7b-china3 | .github/workflows/pages.yml |
-| Publish from current session branch via PR; verify Pages deployment | pending | arena/dd766f7b-china3 | GitHub PR / Pages settings |
+| Configure and validate GitHub Pages deployment | done | arena/dd766f7b-china3 | .github/workflows/pages.yml |
+| Publish from current session branch via PR; verify Pages deployment | done | arena/dd766f7b-china3 | GitHub PR #1 / Pages |
+| Record final deployment and merge outcome | done | arena/dd766f7b-china3 | COORDINATION.md |
 
 ## Verification log
 - Initial repository review: only an 8-byte README existed; no application, data, coordination board, tests, or deployment config was present.
@@ -22,7 +23,10 @@
 - Local audit script checked all page-to-page links and confirmed no missing local targets. A row-audit confirmed every data row in routes.html, tax.html, review.html and sources.html contains an `https://` source URL.
 - HTTP smoke test passed for all five pages using a local static server.
 - `git diff --check` passed.
-- GitHub Actions workflow includes a repeatable navigation-file check before deployment. It has not yet run in GitHub because changes have not been pushed/merged.
+- GitHub Actions workflow PR build/navigation check passed (PR build job completed successfully; deploy was correctly skipped on pull_request).
+- Merged PR #1: https://github.com/sassnarep3-star/China3/pull/1 — merged to `main` using merge commit `0e839124b22be33fe142444de7fbc675c503db50` on 2026-11-07.
+- GitHub Pages workflow run #42411677212 succeeded: https://github.com/sassnarep3-star/China3/actions/runs/42411677212. GitHub Pages API reports `status: built`; published homepage and all four subpages were fetched successfully at https://sassnarep3-star.github.io/China3/.
+- The Pages API still reports legacy source `main:/` while Actions deployment succeeded. This is recorded as a configuration irregularity to watch, but the currently published site is live and the content is correct.
 
 ## Findings and irregularities
 - The phrase “considerable amount of taxes” was user-reported without a tax assessment, bank quote, tax receipt, named tax or amount. It is not treated as verified.
@@ -33,4 +37,7 @@
 - Reporting thresholds and tax obligations are fact- and tax-year-dependent; this is general research, not advice.
 
 ## Publication / handoff
-- PR and deployment details: pending. This session must remain on `arena/dd766f7b-china3`; publication will use this branch as the PR head. No work will be pushed to another branch.
+- PR #1: https://github.com/sassnarep3-star/China3/pull/1 — merged to `main` on 2026-11-07; merge commit `0e839124b22be33fe142444de7fbc675c503db50`.
+- Pages deployment run #42411677212: https://github.com/sassnarep3-star/China3/actions/runs/42411677212 — success. Live site: https://sassnarep3-star.github.io/China3/.
+- Pages status confirmed `built`; live homepage and route, tax, review, and source pages fetched successfully.
+- Session remained on `arena/dd766f7b-china3`; no other branch was created or pushed.
