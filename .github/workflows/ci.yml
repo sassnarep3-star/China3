@@ -1,0 +1,41 @@
+name: verify
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  data-and-links:
+    name: Data contract and link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate the data contract
+        run: python3 scripts/validate_data.py
+
+      - name: Check that docs/ is not stale
+        run: |
+          python3 scripts/build_site.py
+          if ! git diff --quiet -- docs; then
+            echo "::error::docs/ is out of date with data/. Run scripts/build_site.py and commit the result."
+            git diff --stat -- docs
+            exit 1
+          fi
+
+      - name: Check internal links and anchors
+        run: python3 scripts/check_links.py
+
+      - name: Check external source URLs
+        # Network is available on GitHub runners, so the register is checked for real here.
+        continue-on-error: true
+        run: python3 scripts/check_links.py --fetch

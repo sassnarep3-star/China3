@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method · China3 — moving CNY to USD</title>
+<meta name="description" content="How verification was done and what it does not cover.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b5fbe'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif'%3E%C2%A5%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="methodology">
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">China3<span>CNY → USD, sourced</span></a>
+    <nav class="nav" id="nav" aria-label="Sections"></nav>
+    <div class="side-note">
+      Every figure is linked to an official source. Unconfirmed values are blank and listed under
+      <a href="flagged.html">Flagged for review</a>.
+      <br><br>Research pack, not tax or legal advice.
+    </div>
+  </aside>
+  <main class="main">
+    <header class="page-head">
+      <div class="eyebrow">China3 · checked 7 November 2026</div>
+      <h1>Method</h1>
+      <p class="lede">How verification was done and what it does not cover.</p>
+    </header>
+    <div id="app"></div>
+    
+<h2>What was done</h2>
+<p>Every factual claim on this site was traced to a primary document — a statute, a State Council regulation, a People's Bank of China or SAFE measure, a tax authority publication, a Treasury or IRS page, a treaty text, or an eCFR/CFR provision — and the specific proposition was read on the page itself. The register at <a href="sources.html">Sources</a> records, for each URL, what it supports and the date it was checked (2026-11-07).</p>
+
+<h2>The three tiers</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Tier</th><th>Meaning</th><th>How it is used</th></tr></thead>
+<tbody>
+<tr><td><span class="badge neutral">official</span></td><td>Issued by the authority itself: statute, regulation, treaty, agency page, or the official gazette.</td><td>Carries every number and every legal proposition.</td></tr>
+<tr><td><span class="badge neutral">official-secondary</span></td><td>Published by the same authority but explanatory: a Q&amp;A, an operations guide, a consolidated index of regulations in force.</td><td>Used to pin down practical detail — who qualifies, what documents, what is still in force.</td></tr>
+<tr><td><span class="badge unverified">third-party</span></td><td>A non-government reproduction of a legal text.</td><td>Used only where the official site could not be reached, and always flagged on <a href="flagged.html">Flagged for review</a>.</td></tr>
+</tbody></table></div>
+
+<h2>What "blank and flagged" means</h2>
+<p>If a value could not be confirmed from an official source it was <em>not</em> filled with a plausible number, an industry estimate, or a memory. It was left blank, marked unverified, and written up on the flagged page with the reason. The clearest example is retail FX cost: no regulator publishes retail CNY/USD spreads, so the cost model shows the formula and a calculator and ships with no rates at all.</p>
+<p>Two of the twenty-seven sources are third-party reproductions of the United States Code (§ 988 and § 5321). The statutes' content is not in doubt; the <em>URLs</em> are, which is why they are flagged.</p>
+
+<h2>What this research deliberately does not cover</h2>
+<ul>
+<li><strong>Your facts.</strong> Four determinations depend entirely on documents only you hold: your FX category, whether a cancelled household registration exists, when the balance was acquired relative to your emigration, and what created the money. Each is itemised on the flagged page.</li>
+<li><strong>Your bank's prices.</strong> Spreads, wire fees and intermediary deductions are commercial, not regulatory, and were not estimated.</li>
+<li><strong>Corporate structures.</strong> If the money sits inside a Chinese company rather than your personal account, a different framework applies (profit distribution, dividend withholding, and separate US forms). Not addressed here.</li>
+<li><strong>Renunciation and the US expatriation tax.</strong> Mentioned only as a thing not to do casually; not researched.</li>
+<li><strong>State tax.</strong> Only federal US obligations are described.</li>
+</ul>
+
+<h2>Reproducing the verification</h2>
+<p>The data is machine-checked, not just proofread. Three scripts do the work:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Script</th><th>What it enforces</th></tr></thead>
+<tbody>
+<tr><td class="mono">scripts/validate_data.py</td><td>Unique IDs; every source reference resolves; a stated cap must be marked verified; an unverified item must carry a flag; every consequence must have a source.</td></tr>
+<tr><td class="mono">scripts/check_links.py</td><td>Every internal link and anchor resolves; every external URL in the register is well formed and de-duplicated; source chips on each page point at a real register entry.</td></tr>
+<tr><td class="mono">scripts/build_site.py</td><td>Refuses to build if the contract check fails, then inlines the data and generates every page.</td></tr>
+</tbody></table></div>
+<p class="small">Run <code>python3 scripts/validate_data.py &amp;&amp; python3 scripts/check_links.py &amp;&amp; python3 scripts/build_site.py</code>.</p>
+
+<h2>Currency of the rules</h2>
+<p>Two things changed recently and both are reflected here. Chinese crypto regulation was replaced on 6 February 2026 by 银发〔2026〕42号, which repealed the 2021 notice that most articles still cite. And an index published by SAFE as at 30 June 2026 confirms that the 2008 FX Regulations, the 2006 individual FX measures, the 2007 implementing rules and the 2003 cash-carrying rules were still in force, which is why they are relied on here rather than assumed.</p>
+<p class="small"><a class="src" href="sources.html#S08">S08</a><a class="src" href="sources.html#S26">S26</a></p>
+
+<h2>Disclaimer</h2>
+<div class="callout warn"><p>This is a sourced research pack prepared by an automated agent. It is not legal, tax, or investment advice and it does not create a professional relationship. Chinese FX practice varies by branch and by province, and US reporting positions depend on facts a document review would surface. Before acting on anything here — and certainly before filing under the streamlined procedures or signing a SAFE application — have a qualified US tax adviser and a PRC-qualified adviser review your specific file.</p></div>
+
+    <footer class="site">
+      <p>Sources checked 2026-11-07. This site is a research pack, not legal, tax or investment advice.
+      Read <a href="methodology.html">Method</a> before relying on anything here, and
+      <a href="flagged.html">Flagged for review</a> for what could not be confirmed.</p>
+      <p><a href="index.html">Executive summary</a><a href="playbook.html">Playbook</a><a href="channels.html">All channels</a><a href="taxes.html">Tax exposure</a><a href="penalties.html">Penalty breakdown</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Source register</a><a href="methodology.html">Method</a><a href="audit.html">Repo audit</a></p>
+    </footer>
+  </main>
+</div>
+<noscript><p style="padding:16px;background:#fdf1dc">This dashboard renders its tables in the browser. Please enable JavaScript, or read the underlying data in <code>data/*.json</code> in the repository.</p></noscript>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
