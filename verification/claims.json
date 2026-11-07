@@ -3,15 +3,16 @@
   "title": "Claim audit, gap fill and rulebook",
   "session": "arena-f83a5122-china3",
   "retrieved": "2026-11-07",
-  "audited_tree": "21604f3 (origin/main 3f62eeb + ledger)",
+  "audited_tree": "1c45c64 (origin/main b1dc441, which includes PR #9/#10, + verification files)",
   "verdicts": {
-   "confirmed": "Primary source read; the claim matches.",
+   "confirmed": "Primary source read; the claim matches (for bank_fact rows, the bank's own page).",
    "partly": "Partly matches; the finding says what does not.",
    "contradicted": "Primary source says something different.",
    "superseded": "Was true of an older rule; replaced or repealed.",
    "defect": "Publishing or sourcing defect, not a factual claim.",
    "not-checked": "Cited page not opened by this session."
-  }
+  },
+  "audited_tree_short": "1c45c64"
  },
  "claims": [
   {
@@ -374,7 +375,7 @@
    "claim": "Foreign earned income exclusion: $130,000 (2025).",
    "where": [
     "us-tax.html:60",
-    "index.html:53",
+    "index.html:54",
     "docs/executive-summary.md:48"
    ],
    "layer": "f43e42c8",
@@ -514,7 +515,7 @@
   {
    "id": "VC-27",
    "topic": "Source hierarchy",
-   "claim": "The published guidance rests on the 2007 Detailed Rules, a 2007 press conference, two repealed circulars, a 2019 branch operations guide and bank pages; none of the three layers cites the 2020 Current-Account Guidelines.",
+   "claim": "The published guidance rests on the 2007 Detailed Rules, a 2007 press conference, two repealed circulars, a 2019 branch operations guide and bank pages; none of the first three layers cites the 2020 Current-Account Guidelines (the fourth layer, c703e38c, does).",
    "where": [
     "methods.html",
     "china-rules.html",
@@ -532,7 +533,7 @@
     "E02.a",
     "E08.a"
    ],
-   "finding": "SAFE branches quote the Guidelines in 2022 and 2026; the Notice says earlier inconsistent provisions yield to it; SAFE's 2026-06-30 catalogue lists the Guidelines (amended by three later notices) and the 2007 Detailed Rules (Art. 39 deleted). Pages relying on the older texts must be read together with the Guidelines.",
+   "finding": "SAFE branches quote the Guidelines in 2022 and 2026; the Notice says earlier inconsistent provisions yield to it; SAFE's 2026-06-30 catalogue lists the Guidelines (amended by three later notices) and the 2007 Detailed Rules (Art. 39 deleted). Pages relying on the older texts must be read together with the Guidelines. The deep-research layer (data/china_rules.csv, PR #9) cites Arts. 54-62 and 64.",
    "action": "This verification adds the Guidelines rulebook (primary-rules.html)."
   },
   {
@@ -603,6 +604,196 @@
     "E06.a"
    ],
    "finding": "Reproduced independently (VC-03).",
+   "action": "None."
+  },
+  {
+   "id": "VC-32",
+   "topic": "Citation accuracy (deep layer)",
+   "claim": "FX purchase above the convenience amount by a domestic individual is Guidelines Art. 57.",
+   "where": [
+    "data/china_rules.csv C05"
+   ],
+   "layer": "c703e38c",
+   "cited": "SAFE Ningxia Q&A (cites Arts. 54-57)",
+   "verdict": "partly",
+   "evidence": [
+    "E01.u",
+    "E08.a"
+   ],
+   "finding": "The substance is right (a domestic individual buys above the convenience amount with materials showing the use and amount), but that rule is Art. 56; Art. 57 is the duty to fill in the Individual FX Purchase Application.",
+   "action": "Flag only."
+  },
+  {
+   "id": "VC-33",
+   "topic": "Scope of USD 50,000-a-day threshold (deep layer)",
+   "claim": "Outward remittance from an FX account: up to USD 50,000 a day on ID, above that with documents.",
+   "where": [
+    "data/china_rules.csv C06",
+    "data/penalty.csv P22"
+   ],
+   "layer": "c703e38c",
+   "cited": "SAFE Tianjin 2024 FAQ (E11)",
+   "verdict": "partly",
+   "evidence": [
+    "E11.a",
+    "E01.k"
+   ],
+   "finding": "Art. 64(1) is addressed to domestic individuals (境内个人); for a non-domestic individual Art. 65 requires only valid ID for FX-account remittances. The row does not state its scope. (P22 correctly notes the two USD 50,000 figures are different concepts.)",
+   "action": "Flag only."
+  },
+  {
+   "id": "VC-34",
+   "topic": "Carrying cash out (deep layer)",
+   "claim": "Carrying foreign cash out: up to USD 5,000 no permit; USD 5,000-10,000 (inclusive) a bank-issued permit; in principle not above USD 10,000, special cases via SAFE.",
+   "where": [
+    "data/china_rules.csv C35"
+   ],
+   "layer": "c703e38c",
+   "cited": "SAFE Hebei 2019 (汇发〔2003〕102号)",
+   "verdict": "confirmed",
+   "evidence": [
+    "E01.n",
+    "E03.e"
+   ],
+   "finding": "Consistent with Art. 89, which adds the conditions 'no entry record, or the amount exceeds it' and limits the above-USD 10,000 permit to travel to listed countries.",
+   "action": "None."
+  },
+  {
+   "id": "VC-35",
+   "topic": "2015 circular repealed (deep layer)",
+   "claim": "Circular 汇发〔2015〕49号 is repealed; the current basis for the watch list is the 2020 Guidelines.",
+   "where": [
+    "data/china_rules.csv C20"
+   ],
+   "layer": "c703e38c",
+   "cited": "SAFE Tianjin 2025 FAQ",
+   "verdict": "confirmed",
+   "evidence": [
+    "E01.c",
+    "E01.j"
+   ],
+   "finding": "Matches Annex 2 item 21 of the 2020 Notice and Art. 62(3) (watch period = listing year plus two years).",
+   "action": "None."
+  },
+  {
+   "id": "VC-36",
+   "topic": "Criminal thresholds (deep layer)",
+   "claim": "Illegal FX dealing: 'serious' at RMB 5 million business amount or RMB 100,000 gains; 'especially serious' at RMB 25 million / RMB 500,000.",
+   "where": [
+    "data/china_rules.csv C26",
+    "data/penalty.csv P20"
+   ],
+   "layer": "c703e38c, 7e08715a",
+   "cited": "SPC/SPP 法释〔2019〕1号",
+   "verdict": "partly",
+   "evidence": [
+    "E25.a",
+    "E03.f"
+   ],
+   "finding": "Same figures as this audit's source; read here only in a search excerpt of the Hunan reproduction, and SAFE lists the interpretation as current.",
+   "action": "None."
+  },
+  {
+   "id": "VC-37",
+   "topic": "Virtual currency (deep layer)",
+   "claim": "Virtual-currency business is illegal financial activity in China; the 2021 notice was repealed on 2026-02-06.",
+   "where": [
+    "data/china_rules.csv C38-C39",
+    "data/flagged.json (7e08715a)"
+   ],
+   "layer": "c703e38c, 7e08715a",
+   "cited": "PBOC 银发〔2026〕42号",
+   "verdict": "confirmed",
+   "evidence": [
+    "E26.a",
+    "E26.c"
+   ],
+   "finding": "Read in full on pbc.gov.cn; consistent.",
+   "action": "None."
+  },
+  {
+   "id": "VC-38",
+   "topic": "Bank wire fee (deep layer)",
+   "claim": "Personal cross-border wire at Bank of China: 1 per mille, minimum RMB 50, maximum RMB 260, plus telecom fee RMB 150 (RMB 80 to Hong Kong/Macau/Taiwan).",
+   "where": [
+    "data/penalty.csv P08"
+   ],
+   "layer": "c703e38c",
+   "cited": "Bank of China e-banking fee table (E27)",
+   "verdict": "confirmed",
+   "evidence": [
+    "E27.a",
+    "E27.b"
+   ],
+   "finding": "Matches the bank's own table (shown as effective 2014-11-01). It is a bank-specific commercial fact; the page says agreements, discounts and local differences prevail and it does not give the FX rate, intermediary or receiving-bank fees.",
+   "action": "None.",
+   "bank_fact": true
+  },
+  {
+   "id": "VC-39",
+   "topic": "Character of gain above $200 (deep layer)",
+   "claim": "Personal currency gain above $200 is reported as capital gain (IRS Publication 525).",
+   "where": [
+    "data/penalty.csv P25",
+    "data/us_rules.csv U17",
+    "research/us-tax.md"
+   ],
+   "layer": "c703e38c",
+   "cited": "IRS Publication 525",
+   "verdict": "not-checked",
+   "evidence": [
+    "E18.b"
+   ],
+   "finding": "Publication 525 was not opened by this audit. Section 988(e)(1)-(2) as read says the exclusion fails above $200 and does not state the character of the gain (VB-09).",
+   "action": "Flag only."
+  },
+  {
+   "id": "VC-40",
+   "topic": "Principal transfer left blank (deep layer)",
+   "claim": "'No U.S. income tax on moving one's own principal' is left blank and UNVERIFIED because no official text states it.",
+   "where": [
+    "data/penalty.csv P23"
+   ],
+   "layer": "c703e38c",
+   "cited": "-",
+   "verdict": "confirmed",
+   "evidence": [
+    "E18.b"
+   ],
+   "finding": "Agrees with VC-23: the pages that assert 'not a taxable event' go further than the primary texts read. The blank is the right treatment.",
+   "action": "None."
+  },
+  {
+   "id": "VC-41",
+   "topic": "Housing-sale approval (deep layer)",
+   "claim": "Foreign individuals selling Chinese housing may remit the RMB only after SAFE approval (Measures Art. 22).",
+   "where": [
+    "data/china_rules.csv C14"
+   ],
+   "layer": "c703e38c",
+   "cited": "PBOC Measures",
+   "verdict": "not-checked",
+   "evidence": [
+    "E05.b"
+   ],
+   "finding": "The Chinese text of Art. 22 was not read here; the English text read says the proceeds are convertible and remittable and, in this session's notes, states no approval step. Left unverified.",
+   "action": "Flag only."
+  },
+  {
+   "id": "VC-42",
+   "topic": "FBAR 2026 adjustment (deep layer)",
+   "claim": "The 2026 inflation adjustment to civil penalties was cancelled (OMB M-26-11), so the 2025 FBAR amounts still apply.",
+   "where": [
+    "data/penalty.csv P26, P34",
+    "data/us_rules.csv U08"
+   ],
+   "layer": "c703e38c",
+   "cited": "Federal Register notice 2026-13629",
+   "verdict": "partly",
+   "evidence": [
+    "E12.a"
+   ],
+   "finding": "Consistent with eCFR 'up to date as of 11/05/2026', whose last change to section 1010.821 is 2025-01-17. The Federal Register notice was not opened here.",
    "action": "None."
   }
  ],
@@ -722,13 +913,25 @@
     "E20.a"
    ],
    "note": ""
+  },
+  {
+   "id": "VG-12",
+   "item": "Cross-border wire fee at one bank (Bank of China, personal e-banking telegraphic transfer)",
+   "status": "partly filled",
+   "value": "1 per mille of the amount, minimum RMB 50, maximum RMB 260; plus telecom fee RMB 150 (RMB 80 to Hong Kong, Macau, Taiwan).",
+   "evidence": [
+    "E27.a",
+    "E27.b"
+   ],
+   "note": "Tier 2: the bank's own published tariff, shown as effective 2014-11-01. It excludes the FX conversion rate, intermediary-bank and receiving-bank fees. Other banks not checked.",
+   "bank_fact": true
   }
  ],
  "blank": [
   {
    "id": "VB-01",
-   "item": "Bank wire fees, telecom fees, intermediary-bank deductions and the CNY/USD spread",
-   "why": "No regulator publishes them and no bank tariff page was retrieved; third-party sites quote different schedules, which are not used here.",
+   "item": "FX conversion spread (the bank's rate vs. the market mid-rate), intermediary-bank and receiving-bank deductions; wire fees at banks other than Bank of China",
+   "why": "Only Bank of China's own wire-fee table was read (VG-12). No regulator publishes the spread or intermediary fees, and no other bank tariff page was retrieved. The deep-research layer cites two further Bank of China tables (corporate wires; a USD 15 full-amount service) that were not opened here.",
    "check": "Ask the bank for a written quote showing the rate, timestamp, every fee and the net USD."
   },
   {

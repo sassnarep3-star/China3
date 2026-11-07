@@ -161,6 +161,13 @@
      "verbatim": true,
      "orig": "银行应加强电子银行个人结售汇业务风险识别，落实电子银行业务本人办理原则。通过多重技术手段，事中事后筛查拦截异常外汇交易，防范借用他人便利化额度、出借本人便利化额度及其他规避便利化额度和真实性管理的违规行为。",
      "en": "Banks must strengthen risk identification for e-banking FX purchases and sales and apply the principle that e-banking business is done by the person. Using multiple technical means, they must screen and intercept abnormal FX transactions during and after the event, to prevent borrowing or lending of convenience amounts and other violations that evade convenience-amount and authenticity management."
+    },
+    {
+     "id": "E01.u",
+     "loc": "Arts. 56-57 (domestic individuals above the convenience amount; purchase application)",
+     "verbatim": true,
+     "orig": "第五十六条　境内个人凭本人有效身份证件和有交易额的结汇资金来源材料，在银行办理不占用年度便利化额度的经常项目结汇。\n境内个人凭本人有效身份证件和有交易额的购汇资金用途材料，在银行办理不占用年度便利化额度的经常项目购汇。\n第五十七条　境内个人办理购汇业务，应真实、准确、完整填写《个人购汇申请书》，并承担相应法律责任。",
+     "en": "Art. 56: a domestic individual may, on valid ID and materials showing the source and amount of the funds, convert current-account FX into RMB without using the annual convenience amount; and, on valid ID and materials showing the use and amount, buy current-account FX without using it. Art. 57: a domestic individual buying FX must fill in the Individual FX Purchase Application truthfully, accurately and completely and bears legal responsibility."
     }
    ],
    "short": "SAFE Current-Account Guidelines 2020 (汇发〔2020〕14号) - gov.cn"
@@ -900,6 +907,37 @@
      "verbatim": true,
      "orig": "本通知自发布之日起施行。中国人民银行等十部门《关于进一步防范和处置虚拟货币交易炒作风险的通知》（银发〔2021〕237号）同时废止。",
      "en": "This Notice takes effect on issuance. The 2021 ten-agency Notice on further preventing and handling the risk of virtual-currency trading speculation (银发〔2021〕237号) is repealed at the same time."
+    }
+   ]
+  },
+  {
+   "id": "E27",
+   "short": "Bank of China - personal e-banking transfer and remittance fee table",
+   "title": "中国银行电子银行个人服务转账汇款费率表",
+   "publisher": "Bank of China",
+   "url": "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html",
+   "doc_date": "schedule shown as effective 2014-11-01",
+   "tier": 2,
+   "kind": "bank fee table",
+   "lang": "zh",
+   "retrieved": "2026-11-07",
+   "method": "full-page fetch (single chunk)",
+   "status": "tier-2",
+   "status_note": "The bank's own published tariff for personal e-banking. It is a bank-specific commercial fact, not law. The page says agreements, discounts and local differences prevail. It does not state the FX conversion rate, intermediary-bank fees or receiving-bank fees. Cited by session c703e38c (its S46); read independently here.",
+   "quotes": [
+    {
+     "id": "E27.a",
+     "loc": "Cross-border remittance (telegraphic transfer) row",
+     "verbatim": true,
+     "orig": "跨境汇款（电汇） 每笔汇款金额的1‰，最低收取50元/笔，最高收取260元/笔；另收电讯费,港澳台地区人民币80元/笔,非港澳台地区人民币150元/笔。",
+     "en": "Cross-border remittance (telegraphic transfer): 1 per mille of the remittance amount, minimum RMB 50 and maximum RMB 260 per transaction; plus a telecom fee of RMB 80 per transaction to Hong Kong, Macau and Taiwan and RMB 150 elsewhere."
+    },
+    {
+     "id": "E27.b",
+     "loc": "Remark 1",
+     "verbatim": true,
+     "orig": "另有协议约定、价格优惠、地方性收费差异的，按照协议或当地公示的内容收取相关费用。",
+     "en": "Where there is a separate agreement, a price concession or a local difference in charges, fees are charged according to the agreement or the locally published schedule."
     }
    ]
   }

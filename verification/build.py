@@ -30,17 +30,22 @@ def fail(msg):
 
 # ---------------------------------------------------------------- validation
 VERD = cl["meta"]["verdicts"]
-def need_tier1(rowid, ev):
+def need_tier1(rowid, ev, bank_fact=False):
+    """Every row needs a Tier-1 source. Exception: a bank-specific commercial fact (a fee) may rest on that
+    bank's own published fee table (Tier 2, kind 'bank fee table') - flagged bank_fact in claims.json."""
     if not ev: fail(f"{rowid}: no evidence")
     for x in ev:
         if x not in Q: fail(f"{rowid}: unresolved evidence id {x}")
-    if not any(Q[x][0]["tier"] == 1 for x in ev):
+    if bank_fact:
+        if not any(Q[x][0]["kind"] == "bank fee table" for x in ev):
+            fail(f"{rowid}: bank_fact row needs a bank fee table source")
+    elif not any(Q[x][0]["tier"] == 1 for x in ev):
         fail(f"{rowid}: no Tier-1 source among {ev}")
 for c in cl["claims"]:
     if c["verdict"] not in VERD: fail(f"{c['id']}: bad verdict {c['verdict']}")
-    need_tier1(c["id"], c["evidence"])
+    need_tier1(c["id"], c["evidence"], c.get("bank_fact", False))
 for k in ("gaps", "rules", "usfacts"):
-    for r in cl[k]: need_tier1(r["id"], r["evidence"])
+    for r in cl[k]: need_tier1(r["id"], r["evidence"], r.get("bank_fact", False))
 for b in cl["blank"]:
     if not b.get("why") or not b.get("check"): fail(f"{b['id']}: blank row needs why/check")
 
@@ -117,7 +122,7 @@ def external_urls():
     found = defaultdict(set)
     for f in glob.glob(os.path.join(ROOT, "**", "*"), recursive=True):
         rel = os.path.relpath(f, ROOT)
-        if not f.endswith((".html", ".md", ".json")) or rel.startswith((".git", "node_modules", "verification" + os.sep)) or rel in ("docs/assets/data.js", "verification.html", "primary-rules.html"):
+        if not f.endswith((".html", ".md", ".json", ".csv")) or rel.startswith((".git", "node_modules", "verification" + os.sep)) or rel in ("docs/assets/data.js", "verification.html", "primary-rules.html"):
             continue
         t = open(f, encoding="utf-8", errors="ignore").read()
         for m in re.finditer(r'https?://[^\s"\'<>)\]`}]+', t):
@@ -132,6 +137,7 @@ ALSO_OPENED = {  # fetched during the audit but not needed as evidence rows
 
 # ---------------------------------------------------------------- verification.html
 def build_verification():
+    TREE = cl["meta"]["audited_tree_short"]
     cnt = Counter(c["verdict"] for c in cl["claims"])
     order = ["contradicted", "superseded", "defect", "partly", "not-checked", "confirmed"]
     stats = "".join(f'<span class="v v-{k}">{cnt[k]} {e(k.replace("-"," "))}</span>' for k in order if cnt[k])
@@ -139,7 +145,7 @@ def build_verification():
     for c in cl["claims"]:
         where = "".join(f"<li>{e(w)}</li>" for w in c["where"])
         rows.append(f'<tr id="{e(c["id"])}"><td><strong>{e(c["id"])}</strong><br><span class="small">{e(c["topic"])}</span></td>'
-                    f'<td>{e(c["claim"])}<div class="where">Published at (tree 21604f3; owner {e(c["layer"])}):<ul>{where}</ul></div></td>'
+                    f'<td>{e(c["claim"])}<div class="where">Published at (tree {e(TREE)}; owner {e(c["layer"])}):<ul>{where}</ul></div></td>'
                     f'<td>{e(c["cited"])}</td><td>{vbadge(c["verdict"])}</td><td>{ev_cell(c["evidence"])}</td>'
                     f'<td>{e(c["finding"])}<div class="small"><strong>Action:</strong> {e(c["action"])}</div></td></tr>')
     srows = []
@@ -154,7 +160,7 @@ def build_verification():
     body = f"""
 <section class="section hero"><div class="hero"><h1>Independent verification of what is published on this site</h1>
 <p>Each claim below was re-read against the primary source it cites (or the primary source that should have been cited). Verdicts, verbatim quotes, retrieval date and official links are shown for every row. Nothing here is inferred: where a value could not be confirmed it is left blank and flagged.</p></div>
-<div class="callout warn"><p><strong>Headline.</strong> Under the PBOC Measures a U.S. passport holder is a <em>non-domestic individual</em> (境外个人); the State Council Regulations treat foreigners resident for a year or more as domestic individuals, and the bank decides which applies (<a href="#VC-03">VC-03</a>). For a non-domestic individual, the operative rule for converting lawful China-earned RMB income is <strong>Art. 59 of SAFE's 2020 Current-Account Guidelines</strong> — ID plus source-of-funds materials <em>including a tax certificate</em>, with no annual amount stated unless the holder has a Foreigner's Permanent Residence ID Card. The "USD 50,000 cap" framing on the methods pages is contradicted by SAFE's own Q&amp;A (<a href="#VC-01">VC-01</a>). None of the three earlier layers cites the Guidelines, and two SAFE circulars they cite were repealed by it (<a href="#VC-27">VC-27</a>, <a href="#VC-09">VC-09</a>). See <a href="primary-rules.html">Primary rules</a>.</p></div>
+<div class="callout warn"><p><strong>Headline.</strong> Under the PBOC Measures a U.S. passport holder is a <em>non-domestic individual</em> (境外个人); the State Council Regulations treat foreigners resident for a year or more as domestic individuals, and the bank decides which applies (<a href="#VC-03">VC-03</a>). For a non-domestic individual, the operative rule for converting lawful China-earned RMB income is <strong>Art. 59 of SAFE's 2020 Current-Account Guidelines</strong> — ID plus source-of-funds materials <em>including a tax certificate</em>, with no annual amount stated unless the holder has a Foreigner's Permanent Residence ID Card. The "USD 50,000 cap" framing on the methods pages is contradicted by SAFE's own Q&amp;A (<a href="#VC-01">VC-01</a>). None of the first three layers cites the Guidelines (the fourth, deep-research layer does), and two SAFE circulars the second and first layers cite were repealed by it (<a href="#VC-27">VC-27</a>, <a href="#VC-09">VC-09</a>). See <a href="primary-rules.html">Primary rules</a>.</p></div>
 <div class="callout info"><p><strong>Wrong or stale figures found:</strong> carrying-cash tiers (<a href="#VC-06">VC-06</a>, <a href="#VC-07">VC-07</a>); the USD 200,000 criminal threshold (<a href="#VC-13">VC-13</a>); the FBAR criminal penalty (<a href="#VC-17">VC-17</a>: statute says $250,000 / 5 years, not $10,000); FEIE for 2026 (<a href="#VC-19">VC-19</a>: $132,900); and a location leak in <code>tax.html</code> (<a href="#VC-26">VC-26</a>). <strong>Gaps filled:</strong> {len(cl['gaps'])}. <strong>Still blank and flagged:</strong> {len(cl['blank'])}.</p></div>
 <div class="stats">{stats}</div>
 <p class="small">Audited tree: {e(cl['meta']['audited_tree'])}. Tier 1 = law, regulation, regulator or tax authority. Tier 2 = an institution's own page (context only, never a sole source for a legal rule). Convention: <em>confirmed</em> = primary source read and matches; <em>partly</em> = matches in part; <em>contradicted</em> = primary source says otherwise; <em>superseded</em> = true of an older rule; <em>defect</em> = publishing or sourcing defect; <em>not checked</em> = cited page not opened.</p></section>
@@ -173,7 +179,7 @@ def build_verification():
 
 <section class="section"><h2>3. Cited on the site but not opened by this verification ({len(notopen)} URLs)</h2>
 <p>These URLs appear in the site's pages, data or documents and were <strong>not</strong> opened during this verification; rows that rest only on them are not verified here. Hosts: {e(', '.join(f'{h} ({n})' for h, n in hosts.most_common()))}.</p>
-<table class="data"><thead><tr><th>URL</th><th>Cited in</th></tr></thead><tbody>{nrows}</tbody></table></section>
+<details><summary>Show all {len(notopen)} URLs</summary><table class="data"><thead><tr><th>URL</th><th>Cited in</th></tr></thead><tbody>{nrows}</tbody></table></details></section>
 
 <section class="section"><h2>4. Method and limits</h2><ul>
 <li>Sources were read with a page-fetch tool on {e(led['meta']['retrieved'])}. Large documents were read in chunks; the ledger says which. The sandbox can reach only a few hosts directly, so SAFE, PBOC, gov.cn, IRS and eCFR pages were read through the fetch tool.</li>
