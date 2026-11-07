@@ -34,6 +34,14 @@ commit and push that claim immediately. Never start a task another session has c
   index/navigation, table data) at this stage. Changes to shared outputs are logged here.
 - No competing `in progress` claim existed at the time of takeover. If the other session
   resumes, it should re-read this board before claiming new work.
+- 2026-11-07 — `git pull --rebase` run before the first push of the merge commit attempted
+  to flatten the merge and re-play the other session's commits on top of this session's
+  first commit, producing a second `add/add` conflict on `COORDINATION.md`. **Stopped**,
+  verified no work would be lost (remote tip already equalled local tip `4aa7f58`), and
+  ran `git rebase --abort` to restore the merge commit intact. No other session's work was
+  discarded. Subsequent pre-push syncs use `git fetch` + fast-forward verification instead
+  of flattening rebase, because this branch legitimately contains a merge commit. Logged
+  as IR-013.
 
 ## Important session note / logged deviation
 
