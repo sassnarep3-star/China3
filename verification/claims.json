@@ -1,0 +1,1131 @@
+{
+ "meta": {
+  "title": "Claim audit, gap fill and rulebook",
+  "session": "arena-f83a5122-china3",
+  "retrieved": "2026-11-07",
+  "audited_tree": "21604f3 (origin/main 3f62eeb + ledger)",
+  "verdicts": {
+   "confirmed": "Primary source read; the claim matches.",
+   "partly": "Partly matches; the finding says what does not.",
+   "contradicted": "Primary source says something different.",
+   "superseded": "Was true of an older rule; replaced or repealed.",
+   "defect": "Publishing or sourcing defect, not a factual claim.",
+   "not-checked": "Cited page not opened by this session."
+  }
+ },
+ "claims": [
+  {
+   "id": "VC-01",
+   "topic": "USD 50,000",
+   "claim": "The USD 50,000 figure is a hard annual quota/cap on a U.S. citizen's CNY→USD purchases (\"$50,000 cap\"; \"use method 1 up to $50,000/year\"; \"above quota allowed only with documentation\").",
+   "where": [
+    "methods.html:55-57,187",
+    "china-rules.html:36-46",
+    "docs/executive-summary.md:27-28,39",
+    "research/cny-usd-conversion-research.md:34-35,56,70"
+   ],
+   "layer": "f43e42c8",
+   "cited": "SAFE 2007 press conference (E09)",
+   "verdict": "contradicted",
+   "evidence": [
+    "E08.a",
+    "E01.h",
+    "E01.e"
+   ],
+   "finding": "SAFE's own Q&A says the annual amount is not a limit on yearly FX purchases or sales; it only decides whether ID alone is enough. Art. 54 applies the purchase side to domestic individuals (境内个人). For a non-domestic individual, Art. 59 is a documents-based route for lawful China-earned RMB income, with no annual amount stated unless the holder has a Foreigner's Permanent Residence ID Card. The 2007 press conference predates the 2020 Guidelines.",
+   "action": "Annotated on each page; recommended-approach wording corrected."
+  },
+  {
+   "id": "VC-02",
+   "topic": "USD 50,000",
+   "claim": "The USD 50,000 amount is an annual convenience (facilitation) amount - a processing threshold, not an absolute cap, tax or penalty.",
+   "where": [
+    "index.html (key-figure table)",
+    "routes.html",
+    "sources.html (S1)"
+   ],
+   "layer": "dd766f7b",
+   "cited": "SAFE Ningxia Q&A (E08)",
+   "verdict": "confirmed",
+   "evidence": [
+    "E08.a",
+    "E01.h"
+   ],
+   "finding": "Matches SAFE's wording. Caveat: the cited Q&A concerns 境内个人; for a U.S. passport holder see VC-04.",
+   "action": "None."
+  },
+  {
+   "id": "VC-03",
+   "topic": "Classification",
+   "claim": "A U.S. passport holder is a non-domestic individual (境外个人) for SAFE purposes; citizenship alone does not decide - the bank's registration does.",
+   "where": [
+    "routes.html",
+    "review.html",
+    "data/flagged.json (I03)"
+   ],
+   "layer": "dd766f7b, 7e08715a",
+   "cited": "PBOC Measures; SAFE Regulations",
+   "verdict": "partly",
+   "evidence": [
+    "E05.a",
+    "E06.a",
+    "E01.e"
+   ],
+   "finding": "The PBOC Measures define a non-domestic individual as a foreign citizen holding a non-Chinese passport (Art. 37(2)); the Regulations (Art. 52(2)) count foreigners resident for at least one continuous year as domestic individuals. Guidelines Art. 59 treats foreign nationals as 境外个人, with a permanent-residence carve-out. The conflict is not resolved in the texts read; the bank's registration decides. Session 7e08715a flags the same conflict (I03).",
+   "action": "Flagged; first row of the rulebook."
+  },
+  {
+   "id": "VC-04",
+   "topic": "Salary route",
+   "claim": "Foreign employees can convert and remit all post-tax China salary: \"no annual cap\", needing an employment contract, work permit and proof Chinese tax was paid.",
+   "where": [
+    "methods.html:65-73",
+    "china-rules.html:62-67",
+    "docs/executive-summary.md:26",
+    "research/cny-usd-conversion-research.md:33,57,97"
+   ],
+   "layer": "f43e42c8",
+   "cited": "Ecovis/BNA (non-official; the pages flag it themselves)",
+   "verdict": "partly",
+   "evidence": [
+    "E01.e",
+    "E02.a",
+    "E04.a",
+    "E01.l"
+   ],
+   "finding": "Confirmed in substance by primary text: Art. 59, quoted again in SAFE Tianjin's 2026 FAQ, lets a non-domestic individual convert lawful China-earned current-account RMB income on valid ID plus source-of-funds materials showing the amount, including tax certificates. No annual amount is stated; holders of a Permanent Residence ID Card are subject to the convenience amount. 'Employment contract', 'work permit', 'entire salary' and '100%' are not words of Art. 59 (the document list is bank practice). Banks may refuse but must give reasons and an appeal channel (Art. 68).",
+   "action": "Annotated: source replaced by Arts. 59 and 68; wording tightened."
+  },
+  {
+   "id": "VC-05",
+   "topic": "Savings route",
+   "claim": "Savings or other (non-salary) funds can be converted up to USD 50,000 a year on ID alone, and above that with documents (emigration, medical, tuition, family maintenance, inheritance).",
+   "where": [
+    "methods.html:55",
+    "docs/executive-summary.md:27-28",
+    "research/cny-usd-conversion-research.md:34-35,61"
+   ],
+   "layer": "f43e42c8",
+   "cited": "SAFE 2007 press conference (E09)",
+   "verdict": "partly",
+   "evidence": [
+    "E01.h",
+    "E01.e",
+    "E01.f"
+   ],
+   "finding": "That is the domestic-individual regime (Arts. 54-56). For a non-domestic individual, Art. 59 covers only lawful China-earned current-account RMB income. No primary text read gives a standard route for a non-domestic individual's savings that cannot be traced to such income (blank - VB-07). If the bank treats the holder as a domestic individual the convenience-amount route applies. Art. 187 lets SAFE branches handle genuine needs outside the rules by collective deliberation.",
+   "action": "Flagged; blank cell in the route table."
+  },
+  {
+   "id": "VC-06",
+   "topic": "Carrying cash out",
+   "claim": "Carrying cash: no declaration up to USD 5,000; USD 5,000-10,000 permission; above USD 10,000 a customs declaration (\"requires customs-sealed declaration\").",
+   "where": [
+    "methods.html:91,96",
+    "research/cny-usd-conversion-research.md:59"
+   ],
+   "layer": "f43e42c8",
+   "cited": "SAFE 2007 press conference (E09)",
+   "verdict": "contradicted",
+   "evidence": [
+    "E01.n",
+    "E09.a"
+   ],
+   "finding": "Art. 89: the USD 5,000-10,000 tier is a bank-issued Carry-out Permit (where there is no entry record, or the amount exceeds it) - the middle tier is right, though the cited 2007 page does not say it. Above USD 10,000 Art. 89 provides a SAFE-branch permit only for travel to war-torn or strictly controlled countries; it gives no 'customs declaration' route for other destinations. The written customs declaration is the inbound rule above USD 5,000. 'No declaration up to USD 5,000' is implied, not stated.",
+   "action": "Corrected on the page and in the research table."
+  },
+  {
+   "id": "VC-07",
+   "topic": "Foreign cash rules",
+   "claim": "Deposits above USD 5,000 a day need bank documents; withdrawals above USD 10,000 need a SAFE filing; carry-out above USD 10,000 needs customs/bank forms (2007); \"Declare >$5,000; permission >$10,000\".",
+   "where": [
+    "china-rules.html:48-54",
+    "docs/executive-summary.md:29,41",
+    "research/cny-usd-conversion-research.md:36,84-86"
+   ],
+   "layer": "f43e42c8",
+   "cited": "SAFE 2007 press conference (E09)",
+   "verdict": "superseded",
+   "evidence": [
+    "E01.m",
+    "E01.n",
+    "E01.a",
+    "E09.a"
+   ],
+   "finding": "Superseded by Arts. 86-89 (2020): deposits and withdrawals up to USD 10,000 a day need ID only (the 2007 USD 5,000 deposit trigger no longer applies); above that, a customs-stamped declaration or the original withdrawal slip (deposit), or a prior SAFE filing for specified destinations (withdrawal). The 2020 Notice states that earlier inconsistent provisions yield to it.",
+   "action": "china-rules §3 marked superseded; executive-summary rows corrected."
+  },
+  {
+   "id": "VC-08",
+   "topic": "Overseas card cash",
+   "claim": "Overseas ATM cash: RMB 10,000 a day per card, RMB 100,000 a year per person, barred in the current and next year if exceeded; card spending does not use the USD 50,000 quota.",
+   "where": [
+    "china-rules.html:56-60",
+    "docs/executive-summary.md:40",
+    "research/cny-usd-conversion-research.md:58,60,90-93",
+    "data/channels.json C12-C13"
+   ],
+   "layer": "f43e42c8, 7e08715a",
+   "cited": "SAFE 2017 Q&A (E07)",
+   "verdict": "confirmed",
+   "evidence": [
+    "E07.a",
+    "E03.d"
+   ],
+   "finding": "Matches the SAFE Q&A (chunk 0 of 2 read). The underlying notice 汇发〔2017〕29号 is on SAFE's 2026-06-30 list of effective rules.",
+   "action": "None."
+  },
+  {
+   "id": "VC-09",
+   "topic": "Anti-splitting circular",
+   "claim": "\"SAFE's circular expressly identifies splitting via multiple individuals - including relatives - as a prohibited circumvention pattern\" (the 2009 circular's 5-or-more-person patterns).",
+   "where": [
+    "routes.html:15",
+    "sources.html:8 (S3)",
+    "review.html"
+   ],
+   "layer": "dd766f7b",
+   "cited": "SAFE 2009 circular (E10)",
+   "verdict": "superseded",
+   "evidence": [
+    "E10.a",
+    "E10.b",
+    "E01.b",
+    "E01.j"
+   ],
+   "finding": "The circular's English title matches item 7 of the repeal list in the 2020 Notice (汇发〔2009〕56号) - matched by title and date; the English page does not print the document number. Its 5-or-more-individual patterns are therefore no longer published rules. The prohibition itself continues in Guidelines Arts. 47 and 62.",
+   "action": "Annotated S3 as repealed; claim re-sourced to Art. 62."
+  },
+  {
+   "id": "VC-10",
+   "topic": "2015 press conference",
+   "claim": "A 2015 SAFE press-conference transcript supports the current rule that quota splitting and use of other people's quota are not allowed.",
+   "where": [
+    "sources.html:7 (S2)",
+    "routes.html",
+    "tax.html"
+   ],
+   "layer": "dd766f7b",
+   "cited": "SAFE press conference, 2015 Q3",
+   "verdict": "not-checked",
+   "evidence": [
+    "E01.c"
+   ],
+   "finding": "Page not opened by this session. The source register itself says it is a transcript, not a rule text. The 2020 Notice repeals Circular 汇发〔2015〕49号; I did not confirm that the transcript concerns that circular. Use Guidelines Art. 62 for the current rule.",
+   "action": "Flag only."
+  },
+  {
+   "id": "VC-11",
+   "topic": "Watch list",
+   "claim": "SAFE watch list: loss of the annual FX quota for the listing year plus the next 2 years.",
+   "where": [
+    "china-rules.html:74",
+    "penalties.html:59",
+    "methods.html:141"
+   ],
+   "layer": "f43e42c8",
+   "cited": "HSBC China guide (Tier 2)",
+   "verdict": "confirmed",
+   "evidence": [
+    "E01.j"
+   ],
+   "finding": "Primary text confirms the period (listing year plus two consecutive years). The effect is not 'loss of quota' as such: during the period every FX purchase or sale needs ID plus materials showing the transaction amount, strictly reviewed - the ID-only convenience route is unavailable.",
+   "action": "Source replaced in the annotation; wording clarified."
+  },
+  {
+   "id": "VC-12",
+   "topic": "Anti-smurfing controls",
+   "claim": "\"SAFE anti-smurfing algorithms; accounts frozen; SAFE blacklist; fines; criminal liability possible\".",
+   "where": [
+    "methods.html:153"
+   ],
+   "layer": "f43e42c8",
+   "cited": "not stated in the row",
+   "verdict": "partly",
+   "evidence": [
+    "E01.t",
+    "E01.j"
+   ],
+   "finding": "Banks must screen and intercept abnormal transactions to prevent borrowing or lending of convenience amounts (Art. 72), and SAFE keeps a watch list (Art. 62). 'Algorithms', 'accounts frozen' and 'blacklist' are not words of the texts read - not confirmed.",
+   "action": "Flag only."
+  },
+  {
+   "id": "VC-13",
+   "topic": "USD 200,000 criminal threshold",
+   "claim": "Illegal FX trading above USD 200,000 equivalent constitutes (\"may constitute\") a crime.",
+   "where": [
+    "penalties.html:62",
+    "china-rules.html:73",
+    "docs/executive-summary.md:31",
+    "research/cny-usd-conversion-research.md:95"
+   ],
+   "layer": "f43e42c8",
+   "cited": "Standard Chartered alert; UK NCA report (Tier 2)",
+   "verdict": "contradicted",
+   "evidence": [
+    "E24.a",
+    "E25.a",
+    "E03.f"
+   ],
+   "finding": "The figure appears only in a bank customer alert (undated; it refers to the China Banking Regulatory Commission). The SPC/SPP interpretation, which SAFE lists as current, sets 'serious' at an illegal business amount of RMB 5 million or illegal gains of RMB 100,000 (read from a search excerpt; session 7e08715a logged the full text as its S10). USD 200,000 is not the stated threshold.",
+   "action": "Row corrected to the RMB thresholds and marked partly verified."
+  },
+  {
+   "id": "VC-14",
+   "topic": "Crypto row source",
+   "claim": "Cryptocurrency (P2P/exchanges): retail FX/margin trading prohibited; crypto exchanges banned in China.",
+   "where": [
+    "methods.html:161-167",
+    "research/cny-usd-conversion-research.md:65"
+   ],
+   "layer": "f43e42c8",
+   "cited": "Standard Chartered alert (E24)",
+   "verdict": "partly",
+   "evidence": [
+    "E26.a",
+    "E26.b",
+    "E26.c",
+    "E24.b"
+   ],
+   "finding": "The conclusion is confirmed by an official source read in full: PBOC et al. Notice 银发〔2026〕42号 (2026-02-06) prohibits exchanging legal tender and virtual currency within China, bars financial institutions from servicing it, and repeals the 2021 notice. The page the row cites (a Standard Chartered alert) concerns illegal overseas futures and FX margin trading and does not mention cryptocurrency, so the row's source does not support its text.",
+   "action": "Annotated: official source added; row text left as published."
+  },
+  {
+   "id": "VC-15",
+   "topic": "FBAR basics",
+   "claim": "FBAR is required if aggregate foreign accounts exceed USD 10,000 at any time in the year; e-filed; due April 15 with automatic October 15 extension; records kept five years.",
+   "where": [
+    "us-tax.html:43",
+    "docs/executive-summary.md:42,68",
+    "research/cny-usd-conversion-research.md:41",
+    "index.html (key-figure table)"
+   ],
+   "layer": "all",
+   "cited": "IRS / FinCEN",
+   "verdict": "confirmed",
+   "evidence": [
+    "E13.a",
+    "E13.b",
+    "E13.c"
+   ],
+   "finding": "Matches the IRS FBAR page.",
+   "action": "None."
+  },
+  {
+   "id": "VC-16",
+   "topic": "FBAR civil penalties",
+   "claim": "FBAR non-willful up to $16,536; willful the greater of $165,353 or 50% of the balance (assessed on or after 2025-01-17).",
+   "where": [
+    "penalties.html:65,68",
+    "index.html (key-figure table)"
+   ],
+   "layer": "f43e42c8",
+   "cited": "eCFR 31 CFR 1010.821",
+   "verdict": "confirmed",
+   "evidence": [
+    "E12.a",
+    "E17.b"
+   ],
+   "finding": "eCFR 'up to date as of 11/05/2026'; last change to the section 2025-01-17. Statute: base $10,000 with a reasonable-cause exception; willful = greater of $100,000 or 50% of the account balance (31 U.S.C. 5321(a)(5)).",
+   "action": "None."
+  },
+  {
+   "id": "VC-17",
+   "topic": "FBAR criminal penalty",
+   "claim": "FBAR criminal (knowingly false filing): up to a $10,000 fine and/or 5 years' imprisonment.",
+   "where": [
+    "penalties.html:71"
+   ],
+   "layer": "f43e42c8",
+   "cited": "IRS FBAR practice unit (E15)",
+   "verdict": "contradicted",
+   "evidence": [
+    "E16.a",
+    "E16.b",
+    "E15.a",
+    "E15.b"
+   ],
+   "finding": "31 U.S.C. 5322(a): fine up to $250,000 or imprisonment up to five years, or both; 5322(b) (violating another law, or a pattern of illegal activity over $100,000 in 12 months): up to $500,000 and/or 10 years. The cited practice unit says it is not authority and, in the part read, gives no penalty amounts; the IRS FBAR page refers to Pub. 5569 for criminal penalties.",
+   "action": "Row corrected; source replaced by the official U.S. Code."
+  },
+  {
+   "id": "VC-18",
+   "topic": "Form 8938",
+   "claim": "Form 8938 thresholds (single, abroad: over $200,000 at year-end or $300,000 at any time) and failure-to-file penalty ($10,000 plus up to $50,000 continuation, max $60,000).",
+   "where": [
+    "us-tax.html:53",
+    "tax.html:12",
+    "penalties.html:74",
+    "docs/executive-summary.md:46-47"
+   ],
+   "layer": "f43e42c8, dd766f7b",
+   "cited": "IRS comparison page",
+   "verdict": "confirmed",
+   "evidence": [
+    "E14.a",
+    "E14.b"
+   ],
+   "finding": "Matches the IRS comparison page, including the living-in-the-U.S. thresholds ($50,000/$75,000 single).",
+   "action": "None."
+  },
+  {
+   "id": "VC-19",
+   "topic": "FEIE",
+   "claim": "Foreign earned income exclusion: $130,000 (2025).",
+   "where": [
+    "us-tax.html:60",
+    "index.html:53",
+    "docs/executive-summary.md:48"
+   ],
+   "layer": "f43e42c8",
+   "cited": "IRS Rev. Proc. 2024-40",
+   "verdict": "partly",
+   "evidence": [
+    "E19.a"
+   ],
+   "finding": "$130,000 is the tax-year 2025 amount (returns filed in 2026). Tax year 2026 is $132,900 (returns filed in 2027). Rev. Proc. 2024-40 itself was not opened; the figures are confirmed by the IRS release IR-2025-103.",
+   "action": "Corrected: both years shown."
+  },
+  {
+   "id": "VC-20",
+   "topic": "Treaty",
+   "claim": "The U.S.-China income tax treaty was signed April 30, 1984 and is \"in force January 1, 1987\"; the savings clause limits citizens' benefits.",
+   "where": [
+    "us-tax.html:76",
+    "docs/executive-summary.md:50"
+   ],
+   "layer": "f43e42c8",
+   "cited": "IRS treaty documents",
+   "verdict": "partly",
+   "evidence": [
+    "E21.a"
+   ],
+   "finding": "The IRS-hosted text header says 'Entered into Force on January 1, 1987' and shows the saving clause (Protocol 1, paragraph 2). Congress.gov (search excerpt) lists 'Entered into Force: 11/21/1986'. 'In force 1987' therefore conflates entry into force with the effective date.",
+   "action": "Annotated."
+  },
+  {
+   "id": "VC-21",
+   "topic": "Totalization",
+   "claim": "No U.S.-China totalization agreement exists.",
+   "where": [
+    "us-tax.html:70"
+   ],
+   "layer": "f43e42c8",
+   "cited": "SSA / IRS",
+   "verdict": "confirmed",
+   "evidence": [
+    "E20.a"
+   ],
+   "finding": "China does not appear in SSA's list of agreements (the list includes Romania, in force 2026-09-01, so it is current).",
+   "action": "None."
+  },
+  {
+   "id": "VC-22",
+   "topic": "Section 988",
+   "claim": "Possible section 988 FX gain; personal de minimis $200 per transaction.",
+   "where": [
+    "methods.html:59",
+    "docs/executive-summary.md:27",
+    "research/cny-usd-conversion-research.md:34,71",
+    "penalties.html (Cornell link)"
+   ],
+   "layer": "f43e42c8",
+   "cited": "Cornell LII mirror (non-official)",
+   "verdict": "confirmed",
+   "evidence": [
+    "E18.a",
+    "E18.b"
+   ],
+   "finding": "Official text: personal-transaction gain is excluded only if it does not exceed $200 - above that the exclusion does not apply (a cliff, not a first-$200 allowance). A foreign-currency bank deposit is 'nonfunctional currency'. The text read does not state the character of gains above $200 or the treatment of losses - left to a tax adviser (VB-12).",
+   "action": "Source replaced by the official U.S. Code (govinfo)."
+  },
+  {
+   "id": "VC-23",
+   "topic": "'Not a taxable event'",
+   "claim": "Moving your own money out is not a U.S. taxable event.",
+   "where": [
+    "methods.html:59,71,83,95",
+    "research/cny-usd-conversion-research.md:27"
+   ],
+   "layer": "f43e42c8",
+   "cited": "IRS",
+   "verdict": "partly",
+   "evidence": [
+    "E18.b"
+   ],
+   "finding": "No primary text read states that a conversion is never taxable. Section 988(e) addresses only the currency-gain element; interest earned on the deposit and the tax status of the RMB's source are separate questions.",
+   "action": "Flagged."
+  },
+  {
+   "id": "VC-24",
+   "topic": "Outward remittance threshold",
+   "claim": "FX-account remittance abroad: up to USD 50,000 a day on ID, above that with documents (SAFE Tianjin FAQ).",
+   "where": [
+    "routes.html",
+    "review.html (bank checklist)"
+   ],
+   "layer": "dd766f7b",
+   "cited": "SAFE Tianjin 2024 FAQ (E11)",
+   "verdict": "partly",
+   "evidence": [
+    "E11.a",
+    "E01.k"
+   ],
+   "finding": "The FAQ is expressly about 境内个人 (Guidelines Art. 64). For a non-domestic individual, Art. 65: FX-account remittance abroad needs only valid ID (no daily threshold stated); remitting cash up to USD 10,000 a day on ID.",
+   "action": "Annotated."
+  },
+  {
+   "id": "VC-25",
+   "topic": "Sole-source labels",
+   "claim": "Rows labelled 'Verified' rest on a non-official page as their only source (Ecovis, Standard Chartered, HSBC, Cornell, UK NCA).",
+   "where": [
+    "methods.html",
+    "penalties.html",
+    "china-rules.html"
+   ],
+   "layer": "f43e42c8",
+   "cited": "five non-official URLs",
+   "verdict": "partly",
+   "evidence": [
+    "E01.e",
+    "E01.j",
+    "E18.b",
+    "E25.a"
+   ],
+   "finding": "Four of the five are now replaced by primary sources (Ecovis→Arts. 59/68; HSBC→Art. 62; Cornell→govinfo; Standard Chartered→SPC/SPP and Guidelines). The UK NCA report remains a secondary description of illegal practice, not a legal source.",
+   "action": "Annotated."
+  },
+  {
+   "id": "VC-26",
+   "topic": "Location leak",
+   "claim": "\"Do not assume Amsterdam location means qualifying U.S. 'living abroad' tests.\"",
+   "where": [
+    "tax.html:12"
+   ],
+   "layer": "dd766f7b",
+   "cited": "IRS Form 8938 page",
+   "verdict": "defect",
+   "evidence": [
+    "E14.a"
+   ],
+   "finding": "Publishes the requester's inferred city on a public site, and the sentence adds nothing the IRS threshold table does not say.",
+   "action": "Corrected: neutral wording."
+  },
+  {
+   "id": "VC-27",
+   "topic": "Source hierarchy",
+   "claim": "The published guidance rests on the 2007 Detailed Rules, a 2007 press conference, two repealed circulars, a 2019 branch operations guide and bank pages; none of the three layers cites the 2020 Current-Account Guidelines.",
+   "where": [
+    "methods.html",
+    "china-rules.html",
+    "routes.html",
+    "sources.html",
+    "data/sources.json (S02, S07)"
+   ],
+   "layer": "all",
+   "cited": "-",
+   "verdict": "defect",
+   "evidence": [
+    "E01.a",
+    "E03.a",
+    "E03.b",
+    "E02.a",
+    "E08.a"
+   ],
+   "finding": "SAFE branches quote the Guidelines in 2022 and 2026; the Notice says earlier inconsistent provisions yield to it; SAFE's 2026-06-30 catalogue lists the Guidelines (amended by three later notices) and the 2007 Detailed Rules (Art. 39 deleted). Pages relying on the older texts must be read together with the Guidelines.",
+   "action": "This verification adds the Guidelines rulebook (primary-rules.html)."
+  },
+  {
+   "id": "VC-28",
+   "topic": "Data layer: carrying cash",
+   "claim": "\"A ceiling of USD 10,000 is the operative rule ... the finer USD 5,000 / USD 10,000 split was left out rather than assert.\"",
+   "where": [
+    "data/channels.json C14",
+    "docs/channels.html"
+   ],
+   "layer": "7e08715a",
+   "cited": "SAFE Jilin operations guide (2019)",
+   "verdict": "confirmed",
+   "evidence": [
+    "E01.n",
+    "E03.e"
+   ],
+   "finding": "Consistent with Art. 89; the split it left out is now sourced (VG-01).",
+   "action": "None."
+  },
+  {
+   "id": "VC-29",
+   "topic": "Data layer: FX account remittance",
+   "claim": "No amount limit for remitting FX from a foreign-currency savings account; cash above USD 10,000 needs extra documents.",
+   "where": [
+    "data/channels.json C05"
+   ],
+   "layer": "7e08715a",
+   "cited": "SAFE implementing rules",
+   "verdict": "confirmed",
+   "evidence": [
+    "E01.k"
+   ],
+   "finding": "Consistent with Art. 65 for non-domestic individuals.",
+   "action": "None."
+  },
+  {
+   "id": "VC-30",
+   "topic": "Data layer: non-resident conversion",
+   "claim": "Conversion of a non-resident's current-account RMB income is not limited by the USD 50,000 figure.",
+   "where": [
+    "data/channels.json C03",
+    "VERIFICATION.md cross-check 2"
+   ],
+   "layer": "7e08715a",
+   "cited": "SAFE implementing rules",
+   "verdict": "confirmed",
+   "evidence": [
+    "E01.e",
+    "E01.h"
+   ],
+   "finding": "Independently reaches the same conclusion via Arts. 54 and 59 of the 2020 Guidelines.",
+   "action": "None."
+  },
+  {
+   "id": "VC-31",
+   "topic": "Data layer: definition conflict",
+   "claim": "The 2006 Measures and the 2008 Regulations define 境内个人 differently (open item I03).",
+   "where": [
+    "REPO_AUDIT.md S5",
+    "data/flagged.json I03"
+   ],
+   "layer": "7e08715a",
+   "cited": "SAFE / PBOC texts",
+   "verdict": "confirmed",
+   "evidence": [
+    "E05.a",
+    "E06.a"
+   ],
+   "finding": "Reproduced independently (VC-03).",
+   "action": "None."
+  }
+ ],
+ "gaps": [
+  {
+   "id": "VG-01",
+   "item": "Outbound cash: the USD 5,000 / 10,000 permit split (left out by data/channels.json C14)",
+   "status": "filled",
+   "value": "USD 5,000 up to USD 10,000: bank-issued Foreign Exchange Carry-out Permit where there is no entry record or the amount exceeds it. Above USD 10,000: SAFE-branch permit, only for travel to war-torn / strict-control countries.",
+   "evidence": [
+    "E01.n"
+   ],
+   "note": "Inbound: written customs declaration above USD 5,000."
+  },
+  {
+   "id": "VG-02",
+   "item": "Form 8938 penalty amount (open item I06 on the data layer)",
+   "status": "filled",
+   "value": "Up to $10,000; plus $10,000 for each 30 days of non-filing after IRS notice; maximum $60,000.",
+   "evidence": [
+    "E14.b"
+   ],
+   "note": "The other layer's IRS URL returned 404; the working URL is in the ledger."
+  },
+  {
+   "id": "VG-03",
+   "item": "Official text of 26 U.S.C. 988 and 31 U.S.C. 5321 (open item I05: only a non-.gov mirror reached)",
+   "status": "filled",
+   "value": "Read on govinfo.gov (U.S. Code, 2024 ed.) through the /link/uscode/ URL pattern.",
+   "evidence": [
+    "E18.b",
+    "E17.b"
+   ],
+   "note": "uscode.house.gov showed a 'temporary format' notice to the other layer."
+  },
+  {
+   "id": "VG-04",
+   "item": "Civil penalty for an unfiled or incorrect cash-transport report (FinCEN 105 / CMIR) (open item I10)",
+   "status": "partly filled",
+   "value": "Civil penalty up to the amount of the monetary instrument for which the report was required (31 U.S.C. 5321(a)(2)), reduced by any forfeiture.",
+   "evidence": [
+    "E17.a",
+    "E16.a"
+   ],
+   "note": "Criminal: general willful-violation penalties in 5322; bulk-cash-smuggling provision (31 U.S.C. 5332) not read."
+  },
+  {
+   "id": "VG-05",
+   "item": "PRC individual income tax on savings-deposit interest (open item I07)",
+   "status": "filled",
+   "value": "Interest on savings deposits accrued on or after 9 October 2008 is temporarily exempt (STA annotation citing 财税〔2008〕132号).",
+   "evidence": [
+    "E23.a"
+   ],
+   "note": "The Notice 财税〔2008〕132号 itself was not opened."
+  },
+  {
+   "id": "VG-06",
+   "item": "PRC administrative fine ranges (item #8 on flagged-review.html)",
+   "status": "filled",
+   "value": "Fines up to 30% of the amount (30%-100% if serious) for evasion/arbitrage-type conduct; carrying FX across the border in violation: warning and fine up to 20% (Customs penalties prevail). Guidelines Art. 188 sends violations to these Regulations.",
+   "evidence": [
+    "E06.a",
+    "E01.g"
+   ],
+   "note": "Paraphrase of text read; the 2021 fine-calibration measures (汇综发〔2021〕68号) exist (E03.g) but their range table was not retrieved from an official page (VB-04)."
+  },
+  {
+   "id": "VG-07",
+   "item": "Primary source for foreigners converting China-earned income (Ecovis was the sole source on f43e42c8's pages)",
+   "status": "filled",
+   "value": "Guidelines Art. 59; SAFE Tianjin 2026 FAQ; 2021 Notice item 5 (repeat purchases).",
+   "evidence": [
+    "E01.e",
+    "E02.a",
+    "E04.a"
+   ],
+   "note": ""
+  },
+  {
+   "id": "VG-08",
+   "item": "Current-year FEIE figure",
+   "status": "filled",
+   "value": "Tax year 2026: $132,900 (tax year 2025: $130,000).",
+   "evidence": [
+    "E19.a"
+   ],
+   "note": ""
+  },
+  {
+   "id": "VG-09",
+   "item": "Criminal threshold for illegal FX dealing (replaces the unsourced USD 200,000)",
+   "status": "partly filled",
+   "value": "'Serious': illegal business amount of RMB 5 million or illegal gains of RMB 100,000; 'especially serious': RMB 25 million / RMB 500,000.",
+   "evidence": [
+    "E25.a",
+    "E03.f"
+   ],
+   "note": "Search excerpt only; the other layer's S10 logs the full text."
+  },
+  {
+   "id": "VG-10",
+   "item": "PRC individual income tax rates",
+   "status": "filled",
+   "value": "Comprehensive income: progressive 3%-45%; business income 5%-35%; interest, dividends, rent, property transfer: 20%.",
+   "evidence": [
+    "E22.a"
+   ],
+   "note": "Search excerpt of the STA policy database page."
+  },
+  {
+   "id": "VG-11",
+   "item": "Totalization agreement status",
+   "status": "filled",
+   "value": "China is not on SSA's list.",
+   "evidence": [
+    "E20.a"
+   ],
+   "note": ""
+  }
+ ],
+ "blank": [
+  {
+   "id": "VB-01",
+   "item": "Bank wire fees, telecom fees, intermediary-bank deductions and the CNY/USD spread",
+   "why": "No regulator publishes them and no bank tariff page was retrieved; third-party sites quote different schedules, which are not used here.",
+   "check": "Ask the bank for a written quote showing the rate, timestamp, every fee and the net USD."
+  },
+  {
+   "id": "VB-02",
+   "item": "Processing time for bank conversion or any SAFE/branch handling",
+   "why": "No published service standard located.",
+   "check": "Bank counter / SAFE local branch."
+  },
+  {
+   "id": "VB-03",
+   "item": "Official limit on carrying RMB cash out of China",
+   "why": "Only blog-sourced figures were seen; no PBOC/Customs text retrieved.",
+   "check": "PBOC and China Customs."
+  },
+  {
+   "id": "VB-04",
+   "item": "Fine-range table in the 2021 FX fine-calibration measures (汇综发〔2021〕68号)",
+   "why": "Existence confirmed in SAFE's catalogue (#157); the annex table was not retrieved from an official page.",
+   "check": "SAFE website."
+  },
+  {
+   "id": "VB-05",
+   "item": "Consolidated text of the Guidelines after the 2023 and 2024 amendments",
+   "why": "SAFE's catalogue says 汇发〔2023〕8号, 汇发〔2023〕28号 and 汇发〔2024〕11号 amended it; the text read is the 2020 as-issued version. Art. 59 is unchanged (quoted verbatim in 2026).",
+   "check": "SAFE website; ask the bank which version it applies."
+  },
+  {
+   "id": "VB-06",
+   "item": "How banks classify a U.S. citizen who has lived in China for a year or more (境内个人 vs 境外个人)",
+   "why": "The 2006 Measures and the 2008 Regulations conflict; no official clarification located.",
+   "check": "The handling bank; SAFE local branch."
+  },
+  {
+   "id": "VB-07",
+   "item": "Standard route for a non-domestic individual's savings not traceable to China-earned current-account income",
+   "why": "Art. 59 covers only lawful current-account RMB income earned in China; no other primary text located.",
+   "check": "Bank special-case procedure (2021 Notice item 6) and SAFE local branch."
+  },
+  {
+   "id": "VB-08",
+   "item": "Transfers of inherited or personal property abroad (PBOC Announcement 2004 No. 16)",
+   "why": "Listed as current by SAFE (#97); its thresholds were not independently read here (see 7e08715a S03/S04).",
+   "check": "PBOC / SAFE texts."
+  },
+  {
+   "id": "VB-09",
+   "item": "U.S. character of currency gain above $200 and treatment of personal currency losses",
+   "why": "Section 988(e)(2) excludes gain up to $200 and the text read does not say more.",
+   "check": "A U.S. tax professional; IRS guidance."
+  },
+  {
+   "id": "VB-10",
+   "item": "Wealth Management Connect individual quota; QDII per-investor limits (open items I08/I09)",
+   "why": "Not researched here; probably not available to a non-domestic individual.",
+   "check": "PBOC Guangzhou branch; SAFE."
+  }
+ ],
+ "rules": [
+  {
+   "id": "R01",
+   "topic": "Who counts as a non-domestic individual (境外个人)?",
+   "who": "Everyone",
+   "rule": "A foreign citizen holding a non-Chinese passport (PBOC Measures Art. 37(2)). The Regulations count foreigners continuously resident for at least a year as domestic individuals (Art. 52(2)). The bank assigns the category.",
+   "cite": "PBOC Measures Arts. 28, 37(2); Regulations Art. 52(2)",
+   "evidence": [
+    "E05.a",
+    "E06.a"
+   ],
+   "caveat": "Unresolved conflict between the two texts (VB-06)."
+  },
+  {
+   "id": "R02",
+   "topic": "Convert lawful China-earned RMB income into USD",
+   "who": "Non-domestic individual (e.g. a U.S. passport holder)",
+   "rule": "Valid ID plus source-of-funds materials showing the transaction amount, including tax certificates. No annual amount is stated.",
+   "cite": "Guidelines Art. 59",
+   "evidence": [
+    "E01.e",
+    "E02.a"
+   ],
+   "caveat": "Source of funds must be current-account income earned in China (wages, rent, etc.). Text read is the 2020 as-issued version; Art. 59 quoted unchanged by SAFE Tianjin in July 2026."
+  },
+  {
+   "id": "R03",
+   "topic": "Holder of a Foreigner's Permanent Residence ID Card",
+   "who": "Non-domestic individual with the card",
+   "rule": "The annual convenience amount (USD 50,000 a year) applies to purchases.",
+   "cite": "Guidelines Art. 59, second paragraph",
+   "evidence": [
+    "E01.e"
+   ],
+   "caveat": ""
+  },
+  {
+   "id": "R04",
+   "topic": "The USD 50,000 'convenience amount'",
+   "who": "Individuals",
+   "rule": "USD 50,000 per person per year for individuals' FX sales and domestic individuals' FX purchases. It is not a limit: above it, ID alone is not enough and transaction-amount materials are needed.",
+   "cite": "Guidelines Art. 54; SAFE Ningxia Q&A (2022)",
+   "evidence": [
+    "E01.h",
+    "E08.a"
+   ],
+   "caveat": ""
+  },
+  {
+   "id": "R05",
+   "topic": "Repeat salary conversions",
+   "who": "Non-domestic individual working in China",
+   "rule": "During the labour-contract term the bank may skip re-reviewing materials already reviewed at the first conversion at the same bank.",
+   "cite": "SAFE Notice 汇发〔2021〕13号 item 5",
+   "evidence": [
+    "E04.a"
+   ],
+   "caveat": "A permission for banks ('may'), not a right."
+  },
+  {
+   "id": "R06",
+   "topic": "Genuine transactions that do not fit the standard documents",
+   "who": "Individuals",
+   "rule": "Banks must keep a special-case procedure and apply a 'substance over form' review to genuine, lawful current-account business. Where rules are unclear, SAFE branches may decide by collective deliberation.",
+   "cite": "2021 Notice item 6; Guidelines Art. 187",
+   "evidence": [
+    "E04.b",
+    "E01.f"
+   ],
+   "caveat": "No guarantee of approval."
+  },
+  {
+   "id": "R07",
+   "topic": "Using an agent",
+   "who": "Individuals",
+   "rule": "An agent may handle conversions that do not use the convenience amount, with both IDs, a power of attorney and materials showing the transaction amount.",
+   "cite": "Guidelines Art. 61",
+   "evidence": [
+    "E01.p"
+   ],
+   "caveat": ""
+  },
+  {
+   "id": "R08",
+   "topic": "Remit USD abroad from an FX account",
+   "who": "Non-domestic individual",
+   "rule": "From an FX account: valid ID. Remitting foreign cash: up to USD 10,000 a day on ID; above that, a customs-stamped declaration form or the original withdrawal slip.",
+   "cite": "Guidelines Art. 65",
+   "evidence": [
+    "E01.k"
+   ],
+   "caveat": "Domestic individuals have a USD 50,000-a-day documents threshold (Art. 64; SAFE Tianjin 2024) - not the rule for non-domestic individuals."
+  },
+  {
+   "id": "R09",
+   "topic": "Re-convert RMB you exchanged earlier",
+   "who": "Non-domestic individual",
+   "rule": "Valid ID plus the original exchange slip, valid 24 months; up to USD 500 a day (USD 1,000 at in-country venues beyond the customs line before departure) on ID alone.",
+   "cite": "Guidelines Art. 60",
+   "evidence": [
+    "E01.i"
+   ],
+   "caveat": ""
+  },
+  {
+   "id": "R10",
+   "topic": "Bank may refuse",
+   "who": "Individuals",
+   "rule": "Banks may refuse transactions that breach rules or whose authenticity is in doubt, but must tell you the reason and the appeal channel.",
+   "cite": "Guidelines Art. 68",
+   "evidence": [
+    "E01.l"
+   ],
+   "caveat": ""
+  },
+  {
+   "id": "R11",
+   "topic": "Transfer to a relative who is a domestic individual",
+   "who": "Non-domestic individual",
+   "rule": "Managed as a cross-border transaction and must meet the rules for remitting FX abroad.",
+   "cite": "Guidelines Art. 67",
+   "evidence": [
+    "E01.r"
+   ],
+   "caveat": ""
+  },
+  {
+   "id": "R12",
+   "topic": "Carrying foreign cash across the border",
+   "who": "Individuals",
+   "rule": "In: declare in writing above USD 5,000. Out: USD 5,000-10,000 needs a bank Carry-out Permit where there is no entry record or the amount exceeds it; above USD 10,000 only for travel to listed countries, with a SAFE-branch permit.",
+   "cite": "Guidelines Art. 89",
+   "evidence": [
+    "E01.n"
+   ],
+   "caveat": "Article is silent on other destinations above USD 10,000."
+  },
+  {
+   "id": "R13",
+   "topic": "Foreign cash deposits and withdrawals",
+   "who": "Individuals",
+   "rule": "Up to USD 10,000 a day on ID. Above that: deposits need a customs-stamped declaration or the original withdrawal slip; withdrawals need a prior SAFE filing (listed countries only).",
+   "cite": "Guidelines Arts. 86-87",
+   "evidence": [
+    "E01.m"
+   ],
+   "caveat": "Supersedes the 2007 USD 5,000 deposit trigger."
+  },
+  {
+   "id": "R14",
+   "topic": "Overseas ATM cash",
+   "who": "Cardholders",
+   "rule": "RMB 10,000 a day per card; RMB 100,000 a year per person; breach bars overseas cash withdrawals in the current and next year; card spending does not use the USD 50,000.",
+   "cite": "SAFE Q&A on 汇发〔2017〕29号",
+   "evidence": [
+    "E07.a",
+    "E03.d"
+   ],
+   "caveat": ""
+  },
+  {
+   "id": "R15",
+   "topic": "No splitting; watch list",
+   "who": "Individuals",
+   "rule": "Splitting or borrowing/lending convenience amounts is prohibited. Listed individuals are on a watch list for the listing year plus two years and must document every conversion.",
+   "cite": "Guidelines Arts. 47, 62, 72",
+   "evidence": [
+    "E01.j",
+    "E01.t"
+   ],
+   "caveat": "The 2009 circular's '5 or more' patterns were repealed in 2020."
+  },
+  {
+   "id": "R16",
+   "topic": "Penalties for violations",
+   "who": "Everyone",
+   "rule": "Penalised under the FX Regulations: fines up to 30% of the amount (30%-100% if serious); carrying FX out in violation: warning and fine up to 20%. Illegal FX dealing becomes a crime at RMB 5 million business amount or RMB 100,000 gains.",
+   "cite": "Guidelines Art. 188; Regulations Arts. 39-42, 45; SPC/SPP 2019",
+   "evidence": [
+    "E01.g",
+    "E06.a",
+    "E25.a"
+   ],
+   "caveat": "Criminal thresholds from a search excerpt (partly verified)."
+  },
+  {
+   "id": "R17",
+   "topic": "Services-trade payments abroad above USD 50,000",
+   "who": "Institutions and individuals paying foreign service providers",
+   "rule": "Tax record filing first; the bank verifies the filing form.",
+   "cite": "Guidelines Art. 49(4)",
+   "evidence": [
+    "E01.o"
+   ],
+   "caveat": "Not the rule for converting your own RMB income under Art. 59."
+  },
+  {
+   "id": "R18",
+   "topic": "Which version of the rules is in force?",
+   "who": "Everyone",
+   "rule": "The 2020 Notice says earlier inconsistent provisions yield and repeals listed circulars; SAFE's 2026-06-30 catalogue lists the Guidelines (amended by three later notices) and the 2007 Detailed Rules (Art. 39 deleted).",
+   "cite": "Notice 汇发〔2020〕14号; SAFE catalogue",
+   "evidence": [
+    "E01.a",
+    "E01.b",
+    "E03.a",
+    "E03.b"
+   ],
+   "caveat": "Consolidated post-2024 text not located (VB-05)."
+  }
+ ],
+ "usfacts": [
+  {
+   "id": "U01",
+   "item": "FBAR filing trigger",
+   "value": "Aggregate value of foreign financial accounts exceeded $10,000 at any time during the calendar year.",
+   "evidence": [
+    "E13.a"
+   ],
+   "note": ""
+  },
+  {
+   "id": "U02",
+   "item": "FBAR due date",
+   "value": "April 15 following the year; automatic extension to October 15; file electronically through FinCEN's BSA E-Filing System.",
+   "evidence": [
+    "E13.b"
+   ],
+   "note": ""
+  },
+  {
+   "id": "U03",
+   "item": "FBAR records",
+   "value": "Keep five years from the due date.",
+   "evidence": [
+    "E13.c"
+   ],
+   "note": ""
+  },
+  {
+   "id": "U04",
+   "item": "FBAR civil penalties (assessed on or after 2025-01-17)",
+   "value": "Non-willful: up to $16,536 (statutory $10,000; reasonable-cause exception). Willful: greater of $165,353 (statutory $100,000) or 50% of the account balance.",
+   "evidence": [
+    "E12.a",
+    "E17.b"
+   ],
+   "note": "eCFR up to date as of 2026-11-05."
+  },
+  {
+   "id": "U05",
+   "item": "FBAR criminal penalties",
+   "value": "Willful: fine up to $250,000 and/or up to 5 years; with another violation or a pattern over $100,000 in 12 months: up to $500,000 and/or 10 years.",
+   "evidence": [
+    "E16.a",
+    "E16.b"
+   ],
+   "note": ""
+  },
+  {
+   "id": "U06",
+   "item": "Form 8938 thresholds",
+   "value": "Living in the U.S. (single): over $50,000 at year-end or $75,000 at any time; joint: $100,000 / $150,000. Living abroad (single): over $200,000 / $300,000; joint: $400,000 / $600,000.",
+   "evidence": [
+    "E14.a"
+   ],
+   "note": ""
+  },
+  {
+   "id": "U07",
+   "item": "Form 8938 penalty",
+   "value": "Up to $10,000, plus $10,000 per 30 days after IRS notice; maximum $60,000.",
+   "evidence": [
+    "E14.b"
+   ],
+   "note": ""
+  },
+  {
+   "id": "U08",
+   "item": "Cash-transport report (FinCEN 105) civil penalty",
+   "value": "Up to the amount of the monetary instrument for which the report was required.",
+   "evidence": [
+    "E17.a"
+   ],
+   "note": "Criminal bulk-cash-smuggling provision not read."
+  },
+  {
+   "id": "U09",
+   "item": "Currency gain on converting a foreign-currency deposit",
+   "value": "Personal-transaction gain is excluded only if it does not exceed $200.",
+   "evidence": [
+    "E18.a",
+    "E18.b"
+   ],
+   "note": "Character of gains above $200 and treatment of losses not stated in the text read."
+  },
+  {
+   "id": "U10",
+   "item": "Foreign earned income exclusion",
+   "value": "Tax year 2025: $130,000. Tax year 2026: $132,900.",
+   "evidence": [
+    "E19.a"
+   ],
+   "note": "Applies to earned income abroad, not to conversion of savings."
+  },
+  {
+   "id": "U11",
+   "item": "U.S.-China income tax treaty",
+   "value": "Header of the IRS-hosted text: entered into force January 1, 1987; the saving clause (Protocol 1, para. 2) preserves U.S. taxation of its citizens.",
+   "evidence": [
+    "E21.a"
+   ],
+   "note": "Congress.gov lists 11/21/1986 as the entry-into-force date."
+  },
+  {
+   "id": "U12",
+   "item": "Totalization agreement with China",
+   "value": "None (China is not on SSA's list).",
+   "evidence": [
+    "E20.a"
+   ],
+   "note": ""
+  },
+  {
+   "id": "U13",
+   "item": "PRC individual income tax rates",
+   "value": "Comprehensive income 3%-45% progressive; business income 5%-35%; interest, dividends, rent, property transfer 20%.",
+   "evidence": [
+    "E22.a"
+   ],
+   "note": ""
+  },
+  {
+   "id": "U14",
+   "item": "PRC tax on savings-deposit interest",
+   "value": "Interest accrued on or after 9 October 2008 is temporarily exempt.",
+   "evidence": [
+    "E23.a"
+   ],
+   "note": ""
+  }
+ ]
+}

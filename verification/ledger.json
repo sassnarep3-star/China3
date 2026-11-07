@@ -7,7 +7,7 @@
    "1": "Law, regulation, regulator or tax authority (primary)",
    "2": "An institution's own page (bank etc.) - context only, never a sole source for a legal rule"
   },
-  "note": "quotes with verbatim=false are paraphrases of text that was read; they are not quotations."
+  "note": "Quotes with verbatim=false are paraphrases of text that was read; they are not quotations. English for Chinese originals is this session's working translation, not an official translation; the Chinese text at the source link controls."
  },
  "sources": [
   {
@@ -56,7 +56,7 @@
      "id": "E01.e",
      "loc": "Art. 59 (境外个人 / non-domestic individuals)",
      "verbatim": true,
-     "orig": "境外个人在境内取得的经常项目合法人民币收入，凭本人有效身份证件和有交易额的购汇资金来源材料（含税务凭证）在银行办理购汇。持有外国人永久居留身份证的境外个人适用购汇年度便利化额度。",
+     "orig": "境外个人在境内取得的经常项目合法人民币收入，凭本人有效身份证件和有交易额的购汇资金来源材料（含税务凭证）在银行办理购汇。\n持有外国人永久居留身份证的境外个人适用购汇年度便利化额度。",
      "en": "A non-domestic individual's lawful current-account RMB income earned in China may be converted at a bank on presentation of the individual's valid ID and source-of-funds materials showing the transaction amount (including tax certificates). A non-domestic individual holding a Foreigner's Permanent Residence ID Card is subject to the annual convenience amount for FX purchases."
     },
     {
@@ -75,54 +75,95 @@
     },
     {
      "id": "E01.h",
-     "loc": "Art. 54",
-     "verbatim": false,
-     "en": "Summary (paraphrase, not a quotation): the USD 50,000 equivalent annual convenience amount applies to individuals' FX sales (all individuals) and to FX purchases by domestic individuals (境内个人).",
-     "note": "Paraphrase from reading Arts. 54-57 in chunk 1; SAFE Ningxia's 2022 Q&A (E08) cites the same articles. Verbatim upgrade pending."
+     "loc": "Art. 54 (the USD 50,000 convenience amount)",
+     "verbatim": true,
+     "orig": "个人经常项目外汇业务应具有真实、合法的交易背景。个人结汇和境内个人购汇实行年度便利化额度管理，便利化额度分别为每人每年等值5万美元。",
+     "en": "Individual current-account FX business must have a genuine and lawful transaction background. Individuals' FX sales and domestic individuals' FX purchases are subject to an annual convenience amount, USD 50,000 equivalent per person per year for each."
     },
     {
      "id": "E01.i",
-     "loc": "Art. 60",
-     "verbatim": false,
-     "en": "Summary (paraphrase): unused RMB re-converted to FX needs the original exchange slip (valid 24 months); up to USD 500 per day (USD 1,000 at departure sites) on ID only.",
-     "note": "Verbatim upgrade pending."
+     "loc": "Art. 60 (re-converting unused RMB)",
+     "verbatim": true,
+     "orig": "境外个人原兑换未用完的人民币兑回外汇，凭本人有效身份证件和原兑换水单办理，原兑换水单的兑回有效期为自兑换日起24个月；对于当日累计兑换不超过等值500美元（含）以及离境前在境内关外场所当日累计不超过等值1000美元（含）的兑换，可凭本人有效身份证件办理。",
+     "en": "A non-domestic individual converting unused, previously exchanged RMB back into FX does so on valid ID and the original exchange slip, which is valid for conversion back for 24 months from the exchange date; conversions of up to USD 500 equivalent per day, and up to USD 1,000 equivalent per day at in-country venues beyond the customs line before departure, can be handled on valid ID alone."
     },
     {
      "id": "E01.j",
-     "loc": "Art. 62",
-     "verbatim": false,
-     "en": "Summary (paraphrase): splitting to evade the convenience amount or authenticity review is prohibited; individuals who do so go on a watch list ('关注名单'), whose period is the listing year plus the next two consecutive years.",
-     "note": "Verbatim upgrade pending."
+     "loc": "Art. 62 (anti-splitting and the watch list)",
+     "verbatim": true,
+     "orig": "个人不得以分拆等方式规避便利化额度管理及真实性管理。外汇局对规避管理的个人实行“关注名单”管理。……（三）“关注名单”内个人的关注期限为列入“关注名单”的当年及之后连续2年。在关注期限内，“关注名单”内个人办理个人结售汇业务，应凭本人有效身份证件、有交易额的相关材料在银行办理。银行应按照真实性审核原则，严格审核相关材料。",
+     "en": "Individuals must not evade convenience-amount management or authenticity review by splitting or similar means. SAFE manages individuals who evade the rules through a 'watch list'. ... (3) The watch period is the year of listing and the following two consecutive years; during it, the individual's FX purchases and sales at banks require valid ID and materials showing the transaction amount, which banks must review strictly under the authenticity principle.",
+     "note": "Elided items (1)-(2): risk-warning letters for lending one's own convenience amount; watch-list entry for borrowing others' amounts or other evasion."
     },
     {
      "id": "E01.k",
-     "loc": "Art. 65",
-     "verbatim": false,
-     "en": "Summary (paraphrase): a non-domestic individual's FX-account remittance abroad is handled on ID alone; cash remittance up to USD 10,000 per day.",
-     "note": "Verbatim upgrade pending."
+     "loc": "Art. 65 (non-domestic individuals' remittance abroad)",
+     "verbatim": true,
+     "orig": "境外个人经常项目外汇汇出境外，按下列规定在银行办理：（一）外汇账户内外汇汇出，凭本人有效身份证件办理；（二）持外币现钞汇出，当日累计等值1万美元以下（含）的，凭本人有效身份证件办理；超过上述金额的，凭本人有效身份证件、经海关签章的《海关申报单》或原存款银行外币现钞提取单据办理。",
+     "en": "A non-domestic individual's current-account FX remittance abroad is handled at the bank as follows: (1) from an FX account - on valid ID; (2) remitting foreign cash - up to USD 10,000 equivalent per day on valid ID; above that, valid ID plus a customs-stamped Declaration Form or the original foreign-cash withdrawal slip."
     },
     {
      "id": "E01.l",
-     "loc": "Art. 68",
-     "verbatim": false,
-     "en": "Summary (paraphrase): a bank may refuse a transaction but must state the reason and offer an appeal channel.",
-     "note": "Verbatim upgrade pending."
+     "loc": "Art. 68 (bank review, refusal and appeal)",
+     "verbatim": true,
+     "orig": "银行可根据个人风险状况，自主决定审核凭证的种类、形式以及审核要点，确保交易真实合规。银行有权对违反外汇管理规定、真实性存疑的交易予以拒绝。对拒绝办理的业务，银行应向个人准确说明拒绝原因及申诉渠道。",
+     "en": "Banks may, based on the individual's risk profile, decide the types and forms of documents and the review points. Banks have the right to refuse transactions that breach FX rules or whose authenticity is in doubt; for refused business the bank must tell the individual accurately the reason and the appeal channel."
     },
     {
      "id": "E01.m",
-     "loc": "Arts. 86-87",
-     "verbatim": false,
-     "en": "Summary (paraphrase): foreign-cash deposits and withdrawals up to USD 10,000 per day are handled on ID alone.",
-     "note": "Verbatim upgrade pending."
+     "loc": "Arts. 86-87 (foreign cash withdrawals and deposits)",
+     "verbatim": true,
+     "orig": "第八十六条　个人提取外币现钞当日累计等值1万美元以下（含）的，凭本人有效身份证件在银行办理；个人出境赴战乱、外汇管制严格、金融条件差或金融动乱的国家（地区），确有需要提取超过等值1万美元以上外币现钞的，凭本人有效身份证件、提钞用途等材料向银行所在地外汇局事前报备。……\n第八十七条　个人存入外币现钞当日累计等值1万美元以下（含）的，凭本人有效身份证件在银行办理；超过上述金额的，凭本人有效身份证件、经海关签章的《海关申报单》或原存款银行外币现钞提取单据在银行办理。",
+     "en": "Art. 86: withdrawing foreign cash up to USD 10,000 equivalent per day is handled at the bank on valid ID; for travel to war-torn or strict-FX-control or poor-financial-condition countries, withdrawing more than USD 10,000 requires a prior filing with the SAFE branch where the bank is located (valid ID plus materials on the purpose). Art. 87: depositing foreign cash up to USD 10,000 equivalent per day is handled on valid ID; above that, valid ID plus a customs-stamped Declaration Form or the original withdrawal slip from the bank of original deposit.",
+     "note": "Elided: validity of the SAFE filing form (30 days, single use)."
     },
     {
      "id": "E01.n",
-     "loc": "Art. 89",
-     "verbatim": false,
-     "en": "Summary (paraphrase): inbound foreign cash above USD 5,000 requires a written customs declaration; outbound USD 5,000-10,000 (where there is no entry record, or the amount exceeds it) requires a bank-issued Foreign Exchange Carry-out Permit (携带外汇出境许可证); above USD 10,000 only for travel to war-torn or strictly controlled countries, via a SAFE-branch permit.",
-     "note": "Verbatim upgrade pending."
+     "loc": "Art. 89 (carrying foreign cash across the border)",
+     "verbatim": true,
+     "orig": "个人携带外币现钞等入境，超过等值5000美元的应向海关书面申报。当天多次往返及短期内多次往返者第二次及以上入境，不论携带外币现钞的金额大小，均应向海关书面申报。\n个人携带外币现钞出境，没有或超出最近一次入境申报外币现钞数据记录的，金额在等值5000美元以上至1万美元（含）的，应向银行申领《携带外汇出境许可证》。个人赴战乱、外汇管制严格、金融条件差或金融动乱的国家（地区），确有需要携带超过等值1万美元外币现钞出境的，需向存款或购汇银行所在地外汇局申领《携带外汇出境许可证》。",
+     "en": "Carrying foreign cash into China above USD 5,000 equivalent must be declared to Customs in writing (second and later entries on the same day or within a short period must be declared whatever the amount). Carrying foreign cash out, where there is no record of, or the amount exceeds, the most recent entry declaration: USD 5,000 up to and including USD 10,000 requires a Foreign Exchange Carry-out Permit from a bank; for travel to war-torn, strict-FX-control or poor-financial-condition countries, carrying more than USD 10,000 requires a permit from the SAFE branch where the deposit or purchase bank is located.",
+     "note": "The article provides a permit route above USD 10,000 only for those listed destinations; it is silent on other destinations."
+    },
+    {
+     "id": "E01.o",
+     "loc": "Art. 49(4) (services-trade payments above USD 50,000)",
+     "verbatim": true,
+     "orig": "办理单笔等值5万美元以上的服务贸易对外支付，境内机构和个人应先按照服务贸易对外支付税务备案有关规定办理备案手续，银行应核验服务贸易等项目对外支付纸质或电子税务备案表。",
+     "en": "For a single services-trade payment abroad above USD 50,000 equivalent, domestic institutions and individuals must first complete tax record filing under the services-trade outbound-payment tax-filing rules, and the bank must verify the paper or electronic tax record filing form.",
+     "note": "Scope: services-trade payments by 境内机构和个人 (e.g. fees to a foreign provider); it is not the rule for converting one's own RMB income under Art. 59."
+    },
+    {
+     "id": "E01.p",
+     "loc": "Art. 61 (agents)",
+     "verbatim": true,
+     "orig": "个人可委托近亲属代为办理年度便利化额度内的结汇和购汇。……个人可委托他人（含近亲属）代为办理不占用年度便利化额度的结汇和购汇。办理时需提供委托人和受托人的有效身份证件、委托书和有交易额的相关材料等。",
+     "en": "Individuals may entrust close relatives to handle FX sales and purchases within the annual convenience amount. ... Individuals may entrust others (including close relatives) to handle FX sales and purchases that do not use the annual convenience amount, providing the principal's and the agent's valid IDs, a power of attorney and materials showing the transaction amount."
+    },
+    {
+     "id": "E01.r",
+     "loc": "Art. 67 (transfers between a domestic and a non-domestic individual)",
+     "verbatim": true,
+     "orig": "个人外汇账户内资金境内划转，仅限于本人账户之间、个人与近亲属账户之间。划转账户分别属于境内个人、境外个人的，按跨境交易进行管理，且应符合经常项目外汇汇出境外的规定。",
+     "en": "Domestic transfers of funds in individuals' FX accounts are limited to transfers between the individual's own accounts and between the individual and close relatives' accounts. Where the accounts belong respectively to a domestic and a non-domestic individual, the transfer is managed as a cross-border transaction and must comply with the rules for remitting current-account FX abroad."
+    },
+    {
+     "id": "E01.s",
+     "loc": "Art. 58 (the opposite direction: FX into RMB, for context)",
+     "verbatim": true,
+     "orig": "境外个人凭本人有效身份证件和有交易额的结汇资金用途材料，在银行办理不占用年度便利化额度的经常项目结汇。结汇单笔等值5万美元以上（不含）的，应将结汇所得人民币资金直接划转至交易对方的境内人民币账户。",
+     "en": "A non-domestic individual converts FX into RMB for current-account purposes on valid ID and materials showing the use of the RMB, without using the annual convenience amount; for a single conversion above USD 50,000 equivalent, the RMB must go directly to the counterparty's domestic RMB account.",
+     "note": "Context only - this is the inbound direction."
+    },
+    {
+     "id": "E01.t",
+     "loc": "Art. 72 (bank screening)",
+     "verbatim": true,
+     "orig": "银行应加强电子银行个人结售汇业务风险识别，落实电子银行业务本人办理原则。通过多重技术手段，事中事后筛查拦截异常外汇交易，防范借用他人便利化额度、出借本人便利化额度及其他规避便利化额度和真实性管理的违规行为。",
+     "en": "Banks must strengthen risk identification for e-banking FX purchases and sales and apply the principle that e-banking business is done by the person. Using multiple technical means, they must screen and intercept abnormal FX transactions during and after the event, to prevent borrowing or lending of convenience amounts and other violations that evade convenience-amount and authenticity management."
     }
-   ]
+   ],
+   "short": "SAFE Current-Account Guidelines 2020 (汇发〔2020〕14号) - gov.cn"
   },
   {
    "id": "E02",
@@ -140,11 +181,13 @@
    "quotes": [
     {
      "id": "E02.a",
-     "loc": "FAQ answer",
-     "verbatim": false,
-     "en": "SAFE Tianjin's 2026 FAQ for foreigners paid wages in RMB quotes Art. 59 of 汇发〔2020〕14号 (verbatim wording of the FAQ pending re-fetch)."
+     "loc": "FAQ (index no. 00013319-6-2026-00119)",
+     "verbatim": true,
+     "orig": "境外个人在境内工作期间取得的劳动报酬如何购汇汇出？答：根据《国家外汇管理局关于印发〈经常项目外汇业务指引（2020年版）〉的通知》（汇发〔2020〕14号）第五十九条规定，“境外个人在境内取得的经常项目合法人民币收入，凭本人有效身份证件和有交易额的购汇资金来源材料（含税务凭证）在银行办理购汇”。",
+     "en": "How may a non-domestic individual convert and remit remuneration earned while working in China? Answer: under Art. 59 of the Guidelines (汇发〔2020〕14号): 'A non-domestic individual's lawful current-account RMB income earned in China may be converted at a bank on valid ID and source-of-funds materials showing the transaction amount (including tax certificates).'"
     }
-   ]
+   ],
+   "short": "SAFE Tianjin FAQ on foreigners' wages, 2026"
   },
   {
    "id": "E03",
@@ -209,7 +252,8 @@
      "orig": "97 个人财产对外转移售付汇管理暂行办法 中国人民银行公告2004年第16号 / 157 国家外汇管理局综合司关于印发《外汇管理行政罚款裁量办法》的通知 汇综发〔2021〕68号",
      "en": "#97 Provisional Measures on FX sale/payment for transfers of personal property abroad (PBOC Announcement 2004 No. 16); #157 Measures on discretionary standards for FX administrative fines (Huizongfa [2021] No. 68; fine-range annex not retrieved from an official page)."
     }
-   ]
+   ],
+   "short": "SAFE catalogue of effective FX rules, 30 Jun 2026"
   },
   {
    "id": "E04",
@@ -239,7 +283,8 @@
      "orig": "六、银行应建立个人经常项目特殊外汇业务处置制度，并事前向所在地外汇局书面报告。对于个人具有真实、合法交易背景的经常项目外汇业务，银行应坚持“实质重于形式”的审核原则，按照个人经常项目特殊外汇业务处置制度予以办理，并在购/结汇备注栏标注“特殊外汇业务处置”字样。",
      "en": "6. Banks must set up a special-case procedure for individual current-account FX business and report it in writing to the local SAFE branch beforehand. For individual current-account FX business with a genuine, lawful transaction background, banks must apply a 'substance over form' review and handle it under that procedure, marking the remark 'special FX business handling'."
     }
-   ]
+   ],
+   "short": "SAFE Notice 汇发〔2021〕13号 - gov.cn"
   },
   {
    "id": "E05",
@@ -268,7 +313,8 @@
      "verbatim": false,
      "en": "Summary (paraphrase): Art. 9 - annual limit covers all individuals' FX sales plus domestic individuals' purchases; Art. 13 - a non-domestic individual may convert legitimate RMB current-account income earned in China into FX and remit it with ID plus documents; Art. 14 - unused remitted-in FX returns via the original route; Art. 22 - housing-sale proceeds convertible and remittable; Art. 26 - transfers of property abroad under separate rules; Art. 28 - the bank assigns the owner category by ID."
     }
-   ]
+   ],
+   "short": "PBOC Decree [2006] No. 3 (English) - pbc.gov.cn"
   },
   {
    "id": "E06",
@@ -291,7 +337,8 @@
      "en": "Summary (paraphrase): fines up to 30% of the amount (30%-100% if serious) for illegal evasion/arbitrage conduct; carrying FX across the border in violation - warning and fine up to 20% (Customs penalties prevail); individuals - fines up to RMB 50,000 for certain violations; Art. 52(2) - 'domestic individual' includes Chinese citizens and foreigners continuously resident for at least one year.",
      "note": "Verbatim upgrade pending."
     }
-   ]
+   ],
+   "short": "PRC FX Regulations, State Council Decree 532 - safe.gov.cn"
   },
   {
    "id": "E07",
@@ -313,7 +360,8 @@
      "verbatim": false,
      "en": "Summary (paraphrase): overseas card cash withdrawals are capped at RMB 100,000 per person per civil year and RMB 10,000 per card per day; a breach bars the card holder in the current and next year; card spending abroad does not use the USD 50,000 quota; effective 2018-01-01."
     }
-   ]
+   ],
+   "short": "SAFE Q&A on card cash withdrawals, 2017"
   },
   {
    "id": "E08",
@@ -336,7 +384,8 @@
      "orig": "年度便利化额度不是个人每年购汇或者结汇的限额，只是超过等值5万美元的购汇或结汇不能仅凭本人有效身份证件办理",
      "en": "The annual convenience amount is not a limit on an individual's yearly FX purchases or sales; it only means purchases or sales above USD 50,000 equivalent cannot be handled on the person's valid ID alone."
     }
-   ]
+   ],
+   "short": "SAFE Ningxia Q&A on the convenience amount, 2022"
   },
   {
    "id": "E09",
@@ -358,7 +407,8 @@
      "verbatim": false,
      "en": "Summary (paraphrase): the USD 50,000 annual total covers individual FX sales and domestic individuals' purchases; cash rules as described in 2007."
     }
-   ]
+   ],
+   "short": "SAFE press conference, Jan 2007"
   },
   {
    "id": "E10",
@@ -386,7 +436,8 @@
      "verbatim": true,
      "en": "One individual/organization outside the territory of China remits foreign exchange to 5 or more different individuals on the same day/every other day/or on successive days, and these payees separately carry out the exchange settlement."
     }
-   ]
+   ],
+   "short": "SAFE circular on FX settlement and sale, 2009 (repealed)"
   },
   {
    "id": "E11",
@@ -409,7 +460,8 @@
      "orig": "境内个人外汇汇出境外用于经常项目支出，是否有额度限制？ 答：外汇账户内外汇汇出境外当日累计等值5万美元以下（含）的，凭本人有效身份证件在银行办理；超过上述金额的，凭本人有效身份证件、有交易额的相关材料办理。",
      "en": "Is there a limit on domestic individuals remitting FX abroad for current-account spending? Answer: remittances from an FX account up to USD 50,000 equivalent per day are handled on the person's valid ID; above that, valid ID plus materials showing the transaction amount are required."
     }
-   ]
+   ],
+   "short": "SAFE Tianjin FAQ on FX-account remittance, 2024"
   },
   {
    "id": "E12",
@@ -432,7 +484,8 @@
      "en": "31 U.S.C. 5321(a)(5)(B)(i), foreign financial agency transaction, non-willful violation: statutory $10,000, adjusted $16,536. 31 U.S.C. 5321(a)(5)(C)(i)(I), willful: statutory $100,000, adjusted $165,353 (penalties assessed on or after January 17, 2025).",
      "note": "Figures transcribed from the table."
     }
-   ]
+   ],
+   "short": "31 CFR 1010.821 penalty table - eCFR"
   },
   {
    "id": "E13",
@@ -473,7 +526,8 @@
      "en": "Civil FBAR penalty maximums in Title 31 of the United States Code are adjusted annually for inflation. ... Publication 5569 ... contains information about criminal penalties.",
      "note": "Two sentences joined with an ellipsis."
     }
-   ]
+   ],
+   "short": "IRS - FBAR page"
   },
   {
    "id": "E14",
@@ -502,7 +556,8 @@
      "verbatim": true,
      "en": "Up to $10,000 for failure to disclose and an additional $10,000 for each 30 days of non-filing after IRS notice of a failure to disclose, for a potential maximum penalty of $60,000; criminal penalties may also apply"
     }
-   ]
+   ],
+   "short": "IRS - Form 8938 vs FBAR comparison"
   },
   {
    "id": "E15",
@@ -530,7 +585,8 @@
      "verbatim": true,
      "en": "Failure to file an FBAR when required to do so may result in civil penalties, criminal penalties, or both. Assertion of penalties depends on facts and circumstances."
     }
-   ]
+   ],
+   "short": "IRS FBAR practice unit INT-C-256"
   },
   {
    "id": "E16",
@@ -561,7 +617,8 @@
      "note": "Elided middle."
     }
    ],
-   "resolved_url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title31/pdf/USCODE-2024-title31-subtitleIV-chap53-subchapII-sec5322.pdf"
+   "resolved_url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title31/pdf/USCODE-2024-title31-subtitleIV-chap53-subchapII-sec5322.pdf",
+   "short": "31 U.S.C. 5322 - govinfo"
   },
   {
    "id": "E17",
@@ -592,7 +649,8 @@
      "note": "Elided; (D)(ii): for a failure to report an account, the balance in the account at the time of the violation."
     }
    ],
-   "resolved_url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title31/pdf/USCODE-2024-title31-subtitleIV-chap53-subchapII-sec5321.pdf"
+   "resolved_url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title31/pdf/USCODE-2024-title31-subtitleIV-chap53-subchapII-sec5321.pdf",
+   "short": "31 U.S.C. 5321 - govinfo"
   },
   {
    "id": "E18",
@@ -622,7 +680,8 @@
      "en": "The preceding provisions of this section shall not apply to any section 988 transaction entered into by an individual which is a personal transaction. ... If (A) nonfunctional currency is disposed of by an individual in any transaction, and (B) such transaction is a personal transaction, no gain shall be recognized for purposes of this subtitle by reason of changes in exchange rates after such currency was acquired by such individual and before such disposition. The preceding sentence shall not apply if the gain which would otherwise be recognized on the transaction exceeds $200."
     }
    ],
-   "resolved_url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title26/pdf/USCODE-2024-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.pdf"
+   "resolved_url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title26/pdf/USCODE-2024-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.pdf",
+   "short": "26 U.S.C. 988 - govinfo"
   },
   {
    "id": "E19",
@@ -644,7 +703,8 @@
      "verbatim": true,
      "en": "Foreign Earned Income Exclusion. For tax year 2026, the foreign earned income exclusion is $132,900 up from $130,000 for tax year 2025."
     }
-   ]
+   ],
+   "short": "IRS release IR-2025-103 (2026 inflation adjustments)"
   },
   {
    "id": "E20",
@@ -667,7 +727,8 @@
      "en": "Following is a list of the agreements the United States has concluded and the date of the entry into force of each.",
      "note": "The listed countries do not include China."
     }
-   ]
+   ],
+   "short": "SSA - international agreements list"
   },
   {
    "id": "E21",
@@ -689,7 +750,8 @@
      "verbatim": true,
      "en": "Instruments of Ratification Exchanged on October 22,1986; Entered into Force on January 1, 1987. ... The “Saving Clause” ... Paragraph 2 of the Protocol 1 of 30 April, 1984"
     }
-   ]
+   ],
+   "short": "US-PRC income tax convention - IRS"
   },
   {
    "id": "E22",
@@ -712,7 +774,8 @@
      "orig": "个人所得税的税率：（一）综合所得，适用百分之三至百分之四十五的超额累进税率（税率表附后）；（二）经营所得，适用百分之五至百分之三十五的超额累进税率（税率表附后）；（三）利息、股息、红利所得，财产租赁所得，财产转让所得和偶然所得，适用比例税率，税率为百分之二十。",
      "en": "IIT rates: (1) comprehensive income - progressive 3% to 45%; (2) business income - progressive 5% to 35%; (3) interest, dividends and bonuses, property leasing, property transfer and incidental income - proportional 20%."
     }
-   ]
+   ],
+   "short": "PRC IIT Law - STA database"
   },
   {
    "id": "E23",
@@ -735,7 +798,8 @@
      "orig": "根据《财政部　国家税务总局关于储蓄存款利息所得有关个人所得税政策的通知》（财税〔2008〕132号），储蓄存款在2008年10月9日后（含10月9日）孳生的利息所得，暂免征收个人所得税。",
      "en": "Under MOF/STA Notice 财税〔2008〕132号, interest on savings deposits accrued on or after 9 October 2008 is temporarily exempt from individual income tax."
     }
-   ]
+   ],
+   "short": "STA notice 国税发〔1999〕180号 (savings-interest annotation)"
   },
   {
    "id": "E24",
@@ -749,15 +813,33 @@
    "retrieved": "2026-11-07",
    "method": "full-page fetch",
    "status": "tier-2",
-   "status_note": "A bank's customer alert, not law. It is the only source on the site for the 'USD 200,000' criminal threshold; the page concerns illegal overseas futures/margin trading and does not mention cryptocurrency.",
+   "status_note": "A bank's customer alert, not law. Undated; it refers to the China Banking Regulatory Commission. It is the only source on the site for the 'USD 200,000' criminal threshold. It frames USD 50,000 as a hard annual cap, which SAFE's 2022 Q&A (E08) contradicts for purchases/sales generally. It concerns illegal overseas futures/margin trading and does not mention cryptocurrency.",
    "quotes": [
     {
      "id": "E24.a",
-     "loc": "Page content",
-     "verbatim": false,
-     "en": "Summary (paraphrase): carries the USD 200,000 equivalent wording for illegal FX trading and a USD 50,000 annual aggregate wording; verbatim wording pending re-fetch."
+     "loc": "A.5",
+     "verbatim": true,
+     "orig": "The annual aggregate of foreign exchange purchase and sale transactions by individuals shall not exceed an amount equivalent to USD 50,000 respectively; ... Illegal foreign exchange trading exceeding USD 200,000 or its equivalent shall constitute a crime and be investigated for criminal responsibility in accordance with the law.",
+     "en": "(English original.)",
+     "note": "Elided: enforcement sentence."
+    },
+    {
+     "id": "E24.b",
+     "loc": "B.4",
+     "verbatim": true,
+     "orig": "Domestic institutions and individuals shall not engage in illegal overseas futures trading or foreign exchange margin trading.",
+     "en": "(English original.) The page contains no reference to cryptocurrency or virtual currency."
+    },
+    {
+     "id": "E24.c",
+     "loc": "A.3-A.4",
+     "verbatim": true,
+     "orig": "The daily aggregate of foreign exchange cash deposits by individuals shall not exceed an amount equivalent to USD 10,000 ... The daily aggregate of foreign exchange cash withdrawals by individuals shall not exceed an amount equivalent to USD 10,000",
+     "en": "(English original.)",
+     "note": "Elided: 'for any foreign exchange trading exceeding the limit, please refer to bank clerks.'"
     }
-   ]
+   ],
+   "short": "Standard Chartered China - FX risk alerts (bank, Tier 2)"
   },
   {
    "id": "E25",
@@ -778,6 +860,46 @@
      "loc": "Arts. 3-4 (as summarised in the excerpt)",
      "verbatim": false,
      "en": "Summary (paraphrase): illegal FX dealing is 'serious' at an illegal business amount of RMB 5 million or more, or illegal gains of RMB 100,000 or more; 'especially serious' at RMB 25 million / RMB 500,000."
+    }
+   ],
+   "short": "SPC/SPP Interpretation 法释〔2019〕1号 (hunan.gov.cn)"
+  },
+  {
+   "id": "E26",
+   "short": "PBOC et al. Notice 银发〔2026〕42号 on virtual currency - pbc.gov.cn",
+   "title": "中国人民银行 等八部门关于进一步防范和处置虚拟货币等相关风险的通知（银发〔2026〕42号）",
+   "publisher": "People's Bank of China, with seven other agencies including SAFE",
+   "url": "https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html",
+   "doc_date": "2026-02-06",
+   "tier": 1,
+   "kind": "regulatory notice",
+   "lang": "zh",
+   "retrieved": "2026-11-07",
+   "method": "full-page fetch (single chunk)",
+   "status": "current",
+   "status_note": "Takes effect on issuance and repeals 银发〔2021〕237号. Cited by session 7e08715a as its S08; read independently here.",
+   "quotes": [
+    {
+     "id": "E26.a",
+     "loc": "Part 1(1)",
+     "verbatim": true,
+     "orig": "虚拟货币相关业务活动属于非法金融活动。在境内开展法定货币与虚拟货币兑换业务、虚拟货币之间的兑换业务、作为中央对手方买卖虚拟货币、为虚拟货币交易提供信息中介和定价服务、代币发行融资以及虚拟货币相关金融产品交易等虚拟货币相关业务活动，涉嫌非法发售代币票券、擅自公开发行证券、非法经营证券期货业务、非法集资等非法金融活动，一律严格禁止，坚决依法取缔。",
+     "en": "Virtual-currency business activity is illegal financial activity. Within China, exchanging legal tender for virtual currency, exchanging virtual currencies, acting as central counterparty, providing information-intermediary and pricing services, token-issuance financing and trading virtual-currency financial products are suspected of being illegal financial activity and are strictly prohibited and to be shut down according to law.",
+     "note": "Elided: the list of suspected offences is kept in full in the original."
+    },
+    {
+     "id": "E26.b",
+     "loc": "Part 3(6)",
+     "verbatim": true,
+     "orig": "金融机构（含非银行支付机构）不得为虚拟货币相关业务活动提供账户开立、资金划转和清算结算等服务",
+     "en": "Financial institutions (including non-bank payment institutions) must not provide account opening, fund transfer, clearing or settlement services for virtual-currency business activity."
+    },
+    {
+     "id": "E26.c",
+     "loc": "Final paragraph",
+     "verbatim": true,
+     "orig": "本通知自发布之日起施行。中国人民银行等十部门《关于进一步防范和处置虚拟货币交易炒作风险的通知》（银发〔2021〕237号）同时废止。",
+     "en": "This Notice takes effect on issuance. The 2021 ten-agency Notice on further preventing and handling the risk of virtual-currency trading speculation (银发〔2021〕237号) is repealed at the same time."
     }
    ]
   }
