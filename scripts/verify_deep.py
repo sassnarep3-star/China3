@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
-"""Line-by-line verification for the China money dashboard.
+"""Line-by-line verification for the deep-research dashboard.
 
 Checks performed:
   1. Every data row has a source_url on an official domain AND registered in sources.csv.
   2. Every source id used by a row resolves to the exact registered URL.
   3. UNVERIFIED rows have a deliberately blank value; VERIFIED rows have a value.
-  4. Every generated HTML <tbody><tr> contains at least one official https:// link.
+  4. Every generated HTML <tbody><tr> contains at least one official http(s) link.
   5. Generated HTML row counts match the CSV row counts.
-  6. Every local href in EVERY .html file resolves to an existing file (broken-link check).
-  7. Every flagged item id appears on the Flagged for Review page.
-  8. Every source id in sources.csv appears on the Sources page (or is in the register table).
-Exits non-zero on any failure.
+  6. EVERY data row in EVERY table on EVERY deep-*.html page has an official link.
+  7. Every local href/src in every root and docs/ HTML page resolves (broken-link check).
+  8. Every flagged item id appears on the Flagged for Review page.
+  9. Every source id in sources.csv appears on the deep sources page.
+Exits non-zero on any failure. Other sessions' data/CI are checked by their own scripts.
 """
 from __future__ import annotations
 
 import csv
-import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -54,23 +54,20 @@ notes.append(f"source register: {len(sources)} official sources")
 
 # --- 1/2/3: CSV row audit ---------------------------------------------------
 table_specs = {
-    "china_rules.csv": ("value", "china-table"),
-    "us_rules.csv": ("value", "us-table"),
-    "channels.csv": (None, "channels-table"),
-    "penalty.csv": ("verified_value", "penalty-table"),
-    "findings.csv": (None, "findings-table"),
-    "flags.csv": (None, None),
+    "china_rules.csv": ("value", "china-table", "deep-china-rules.html"),
+    "us_rules.csv": ("value", "us-table", "deep-us-tax.html"),
+    "channels.csv": (None, "channels-table", "deep-channels.html"),
+    "penalty.csv": ("verified_value", "penalty-table", "deep-penalty.html"),
+    "findings.csv": (None, "findings-table", "deep-findings.html"),
+    "flags.csv": (None, "flags-table", "deep-review.html"),
 }
 csv_counts = {}
-for fname, (value_col, tid) in table_specs.items():
+for fname, (value_col, tid, _) in table_specs.items():
     rows = read(fname)
     csv_counts[tid] = len(rows)
     for r in rows:
-        rid = r["id"]
-        sid = r["source_id"]
-        url = r["source_url"]
-        status = r["status"]
-        if not url.startswith("https://") and not url.startswith("http://"):
+        rid, sid, url, status = r["id"], r["source_id"], r["source_url"], r["status"]
+        if not url.startswith(("https://", "http://")):
             errors.append(f"{fname}:{rid} missing source_url")
         if not is_official(url):
             errors.append(f"{fname}:{rid} source_url not on official domain: {url}")
@@ -90,7 +87,6 @@ for fname, (value_col, tid) in table_specs.items():
                 errors.append(f"{fname}:{rid} VERIFIED but value column is blank")
     notes.append(f"{fname}: {len(rows)} rows audited")
 
-# --- source register URL check ---------------------------------------------
 for sid, r in sources.items():
     if not is_official(r["url"]):
         errors.append(f"sources.csv:{sid} URL not official: {r['url']}")
@@ -102,7 +98,6 @@ class TableParser(HTMLParser):
         self.in_tbody = False
         self.in_tr = False
         self.current_links: list[str] = []
-        self.rows: list[list[str]] = []
         self.tables: dict[str, list[list[str]]] = {}
         self.current_table = None
 
@@ -131,29 +126,23 @@ class TableParser(HTMLParser):
             self.in_tbody = False
 
 
-for fname, (_, tid) in table_specs.items():
-    if not tid:
-        continue
-    page = ROOT / {"china-table": "china-rules.html", "us-table": "us-tax.html",
-                   "channels-table": "channels.html", "penalty-table": "penalty.html",
-                   "findings-table": "findings.html"}[tid]
+for fname, (_, tid, page_name) in table_specs.items():
+    page = ROOT / page_name
     p = TableParser()
     p.feed(page.read_text(encoding="utf-8"))
     rows = p.tables.get(tid, [])
     if len(rows) != csv_counts[tid]:
         errors.append(f"{page.name}: {len(rows)} HTML rows != {csv_counts[tid]} CSV rows")
     for i, links in enumerate(rows, 1):
-        official = [h for h in links if h.startswith(("https://", "http://")) and is_official(h)]
-        if not official:
+        if not any(h.startswith(("https://", "http://")) and is_official(h) for h in links):
             errors.append(f"{page.name}: table {tid} row {i} has no official source link")
     notes.append(f"{page.name}: {len(rows)} table rows, each with an official link")
 
-# --- 5b: EVERY data row in EVERY table on EVERY page has an official link ----
+# --- 6: EVERY data row in EVERY table on EVERY deep page -------------------
 class AllTableParser(HTMLParser):
     def __init__(self):
         super().__init__()
         self.in_thead = False
-        self.in_tbody = False
         self.in_tr = False
         self.links: list[str] = []
         self.rows: list[list[str]] = []
@@ -162,8 +151,6 @@ class AllTableParser(HTMLParser):
         a = dict(attrs)
         if tag == "thead":
             self.in_thead = True
-        if tag == "tbody":
-            self.in_tbody = True
         if tag == "tr" and not self.in_thead:
             self.in_tr = True
             self.links = []
@@ -178,21 +165,20 @@ class AllTableParser(HTMLParser):
             self.rows.append(self.links)
         if tag == "thead":
             self.in_thead = False
-        if tag == "tbody":
-            self.in_tbody = False
 
 
-all_table_rows = 0
-for html_page in sorted(ROOT.glob("*.html")):
+deep_pages = sorted(ROOT.glob("deep-*.html"))
+all_rows = 0
+for page in deep_pages:
     atp = AllTableParser()
-    atp.feed(html_page.read_text(encoding="utf-8"))
+    atp.feed(page.read_text(encoding="utf-8"))
     for i, links in enumerate(atp.rows, 1):
-        all_table_rows += 1
+        all_rows += 1
         if not any(is_official(u) for u in links):
-            errors.append(f"{html_page.name}: table row {i} has no official source link")
-notes.append(f"all-page table audit: {all_table_rows} data rows across all pages checked")
+            errors.append(f"{page.name}: table row {i} has no official source link")
+notes.append(f"all-page deep table audit: {len(deep_pages)} pages, {all_rows} data rows checked")
 
-# --- 6: broken internal link check across ALL html pages --------------------
+# --- 7: broken internal link check across root AND docs/ html --------------
 class LinkParser(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -201,37 +187,36 @@ class LinkParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         for key in ("href", "src"):
-            if tag in ("a", "link", "script", "img") and a.get(key):
-                h = a[key]
-                if not h.startswith(("http://", "https://", "mailto:", "tel:", "#", "data:")):
-                    self.hrefs.append(h.split("#", 1)[0])
+            h = a.get(key, "")
+            if h and not h.startswith(("http://", "https://", "mailto:", "tel:", "#", "data:")):
+                self.hrefs.append(h.split("#", 1)[0])
 
 
-html_pages = sorted(ROOT.glob("*.html"))
-for page in html_pages:
+pages = sorted(ROOT.glob("*.html")) + sorted((ROOT / "docs").glob("*.html"))
+for page in pages:
     lp = LinkParser()
     lp.feed(page.read_text(encoding="utf-8"))
     for href in lp.hrefs:
-        if href and not (ROOT / href).exists():
-            errors.append(f"{page.name}: broken local link -> {href}")
-notes.append(f"broken-link check: {len(html_pages)} html pages scanned")
+        if href and not (page.parent / href).exists():
+            errors.append(f"{page.relative_to(ROOT)}: broken local link -> {href}")
+notes.append(f"broken-link check: {len(pages)} root + docs HTML pages scanned")
 
-# --- 7: flagged items published --------------------------------------------
-review = (ROOT / "review.html").read_text(encoding="utf-8")
+# --- 8: flagged items published --------------------------------------------
+review = (ROOT / "deep-review.html").read_text(encoding="utf-8")
 for r in read("flags.csv"):
     if r["id"] not in review:
-        errors.append(f"review.html missing flagged item {r['id']}")
+        errors.append(f"deep-review.html missing flagged item {r['id']}")
 notes.append("Flagged for Review page: all flagged item ids present")
 
-# --- 8: source ids published -----------------------------------------------
-sources_page = (ROOT / "sources.html").read_text(encoding="utf-8")
+# --- 9: source ids published -----------------------------------------------
+sources_page = (ROOT / "deep-sources.html").read_text(encoding="utf-8")
 missing_src = [sid for sid in sources if sid not in sources_page]
 if missing_src:
-    errors.append(f"sources.html missing source ids: {', '.join(missing_src)}")
+    errors.append(f"deep-sources.html missing source ids: {', '.join(missing_src)}")
 notes.append(f"Sources page: {len(sources) - len(missing_src)}/{len(sources)} source ids present")
 
 # --- report -----------------------------------------------------------------
-print("VERIFICATION REPORT")
+print("DEEP-RESEARCH VERIFICATION REPORT")
 for n in notes:
     print("  ok  " + n)
 if errors:

@@ -2,8 +2,8 @@
 
 Session `session-c703e38c` · reviewed 2026-11-07 (UTC)
 Scope: `research/analysis.md`. Structured data: `data/findings.csv` (22 sourced findings).
-Rendered at `findings.html`. Executive summary: `EXECUTIVE_SUMMARY.md` and
-`executive-summary.html`.
+Rendered at `deep-findings.html`. Executive summary: `EXECUTIVE_SUMMARY.md` and
+`deep-executive-summary.html`.
 
 ## Thinking about the problem
 
@@ -109,6 +109,6 @@ such tax was found.
 
 ## Irregularities
 
-All 23 flagged items (IR-001 … IR-023) are published with source links on `review.html`;
+All 23 flagged items (IR-001 … IR-023) are published with source links on `deep-review.html`;
 the ones raised by this analysis are IR-001, IR-002, IR-003, IR-011, IR-012, IR-013,
 IR-014, IR-015, IR-016, IR-018, IR-019, IR-022, IR-023. They do not block publication.

@@ -7,7 +7,7 @@ This script is the ONLY place new table content is defined. It writes:
 
 Rule enforced here: every table row carries at least one official source URL;
 any row whose value could not be confirmed from an official source has an EMPTY
-value and is marked UNVERIFIED (and is surfaced on review.html).
+value and is marked UNVERIFIED (and is surfaced on deep-review.html).
 """
 from __future__ import annotations
 
@@ -393,7 +393,7 @@ write_csv("findings.csv", ["id", "finding", "analysis", "implication", "source_i
 write_csv("flags.csv", ["id", "item", "why_flagged", "needed", "source_id", "source_url", "extra_source_ids", "status"],
           [[r[0], r[1], r[2], r[3], r[4], url_for(r[4]), r[5], r[6]] for r in FLAGS])
 
-(DATA / "sources.json").write_text(json.dumps(
+(DATA / "deep_sources.json").write_text(json.dumps(
     {k: {"authority": v[0], "title": v[1], "url": v[2], "verification": v[3]} for k, v in sorted(SOURCES.items())},
     ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -401,15 +401,16 @@ write_csv("flags.csv", ["id", "item", "why_flagged", "needed", "source_id", "sou
 # HTML GENERATION
 # ---------------------------------------------------------------------------
 NAV = [
-    ("index.html", "Executive brief"),
-    ("executive-summary.html", "Executive summary"),
-    ("china-rules.html", "China rules"),
-    ("us-tax.html", "US tax & reporting"),
-    ("channels.html", "All channels"),
-    ("penalty.html", "Penalty breakdown"),
-    ("findings.html", "Analysis"),
-    ("review.html", "Flagged for review"),
-    ("sources.html", "Sources"),
+    ("index.html", "Site home"),
+    ("deep-executive-summary.html", "Executive summary"),
+    ("deep-china-rules.html", "China rules"),
+    ("deep-us-tax.html", "US tax & reporting"),
+    ("deep-channels.html", "All channels"),
+    ("deep-penalty.html", "Penalty breakdown"),
+    ("deep-findings.html", "Analysis"),
+    ("deep-review.html", "Flagged for review"),
+    ("deep-sources.html", "Sources"),
+    ("docs/index.html", "Docs dashboard"),
 ]
 
 
@@ -422,12 +423,12 @@ def nav_html(active):
 
 def page(path, title, eyebrow, h1, intro, stats, body, active, note=None):
     stat_html = "".join(f'<div class="stat"><b>{html.escape(a)}</b><span>{html.escape(b)}</span></div>' for a, b in stats)
-    note_html = f'<p class="page-note">{note}</p>' if note else '<p class="page-note">Every table row links to an official source. Blank values are UNVERIFIED and are listed on the <a href="review.html">Flagged for review</a> page. Informational research only — not legal, tax or banking advice.</p>'
+    note_html = f'<p class="page-note">{note}</p>' if note else '<p class="page-note">Every table row links to an official source. Blank values are UNVERIFIED and are listed on the <a href="deep-review.html">Flagged for review</a> page. Informational research only — not legal, tax or banking advice.</p>'
     doc = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{html.escape(intro[:150], quote=True)}">
 <title>{html.escape(title)} | China Money Research</title>
-<link rel="stylesheet" href="assets/site.css"></head><body>
+<link rel="stylesheet" href="assets/deep-research.css"></head><body>
 {nav_html(active)}
 <main class="shell">
 <section class="hero"><div class="eyebrow">{html.escape(eyebrow)}</div><h1>{html.escape(h1)}</h1><p>{html.escape(intro)}</p></section>
@@ -435,8 +436,8 @@ def page(path, title, eyebrow, h1, intro, stats, body, active, note=None):
 {body}
 {note_html}
 </main>
-<footer class="foot"><div class="shell foot-row"><div><b>China Money Research</b><p>Official-source research · two-session integration · no commercial providers.</p></div><p>Reviewed 7 November 2026 · <a href="sources.html">Source register</a> · <a href="review.html">Flagged for review</a></p></div></footer>
-<script src="assets/app.js"></script></body></html>
+<footer class="foot"><div class="shell foot-row"><div><b>China Money Research</b><p>Official-source research · two-session integration · no commercial providers.</p></div><p>Reviewed 7 November 2026 · <a href="deep-sources.html">Source register</a> · <a href="deep-review.html">Flagged for review</a></p></div></footer>
+<script src="assets/deep-app.js"></script></body></html>
 '''
     (ROOT / path).write_text(doc, encoding="utf-8")
 
@@ -453,7 +454,12 @@ def table(caption, columns, rows, tid):
                 tds.append('<td class="blank">— <span class="tag warn">UNVERIFIED / blank</span></td>')
             else:
                 tds.append(f"<td>{html.escape(str(c))}</td>")
-        badge = '<span class="tag ok">Verified</span>' if status == "verified" else '<span class="tag warn">Unverified</span>'
+        if status == "verified":
+            badge = '<span class="tag ok">Verified</span>'
+        elif status == "needs review":
+            badge = '<span class="tag warn">Needs review</span>'
+        else:
+            badge = '<span class="tag warn">Unverified</span>'
         tds.append(f'<td class="src">{source_col(sid, extra)}</td>')
         tds.append(f'<td class="status">{badge}</td>')
         trs.append("<tr>" + "".join(tds) + "</tr>")
@@ -467,86 +473,126 @@ def stat_badge(n, label):
     return (str(n), label)
 
 
-# ---- executive-summary.html -------------------------------------------------
+# ---- deep-executive-summary.html -------------------------------------------------
 exec_body = '''
 <section class="section"><div class="section-head"><div><h2 class="section-title">Executive summary</h2><p>The short answer, then the evidence.</p></div></div>
 <div class="hero-band"><strong>Bottom line</strong><p>No official source reviewed establishes a Chinese "conversion tax" on moving your own already-owned CNY principal into USD. The costs that actually bite are (1) Chinese <b>source-of-funds income tax and the tax-clearance documents</b> a bank requires before it will sell you FX, (2) <b>bank spread, wire and correspondent fees</b>, and (3) <b>U.S. information-reporting penalties</b> — the largest of which is a willful FBAR penalty of up to 50% of the account balance. The cheapest-penalty strategy is therefore not a clever conversion trick: it is picking the lawful documentary channel that matches how the money was earned, obtaining a written all-in bank quote, and filing FBAR / Form 8938 / Form 3520 correctly. Informal brokers, quota splitting and crypto/USDT convert a paperwork problem into 30%–100% administrative fines plus criminal exposure.</p></div>
 </section>
 <section class="section"><h2 class="section-title">The single most important structural finding</h2>
-<div class="card"><p>Under the <a href="https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm" target="_blank" rel="noopener">PBOC Individual Foreign Exchange Measures, Art. 37 (S05)</a>, a U.S. citizen holding a passport is an <b>境外个人 (foreign individual)</b>. Under <a href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" target="_blank" rel="noopener">SAFE Current Account Guidelines Art. 59 (S03)</a>, a foreign individual purchases FX using an ID plus evidence of the <i>source</i> of the RMB (including a tax certificate) — and SAFE's own <a href="https://www.safe.gov.cn/chongqing/file/file/20190311/87806e211bb74eb4a44e71395c31cda9.pdf" target="_blank" rel="noopener">Q&amp;A handbook (S43)</a> states that foreign-individual FX purchase has <b>no annual quota limit at all</b>. If the CNY is legitimately earned, tax-paid income, the USD 50,000 "annual quota" that dominates online advice may simply not be the binding constraint. This must be confirmed with the account-opening bank because the 2008 State Council regulation defines 境内个人 differently (see <a href="review.html">IR-007</a>).</p></div></section>
+<div class="card"><p>Under the <a href="https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm" target="_blank" rel="noopener">PBOC Individual Foreign Exchange Measures, Art. 37 (S05)</a>, a U.S. citizen holding a passport is an <b>境外个人 (foreign individual)</b>. Under <a href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" target="_blank" rel="noopener">SAFE Current Account Guidelines Art. 59 (S03)</a>, a foreign individual purchases FX using an ID plus evidence of the <i>source</i> of the RMB (including a tax certificate) — and SAFE's own <a href="https://www.safe.gov.cn/chongqing/file/file/20190311/87806e211bb74eb4a44e71395c31cda9.pdf" target="_blank" rel="noopener">Q&amp;A handbook (S43)</a> states that foreign-individual FX purchase has <b>no annual quota limit at all</b>. If the CNY is legitimately earned, tax-paid income, the USD 50,000 "annual quota" that dominates online advice may simply not be the binding constraint. This must be confirmed with the account-opening bank because the 2008 State Council regulation defines 境内个人 differently (see <a href="deep-review.html">IR-007</a>).</p></div></section>
 <section class="section"><h2 class="section-title">Recommended sequence (least penalty first)</h2>
 <div class="card">
-<div class="step"><span class="stepnum">1</span><p><strong>Classify the account holder and the money.</strong> Which ID opened the account? Is the CNY salary, business profit, sale of property, inheritance, gift, or previously-converted FX? Collect bank statements, contracts, and Chinese tax receipts. Without this, no route can be selected (<a href="review.html">IR-014</a>).</p></div>
+<div class="step"><span class="stepnum">1</span><p><strong>Classify the account holder and the money.</strong> Which ID opened the account? Is the CNY salary, business profit, sale of property, inheritance, gift, or previously-converted FX? Collect bank statements, contracts, and Chinese tax receipts. Without this, no route can be selected (<a href="deep-review.html">IR-014</a>).</p></div>
 <div class="step"><span class="stepnum">2</span><p><strong>Ask the bank, in writing, which rule applies.</strong> Ask it to state whether it will process the request under Art. 59 (foreign individual, source-of-funds evidence, no annual quota), Art. 57 (current-account purchase above the convenience amount), or a capital-account approval route — and list the exact documents.</p></div>
-<div class="step"><span class="stepnum">3</span><p><strong>Clear the tax-document precondition.</strong> For single outbound payments above USD 50,000, a tax-filing form (税务备案表) may be required; for foreign individuals, a tax certificate / payment or exemption certificate is part of the source-of-funds evidence. This is paperwork, not a conversion tax (<a href="china-rules.html">C16, C17</a>).</p></div>
-<div class="step"><span class="stepnum">4</span><p><strong>Get an all-in written quote.</strong> Customer CNY/USD rate, reference mid-rate and timestamp, spread, conversion charge, wire fee, cable fee, correspondent/intermediary charges, receiving-bank fee and expected net USD. Verified published components are on the <a href="penalty.html">Penalty breakdown</a> page; the account-specific total is deliberately blank (<a href="review.html">IR-012</a>).</p></div>
+<div class="step"><span class="stepnum">3</span><p><strong>Clear the tax-document precondition.</strong> For single outbound payments above USD 50,000, a tax-filing form (税务备案表) may be required; for foreign individuals, a tax certificate / payment or exemption certificate is part of the source-of-funds evidence. This is paperwork, not a conversion tax (<a href="deep-china-rules.html">C16, C17</a>).</p></div>
+<div class="step"><span class="stepnum">4</span><p><strong>Get an all-in written quote.</strong> Customer CNY/USD rate, reference mid-rate and timestamp, spread, conversion charge, wire fee, cable fee, correspondent/intermediary charges, receiving-bank fee and expected net USD. Verified published components are on the <a href="deep-penalty.html">Penalty breakdown</a> page; the account-specific total is deliberately blank (<a href="deep-review.html">IR-012</a>).</p></div>
 <div class="step"><span class="stepnum">5</span><p><strong>Use one lawful channel; never split.</strong> Do not use relatives' quotas, underground banks, false invoices or crypto. Compare the onshore bank route with a lawful cross-border RMB / offshore CNH route only if the bank confirms eligibility.</p></div>
-<div class="step"><span class="stepnum">6</span><p><strong>Fix U.S. reporting before and after the transfer.</strong> FBAR ($10,000 aggregate trigger), Form 8938, worldwide income (including CNY account interest), the $200 personal FX-gain rule, and Form 3520 if the funds are a foreign gift. If prior years were missed, use the IRS Streamlined or delinquent FBAR procedures (<a href="us-tax.html">U22–U24</a>).</p></div>
+<div class="step"><span class="stepnum">6</span><p><strong>Fix U.S. reporting before and after the transfer.</strong> FBAR ($10,000 aggregate trigger), Form 8938, worldwide income (including CNY account interest), the $200 personal FX-gain rule, and Form 3520 if the funds are a foreign gift. If prior years were missed, use the IRS Streamlined or delinquent FBAR procedures (<a href="deep-us-tax.html">U22–U24</a>).</p></div>
 </div></section>
 <section class="section"><h2 class="section-title">Requirement coverage (full list of requirements)</h2>
 <div class="grid">
-<article class="card"><span class="pill blue">Research</span><h3>Collect, organize, analyze</h3><p>All findings are collected in structured CSV tables and rendered as filterable tables on the <a href="china-rules.html">China rules</a>, <a href="us-tax.html">US tax</a>, <a href="channels.html">channels</a>, <a href="penalty.html">penalty</a> and <a href="findings.html">analysis</a> pages.</p></article>
-<article class="card"><span class="pill green">Verification</span><h3>Line by line, official sources</h3><p>Each row carries a direct official link in the <a href="sources.html">source register</a>. Unconfirmed values are blank and flagged on <a href="review.html">Flagged for review</a>. <code>scripts/verify.py</code> enforces this mechanically.</p></article>
-<article class="card"><span class="pill amber">Repo work</span><h3>Audit + irregularity log</h3><p>Repository audit, merge/handoff log, task board and verification log are in <a href="https://github.com/sassnarep3-star/China3/blob/main/COORDINATION.md" target="_blank" rel="noopener">COORDINATION.md</a> and on this site's <a href="review.html">flagged page</a>.</p></article>
+<article class="card"><span class="pill blue">Research</span><h3>Collect, organize, analyze</h3><p>All findings are collected in structured CSV tables and rendered as filterable tables on the <a href="deep-china-rules.html">China rules</a>, <a href="deep-us-tax.html">US tax</a>, <a href="deep-channels.html">channels</a>, <a href="deep-penalty.html">penalty</a> and <a href="deep-findings.html">analysis</a> pages.</p></article>
+<article class="card"><span class="pill green">Verification</span><h3>Line by line, official sources</h3><p>Each row carries a direct official link in the <a href="deep-sources.html">source register</a>. Unconfirmed values are blank and flagged on <a href="deep-review.html">Flagged for review</a>. <code>scripts/verify_deep.py</code> enforces this mechanically.</p></article>
+<article class="card"><span class="pill amber">Repo work</span><h3>Audit + irregularity log</h3><p>Repository audit, merge/handoff log, task board and verification log are in <a href="https://github.com/sassnarep3-star/China3/blob/main/COORDINATION.md" target="_blank" rel="noopener">COORDINATION.md</a> and on this site's <a href="deep-review.html">flagged page</a>.</p></article>
 <article class="card"><span class="pill blue">Site</span><h3>Live dashboard</h3><p>Clean landing page, category subpages, simple dashboard UI, filterable tables, and a clearly labeled Flagged for Review page, published on GitHub Pages.</p></article>
 <article class="card"><span class="pill green">Coordination</span><h3>No duplicate work</h3><p>Shared task board, non-overlapping scopes, small frequent commits, conflict log, and a final integration session. See <a href="https://github.com/sassnarep3-star/China3/blob/main/COORDINATION.md" target="_blank" rel="noopener">COORDINATION.md</a>.</p></article>
 <article class="card"><span class="pill amber">Publication</span><h3>PR → merge → Pages</h3><p>PR from the integration branch to main with sources and irregularities, merged without waiting, Pages deployment confirmed, links recorded in COORDINATION.md.</p></article>
 </div></section>
 <section class="section"><h2 class="section-title">Prior-session research (preserved)</h2><p>The first session's independent <a href="routes.html">transfer-route comparison</a> and <a href="tax.html">tax &amp; reporting distinctions</a> remain published and are linked here as complementary reading. This integration pass adds the foreign-individual rule, the 2026 virtual-currency notice, the 2026 FBAR penalty figures, bank fee components, the §988 $200 rule, Form 3520, and the full penalty-component decomposition.</p></section>
 '''
-page("executive-summary.html", "Executive summary", "Category 01 · Executive summary", "Executive summary & recommended path",
+page("deep-executive-summary.html", "Executive summary", "Category 01 · Executive summary", "Executive summary & recommended path",
      "The important details, the ranked recommendation, and how each requirement in the brief was addressed.",
      [stat_badge("0", "official sources establishing a conversion tax"), stat_badge("50%", "maximum willful FBAR penalty of account balance"), stat_badge("30–100%", "Chinese administrative fine range for illegal FX channels"), stat_badge(str(len(CHANNELS)), "conversion channels catalogued")],
-     exec_body, "executive-summary.html")
+     exec_body, "deep-executive-summary.html")
 
-# ---- china-rules.html -------------------------------------------------------
+# ---- deep-china-rules.html -------------------------------------------------------
 china_rows = [(r[0], r[1], r[2], r[3], r[4], r[5], r[6]) for r in CHINA_RULES]
-page("china-rules.html", "China FX framework", "Category 02 · China-side framework", "China foreign-exchange rules, line by line",
+page("deep-china-rules.html", "China FX framework", "Category 02 · China-side framework", "China foreign-exchange rules, line by line",
      "Official SAFE / PBOC / State Council / State Taxation Administration rules that determine whether CNY can be converted and remitted. Each row is quoted or closely paraphrased from the linked official page.",
      [stat_badge(str(len(CHINA_RULES)), "verified rule rows"), stat_badge("USD 50k", "annual convenience amount (not a cap)"), stat_badge("USD 50k/day", "outward-remittance evidence threshold"), stat_badge("30–100%", "administrative fine range")],
      table("China-side rules register", ["#", "Topic", "Verified rule / value", "Scope & basis"], china_rows, "china-table"),
-     "china-rules.html")
+     "deep-china-rules.html")
 
-# ---- us-tax.html ------------------------------------------------------------
+# ---- deep-us-tax.html ------------------------------------------------------------
 us_rows = [(r[0], r[1], r[2], r[3], r[4], r[5], r[6]) for r in US_RULES]
-page("us-tax.html", "US tax & reporting", "Category 03 · US-side obligations", "U.S. tax and foreign-account reporting",
+page("deep-us-tax.html", "US tax & reporting", "Category 03 · US-side obligations", "U.S. tax and foreign-account reporting",
      "IRS, FinCEN, Treasury and eCFR rules that apply to a U.S. citizen holding a Chinese bank account, independent of whether China permits the transfer.",
      [stat_badge(str(len(US_RULES)), "verified rule rows"), stat_badge("$10,000", "FBAR aggregate trigger"), stat_badge("$16,536", "non-willful FBAR maximum"), stat_badge("50%", "willful FBAR maximum of balance")],
      table("U.S. tax & reporting register", ["#", "Topic", "Verified rule / value", "Scope & basis"], us_rows, "us-table"),
-     "us-tax.html")
+     "deep-us-tax.html")
 
-# ---- channels.html ----------------------------------------------------------
+# ---- deep-channels.html ----------------------------------------------------------
 ch_rows = [(r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10]) for r in CHANNELS]
 lawful = sum(1 for r in CHANNELS if r[1].startswith("Lawful"))
 banned = sum(1 for r in CHANNELS if r[1].startswith("PROHIBITED"))
 channels_intro = ("Every CNY→USD route found in official sources, with eligibility, limits, pros, cons and penalty exposure. "
                   "'PROHIBITED' rows are documented only so they can be ruled out; they are not recommendations.")
-page("channels.html", "All conversion channels", "Category 04 · Route catalogue", "All ways to convert CNY into USD — pros & cons",
+page("deep-channels.html", "All conversion channels", "Category 04 · Route catalogue", "All ways to convert CNY into USD — pros & cons",
      channels_intro,
      [stat_badge(str(len(CHANNELS)), "channels catalogued"), stat_badge(str(lawful), "lawful / approval-based"), stat_badge(str(banned), "prohibited or unapproved"), stat_badge("0", "recommended prohibited routes")],
      '<div class="notice amber"><strong>Read this first.</strong> "Lawful" does not mean "available to you" — most routes depend on who owns the money, how it was earned, and which ID opened the account. Prohibited routes are listed for completeness and are explicitly not recommended.</div>'
      + table("Full channel comparison", ["#", "Class", "Channel", "Who", "Limit / condition", "Pros", "Cons", "Penalty exposure"], ch_rows, "channels-table"),
-     "channels.html")
+     "deep-channels.html")
 
-# ---- penalty.html -----------------------------------------------------------
+# ---- deep-penalty.html -----------------------------------------------------------
 pen_rows = [(r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7]) for r in PENALTY]
 penalty_intro = ("A decomposition of the 'conversion penalty' into its separately verifiable layers: Chinese tax on the source of funds, "
                  "documentary preconditions, bank pricing, FX controls and their fines, offshore basis, U.S. penalties and the account-specific total. "
                  "Blank cells are values that could not be confirmed from an official source.")
-page("penalty.html", "Conversion penalty breakdown", "Category 05 · Cost decomposition", "What the 'conversion penalty' actually consists of",
+page("deep-penalty.html", "Conversion penalty breakdown", "Category 05 · Cost decomposition", "What the 'conversion penalty' actually consists of",
      penalty_intro,
      [stat_badge(str(len(PENALTY)), "cost / penalty components"), stat_badge("1‰", "BOC personal wire fee (¥50–¥260 cap)"), stat_badge("±2%", "CNY/USD interbank trading band"), stat_badge("50%", "max willful FBAR penalty")],
      '<div class="hero-band"><strong>How to read this</strong><p>There is no single official number for "the penalty". It is a stack of independent items. Add only the items that actually apply to your facts; any item whose value cannot be confirmed is left blank rather than estimated. The total for this specific account is deliberately blank (IR-012 / IR-014).</p></div>'
      + table("Penalty / cost component register", ["#", "Layer", "Component", "Verified amount / rate", "Basis, caveat and note"], pen_rows, "penalty-table"),
-     "penalty.html")
+     "deep-penalty.html")
 
-# ---- findings.html ----------------------------------------------------------
+# ---- deep-findings.html ----------------------------------------------------------
 find_rows = [(r[0], r[1], r[2], r[3], r[4], r[5], r[6]) for r in FINDINGS]
-page("findings.html", "Analysis & findings", "Category 06 · Analysis", "Analysis and findings",
+page("deep-findings.html", "Analysis & findings", "Category 06 · Analysis", "Analysis and findings",
      "Deep analysis: what the rules mean when combined, where the user's premise appears to be mis-specified, and which risks dominate the arithmetic.",
      [stat_badge(str(len(FINDINGS)), "sourced findings"), stat_badge("23", "flagged irregularities"), stat_badge("2", "agent sessions integrated"), stat_badge("0", "invented values")],
      table("Findings register", ["#", "Finding", "Analysis", "Implication"], find_rows, "findings-table"),
-     "findings.html")
+     "deep-findings.html")
+
+# ---- deep-review.html (clearly labelled Flagged for Review) ----------------
+flag_rows = [(r[0], r[1], r[2], r[3], r[4], r[5], r[6]) for r in FLAGS]
+review_body = (
+    '<div class="notice amber"><strong>Flagged for Review.</strong> These items are '
+    'published with source links and do not block publication. Every value that could not '
+    'be confirmed from an official source is blank and marked UNVERIFIED in its table. '
+    'Nothing has been inferred or filled in.</div>'
+    + table("Flagged irregularities and unverified values",
+            ["#", "Item", "Why it is flagged", "What would resolve it"], flag_rows, "flags-table"))
+page("deep-review.html", "Flagged for Review", "Category 07 · Flagged for Review",
+     "Flagged for Review — irregularities and unverified values",
+     "All flagged and unverified items from this integration session, each with a direct official source link. This page is non-blocking by design.",
+     [stat_badge(str(len(FLAGS)), "flagged items"), stat_badge("0", "invented values"),
+      stat_badge("0", "blocked deployments"), stat_badge("100%", "rows with official links")],
+     review_body, "deep-review.html")
+
+# ---- deep-sources.html ------------------------------------------------------
+src_trs = []
+for sid in sorted(SOURCES):
+    authority, title, url, method = SOURCES[sid]
+    src_trs.append(
+        f'<tr><td><strong>{html.escape(sid)}</strong></td><td>{html.escape(authority)}</td>'
+        f'<td>{html.escape(title)}</td>'
+        f'<td class="src"><a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">Open official page ↗</a></td>'
+        f'<td>{html.escape(method)}</td><td class="status"><span class="tag ok">Registered</span></td></tr>')
+sources_body = (
+    '<div class="hero-band"><strong>Audit trail</strong><p>One row per primary source used '
+    'in the deep-research tables. All domains are government, regulator, central bank, '
+    'official court or official bank sources; the single GitHub entry is this repository’s '
+    'own project record. Search-engine snippets were used only as leads.</p></div>'
+    + '<section class="section"><div class="section-head"><div><h2 class="section-title">Official source register (' + str(len(SOURCES)) + ' sources)</h2></div>'
+    + '<div class="tools"><label class="filter-label">Filter <input type="search" class="filter" data-filter="sources-table" placeholder="type to filter rows"></label><span class="rowcount" data-count="sources-table">' + str(len(src_trs)) + ' rows</span></div></div>'
+    + '<div class="table-wrap"><table class="data" data-table="sources-table"><thead><tr><th>#</th><th>Authority</th><th>Document</th><th>Official link</th><th>Verification performed</th><th>Status</th></tr></thead><tbody>'
+    + "".join(src_trs) + '</tbody></table></div></section>')
+page("deep-sources.html", "Official sources", "Category 08 · Audit trail", "Official source register",
+     "Every primary source used by this session, with its authority, document title, direct official link and verification method.",
+     [stat_badge(str(len(SOURCES)), "official sources"), stat_badge("100%", "rows with direct links"),
+      stat_badge("0", "secondary sources used as evidence"), stat_badge("0", "invented values")],
+     sources_body, "deep-sources.html")
 
 # ---------------------------------------------------------------------------
 # RESEARCH MEMO: source register with verification method
@@ -557,7 +603,7 @@ lines = [
     "# Official source register and verification method",
     "",
     "Session `session-c703e38c` · reviewed 2026-11-07 (UTC). Generated by",
-    "`scripts/build_site.py` from `data/sources.csv` / `data/sources.json`.",
+    "`scripts/build_deep_site.py` from `data/sources.csv` / `data/deep_sources.json`.",
     "",
     "All URLs are on official domains (SAFE / PBOC / State Council / State Taxation",
     "Administration / courts / CSRC / HKMA / Bank of China / IRS / FinCEN / eCFR /",
@@ -578,7 +624,7 @@ for sid in sorted(SOURCES):
     lines.append(f"| {sid} | {authority} | {title} | {url} | {method} |")
 lines += [
     "",
-    "## Domain allowlist enforced by `scripts/verify.py`",
+    "## Domain allowlist enforced by `scripts/verify_deep.py`",
     "",
     "`" + "`, `".join(OFFICIAL_DOMAINS) + "`",
     "",
@@ -594,5 +640,5 @@ lines += [
 ]
 (RESEARCH / "sources.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-print("Generated: 6 category pages + 7 CSV files + sources.json + research/sources.md")
+print("Generated: 8 category pages + 7 CSV files + deep_sources.json + research/sources.md")
 print(f"Sources: {len(SOURCES)} | China rules: {len(CHINA_RULES)} | US rules: {len(US_RULES)} | Channels: {len(CHANNELS)} | Penalty: {len(PENALTY)} | Findings: {len(FINDINGS)} | Flags: {len(FLAGS)}")

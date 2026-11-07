@@ -129,3 +129,88 @@ The two earlier sessions produced prose pages with tables marked "verified" by e
 - **I03** (`境内个人` defined two ways by two instruments in force) is the one item that cannot be closed from public sources. It decides whether the USD 50,000 figure binds or whether source documents are required, so it is the first thing a bank branch must answer in writing.
 - **I01/I02** (retail spread, approval timelines) stay blank until a real bank quote and a real SAFE service standard exist to cite.
 - A licence is still absent; adding one is the repository owner's decision.
+
+<!-- deep-research-integration-v2 -->
+
+## Integration session `session-c703e38c` — deep research pass
+
+Branch: `arena/c703e38c-china3` (fixed by Arena; this branch is also the integration branch).
+Board above belongs to other sessions and is preserved verbatim.
+
+### Claim and scope
+
+This session claimed T1–T9 on its own board (kept in the commit history at `786a8b3` /
+`05ee625`), then acted as final integration session once the other sessions marked their
+tasks `done`. All deep-research outputs use distinct filenames (`deep-*.html`,
+`data/*.csv`, `data/deep_sources.json`, `scripts/*_deep.py`, `assets/deep-*.css|js`,
+`.github/workflows/deep-research-verify.yml`) so that merging `main` does not overwrite
+any other session's files. Shared files were restored to `origin/main`'s exact versions
+before merging, then only additive linking sections were appended.
+
+| Task | Status | File scope |
+|---|---|---|
+| T1 repo audit + coordination board | done | `COORDINATION.md` (append), `README.md` (append) |
+| T2 China FX framework research | done | `research/china-framework.md`, `data/china_rules.csv` |
+| T3 U.S. tax / reporting research | done | `research/us-tax.md`, `data/us_rules.csv` |
+| T4 channels + penalty breakdown | done | `research/channels.md`, `research/penalty-breakdown.md`, `data/channels.csv`, `data/penalty.csv` |
+| T5 verified data tables | done | `data/*.csv`, `data/deep_sources.json`, `scripts/build_deep_site.py` |
+| T6 dashboard subpages + Flagged for Review | done | `deep-*.html`, `assets/deep-research.css`, `assets/deep-app.js` |
+| T7 executive summary + analysis | done | `EXECUTIVE_SUMMARY.md`, `research/analysis.md`, `data/findings.csv` |
+| T8 line-by-line re-verification, build, broken links | done | `scripts/verify_deep.py`, `.github/workflows/deep-research-verify.yml` |
+| T9 PR → merge → Pages → record | pending | this file |
+
+### Verification log
+
+- Sources: 84 official pages registered in `data/sources.csv` / `data/deep_sources.json` /
+  `research/sources.md`; every URL is on an official-domain allowlist enforced by
+  `scripts/verify_deep.py`.
+- Full text fetched: SAFE Ningxia 2022 Q&A; SAFE Tianjin 2024 individual-FX Q&A; SAFE
+  Tianjin 2024 Q&A case (9); gov.cn PBOC Decree [2006] No. 3; SAFE FX Regulation (State
+  Council Order 532) full text; PBOC 银发〔2026〕42号; PBOC 银发〔2021〕237号; IRS
+  Gifts from foreign person; IRS Form 8938/FBAR comparison; eCFR 31 CFR 1010.821 (all
+  chunks); IRS Publication 525.
+- `scripts/verify_deep.py` checks: one official source URL per data row; URL registered in
+  the source register; UNVERIFIED rows have blank values; generated HTML row counts match
+  CSVs; every data row on every deep page has an official link; all 23 flagged ids appear
+  on the Flagged for Review page; all 84 source ids appear on the sources page; and no
+  broken local links across root and `docs/` HTML pages.
+- Other sessions' CI (`scripts/validate_data.py`, `scripts/build_site.py`,
+  `scripts/check_links.py`, `.github/workflows/ci.yml`) was run on the merged tree and
+  passed; `docs/` was confirmed not stale.
+- Local HTTP smoke test: every root HTML page, `docs/*.html`, `assets/deep-research.css`
+  and `assets/deep-app.js` returned HTTP 200.
+
+### Irregularities (published with links on `deep-review.html`; non-blocking)
+
+IR-001 single fixed branch instead of `session-<id>/<task>` branches; IR-002 no
+COORDINATION.md or prior data at session start; IR-003 Pages legacy source vs Actions
+deploy; IR-004 `银发〔2021〕237号` repealed by `银发〔2026〕42号`; IR-005 two versions of
+FX Regulation Art. 45; IR-006 two repealed anti-splitting circulars; IR-007 conflicting
+official definitions of 境内个人/境外个人; IR-008 2026 FBAR inflation adjustment cancelled;
+IR-009 no signed U.S.–mainland China FATCA IGA found; IR-010 eCFR authoritative but
+unofficial; IR-011 no official "conversion tax" found; IR-012 current bank spread /
+correspondent fees / CNY-CNH basis unverifiable (left blank); IR-013 add/add conflict and
+rebase-flattening conflict resolved by abort without discarding work; IR-014 no case
+facts; IR-015 current USD/CNY central parity unverified; IR-016 English paraphrases of
+Chinese originals; IR-017 Wealth Connect / QDII eligibility unknown; IR-018 no manual
+input vs conditional conclusions; IR-019 gift/inheritance character unknown; IR-020 2024
+BOC fee promotion expired; IR-021 2004 property-transfer rules not exhaustively
+re-checked; IR-022 CNY/CNH spread figures are historical; IR-023 several sources are
+provincial SAFE branch Q&As.
+
+### Merge / handoff log
+
+- `origin/main` advanced from `4a92baa` to `3f62eeb` while this session was researching
+  (PR #2, #5, #7 from other sessions). `git merge origin/main` was run on this branch;
+  shared files were first restored to `origin/main`'s exact content, so the merge had
+  **zero conflicts** and no other session's work was discarded.
+- Two earlier conflicts: (a) `add/add` on `COORDINATION.md` with `arena/dd766f7b-china3`,
+  resolved by preserving that board verbatim in this branch's earlier commit; (b)
+  `git pull --rebase` attempted to flatten the resulting merge commit and re-conflicted —
+  stopped, verified remote tip equalled local tip, `git rebase --abort`, no work lost.
+
+### PR / merge / deployment record (filled by T9)
+
+- PR link: _pending_
+- Merge result: _pending_
+- GitHub Pages deployment: _pending_

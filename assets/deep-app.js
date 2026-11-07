@@ -1,16 +1,14 @@
 /* China Money Research — simple dashboard table filter (no external deps). */
 (function () {
   "use strict";
-  var inputs = document.querySelectorAll("input.filter");
-  Array.prototype.forEach.call(inputs, function (input) {
+  Array.prototype.forEach.call(document.querySelectorAll("input.filter"), function (input) {
     var id = input.getAttribute("data-filter");
     var table = document.querySelector('table[data-table="' + id + '"]');
     var count = document.querySelector('[data-count="' + id + '"]');
     if (!table) return;
     var rows = Array.prototype.slice.call(table.querySelectorAll("tbody tr"));
     input.addEventListener("input", function () {
-      var q = input.value.trim().toLowerCase();
-      var shown = 0;
+      var q = input.value.trim().toLowerCase(), shown = 0;
       rows.forEach(function (row) {
         var match = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
         row.style.display = match ? "" : "none";

@@ -1,7 +1,7 @@
 # Executive summary — China money (CNY → USD)
 
 Prepared by integration session `session-c703e38c` · 2026-11-07 (UTC) · public, official-source research only.
-Live version: [`executive-summary.html`](executive-summary.html) on the GitHub Pages site.
+Live version: [`deep-executive-summary.html`](deep-executive-summary.html) on the GitHub Pages site.
 
 ## The question
 
@@ -97,15 +97,15 @@ limit. There is a *separate* USD 50,000 same-day threshold for outward remittanc
 
 | Deliverable | Where |
 |---|---|
-| Executive summary | this file; `executive-summary.html` |
-| Full requirement list & coverage | `executive-summary.html`; `COORDINATION.md` task board T1–T9 |
-| China framework, 50 line-by-line rules | `research/china-framework.md`; `china-rules.html`; `data/china_rules.csv` |
-| U.S. tax & reporting, 28 line-by-line rules | `research/us-tax.md`; `us-tax.html`; `data/us_rules.csv` |
-| 35 conversion channels with pros/cons | `research/channels.md`; `channels.html`; `data/channels.csv` |
-| 35-component penalty breakdown | `research/penalty-breakdown.md`; `penalty.html`; `data/penalty.csv` |
-| 22 sourced findings + deep analysis | `research/analysis.md`; `findings.html`; `data/findings.csv` |
-| 23 flagged irregularities, all with links | `review.html`; `data/flags.csv` |
-| Official source register (84 sources) | `sources.html`; `data/sources.csv`; `data/sources.json`; `research/sources.md` |
+| Executive summary | this file; `deep-executive-summary.html` |
+| Full requirement list & coverage | `deep-executive-summary.html`; `COORDINATION.md` task board T1–T9 |
+| China framework, 50 line-by-line rules | `research/china-framework.md`; `deep-china-rules.html`; `data/china_rules.csv` |
+| U.S. tax & reporting, 28 line-by-line rules | `research/us-tax.md`; `deep-us-tax.html`; `data/us_rules.csv` |
+| 35 conversion channels with pros/cons | `research/channels.md`; `deep-channels.html`; `data/channels.csv` |
+| 35-component penalty breakdown | `research/penalty-breakdown.md`; `deep-penalty.html`; `data/penalty.csv` |
+| 22 sourced findings + deep analysis | `research/analysis.md`; `deep-findings.html`; `data/findings.csv` |
+| 23 flagged irregularities, all with links | `deep-review.html`; `data/flags.csv` |
+| Official source register (84 sources) | `deep-sources.html`; `data/sources.csv`; `data/deep_sources.json`; `research/sources.md` |
 | Per-task sources, verification, irregularities | `COORDINATION.md`; `research/*.md` |
 | Live GitHub Pages dashboard | clean landing page + 10 category subpages, filterable tables |
 
@@ -116,7 +116,7 @@ Council, State Taxation Administration, courts/CSRC, HKMA, Bank of China, IRS, F
 eCFR, Federal Register, Treasury, or this repository's own project record). Values that
 could not be confirmed from an official source are left **blank** and marked **UNVERIFIED**,
 and appear on the clearly labelled "Flagged for Review" page. No value was inferred or
-filled. `scripts/verify.py` mechanically enforces row-level source links, official-domain
+filled. `scripts/verify_deep.py` mechanically enforces row-level source links, official-domain
 allowlisting, blank unverified values, HTML/CSV row-count agreement, all flagged ids being
 published, and zero broken local links. `research/sources.md` records how each source was
 verified. Chinese-language official documents are paraphrased in English; the linked original

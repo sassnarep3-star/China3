@@ -2,7 +2,7 @@
 
 Session `session-c703e38c` · reviewed 2026-11-07 (UTC)
 Scope: `research/penalty-breakdown.md`. Structured data: `data/penalty.csv` (35 components,
-one official link per row). Rendered at `penalty.html`.
+one official link per row). Rendered at `deep-penalty.html`.
 
 ## The core analytical move
 
@@ -60,7 +60,7 @@ your own principal":
 `data/penalty.csv` rows P01 (a general "conversion tax"), P05 (current bank spread), P14
 (current CNY/CNH basis), P15 (cash vs account rate difference), P23 (U.S. tax character of
 moving one's own principal) and P35 (the all-in total for this account) have **empty value
-cells**, are marked UNVERIFIED, and are published on `review.html` with source links. The
+cells**, are marked UNVERIFIED, and are published on `deep-review.html` with source links. The
 brief prohibits inferring or filling values, so no worked numeric example with assumed
 inputs is presented.
 
@@ -86,5 +86,5 @@ quote and fees.
 All 35 rows were checked against the linked official page; every numeric value above is
 copied from an official text, and the four historical/expiry caveats (2014 spread caps,
 2011/2014 CNH spreads, 2024 BOC promotion, 2026 FBAR non-adjustment) are explicitly labelled
-so that stale numbers are not used as current prices. `scripts/verify.py` mechanically
+so that stale numbers are not used as current prices. `scripts/verify_deep.py` mechanically
 rejects any UNVERIFIED row whose value cell is non-empty.

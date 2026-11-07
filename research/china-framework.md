@@ -166,7 +166,7 @@ anti-splitting circulars), IR-007 (conflicting definitions of 境内/境外个�
 (no official "conversion tax"), IR-012 (current spread / correspondent fees / CNY-CNH basis
 unverifiable), IR-015 (current central parity not verified), IR-016 (translations are ours),
 IR-021 (2004 property-transfer rules), IR-022 (HKMA spreads are historical), IR-023
-(several sources are provincial-branch Q&As). All are published on `review.html`.
+(several sources are provincial-branch Q&As). All are published on `deep-review.html`.
 
 ## Verification performed
 
@@ -175,5 +175,5 @@ IR-021 (2004 property-transfer rules), IR-022 (HKMA spreads are historical), IR-
 - Cross-check of every numeric value used (50,000; 10,000; 200,000; 500,000; 100,000;
   10,000 RMB/day; 100,000 RMB/year; 24 months; 30%/equal; 20%; 2%; 3%; 1%/4%; 5m/25m;
   100k/500k; 3%–45%; 20%; 150bn; 1m; 1–5×) against the linked official text.
-- `scripts/verify.py` enforces one official-domain link per row and blank values for
+- `scripts/verify_deep.py` enforces one official-domain link per row and blank values for
   unverified rows.

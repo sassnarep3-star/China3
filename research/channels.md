@@ -2,7 +2,7 @@
 
 Session `session-c703e38c` · reviewed 2026-11-07 (UTC)
 Scope: `research/channels.md`. Structured data: `data/channels.csv` (35 channels × 8 attributes,
-one official link per row). Rendered at `channels.html`.
+one official link per row). Rendered at `deep-channels.html`.
 
 ## Approach
 
@@ -114,4 +114,4 @@ the official condition and the item is cross-flagged (IR-014, IR-017).
 IR-004 (2026 virtual-currency rule supersedes 2021), IR-006 (repealed anti-splitting
 circulars), IR-014 (no case facts), IR-017 (Wealth Connect / QDII eligibility unknown),
 IR-020 (expired 2024 BOC promotion), IR-021 (2004 property-transfer rules), IR-023
-(provincial Q&As). See `review.html`.
+(provincial Q&As). See `deep-review.html`.

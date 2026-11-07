@@ -138,7 +138,7 @@ No individual gain amount is computed here because the acquisition-date basis is
 IR-008 (2026 inflation adjustment cancelled), IR-009 (no signed mainland FATCA IGA
 confirmed), IR-010 (eCFR authoritative but unofficial), IR-011 / IR-014 (no official
 statement on the tax character of moving one's own principal; no case facts), IR-019
-(gift/inheritance character unknown). Published on `review.html`.
+(gift/inheritance character unknown). Published on `deep-review.html`.
 
 ## Verification performed
 
@@ -147,4 +147,4 @@ statement on the tax character of moving one's own principal; no case facts), IR
   $50,000/$75,000/$100,000/$150,000/$200,000/$300,000/$400,000/$600,000; $10,000/$60,000;
   40%; $100,000; 5%/25%; $20,116/$20,573; $200; 10%; 3 years/6 years; 1/10 year carryback/forward.
 - Obsolete June-30 FBAR due-date and old statutory penalty figures identified and excluded.
-- `scripts/verify.py` enforces one official-domain link per row.
+- `scripts/verify_deep.py` enforces one official-domain link per row.
