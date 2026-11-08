@@ -218,3 +218,15 @@ provincial SAFE branch Q&As.
 - GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
+
+---
+
+# Current Arena session `arena/9d3903f8-china3` — verification and cost-table supplement
+
+Branch: `arena/9d3903f8-china3` (fixed by Arena; the user-requested per-task branch cannot be created in this session). All prior tasks above are complete; this is a final-integration supplement limited to the gap identified in the amount-by-amount cost request and to any factual conflicts found while re-auditing it.
+
+## Claim
+
+| ID | Task | File scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| T11 | Re-audit conflicting legacy/deep-research claims; add the requested USD 10,000–400,000 amount schedule, lawful execution steps, and source-backed/blank cost treatment | `COORDINATION.md`, `research/cost-matrix.md`, `data/cost-matrix.csv`, `deep-costs.html`, `deep-executive-summary.html`, `index.html`, `deep-review.html`, `scripts/verify_cost_matrix.py` | in progress | `arena/9d3903f8-china3` | Pending | Final-integration supplement. No execution rate, fee, tax, or eligibility value will be inferred; unconfirmed cells will remain blank and be flagged. |
