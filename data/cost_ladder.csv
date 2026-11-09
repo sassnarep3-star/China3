@@ -1,0 +1,801 @@
+method_id,amount_usd,cny_needed,spread_usd,bank_fee_usd,total_cost_usd,cost_pct,net_usd,units,units_label,penalty_max_usd,coef_per_0p10_usd,basis
+M01,10000,66919.00,21.04,32.42,53.45,0.5345,9946.55,1,transfer,,10.00,spread + 1 wire + cable
+M01,20000,133838.00,42.08,42.42,84.49,0.4225,19915.51,1,transfer,,20.00,spread + 1 wire + cable
+M01,30000,200757.00,63.12,52.42,115.53,0.3851,29884.47,1,transfer,,30.00,spread + 1 wire + cable
+M01,40000,267676.00,84.16,61.27,145.43,0.3636,39854.57,1,transfer,,40.00,spread + 1 wire + cable
+M01,50000,334595.00,105.20,61.27,166.47,0.3329,49833.53,1,transfer,,50.00,spread + 1 wire + cable
+M01,60000,401514.00,126.24,61.27,187.51,0.3125,59812.49,1,transfer,,60.00,spread + 1 wire + cable
+M01,70000,468433.00,147.28,61.27,208.55,0.2979,69791.45,1,transfer,,70.00,spread + 1 wire + cable
+M01,80000,535352.00,168.32,61.27,229.59,0.2870,79770.41,1,transfer,,80.00,spread + 1 wire + cable
+M01,90000,602271.00,189.36,61.27,250.63,0.2785,89749.37,1,transfer,,90.00,spread + 1 wire + cable
+M01,100000,669190.00,210.40,61.27,271.67,0.2717,99728.33,1,transfer,,100.00,spread + 1 wire + cable
+M01,110000,736109.00,231.44,61.27,292.70,0.2661,109707.30,1,transfer,,110.00,spread + 1 wire + cable
+M01,120000,803028.00,252.48,61.27,313.74,0.2615,119686.26,1,transfer,,120.00,spread + 1 wire + cable
+M01,130000,869947.00,273.52,61.27,334.78,0.2575,129665.22,1,transfer,,130.00,spread + 1 wire + cable
+M01,140000,936866.00,294.56,61.27,355.82,0.2542,139644.18,1,transfer,,140.00,spread + 1 wire + cable
+M01,150000,1003785.00,315.60,61.27,376.86,0.2512,149623.14,1,transfer,,150.00,spread + 1 wire + cable
+M01,160000,1070704.00,336.64,61.27,397.90,0.2487,159602.10,1,transfer,,160.00,spread + 1 wire + cable
+M01,170000,1137623.00,357.68,61.27,418.94,0.2464,169581.06,1,transfer,,170.00,spread + 1 wire + cable
+M01,180000,1204542.00,378.71,61.27,439.98,0.2444,179560.02,1,transfer,,180.00,spread + 1 wire + cable
+M01,190000,1271461.00,399.75,61.27,461.02,0.2426,189538.98,1,transfer,,190.00,spread + 1 wire + cable
+M01,200000,1338380.00,420.79,61.27,482.06,0.2410,199517.94,1,transfer,,200.00,spread + 1 wire + cable
+M01,210000,1405299.00,441.83,61.27,503.10,0.2396,209496.90,1,transfer,,210.00,spread + 1 wire + cable
+M01,220000,1472218.00,462.87,61.27,524.14,0.2382,219475.86,1,transfer,,220.00,spread + 1 wire + cable
+M01,230000,1539137.00,483.91,61.27,545.18,0.2370,229454.82,1,transfer,,230.00,spread + 1 wire + cable
+M01,240000,1606056.00,504.95,61.27,566.22,0.2359,239433.78,1,transfer,,240.00,spread + 1 wire + cable
+M01,250000,1672975.00,525.99,61.27,587.26,0.2349,249412.74,1,transfer,,250.00,spread + 1 wire + cable
+M01,260000,1739894.00,547.03,61.27,608.30,0.2340,259391.70,1,transfer,,260.00,spread + 1 wire + cable
+M01,270000,1806813.00,568.07,61.27,629.34,0.2331,269370.66,1,transfer,,270.00,spread + 1 wire + cable
+M01,280000,1873732.00,589.11,61.27,650.38,0.2323,279349.62,1,transfer,,280.00,spread + 1 wire + cable
+M01,290000,1940651.00,610.15,61.27,671.42,0.2315,289328.58,1,transfer,,290.00,spread + 1 wire + cable
+M01,300000,2007570.00,631.19,61.27,692.46,0.2308,299307.54,1,transfer,,300.00,spread + 1 wire + cable
+M01,310000,2074489.00,652.23,61.27,713.50,0.2302,309286.50,1,transfer,,310.00,spread + 1 wire + cable
+M01,320000,2141408.00,673.27,61.27,734.54,0.2295,319265.46,1,transfer,,320.00,spread + 1 wire + cable
+M01,330000,2208327.00,694.31,61.27,755.58,0.2290,329244.42,1,transfer,,330.00,spread + 1 wire + cable
+M01,340000,2275246.00,715.35,61.27,776.62,0.2284,339223.38,1,transfer,,340.00,spread + 1 wire + cable
+M01,350000,2342165.00,736.39,61.27,797.66,0.2279,349202.34,1,transfer,,350.00,spread + 1 wire + cable
+M01,360000,2409084.00,757.43,61.27,818.70,0.2274,359181.30,1,transfer,,360.00,spread + 1 wire + cable
+M01,370000,2476003.00,778.47,61.27,839.74,0.2270,369160.26,1,transfer,,370.00,spread + 1 wire + cable
+M01,380000,2542922.00,799.51,61.27,860.78,0.2265,379139.22,1,transfer,,380.00,spread + 1 wire + cable
+M01,390000,2609841.00,820.55,61.27,881.82,0.2261,389118.18,1,transfer,,390.00,spread + 1 wire + cable
+M01,400000,2676760.00,841.59,61.27,902.86,0.2257,399097.14,1,transfer,,400.00,spread + 1 wire + cable
+M02,10000,66919.00,21.04,32.42,53.45,0.5345,9946.55,1,years (one transfer each),,10.00,fees summed over N annual transfers
+M02,20000,133838.00,42.08,42.42,84.49,0.4225,19915.51,1,years (one transfer each),,20.00,fees summed over N annual transfers
+M02,30000,200757.00,63.12,52.42,115.53,0.3851,29884.47,1,years (one transfer each),,30.00,fees summed over N annual transfers
+M02,40000,267676.00,84.16,61.27,145.43,0.3636,39854.57,1,years (one transfer each),,40.00,fees summed over N annual transfers
+M02,50000,334595.00,105.20,61.27,166.47,0.3329,49833.53,1,years (one transfer each),,50.00,fees summed over N annual transfers
+M02,60000,401514.00,126.24,93.68,219.92,0.3665,59780.08,2,years (one transfer each),,60.00,fees summed over N annual transfers
+M02,70000,468433.00,147.28,103.68,250.96,0.3585,69749.04,2,years (one transfer each),,70.00,fees summed over N annual transfers
+M02,80000,535352.00,168.32,113.68,282.00,0.3525,79718.00,2,years (one transfer each),,80.00,fees summed over N annual transfers
+M02,90000,602271.00,189.36,122.54,311.89,0.3465,89688.11,2,years (one transfer each),,90.00,fees summed over N annual transfers
+M02,100000,669190.00,210.40,122.54,332.93,0.3329,99667.07,2,years (one transfer each),,100.00,fees summed over N annual transfers
+M02,110000,736109.00,231.44,154.95,386.39,0.3513,109613.61,3,years (one transfer each),,110.00,fees summed over N annual transfers
+M02,120000,803028.00,252.48,164.95,417.43,0.3479,119582.57,3,years (one transfer each),,120.00,fees summed over N annual transfers
+M02,130000,869947.00,273.52,174.95,448.47,0.3450,129551.53,3,years (one transfer each),,130.00,fees summed over N annual transfers
+M02,140000,936866.00,294.56,183.80,478.36,0.3417,139521.64,3,years (one transfer each),,140.00,fees summed over N annual transfers
+M02,150000,1003785.00,315.60,183.80,499.40,0.3329,149500.60,3,years (one transfer each),,150.00,fees summed over N annual transfers
+M02,160000,1070704.00,336.64,216.22,552.85,0.3455,159447.15,4,years (one transfer each),,160.00,fees summed over N annual transfers
+M02,170000,1137623.00,357.68,226.22,583.89,0.3435,169416.11,4,years (one transfer each),,170.00,fees summed over N annual transfers
+M02,180000,1204542.00,378.71,236.22,614.93,0.3416,179385.07,4,years (one transfer each),,180.00,fees summed over N annual transfers
+M02,190000,1271461.00,399.75,245.07,644.83,0.3394,189355.17,4,years (one transfer each),,190.00,fees summed over N annual transfers
+M02,200000,1338380.00,420.79,245.07,665.87,0.3329,199334.13,4,years (one transfer each),,200.00,fees summed over N annual transfers
+M02,210000,1405299.00,441.83,277.49,719.32,0.3425,209280.68,5,years (one transfer each),,210.00,fees summed over N annual transfers
+M02,220000,1472218.00,462.87,287.49,750.36,0.3411,219249.64,5,years (one transfer each),,220.00,fees summed over N annual transfers
+M02,230000,1539137.00,483.91,297.49,781.40,0.3397,229218.60,5,years (one transfer each),,230.00,fees summed over N annual transfers
+M02,240000,1606056.00,504.95,306.34,811.29,0.3380,239188.71,5,years (one transfer each),,240.00,fees summed over N annual transfers
+M02,250000,1672975.00,525.99,306.34,832.33,0.3329,249167.67,5,years (one transfer each),,250.00,fees summed over N annual transfers
+M02,260000,1739894.00,547.03,338.76,885.79,0.3407,259114.21,6,years (one transfer each),,260.00,fees summed over N annual transfers
+M02,270000,1806813.00,568.07,348.76,916.83,0.3396,269083.17,6,years (one transfer each),,270.00,fees summed over N annual transfers
+M02,280000,1873732.00,589.11,358.76,947.87,0.3385,279052.13,6,years (one transfer each),,280.00,fees summed over N annual transfers
+M02,290000,1940651.00,610.15,367.61,977.76,0.3372,289022.24,6,years (one transfer each),,290.00,fees summed over N annual transfers
+M02,300000,2007570.00,631.19,367.61,998.80,0.3329,299001.20,6,years (one transfer each),,300.00,fees summed over N annual transfers
+M02,310000,2074489.00,652.23,400.02,1052.25,0.3394,308947.75,7,years (one transfer each),,310.00,fees summed over N annual transfers
+M02,320000,2141408.00,673.27,410.02,1083.29,0.3385,318916.71,7,years (one transfer each),,320.00,fees summed over N annual transfers
+M02,330000,2208327.00,694.31,420.02,1114.33,0.3377,328885.67,7,years (one transfer each),,330.00,fees summed over N annual transfers
+M02,340000,2275246.00,715.35,428.88,1144.23,0.3365,338855.77,7,years (one transfer each),,340.00,fees summed over N annual transfers
+M02,350000,2342165.00,736.39,428.88,1165.27,0.3329,348834.73,7,years (one transfer each),,350.00,fees summed over N annual transfers
+M02,360000,2409084.00,757.43,461.29,1218.72,0.3385,358781.28,8,years (one transfer each),,360.00,fees summed over N annual transfers
+M02,370000,2476003.00,778.47,471.29,1249.76,0.3378,368750.24,8,years (one transfer each),,370.00,fees summed over N annual transfers
+M02,380000,2542922.00,799.51,481.29,1280.80,0.3371,378719.20,8,years (one transfer each),,380.00,fees summed over N annual transfers
+M02,390000,2609841.00,820.55,490.14,1310.69,0.3361,388689.31,8,years (one transfer each),,390.00,fees summed over N annual transfers
+M02,400000,2676760.00,841.59,490.14,1331.73,0.3329,398668.27,8,years (one transfer each),,400.00,fees summed over N annual transfers
+M03,10000,66919.00,21.04,32.42,53.45,0.5345,9946.55,1,single payment,,10.00,"art. 6 staging: 1 purchase(s), each paying the 1‰ fee and cable charge"
+M03,20000,133838.00,42.08,42.42,84.49,0.4225,19915.51,1,single payment,,20.00,"art. 6 staging: 1 purchase(s), each paying the 1‰ fee and cable charge"
+M03,30000,200757.00,63.12,97.25,160.36,0.5345,29839.64,3,payments over 2 years,,30.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,40000,267676.00,84.16,107.25,191.40,0.4785,39808.60,3,payments over 2 years,,40.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,50000,334595.00,105.20,117.25,222.44,0.4449,49777.56,3,payments over 2 years,,50.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,60000,401514.00,126.24,127.25,253.48,0.4225,59746.52,3,payments over 2 years,,60.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,70000,468433.00,147.28,137.25,284.52,0.4065,69715.48,3,payments over 2 years,,70.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,80000,535352.00,168.32,146.10,314.42,0.3930,79685.58,3,payments over 2 years,,80.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,90000,602271.00,189.36,151.10,340.46,0.3783,89659.54,3,payments over 2 years,,90.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,100000,669190.00,210.40,156.10,366.50,0.3665,99633.50,3,payments over 2 years,,100.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,110000,736109.00,231.44,161.10,392.54,0.3569,109607.46,3,payments over 2 years,,110.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,120000,803028.00,252.48,166.10,418.57,0.3488,119581.43,3,payments over 2 years,,120.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,130000,869947.00,273.52,171.10,444.61,0.3420,129555.39,3,payments over 2 years,,130.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,140000,936866.00,294.56,176.10,470.65,0.3362,139529.35,3,payments over 2 years,,140.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,150000,1003785.00,315.60,181.10,496.69,0.3311,149503.31,3,payments over 2 years,,150.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,160000,1070704.00,336.64,183.80,520.44,0.3253,159479.56,3,payments over 2 years,,160.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,170000,1137623.00,357.68,183.80,541.48,0.3185,169458.52,3,payments over 2 years,,170.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,180000,1204542.00,378.71,183.80,562.52,0.3125,179437.48,3,payments over 2 years,,180.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,190000,1271461.00,399.75,183.80,583.56,0.3071,189416.44,3,payments over 2 years,,190.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,200000,1338380.00,420.79,183.80,604.60,0.3023,199395.40,3,payments over 2 years,,200.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,210000,1405299.00,441.83,183.80,625.64,0.2979,209374.36,3,payments over 2 years,,210.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,220000,1472218.00,462.87,183.80,646.68,0.2939,219353.32,3,payments over 2 years,,220.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,230000,1539137.00,483.91,183.80,667.72,0.2903,229332.28,3,payments over 2 years,,230.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,240000,1606056.00,504.95,183.80,688.76,0.2870,239311.24,3,payments over 2 years,,240.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,250000,1672975.00,525.99,183.80,709.80,0.2839,249290.20,3,payments over 2 years,,250.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,260000,1739894.00,547.03,183.80,730.84,0.2811,259269.16,3,payments over 2 years,,260.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,270000,1806813.00,568.07,183.80,751.88,0.2785,269248.12,3,payments over 2 years,,270.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,280000,1873732.00,589.11,183.80,772.92,0.2760,279227.08,3,payments over 2 years,,280.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,290000,1940651.00,610.15,183.80,793.96,0.2738,289206.04,3,payments over 2 years,,290.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,300000,2007570.00,631.19,183.80,815.00,0.2717,299185.00,3,payments over 2 years,,300.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,310000,2074489.00,652.23,183.80,836.04,0.2697,309163.96,3,payments over 2 years,,310.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,320000,2141408.00,673.27,183.80,857.07,0.2678,319142.93,3,payments over 2 years,,320.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,330000,2208327.00,694.31,183.80,878.11,0.2661,329121.89,3,payments over 2 years,,330.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,340000,2275246.00,715.35,183.80,899.15,0.2645,339100.85,3,payments over 2 years,,340.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,350000,2342165.00,736.39,183.80,920.19,0.2629,349079.81,3,payments over 2 years,,350.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,360000,2409084.00,757.43,183.80,941.23,0.2615,359058.77,3,payments over 2 years,,360.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,370000,2476003.00,778.47,183.80,962.27,0.2601,369037.73,3,payments over 2 years,,370.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,380000,2542922.00,799.51,183.80,983.31,0.2588,379016.69,3,payments over 2 years,,380.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,390000,2609841.00,820.55,183.80,1004.35,0.2575,388995.65,3,payments over 2 years,,390.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M03,400000,2676760.00,841.59,183.80,1025.39,0.2563,398974.61,3,payments over 2 years,,400.00,"art. 6 staging: 3 purchase(s), each paying the 1‰ fee and cable charge"
+M04,10000,66919.00,21.04,32.42,53.45,0.5345,9946.55,1,transfer,,10.00,spread + 1 wire + cable; document costs blank
+M04,20000,133838.00,42.08,42.42,84.49,0.4225,19915.51,1,transfer,,20.00,spread + 1 wire + cable; document costs blank
+M04,30000,200757.00,63.12,52.42,115.53,0.3851,29884.47,1,transfer,,30.00,spread + 1 wire + cable; document costs blank
+M04,40000,267676.00,84.16,61.27,145.43,0.3636,39854.57,1,transfer,,40.00,spread + 1 wire + cable; document costs blank
+M04,50000,334595.00,105.20,61.27,166.47,0.3329,49833.53,1,transfer,,50.00,spread + 1 wire + cable; document costs blank
+M04,60000,401514.00,126.24,61.27,187.51,0.3125,59812.49,1,transfer,,60.00,spread + 1 wire + cable; document costs blank
+M04,70000,468433.00,147.28,61.27,208.55,0.2979,69791.45,1,transfer,,70.00,spread + 1 wire + cable; document costs blank
+M04,80000,535352.00,168.32,61.27,229.59,0.2870,79770.41,1,transfer,,80.00,spread + 1 wire + cable; document costs blank
+M04,90000,602271.00,189.36,61.27,250.63,0.2785,89749.37,1,transfer,,90.00,spread + 1 wire + cable; document costs blank
+M04,100000,669190.00,210.40,61.27,271.67,0.2717,99728.33,1,transfer,,100.00,spread + 1 wire + cable; document costs blank
+M04,110000,736109.00,231.44,61.27,292.70,0.2661,109707.30,1,transfer,,110.00,spread + 1 wire + cable; document costs blank
+M04,120000,803028.00,252.48,61.27,313.74,0.2615,119686.26,1,transfer,,120.00,spread + 1 wire + cable; document costs blank
+M04,130000,869947.00,273.52,61.27,334.78,0.2575,129665.22,1,transfer,,130.00,spread + 1 wire + cable; document costs blank
+M04,140000,936866.00,294.56,61.27,355.82,0.2542,139644.18,1,transfer,,140.00,spread + 1 wire + cable; document costs blank
+M04,150000,1003785.00,315.60,61.27,376.86,0.2512,149623.14,1,transfer,,150.00,spread + 1 wire + cable; document costs blank
+M04,160000,1070704.00,336.64,61.27,397.90,0.2487,159602.10,1,transfer,,160.00,spread + 1 wire + cable; document costs blank
+M04,170000,1137623.00,357.68,61.27,418.94,0.2464,169581.06,1,transfer,,170.00,spread + 1 wire + cable; document costs blank
+M04,180000,1204542.00,378.71,61.27,439.98,0.2444,179560.02,1,transfer,,180.00,spread + 1 wire + cable; document costs blank
+M04,190000,1271461.00,399.75,61.27,461.02,0.2426,189538.98,1,transfer,,190.00,spread + 1 wire + cable; document costs blank
+M04,200000,1338380.00,420.79,61.27,482.06,0.2410,199517.94,1,transfer,,200.00,spread + 1 wire + cable; document costs blank
+M04,210000,1405299.00,441.83,61.27,503.10,0.2396,209496.90,1,transfer,,210.00,spread + 1 wire + cable; document costs blank
+M04,220000,1472218.00,462.87,61.27,524.14,0.2382,219475.86,1,transfer,,220.00,spread + 1 wire + cable; document costs blank
+M04,230000,1539137.00,483.91,61.27,545.18,0.2370,229454.82,1,transfer,,230.00,spread + 1 wire + cable; document costs blank
+M04,240000,1606056.00,504.95,61.27,566.22,0.2359,239433.78,1,transfer,,240.00,spread + 1 wire + cable; document costs blank
+M04,250000,1672975.00,525.99,61.27,587.26,0.2349,249412.74,1,transfer,,250.00,spread + 1 wire + cable; document costs blank
+M04,260000,1739894.00,547.03,61.27,608.30,0.2340,259391.70,1,transfer,,260.00,spread + 1 wire + cable; document costs blank
+M04,270000,1806813.00,568.07,61.27,629.34,0.2331,269370.66,1,transfer,,270.00,spread + 1 wire + cable; document costs blank
+M04,280000,1873732.00,589.11,61.27,650.38,0.2323,279349.62,1,transfer,,280.00,spread + 1 wire + cable; document costs blank
+M04,290000,1940651.00,610.15,61.27,671.42,0.2315,289328.58,1,transfer,,290.00,spread + 1 wire + cable; document costs blank
+M04,300000,2007570.00,631.19,61.27,692.46,0.2308,299307.54,1,transfer,,300.00,spread + 1 wire + cable; document costs blank
+M04,310000,2074489.00,652.23,61.27,713.50,0.2302,309286.50,1,transfer,,310.00,spread + 1 wire + cable; document costs blank
+M04,320000,2141408.00,673.27,61.27,734.54,0.2295,319265.46,1,transfer,,320.00,spread + 1 wire + cable; document costs blank
+M04,330000,2208327.00,694.31,61.27,755.58,0.2290,329244.42,1,transfer,,330.00,spread + 1 wire + cable; document costs blank
+M04,340000,2275246.00,715.35,61.27,776.62,0.2284,339223.38,1,transfer,,340.00,spread + 1 wire + cable; document costs blank
+M04,350000,2342165.00,736.39,61.27,797.66,0.2279,349202.34,1,transfer,,350.00,spread + 1 wire + cable; document costs blank
+M04,360000,2409084.00,757.43,61.27,818.70,0.2274,359181.30,1,transfer,,360.00,spread + 1 wire + cable; document costs blank
+M04,370000,2476003.00,778.47,61.27,839.74,0.2270,369160.26,1,transfer,,370.00,spread + 1 wire + cable; document costs blank
+M04,380000,2542922.00,799.51,61.27,860.78,0.2265,379139.22,1,transfer,,380.00,spread + 1 wire + cable; document costs blank
+M04,390000,2609841.00,820.55,61.27,881.82,0.2261,389118.18,1,transfer,,390.00,spread + 1 wire + cable; document costs blank
+M04,400000,2676760.00,841.59,61.27,902.86,0.2257,399097.14,1,transfer,,400.00,spread + 1 wire + cable; document costs blank
+M05,10000,66919.00,21.04,32.42,53.45,0.5345,9946.55,1,transfer,,10.00,spread + 1 wire + cable; document costs blank
+M05,20000,133838.00,42.08,42.42,84.49,0.4225,19915.51,1,transfer,,20.00,spread + 1 wire + cable; document costs blank
+M05,30000,200757.00,63.12,52.42,115.53,0.3851,29884.47,1,transfer,,30.00,spread + 1 wire + cable; document costs blank
+M05,40000,267676.00,84.16,61.27,145.43,0.3636,39854.57,1,transfer,,40.00,spread + 1 wire + cable; document costs blank
+M05,50000,334595.00,105.20,61.27,166.47,0.3329,49833.53,1,transfer,,50.00,spread + 1 wire + cable; document costs blank
+M05,60000,401514.00,126.24,61.27,187.51,0.3125,59812.49,1,transfer,,60.00,spread + 1 wire + cable; document costs blank
+M05,70000,468433.00,147.28,61.27,208.55,0.2979,69791.45,1,transfer,,70.00,spread + 1 wire + cable; document costs blank
+M05,80000,535352.00,168.32,61.27,229.59,0.2870,79770.41,1,transfer,,80.00,spread + 1 wire + cable; document costs blank
+M05,90000,602271.00,189.36,61.27,250.63,0.2785,89749.37,1,transfer,,90.00,spread + 1 wire + cable; document costs blank
+M05,100000,669190.00,210.40,61.27,271.67,0.2717,99728.33,1,transfer,,100.00,spread + 1 wire + cable; document costs blank
+M05,110000,736109.00,231.44,61.27,292.70,0.2661,109707.30,1,transfer,,110.00,spread + 1 wire + cable; document costs blank
+M05,120000,803028.00,252.48,61.27,313.74,0.2615,119686.26,1,transfer,,120.00,spread + 1 wire + cable; document costs blank
+M05,130000,869947.00,273.52,61.27,334.78,0.2575,129665.22,1,transfer,,130.00,spread + 1 wire + cable; document costs blank
+M05,140000,936866.00,294.56,61.27,355.82,0.2542,139644.18,1,transfer,,140.00,spread + 1 wire + cable; document costs blank
+M05,150000,1003785.00,315.60,61.27,376.86,0.2512,149623.14,1,transfer,,150.00,spread + 1 wire + cable; document costs blank
+M05,160000,1070704.00,336.64,61.27,397.90,0.2487,159602.10,1,transfer,,160.00,spread + 1 wire + cable; document costs blank
+M05,170000,1137623.00,357.68,61.27,418.94,0.2464,169581.06,1,transfer,,170.00,spread + 1 wire + cable; document costs blank
+M05,180000,1204542.00,378.71,61.27,439.98,0.2444,179560.02,1,transfer,,180.00,spread + 1 wire + cable; document costs blank
+M05,190000,1271461.00,399.75,61.27,461.02,0.2426,189538.98,1,transfer,,190.00,spread + 1 wire + cable; document costs blank
+M05,200000,1338380.00,420.79,61.27,482.06,0.2410,199517.94,1,transfer,,200.00,spread + 1 wire + cable; document costs blank
+M05,210000,1405299.00,441.83,61.27,503.10,0.2396,209496.90,1,transfer,,210.00,spread + 1 wire + cable; document costs blank
+M05,220000,1472218.00,462.87,61.27,524.14,0.2382,219475.86,1,transfer,,220.00,spread + 1 wire + cable; document costs blank
+M05,230000,1539137.00,483.91,61.27,545.18,0.2370,229454.82,1,transfer,,230.00,spread + 1 wire + cable; document costs blank
+M05,240000,1606056.00,504.95,61.27,566.22,0.2359,239433.78,1,transfer,,240.00,spread + 1 wire + cable; document costs blank
+M05,250000,1672975.00,525.99,61.27,587.26,0.2349,249412.74,1,transfer,,250.00,spread + 1 wire + cable; document costs blank
+M05,260000,1739894.00,547.03,61.27,608.30,0.2340,259391.70,1,transfer,,260.00,spread + 1 wire + cable; document costs blank
+M05,270000,1806813.00,568.07,61.27,629.34,0.2331,269370.66,1,transfer,,270.00,spread + 1 wire + cable; document costs blank
+M05,280000,1873732.00,589.11,61.27,650.38,0.2323,279349.62,1,transfer,,280.00,spread + 1 wire + cable; document costs blank
+M05,290000,1940651.00,610.15,61.27,671.42,0.2315,289328.58,1,transfer,,290.00,spread + 1 wire + cable; document costs blank
+M05,300000,2007570.00,631.19,61.27,692.46,0.2308,299307.54,1,transfer,,300.00,spread + 1 wire + cable; document costs blank
+M05,310000,2074489.00,652.23,61.27,713.50,0.2302,309286.50,1,transfer,,310.00,spread + 1 wire + cable; document costs blank
+M05,320000,2141408.00,673.27,61.27,734.54,0.2295,319265.46,1,transfer,,320.00,spread + 1 wire + cable; document costs blank
+M05,330000,2208327.00,694.31,61.27,755.58,0.2290,329244.42,1,transfer,,330.00,spread + 1 wire + cable; document costs blank
+M05,340000,2275246.00,715.35,61.27,776.62,0.2284,339223.38,1,transfer,,340.00,spread + 1 wire + cable; document costs blank
+M05,350000,2342165.00,736.39,61.27,797.66,0.2279,349202.34,1,transfer,,350.00,spread + 1 wire + cable; document costs blank
+M05,360000,2409084.00,757.43,61.27,818.70,0.2274,359181.30,1,transfer,,360.00,spread + 1 wire + cable; document costs blank
+M05,370000,2476003.00,778.47,61.27,839.74,0.2270,369160.26,1,transfer,,370.00,spread + 1 wire + cable; document costs blank
+M05,380000,2542922.00,799.51,61.27,860.78,0.2265,379139.22,1,transfer,,380.00,spread + 1 wire + cable; document costs blank
+M05,390000,2609841.00,820.55,61.27,881.82,0.2261,389118.18,1,transfer,,390.00,spread + 1 wire + cable; document costs blank
+M05,400000,2676760.00,841.59,61.27,902.86,0.2257,399097.14,1,transfer,,400.00,spread + 1 wire + cable; document costs blank
+M06,10000,66919.00,21.04,32.42,53.45,0.5345,9946.55,1,transfer,,10.00,spread + 1 wire + cable
+M06,20000,133838.00,42.08,42.42,84.49,0.4225,19915.51,1,transfer,,20.00,spread + 1 wire + cable
+M06,30000,200757.00,63.12,52.42,115.53,0.3851,29884.47,1,transfer,,30.00,spread + 1 wire + cable
+M06,40000,267676.00,84.16,61.27,145.43,0.3636,39854.57,1,transfer,,40.00,spread + 1 wire + cable
+M06,50000,334595.00,105.20,61.27,166.47,0.3329,49833.53,1,transfer,,50.00,spread + 1 wire + cable
+M06,60000,401514.00,126.24,61.27,187.51,0.3125,59812.49,1,transfer,,60.00,spread + 1 wire + cable
+M06,70000,468433.00,147.28,61.27,208.55,0.2979,69791.45,1,transfer,,70.00,spread + 1 wire + cable
+M06,80000,535352.00,168.32,61.27,229.59,0.2870,79770.41,1,transfer,,80.00,spread + 1 wire + cable
+M06,90000,602271.00,189.36,61.27,250.63,0.2785,89749.37,1,transfer,,90.00,spread + 1 wire + cable
+M06,100000,669190.00,210.40,61.27,271.67,0.2717,99728.33,1,transfer,,100.00,spread + 1 wire + cable
+M06,110000,736109.00,231.44,61.27,292.70,0.2661,109707.30,1,transfer,,110.00,spread + 1 wire + cable
+M06,120000,803028.00,252.48,61.27,313.74,0.2615,119686.26,1,transfer,,120.00,spread + 1 wire + cable
+M06,130000,869947.00,273.52,61.27,334.78,0.2575,129665.22,1,transfer,,130.00,spread + 1 wire + cable
+M06,140000,936866.00,294.56,61.27,355.82,0.2542,139644.18,1,transfer,,140.00,spread + 1 wire + cable
+M06,150000,1003785.00,315.60,61.27,376.86,0.2512,149623.14,1,transfer,,150.00,spread + 1 wire + cable
+M06,160000,1070704.00,336.64,61.27,397.90,0.2487,159602.10,1,transfer,,160.00,spread + 1 wire + cable
+M06,170000,1137623.00,357.68,61.27,418.94,0.2464,169581.06,1,transfer,,170.00,spread + 1 wire + cable
+M06,180000,1204542.00,378.71,61.27,439.98,0.2444,179560.02,1,transfer,,180.00,spread + 1 wire + cable
+M06,190000,1271461.00,399.75,61.27,461.02,0.2426,189538.98,1,transfer,,190.00,spread + 1 wire + cable
+M06,200000,1338380.00,420.79,61.27,482.06,0.2410,199517.94,1,transfer,,200.00,spread + 1 wire + cable
+M06,210000,1405299.00,441.83,61.27,503.10,0.2396,209496.90,1,transfer,,210.00,spread + 1 wire + cable
+M06,220000,1472218.00,462.87,61.27,524.14,0.2382,219475.86,1,transfer,,220.00,spread + 1 wire + cable
+M06,230000,1539137.00,483.91,61.27,545.18,0.2370,229454.82,1,transfer,,230.00,spread + 1 wire + cable
+M06,240000,1606056.00,504.95,61.27,566.22,0.2359,239433.78,1,transfer,,240.00,spread + 1 wire + cable
+M06,250000,1672975.00,525.99,61.27,587.26,0.2349,249412.74,1,transfer,,250.00,spread + 1 wire + cable
+M06,260000,1739894.00,547.03,61.27,608.30,0.2340,259391.70,1,transfer,,260.00,spread + 1 wire + cable
+M06,270000,1806813.00,568.07,61.27,629.34,0.2331,269370.66,1,transfer,,270.00,spread + 1 wire + cable
+M06,280000,1873732.00,589.11,61.27,650.38,0.2323,279349.62,1,transfer,,280.00,spread + 1 wire + cable
+M06,290000,1940651.00,610.15,61.27,671.42,0.2315,289328.58,1,transfer,,290.00,spread + 1 wire + cable
+M06,300000,2007570.00,631.19,61.27,692.46,0.2308,299307.54,1,transfer,,300.00,spread + 1 wire + cable
+M06,310000,2074489.00,652.23,61.27,713.50,0.2302,309286.50,1,transfer,,310.00,spread + 1 wire + cable
+M06,320000,2141408.00,673.27,61.27,734.54,0.2295,319265.46,1,transfer,,320.00,spread + 1 wire + cable
+M06,330000,2208327.00,694.31,61.27,755.58,0.2290,329244.42,1,transfer,,330.00,spread + 1 wire + cable
+M06,340000,2275246.00,715.35,61.27,776.62,0.2284,339223.38,1,transfer,,340.00,spread + 1 wire + cable
+M06,350000,2342165.00,736.39,61.27,797.66,0.2279,349202.34,1,transfer,,350.00,spread + 1 wire + cable
+M06,360000,2409084.00,757.43,61.27,818.70,0.2274,359181.30,1,transfer,,360.00,spread + 1 wire + cable
+M06,370000,2476003.00,778.47,61.27,839.74,0.2270,369160.26,1,transfer,,370.00,spread + 1 wire + cable
+M06,380000,2542922.00,799.51,61.27,860.78,0.2265,379139.22,1,transfer,,380.00,spread + 1 wire + cable
+M06,390000,2609841.00,820.55,61.27,881.82,0.2261,389118.18,1,transfer,,390.00,spread + 1 wire + cable
+M06,400000,2676760.00,841.59,61.27,902.86,0.2257,399097.14,1,transfer,,400.00,spread + 1 wire + cable
+M07,10000,66919.00,0.00,32.42,32.42,0.3242,9967.58,1,transfer,,10.00,"no conversion, so no spread; wire + cable only"
+M07,20000,133838.00,0.00,42.42,42.42,0.2121,19957.58,1,transfer,,20.00,"no conversion, so no spread; wire + cable only"
+M07,30000,200757.00,0.00,52.42,52.42,0.1747,29947.58,1,transfer,,30.00,"no conversion, so no spread; wire + cable only"
+M07,40000,267676.00,0.00,61.27,61.27,0.1532,39938.73,1,transfer,,40.00,"no conversion, so no spread; wire + cable only"
+M07,50000,334595.00,0.00,61.27,61.27,0.1225,49938.73,1,transfer,,50.00,"no conversion, so no spread; wire + cable only"
+M07,60000,401514.00,0.00,61.27,61.27,0.1021,59938.73,1,transfer,,60.00,"no conversion, so no spread; wire + cable only"
+M07,70000,468433.00,0.00,61.27,61.27,0.0875,69938.73,1,transfer,,70.00,"no conversion, so no spread; wire + cable only"
+M07,80000,535352.00,0.00,61.27,61.27,0.0766,79938.73,1,transfer,,80.00,"no conversion, so no spread; wire + cable only"
+M07,90000,602271.00,0.00,61.27,61.27,0.0681,89938.73,1,transfer,,90.00,"no conversion, so no spread; wire + cable only"
+M07,100000,669190.00,0.00,61.27,61.27,0.0613,99938.73,1,transfer,,100.00,"no conversion, so no spread; wire + cable only"
+M07,110000,736109.00,0.00,61.27,61.27,0.0557,109938.73,1,transfer,,110.00,"no conversion, so no spread; wire + cable only"
+M07,120000,803028.00,0.00,61.27,61.27,0.0511,119938.73,1,transfer,,120.00,"no conversion, so no spread; wire + cable only"
+M07,130000,869947.00,0.00,61.27,61.27,0.0471,129938.73,1,transfer,,130.00,"no conversion, so no spread; wire + cable only"
+M07,140000,936866.00,0.00,61.27,61.27,0.0438,139938.73,1,transfer,,140.00,"no conversion, so no spread; wire + cable only"
+M07,150000,1003785.00,0.00,61.27,61.27,0.0408,149938.73,1,transfer,,150.00,"no conversion, so no spread; wire + cable only"
+M07,160000,1070704.00,0.00,61.27,61.27,0.0383,159938.73,1,transfer,,160.00,"no conversion, so no spread; wire + cable only"
+M07,170000,1137623.00,0.00,61.27,61.27,0.0360,169938.73,1,transfer,,170.00,"no conversion, so no spread; wire + cable only"
+M07,180000,1204542.00,0.00,61.27,61.27,0.0340,179938.73,1,transfer,,180.00,"no conversion, so no spread; wire + cable only"
+M07,190000,1271461.00,0.00,61.27,61.27,0.0322,189938.73,1,transfer,,190.00,"no conversion, so no spread; wire + cable only"
+M07,200000,1338380.00,0.00,61.27,61.27,0.0306,199938.73,1,transfer,,200.00,"no conversion, so no spread; wire + cable only"
+M07,210000,1405299.00,0.00,61.27,61.27,0.0292,209938.73,1,transfer,,210.00,"no conversion, so no spread; wire + cable only"
+M07,220000,1472218.00,0.00,61.27,61.27,0.0278,219938.73,1,transfer,,220.00,"no conversion, so no spread; wire + cable only"
+M07,230000,1539137.00,0.00,61.27,61.27,0.0266,229938.73,1,transfer,,230.00,"no conversion, so no spread; wire + cable only"
+M07,240000,1606056.00,0.00,61.27,61.27,0.0255,239938.73,1,transfer,,240.00,"no conversion, so no spread; wire + cable only"
+M07,250000,1672975.00,0.00,61.27,61.27,0.0245,249938.73,1,transfer,,250.00,"no conversion, so no spread; wire + cable only"
+M07,260000,1739894.00,0.00,61.27,61.27,0.0236,259938.73,1,transfer,,260.00,"no conversion, so no spread; wire + cable only"
+M07,270000,1806813.00,0.00,61.27,61.27,0.0227,269938.73,1,transfer,,270.00,"no conversion, so no spread; wire + cable only"
+M07,280000,1873732.00,0.00,61.27,61.27,0.0219,279938.73,1,transfer,,280.00,"no conversion, so no spread; wire + cable only"
+M07,290000,1940651.00,0.00,61.27,61.27,0.0211,289938.73,1,transfer,,290.00,"no conversion, so no spread; wire + cable only"
+M07,300000,2007570.00,0.00,61.27,61.27,0.0204,299938.73,1,transfer,,300.00,"no conversion, so no spread; wire + cable only"
+M07,310000,2074489.00,0.00,61.27,61.27,0.0198,309938.73,1,transfer,,310.00,"no conversion, so no spread; wire + cable only"
+M07,320000,2141408.00,0.00,61.27,61.27,0.0191,319938.73,1,transfer,,320.00,"no conversion, so no spread; wire + cable only"
+M07,330000,2208327.00,0.00,61.27,61.27,0.0186,329938.73,1,transfer,,330.00,"no conversion, so no spread; wire + cable only"
+M07,340000,2275246.00,0.00,61.27,61.27,0.0180,339938.73,1,transfer,,340.00,"no conversion, so no spread; wire + cable only"
+M07,350000,2342165.00,0.00,61.27,61.27,0.0175,349938.73,1,transfer,,350.00,"no conversion, so no spread; wire + cable only"
+M07,360000,2409084.00,0.00,61.27,61.27,0.0170,359938.73,1,transfer,,360.00,"no conversion, so no spread; wire + cable only"
+M07,370000,2476003.00,0.00,61.27,61.27,0.0166,369938.73,1,transfer,,370.00,"no conversion, so no spread; wire + cable only"
+M07,380000,2542922.00,0.00,61.27,61.27,0.0161,379938.73,1,transfer,,380.00,"no conversion, so no spread; wire + cable only"
+M07,390000,2609841.00,0.00,61.27,61.27,0.0157,389938.73,1,transfer,,390.00,"no conversion, so no spread; wire + cable only"
+M07,400000,2676760.00,0.00,61.27,61.27,0.0153,399938.73,1,transfer,,400.00,"no conversion, so no spread; wire + cable only"
+M08,10000,66919.00,,,,,,1,"years (RMB 100,000/yr ceiling)",,10.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,20000,133838.00,,,,,,2,"years (RMB 100,000/yr ceiling)",,20.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,30000,200757.00,,,,,,3,"years (RMB 100,000/yr ceiling)",,30.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,40000,267676.00,,,,,,3,"years (RMB 100,000/yr ceiling)",,40.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,50000,334595.00,,,,,,4,"years (RMB 100,000/yr ceiling)",,50.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,60000,401514.00,,,,,,5,"years (RMB 100,000/yr ceiling)",,60.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,70000,468433.00,,,,,,5,"years (RMB 100,000/yr ceiling)",,70.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,80000,535352.00,,,,,,6,"years (RMB 100,000/yr ceiling)",,80.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,90000,602271.00,,,,,,7,"years (RMB 100,000/yr ceiling)",,90.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,100000,669190.00,,,,,,7,"years (RMB 100,000/yr ceiling)",,100.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,110000,736109.00,,,,,,8,"years (RMB 100,000/yr ceiling)",,110.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,120000,803028.00,,,,,,9,"years (RMB 100,000/yr ceiling)",,120.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,130000,869947.00,,,,,,9,"years (RMB 100,000/yr ceiling)",,130.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,140000,936866.00,,,,,,10,"years (RMB 100,000/yr ceiling)",,140.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,150000,1003785.00,,,,,,11,"years (RMB 100,000/yr ceiling)",,150.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,160000,1070704.00,,,,,,11,"years (RMB 100,000/yr ceiling)",,160.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,170000,1137623.00,,,,,,12,"years (RMB 100,000/yr ceiling)",,170.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,180000,1204542.00,,,,,,13,"years (RMB 100,000/yr ceiling)",,180.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,190000,1271461.00,,,,,,13,"years (RMB 100,000/yr ceiling)",,190.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,200000,1338380.00,,,,,,14,"years (RMB 100,000/yr ceiling)",,200.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,210000,1405299.00,,,,,,15,"years (RMB 100,000/yr ceiling)",,210.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,220000,1472218.00,,,,,,15,"years (RMB 100,000/yr ceiling)",,220.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,230000,1539137.00,,,,,,16,"years (RMB 100,000/yr ceiling)",,230.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,240000,1606056.00,,,,,,17,"years (RMB 100,000/yr ceiling)",,240.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,250000,1672975.00,,,,,,17,"years (RMB 100,000/yr ceiling)",,250.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,260000,1739894.00,,,,,,18,"years (RMB 100,000/yr ceiling)",,260.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,270000,1806813.00,,,,,,19,"years (RMB 100,000/yr ceiling)",,270.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,280000,1873732.00,,,,,,19,"years (RMB 100,000/yr ceiling)",,280.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,290000,1940651.00,,,,,,20,"years (RMB 100,000/yr ceiling)",,290.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,300000,2007570.00,,,,,,21,"years (RMB 100,000/yr ceiling)",,300.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,310000,2074489.00,,,,,,21,"years (RMB 100,000/yr ceiling)",,310.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,320000,2141408.00,,,,,,22,"years (RMB 100,000/yr ceiling)",,320.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,330000,2208327.00,,,,,,23,"years (RMB 100,000/yr ceiling)",,330.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,340000,2275246.00,,,,,,23,"years (RMB 100,000/yr ceiling)",,340.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,350000,2342165.00,,,,,,24,"years (RMB 100,000/yr ceiling)",,350.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,360000,2409084.00,,,,,,25,"years (RMB 100,000/yr ceiling)",,360.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,370000,2476003.00,,,,,,25,"years (RMB 100,000/yr ceiling)",,370.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,380000,2542922.00,,,,,,26,"years (RMB 100,000/yr ceiling)",,380.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,390000,2609841.00,,,,,,27,"years (RMB 100,000/yr ceiling)",,390.00,per-withdrawal fee not published by SAFE or the card scheme
+M08,400000,2676760.00,,,,,,27,"years (RMB 100,000/yr ceiling)",,400.00,per-withdrawal fee not published by SAFE or the card scheme
+M09,10000,66919.00,,,0.00,0.0000,10000.00,1,"trips (USD 10,000 per trip)",2000.00,10.00,"no bank fee; physical carriage, permit and declaration required"
+M09,20000,133838.00,,,0.00,0.0000,20000.00,2,"trips (USD 10,000 per trip)",4000.00,20.00,"no bank fee; physical carriage, permit and declaration required"
+M09,30000,200757.00,,,0.00,0.0000,30000.00,3,"trips (USD 10,000 per trip)",6000.00,30.00,"no bank fee; physical carriage, permit and declaration required"
+M09,40000,267676.00,,,0.00,0.0000,40000.00,4,"trips (USD 10,000 per trip)",8000.00,40.00,"no bank fee; physical carriage, permit and declaration required"
+M09,50000,334595.00,,,0.00,0.0000,50000.00,5,"trips (USD 10,000 per trip)",10000.00,50.00,"no bank fee; physical carriage, permit and declaration required"
+M09,60000,401514.00,,,0.00,0.0000,60000.00,6,"trips (USD 10,000 per trip)",12000.00,60.00,"no bank fee; physical carriage, permit and declaration required"
+M09,70000,468433.00,,,0.00,0.0000,70000.00,7,"trips (USD 10,000 per trip)",14000.00,70.00,"no bank fee; physical carriage, permit and declaration required"
+M09,80000,535352.00,,,0.00,0.0000,80000.00,8,"trips (USD 10,000 per trip)",16000.00,80.00,"no bank fee; physical carriage, permit and declaration required"
+M09,90000,602271.00,,,0.00,0.0000,90000.00,9,"trips (USD 10,000 per trip)",18000.00,90.00,"no bank fee; physical carriage, permit and declaration required"
+M09,100000,669190.00,,,0.00,0.0000,100000.00,10,"trips (USD 10,000 per trip)",20000.00,100.00,"no bank fee; physical carriage, permit and declaration required"
+M09,110000,736109.00,,,0.00,0.0000,110000.00,11,"trips (USD 10,000 per trip)",22000.00,110.00,"no bank fee; physical carriage, permit and declaration required"
+M09,120000,803028.00,,,0.00,0.0000,120000.00,12,"trips (USD 10,000 per trip)",24000.00,120.00,"no bank fee; physical carriage, permit and declaration required"
+M09,130000,869947.00,,,0.00,0.0000,130000.00,13,"trips (USD 10,000 per trip)",26000.00,130.00,"no bank fee; physical carriage, permit and declaration required"
+M09,140000,936866.00,,,0.00,0.0000,140000.00,14,"trips (USD 10,000 per trip)",28000.00,140.00,"no bank fee; physical carriage, permit and declaration required"
+M09,150000,1003785.00,,,0.00,0.0000,150000.00,15,"trips (USD 10,000 per trip)",30000.00,150.00,"no bank fee; physical carriage, permit and declaration required"
+M09,160000,1070704.00,,,0.00,0.0000,160000.00,16,"trips (USD 10,000 per trip)",32000.00,160.00,"no bank fee; physical carriage, permit and declaration required"
+M09,170000,1137623.00,,,0.00,0.0000,170000.00,17,"trips (USD 10,000 per trip)",34000.00,170.00,"no bank fee; physical carriage, permit and declaration required"
+M09,180000,1204542.00,,,0.00,0.0000,180000.00,18,"trips (USD 10,000 per trip)",36000.00,180.00,"no bank fee; physical carriage, permit and declaration required"
+M09,190000,1271461.00,,,0.00,0.0000,190000.00,19,"trips (USD 10,000 per trip)",38000.00,190.00,"no bank fee; physical carriage, permit and declaration required"
+M09,200000,1338380.00,,,0.00,0.0000,200000.00,20,"trips (USD 10,000 per trip)",40000.00,200.00,"no bank fee; physical carriage, permit and declaration required"
+M09,210000,1405299.00,,,0.00,0.0000,210000.00,21,"trips (USD 10,000 per trip)",42000.00,210.00,"no bank fee; physical carriage, permit and declaration required"
+M09,220000,1472218.00,,,0.00,0.0000,220000.00,22,"trips (USD 10,000 per trip)",44000.00,220.00,"no bank fee; physical carriage, permit and declaration required"
+M09,230000,1539137.00,,,0.00,0.0000,230000.00,23,"trips (USD 10,000 per trip)",46000.00,230.00,"no bank fee; physical carriage, permit and declaration required"
+M09,240000,1606056.00,,,0.00,0.0000,240000.00,24,"trips (USD 10,000 per trip)",48000.00,240.00,"no bank fee; physical carriage, permit and declaration required"
+M09,250000,1672975.00,,,0.00,0.0000,250000.00,25,"trips (USD 10,000 per trip)",50000.00,250.00,"no bank fee; physical carriage, permit and declaration required"
+M09,260000,1739894.00,,,0.00,0.0000,260000.00,26,"trips (USD 10,000 per trip)",52000.00,260.00,"no bank fee; physical carriage, permit and declaration required"
+M09,270000,1806813.00,,,0.00,0.0000,270000.00,27,"trips (USD 10,000 per trip)",54000.00,270.00,"no bank fee; physical carriage, permit and declaration required"
+M09,280000,1873732.00,,,0.00,0.0000,280000.00,28,"trips (USD 10,000 per trip)",56000.00,280.00,"no bank fee; physical carriage, permit and declaration required"
+M09,290000,1940651.00,,,0.00,0.0000,290000.00,29,"trips (USD 10,000 per trip)",58000.00,290.00,"no bank fee; physical carriage, permit and declaration required"
+M09,300000,2007570.00,,,0.00,0.0000,300000.00,30,"trips (USD 10,000 per trip)",60000.00,300.00,"no bank fee; physical carriage, permit and declaration required"
+M09,310000,2074489.00,,,0.00,0.0000,310000.00,31,"trips (USD 10,000 per trip)",62000.00,310.00,"no bank fee; physical carriage, permit and declaration required"
+M09,320000,2141408.00,,,0.00,0.0000,320000.00,32,"trips (USD 10,000 per trip)",64000.00,320.00,"no bank fee; physical carriage, permit and declaration required"
+M09,330000,2208327.00,,,0.00,0.0000,330000.00,33,"trips (USD 10,000 per trip)",66000.00,330.00,"no bank fee; physical carriage, permit and declaration required"
+M09,340000,2275246.00,,,0.00,0.0000,340000.00,34,"trips (USD 10,000 per trip)",68000.00,340.00,"no bank fee; physical carriage, permit and declaration required"
+M09,350000,2342165.00,,,0.00,0.0000,350000.00,35,"trips (USD 10,000 per trip)",70000.00,350.00,"no bank fee; physical carriage, permit and declaration required"
+M09,360000,2409084.00,,,0.00,0.0000,360000.00,36,"trips (USD 10,000 per trip)",72000.00,360.00,"no bank fee; physical carriage, permit and declaration required"
+M09,370000,2476003.00,,,0.00,0.0000,370000.00,37,"trips (USD 10,000 per trip)",74000.00,370.00,"no bank fee; physical carriage, permit and declaration required"
+M09,380000,2542922.00,,,0.00,0.0000,380000.00,38,"trips (USD 10,000 per trip)",76000.00,380.00,"no bank fee; physical carriage, permit and declaration required"
+M09,390000,2609841.00,,,0.00,0.0000,390000.00,39,"trips (USD 10,000 per trip)",78000.00,390.00,"no bank fee; physical carriage, permit and declaration required"
+M09,400000,2676760.00,,,0.00,0.0000,400000.00,40,"trips (USD 10,000 per trip)",80000.00,400.00,"no bank fee; physical carriage, permit and declaration required"
+M10,10000,66919.00,,,,,,1,conversion,,10.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,20000,133838.00,,,,,,1,conversion,,20.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,30000,200757.00,,,,,,1,conversion,,30.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,40000,267676.00,,,,,,1,conversion,,40.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,50000,334595.00,,,,,,1,conversion,,50.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,60000,401514.00,,,,,,1,conversion,,60.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,70000,468433.00,,,,,,1,conversion,,70.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,80000,535352.00,,,,,,1,conversion,,80.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,90000,602271.00,,,,,,1,conversion,,90.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,100000,669190.00,,,,,,1,conversion,,100.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,110000,736109.00,,,,,,1,conversion,,110.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,120000,803028.00,,,,,,1,conversion,,120.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,130000,869947.00,,,,,,1,conversion,,130.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,140000,936866.00,,,,,,1,conversion,,140.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,150000,1003785.00,,,,,,1,conversion,,150.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,160000,1070704.00,,,,,,1,conversion,,160.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,170000,1137623.00,,,,,,1,conversion,,170.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,180000,1204542.00,,,,,,1,conversion,,180.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,190000,1271461.00,,,,,,1,conversion,,190.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,200000,1338380.00,,,,,,1,conversion,,200.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,210000,1405299.00,,,,,,1,conversion,,210.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,220000,1472218.00,,,,,,1,conversion,,220.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,230000,1539137.00,,,,,,1,conversion,,230.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,240000,1606056.00,,,,,,1,conversion,,240.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,250000,1672975.00,,,,,,1,conversion,,250.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,260000,1739894.00,,,,,,1,conversion,,260.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,270000,1806813.00,,,,,,1,conversion,,270.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,280000,1873732.00,,,,,,1,conversion,,280.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,290000,1940651.00,,,,,,1,conversion,,290.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,300000,2007570.00,,,,,,1,conversion,,300.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,310000,2074489.00,,,,,,1,conversion,,310.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,320000,2141408.00,,,,,,1,conversion,,320.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,330000,2208327.00,,,,,,1,conversion,,330.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,340000,2275246.00,,,,,,1,conversion,,340.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,350000,2342165.00,,,,,,1,conversion,,350.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,360000,2409084.00,,,,,,1,conversion,,360.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,370000,2476003.00,,,,,,1,conversion,,370.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,380000,2542922.00,,,,,,1,conversion,,380.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,390000,2609841.00,,,,,,1,conversion,,390.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M10,400000,2676760.00,,,,,,1,conversion,,400.00,"no published retail CNH spread; blank, with the 0.10% coefficient given"
+M11,10000,,,,,,,,n/a,,10.00,no lawful or available path for this fact pattern
+M11,20000,,,,,,,,n/a,,20.00,no lawful or available path for this fact pattern
+M11,30000,,,,,,,,n/a,,30.00,no lawful or available path for this fact pattern
+M11,40000,,,,,,,,n/a,,40.00,no lawful or available path for this fact pattern
+M11,50000,,,,,,,,n/a,,50.00,no lawful or available path for this fact pattern
+M11,60000,,,,,,,,n/a,,60.00,no lawful or available path for this fact pattern
+M11,70000,,,,,,,,n/a,,70.00,no lawful or available path for this fact pattern
+M11,80000,,,,,,,,n/a,,80.00,no lawful or available path for this fact pattern
+M11,90000,,,,,,,,n/a,,90.00,no lawful or available path for this fact pattern
+M11,100000,,,,,,,,n/a,,100.00,no lawful or available path for this fact pattern
+M11,110000,,,,,,,,n/a,,110.00,no lawful or available path for this fact pattern
+M11,120000,,,,,,,,n/a,,120.00,no lawful or available path for this fact pattern
+M11,130000,,,,,,,,n/a,,130.00,no lawful or available path for this fact pattern
+M11,140000,,,,,,,,n/a,,140.00,no lawful or available path for this fact pattern
+M11,150000,,,,,,,,n/a,,150.00,no lawful or available path for this fact pattern
+M11,160000,,,,,,,,n/a,,160.00,no lawful or available path for this fact pattern
+M11,170000,,,,,,,,n/a,,170.00,no lawful or available path for this fact pattern
+M11,180000,,,,,,,,n/a,,180.00,no lawful or available path for this fact pattern
+M11,190000,,,,,,,,n/a,,190.00,no lawful or available path for this fact pattern
+M11,200000,,,,,,,,n/a,,200.00,no lawful or available path for this fact pattern
+M11,210000,,,,,,,,n/a,,210.00,no lawful or available path for this fact pattern
+M11,220000,,,,,,,,n/a,,220.00,no lawful or available path for this fact pattern
+M11,230000,,,,,,,,n/a,,230.00,no lawful or available path for this fact pattern
+M11,240000,,,,,,,,n/a,,240.00,no lawful or available path for this fact pattern
+M11,250000,,,,,,,,n/a,,250.00,no lawful or available path for this fact pattern
+M11,260000,,,,,,,,n/a,,260.00,no lawful or available path for this fact pattern
+M11,270000,,,,,,,,n/a,,270.00,no lawful or available path for this fact pattern
+M11,280000,,,,,,,,n/a,,280.00,no lawful or available path for this fact pattern
+M11,290000,,,,,,,,n/a,,290.00,no lawful or available path for this fact pattern
+M11,300000,,,,,,,,n/a,,300.00,no lawful or available path for this fact pattern
+M11,310000,,,,,,,,n/a,,310.00,no lawful or available path for this fact pattern
+M11,320000,,,,,,,,n/a,,320.00,no lawful or available path for this fact pattern
+M11,330000,,,,,,,,n/a,,330.00,no lawful or available path for this fact pattern
+M11,340000,,,,,,,,n/a,,340.00,no lawful or available path for this fact pattern
+M11,350000,,,,,,,,n/a,,350.00,no lawful or available path for this fact pattern
+M11,360000,,,,,,,,n/a,,360.00,no lawful or available path for this fact pattern
+M11,370000,,,,,,,,n/a,,370.00,no lawful or available path for this fact pattern
+M11,380000,,,,,,,,n/a,,380.00,no lawful or available path for this fact pattern
+M11,390000,,,,,,,,n/a,,390.00,no lawful or available path for this fact pattern
+M11,400000,,,,,,,,n/a,,400.00,no lawful or available path for this fact pattern
+M12,10000,,,,,,,,n/a,,10.00,no lawful or available path for this fact pattern
+M12,20000,,,,,,,,n/a,,20.00,no lawful or available path for this fact pattern
+M12,30000,,,,,,,,n/a,,30.00,no lawful or available path for this fact pattern
+M12,40000,,,,,,,,n/a,,40.00,no lawful or available path for this fact pattern
+M12,50000,,,,,,,,n/a,,50.00,no lawful or available path for this fact pattern
+M12,60000,,,,,,,,n/a,,60.00,no lawful or available path for this fact pattern
+M12,70000,,,,,,,,n/a,,70.00,no lawful or available path for this fact pattern
+M12,80000,,,,,,,,n/a,,80.00,no lawful or available path for this fact pattern
+M12,90000,,,,,,,,n/a,,90.00,no lawful or available path for this fact pattern
+M12,100000,,,,,,,,n/a,,100.00,no lawful or available path for this fact pattern
+M12,110000,,,,,,,,n/a,,110.00,no lawful or available path for this fact pattern
+M12,120000,,,,,,,,n/a,,120.00,no lawful or available path for this fact pattern
+M12,130000,,,,,,,,n/a,,130.00,no lawful or available path for this fact pattern
+M12,140000,,,,,,,,n/a,,140.00,no lawful or available path for this fact pattern
+M12,150000,,,,,,,,n/a,,150.00,no lawful or available path for this fact pattern
+M12,160000,,,,,,,,n/a,,160.00,no lawful or available path for this fact pattern
+M12,170000,,,,,,,,n/a,,170.00,no lawful or available path for this fact pattern
+M12,180000,,,,,,,,n/a,,180.00,no lawful or available path for this fact pattern
+M12,190000,,,,,,,,n/a,,190.00,no lawful or available path for this fact pattern
+M12,200000,,,,,,,,n/a,,200.00,no lawful or available path for this fact pattern
+M12,210000,,,,,,,,n/a,,210.00,no lawful or available path for this fact pattern
+M12,220000,,,,,,,,n/a,,220.00,no lawful or available path for this fact pattern
+M12,230000,,,,,,,,n/a,,230.00,no lawful or available path for this fact pattern
+M12,240000,,,,,,,,n/a,,240.00,no lawful or available path for this fact pattern
+M12,250000,,,,,,,,n/a,,250.00,no lawful or available path for this fact pattern
+M12,260000,,,,,,,,n/a,,260.00,no lawful or available path for this fact pattern
+M12,270000,,,,,,,,n/a,,270.00,no lawful or available path for this fact pattern
+M12,280000,,,,,,,,n/a,,280.00,no lawful or available path for this fact pattern
+M12,290000,,,,,,,,n/a,,290.00,no lawful or available path for this fact pattern
+M12,300000,,,,,,,,n/a,,300.00,no lawful or available path for this fact pattern
+M12,310000,,,,,,,,n/a,,310.00,no lawful or available path for this fact pattern
+M12,320000,,,,,,,,n/a,,320.00,no lawful or available path for this fact pattern
+M12,330000,,,,,,,,n/a,,330.00,no lawful or available path for this fact pattern
+M12,340000,,,,,,,,n/a,,340.00,no lawful or available path for this fact pattern
+M12,350000,,,,,,,,n/a,,350.00,no lawful or available path for this fact pattern
+M12,360000,,,,,,,,n/a,,360.00,no lawful or available path for this fact pattern
+M12,370000,,,,,,,,n/a,,370.00,no lawful or available path for this fact pattern
+M12,380000,,,,,,,,n/a,,380.00,no lawful or available path for this fact pattern
+M12,390000,,,,,,,,n/a,,390.00,no lawful or available path for this fact pattern
+M12,400000,,,,,,,,n/a,,400.00,no lawful or available path for this fact pattern
+M13,10000,,,,,,,,n/a,,10.00,no lawful or available path for this fact pattern
+M13,20000,,,,,,,,n/a,,20.00,no lawful or available path for this fact pattern
+M13,30000,,,,,,,,n/a,,30.00,no lawful or available path for this fact pattern
+M13,40000,,,,,,,,n/a,,40.00,no lawful or available path for this fact pattern
+M13,50000,,,,,,,,n/a,,50.00,no lawful or available path for this fact pattern
+M13,60000,,,,,,,,n/a,,60.00,no lawful or available path for this fact pattern
+M13,70000,,,,,,,,n/a,,70.00,no lawful or available path for this fact pattern
+M13,80000,,,,,,,,n/a,,80.00,no lawful or available path for this fact pattern
+M13,90000,,,,,,,,n/a,,90.00,no lawful or available path for this fact pattern
+M13,100000,,,,,,,,n/a,,100.00,no lawful or available path for this fact pattern
+M13,110000,,,,,,,,n/a,,110.00,no lawful or available path for this fact pattern
+M13,120000,,,,,,,,n/a,,120.00,no lawful or available path for this fact pattern
+M13,130000,,,,,,,,n/a,,130.00,no lawful or available path for this fact pattern
+M13,140000,,,,,,,,n/a,,140.00,no lawful or available path for this fact pattern
+M13,150000,,,,,,,,n/a,,150.00,no lawful or available path for this fact pattern
+M13,160000,,,,,,,,n/a,,160.00,no lawful or available path for this fact pattern
+M13,170000,,,,,,,,n/a,,170.00,no lawful or available path for this fact pattern
+M13,180000,,,,,,,,n/a,,180.00,no lawful or available path for this fact pattern
+M13,190000,,,,,,,,n/a,,190.00,no lawful or available path for this fact pattern
+M13,200000,,,,,,,,n/a,,200.00,no lawful or available path for this fact pattern
+M13,210000,,,,,,,,n/a,,210.00,no lawful or available path for this fact pattern
+M13,220000,,,,,,,,n/a,,220.00,no lawful or available path for this fact pattern
+M13,230000,,,,,,,,n/a,,230.00,no lawful or available path for this fact pattern
+M13,240000,,,,,,,,n/a,,240.00,no lawful or available path for this fact pattern
+M13,250000,,,,,,,,n/a,,250.00,no lawful or available path for this fact pattern
+M13,260000,,,,,,,,n/a,,260.00,no lawful or available path for this fact pattern
+M13,270000,,,,,,,,n/a,,270.00,no lawful or available path for this fact pattern
+M13,280000,,,,,,,,n/a,,280.00,no lawful or available path for this fact pattern
+M13,290000,,,,,,,,n/a,,290.00,no lawful or available path for this fact pattern
+M13,300000,,,,,,,,n/a,,300.00,no lawful or available path for this fact pattern
+M13,310000,,,,,,,,n/a,,310.00,no lawful or available path for this fact pattern
+M13,320000,,,,,,,,n/a,,320.00,no lawful or available path for this fact pattern
+M13,330000,,,,,,,,n/a,,330.00,no lawful or available path for this fact pattern
+M13,340000,,,,,,,,n/a,,340.00,no lawful or available path for this fact pattern
+M13,350000,,,,,,,,n/a,,350.00,no lawful or available path for this fact pattern
+M13,360000,,,,,,,,n/a,,360.00,no lawful or available path for this fact pattern
+M13,370000,,,,,,,,n/a,,370.00,no lawful or available path for this fact pattern
+M13,380000,,,,,,,,n/a,,380.00,no lawful or available path for this fact pattern
+M13,390000,,,,,,,,n/a,,390.00,no lawful or available path for this fact pattern
+M13,400000,,,,,,,,n/a,,400.00,no lawful or available path for this fact pattern
+M14,10000,,,,,,,,n/a,,10.00,no lawful or available path for this fact pattern
+M14,20000,,,,,,,,n/a,,20.00,no lawful or available path for this fact pattern
+M14,30000,,,,,,,,n/a,,30.00,no lawful or available path for this fact pattern
+M14,40000,,,,,,,,n/a,,40.00,no lawful or available path for this fact pattern
+M14,50000,,,,,,,,n/a,,50.00,no lawful or available path for this fact pattern
+M14,60000,,,,,,,,n/a,,60.00,no lawful or available path for this fact pattern
+M14,70000,,,,,,,,n/a,,70.00,no lawful or available path for this fact pattern
+M14,80000,,,,,,,,n/a,,80.00,no lawful or available path for this fact pattern
+M14,90000,,,,,,,,n/a,,90.00,no lawful or available path for this fact pattern
+M14,100000,,,,,,,,n/a,,100.00,no lawful or available path for this fact pattern
+M14,110000,,,,,,,,n/a,,110.00,no lawful or available path for this fact pattern
+M14,120000,,,,,,,,n/a,,120.00,no lawful or available path for this fact pattern
+M14,130000,,,,,,,,n/a,,130.00,no lawful or available path for this fact pattern
+M14,140000,,,,,,,,n/a,,140.00,no lawful or available path for this fact pattern
+M14,150000,,,,,,,,n/a,,150.00,no lawful or available path for this fact pattern
+M14,160000,,,,,,,,n/a,,160.00,no lawful or available path for this fact pattern
+M14,170000,,,,,,,,n/a,,170.00,no lawful or available path for this fact pattern
+M14,180000,,,,,,,,n/a,,180.00,no lawful or available path for this fact pattern
+M14,190000,,,,,,,,n/a,,190.00,no lawful or available path for this fact pattern
+M14,200000,,,,,,,,n/a,,200.00,no lawful or available path for this fact pattern
+M14,210000,,,,,,,,n/a,,210.00,no lawful or available path for this fact pattern
+M14,220000,,,,,,,,n/a,,220.00,no lawful or available path for this fact pattern
+M14,230000,,,,,,,,n/a,,230.00,no lawful or available path for this fact pattern
+M14,240000,,,,,,,,n/a,,240.00,no lawful or available path for this fact pattern
+M14,250000,,,,,,,,n/a,,250.00,no lawful or available path for this fact pattern
+M14,260000,,,,,,,,n/a,,260.00,no lawful or available path for this fact pattern
+M14,270000,,,,,,,,n/a,,270.00,no lawful or available path for this fact pattern
+M14,280000,,,,,,,,n/a,,280.00,no lawful or available path for this fact pattern
+M14,290000,,,,,,,,n/a,,290.00,no lawful or available path for this fact pattern
+M14,300000,,,,,,,,n/a,,300.00,no lawful or available path for this fact pattern
+M14,310000,,,,,,,,n/a,,310.00,no lawful or available path for this fact pattern
+M14,320000,,,,,,,,n/a,,320.00,no lawful or available path for this fact pattern
+M14,330000,,,,,,,,n/a,,330.00,no lawful or available path for this fact pattern
+M14,340000,,,,,,,,n/a,,340.00,no lawful or available path for this fact pattern
+M14,350000,,,,,,,,n/a,,350.00,no lawful or available path for this fact pattern
+M14,360000,,,,,,,,n/a,,360.00,no lawful or available path for this fact pattern
+M14,370000,,,,,,,,n/a,,370.00,no lawful or available path for this fact pattern
+M14,380000,,,,,,,,n/a,,380.00,no lawful or available path for this fact pattern
+M14,390000,,,,,,,,n/a,,390.00,no lawful or available path for this fact pattern
+M14,400000,,,,,,,,n/a,,400.00,no lawful or available path for this fact pattern
+M15,10000,,,,,,,,n/a,10000.00,10.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,20000,,,,,,,,n/a,20000.00,20.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,30000,,,,,,,,n/a,30000.00,30.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,40000,,,,,,,,n/a,40000.00,40.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,50000,,,,,,,,n/a,50000.00,50.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,60000,,,,,,,,n/a,60000.00,60.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,70000,,,,,,,,n/a,70000.00,70.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,80000,,,,,,,,n/a,80000.00,80.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,90000,,,,,,,,n/a,90000.00,90.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,100000,,,,,,,,n/a,100000.00,100.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,110000,,,,,,,,n/a,110000.00,110.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,120000,,,,,,,,n/a,120000.00,120.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,130000,,,,,,,,n/a,130000.00,130.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,140000,,,,,,,,n/a,140000.00,140.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,150000,,,,,,,,n/a,150000.00,150.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,160000,,,,,,,,n/a,160000.00,160.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,170000,,,,,,,,n/a,170000.00,170.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,180000,,,,,,,,n/a,180000.00,180.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,190000,,,,,,,,n/a,190000.00,190.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,200000,,,,,,,,n/a,200000.00,200.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,210000,,,,,,,,n/a,210000.00,210.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,220000,,,,,,,,n/a,220000.00,220.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,230000,,,,,,,,n/a,230000.00,230.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,240000,,,,,,,,n/a,240000.00,240.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,250000,,,,,,,,n/a,250000.00,250.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,260000,,,,,,,,n/a,260000.00,260.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,270000,,,,,,,,n/a,270000.00,270.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,280000,,,,,,,,n/a,280000.00,280.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,290000,,,,,,,,n/a,290000.00,290.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,300000,,,,,,,,n/a,300000.00,300.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,310000,,,,,,,,n/a,310000.00,310.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,320000,,,,,,,,n/a,320000.00,320.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,330000,,,,,,,,n/a,330000.00,330.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,340000,,,,,,,,n/a,340000.00,340.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,350000,,,,,,,,n/a,350000.00,350.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,360000,,,,,,,,n/a,360000.00,360.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,370000,,,,,,,,n/a,370000.00,370.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,380000,,,,,,,,n/a,380000.00,380.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,390000,,,,,,,,n/a,390000.00,390.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M15,400000,,,,,,,,n/a,400000.00,400.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,10000,,,,,,,,n/a,10000.00,10.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,20000,,,,,,,,n/a,20000.00,20.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,30000,,,,,,,,n/a,30000.00,30.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,40000,,,,,,,,n/a,40000.00,40.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,50000,,,,,,,,n/a,50000.00,50.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,60000,,,,,,,,n/a,60000.00,60.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,70000,,,,,,,,n/a,70000.00,70.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,80000,,,,,,,,n/a,80000.00,80.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,90000,,,,,,,,n/a,90000.00,90.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,100000,,,,,,,,n/a,100000.00,100.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,110000,,,,,,,,n/a,110000.00,110.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,120000,,,,,,,,n/a,120000.00,120.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,130000,,,,,,,,n/a,130000.00,130.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,140000,,,,,,,,n/a,140000.00,140.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,150000,,,,,,,,n/a,150000.00,150.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,160000,,,,,,,,n/a,160000.00,160.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,170000,,,,,,,,n/a,170000.00,170.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,180000,,,,,,,,n/a,180000.00,180.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,190000,,,,,,,,n/a,190000.00,190.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,200000,,,,,,,,n/a,200000.00,200.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,210000,,,,,,,,n/a,210000.00,210.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,220000,,,,,,,,n/a,220000.00,220.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,230000,,,,,,,,n/a,230000.00,230.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,240000,,,,,,,,n/a,240000.00,240.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,250000,,,,,,,,n/a,250000.00,250.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,260000,,,,,,,,n/a,260000.00,260.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,270000,,,,,,,,n/a,270000.00,270.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,280000,,,,,,,,n/a,280000.00,280.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,290000,,,,,,,,n/a,290000.00,290.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,300000,,,,,,,,n/a,300000.00,300.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,310000,,,,,,,,n/a,310000.00,310.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,320000,,,,,,,,n/a,320000.00,320.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,330000,,,,,,,,n/a,330000.00,330.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,340000,,,,,,,,n/a,340000.00,340.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,350000,,,,,,,,n/a,350000.00,350.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,360000,,,,,,,,n/a,360000.00,360.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,370000,,,,,,,,n/a,370000.00,370.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,380000,,,,,,,,n/a,380000.00,380.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,390000,,,,,,,,n/a,390000.00,390.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M16,400000,,,,,,,,n/a,400000.00,400.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,10000,,,,,,,,n/a,10000.00,10.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,20000,,,,,,,,n/a,20000.00,20.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,30000,,,,,,,,n/a,30000.00,30.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,40000,,,,,,,,n/a,40000.00,40.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,50000,,,,,,,,n/a,50000.00,50.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,60000,,,,,,,,n/a,60000.00,60.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,70000,,,,,,,,n/a,70000.00,70.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,80000,,,,,,,,n/a,80000.00,80.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,90000,,,,,,,,n/a,90000.00,90.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,100000,,,,,,,,n/a,100000.00,100.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,110000,,,,,,,,n/a,110000.00,110.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,120000,,,,,,,,n/a,120000.00,120.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,130000,,,,,,,,n/a,130000.00,130.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,140000,,,,,,,,n/a,140000.00,140.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,150000,,,,,,,,n/a,150000.00,150.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,160000,,,,,,,,n/a,160000.00,160.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,170000,,,,,,,,n/a,170000.00,170.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,180000,,,,,,,,n/a,180000.00,180.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,190000,,,,,,,,n/a,190000.00,190.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,200000,,,,,,,,n/a,200000.00,200.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,210000,,,,,,,,n/a,210000.00,210.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,220000,,,,,,,,n/a,220000.00,220.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,230000,,,,,,,,n/a,230000.00,230.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,240000,,,,,,,,n/a,240000.00,240.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,250000,,,,,,,,n/a,250000.00,250.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,260000,,,,,,,,n/a,260000.00,260.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,270000,,,,,,,,n/a,270000.00,270.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,280000,,,,,,,,n/a,280000.00,280.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,290000,,,,,,,,n/a,290000.00,290.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,300000,,,,,,,,n/a,300000.00,300.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,310000,,,,,,,,n/a,310000.00,310.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,320000,,,,,,,,n/a,320000.00,320.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,330000,,,,,,,,n/a,330000.00,330.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,340000,,,,,,,,n/a,340000.00,340.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,350000,,,,,,,,n/a,350000.00,350.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,360000,,,,,,,,n/a,360000.00,360.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,370000,,,,,,,,n/a,370000.00,370.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,380000,,,,,,,,n/a,380000.00,380.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,390000,,,,,,,,n/a,390000.00,390.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M17,400000,,,,,,,,n/a,400000.00,400.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,10000,,,,,,,,n/a,10000.00,10.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,20000,,,,,,,,n/a,20000.00,20.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,30000,,,,,,,,n/a,30000.00,30.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,40000,,,,,,,,n/a,40000.00,40.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,50000,,,,,,,,n/a,50000.00,50.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,60000,,,,,,,,n/a,60000.00,60.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,70000,,,,,,,,n/a,70000.00,70.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,80000,,,,,,,,n/a,80000.00,80.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,90000,,,,,,,,n/a,90000.00,90.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,100000,,,,,,,,n/a,100000.00,100.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,110000,,,,,,,,n/a,110000.00,110.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,120000,,,,,,,,n/a,120000.00,120.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,130000,,,,,,,,n/a,130000.00,130.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,140000,,,,,,,,n/a,140000.00,140.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,150000,,,,,,,,n/a,150000.00,150.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,160000,,,,,,,,n/a,160000.00,160.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,170000,,,,,,,,n/a,170000.00,170.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,180000,,,,,,,,n/a,180000.00,180.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,190000,,,,,,,,n/a,190000.00,190.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,200000,,,,,,,,n/a,200000.00,200.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,210000,,,,,,,,n/a,210000.00,210.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,220000,,,,,,,,n/a,220000.00,220.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,230000,,,,,,,,n/a,230000.00,230.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,240000,,,,,,,,n/a,240000.00,240.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,250000,,,,,,,,n/a,250000.00,250.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,260000,,,,,,,,n/a,260000.00,260.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,270000,,,,,,,,n/a,270000.00,270.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,280000,,,,,,,,n/a,280000.00,280.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,290000,,,,,,,,n/a,290000.00,290.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,300000,,,,,,,,n/a,300000.00,300.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,310000,,,,,,,,n/a,310000.00,310.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,320000,,,,,,,,n/a,320000.00,320.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,330000,,,,,,,,n/a,330000.00,330.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,340000,,,,,,,,n/a,340000.00,340.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,350000,,,,,,,,n/a,350000.00,350.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,360000,,,,,,,,n/a,360000.00,360.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,370000,,,,,,,,n/a,370000.00,370.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,380000,,,,,,,,n/a,380000.00,380.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,390000,,,,,,,,n/a,390000.00,390.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M18,400000,,,,,,,,n/a,400000.00,400.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,10000,,,,,,,,n/a,10000.00,10.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,20000,,,,,,,,n/a,20000.00,20.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,30000,,,,,,,,n/a,30000.00,30.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,40000,,,,,,,,n/a,40000.00,40.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,50000,,,,,,,,n/a,50000.00,50.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,60000,,,,,,,,n/a,60000.00,60.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,70000,,,,,,,,n/a,70000.00,70.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,80000,,,,,,,,n/a,80000.00,80.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,90000,,,,,,,,n/a,90000.00,90.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,100000,,,,,,,,n/a,100000.00,100.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,110000,,,,,,,,n/a,110000.00,110.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,120000,,,,,,,,n/a,120000.00,120.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,130000,,,,,,,,n/a,130000.00,130.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,140000,,,,,,,,n/a,140000.00,140.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,150000,,,,,,,,n/a,150000.00,150.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,160000,,,,,,,,n/a,160000.00,160.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,170000,,,,,,,,n/a,170000.00,170.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,180000,,,,,,,,n/a,180000.00,180.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,190000,,,,,,,,n/a,190000.00,190.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,200000,,,,,,,,n/a,200000.00,200.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,210000,,,,,,,,n/a,210000.00,210.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,220000,,,,,,,,n/a,220000.00,220.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,230000,,,,,,,,n/a,230000.00,230.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,240000,,,,,,,,n/a,240000.00,240.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,250000,,,,,,,,n/a,250000.00,250.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,260000,,,,,,,,n/a,260000.00,260.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,270000,,,,,,,,n/a,270000.00,270.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,280000,,,,,,,,n/a,280000.00,280.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,290000,,,,,,,,n/a,290000.00,290.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,300000,,,,,,,,n/a,300000.00,300.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,310000,,,,,,,,n/a,310000.00,310.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,320000,,,,,,,,n/a,320000.00,320.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,330000,,,,,,,,n/a,330000.00,330.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,340000,,,,,,,,n/a,340000.00,340.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,350000,,,,,,,,n/a,350000.00,350.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,360000,,,,,,,,n/a,360000.00,360.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,370000,,,,,,,,n/a,370000.00,370.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,380000,,,,,,,,n/a,380000.00,380.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,390000,,,,,,,,n/a,390000.00,390.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M19,400000,,,,,,,,n/a,400000.00,400.00,no published fee; statutory maximum 100% of the amount (art. 39/40/45)
+M20,10000,66919.00,21.04,32.42,53.45,0.5345,9946.55,1,transfer,,10.00,spread + 1 wire + cable; document costs blank
+M20,20000,133838.00,42.08,42.42,84.49,0.4225,19915.51,1,transfer,,20.00,spread + 1 wire + cable; document costs blank
+M20,30000,200757.00,63.12,52.42,115.53,0.3851,29884.47,1,transfer,,30.00,spread + 1 wire + cable; document costs blank
+M20,40000,267676.00,84.16,61.27,145.43,0.3636,39854.57,1,transfer,,40.00,spread + 1 wire + cable; document costs blank
+M20,50000,334595.00,105.20,61.27,166.47,0.3329,49833.53,1,transfer,,50.00,spread + 1 wire + cable; document costs blank
+M20,60000,401514.00,126.24,61.27,187.51,0.3125,59812.49,1,transfer,,60.00,spread + 1 wire + cable; document costs blank
+M20,70000,468433.00,147.28,61.27,208.55,0.2979,69791.45,1,transfer,,70.00,spread + 1 wire + cable; document costs blank
+M20,80000,535352.00,168.32,61.27,229.59,0.2870,79770.41,1,transfer,,80.00,spread + 1 wire + cable; document costs blank
+M20,90000,602271.00,189.36,61.27,250.63,0.2785,89749.37,1,transfer,,90.00,spread + 1 wire + cable; document costs blank
+M20,100000,669190.00,210.40,61.27,271.67,0.2717,99728.33,1,transfer,,100.00,spread + 1 wire + cable; document costs blank
+M20,110000,736109.00,231.44,61.27,292.70,0.2661,109707.30,1,transfer,,110.00,spread + 1 wire + cable; document costs blank
+M20,120000,803028.00,252.48,61.27,313.74,0.2615,119686.26,1,transfer,,120.00,spread + 1 wire + cable; document costs blank
+M20,130000,869947.00,273.52,61.27,334.78,0.2575,129665.22,1,transfer,,130.00,spread + 1 wire + cable; document costs blank
+M20,140000,936866.00,294.56,61.27,355.82,0.2542,139644.18,1,transfer,,140.00,spread + 1 wire + cable; document costs blank
+M20,150000,1003785.00,315.60,61.27,376.86,0.2512,149623.14,1,transfer,,150.00,spread + 1 wire + cable; document costs blank
+M20,160000,1070704.00,336.64,61.27,397.90,0.2487,159602.10,1,transfer,,160.00,spread + 1 wire + cable; document costs blank
+M20,170000,1137623.00,357.68,61.27,418.94,0.2464,169581.06,1,transfer,,170.00,spread + 1 wire + cable; document costs blank
+M20,180000,1204542.00,378.71,61.27,439.98,0.2444,179560.02,1,transfer,,180.00,spread + 1 wire + cable; document costs blank
+M20,190000,1271461.00,399.75,61.27,461.02,0.2426,189538.98,1,transfer,,190.00,spread + 1 wire + cable; document costs blank
+M20,200000,1338380.00,420.79,61.27,482.06,0.2410,199517.94,1,transfer,,200.00,spread + 1 wire + cable; document costs blank
+M20,210000,1405299.00,441.83,61.27,503.10,0.2396,209496.90,1,transfer,,210.00,spread + 1 wire + cable; document costs blank
+M20,220000,1472218.00,462.87,61.27,524.14,0.2382,219475.86,1,transfer,,220.00,spread + 1 wire + cable; document costs blank
+M20,230000,1539137.00,483.91,61.27,545.18,0.2370,229454.82,1,transfer,,230.00,spread + 1 wire + cable; document costs blank
+M20,240000,1606056.00,504.95,61.27,566.22,0.2359,239433.78,1,transfer,,240.00,spread + 1 wire + cable; document costs blank
+M20,250000,1672975.00,525.99,61.27,587.26,0.2349,249412.74,1,transfer,,250.00,spread + 1 wire + cable; document costs blank
+M20,260000,1739894.00,547.03,61.27,608.30,0.2340,259391.70,1,transfer,,260.00,spread + 1 wire + cable; document costs blank
+M20,270000,1806813.00,568.07,61.27,629.34,0.2331,269370.66,1,transfer,,270.00,spread + 1 wire + cable; document costs blank
+M20,280000,1873732.00,589.11,61.27,650.38,0.2323,279349.62,1,transfer,,280.00,spread + 1 wire + cable; document costs blank
+M20,290000,1940651.00,610.15,61.27,671.42,0.2315,289328.58,1,transfer,,290.00,spread + 1 wire + cable; document costs blank
+M20,300000,2007570.00,631.19,61.27,692.46,0.2308,299307.54,1,transfer,,300.00,spread + 1 wire + cable; document costs blank
+M20,310000,2074489.00,652.23,61.27,713.50,0.2302,309286.50,1,transfer,,310.00,spread + 1 wire + cable; document costs blank
+M20,320000,2141408.00,673.27,61.27,734.54,0.2295,319265.46,1,transfer,,320.00,spread + 1 wire + cable; document costs blank
+M20,330000,2208327.00,694.31,61.27,755.58,0.2290,329244.42,1,transfer,,330.00,spread + 1 wire + cable; document costs blank
+M20,340000,2275246.00,715.35,61.27,776.62,0.2284,339223.38,1,transfer,,340.00,spread + 1 wire + cable; document costs blank
+M20,350000,2342165.00,736.39,61.27,797.66,0.2279,349202.34,1,transfer,,350.00,spread + 1 wire + cable; document costs blank
+M20,360000,2409084.00,757.43,61.27,818.70,0.2274,359181.30,1,transfer,,360.00,spread + 1 wire + cable; document costs blank
+M20,370000,2476003.00,778.47,61.27,839.74,0.2270,369160.26,1,transfer,,370.00,spread + 1 wire + cable; document costs blank
+M20,380000,2542922.00,799.51,61.27,860.78,0.2265,379139.22,1,transfer,,380.00,spread + 1 wire + cable; document costs blank
+M20,390000,2609841.00,820.55,61.27,881.82,0.2261,389118.18,1,transfer,,390.00,spread + 1 wire + cable; document costs blank
+M20,400000,2676760.00,841.59,61.27,902.86,0.2257,399097.14,1,transfer,,400.00,spread + 1 wire + cable; document costs blank
