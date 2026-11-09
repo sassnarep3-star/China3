@@ -377,6 +377,7 @@ PR: https://github.com/sassnarep3-star/China3/pull/11 (pending CI/merge).
 - This append-only deployment record will be sent through a documentation-only follow-up PR on the same fixed branch.
 
 
+
 ### PR / merge / deployment record — cost-estimate pass
 
 - **PR:** https://github.com/sassnarep3-star/China3/pull/14 — `arena/7a636dce-china3` → `main`.
@@ -409,3 +410,18 @@ PR: https://github.com/sassnarep3-star/China3/pull/11 (pending CI/merge).
 - `IR-027` and `IR-026` record where earlier sources failed re-verification.
 - The exact PRC tax amount on a property sale cannot be computed from public sources — the rate is
   verified, the base is not (`IR-025`).
+
+## Session `arena/2eb1c590-china3` — final integration on top of `main`
+
+Branch: `arena/2eb1c590-china3`, merged with `origin/main` (d45f160, PR #14 cost-tables pass by session `arena/7a636dce-china3`). The substantive cost-table work ($10,000–$400,000 ladder, per-route step-by-step, sourced tariffs, staged emigrant transfer) is already on `main` via `cost-tables.html`, `cost_ladder.csv`, `cost_steps.csv` and the preserved `costs.html`/`cost-review.html` pass; this session adds no duplicate cost files (overlap logged as IR-030, not resolved by deletion).
+
+| ID | Task | File scope | Status | Owner | Notes |
+| CM-1 | Cost table — satisfied by `main` (session 7a636dce + preserved 8c26329a) | `cost-tables.html`, `costs.html`, `data/cost_ladder.csv`, `data/cost_steps.csv`, `cost-review.html` | done | 7a636dce / 8c26329a | Already merged via PR #11/#14 |
+| CM-2 | Verification of combined tree | scripts + data + deep pages | done | arena/2eb1c590-china3 | validate_data.py, verify_deep.py, check_links.py, test_costs.py all pass on merged tree |
+| CM-3 | PR from integration branch to main, merge, confirm GitHub Pages deploys, record here | GitHub PR #13 | in progress | arena/2eb1c590-china3 | PR #13 opened; merge + Pages confirmation pending |
+
+## Log (session `arena/2eb1c590-china3`)
+
+- 2026-11-09: PR #14 (session 7a636dce) merged cost-tables to `main` and deployed to Pages; `cost-tables.html` live.
+- 2026-11-09: Session arena/2eb1c590-china3 merged `origin/main` into its branch (COORDINATION.md conflict resolved by keeping both sessions' records), verified combined tree, opened PR #13 for final integration.
+
