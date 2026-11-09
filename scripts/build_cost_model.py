@@ -999,7 +999,7 @@ def build_verification_html():
         out.append(
             "<tr><td data-l='ID'><strong>{id}</strong></td>"
             "<td data-l='Topic'>{topic}</td>"
-            "<td data-l='Authority'><a href='{url}' target='_blank' rel='noopener'>{authority}</a></td>"
+            "<td data-l='Authority'><a href=\"{url}\" target='_blank' rel='noopener'>{authority}</a></td>"
             "<td data-l='Checked'>{checked}</td>"
             "<td data-l='Quote'><span class='quote'>{quote}</span></td>"
             "<td data-l='Status'><span class='badge badge-ok'>{status}</span></td></tr>".format(**v))
@@ -1096,7 +1096,10 @@ def main():
             f8938_continuation_max=F8938_CONTINUATION_MAX, f3520_pct=F3520_PCT,
             fxreg_low=FXREG_LOW, fxreg_high=FXREG_HIGH,
         ),
-        methods=[{k: v for k, v in m.items() if k not in ("fee",)} for m in METHODS],
+        methods=[dict(
+            {k: v for k, v in m.items() if k not in ("fee",)},
+            fee_schedule=(m["fee"] if m.get("fee") else None),
+        ) for m in METHODS],
         rows=rows,
         penalty_rows=pen,
     )

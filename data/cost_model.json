@@ -88,7 +88,13 @@
    "extra_usd": 0.0,
    "verdict": "RECOMMENDED when the RMB is lawful current-account income and the bank treats you as 境外个人.",
    "quota": "No annual amount limit in art. 59; the bank audits the source of the RMB on every payment.",
-   "feasibility": "Feasible in one payment if the source file is complete."
+   "feasibility": "Feasible in one payment if the source file is complete.",
+   "fee_schedule": {
+    "rate": 0.001,
+    "min_cny": 50.0,
+    "max_cny": 260.0,
+    "cable_cny": 150.0
+   }
   },
   {
    "id": "M02",
@@ -102,7 +108,13 @@
    "extra_usd": 0.0,
    "verdict": "Optional premium. Costs more than M01; buys tracking and message passthrough, not a lower charge.",
    "quota": "Same legal basis as M01.",
-   "feasibility": "Feasible in one payment."
+   "feasibility": "Feasible in one payment.",
+   "fee_schedule": {
+    "rate": 0.0012,
+    "min_cny": 200.0,
+    "max_cny": 1000.0,
+    "cable_cny": 150.0
+   }
   },
   {
    "id": "M03",
@@ -116,7 +128,13 @@
    "extra_usd": 25.0,
    "verdict": "Best value when you need a known net figure: turns an unpublished correspondent deduction into a published USD 25.",
    "quota": "Same legal basis as M01.",
-   "feasibility": "Feasible in one payment. If the receiving bank holds an account with BOC New York, the charge is USD 15 instead of USD 25."
+   "feasibility": "Feasible in one payment. If the receiving bank holds an account with BOC New York, the charge is USD 15 instead of USD 25.",
+   "fee_schedule": {
+    "rate": 0.001,
+    "min_cny": 50.0,
+    "max_cny": 260.0,
+    "cable_cny": 150.0
+   }
   },
   {
    "id": "M04",
@@ -131,7 +149,13 @@
    "verdict": "Cheapest paperwork, but the amount is the binding constraint, not the cost.",
    "quota": "USD 50,000 equivalent per person per year. ID only; no source documents.",
    "feasibility_cap_usd": 50000.0,
-   "feasibility": "Feasible in one payment only up to USD 50,000. Above that it takes one year per USD 50,000 of balance."
+   "feasibility": "Feasible in one payment only up to USD 50,000. Above that it takes one year per USD 50,000 of balance.",
+   "fee_schedule": {
+    "rate": 0.001,
+    "min_cny": 50.0,
+    "max_cny": 260.0,
+    "cable_cny": 150.0
+   }
   },
   {
    "id": "M05",
@@ -145,7 +169,13 @@
    "extra_usd": 0.0,
    "verdict": "The only no-ceiling capital route for a naturalised citizen, and the one that requires a cancelled PRC household registration plus a tax certificate.",
    "quota": "No amount ceiling. Art. 10: up to RMB 500,000 decided by the local SAFE branch; above that, SAFE head office. Art. 6: one application for the whole balance, remitted in stages.",
-   "feasibility": "Feasible, but not in one payment above RMB 200,000 (see the staging column in cost-steps.html)."
+   "feasibility": "Feasible, but not in one payment above RMB 200,000 (see the staging column in cost-steps.html).",
+   "fee_schedule": {
+    "rate": 0.001,
+    "min_cny": 50.0,
+    "max_cny": 260.0,
+    "cable_cny": 150.0
+   }
   },
   {
    "id": "M06",
@@ -159,7 +189,13 @@
    "extra_usd": 0.0,
    "verdict": "Applies only if the money is an inheritance from a PRC decedent. One application covers all property from the same decedent.",
    "quota": "No amount ceiling. Same RMB 500,000 approval split as M05.",
-   "feasibility": "Feasible; documentary load is the constraint, not cost."
+   "feasibility": "Feasible; documentary load is the constraint, not cost.",
+   "fee_schedule": {
+    "rate": 0.001,
+    "min_cny": 50.0,
+    "max_cny": 260.0,
+    "cable_cny": 150.0
+   }
   },
   {
    "id": "M07",
@@ -173,7 +209,13 @@
    "extra_usd": 0.0,
    "verdict": "Zero FX margin because no conversion happens. Only useful if the balance is already USD, which the premise says it is not.",
    "quota": "Remittance on ID up to USD 50,000/day; above that, transaction documents.",
-   "feasibility": "Feasible in one payment."
+   "feasibility": "Feasible in one payment.",
+   "fee_schedule": {
+    "rate": 0.001,
+    "min_cny": 50.0,
+    "max_cny": 260.0,
+    "cable_cny": 150.0
+   }
   },
   {
    "id": "M08",
@@ -189,7 +231,8 @@
    "verdict": "Not a mechanism for a balance of this size. Reporting duties on the US side attach at USD 10,000.",
    "quota": "RMB 100,000 per person per year of overseas cash withdrawal; separate cash-carry limits at the border.",
    "feasibility_cap_usd": 10000.0,
-   "feasibility": "Cap-limited far below the range in this table; shown only to price it, not to recommend it."
+   "feasibility": "Cap-limited far below the range in this table; shown only to price it, not to recommend it.",
+   "fee_schedule": null
   }
  ],
  "rows": [
