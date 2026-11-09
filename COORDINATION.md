@@ -218,3 +218,39 @@ provincial SAFE branch Q&As.
 - GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
+
+---
+
+# Current Arena session `arena/80597d10-china3` — authoritative amount-by-amount cost model
+
+Branch: `arena/80597d10-china3` (fixed by Arena; per-task branches cannot be created in this
+environment — logged as IR-001 again below). Base commit: `b1dc441` (= `main`). All tasks
+above are `done`; this session closes the one remaining gap in the user's requirement list:
+**a computed cost for every method at every USD 10,000 step from USD 10,000 to USD 400,000,
+with step-by-step execution instructions**, which the earlier sessions deliberately left
+blank.
+
+## Claim, scope and handoff
+
+| ID | Task | File scope | Status | Owner | Notes |
+|---|---|---|---|---|---|
+| T12 | Amount-by-amount cost model (USD 10k → 400k, 40 steps) for every lawful/conditional route, plus penalty-of-getting-it-wrong matrix, step-by-step playbooks, mobile-first tables, verification script, PR + merge + Pages | `COORDINATION.md`, `README.md`, `VERIFICATION.md`, `research/cost-matrix.md`, `data/cost_matrix.csv`, `data/cost_matrix.json`, `data/cost_sources.csv`, `data/methods.csv`, `deep-costs.html`, `deep-cost-steps.html`, `deep-executive-summary.html`, `deep-review.html`, `index.html`, `scripts/build_cost_matrix.py`, `scripts/verify_cost_matrix.py`, `scripts/check_links.py` | in progress | `arena/80597d10-china3` | See handoff note below. |
+
+**Handoff note (60-minute rule).** Session `arena/9d3903f8-china3` claimed the same cost-matrix
+gap as its T11 at 2026-11-08T23:10Z, then committed only two documentation-only claim commits
+(`c677948`, `5be5d9e`) and no cost data, page, or script. As of 2026-11-09T01:30Z the claim is
+more than 60 minutes old with no content commits, so this session takes the task over under the
+board's own rule. Nothing from that session is discarded: its claim text and file list were read
+(`git show 5be5d9e`) and its branch is left untouched. If it later lands content, merge it — this
+session's files use distinct names (`deep-costs.html`, `data/cost_matrix.*`,
+`scripts/build_cost_matrix.py`) exactly as its claim specified.
+
+**Data rules for this task (unchanged, stricter):**
+1. A **verified** cell needs an official URL and a dated quote. Official = SAFE, PBOC, CFETS/SAFE
+   central parity, State Council, State Taxation Administration, BOC, IRS, FinCEN, eCFR, Federal
+   Register, Federal Reserve, OCC, US bank published tariff.
+2. A **modelled** cell is arithmetic on verified inputs plus parameters that are labelled
+   `assumption`, with the assumption stated and flagged. Modelled cells are never presented as
+   quotes.
+3. An **unverified** cell stays blank and is published on `deep-review.html`.
+4. Every table row carries its source link(s) in the row itself.
