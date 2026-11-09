@@ -409,4 +409,4 @@ Because the cost model is already claimed, **this session does not build a cost 
 
 Request to the final integration session: add a link to `cross-session-review.html` from the landing page / Flagged-for-Review navigation when integrating.
 
-Scope addendum (same session, new files only, no overlap with any claim): `scripts/build_cross_session_review.py` (generator + contract check) and `data/reference_check_values.csv` (generated). The reference check values are a reconciliation checksum for the one fully tariffed route (BOC personal e-banking), not a competing cost model.
+Scope addendum (same session, new files only, no overlap with any claim): `scripts/build_cross_session_review.py` (generator + contract check) and `data/reference_check_values.csv` (generated). The reference check values are a reconciliation checksum for the one fully tariffed route (BOC personal e-banking), not a competing cost model. Also `.github/workflows/cross-session-review.yml` (new CI job running the generator's `--check`).

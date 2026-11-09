@@ -1,0 +1,21 @@
+name: Cross-session review contract
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cross-session-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Reference inputs sourced, arithmetic asserted, page not stale
+        run: python3 scripts/build_cross_session_review.py --check
