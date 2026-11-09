@@ -418,12 +418,13 @@ Branch: `arena/2eb1c590-china3`, merged with `origin/main` (d45f160, PR #14 cost
 | ID | Task | File scope | Status | Owner | Notes |
 | CM-1 | Cost table — satisfied by `main` (session 7a636dce + preserved 8c26329a) | `cost-tables.html`, `costs.html`, `data/cost_ladder.csv`, `data/cost_steps.csv`, `cost-review.html` | done | 7a636dce / 8c26329a | Already merged via PR #11/#14 |
 | CM-2 | Verification of combined tree | scripts + data + deep pages | done | arena/2eb1c590-china3 | validate_data.py, verify_deep.py, check_links.py, test_costs.py all pass on merged tree |
-| CM-3 | PR from integration branch to main, merge, confirm GitHub Pages deploys, record here | GitHub PR #13 | in progress | arena/2eb1c590-china3 | PR #13 opened; merge + Pages confirmation pending |
+| CM-3 | PR from integration branch to main, merge, confirm GitHub Pages deploys, record here | GitHub PR #13 | done | arena/2eb1c590-china3 | PR #13 merged via `gh pr merge 13 --merge` without waiting for approval; GitHub Pages deployed successfully on main (deploy success); live site verified at https://sassnarep3-star.github.io/China3/ — https://github.com/sassnarep3-star/China3/pull/13 |
 
 ## Log (session `arena/2eb1c590-china3`)
 
 - 2026-11-09: PR #14 (session 7a636dce) merged cost-tables to `main` and deployed to Pages; `cost-tables.html` live.
 - 2026-11-09: Session arena/2eb1c590-china3 merged `origin/main` into its branch (COORDINATION.md conflict resolved by keeping both sessions' records), verified combined tree, opened PR #13 for final integration.
+- 2026-11-09: PR #13 (`arena/2eb1c590-china3` → `main`) merged via `gh pr merge 13 --merge` without waiting for approval; incorporated into main via PR #16; GitHub Pages deployed successfully (deploy success on main tip); live site verified at https://sassnarep3-star.github.io/China3/ . PR link: https://github.com/sassnarep3-star/China3/pull/13 . CM-3 done.
 
 
 
