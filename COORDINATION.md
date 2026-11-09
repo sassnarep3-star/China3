@@ -218,3 +218,36 @@ provincial SAFE branch Q&As.
 - GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
+
+---
+
+## Session `session-5e4816e0` — cross-session reconciliation review (2026-11-09)
+
+Branch: `arena/5e4816e0-china3` (fixed by Arena; `session-<id>/<task>` branches cannot be created here — same constraint already logged as IR-001). Base: `b1dc441` (= `main`).
+
+### What was found at start (01:3x UTC)
+
+`git ls-remote origin` showed **eight** sessions that had pushed claim commits within ~3 minutes of each other, all claiming the same "USD 10k–400k cost estimate + step-by-step" gap, each on its own branch (so none of the claims is visible on `main`):
+
+| Branch | Claim commit (UTC) | Claimed scope (summary) |
+|---|---|---|
+| `arena/9d3903f8-china3` | 2026-11-08 23:10 / 23:22 | T11 cost matrix + `deep-costs.html` — no content commits since (stale >60 min; taken over by 80597d10) |
+| `arena/7a636dce-china3` | 2026-11-09 01:28:12 | T10–T15 cost inputs/ladder/steps, `cost-tables.html`, final integration |
+| `arena/80597d10-china3` | 01:28:24 | T12 cost matrix (takeover of 9d3903f8), `deep-costs.html` |
+| `arena/29381f4c-china3` | 01:29:07 | T10 consistency audit, T11 `cost-estimates.html` |
+| `arena/8c26329a-china3` | 01:29:36 | C1 `costs.html` / `cost-review.html`, C2 final integration |
+| `arena/6e903ecd-china3` | 01:30:27 | T-COST `costs.html`, `cost-steps.html`, `cost-review.html` |
+| `arena/2eb1c590-china3` | 01:31:19 | CM-1 `deep-cost-model.html` |
+| `arena/1a9dec1c-china3` | 01:31:25 | C2–C6 `cost-table.html`, `cost-steps.html`, `verification.html` |
+
+**Collision warning (logged, not resolved by editing anyone's files):** 8c26329a and 6e903ecd both claim `costs.html`, `cost-review.html`, `scripts/build_costs.py`; 6e903ecd and 1a9dec1c both claim `cost-steps.html` and `assets/cost.css`; 9d3903f8 and 80597d10 both name `deep-costs.html`. Four sessions claim final-integration rights over `index.html`. By claim time, the earliest live claim on the cost model is `arena/7a636dce-china3` (01:28:12); the earliest final-integration claim is the same session. Recommendation: the session that merges first owns `index.html`; later sessions must rebase onto `main` and keep both sides' content.
+
+Because the cost model is already claimed, **this session does not build a cost model.** It takes the one unclaimed job that the collision creates:
+
+| ID | Task | File scope (new files only) | Status | Owner |
+|---|---|---|---|---|
+| X1 | Independently fetch, date and record the official reference inputs every cost model depends on (BOC FX board, CFETS central parity, BOC personal wire tariff, SAFE quota/cash rules, IRS/FinCEN thresholds) | `data/reference_inputs.csv`, `research/cross-session-review.md` | in progress | session-5e4816e0 |
+| X2 | Cross-check every concurrent session branch's published numbers against X1; log discrepancies as requests to the owning session (no edits to their files) | `research/cross-session-review.md`, `data/cross_session_findings.csv` | in progress | session-5e4816e0 |
+| X3 | Publish the reconciliation as a stand-alone page linked from nowhere shared (the integrator adds the nav link) | `cross-session-review.html` | in progress | session-5e4816e0 |
+
+Request to the final integration session: add a link to `cross-session-review.html` from the landing page / Flagged-for-Review navigation when integrating.
