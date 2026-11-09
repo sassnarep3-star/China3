@@ -1,0 +1,33 @@
+/* Cost model additions - additive only, loaded after deep-research.css */
+.method{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin:14px 0;overflow:hidden}
+.method>summary{cursor:pointer;list-style:none;padding:16px 18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font:700 15px Manrope,sans-serif;color:var(--ink)}
+.method>summary::-webkit-details-marker{display:none}
+.method>summary::before{content:"+";flex:0 0 22px;height:22px;border-radius:6px;background:#edf3ff;color:#2355b9;display:grid;place-items:center;font-weight:800;font-size:14px}
+.method[open]>summary::before{content:"–"}
+.method[open]>summary{border-bottom:1px solid var(--line);background:#fbfcff}
+.method .mid{background:#102342;color:#fff;border-radius:6px;padding:2px 7px;font:800 11px Manrope,sans-serif;letter-spacing:.04em}
+.method .verdict{color:var(--muted);font-weight:500;font-size:12px;margin-left:auto}
+.method .rule{margin:12px 18px 4px;color:#566781;font-size:13px}
+.method .table-wrap{margin:12px 18px 18px;box-shadow:none}
+.method table.data{min-width:1040px}
+.table-wrap.compact{margin-bottom:6px}
+.table-wrap.compact table.data{min-width:0}
+.table-wrap.compact th,.table-wrap.compact td{padding:9px 10px;font-size:12px}
+.table-wrap.compact td:first-child{font-weight:700;white-space:nowrap}
+@media(max-width:780px){
+  .method>summary{padding:13px 13px;font-size:14px;align-items:flex-start}
+  .method .verdict{margin-left:0;flex-basis:100%}
+  .method .rule{margin:10px 13px 2px}
+  .method .table-wrap{margin:10px 13px 14px}
+  .table-wrap.compact th,.table-wrap.compact td{padding:8px 6px;font-size:11px}
+  .table-wrap.compact td:nth-child(4){display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat b{font-size:18px}
+}
+.steps{margin:8px 0 4px;padding-left:20px}
+.steps li{margin:9px 0;color:#4c5c73;font-size:13.5px}
+.steps li strong{color:var(--ink)}
+.stepcard h2{display:flex;gap:9px;align-items:center;flex-wrap:wrap;font-size:16px}
+.stepcard{scroll-margin-top:20px}
+.tag.verified-measured,.tag.verified-historical{background:#e9f7f1;color:#147d64}
+@media print{.method>summary::before{content:""}}
