@@ -122,7 +122,7 @@ to identify and report non-resident accounts annually by 31 May
   SAFE branch, ≥RMB 500k approved by SAFE head office; ≥RMB 200k emigration transfers are
   "一次申请、分步汇出" over two years (half at approval, half of the remainder after one
   year, the rest after two years)
-  [S18](http://m.safe.gov.cn/safe/2004/1116/4134.html), [S17](https://www.safe.gov.cn/guangdong/2021/0323/1994.html).
+  [S18](http://m.safe.gov.cn/safe/2004/1116/4134.html), [S17](https://www.safe.gov.cn/safe/2004/1116/5461.html).
   **IR-021**: later amendments not exhaustively re-checked.
 - Cash: ≤USD 5,000 without a permit; 5,000–10,000 with a bank-issued 《携带证》; >10,000
   generally not allowed except with SAFE approval [S36](http://www.safe.gov.cn/hebei/2019/0521/1366.html),

@@ -60,6 +60,43 @@ The dashboard makes no runtime network calls: `docs/assets/data.js` is generated
 
 ---
 
+## The priced layer — `cost.html`  (session `arena/46c03a7d`)
+
+**Live:** https://sassnarep3-star.github.io/China3/cost.html
+
+The four layers above answer *which routes exist*. This layer answers *what they cost*, and it
+is the only part of the site where a figure can be checked by arithmetic rather than by reading.
+
+| Page | Content |
+|---|---|
+| `cost.html` | Landing: the four numbers, the summary table, links to everything |
+| `cost-model.html` | **Every USD 10,000 step from USD 10,000 to USD 400,000**, spread / wire fee / all-in, plus the six-route matrix |
+| `cost-methods.html` | 15 methods — who qualifies, the ceiling, pros, cons, cost at USD 400,000 |
+| `cost-playbook.html` | Step-by-step execution per route, ordered so the eligibility check comes first; two-year phasing calendar |
+| `cost-tax.html` | The seven cost layers separated, and where the six-figure risk actually sits |
+| `cost-review.html` | 10 unverified items, 1 fixed, 3 defects found in the pre-existing pages |
+| `cost-sources.html` | 26 sources with what each supports **and what it does not** |
+
+**The anchor.** Bank of China 外汇牌价, snapshot `2026-11-09 09:15:45`: USD spot selling
+669.19 vs its own reference 671.88 per 100 → a measured **0.4004 %** customer spread.
+Wire fee: 1 ‰, floor CNY 50, cap CNY 260, plus CNY 150 cable. Both from boc.cn.
+
+Why it is trustworthy rather than asserted:
+
+- `scripts/build_cost.py` emits every figure; **no number is typed into HTML**. The source of
+  truth is `data/fx_anchor.json`, which records what was literally on each official page.
+- `scripts/verify_cost.py` re-implements the arithmetic from the published formulas, parses the
+  generated HTML and **fails the build if any of the 40 × 6 cells is off by one cent**; it also
+  asserts that every row carries an official link and that unverified cells are genuinely blank.
+- `.github/workflows/cost-verify.yml` re-runs all four existing verifiers plus the staleness
+  checks, so the older layers cannot drift while this one is rebuilt.
+
+To re-anchor on a new day: edit the six BOC numbers in `data/fx_anchor.json`, run
+`python3 scripts/build_cost.py && python3 scripts/verify_cost.py`, commit. See
+[`COST_MODEL.md`](COST_MODEL.md) for the table and [`SUMMARY.md`](SUMMARY.md) for the executive summary.
+
+---
+
 ## Data and pipeline
 
 | Path | What it is |

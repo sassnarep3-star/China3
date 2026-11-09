@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cost model: USD 10,000 to USD 400,000 | China Money Research</title>
+<meta name="description" content="Computed all-in cost of converting CNY to USD at every USD 10,000 step, from the Bank of China published board rate and wire tariff.">
+<link rel="stylesheet" href="assets/cost.css"></head>
+<body>
+<header class="topbar"><div class="shell">
+  <a class="brand" href="cost.html"><span class="brand-mark">¥→$</span> China Money Research</a>
+  <nav class="nav"><a href="cost.html">Dashboard</a><a class="active" href="cost-model.html">Cost model $10k–$400k</a><a href="cost-methods.html">All methods</a><a href="cost-playbook.html">Step-by-step playbook</a><a href="cost-tax.html">The “penalty” decoded</a><a href="cost-review.html">Flagged for review</a><a href="cost-sources.html">Sources</a><a href="index.html">All site pages</a></nav>
+</div></header>
+<main class="shell">
+<section class="hero"><div class="eyebrow">Category 01 · The number</div>
+<h1>The cost of turning CNY into USD, USD 10,000 to USD 400,000</h1>
+<p class="lede">Every row is computed, not estimated: the spread is measured from the
+bank's own published board, the wire fee is the bank's published tariff, and anything no official
+page states is left blank and flagged. Send this table to a bank and ask which line they disagree with.</p>
+<div class="anchor">
+  <div class="anchor-head">The one price everything below is built on</div>
+  <div class="anchor-grid">
+    <div><span class="k">Bank of China 现汇卖出价 (spot selling)</span><b>6.6919</b><span class="u">CNY per 1 USD</span></div>
+    <div><span class="k">Bank of China 中行折算价 (its reference)</span><b>6.7188</b><span class="u">CNY per 1 USD</span></div>
+    <div><span class="k">Measured spread you actually pay</span><b>0.4004%</b><span class="u">(2.69 fen per USD)</span></div>
+    <div><span class="k">PBOC central parity, 2026-11-06</span><b>6.7168</b><span class="u">reference only</span></div>
+  </div>
+  <p class="anchor-note">Board snapshot <code>2026-11-09 09:15:45</code> from <a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">boc.cn</a>; parity from <a href="https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026110608563230207/index.html" target="_blank" rel="noopener" title="2026年11月6日 人民币汇率中间价公告 — USD/CNY central parity 6.7168">pbc.gov.cn</a>. The bank's own disclaimer says the counter rate governs, so treat this as the best public measurement available, not a binding quote.</p>
+</div>
+<div class="notice amber"><b>Read the totals as a floor, not a forecast.</b>
+They contain the two costs that are published and they exclude the three that are not: correspondent-bank
+charges, the U.S. receiving-bank fee, and any SAFE approval or notarisation cost. Those cells say
+“not published” instead of holding a guess.
+<div class="stats"><div class="stat"><b>$72</b><span>all-in on $10,000 · 0.72%</span></div><div class="stat"><b>$1,663</b><span>all-in on $400,000 · 0.42%</span></div><div class="stat"><b>0.40%</b><span>the measured bank spread</span></div><div class="stat"><b>$165,353</b><span>one willful FBAR maximum</span></div></div>
+<p class="big">The whole $400,000 conversion costs about <b>$1,663</b>. The U.S. information-reporting penalty for getting the paperwork wrong on that same account starts at <b>$165,353</b> and can reach <b>half the balance</b>. The expensive thing in this project is not the exchange rate.</p>
+<h2 id="table">The table · method M1 and M2 (bank FX + one outward wire)</h2>
+<p class="sub">M1 and M2 are the same arithmetic; they differ only in whether the transfer is
+allowed on ID alone (M1, up to USD 50,000 per person per year) or on documentary evidence (M2, no ceiling).
+The “can you do it?” column is the part that changes with size.</p>
+<div class="table-wrap"><table class="data cost" data-table="master"><thead><tr><th>USD out</th><th>CNY at 6.6919</th><th>FX spread<br><span>0.4004%</span></th><th>Wire + cable<br><span>BOC tariff</span></th><th>All-in cost</th><th>as %</th><th class="hide-sm">M1 on ID alone?</th><th>Source</th></tr></thead><tbody>
+<tr><td class="num"><b>$10,000</b></td><td class="num">66,919</td><td class="num">$40.04</td><td class="num">$32.42</td><td class="num total">$72.46</td><td class="num">0.72%</td><td class="hide-sm"><span class="tag ok">yes</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$20,000</b></td><td class="num">133,838</td><td class="num">$80.08</td><td class="num">$42.42</td><td class="num total">$122.50</td><td class="num">0.61%</td><td class="hide-sm"><span class="tag ok">yes</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$30,000</b></td><td class="num">200,757</td><td class="num">$120.12</td><td class="num">$52.42</td><td class="num total">$172.54</td><td class="num">0.58%</td><td class="hide-sm"><span class="tag ok">yes</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$40,000</b></td><td class="num">267,676</td><td class="num">$160.16</td><td class="num">$61.27</td><td class="num total">$221.43</td><td class="num">0.55%</td><td class="hide-sm"><span class="tag ok">yes</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$50,000</b></td><td class="num">334,595</td><td class="num">$200.20</td><td class="num">$61.27</td><td class="num total">$261.47</td><td class="num">0.52%</td><td class="hide-sm"><span class="tag ok">yes</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$60,000</b></td><td class="num">401,514</td><td class="num">$240.24</td><td class="num">$61.27</td><td class="num total">$301.51</td><td class="num">0.50%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$70,000</b></td><td class="num">468,433</td><td class="num">$280.28</td><td class="num">$61.27</td><td class="num total">$341.55</td><td class="num">0.49%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$80,000</b></td><td class="num">535,352</td><td class="num">$320.32</td><td class="num">$61.27</td><td class="num total">$381.59</td><td class="num">0.48%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$90,000</b></td><td class="num">602,271</td><td class="num">$360.36</td><td class="num">$61.27</td><td class="num total">$421.63</td><td class="num">0.47%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$100,000</b></td><td class="num">669,190</td><td class="num">$400.40</td><td class="num">$61.27</td><td class="num total">$461.67</td><td class="num">0.46%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$110,000</b></td><td class="num">736,109</td><td class="num">$440.44</td><td class="num">$61.27</td><td class="num total">$501.71</td><td class="num">0.46%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$120,000</b></td><td class="num">803,028</td><td class="num">$480.48</td><td class="num">$61.27</td><td class="num total">$541.75</td><td class="num">0.45%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$130,000</b></td><td class="num">869,947</td><td class="num">$520.52</td><td class="num">$61.27</td><td class="num total">$581.79</td><td class="num">0.45%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$140,000</b></td><td class="num">936,866</td><td class="num">$560.56</td><td class="num">$61.27</td><td class="num total">$621.83</td><td class="num">0.44%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$150,000</b></td><td class="num">1,003,785</td><td class="num">$600.60</td><td class="num">$61.27</td><td class="num total">$661.87</td><td class="num">0.44%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$160,000</b></td><td class="num">1,070,704</td><td class="num">$640.64</td><td class="num">$61.27</td><td class="num total">$701.91</td><td class="num">0.44%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$170,000</b></td><td class="num">1,137,623</td><td class="num">$680.68</td><td class="num">$61.27</td><td class="num total">$741.95</td><td class="num">0.44%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$180,000</b></td><td class="num">1,204,542</td><td class="num">$720.72</td><td class="num">$61.27</td><td class="num total">$781.99</td><td class="num">0.43%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$190,000</b></td><td class="num">1,271,461</td><td class="num">$760.76</td><td class="num">$61.27</td><td class="num total">$822.03</td><td class="num">0.43%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$200,000</b></td><td class="num">1,338,380</td><td class="num">$800.80</td><td class="num">$61.27</td><td class="num total">$862.07</td><td class="num">0.43%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$210,000</b></td><td class="num">1,405,299</td><td class="num">$840.84</td><td class="num">$61.27</td><td class="num total">$902.11</td><td class="num">0.43%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$220,000</b></td><td class="num">1,472,218</td><td class="num">$880.88</td><td class="num">$61.27</td><td class="num total">$942.15</td><td class="num">0.43%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$230,000</b></td><td class="num">1,539,137</td><td class="num">$920.92</td><td class="num">$61.27</td><td class="num total">$982.19</td><td class="num">0.43%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$240,000</b></td><td class="num">1,606,056</td><td class="num">$960.96</td><td class="num">$61.27</td><td class="num total">$1,022.23</td><td class="num">0.43%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$250,000</b></td><td class="num">1,672,975</td><td class="num">$1,001.00</td><td class="num">$61.27</td><td class="num total">$1,062.27</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$260,000</b></td><td class="num">1,739,894</td><td class="num">$1,041.04</td><td class="num">$61.27</td><td class="num total">$1,102.31</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$270,000</b></td><td class="num">1,806,813</td><td class="num">$1,081.08</td><td class="num">$61.27</td><td class="num total">$1,142.35</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$280,000</b></td><td class="num">1,873,732</td><td class="num">$1,121.12</td><td class="num">$61.27</td><td class="num total">$1,182.39</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$290,000</b></td><td class="num">1,940,651</td><td class="num">$1,161.16</td><td class="num">$61.27</td><td class="num total">$1,222.43</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$300,000</b></td><td class="num">2,007,570</td><td class="num">$1,201.20</td><td class="num">$61.27</td><td class="num total">$1,262.47</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$310,000</b></td><td class="num">2,074,489</td><td class="num">$1,241.24</td><td class="num">$61.27</td><td class="num total">$1,302.51</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$320,000</b></td><td class="num">2,141,408</td><td class="num">$1,281.28</td><td class="num">$61.27</td><td class="num total">$1,342.55</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$330,000</b></td><td class="num">2,208,327</td><td class="num">$1,321.32</td><td class="num">$61.27</td><td class="num total">$1,382.59</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$340,000</b></td><td class="num">2,275,246</td><td class="num">$1,361.36</td><td class="num">$61.27</td><td class="num total">$1,422.63</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$350,000</b></td><td class="num">2,342,165</td><td class="num">$1,401.40</td><td class="num">$61.27</td><td class="num total">$1,462.67</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$360,000</b></td><td class="num">2,409,084</td><td class="num">$1,441.44</td><td class="num">$61.27</td><td class="num total">$1,502.71</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$370,000</b></td><td class="num">2,476,003</td><td class="num">$1,481.48</td><td class="num">$61.27</td><td class="num total">$1,542.75</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$380,000</b></td><td class="num">2,542,922</td><td class="num">$1,521.52</td><td class="num">$61.27</td><td class="num total">$1,582.79</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$390,000</b></td><td class="num">2,609,841</td><td class="num">$1,561.56</td><td class="num">$61.27</td><td class="num total">$1,622.83</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+<tr><td class="num"><b>$400,000</b></td><td class="num">2,676,760</td><td class="num">$1,601.60</td><td class="num">$61.27</td><td class="num total">$1,662.87</td><td class="num">0.42%</td><td class="hide-sm"><span class="tag no">no — needs M2</span></td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a></td></tr>
+</tbody></table></div>
+<p class="fine">Wire + cable = 1‰ of the CNY amount, floor CNY 50, cap CNY 260, plus CNY 150
+foreign cable charge, converted at the same 6.6919 — all from the bank's published tariff (V12). The cap is
+hit at about USD 38,800, which is why the fee stops growing and the cost curve flattens to exactly 0.4004%.</p>
+<h2 id="methods">Same money, six routes, side by side</h2>
+<p class="sub">A dash is not a missing number — it is a number no official page publishes.
+We will not put a guess in a table you might act on.</p>
+<div class="table-wrap"><table class="data cost" data-table="matrix-model"><thead><tr><th>USD</th>
+<th>M1 convenience</th>
+<th>M2 current-acct</th>
+<th>M3 emigrant</th>
+<th>M4 gift</th>
+<th>M5 QDII</th>
+<th>M6 cash</th>
+<th>Source</th></tr></thead><tbody>
+<tr><td class="num"><b>$10,000</b></td>
+<td class="num">$72.46</td>
+<td class="num">$72.46</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$72.46</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$40.04</td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$20,000</b></td>
+<td class="num">$122.50</td>
+<td class="num">$122.50</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$122.50</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$30,000</b></td>
+<td class="num">$172.54</td>
+<td class="num">$172.54</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$172.54</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$40,000</b></td>
+<td class="num">$221.43</td>
+<td class="num">$221.43</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$221.43</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$50,000</b></td>
+<td class="num">$261.47</td>
+<td class="num">$261.47</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$261.47</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$60,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$301.51</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$362.78</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$70,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$341.55</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$402.82</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$80,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$381.59</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$442.86</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$90,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$421.63</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$482.90</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$100,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$461.67</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$522.94</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$110,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$501.71</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$624.24</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$120,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$541.75</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$664.28</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$130,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$581.79</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$704.32</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$140,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$621.83</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$744.36</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$150,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$661.87</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$784.40</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$160,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$701.91</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$885.71</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$170,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$741.95</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$925.75</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$180,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$781.99</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$965.79</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$190,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$822.03</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,005.83</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$200,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$862.07</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,045.87</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$210,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$902.11</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,147.18</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$220,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$942.15</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,187.22</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$230,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$982.19</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,227.26</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$240,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,022.23</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,267.30</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$250,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,062.27</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,307.34</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$260,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,102.31</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,408.65</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$270,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,142.35</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,448.69</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$280,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,182.39</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,488.73</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$290,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,222.43</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,528.77</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$300,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,262.47</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,568.81</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$310,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,302.51</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,670.12</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$320,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,342.55</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,710.16</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$330,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,382.59</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,750.20</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$340,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,422.63</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,790.24</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$350,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,462.67</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,830.28</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$360,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,502.71</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,931.58</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$370,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,542.75</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$1,971.62</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$380,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,582.79</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$2,011.66</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$390,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,622.83</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$2,051.70</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+<tr><td class="num"><b>$400,000</b></td>
+<td class="num cell-no">not available<small>over $50k</small></td>
+<td class="num">$1,662.87</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num">$2,091.74</td>
+<td class="num cell-blank">—<small>not published</small></td>
+<td class="num cell-no">prohibited<small>over $10k</small></td>
+<td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener" title="2022年外汇业务政策释疑（八）— the USD 50,000 figure is not a cap">V03</a> <a href="https://www.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener" title="个人财产对外转移售付汇管理暂行办法, PBC Announcement [2004] No. 16 (full text)">V05</a> <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFRb467872627553f1/section-1.102-1" target="_blank" rel="noopener" title="26 CFR 1.102-1 — Gifts and inheritances">V16</a></td>
+</tr>
+</tbody></table></div>
+<div class="notice"><b>What the columns mean.</b>
+<b>M1</b> is the ID-only route and stops at USD 50,000 per person per calendar year (V03).
+<b>M2</b> is the same bank purchase above that amount, which is lawful only with genuine transaction
+evidence — it is not a quota upgrade (V03, V24).
+<b>M3</b> is the emigrant/inheritance capital-account exit and needs emigrant status (V05); its approval
+and notarisation costs are not published, so no total is shown.
+<b>M4</b> is a relative in China gifting you the money; the gift is outside U.S. gross income (V16) and
+only an information return above USD 100,000 (V17).
+<b>M5</b> is an investment channel, not a remittance; no official cost per transaction exists.
+<b>M6</b> is legally capped at USD 10,000 per person per trip (V01 Art. 42).</div>
+<h2 id="spread">What the 0.4004% is, and what it is not</h2>
+<div class="table-wrap"><table class="data cost"><thead><tr><th>Reference price</th><th>CNY per USD</th><th>Difference vs the price you pay</th><th>Is this a cost you incur?</th><th>Source</th></tr></thead><tbody>
+<tr><td>What you pay (BOC 现汇卖出价)</td><td class="num">6.6919</td><td class="num">—</td><td>Yes — this is the transaction</td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a></td></tr>
+<tr><td>BOC 中行折算价, same page, same minute</td><td class="num">6.7188</td><td class="num">0.4004%</td><td>Yes — this gap is the bank margin</td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a></td></tr>
+<tr><td>PBOC central parity, 2026-11-06</td><td class="num">6.7168</td><td class="num">0.3707%</td><td>No — different day, and parity is not tradable</td><td class="src"><a href="https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026110608563230207/index.html" target="_blank" rel="noopener" title="2026年11月6日 人民币汇率中间价公告 — USD/CNY central parity 6.7168">V11</a></td></tr>
+<tr><td>Federal Reserve H.10, 2026-10-30</td><td class="num">6.6538</td><td class="num">−0.5653%</td><td>No — interbank indicative, wrong direction, different week</td><td class="src"><a href="https://www.federalreserve.gov/releases/h10/current/" target="_blank" rel="noopener" title="Foreign Exchange Rates — H.10, release of 2026-11-02">V21</a></td></tr>
+<tr><td>IRS yearly average, 2025</td><td class="num">7.129</td><td class="num">−6.1%</td><td>No — a tax-return convention, not a trade</td><td class="src"><a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener" title="Yearly average currency exchange rates">V22</a></td></tr>
+</tbody></table></div>
+<p class="fine">The negative rows matter. Someone comparing “the bank” with “the Fed rate” will
+conclude the bank is overcharging by a number that is really just a different date and a different kind of
+price. The only like-for-like comparison on this page is row 2: same bank, same screen, same minute.</p>
+<h2 id="marginal">Where the money actually goes, per extra dollar</h2>
+<div class="table-wrap"><table class="data cost"><thead><tr><th>Step</th><th>Extra USD moved</th><th>Extra cost</th><th>Marginal %</th><th>Why</th><th>Source</th></tr></thead><tbody>
+<tr><td>$10,000 → $20,000</td><td class="num">$10,000</td><td class="num">$50.04</td><td class="num">0.40%</td><td>The fee cap is already reached, so only the spread applies.</td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a></td></tr>
+<tr><td>$50,000 → $400,000</td><td class="num">$350,000</td><td class="num">$1,401.40</td><td class="num">0.40%</td><td>Perfectly linear. There is no volume penalty and no volume discount.</td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a></td></tr>
+<tr><td>$400,000 → $410,000</td><td class="num">$10,000</td><td class="num">$40.04</td><td class="num">0.40%</td><td>Same at the top of the range.</td><td class="src"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener" title="中国银行外汇牌价 (foreign-exchange board rates), snapshot 2026-11-09 09:15:45">V10</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 — cross-border telegraphic transfer tariff">V12</a></td></tr>
+</tbody></table></div>
+<p class="fine">This is the single most useful number in the project: beyond roughly USD 38,800, every additional USD 1,000 costs about USD 4.00 to convert, no matter how large the balance is.</p>
+<p class="next"><a href="cost-playbook.html">Next: the exact step-by-step for each route →</a></p>
+</section>
+</main>
+<footer class="foot"><div class="shell foot-row">
+  <div><b>China Money Research</b><p>Official-source research. Not legal, tax or banking advice.</p></div>
+  <p>Built 9 November 2026 · <a href="cost-sources.html">Sources</a> · <a href="cost-review.html">Flagged for review</a></p>
+</div></footer>
+</body></html>

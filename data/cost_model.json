@@ -1,0 +1,1719 @@
+{
+ "anchor": {
+  "boc_board_url": "https://www.boc.cn/sourcedb/whpj/",
+  "boc_board_source_id": "V10",
+  "boc_timestamp": "2026-11-09 09:15:45",
+  "boc_units": "CNY per 100 units of foreign currency",
+  "boc_usd_cash_buy": 666.38,
+  "boc_usd_spot_buy": 666.38,
+  "boc_usd_spot_sell": 669.19,
+  "boc_usd_cash_sell": 669.19,
+  "boc_usd_reference": 671.88,
+  "pboc_parity_url": "https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026110608563230207/index.html",
+  "pboc_parity_source_id": "V11",
+  "pboc_parity_date": "2026-11-06",
+  "pboc_usd_cny": 6.7168,
+  "fed_h10_url": "https://www.federalreserve.gov/releases/h10/current/",
+  "fed_h10_source_id": "V21",
+  "fed_h10_date": "2026-10-30",
+  "fed_usd_cny": 6.6538,
+  "note": "The customer buys USD from the bank, so the relevant published price is the bank's \u73b0\u6c47\u5356\u51fa\u4ef7 (spot selling rate) = CNY 669.19 per 100 USD, i.e. CNY 6.6919 per USD. The BOC \u4e2d\u884c\u6298\u7b97\u4ef7 (671.88) is the bank's own reference price and is NOT a price any customer transacts at."
+ },
+ "derived": {
+  "customer_rate_cny_per_usd": 6.6919,
+  "spread_vs_boc_reference_pct": 0.4004,
+  "spread_vs_pboc_parity_pct": 0.3707,
+  "spread_vs_fed_h10_pct": 0.5653,
+  "formula_spread": "(reference_cny_per_usd - customer_rate_cny_per_usd) / reference_cny_per_usd",
+  "note": "These three spreads answer the same question against three different reference prices. Only the BOC-reference spread (0.4004%) is a like-for-like bank comparison on the same day; the PBOC and Federal Reserve figures are different days and must not be presented as the exact cost of one transaction."
+ },
+ "assumptions": [
+  "The balance is CNY and the customer must buy USD, so the price used is the bank's \u73b0\u6c47\u5356\u51fa\u4ef7, not any reference rate.",
+  "One USD 50,000-equivalent remittance per outward payment; a larger sum needs several payments only under M1 and M4, which are shown with their transfer counts.",
+  "All costs are computed on a USD 10,000 multiple at the 2026-11-09 09:15:45 BOC snapshot. A different day moves the spread line, not the structure.",
+  "PRC income tax is NOT included: it attaches to whatever created the money, at the moment it was created, whether or not it is ever converted. See cost-tax.html.",
+  "U.S. income tax is NOT included: moving your own after-tax money is not an income event. Reporting penalties are shown separately because they are the largest number in this project."
+ ],
+ "rows": [
+  {
+   "usd": 10000,
+   "cny": 66919.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 40.04,
+     "fee": 32.4152,
+     "total": 72.4552
+    },
+    {
+     "key": "M2",
+     "fx": 40.04,
+     "fee": 32.4152,
+     "total": 72.4552
+    },
+    {
+     "key": "M3",
+     "fx": 40.04,
+     "fee": 32.4152,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 40.04,
+     "fee": 32.4152,
+     "total": 72.4552
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 40.04,
+     "fee": 0.0,
+     "total": 40.04
+    }
+   ]
+  },
+  {
+   "usd": 20000,
+   "cny": 133838.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 80.08,
+     "fee": 42.4152,
+     "total": 122.4952
+    },
+    {
+     "key": "M2",
+     "fx": 80.08,
+     "fee": 42.4152,
+     "total": 122.4952
+    },
+    {
+     "key": "M3",
+     "fx": 80.08,
+     "fee": 42.4152,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 80.08,
+     "fee": 42.4152,
+     "total": 122.4952
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 80.08,
+     "fee": 0.0,
+     "total": 80.08
+    }
+   ]
+  },
+  {
+   "usd": 30000,
+   "cny": 200757.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 120.12,
+     "fee": 52.4152,
+     "total": 172.5352
+    },
+    {
+     "key": "M2",
+     "fx": 120.12,
+     "fee": 52.4152,
+     "total": 172.5352
+    },
+    {
+     "key": "M3",
+     "fx": 120.12,
+     "fee": 157.2455,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 120.12,
+     "fee": 52.4152,
+     "total": 172.5352
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 120.12,
+     "fee": 0.0,
+     "total": 120.12
+    }
+   ]
+  },
+  {
+   "usd": 40000,
+   "cny": 267676.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 160.16,
+     "fee": 61.2681,
+     "total": 221.4281
+    },
+    {
+     "key": "M2",
+     "fx": 160.16,
+     "fee": 61.2681,
+     "total": 221.4281
+    },
+    {
+     "key": "M3",
+     "fx": 160.16,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 160.16,
+     "fee": 61.2681,
+     "total": 221.4281
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 160.16,
+     "fee": 0.0,
+     "total": 160.16
+    }
+   ]
+  },
+  {
+   "usd": 50000,
+   "cny": 334595.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 200.2,
+     "fee": 61.2681,
+     "total": 261.4681
+    },
+    {
+     "key": "M2",
+     "fx": 200.2,
+     "fee": 61.2681,
+     "total": 261.4681
+    },
+    {
+     "key": "M3",
+     "fx": 200.2,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 200.2,
+     "fee": 61.2681,
+     "total": 261.4681
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 200.2,
+     "fee": 0.0,
+     "total": 200.2
+    }
+   ]
+  },
+  {
+   "usd": 60000,
+   "cny": 401514.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 240.24,
+     "fee": 61.2681,
+     "total": 301.5081
+    },
+    {
+     "key": "M2",
+     "fx": 240.24,
+     "fee": 61.2681,
+     "total": 301.5081
+    },
+    {
+     "key": "M3",
+     "fx": 240.24,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 240.24,
+     "fee": 122.5362,
+     "total": 362.7762
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 240.24,
+     "fee": 0.0,
+     "total": 240.24
+    }
+   ]
+  },
+  {
+   "usd": 70000,
+   "cny": 468433.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 280.28,
+     "fee": 61.2681,
+     "total": 341.5481
+    },
+    {
+     "key": "M2",
+     "fx": 280.28,
+     "fee": 61.2681,
+     "total": 341.5481
+    },
+    {
+     "key": "M3",
+     "fx": 280.28,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 280.28,
+     "fee": 122.5362,
+     "total": 402.8162
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 280.28,
+     "fee": 0.0,
+     "total": 280.28
+    }
+   ]
+  },
+  {
+   "usd": 80000,
+   "cny": 535352.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 320.32,
+     "fee": 61.2681,
+     "total": 381.5881
+    },
+    {
+     "key": "M2",
+     "fx": 320.32,
+     "fee": 61.2681,
+     "total": 381.5881
+    },
+    {
+     "key": "M3",
+     "fx": 320.32,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 320.32,
+     "fee": 122.5362,
+     "total": 442.8562
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 320.32,
+     "fee": 0.0,
+     "total": 320.32
+    }
+   ]
+  },
+  {
+   "usd": 90000,
+   "cny": 602271.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 360.36,
+     "fee": 61.2681,
+     "total": 421.6281
+    },
+    {
+     "key": "M2",
+     "fx": 360.36,
+     "fee": 61.2681,
+     "total": 421.6281
+    },
+    {
+     "key": "M3",
+     "fx": 360.36,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 360.36,
+     "fee": 122.5362,
+     "total": 482.8962
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 360.36,
+     "fee": 0.0,
+     "total": 360.36
+    }
+   ]
+  },
+  {
+   "usd": 100000,
+   "cny": 669190.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 400.4,
+     "fee": 61.2681,
+     "total": 461.6681
+    },
+    {
+     "key": "M2",
+     "fx": 400.4,
+     "fee": 61.2681,
+     "total": 461.6681
+    },
+    {
+     "key": "M3",
+     "fx": 400.4,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 400.4,
+     "fee": 122.5362,
+     "total": 522.9362
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 400.4,
+     "fee": 0.0,
+     "total": 400.4
+    }
+   ]
+  },
+  {
+   "usd": 110000,
+   "cny": 736109.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 440.44,
+     "fee": 61.2681,
+     "total": 501.7081
+    },
+    {
+     "key": "M2",
+     "fx": 440.44,
+     "fee": 61.2681,
+     "total": 501.7081
+    },
+    {
+     "key": "M3",
+     "fx": 440.44,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 440.44,
+     "fee": 183.8043,
+     "total": 624.2443
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 440.44,
+     "fee": 0.0,
+     "total": 440.44
+    }
+   ]
+  },
+  {
+   "usd": 120000,
+   "cny": 803028.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 480.48,
+     "fee": 61.2681,
+     "total": 541.7481
+    },
+    {
+     "key": "M2",
+     "fx": 480.48,
+     "fee": 61.2681,
+     "total": 541.7481
+    },
+    {
+     "key": "M3",
+     "fx": 480.48,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 480.48,
+     "fee": 183.8043,
+     "total": 664.2843
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 480.48,
+     "fee": 0.0,
+     "total": 480.48
+    }
+   ]
+  },
+  {
+   "usd": 130000,
+   "cny": 869947.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 520.52,
+     "fee": 61.2681,
+     "total": 581.7881
+    },
+    {
+     "key": "M2",
+     "fx": 520.52,
+     "fee": 61.2681,
+     "total": 581.7881
+    },
+    {
+     "key": "M3",
+     "fx": 520.52,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 520.52,
+     "fee": 183.8043,
+     "total": 704.3243
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 520.52,
+     "fee": 0.0,
+     "total": 520.52
+    }
+   ]
+  },
+  {
+   "usd": 140000,
+   "cny": 936866.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 560.56,
+     "fee": 61.2681,
+     "total": 621.8281
+    },
+    {
+     "key": "M2",
+     "fx": 560.56,
+     "fee": 61.2681,
+     "total": 621.8281
+    },
+    {
+     "key": "M3",
+     "fx": 560.56,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 560.56,
+     "fee": 183.8043,
+     "total": 744.3643
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 560.56,
+     "fee": 0.0,
+     "total": 560.56
+    }
+   ]
+  },
+  {
+   "usd": 150000,
+   "cny": 1003785.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 600.6,
+     "fee": 61.2681,
+     "total": 661.8681
+    },
+    {
+     "key": "M2",
+     "fx": 600.6,
+     "fee": 61.2681,
+     "total": 661.8681
+    },
+    {
+     "key": "M3",
+     "fx": 600.6,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 600.6,
+     "fee": 183.8043,
+     "total": 784.4043
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 600.6,
+     "fee": 0.0,
+     "total": 600.6
+    }
+   ]
+  },
+  {
+   "usd": 160000,
+   "cny": 1070704.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 640.64,
+     "fee": 61.2681,
+     "total": 701.9081
+    },
+    {
+     "key": "M2",
+     "fx": 640.64,
+     "fee": 61.2681,
+     "total": 701.9081
+    },
+    {
+     "key": "M3",
+     "fx": 640.64,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 640.64,
+     "fee": 245.0724,
+     "total": 885.7124
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 640.64,
+     "fee": 0.0,
+     "total": 640.64
+    }
+   ]
+  },
+  {
+   "usd": 170000,
+   "cny": 1137623.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 680.68,
+     "fee": 61.2681,
+     "total": 741.9481
+    },
+    {
+     "key": "M2",
+     "fx": 680.68,
+     "fee": 61.2681,
+     "total": 741.9481
+    },
+    {
+     "key": "M3",
+     "fx": 680.68,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 680.68,
+     "fee": 245.0724,
+     "total": 925.7524
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 680.68,
+     "fee": 0.0,
+     "total": 680.68
+    }
+   ]
+  },
+  {
+   "usd": 180000,
+   "cny": 1204542.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 720.72,
+     "fee": 61.2681,
+     "total": 781.9881
+    },
+    {
+     "key": "M2",
+     "fx": 720.72,
+     "fee": 61.2681,
+     "total": 781.9881
+    },
+    {
+     "key": "M3",
+     "fx": 720.72,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 720.72,
+     "fee": 245.0724,
+     "total": 965.7924
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 720.72,
+     "fee": 0.0,
+     "total": 720.72
+    }
+   ]
+  },
+  {
+   "usd": 190000,
+   "cny": 1271461.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 760.76,
+     "fee": 61.2681,
+     "total": 822.0281
+    },
+    {
+     "key": "M2",
+     "fx": 760.76,
+     "fee": 61.2681,
+     "total": 822.0281
+    },
+    {
+     "key": "M3",
+     "fx": 760.76,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 760.76,
+     "fee": 245.0724,
+     "total": 1005.8324
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 760.76,
+     "fee": 0.0,
+     "total": 760.76
+    }
+   ]
+  },
+  {
+   "usd": 200000,
+   "cny": 1338380.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 800.8,
+     "fee": 61.2681,
+     "total": 862.0681
+    },
+    {
+     "key": "M2",
+     "fx": 800.8,
+     "fee": 61.2681,
+     "total": 862.0681
+    },
+    {
+     "key": "M3",
+     "fx": 800.8,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 800.8,
+     "fee": 245.0724,
+     "total": 1045.8724
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 800.8,
+     "fee": 0.0,
+     "total": 800.8
+    }
+   ]
+  },
+  {
+   "usd": 210000,
+   "cny": 1405299.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 840.84,
+     "fee": 61.2681,
+     "total": 902.1081
+    },
+    {
+     "key": "M2",
+     "fx": 840.84,
+     "fee": 61.2681,
+     "total": 902.1081
+    },
+    {
+     "key": "M3",
+     "fx": 840.84,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 840.84,
+     "fee": 306.3405,
+     "total": 1147.1805
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 840.84,
+     "fee": 0.0,
+     "total": 840.84
+    }
+   ]
+  },
+  {
+   "usd": 220000,
+   "cny": 1472218.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 880.88,
+     "fee": 61.2681,
+     "total": 942.1481
+    },
+    {
+     "key": "M2",
+     "fx": 880.88,
+     "fee": 61.2681,
+     "total": 942.1481
+    },
+    {
+     "key": "M3",
+     "fx": 880.88,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 880.88,
+     "fee": 306.3405,
+     "total": 1187.2205
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 880.88,
+     "fee": 0.0,
+     "total": 880.88
+    }
+   ]
+  },
+  {
+   "usd": 230000,
+   "cny": 1539137.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 920.92,
+     "fee": 61.2681,
+     "total": 982.1881
+    },
+    {
+     "key": "M2",
+     "fx": 920.92,
+     "fee": 61.2681,
+     "total": 982.1881
+    },
+    {
+     "key": "M3",
+     "fx": 920.92,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 920.92,
+     "fee": 306.3405,
+     "total": 1227.2605
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 920.92,
+     "fee": 0.0,
+     "total": 920.92
+    }
+   ]
+  },
+  {
+   "usd": 240000,
+   "cny": 1606056.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 960.96,
+     "fee": 61.2681,
+     "total": 1022.2281
+    },
+    {
+     "key": "M2",
+     "fx": 960.96,
+     "fee": 61.2681,
+     "total": 1022.2281
+    },
+    {
+     "key": "M3",
+     "fx": 960.96,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 960.96,
+     "fee": 306.3405,
+     "total": 1267.3005
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 960.96,
+     "fee": 0.0,
+     "total": 960.96
+    }
+   ]
+  },
+  {
+   "usd": 250000,
+   "cny": 1672975.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1001.0,
+     "fee": 61.2681,
+     "total": 1062.2681
+    },
+    {
+     "key": "M2",
+     "fx": 1001.0,
+     "fee": 61.2681,
+     "total": 1062.2681
+    },
+    {
+     "key": "M3",
+     "fx": 1001.0,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1001.0,
+     "fee": 306.3405,
+     "total": 1307.3405
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1001.0,
+     "fee": 0.0,
+     "total": 1001.0
+    }
+   ]
+  },
+  {
+   "usd": 260000,
+   "cny": 1739894.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1041.04,
+     "fee": 61.2681,
+     "total": 1102.3081
+    },
+    {
+     "key": "M2",
+     "fx": 1041.04,
+     "fee": 61.2681,
+     "total": 1102.3081
+    },
+    {
+     "key": "M3",
+     "fx": 1041.04,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1041.04,
+     "fee": 367.6086,
+     "total": 1408.6486
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1041.04,
+     "fee": 0.0,
+     "total": 1041.04
+    }
+   ]
+  },
+  {
+   "usd": 270000,
+   "cny": 1806813.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1081.08,
+     "fee": 61.2681,
+     "total": 1142.3481
+    },
+    {
+     "key": "M2",
+     "fx": 1081.08,
+     "fee": 61.2681,
+     "total": 1142.3481
+    },
+    {
+     "key": "M3",
+     "fx": 1081.08,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1081.08,
+     "fee": 367.6086,
+     "total": 1448.6886
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1081.08,
+     "fee": 0.0,
+     "total": 1081.08
+    }
+   ]
+  },
+  {
+   "usd": 280000,
+   "cny": 1873732.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1121.12,
+     "fee": 61.2681,
+     "total": 1182.3881
+    },
+    {
+     "key": "M2",
+     "fx": 1121.12,
+     "fee": 61.2681,
+     "total": 1182.3881
+    },
+    {
+     "key": "M3",
+     "fx": 1121.12,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1121.12,
+     "fee": 367.6086,
+     "total": 1488.7286
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1121.12,
+     "fee": 0.0,
+     "total": 1121.12
+    }
+   ]
+  },
+  {
+   "usd": 290000,
+   "cny": 1940651.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1161.16,
+     "fee": 61.2681,
+     "total": 1222.4281
+    },
+    {
+     "key": "M2",
+     "fx": 1161.16,
+     "fee": 61.2681,
+     "total": 1222.4281
+    },
+    {
+     "key": "M3",
+     "fx": 1161.16,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1161.16,
+     "fee": 367.6086,
+     "total": 1528.7686
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1161.16,
+     "fee": 0.0,
+     "total": 1161.16
+    }
+   ]
+  },
+  {
+   "usd": 300000,
+   "cny": 2007570.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1201.2,
+     "fee": 61.2681,
+     "total": 1262.4681
+    },
+    {
+     "key": "M2",
+     "fx": 1201.2,
+     "fee": 61.2681,
+     "total": 1262.4681
+    },
+    {
+     "key": "M3",
+     "fx": 1201.2,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1201.2,
+     "fee": 367.6086,
+     "total": 1568.8086
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1201.2,
+     "fee": 0.0,
+     "total": 1201.2
+    }
+   ]
+  },
+  {
+   "usd": 310000,
+   "cny": 2074489.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1241.24,
+     "fee": 61.2681,
+     "total": 1302.5081
+    },
+    {
+     "key": "M2",
+     "fx": 1241.24,
+     "fee": 61.2681,
+     "total": 1302.5081
+    },
+    {
+     "key": "M3",
+     "fx": 1241.24,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1241.24,
+     "fee": 428.8767,
+     "total": 1670.1167
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1241.24,
+     "fee": 0.0,
+     "total": 1241.24
+    }
+   ]
+  },
+  {
+   "usd": 320000,
+   "cny": 2141408.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1281.28,
+     "fee": 61.2681,
+     "total": 1342.5481
+    },
+    {
+     "key": "M2",
+     "fx": 1281.28,
+     "fee": 61.2681,
+     "total": 1342.5481
+    },
+    {
+     "key": "M3",
+     "fx": 1281.28,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1281.28,
+     "fee": 428.8767,
+     "total": 1710.1567
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1281.28,
+     "fee": 0.0,
+     "total": 1281.28
+    }
+   ]
+  },
+  {
+   "usd": 330000,
+   "cny": 2208327.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1321.32,
+     "fee": 61.2681,
+     "total": 1382.5881
+    },
+    {
+     "key": "M2",
+     "fx": 1321.32,
+     "fee": 61.2681,
+     "total": 1382.5881
+    },
+    {
+     "key": "M3",
+     "fx": 1321.32,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1321.32,
+     "fee": 428.8767,
+     "total": 1750.1967
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1321.32,
+     "fee": 0.0,
+     "total": 1321.32
+    }
+   ]
+  },
+  {
+   "usd": 340000,
+   "cny": 2275246.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1361.36,
+     "fee": 61.2681,
+     "total": 1422.6281
+    },
+    {
+     "key": "M2",
+     "fx": 1361.36,
+     "fee": 61.2681,
+     "total": 1422.6281
+    },
+    {
+     "key": "M3",
+     "fx": 1361.36,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1361.36,
+     "fee": 428.8767,
+     "total": 1790.2367
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1361.36,
+     "fee": 0.0,
+     "total": 1361.36
+    }
+   ]
+  },
+  {
+   "usd": 350000,
+   "cny": 2342165.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1401.4,
+     "fee": 61.2681,
+     "total": 1462.6681
+    },
+    {
+     "key": "M2",
+     "fx": 1401.4,
+     "fee": 61.2681,
+     "total": 1462.6681
+    },
+    {
+     "key": "M3",
+     "fx": 1401.4,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1401.4,
+     "fee": 428.8767,
+     "total": 1830.2767
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1401.4,
+     "fee": 0.0,
+     "total": 1401.4
+    }
+   ]
+  },
+  {
+   "usd": 360000,
+   "cny": 2409084.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1441.44,
+     "fee": 61.2681,
+     "total": 1502.7081
+    },
+    {
+     "key": "M2",
+     "fx": 1441.44,
+     "fee": 61.2681,
+     "total": 1502.7081
+    },
+    {
+     "key": "M3",
+     "fx": 1441.44,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1441.44,
+     "fee": 490.1448,
+     "total": 1931.5848
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1441.44,
+     "fee": 0.0,
+     "total": 1441.44
+    }
+   ]
+  },
+  {
+   "usd": 370000,
+   "cny": 2476003.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1481.48,
+     "fee": 61.2681,
+     "total": 1542.7481
+    },
+    {
+     "key": "M2",
+     "fx": 1481.48,
+     "fee": 61.2681,
+     "total": 1542.7481
+    },
+    {
+     "key": "M3",
+     "fx": 1481.48,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1481.48,
+     "fee": 490.1448,
+     "total": 1971.6248
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1481.48,
+     "fee": 0.0,
+     "total": 1481.48
+    }
+   ]
+  },
+  {
+   "usd": 380000,
+   "cny": 2542922.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1521.52,
+     "fee": 61.2681,
+     "total": 1582.7881
+    },
+    {
+     "key": "M2",
+     "fx": 1521.52,
+     "fee": 61.2681,
+     "total": 1582.7881
+    },
+    {
+     "key": "M3",
+     "fx": 1521.52,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1521.52,
+     "fee": 490.1448,
+     "total": 2011.6648
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1521.52,
+     "fee": 0.0,
+     "total": 1521.52
+    }
+   ]
+  },
+  {
+   "usd": 390000,
+   "cny": 2609841.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1561.56,
+     "fee": 61.2681,
+     "total": 1622.8281
+    },
+    {
+     "key": "M2",
+     "fx": 1561.56,
+     "fee": 61.2681,
+     "total": 1622.8281
+    },
+    {
+     "key": "M3",
+     "fx": 1561.56,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1561.56,
+     "fee": 490.1448,
+     "total": 2051.7048
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1561.56,
+     "fee": 0.0,
+     "total": 1561.56
+    }
+   ]
+  },
+  {
+   "usd": 400000,
+   "cny": 2676760.0,
+   "methods": [
+    {
+     "key": "M1",
+     "fx": 1601.6,
+     "fee": 61.2681,
+     "total": 1662.8681
+    },
+    {
+     "key": "M2",
+     "fx": 1601.6,
+     "fee": 61.2681,
+     "total": 1662.8681
+    },
+    {
+     "key": "M3",
+     "fx": 1601.6,
+     "fee": 183.8043,
+     "total": null
+    },
+    {
+     "key": "M4",
+     "fx": 1601.6,
+     "fee": 490.1448,
+     "total": 2091.7448
+    },
+    {
+     "key": "M5",
+     "fx": null,
+     "fee": null,
+     "total": null
+    },
+    {
+     "key": "M6",
+     "fx": 1601.6,
+     "fee": 0.0,
+     "total": 1601.6
+    }
+   ]
+  }
+ ]
+}

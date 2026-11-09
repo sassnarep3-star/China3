@@ -33,6 +33,7 @@ OFFICIAL_DOMAINS = (
     "guangzhou.pbc.gov.cn", "shanghai.chinatax.gov.cn", "fgk.chinatax.gov.cn",
     "irs.gov", "fincen.gov", "ecfr.gov", "federalregister.gov", "govinfo.gov",
     "home.treasury.gov", "treasury.gov", "taxpayeradvocate.irs.gov", "github.com",
+    "boc.cn", "federalreserve.gov", "fiscal.treasury.gov",
 )
 
 

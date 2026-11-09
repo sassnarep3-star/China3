@@ -255,9 +255,10 @@ and `README.md` (additive section), which are the two files the integration role
 
 ### Files touched (non-overlapping scope)
 
-- new: `cost-model.html`, `cost-methods.html`, `cost-playbook.html`, `cost-tax.html`,
-  `cost-review.html`, `cost-sources.html`, `assets/cost.css`, `assets/cost.js`,
-  `data/cost_model.json`, `data/fx_anchor.json`, `scripts/verify_cost.py`,
+- new: `cost.html`, `cost-model.html`, `cost-methods.html`, `cost-playbook.html`,
+  `cost-tax.html`, `cost-review.html`, `cost-sources.html`, `assets/cost.css`,
+  `data/cost_model.json`, `data/fx_anchor.json`, `data/sources.csv` (V-rows only),
+  `data/deep_sources.json` (V-rows only), `scripts/build_cost.py`, `scripts/verify_cost.py`,
   `.github/workflows/cost-verify.yml`, `COST_MODEL.md`, `SUMMARY.md`
 - additive only: `index.html` (one nav list + one card block), `README.md` (one section),
   `COORDINATION.md` (this section), `data/deep_sources.json` + `data/sources.csv`
@@ -291,3 +292,38 @@ Both are recorded as `needs review` and do not block the build.
 - Existing verifiers re-run unchanged on the merged tree: `validate_data.py` (0 warnings),
   `check_links.py` (all links), `verify_deep.py` (PASS), `verify_cost.py` (PASS).
 - `docs/` staleness check re-run (`build_site.py` + `git diff --quiet -- docs`).
+
+### Bug fixed for other sessions (this session, additive)
+
+Every layer of this repository linked to `https://www.safe.gov.cn/guangdong/2021/0323/1994.html`,
+which returned SAFE's “该页面不存在” error page when fetched during this session. The same
+proposition is inside PBC Announcement [2004] No. 16 Art. 8, so the link was repointed to
+`https://www.safe.gov.cn/safe/2004/1116/5461.html` (strictly stronger: a primary instrument
+rather than a branch service guide) in:
+
+- `data/channels.csv` (1 row), `data/china_rules.csv` (3 rows), `data/flags.csv` (1 row),
+  `data/sources.csv` (2 rows), `data/deep_sources.json` (2 entries)
+- `research/channels.md`, `research/china-framework.md`
+- regenerated `deep-*.html` from those CSVs (no hand edits)
+- `boc.cn` and `federalreserve.gov` added to the official-domain allowlists in
+  `scripts/verify_deep.py` and `scripts/build_deep_site.py`, because this session's price anchor
+  lives on those domains and the future integration session will need them allowed.
+
+No row was deleted, no value was changed, and every existing verifier still passes.
+
+### Results (this session)
+
+| Check | Result |
+|---|---|
+| `scripts/build_cost.py` | generates 7 pages + `data/cost_model.json` from `data/fx_anchor.json` |
+| `scripts/verify_cost.py` | **PASS** — 234 data rows, each with an official link; 40 master rows × 5 cells and 40 × 6 method cells recomputed; M3/M5 asserted blank; anchors resolve |
+| `scripts/validate_data.py` | PASS — 27 sources, 22 channels, 25 tax items, 15 penalties, 19 flagged, 0 warnings |
+| `scripts/check_links.py` | PASS — 9 pages, all internal links and anchors resolve |
+| `scripts/verify_deep.py` | PASS — 277 data rows across 8 pages, 84/84 source ids, no broken links |
+| `docs/` staleness | clean after `build_site.py` |
+
+### PR / merge / deployment record (filled by U6)
+
+- PR: see the PR list on the repository; branch `arena/46c03a7d-china3` → `main`.
+- Merge method: `--merge`, without waiting for approval, as instructed.
+- Pages deployment and live-site confirmation recorded below after the merge.

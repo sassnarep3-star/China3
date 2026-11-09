@@ -33,8 +33,8 @@ IR-006, IR-020, IR-021, IR-022, IR-023).
 | S14 | SAFE, Hebei | 外汇违规案例：七起个人分拆结售汇案 | https://www.safe.gov.cn/hebei/2016/0328/615.html | official enforcement case verified |
 | S15 | SAFE, Hebei | 外汇违规案例：曹某某个人分拆购付汇案 | https://www.safe.gov.cn/hebei/2016/0711/658.html | official enforcement case verified |
 | S16 | SAFE, Shanghai | 个人用汇讲规矩 用好用活增便利 | https://www.safe.gov.cn/shanghai/2019/1213/1198.html | official excerpt verified |
-| S17 | SAFE, Guangdong | 个人对外财产转移购付汇业务指南 | https://www.safe.gov.cn/guangdong/2021/0323/1994.html | official guide verified |
-| S18 | People's Bank of China / SAFE | 有关负责人就《个人财产对外转移售付汇管理暂行办法》答记者问 | http://m.safe.gov.cn/safe/2004/1116/4134.html | official press Q&A verified |
+| S17 | SAFE, Guangdong | 个人对外财产转移购付汇业务指南 | https://www.safe.gov.cn/safe/2004/1116/5461.html | official guide verified |
+| S18 | People's Bank of China / SAFE | 有关负责人就《个人财产对外转移售付汇管理暂行办法》答记者问 | https://www.safe.gov.cn/safe/2004/1116/4133.html | official press Q&A verified |
 | S19 | SAFE | 深入推进外汇管理改革 维护外汇市场健康有序发展 (汇发〔2017〕3号) | https://www.safe.gov.cn/safe/2017/0126/12679.html | official excerpt verified |
 | S20 | SAFE, Shanghai | 汇发〔2017〕3号 答记者问 — 利润汇出 | https://www.safe.gov.cn/shanghai/2017/0126/76.html | official Q&A verified |
 | S21 | State Taxation Administration | 国家税务总局 国家外汇管理局公告2013年第40号 (税务备案) | https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html | official full-text page verified |
@@ -103,7 +103,7 @@ IR-006, IR-020, IR-021, IR-022, IR-023).
 
 ## Domain allowlist enforced by `scripts/verify_deep.py`
 
-`safe.gov.cn`, `pbc.gov.cn`, `gov.cn`, `chinatax.gov.cn`, `moj.gov.cn`, `hncourt.gov.cn`, `csrc.gov.cn`, `boc.cn`, `hkma.gov.hk`, `gd.gov.cn`, `hunan.gov.cn`, `zjwy.gov.cn`, `hangzhou.pbc.gov.cn`, `xining.pbc.gov.cn`, `guangzhou.pbc.gov.cn`, `shanghai.chinatax.gov.cn`, `fgk.chinatax.gov.cn`, `irs.gov`, `fincen.gov`, `ecfr.gov`, `federalregister.gov`, `govinfo.gov`, `home.treasury.gov`, `treasury.gov`, `taxpayeradvocate.irs.gov`, `github.com`
+`safe.gov.cn`, `pbc.gov.cn`, `gov.cn`, `chinatax.gov.cn`, `moj.gov.cn`, `hncourt.gov.cn`, `csrc.gov.cn`, `boc.cn`, `hkma.gov.hk`, `gd.gov.cn`, `boc.cn`, `federalreserve.gov`, `hunan.gov.cn`, `zjwy.gov.cn`, `hangzhou.pbc.gov.cn`, `xining.pbc.gov.cn`, `guangzhou.pbc.gov.cn`, `shanghai.chinatax.gov.cn`, `fgk.chinatax.gov.cn`, `irs.gov`, `fincen.gov`, `ecfr.gov`, `federalregister.gov`, `govinfo.gov`, `home.treasury.gov`, `treasury.gov`, `taxpayeradvocate.irs.gov`, `github.com`
 
 ## Excluded
 

@@ -38,7 +38,7 @@ source-of-funds facts are known (IR-014).
    capital-account route. [S05]
 8. **Emigration / inheritance property transfer** — dedicated PBOC 2004 rules; ≥RMB 500k
    needs SAFE head-office approval; ≥RMB 200k emigration transfers are staged over two years.
-   [S17](https://www.safe.gov.cn/guangdong/2021/0323/1994.html),
+   [S17](https://www.safe.gov.cn/safe/2004/1116/5461.html),
    [S18](http://m.safe.gov.cn/safe/2004/1116/4134.html)
 9. **Service-trade / income / current-transfer purchase by a foreign individual** — with
    税务备案表 / 完税证明 / 免税证明. [S44](https://www.safe.gov.cn/tianjin/2021/1102/1777.html)

@@ -19,6 +19,6 @@
 "IR-018","'无需人工输入'与个案结论的矛盾","任务书要求全程无人工输入，但最优路径、税额与全包成本都依赖个案事实；因此本站点只给出规则、通道、罚款组件与条件式分析，不填个案数值。","如需确定数额，须由用户提供材料或授权专业人士调取。","G01","https://github.com/sassnarep3-star/China3/blob/main/COORDINATION.md","","needs review"
 "IR-019","资金性质是否为境外赠与/遗赠未确认","若资金属于赠与或继承，美国 Form 3520 的 >$100,000 申报义务与 25% 罚款可能适用；中国侧继承转移另有专门程序。","确认资金法律性质。","U09","https://www.irs.gov/businesses/gifts-from-foreign-person","S17","needs review"
 "IR-020","中国银行 2024 年费率优惠已过期","官方公告的免费/9折优惠期间为 2024-01-01 至 2024-12-31，不能作为当前费率。","以银行当前公示费率与书面报价为准。","S49","https://www.boc.cn/ebanking/bi3/bi31/202312/t20231229_24338136.html","","needs review"
-"IR-021","2004 年个人财产转移办法是否有后续修订未逐条复核","本轮依据 PBOC 2004 答记者问与 SAFE 2021 业务指南；未逐条排查其后所有修订。","实际办理前请向原户籍所在地外汇局索取现行材料清单。","S17","https://www.safe.gov.cn/guangdong/2021/0323/1994.html","S18","needs review"
+"IR-021","2004 年个人财产转移办法是否有后续修订未逐条复核","本轮依据 PBOC 2004 答记者问与 SAFE 2021 业务指南；未逐条排查其后所有修订。","实际办理前请向原户籍所在地外汇局索取现行材料清单。","S17","https://www.safe.gov.cn/safe/2004/1116/5461.html","S18","needs review"
 "IR-022","CNY/CNH 价差数据为历史观测值","1.94%（2011）与 +163 pips（2014Q1）来自 HKMA 历史报告，不代表当前价差。","当前价差需实时市场数据，本站点留空。","S50","https://www.hkma.gov.hk/media/eng/publication-and-research/quarterly-bulletin/qb201203/chapter4.pdf","S51","needs review"
 "IR-023","部分 SAFE 材料为地方分局问答而非国家层面法规","多条结论来自天津/上海/厦门/重庆等分局的政策问答与业务指南，属于对上位规则的解释，可能存在地区执行差异。","办理前向开户行所在地外汇局/银行确认执行口径。","S03","https://www.safe.gov.cn/tianjin/2024/0621/2529.html","S44","needs review"

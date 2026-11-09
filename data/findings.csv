@@ -16,7 +16,7 @@
 "F15","境外赠与超过 $100,000 需报 Form 3520，虽不缴所得税但漏报罚 25%","IRS Gifts from foreign person 明确赠与不是所得税应税项目，但未申报按每月5%、最高25%处罚","若这笔钱在性质上是赠与/继承，须单独评估 3520 义务","U09","https://www.irs.gov/businesses/gifts-from-foreign-person","","verified"
 "F16","历史漏报有官方补救程序","Streamlined Foreign Offshore（3年申报表 + 6年 FBAR）与 Delinquent FBAR 程序可降低非故意漏报的罚款","在动钱之前先做申报健康检查，避免把历史问题带进新交易","U13","https://www.irs.gov/individuals/international-taxpayers/us-taxpayers-residing-outside-the-united-states","U12","verified"
 "F17","资本项目用途不能用便利化额度购汇","《个人购汇申请书》'六不得'禁止用于境外买房、证券投资、人寿保险及投资性返还分红类保险；个人对外投资只能通过 QDII 等规定渠道","若目标是'把钱变成境外资产'而非'换成美元现金'，规则完全不同","S09","https://www.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf","S53","verified"
-"F18","个人财产对外转移通道存在但范围窄且分期","仅适用于移民财产转移和继承财产转移；≥50万元人民币需国家外汇管理局批准；≥20万元移民转移须2年分步汇出","只有符合身份条件时才可用，不能作为普通储蓄的通用出口","S18","http://m.safe.gov.cn/safe/2004/1116/4134.html","S17","verified"
+"F18","个人财产对外转移通道存在但范围窄且分期","仅适用于移民财产转移和继承财产转移；≥50万元人民币需国家外汇管理局批准；≥20万元移民转移须2年分步汇出","只有符合身份条件时才可用，不能作为普通储蓄的通用出口","S18","https://www.safe.gov.cn/safe/2004/1116/4133.html","S17","verified"
 "F19","企业利润可无上限汇出，但材料要求更高","汇发〔2017〕3号：真实合规利润按程序出具证明材料可直接银行办理，没有任何限制；>5万美元须董事会决议、税务备案表、审计报告","若资金实为公司所有，应走公司路径而非个人购汇","S20","https://www.safe.gov.cn/shanghai/2017/0126/76.html","","verified"
 "F20","跨境人民币通道在离岸完成兑换且不占个人外汇额度","跨境理财通解读明确'业务均使用人民币进行跨境资金划转，资金兑换在离岸市场完成，因此不涉及占用个人的外汇额度'；PBOC 亦支持个人经常项目跨境人民币结算","可比较在岸购汇与离岸 CNH 兑换两条路径的全包成本","S40","http://gdjr.gd.gov.cn/gdjr/zwgk/jrzcfg/content/post_3520533.html","S38","verified"
 "F21","美国申报义务与中国购汇批准是两套独立义务","IRS 对照表明确 Form 8938 不替代 FBAR，两者可同时适用独立罚款；中国侧则由银行/外汇局审核真实性","钱成功汇出并不等于美国申报完成；反之亦然","U06","https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements","S02","verified"

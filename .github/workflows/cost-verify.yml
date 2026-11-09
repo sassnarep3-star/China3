@@ -1,0 +1,48 @@
+name: Verify cost dashboard
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cost-dashboard:
+    name: Recompute every cost cell and re-check every source
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild the dashboard from the anchor data
+        run: python3 scripts/build_cost.py
+
+      - name: Fail if the committed HTML is stale against data/fx_anchor.json
+        run: |
+          if ! git diff --quiet -- cost.html cost-*.html data/cost_model.json; then
+            echo "::error::The cost pages are out of date with data/fx_anchor.json. Run scripts/build_cost.py and commit the result."
+            git diff --stat -- cost.html cost-*.html data/cost_model.json
+            exit 1
+          fi
+
+      - name: Verify every row: arithmetic, source link, blank-not-guessed, anchors
+        run: python3 scripts/verify_cost.py
+
+      - name: Re-run the three existing verifiers unchanged
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/check_links.py
+          python3 scripts/verify_deep.py
+
+      - name: Confirm docs/ is not stale
+        run: |
+          python3 scripts/build_site.py
+          if ! git diff --quiet -- docs; then
+            echo "::error::docs/ is out of date with data/. Run scripts/build_site.py and commit the result."
+            exit 1
+          fi

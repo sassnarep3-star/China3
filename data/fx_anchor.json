@@ -1,0 +1,143 @@
+{
+  "_readme": "Every figure below was read off the cited official page during the 2026-11-09 session. Nothing here is estimated, interpolated or recalled from memory. If a value could not be read off an official page it is null and the row is flagged.",
+  "retrieved": "2026-11-09",
+  "anchor": {
+    "boc_board_url": "https://www.boc.cn/sourcedb/whpj/",
+    "boc_board_source_id": "V10",
+    "boc_timestamp": "2026-11-09 09:15:45",
+    "boc_units": "CNY per 100 units of foreign currency",
+    "boc_usd_cash_buy": 666.38,
+    "boc_usd_spot_buy": 666.38,
+    "boc_usd_spot_sell": 669.19,
+    "boc_usd_cash_sell": 669.19,
+    "boc_usd_reference": 671.88,
+    "pboc_parity_url": "https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026110608563230207/index.html",
+    "pboc_parity_source_id": "V11",
+    "pboc_parity_date": "2026-11-06",
+    "pboc_usd_cny": 6.7168,
+    "fed_h10_url": "https://www.federalreserve.gov/releases/h10/current/",
+    "fed_h10_source_id": "V21",
+    "fed_h10_date": "2026-10-30",
+    "fed_usd_cny": 6.6538,
+    "note": "The customer buys USD from the bank, so the relevant published price is the bank's 现汇卖出价 (spot selling rate) = CNY 669.19 per 100 USD, i.e. CNY 6.6919 per USD. The BOC 中行折算价 (671.88) is the bank's own reference price and is NOT a price any customer transacts at."
+  },
+  "derived": {
+    "customer_rate_cny_per_usd": 6.6919,
+    "spread_vs_boc_reference_pct": 0.4004,
+    "spread_vs_pboc_parity_pct": 0.3707,
+    "spread_vs_fed_h10_pct": 0.5653,
+    "formula_spread": "(reference_cny_per_usd - customer_rate_cny_per_usd) / reference_cny_per_usd",
+    "note": "These three spreads answer the same question against three different reference prices. Only the BOC-reference spread (0.4004%) is a like-for-like bank comparison on the same day; the PBOC and Federal Reserve figures are different days and must not be presented as the exact cost of one transaction."
+  },
+  "fees": {
+    "boc_outward_wire": {
+      "source_id": "V12",
+      "url": "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html",
+      "formula": "min(max(amount_cny * 0.001, 50), 260) + cable",
+      "rate_pct_of_cny": 0.1,
+      "min_cny": 50,
+      "max_cny": 260,
+      "cable_cny_non_hk_mo_tw": 150,
+      "cable_cny_hk_mo_tw": 80,
+      "note": "Published 2014-11-01 tariff still shown on boc.cn. Head-office tariff; branches may differ ('按照协议或当地公示的内容收取'). No FCC/全额到账 fee and no correspondent fee is published on this page."
+    },
+    "receiving_us_bank_incoming_wire": null,
+    "correspondent_intermediary_fee": null,
+    "sha_government_approval_fee": null,
+    "sha_application_notarisation_and_translation": null
+  },
+  "thresholds": {
+    "convenience_quota_usd_per_person_year": {
+      "value": 50000,
+      "source_id": "V03",
+      "url": "https://www.safe.gov.cn/ningxia/2022/0929/1997.html",
+      "reading": "SAFE states this is a 便利化额度 (simplified-processing amount), explicitly 'not the limit' on purchases; above it, genuine current-account purchases need transaction evidence but face no amount ceiling."
+    },
+    "tax_record_filing_usd_trigger": {
+      "value": 50000,
+      "source_id": "V08",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html",
+      "reading": "A single outward payment of more than the USD 50,000 equivalent for services/income/current transfers to an overseas individual requires a 税务备案表 from the tax authority. This is a filing, not a tax."
+    },
+    "sha_branch_approval_limit_rmb": {
+      "value": 500000,
+      "source_id": "V05",
+      "url": "https://www.safe.gov.cn/safe/2004/1116/5461.html",
+      "reading": "At or below RMB 500,000 the local SAFE branch decides; above it the file goes to SAFE headquarters. Converted at the 2026-11-09 BOC rate this is USD 74,717."
+    },
+    "sha_single_remittance_allowance_rmb": {
+      "value": 200000,
+      "source_id": "V05",
+      "url": "https://www.safe.gov.cn/safe/2004/1116/5461.html",
+      "reading": "RMB 200,000 or less may be remitted in one go; above it the phased schedule applies (50% first, half the remainder after one year, the rest after two years)."
+    },
+    "form_3520_foreign_gift_usd": {
+      "value": 100000,
+      "source_id": "V17",
+      "url": "https://www.irs.gov/businesses/gifts-from-foreign-person",
+      "reading": "Aggregate gifts/bequests above USD 100,000 in a tax year from a nonresident alien or foreign estate must be reported on Form 3520 Part IV. Reporting only."
+    },
+    "fbar_aggregate_usd": {
+      "value": 10000,
+      "source_id": "V13",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar",
+      "reading": "Aggregate foreign financial accounts above USD 10,000 at any time in the calendar year must be reported."
+    },
+    "form_8938_single_living_in_us_usd": {
+      "value": 50000,
+      "source_id": "V15",
+      "url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+      "reading": "Unmarried specified individual living in the U.S.: more than USD 50,000 on the last day of the year, or more than USD 75,000 at any time."
+    }
+  },
+  "penalties": {
+    "fbar_non_willful_max_usd": {
+      "value": 16536,
+      "source_id": "V14",
+      "url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821",
+      "reading": "31 U.S.C. 5321(a)(5)(B)(i), maximum for penalties assessed on or after 2025-01-17."
+    },
+    "fbar_willful_max_usd": {
+      "value": 165353,
+      "source_id": "V14",
+      "url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821",
+      "reading": "31 U.S.C. 5321(a)(5)(C)(i)(I), maximum for penalties assessed on or after 2025-01-17; the statute makes the penalty the greater of this amount or 50% of the balance."
+    },
+    "form_8938_failure_max_usd": {
+      "value": 60000,
+      "source_id": "V15",
+      "url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+      "reading": "Up to USD 10,000 for failure to disclose plus USD 10,000 for each 30 days of continued non-filing after notice, stated as a potential maximum of USD 60,000."
+    },
+    "form_3520_6039f_pct_per_month": {
+      "value": 5,
+      "source_id": "V18",
+      "url": "https://www.irs.gov/instructions/i3520",
+      "reading": "5% of the foreign gift per month the failure continues, capped at 25%; reasonable cause exception available."
+    },
+    "prc_evasion_max_pct": {
+      "value": 30,
+      "source_id": "V02",
+      "url": "https://www.gov.cn/zhengce/2008-08/06/content_2602514.htm",
+      "reading": "State Council Order 532 Art. 39 (逃汇): fine up to 30% of the amount, or 30%-to-100%-equivalent if serious. Art. 40 (非法套汇) carries the same range."
+    },
+    "prc_illegal_fx_trading_max_pct": {
+      "value": 30,
+      "source_id": "V02",
+      "url": "https://www.gov.cn/zhengce/2008-08/06/content_2602514.htm",
+      "reading": "Art. 45 (私自买卖外汇/变相买卖外汇/倒买倒卖/非法介绍买卖): warning, confiscation of gains, fine up to 30%."
+    },
+    "prc_cash_carry_max_pct": {
+      "value": 20,
+      "source_id": "V02",
+      "url": "https://www.gov.cn/zhengce/2008-08/06/content_2602514.htm",
+      "reading": "Art. 42: warning plus fine up to 20% of the amount for illegal carriage of foreign currency across the border."
+    },
+    "prc_pit_property_transfer_pct": {
+      "value": 20,
+      "source_id": "V09",
+      "url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/grsds/201809/t441789.html",
+      "reading": "IIT Law Art. 3(3): proportional rate of 20% on property transfer income, interest, dividends, rent and incidental income. Art. 6(5): taxable base is proceeds minus original value minus reasonable expenses — so the 20% is on the gain, not on the principal."
+    }
+  }
+}
