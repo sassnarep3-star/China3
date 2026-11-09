@@ -606,11 +606,12 @@ def build_cost_table_html(rows, pen):
         cells = []
         for a in (50000, 100000, 200000, 400000):
             r = next(x for x in by_id[m["id"]] if x["amount_usd"] == a)
+            lab = "${:,}".format(a)
             if r["feasible"] != "Yes":
-                cells.append("<td class='no'>cap</td>")
+                cells.append("<td class='no' data-l='{lab}'>cap</td>".format(lab=lab))
             else:
-                cells.append("<td>{t}<br><span class='small'>{p}%</span></td>".format(
-                    t=money(r["total_cost_usd"]), p=r["cost_pct"]))
+                cells.append("<td data-l='{lab}'>{t}<br><span class='small'>{p}%</span></td>".format(
+                    lab=lab, t=money(r["total_cost_usd"]), p=r["cost_pct"]))
         out.append("<tr><td data-l='Method'><strong>{id}</strong> {n}<br><span class='small'>{zh}</span></td>{c}</tr>".format(
             id=m["id"], n=m["name"], zh=m["name_zh"], c="".join(cells)))
     out.append("""    </tbody>
@@ -731,11 +732,14 @@ def build_cost_table_html(rows, pen):
     m01_400_total = m01_400["total_cost_usd"]
     for x in ILLEGAL:
         if x["id"] == "X03":
-            cells = "<td class='no'>principal at risk</td><td class='no'>principal at risk</td><td class='no'>principal at risk</td>"
+            cells = "".join(
+                "<td class='no' data-l='${:,}'>principal at risk</td>".format(a)
+                for a in (50000, 200000, 400000))
             ratio = "the whole balance"
         else:
             cells = "".join(
-                "<td>{lo:,.0f} – {hi:,.0f}</td>".format(lo=FXREG_LOW * a, hi=FXREG_HIGH * a)
+                "<td data-l='${a:,}'>{lo:,.0f} &ndash; {hi:,.0f}</td>".format(
+                    a=a, lo=FXREG_LOW * a, hi=FXREG_HIGH * a)
                 for a in (50000, 200000, 400000))
             ratio = "{:.0f}&times; to {:.0f}&times;".format(
                 FXREG_LOW * 400000 / m01_400_total, FXREG_HIGH * 400000 / m01_400_total)
