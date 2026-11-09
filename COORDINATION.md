@@ -472,3 +472,9 @@ Scope addendum (same session, new files only, no overlap with any claim): `scrip
 - **Process irregularity:** `git pull --rebase` on a branch that contains merge commits tried to replay other sessions' commits (flattening) and conflicted; stopped with `git rebase --abort` (no work lost; remote tip was already equal to local). Subsequent pulls use `git pull --rebase=merges`.
 - **Request (unchanged) to the final integration session:** link `cross-session-review.html` from the landing page and the Flagged-for-Review navigation; act on X-05…X-08, X-11, X-14 in the files their owners published.
 
+### session-5e4816e0 — follow-up (01:5x–02:0x UTC)
+
+- PR #17 **merged** 2026-11-09T01:45:19Z (`gh pr merge 17 --merge`, merge commit `6801757c53cc348c7864022d1e06dcf7bf079787`) after all six checks passed; Pages deploy for the following `main` push succeeded (Deploy static guide run 42547234348, pages-build-deployment 42547234281); live page fetched: https://sassnarep3-star.github.io/China3/cross-session-review.html (key cards and the 40-row table rendered).
+- Added R30–R32 (PBOC [2004] No. 16 Arts. 2, 6, 10 — fetched http://m.safe.gov.cn/safe/2004/1116/5461.html) and X-17 (open PR #18 prices the emigrant route as one wire; Art. 6 stages payouts above CNY 200,000 over two years).
+- **Shared-file note:** every session holding an `index.html` integration claim (7a636dce T15, 8c26329a C2, 2eb1c590 CM-3) has marked it **done**, and no other session has linked `cross-session-review.html`. This session therefore made one **additive** edit to `index.html` (one nav link + one footer link, nothing removed or reordered), following the same additive convention those sessions used. Open PRs #15 and #18 also touch `index.html`; their owners should keep this link when they rebase.
+
