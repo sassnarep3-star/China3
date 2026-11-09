@@ -1,0 +1,7 @@
+situation,prc_treatment,us_treatment,source_ids
+Salary already taxed in China,3%-45% withheld on comprehensive income; no further PRC tax on moving the net amount,Worldwide income is taxable in the US; foreign earned income exclusion and foreign tax credit may reduce double tax,C12 C27 C28
+Bank deposit interest,0% - savings-deposit interest is exempt for interest accruing on or after 2008-10-09,"Taxable interest in the US, even though China exempts it",C13 C27
+Gain on selling a mainland property,20% of proceeds minus original value and reasonable expenses,Capital gain in the US; foreign tax credit is limited to the lesser of foreign tax paid and the FTC limitation,C12 C28
+Dividends from a mainland company,20% flat,Taxable in the US; treaty caps the PRC rate at 10% but the saving clause preserves US taxation,C12 C28
+Gift or inheritance received,No gift tax appears in the PRC IIT rate schedule; whether a receipt is characterised as 偶然所得 depends on the facts and is flagged,"No US income tax on a gift, but Form 3520 is required above USD 100,000 and the penalty is 5% per month up to 25%",C12 C18 C19
+Your own after-tax principal,"0% - the PRC taxes income, not the act of exchanging currency","0% - the US taxes income, not transfers; personal currency gain is excluded unless it exceeds USD 200",C09 C21 C20

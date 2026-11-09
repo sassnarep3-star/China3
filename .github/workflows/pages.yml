@@ -30,6 +30,9 @@ jobs:
           test -s review.html
           test -s sources.html
           test -s assets/site.css
+          test -s deep-costs.html
+          test -s deep-cost-steps.html
+          test -s assets/cost.css
           python3 - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path

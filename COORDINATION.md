@@ -219,6 +219,99 @@ provincial SAFE branch Q&As.
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
 
+---
+
+# Current Arena session `arena/80597d10-china3` — authoritative amount-by-amount cost model
+
+Branch: `arena/80597d10-china3` (fixed by Arena; per-task branches cannot be created in this
+environment — logged as IR-001 again below). Base commit: `b1dc441` (= `main`). All tasks
+above are `done`; this session closes the one remaining gap in the user's requirement list:
+**a computed cost for every method at every USD 10,000 step from USD 10,000 to USD 400,000,
+with step-by-step execution instructions**, which the earlier sessions deliberately left
+blank.
+
+## Claim, scope and handoff
+
+| ID | Task | File scope | Status | Owner | Notes |
+|---|---|---|---|---|---|
+| T12 | Amount-by-amount cost model (USD 10k → 400k, 40 steps) for every lawful/conditional route, plus penalty-of-getting-it-wrong matrix, step-by-step playbooks, mobile-first tables, verification script, PR + merge + Pages | `COORDINATION.md`, `README.md`, `VERIFICATION.md`, `EXECUTIVE_SUMMARY.md`, `data/cost_*.csv`, `deep-costs.html`, `deep-cost-steps.html`, `deep-executive-summary.html`, `deep-review.html`, `deep-sources.html`, `index.html`, `scripts/build_cost_matrix.py`, `scripts/verify_cost_matrix.py`, `scripts/build_deep_site.py`, `.github/workflows/ci.yml`, `.github/workflows/pages.yml` | done | `arena/80597d10-china3` | 32 sources re-checked 2026-11-09; 520 rows recomputed independently; 8 new flags IR-024…IR-031 |
+
+**Handoff note (60-minute rule).** Session `arena/9d3903f8-china3` claimed the same cost-matrix
+gap as its T11 at 2026-11-08T23:10Z, then committed only two documentation-only claim commits
+(`c677948`, `5be5d9e`) and no cost data, page, or script. As of 2026-11-09T01:30Z the claim is
+more than 60 minutes old with no content commits, so this session takes the task over under the
+board's own rule. Nothing from that session is discarded: its claim text and file list were read
+(`git show 5be5d9e`) and its branch is left untouched. If it later lands content, merge it — this
+session's files use distinct names (`deep-costs.html`, `data/cost_matrix.*`,
+`scripts/build_cost_matrix.py`) exactly as its claim specified.
+
+**Data rules for this task (unchanged, stricter):**
+1. A **verified** cell needs an official URL and a dated quote. Official = SAFE, PBOC, CFETS/SAFE
+   central parity, State Council, State Taxation Administration, BOC, IRS, FinCEN, eCFR, Federal
+   Register, Federal Reserve, OCC, US bank published tariff.
+2. A **modelled** cell is arithmetic on verified inputs plus parameters that are labelled
+   `assumption`, with the assumption stated and flagged. Modelled cells are never presented as
+   quotes.
+3. An **unverified** cell stays blank and is published on `deep-review.html`.
+4. Every table row carries its source link(s) in the row itself.
+
+
+## T12 result — what was built, what was verified, what was flagged
+
+**Built.** `deep-costs.html` (40 amount steps × 13 routes = 520 rows; a 40-row penalty
+matrix; a six-row tax-layer table; a 21-row input table; a 12-row "not modelled" table) and
+`deep-cost-steps.html` (ordered execution for each lawful route). Data is generated, never
+hand-typed: `scripts/build_cost_matrix.py` writes `data/cost_params.csv`,
+`data/cost_methods.csv`, `data/cost_matrix.csv`, `data/cost_penalty.csv`,
+`data/cost_tax.csv` and both pages. `scripts/verify_cost_matrix.py` re-implements the
+arithmetic from the parameter file and compares every row.
+
+**Sources re-checked on 2026-11-09** (32 in `data/cost_sources.csv`, all opened this
+session): SAFE central parity (6.7188) and BOC rate board (09:15:45, 6.6638/6.6919);
+BOC personal wire tariff; BOC full-amount announcement; SAFE Ningxia 2022 and Tianjin 2024
+Q&As; SAFE Tianjin 2021 tax-evidence Q&A; PBOC Order [2004] No.16 (State Council Gazette);
+FX Regulation (State Council Order 532); SAFE card-withdrawal and cash-carrying notices;
+PRC IIT law and 财税〔2008〕132号; PBOC 2014 policy chronicle and 公告〔2014〕5号; eCFR
+1010.821; IRS Form 8938/FBAR comparison, foreign-gift page, Pub 525, Pub 54, Pub 514, FATCA;
+26 USC 6039F and 26 USC 988 (Cornell mirror, flagged); SAFE split-FX enforcement cases;
+PBOC 银发〔2026〕42号; Criminal Law Art.225; HKMA 2012 bulletin; PBOC Order [2006] No.3;
+TA/SAFE Announcement 2013 No.40.
+
+**Verification actually run (all green).**
+- `python3 scripts/build_cost_matrix.py` — 520 rows, 13 routes, 40 amounts.
+- `python3 scripts/verify_cost_matrix.py` — 400 modelled rows recomputed within USD 0.02,
+  40 penalty rows re-derived, 659 rendered rows each carrying an official link, all local
+  links resolve.
+- `python3 scripts/build_deep_site.py` — 87 sources, 31 flags.
+- `python3 scripts/verify_deep.py` — 948 deep-page data rows, every one with an official
+  link; all 31 flagged ids on the Flagged page; all 87 source ids on the Sources page.
+- `python3 scripts/validate_data.py`, `python3 scripts/build_site.py`,
+  `python3 scripts/check_links.py` — pass; `docs/` unchanged (no stale build).
+- Local HTTP smoke test of every new page and asset.
+
+**Irregularities opened by this task** (published on `deep-review.html`, non-blocking):
+IR-024 prior source S17 is a 404 (rule re-cited from the State Council Gazette);
+IR-025 FX costs are a one-day snapshot and the BOC mid sat 0.61% below the SAFE parity;
+IR-026 four inputs are labelled assumptions, not official values; IR-027 the US receiving
+fee is covered only via the full-amount option; IR-028 emigrant transfers are staged
+50/25/25 by regulation; IR-029 the ATM channel is capped at about USD 14,883 a year;
+IR-030 cash above USD 10,000 per trip is not generally available; IR-031 the PRC character
+of a received gift is fact-dependent.
+
+**One claim corrected.** The earlier executive summary said SAFE's handbook "states that
+foreign-individual FX purchase has no annual quota limit at all". The sentence could not be
+located verbatim in the fetched PDF, so it was replaced with what S01 and S03 actually
+establish: genuine current-account FX has no amount limit, and the convenience amount is
+available only to holders of a foreign permanent-residence ID. This is the kind of
+line-by-line correction the brief asks for and is recorded here rather than silently fixed.
+
+### PR and deployment record — T12
+
+- PR: https://github.com/sassnarep3-star/China3/pull/15
+- Status: see the merge note appended below after `gh pr merge`.
+
+---
+
 ## Session 8c26329a — 2026-11-09 cost-comparison integration
 
 Assigned/fixed branch: `arena/8c26329a-china3`; no alternate branch will be created.

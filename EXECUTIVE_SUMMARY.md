@@ -50,6 +50,36 @@ CNY savings principal into USD.** The costs that actually bite are:
    [U21](https://www.federalregister.gov/documents/2026/07/07/2026-13629/no-adjustment-to-civil-monetary-penalty-amounts)
    [U09](https://www.irs.gov/businesses/gifts-from-foreign-person)
 
+## The cost answer, in numbers
+
+The brief asks for the cost at every USD 10,000 step from 10,000 to 400,000, for every
+method. `deep-costs.html` (520 rows) does that. On the primary lawful route — foreign
+individual, documented current-account income, one wire — the arithmetic is:
+
+| Amount | All-in cost (base) | Effective % | Low | High |
+|---|---|---|---|---|
+| USD 10,000 | USD 99 | 0.995% | USD 53 | USD 657 |
+| USD 50,000 | USD 297 | 0.593% | USD 166 | USD 1,086 |
+| USD 100,000 | USD 507 | 0.507% | USD 272 | USD 1,586 |
+| USD 200,000 | USD 928 | 0.464% | USD 482 | USD 2,586 |
+| USD 400,000 | USD 1,769 | 0.442% | USD 903 | USD 4,586 |
+
+Inputs: SAFE central parity 6.7188 (2026-11-09), BOC 现汇买入 6.6638 / 卖出 6.6919 the same
+morning (measured spread 0.42%), BOC personal wire tariff 1‰ with a CNY 50–260 cap plus
+CNY 150 cable, and the USD 25 full-amount guarantee. The low case is half the measured
+spread plus the wire fee; the high case is a 1.00% spread plus USD 500 of documents. The
+percentage falls as the amount rises because the wire fee is capped.
+
+For comparison at USD 400,000: an unlawful route carries a 30%–100% fine plus confiscation
+(USD 120,000–400,000), and a single willful FBAR violation is capped at the greater of
+USD 165,353 or 50% of the balance (USD 200,000). **Compliance is worth two orders of
+magnitude more than any rate negotiation.**
+
+**What is still not determined:** tax on the source of the money (it depends on whether the
+balance is salary, interest, a property gain, a gift or inheritance — see the tax table on
+the cost page) and the user's actual US filing history. Those stay conditional (IR-014,
+IR-018).
+
 ## The single most important structural finding
 
 A U.S. citizen holding a passport is generally an **境外个人 (foreign individual)** under

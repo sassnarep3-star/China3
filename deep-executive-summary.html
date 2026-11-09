@@ -11,8 +11,47 @@
 <section class="section"><div class="section-head"><div><h2 class="section-title">Executive summary</h2><p>The short answer, then the evidence.</p></div></div>
 <div class="hero-band"><strong>Bottom line</strong><p>No official source reviewed establishes a Chinese "conversion tax" on moving your own already-owned CNY principal into USD. The costs that actually bite are (1) Chinese <b>source-of-funds income tax and the tax-clearance documents</b> a bank requires before it will sell you FX, (2) <b>bank spread, wire and correspondent fees</b>, and (3) <b>U.S. information-reporting penalties</b> — the largest of which is a willful FBAR penalty of up to 50% of the account balance. The cheapest-penalty strategy is therefore not a clever conversion trick: it is picking the lawful documentary channel that matches how the money was earned, obtaining a written all-in bank quote, and filing FBAR / Form 8938 / Form 3520 correctly. Informal brokers, quota splitting and crypto/USDT convert a paperwork problem into 30%–100% administrative fines plus criminal exposure.</p></div>
 </section>
-<section class="section"><h2 class="section-title">The single most important structural finding</h2>
-<div class="card"><p>Under the <a href="https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm" target="_blank" rel="noopener">PBOC Individual Foreign Exchange Measures, Art. 37 (S05)</a>, a U.S. citizen holding a passport is an <b>境外个人 (foreign individual)</b>. Under <a href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" target="_blank" rel="noopener">SAFE Current Account Guidelines Art. 59 (S03)</a>, a foreign individual purchases FX using an ID plus evidence of the <i>source</i> of the RMB (including a tax certificate) — and SAFE's own <a href="https://www.safe.gov.cn/chongqing/file/file/20190311/87806e211bb74eb4a44e71395c31cda9.pdf" target="_blank" rel="noopener">Q&amp;A handbook (S43)</a> states that foreign-individual FX purchase has <b>no annual quota limit at all</b>. If the CNY is legitimately earned, tax-paid income, the USD 50,000 "annual quota" that dominates online advice may simply not be the binding constraint. This must be confirmed with the account-opening bank because the 2008 State Council regulation defines 境内个人 differently (see <a href="deep-review.html">IR-007</a>).</p></div></section>
+# ---- cost-model section injected into the executive summary ----------------
+def _cost_summary():
+    import csv as _csv
+    path = ROOT / "data" / "cost_matrix.csv"
+    if not path.exists():
+        return ""
+    rows = list(_csv.DictReader(path.open(encoding="utf-8")))
+    picks = {"10000", "100000", "200000", "400000"}
+    body = []
+    for r in rows:
+        if r["method_id"] != "L01" or r["amount_usd"] not in picks:
+            continue
+        a = int(r["amount_usd"])
+        body.append(
+            "<tr><td><strong>USD {:,}</strong></td><td>USD {:,.0f}</td><td>{}%</td>"
+            "<td>USD {:,.0f}</td><td class="src">"
+            "<a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">S46 ↗</a> "
+            "<a href="https://www.safe.gov.cn/safe/rmbhlzjj/index.html" target="_blank" rel="noopener">S56 ↗</a> "
+            "<a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">U20 ↗</a>"
+            "</td></tr>".format(a, float(r["cost_base_usd"]), r["pct_base"],
+                                max(165353, a * 0.5)))
+    return (
+        '<section class="section"><h2 class="section-title">The cost answer, at every USD 10,000 step</h2>'
+        '<div class="card"><p>The cost model computes all 40 amount steps for 13 routes. On the primary lawful route '
+        '(foreign individual, current-account income, one wire) the arithmetic gives:</p>'
+        '<div class="table-wrap"><table class="data"><thead><tr><th>Amount</th><th>All-in cost</th>'
+        '<th>Effective %</th><th>Willful FBAR maximum at that balance</th><th>Source</th></tr></thead><tbody>'
+        + "".join(body) + '</tbody></table></div>'
+        '<p>The percentage <em>falls</em> as the amount rises because the wire fee is capped at CNY 260. '
+        'Compare that with 30%-100% of the amount for an unlawful route, and with a willful FBAR penalty of '
+        'the greater of USD 165,353 or 50% of the balance. '
+        '<a href="deep-costs.html"><strong>Open the full 40-step cost model →</strong></a></p></div></section>'
+    )
+
+exec_body = exec_body.replace(
+    '<section class="section"><h2 class="section-title">The single most important structural finding</h2>',
+    _cost_summary() + '<section class="section"><h2 class="section-title">The single most important structural finding</h2>',
+)
+
+
+<div class="card"><p>Under the <a href="https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm" target="_blank" rel="noopener">PBOC Individual Foreign Exchange Measures, Art. 37 (S05)</a>, a U.S. citizen holding a passport is an <b>境外个人 (foreign individual)</b>. Under <a href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" target="_blank" rel="noopener">SAFE Current Account Guidelines Art. 59 (S03)</a>, a foreign individual purchases FX using an ID plus evidence of the <i>source</i> of the RMB (including a tax certificate) — and SAFE's own Q&amp;A states that genuine, lawful current-account FX purchase has <b>no amount limit</b> (<a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener">S01</a>), while the annual convenience amount is available only to holders of a foreign permanent-residence ID (<a href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" target="_blank" rel="noopener">S03</a>). If the CNY is legitimately earned, tax-paid income, the USD 50,000 "annual quota" that dominates online advice may simply not be the binding constraint. This must be confirmed with the account-opening bank because the 2008 State Council regulation defines 境内个人 differently (see <a href="deep-review.html">IR-007</a>).</p></div></section>
 <section class="section"><h2 class="section-title">Recommended sequence (least penalty first)</h2>
 <div class="card">
 <div class="step"><span class="stepnum">1</span><p><strong>Classify the account holder and the money.</strong> Which ID opened the account? Is the CNY salary, business profit, sale of property, inheritance, gift, or previously-converted FX? Collect bank statements, contracts, and Chinese tax receipts. Without this, no route can be selected (<a href="deep-review.html">IR-014</a>).</p></div>

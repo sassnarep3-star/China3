@@ -1,0 +1,521 @@
+method_id,method,amount_usd,cny_at_boc_mid,tranches,cost_low_usd,cost_base_usd,cost_high_usd,compliance_high_usd,penalty_low_usd,penalty_base_usd,penalty_high_usd,pct_low,pct_base,pct_high,net_base_usd,feasibility,source_ids,status
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",10000,66778,1,53.43,99.47,657.39,500,,,,0.534,0.995,6.574,9900.53,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",20000,133557,1,84.45,151.53,767.37,500,,,,0.422,0.758,3.837,19848.47,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",30000,200336,1,115.47,203.59,877.35,500,,,,0.385,0.679,2.925,29796.41,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",40000,267114,1,145.43,254.59,986.27,500,,,,0.364,0.636,2.466,39745.41,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",50000,333892,1,166.47,296.67,1086.27,500,,,,0.333,0.593,2.173,49703.33,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",60000,400671,1,187.51,338.74,1186.27,500,,,,0.313,0.565,1.977,59661.26,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",70000,467450,1,208.55,380.82,1286.27,500,,,,0.298,0.544,1.838,69619.18,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",80000,534228,1,229.59,422.90,1386.27,500,,,,0.287,0.529,1.733,79577.10,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",90000,601006,1,250.63,464.98,1486.27,500,,,,0.278,0.517,1.651,89535.02,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",100000,667785,1,271.67,507.06,1586.27,500,,,,0.272,0.507,1.586,99492.94,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",110000,734564,1,292.70,549.14,1686.27,500,,,,0.266,0.499,1.533,109450.86,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",120000,801342,1,313.74,591.22,1786.27,500,,,,0.261,0.493,1.489,119408.78,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",130000,868120,1,334.78,633.30,1886.27,500,,,,0.258,0.487,1.451,129366.70,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",140000,934899,1,355.82,675.38,1986.27,500,,,,0.254,0.482,1.419,139324.62,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",150000,1001678,1,376.86,717.46,2086.27,500,,,,0.251,0.478,1.391,149282.54,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",160000,1068456,1,397.90,759.54,2186.27,500,,,,0.249,0.475,1.366,159240.46,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",170000,1135234,1,418.94,801.62,2286.27,500,,,,0.246,0.472,1.345,169198.38,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",180000,1202013,1,439.98,843.70,2386.27,500,,,,0.244,0.469,1.326,179156.30,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",190000,1268792,1,461.02,885.78,2486.27,500,,,,0.243,0.466,1.309,189114.22,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",200000,1335570,1,482.06,927.86,2586.27,500,,,,0.241,0.464,1.293,199072.14,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",210000,1402348,1,503.10,969.94,2686.27,500,,,,0.240,0.462,1.279,209030.06,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",220000,1469127,1,524.14,1012.02,2786.27,500,,,,0.238,0.460,1.266,218987.98,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",230000,1535906,1,545.18,1054.09,2886.27,500,,,,0.237,0.458,1.255,228945.91,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",240000,1602684,1,566.22,1096.17,2986.27,500,,,,0.236,0.457,1.244,238903.83,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",250000,1669462,1,587.26,1138.25,3086.27,500,,,,0.235,0.455,1.235,248861.75,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",260000,1736241,1,608.30,1180.33,3186.27,500,,,,0.234,0.454,1.225,258819.67,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",270000,1803020,1,629.34,1222.41,3286.27,500,,,,0.233,0.453,1.217,268777.59,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",280000,1869798,1,650.38,1264.49,3386.27,500,,,,0.232,0.452,1.209,278735.51,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",290000,1936576,1,671.42,1306.57,3486.27,500,,,,0.232,0.451,1.202,288693.43,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",300000,2003355,1,692.46,1348.65,3586.27,500,,,,0.231,0.450,1.195,298651.35,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",310000,2070134,1,713.50,1390.73,3686.27,500,,,,0.230,0.449,1.189,308609.27,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",320000,2136912,1,734.54,1432.81,3786.27,500,,,,0.230,0.448,1.183,318567.19,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",330000,2203690,1,755.58,1474.89,3886.27,500,,,,0.229,0.447,1.178,328525.11,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",340000,2270469,1,776.62,1516.97,3986.27,500,,,,0.228,0.446,1.172,338483.03,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",350000,2337248,1,797.66,1559.05,4086.27,500,,,,0.228,0.445,1.168,348440.95,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",360000,2404026,1,818.70,1601.13,4186.27,500,,,,0.227,0.445,1.163,358398.87,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",370000,2470804,1,839.74,1643.21,4286.27,500,,,,0.227,0.444,1.158,368356.79,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",380000,2537583,1,860.78,1685.29,4386.27,500,,,,0.227,0.443,1.154,378314.71,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",390000,2604362,1,881.82,1727.37,4486.27,500,,,,0.226,0.443,1.150,388272.63,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L01,"Foreign individual: current-account income, FX purchase + wire (Art. 59)",400000,2671140,1,902.86,1769.44,4586.27,500,,,,0.226,0.442,1.147,398230.56,"One application; above USD 50,000 per payment add the 备案表",C06 C07 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),10000,66778,1,53.43,99.47,657.39,500,,,,0.534,0.995,6.574,9900.53,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),20000,133557,1,84.45,151.53,767.37,500,,,,0.422,0.758,3.837,19848.47,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),30000,200336,1,115.47,203.59,877.35,500,,,,0.385,0.679,2.925,29796.41,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),40000,267114,1,145.43,254.59,986.27,500,,,,0.364,0.636,2.466,39745.41,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),50000,333892,1,166.47,296.67,1086.27,500,,,,0.333,0.593,2.173,49703.33,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),60000,400671,1,187.51,338.74,1186.27,500,,,,0.313,0.565,1.977,59661.26,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),70000,467450,1,208.55,380.82,1286.27,500,,,,0.298,0.544,1.838,69619.18,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),80000,534228,1,229.59,422.90,1386.27,500,,,,0.287,0.529,1.733,79577.10,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),90000,601006,1,250.63,464.98,1486.27,500,,,,0.278,0.517,1.651,89535.02,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),100000,667785,1,271.67,507.06,1586.27,500,,,,0.272,0.507,1.586,99492.94,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),110000,734564,1,292.70,549.14,1686.27,500,,,,0.266,0.499,1.533,109450.86,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),120000,801342,1,313.74,591.22,1786.27,500,,,,0.261,0.493,1.489,119408.78,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),130000,868120,1,334.78,633.30,1886.27,500,,,,0.258,0.487,1.451,129366.70,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),140000,934899,1,355.82,675.38,1986.27,500,,,,0.254,0.482,1.419,139324.62,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),150000,1001678,1,376.86,717.46,2086.27,500,,,,0.251,0.478,1.391,149282.54,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),160000,1068456,1,397.90,759.54,2186.27,500,,,,0.249,0.475,1.366,159240.46,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),170000,1135234,1,418.94,801.62,2286.27,500,,,,0.246,0.472,1.345,169198.38,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),180000,1202013,1,439.98,843.70,2386.27,500,,,,0.244,0.469,1.326,179156.30,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),190000,1268792,1,461.02,885.78,2486.27,500,,,,0.243,0.466,1.309,189114.22,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),200000,1335570,1,482.06,927.86,2586.27,500,,,,0.241,0.464,1.293,199072.14,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),210000,1402348,1,503.10,969.94,2686.27,500,,,,0.240,0.462,1.279,209030.06,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),220000,1469127,1,524.14,1012.02,2786.27,500,,,,0.238,0.460,1.266,218987.98,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),230000,1535906,1,545.18,1054.09,2886.27,500,,,,0.237,0.458,1.255,228945.91,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),240000,1602684,1,566.22,1096.17,2986.27,500,,,,0.236,0.457,1.244,238903.83,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),250000,1669462,1,587.26,1138.25,3086.27,500,,,,0.235,0.455,1.235,248861.75,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),260000,1736241,1,608.30,1180.33,3186.27,500,,,,0.234,0.454,1.225,258819.67,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),270000,1803020,1,629.34,1222.41,3286.27,500,,,,0.233,0.453,1.217,268777.59,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),280000,1869798,1,650.38,1264.49,3386.27,500,,,,0.232,0.452,1.209,278735.51,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),290000,1936576,1,671.42,1306.57,3486.27,500,,,,0.232,0.451,1.202,288693.43,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),300000,2003355,1,692.46,1348.65,3586.27,500,,,,0.231,0.450,1.195,298651.35,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),310000,2070134,1,713.50,1390.73,3686.27,500,,,,0.230,0.449,1.189,308609.27,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),320000,2136912,1,734.54,1432.81,3786.27,500,,,,0.230,0.448,1.183,318567.19,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),330000,2203690,1,755.58,1474.89,3886.27,500,,,,0.229,0.447,1.178,328525.11,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),340000,2270469,1,776.62,1516.97,3986.27,500,,,,0.228,0.446,1.172,338483.03,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),350000,2337248,1,797.66,1559.05,4086.27,500,,,,0.228,0.445,1.168,348440.95,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),360000,2404026,1,818.70,1601.13,4186.27,500,,,,0.227,0.445,1.163,358398.87,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),370000,2470804,1,839.74,1643.21,4286.27,500,,,,0.227,0.444,1.158,368356.79,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),380000,2537583,1,860.78,1685.29,4386.27,500,,,,0.227,0.443,1.154,378314.71,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),390000,2604362,1,881.82,1727.37,4486.27,500,,,,0.226,0.443,1.150,388272.63,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L02,Chinese-resident individual: non-quota current-account purchase (Art. 57),400000,2671140,1,902.86,1769.44,4586.27,500,,,,0.226,0.442,1.147,398230.56,"One application; above USD 50,000 per payment add the 备案表",C05 C32 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",10000,66778,1,53.43,99.47,157.39,0,,,,0.534,0.995,1.574,9900.53,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",20000,133557,1,84.45,151.53,267.37,0,,,,0.422,0.758,1.337,19848.47,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",30000,200336,1,115.47,203.59,377.35,0,,,,0.385,0.679,1.258,29796.41,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",40000,267114,1,145.43,254.59,486.27,0,,,,0.364,0.636,1.216,39745.41,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",50000,333892,1,166.47,296.67,586.27,0,,,,0.333,0.593,1.173,49703.33,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",60000,400671,2,230.94,407.18,754.70,0,,,,0.385,0.679,1.258,59592.82,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",70000,467450,2,261.96,459.24,864.68,0,,,,0.374,0.656,1.235,69540.76,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",80000,534228,2,290.85,509.17,972.54,0,,,,0.364,0.636,1.216,79490.83,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",90000,601006,2,311.89,551.25,1072.54,0,,,,0.347,0.613,1.192,89448.75,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",100000,667785,2,332.93,593.33,1172.54,0,,,,0.333,0.593,1.173,99406.67,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",110000,734564,3,408.45,714.89,1352.01,0,,,,0.371,0.650,1.229,109285.11,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",120000,801342,3,436.28,763.76,1458.80,0,,,,0.364,0.636,1.216,119236.24,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",130000,868120,3,457.32,805.84,1558.80,0,,,,0.352,0.620,1.199,129194.16,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",140000,934899,3,478.36,847.92,1658.80,0,,,,0.342,0.606,1.185,139152.08,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",150000,1001678,3,499.40,890.00,1758.80,0,,,,0.333,0.593,1.173,149110.00,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",160000,1068456,4,581.71,1018.34,1945.07,0,,,,0.364,0.636,1.216,158981.66,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",170000,1135234,4,602.75,1060.42,2045.07,0,,,,0.355,0.624,1.203,168939.58,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",180000,1202013,4,623.79,1102.50,2145.07,0,,,,0.347,0.613,1.192,178897.50,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",190000,1268792,4,644.83,1144.58,2245.07,0,,,,0.339,0.602,1.182,188855.42,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",200000,1335570,4,665.87,1186.66,2345.07,0,,,,0.333,0.593,1.173,198813.34,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",210000,1402348,5,748.17,1315.01,2531.34,0,,,,0.356,0.626,1.205,208684.99,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",220000,1469127,5,769.21,1357.09,2631.34,0,,,,0.350,0.617,1.196,218642.91,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",230000,1535906,5,790.25,1399.17,2731.34,0,,,,0.344,0.608,1.188,228600.83,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",240000,1602684,5,811.29,1441.25,2831.34,0,,,,0.338,0.601,1.180,238558.75,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",250000,1669462,5,832.33,1483.33,2931.34,0,,,,0.333,0.593,1.173,248516.67,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",260000,1736241,6,914.64,1611.67,3117.61,0,,,,0.352,0.620,1.199,258388.33,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",270000,1803020,6,935.68,1653.75,3217.61,0,,,,0.347,0.613,1.192,268346.25,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",280000,1869798,6,956.72,1695.83,3317.61,0,,,,0.342,0.606,1.185,278304.17,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",290000,1936576,6,977.76,1737.91,3417.61,0,,,,0.337,0.599,1.178,288262.09,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",300000,2003355,6,998.80,1779.99,3517.61,0,,,,0.333,0.593,1.173,298220.01,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",310000,2070134,7,1081.11,1908.34,3703.88,0,,,,0.349,0.616,1.195,308091.66,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",320000,2136912,7,1102.15,1950.42,3803.88,0,,,,0.344,0.610,1.189,318049.58,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",330000,2203690,7,1123.19,1992.50,3903.88,0,,,,0.340,0.604,1.183,328007.50,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",340000,2270469,7,1144.23,2034.58,4003.88,0,,,,0.337,0.598,1.178,337965.42,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",350000,2337248,7,1165.27,2076.66,4103.88,0,,,,0.333,0.593,1.173,347923.34,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",360000,2404026,8,1247.57,2205.00,4290.14,0,,,,0.347,0.613,1.192,357795.00,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",370000,2470804,8,1268.61,2247.08,4390.14,0,,,,0.343,0.607,1.187,367752.92,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",380000,2537583,8,1289.65,2289.16,4490.14,0,,,,0.339,0.602,1.182,377710.84,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",390000,2604362,8,1310.69,2331.24,4590.14,0,,,,0.336,0.598,1.177,387668.76,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L03,"Annual convenience amount (USD 50,000 per person per year)",400000,2671140,8,1331.73,2373.32,4690.14,0,,,,0.333,0.593,1.173,397626.68,"ceil(amount / USD 50,000) calendar years",C05 C06 C03,modelled
+L04,Account already holds USD: wire out without converting,10000,66778,1,32.39,57.39,57.39,0,,,,0.324,0.574,0.574,9942.61,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,20000,133557,1,42.37,67.37,67.37,0,,,,0.212,0.337,0.337,19932.63,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,30000,200336,1,52.35,77.35,77.35,0,,,,0.175,0.258,0.258,29922.65,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,40000,267114,1,61.27,86.27,86.27,0,,,,0.153,0.216,0.216,39913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,50000,333892,1,61.27,86.27,86.27,0,,,,0.123,0.173,0.173,49913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,60000,400671,1,61.27,86.27,86.27,0,,,,0.102,0.144,0.144,59913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,70000,467450,1,61.27,86.27,86.27,0,,,,0.088,0.123,0.123,69913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,80000,534228,1,61.27,86.27,86.27,0,,,,0.077,0.108,0.108,79913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,90000,601006,1,61.27,86.27,86.27,0,,,,0.068,0.096,0.096,89913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,100000,667785,1,61.27,86.27,86.27,0,,,,0.061,0.086,0.086,99913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,110000,734564,1,61.27,86.27,86.27,0,,,,0.056,0.078,0.078,109913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,120000,801342,1,61.27,86.27,86.27,0,,,,0.051,0.072,0.072,119913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,130000,868120,1,61.27,86.27,86.27,0,,,,0.047,0.066,0.066,129913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,140000,934899,1,61.27,86.27,86.27,0,,,,0.044,0.062,0.062,139913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,150000,1001678,1,61.27,86.27,86.27,0,,,,0.041,0.058,0.058,149913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,160000,1068456,1,61.27,86.27,86.27,0,,,,0.038,0.054,0.054,159913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,170000,1135234,1,61.27,86.27,86.27,0,,,,0.036,0.051,0.051,169913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,180000,1202013,1,61.27,86.27,86.27,0,,,,0.034,0.048,0.048,179913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,190000,1268792,1,61.27,86.27,86.27,0,,,,0.032,0.045,0.045,189913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,200000,1335570,1,61.27,86.27,86.27,0,,,,0.031,0.043,0.043,199913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,210000,1402348,1,61.27,86.27,86.27,0,,,,0.029,0.041,0.041,209913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,220000,1469127,1,61.27,86.27,86.27,0,,,,0.028,0.039,0.039,219913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,230000,1535906,1,61.27,86.27,86.27,0,,,,0.027,0.038,0.038,229913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,240000,1602684,1,61.27,86.27,86.27,0,,,,0.026,0.036,0.036,239913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,250000,1669462,1,61.27,86.27,86.27,0,,,,0.025,0.035,0.035,249913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,260000,1736241,1,61.27,86.27,86.27,0,,,,0.024,0.033,0.033,259913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,270000,1803020,1,61.27,86.27,86.27,0,,,,0.023,0.032,0.032,269913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,280000,1869798,1,61.27,86.27,86.27,0,,,,0.022,0.031,0.031,279913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,290000,1936576,1,61.27,86.27,86.27,0,,,,0.021,0.030,0.030,289913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,300000,2003355,1,61.27,86.27,86.27,0,,,,0.020,0.029,0.029,299913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,310000,2070134,1,61.27,86.27,86.27,0,,,,0.020,0.028,0.028,309913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,320000,2136912,1,61.27,86.27,86.27,0,,,,0.019,0.027,0.027,319913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,330000,2203690,1,61.27,86.27,86.27,0,,,,0.019,0.026,0.026,329913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,340000,2270469,1,61.27,86.27,86.27,0,,,,0.018,0.025,0.025,339913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,350000,2337248,1,61.27,86.27,86.27,0,,,,0.018,0.025,0.025,349913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,360000,2404026,1,61.27,86.27,86.27,0,,,,0.017,0.024,0.024,359913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,370000,2470804,1,61.27,86.27,86.27,0,,,,0.017,0.023,0.023,369913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,380000,2537583,1,61.27,86.27,86.27,0,,,,0.016,0.023,0.023,379913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,390000,2604362,1,61.27,86.27,86.27,0,,,,0.016,0.022,0.022,389913.73,One payment,C03 C29,modelled
+L04,Account already holds USD: wire out without converting,400000,2671140,1,61.27,86.27,86.27,0,,,,0.015,0.022,0.022,399913.73,One payment,C03 C29,modelled
+L05,Emigrant property transfer (移民财产转移),10000,66778,1,53.43,99.47,657.39,500,,,,0.534,0.995,6.574,9900.53,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),20000,133557,1,84.45,151.53,767.37,500,,,,0.422,0.758,3.837,19848.47,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),30000,200336,3,160.30,298.42,972.18,500,,,,0.534,0.995,3.241,29701.58,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),40000,267114,3,191.32,350.48,1082.16,500,,,,0.478,0.876,2.705,39649.52,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),50000,333892,3,222.34,402.54,1192.14,500,,,,0.445,0.805,2.384,49597.46,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),60000,400671,3,253.36,454.60,1302.12,500,,,,0.422,0.758,2.170,59545.40,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),70000,467450,3,284.38,506.65,1412.10,500,,,,0.406,0.724,2.017,69493.35,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),80000,534228,3,315.40,558.71,1522.08,500,,,,0.394,0.698,1.903,79441.29,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),90000,601006,3,346.41,610.77,1632.06,500,,,,0.385,0.679,1.813,89389.23,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),100000,667785,3,377.43,662.83,1742.04,500,,,,0.377,0.663,1.742,99337.17,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),110000,734564,3,408.45,714.89,1852.01,500,,,,0.371,0.650,1.684,109285.11,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),120000,801342,3,436.28,763.76,1958.80,500,,,,0.364,0.636,1.632,119236.24,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),130000,868120,3,457.32,805.84,2058.80,500,,,,0.352,0.620,1.584,129194.16,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),140000,934899,3,478.36,847.92,2158.80,500,,,,0.342,0.606,1.542,139152.08,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),150000,1001678,3,499.40,890.00,2258.80,500,,,,0.333,0.593,1.506,149110.00,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),160000,1068456,3,520.44,932.07,2358.80,500,,,,0.325,0.583,1.474,159067.93,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),170000,1135234,3,541.48,974.15,2458.80,500,,,,0.319,0.573,1.446,169025.85,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),180000,1202013,3,562.52,1016.23,2558.80,500,,,,0.313,0.565,1.422,178983.77,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),190000,1268792,3,583.56,1058.31,2658.80,500,,,,0.307,0.557,1.399,188941.69,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),200000,1335570,3,604.60,1100.39,2758.80,500,,,,0.302,0.550,1.379,198899.61,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),210000,1402348,3,625.64,1142.47,2858.80,500,,,,0.298,0.544,1.361,208857.53,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),220000,1469127,3,646.68,1184.55,2958.80,500,,,,0.294,0.538,1.345,218815.45,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),230000,1535906,3,667.72,1226.63,3058.80,500,,,,0.290,0.533,1.330,228773.37,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),240000,1602684,3,688.76,1268.71,3158.80,500,,,,0.287,0.529,1.316,238731.29,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),250000,1669462,3,709.80,1310.79,3258.80,500,,,,0.284,0.524,1.304,248689.21,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),260000,1736241,3,730.84,1352.87,3358.80,500,,,,0.281,0.520,1.292,258647.13,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),270000,1803020,3,751.88,1394.95,3458.80,500,,,,0.278,0.517,1.281,268605.05,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),280000,1869798,3,772.92,1437.03,3558.80,500,,,,0.276,0.513,1.271,278562.97,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),290000,1936576,3,793.96,1479.11,3658.80,500,,,,0.274,0.510,1.262,288520.89,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),300000,2003355,3,815.00,1521.19,3758.80,500,,,,0.272,0.507,1.253,298478.81,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),310000,2070134,3,836.04,1563.27,3858.80,500,,,,0.270,0.504,1.245,308436.73,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),320000,2136912,3,857.07,1605.35,3958.80,500,,,,0.268,0.502,1.237,318394.65,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),330000,2203690,3,878.11,1647.42,4058.80,500,,,,0.266,0.499,1.230,328352.58,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),340000,2270469,3,899.15,1689.50,4158.80,500,,,,0.264,0.497,1.223,338310.50,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),350000,2337248,3,920.19,1731.58,4258.80,500,,,,0.263,0.495,1.217,348268.42,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),360000,2404026,3,941.23,1773.66,4358.80,500,,,,0.261,0.493,1.211,358226.34,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),370000,2470804,3,962.27,1815.74,4458.80,500,,,,0.260,0.491,1.205,368184.26,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),380000,2537583,3,983.31,1857.82,4558.80,500,,,,0.259,0.489,1.200,378142.18,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),390000,2604362,3,1004.35,1899.90,4658.80,500,,,,0.258,0.487,1.195,388100.10,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L05,Emigrant property transfer (移民财产转移),400000,2671140,3,1025.39,1941.98,4758.80,500,,,,0.256,0.485,1.190,398058.02,"1 application, 3 remittances over 2 years (one-off if <= CNY 200,000)",C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),10000,66778,1,53.43,99.47,657.39,500,,,,0.534,0.995,6.574,9900.53,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),20000,133557,1,84.45,151.53,767.37,500,,,,0.422,0.758,3.837,19848.47,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),30000,200336,1,115.47,203.59,877.35,500,,,,0.385,0.679,2.925,29796.41,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),40000,267114,1,145.43,254.59,986.27,500,,,,0.364,0.636,2.466,39745.41,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),50000,333892,1,166.47,296.67,1086.27,500,,,,0.333,0.593,2.173,49703.33,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),60000,400671,1,187.51,338.74,1186.27,500,,,,0.313,0.565,1.977,59661.26,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),70000,467450,1,208.55,380.82,1286.27,500,,,,0.298,0.544,1.838,69619.18,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),80000,534228,1,229.59,422.90,1386.27,500,,,,0.287,0.529,1.733,79577.10,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),90000,601006,1,250.63,464.98,1486.27,500,,,,0.278,0.517,1.651,89535.02,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),100000,667785,1,271.67,507.06,1586.27,500,,,,0.272,0.507,1.586,99492.94,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),110000,734564,1,292.70,549.14,1686.27,500,,,,0.266,0.499,1.533,109450.86,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),120000,801342,1,313.74,591.22,1786.27,500,,,,0.261,0.493,1.489,119408.78,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),130000,868120,1,334.78,633.30,1886.27,500,,,,0.258,0.487,1.451,129366.70,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),140000,934899,1,355.82,675.38,1986.27,500,,,,0.254,0.482,1.419,139324.62,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),150000,1001678,1,376.86,717.46,2086.27,500,,,,0.251,0.478,1.391,149282.54,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),160000,1068456,1,397.90,759.54,2186.27,500,,,,0.249,0.475,1.366,159240.46,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),170000,1135234,1,418.94,801.62,2286.27,500,,,,0.246,0.472,1.345,169198.38,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),180000,1202013,1,439.98,843.70,2386.27,500,,,,0.244,0.469,1.326,179156.30,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),190000,1268792,1,461.02,885.78,2486.27,500,,,,0.243,0.466,1.309,189114.22,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),200000,1335570,1,482.06,927.86,2586.27,500,,,,0.241,0.464,1.293,199072.14,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),210000,1402348,1,503.10,969.94,2686.27,500,,,,0.240,0.462,1.279,209030.06,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),220000,1469127,1,524.14,1012.02,2786.27,500,,,,0.238,0.460,1.266,218987.98,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),230000,1535906,1,545.18,1054.09,2886.27,500,,,,0.237,0.458,1.255,228945.91,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),240000,1602684,1,566.22,1096.17,2986.27,500,,,,0.236,0.457,1.244,238903.83,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),250000,1669462,1,587.26,1138.25,3086.27,500,,,,0.235,0.455,1.235,248861.75,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),260000,1736241,1,608.30,1180.33,3186.27,500,,,,0.234,0.454,1.225,258819.67,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),270000,1803020,1,629.34,1222.41,3286.27,500,,,,0.233,0.453,1.217,268777.59,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),280000,1869798,1,650.38,1264.49,3386.27,500,,,,0.232,0.452,1.209,278735.51,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),290000,1936576,1,671.42,1306.57,3486.27,500,,,,0.232,0.451,1.202,288693.43,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),300000,2003355,1,692.46,1348.65,3586.27,500,,,,0.231,0.450,1.195,298651.35,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),310000,2070134,1,713.50,1390.73,3686.27,500,,,,0.230,0.449,1.189,308609.27,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),320000,2136912,1,734.54,1432.81,3786.27,500,,,,0.230,0.448,1.183,318567.19,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),330000,2203690,1,755.58,1474.89,3886.27,500,,,,0.229,0.447,1.178,328525.11,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),340000,2270469,1,776.62,1516.97,3986.27,500,,,,0.228,0.446,1.172,338483.03,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),350000,2337248,1,797.66,1559.05,4086.27,500,,,,0.228,0.445,1.168,348440.95,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),360000,2404026,1,818.70,1601.13,4186.27,500,,,,0.227,0.445,1.163,358398.87,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),370000,2470804,1,839.74,1643.21,4286.27,500,,,,0.227,0.444,1.158,368356.79,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),380000,2537583,1,860.78,1685.29,4386.27,500,,,,0.227,0.443,1.154,378314.71,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),390000,2604362,1,881.82,1727.37,4486.27,500,,,,0.226,0.443,1.150,388272.63,1 application; instalments allowed,C08 C03,modelled
+L06,Inheritance property transfer (继承财产转移),400000,2671140,1,902.86,1769.44,4586.27,500,,,,0.226,0.442,1.147,398230.56,1 application; instalments allowed,C08 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,10000,66778,1,53.43,99.47,657.39,500,,,,0.534,0.995,6.574,9900.53,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,20000,133557,1,84.45,151.53,767.37,500,,,,0.422,0.758,3.837,19848.47,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,30000,200336,1,115.47,203.59,877.35,500,,,,0.385,0.679,2.925,29796.41,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,40000,267114,1,145.43,254.59,986.27,500,,,,0.364,0.636,2.466,39745.41,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,50000,333892,1,166.47,296.67,1086.27,500,,,,0.333,0.593,2.173,49703.33,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,60000,400671,1,187.51,338.74,1186.27,500,,,,0.313,0.565,1.977,59661.26,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,70000,467450,1,208.55,380.82,1286.27,500,,,,0.298,0.544,1.838,69619.18,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,80000,534228,1,229.59,422.90,1386.27,500,,,,0.287,0.529,1.733,79577.10,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,90000,601006,1,250.63,464.98,1486.27,500,,,,0.278,0.517,1.651,89535.02,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,100000,667785,1,271.67,507.06,1586.27,500,,,,0.272,0.507,1.586,99492.94,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,110000,734564,1,292.70,549.14,1686.27,500,,,,0.266,0.499,1.533,109450.86,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,120000,801342,1,313.74,591.22,1786.27,500,,,,0.261,0.493,1.489,119408.78,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,130000,868120,1,334.78,633.30,1886.27,500,,,,0.258,0.487,1.451,129366.70,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,140000,934899,1,355.82,675.38,1986.27,500,,,,0.254,0.482,1.419,139324.62,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,150000,1001678,1,376.86,717.46,2086.27,500,,,,0.251,0.478,1.391,149282.54,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,160000,1068456,1,397.90,759.54,2186.27,500,,,,0.249,0.475,1.366,159240.46,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,170000,1135234,1,418.94,801.62,2286.27,500,,,,0.246,0.472,1.345,169198.38,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,180000,1202013,1,439.98,843.70,2386.27,500,,,,0.244,0.469,1.326,179156.30,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,190000,1268792,1,461.02,885.78,2486.27,500,,,,0.243,0.466,1.309,189114.22,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,200000,1335570,1,482.06,927.86,2586.27,500,,,,0.241,0.464,1.293,199072.14,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,210000,1402348,1,503.10,969.94,2686.27,500,,,,0.240,0.462,1.279,209030.06,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,220000,1469127,1,524.14,1012.02,2786.27,500,,,,0.238,0.460,1.266,218987.98,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,230000,1535906,1,545.18,1054.09,2886.27,500,,,,0.237,0.458,1.255,228945.91,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,240000,1602684,1,566.22,1096.17,2986.27,500,,,,0.236,0.457,1.244,238903.83,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,250000,1669462,1,587.26,1138.25,3086.27,500,,,,0.235,0.455,1.235,248861.75,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,260000,1736241,1,608.30,1180.33,3186.27,500,,,,0.234,0.454,1.225,258819.67,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,270000,1803020,1,629.34,1222.41,3286.27,500,,,,0.233,0.453,1.217,268777.59,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,280000,1869798,1,650.38,1264.49,3386.27,500,,,,0.232,0.452,1.209,278735.51,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,290000,1936576,1,671.42,1306.57,3486.27,500,,,,0.232,0.451,1.202,288693.43,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,300000,2003355,1,692.46,1348.65,3586.27,500,,,,0.231,0.450,1.195,298651.35,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,310000,2070134,1,713.50,1390.73,3686.27,500,,,,0.230,0.449,1.189,308609.27,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,320000,2136912,1,734.54,1432.81,3786.27,500,,,,0.230,0.448,1.183,318567.19,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,330000,2203690,1,755.58,1474.89,3886.27,500,,,,0.229,0.447,1.178,328525.11,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,340000,2270469,1,776.62,1516.97,3986.27,500,,,,0.228,0.446,1.172,338483.03,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,350000,2337248,1,797.66,1559.05,4086.27,500,,,,0.228,0.445,1.168,348440.95,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,360000,2404026,1,818.70,1601.13,4186.27,500,,,,0.227,0.445,1.163,358398.87,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,370000,2470804,1,839.74,1643.21,4286.27,500,,,,0.227,0.444,1.158,368356.79,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,380000,2537583,1,860.78,1685.29,4386.27,500,,,,0.227,0.443,1.154,378314.71,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,390000,2604362,1,881.82,1727.37,4486.27,500,,,,0.226,0.443,1.150,388272.63,One payment after tax clearance,C06 C12 C32 C03,modelled
+L07,Foreign individual: proceeds of selling mainland property,400000,2671140,1,902.86,1769.44,4586.27,500,,,,0.226,0.442,1.147,398230.56,One payment after tax clearance,C06 C12 C32 C03,modelled
+L08,Carry USD cash out of China,10000,66778,1,53.43,99.47,157.39,0,,,,0.534,0.995,1.574,9900.53,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,20000,133557,2,106.87,198.95,314.79,0,,,,0.534,0.995,1.574,19801.05,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,30000,200336,3,160.30,298.42,472.18,0,,,,0.534,0.995,1.574,29701.58,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,40000,267114,4,213.74,397.89,629.58,0,,,,0.534,0.995,1.574,39602.11,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,50000,333892,5,267.17,497.37,786.97,0,,,,0.534,0.995,1.574,49502.63,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,60000,400671,6,320.60,596.84,944.36,0,,,,0.534,0.995,1.574,59403.16,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,70000,467450,7,374.04,696.32,1101.76,0,,,,0.534,0.995,1.574,69303.68,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,80000,534228,8,427.47,795.79,1259.15,0,,,,0.534,0.995,1.574,79204.21,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,90000,601006,9,480.90,895.26,1416.55,0,,,,0.534,0.995,1.574,89104.74,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,100000,667785,10,534.34,994.74,1573.94,0,,,,0.534,0.995,1.574,99005.26,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,110000,734564,11,587.77,1094.21,1731.34,0,,,,0.534,0.995,1.574,108905.79,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,120000,801342,12,641.21,1193.68,1888.73,0,,,,0.534,0.995,1.574,118806.32,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,130000,868120,13,694.64,1293.16,2046.12,0,,,,0.534,0.995,1.574,128706.84,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,140000,934899,14,748.07,1392.63,2203.52,0,,,,0.534,0.995,1.574,138607.37,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,150000,1001678,15,801.51,1492.10,2360.91,0,,,,0.534,0.995,1.574,148507.90,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,160000,1068456,16,854.94,1591.58,2518.31,0,,,,0.534,0.995,1.574,158408.42,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,170000,1135234,17,908.38,1691.05,2675.70,0,,,,0.534,0.995,1.574,168308.95,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,180000,1202013,18,961.81,1790.52,2833.09,0,,,,0.534,0.995,1.574,178209.48,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,190000,1268792,19,1015.24,1890.00,2990.49,0,,,,0.534,0.995,1.574,188110.00,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,200000,1335570,20,1068.68,1989.47,3147.88,0,,,,0.534,0.995,1.574,198010.53,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,210000,1402348,21,1122.11,2088.95,3305.28,0,,,,0.534,0.995,1.574,207911.05,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,220000,1469127,22,1175.55,2188.42,3462.67,0,,,,0.534,0.995,1.574,217811.58,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,230000,1535906,23,1228.98,2287.89,3620.07,0,,,,0.534,0.995,1.574,227712.11,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,240000,1602684,24,1282.41,2387.37,3777.46,0,,,,0.534,0.995,1.574,237612.63,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,250000,1669462,25,1335.85,2486.84,3934.85,0,,,,0.534,0.995,1.574,247513.16,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,260000,1736241,26,1389.28,2586.31,4092.25,0,,,,0.534,0.995,1.574,257413.69,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,270000,1803020,27,1442.71,2685.79,4249.64,0,,,,0.534,0.995,1.574,267314.21,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,280000,1869798,28,1496.15,2785.26,4407.04,0,,,,0.534,0.995,1.574,277214.74,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,290000,1936576,29,1549.58,2884.73,4564.43,0,,,,0.534,0.995,1.574,287115.27,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,300000,2003355,30,1603.02,2984.21,4721.82,0,,,,0.534,0.995,1.574,297015.79,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,310000,2070134,31,1656.45,3083.68,4879.22,0,,,,0.534,0.995,1.574,306916.32,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,320000,2136912,32,1709.88,3183.15,5036.61,0,,,,0.534,0.995,1.574,316816.85,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,330000,2203690,33,1763.32,3282.63,5194.01,0,,,,0.534,0.995,1.574,326717.37,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,340000,2270469,34,1816.75,3382.10,5351.40,0,,,,0.534,0.995,1.574,336617.90,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,350000,2337248,35,1870.19,3481.58,5508.80,0,,,,0.534,0.995,1.574,346518.42,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,360000,2404026,36,1923.62,3581.05,5666.19,0,,,,0.534,0.995,1.574,356418.95,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,370000,2470804,37,1977.05,3680.52,5823.58,0,,,,0.534,0.995,1.574,366319.48,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,380000,2537583,38,2030.49,3780.00,5980.98,0,,,,0.534,0.995,1.574,376220.00,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,390000,2604362,39,2083.92,3879.47,6138.37,0,,,,0.534,0.995,1.574,386120.53,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L08,Carry USD cash out of China,400000,2671140,40,2137.35,3978.94,6295.77,0,,,,0.534,0.995,1.574,396021.06,"ceil(amount / USD 10,000) trips; above USD 10,000 per trip is not generally lawful",C11 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,10000,66778,7,21.04,77.08,170.00,0,,,,0.210,0.771,1.700,9922.92,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,20000,133557,14,42.08,154.16,340.00,0,,,,0.210,0.771,1.700,19845.84,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,30000,200336,21,63.12,231.24,510.00,0,,,,0.210,0.771,1.700,29768.76,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,40000,267114,27,84.16,303.32,670.00,0,,,,0.210,0.758,1.675,39696.68,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,50000,333892,34,105.20,380.40,840.00,0,,,,0.210,0.761,1.680,49619.60,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,60000,400671,41,126.24,457.48,1010.00,0,,,,0.210,0.762,1.683,59542.52,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,70000,467450,47,147.28,529.56,1170.00,0,,,,0.210,0.757,1.671,69470.44,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,80000,534228,54,168.32,606.64,1340.00,0,,,,0.210,0.758,1.675,79393.36,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,90000,601006,61,189.36,683.71,1510.00,0,,,,0.210,0.760,1.678,89316.29,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,100000,667785,67,210.40,755.79,1670.00,0,,,,0.210,0.756,1.670,99244.21,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,110000,734564,74,231.44,832.87,1840.00,0,,,,0.210,0.757,1.673,109167.13,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,120000,801342,81,252.48,909.95,2010.00,0,,,,0.210,0.758,1.675,119090.05,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,130000,868120,87,273.52,982.03,2170.00,0,,,,0.210,0.755,1.669,129017.97,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,140000,934899,94,294.56,1059.11,2340.00,0,,,,0.210,0.757,1.671,138940.89,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,150000,1001678,101,315.60,1136.19,2510.00,0,,,,0.210,0.757,1.673,148863.81,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,160000,1068456,107,336.64,1208.27,2670.00,0,,,,0.210,0.755,1.669,158791.73,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,170000,1135234,114,357.68,1285.35,2840.00,0,,,,0.210,0.756,1.671,168714.65,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,180000,1202013,121,378.71,1362.43,3010.00,0,,,,0.210,0.757,1.672,178637.57,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,190000,1268792,127,399.75,1434.51,3170.00,0,,,,0.210,0.755,1.668,188565.49,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,200000,1335570,134,420.79,1511.59,3340.00,0,,,,0.210,0.756,1.670,198488.41,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,210000,1402348,141,441.83,1588.67,3510.00,0,,,,0.210,0.757,1.671,208411.33,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,220000,1469127,147,462.87,1660.75,3670.00,0,,,,0.210,0.755,1.668,218339.25,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,230000,1535906,154,483.91,1737.83,3840.00,0,,,,0.210,0.756,1.670,228262.17,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,240000,1602684,161,504.95,1814.91,4010.00,0,,,,0.210,0.756,1.671,238185.09,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,250000,1669462,167,525.99,1886.99,4170.00,0,,,,0.210,0.755,1.668,248113.01,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,260000,1736241,174,547.03,1964.06,4340.00,0,,,,0.210,0.755,1.669,258035.94,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,270000,1803020,181,568.07,2041.14,4510.00,0,,,,0.210,0.756,1.670,267958.86,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,280000,1869798,187,589.11,2113.22,4670.00,0,,,,0.210,0.755,1.668,277886.78,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,290000,1936576,194,610.15,2190.30,4840.00,0,,,,0.210,0.755,1.669,287809.70,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,300000,2003355,201,631.19,2267.38,5010.00,0,,,,0.210,0.756,1.670,297732.62,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,310000,2070134,208,652.23,2344.46,5180.00,0,,,,0.210,0.756,1.671,307655.54,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,320000,2136912,214,673.27,2416.54,5340.00,0,,,,0.210,0.755,1.669,317583.46,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,330000,2203690,221,694.31,2493.62,5510.00,0,,,,0.210,0.756,1.670,327506.38,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,340000,2270469,228,715.35,2570.70,5680.00,0,,,,0.210,0.756,1.671,337429.30,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,350000,2337248,234,736.39,2642.78,5840.00,0,,,,0.210,0.755,1.669,347357.22,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,360000,2404026,241,757.43,2719.86,6010.00,0,,,,0.210,0.756,1.669,357280.14,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,370000,2470804,248,778.47,2796.94,6180.00,0,,,,0.210,0.756,1.670,367203.06,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,380000,2537583,254,799.51,2869.02,6340.00,0,,,,0.210,0.755,1.668,377130.98,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,390000,2604362,261,820.55,2946.10,6510.00,0,,,,0.210,0.755,1.669,387053.90,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L09,Overseas ATM withdrawals on a mainland card,400000,2671140,268,841.59,3023.18,6680.00,0,,,,0.210,0.756,1.670,396976.82,"ceil(amount / USD 14,883) calendar years",C10 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",10000,66778,1,53.43,149.47,851.39,500,,,,0.534,1.495,8.514,9850.53,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",20000,133557,1,84.45,251.53,1155.37,500,,,,0.422,1.258,5.777,19748.47,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",30000,200336,1,115.47,353.59,1459.35,500,,,,0.385,1.179,4.865,29646.41,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",40000,267114,1,145.43,454.59,1762.27,500,,,,0.364,1.136,4.406,39545.41,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",50000,333892,1,166.47,546.67,2056.27,500,,,,0.333,1.093,4.113,49453.33,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",60000,400671,1,187.51,638.74,2350.27,500,,,,0.313,1.065,3.917,59361.26,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",70000,467450,1,208.55,730.82,2644.27,500,,,,0.298,1.044,3.778,69269.18,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",80000,534228,1,229.59,822.90,2938.27,500,,,,0.287,1.029,3.673,79177.10,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",90000,601006,1,250.63,914.98,3232.27,500,,,,0.278,1.017,3.591,89085.02,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",100000,667785,1,271.67,1007.06,3526.27,500,,,,0.272,1.007,3.526,98992.94,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",110000,734564,1,292.70,1099.14,3820.27,500,,,,0.266,0.999,3.473,108900.86,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",120000,801342,1,313.74,1191.22,4114.27,500,,,,0.261,0.993,3.429,118808.78,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",130000,868120,1,334.78,1283.30,4408.27,500,,,,0.258,0.987,3.391,128716.70,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",140000,934899,1,355.82,1375.38,4702.27,500,,,,0.254,0.982,3.359,138624.62,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",150000,1001678,1,376.86,1467.46,4996.27,500,,,,0.251,0.978,3.331,148532.54,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",160000,1068456,1,397.90,1559.54,5290.27,500,,,,0.249,0.975,3.306,158440.46,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",170000,1135234,1,418.94,1651.62,5584.27,500,,,,0.246,0.972,3.285,168348.38,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",180000,1202013,1,439.98,1743.70,5878.27,500,,,,0.244,0.969,3.266,178256.30,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",190000,1268792,1,461.02,1835.78,6172.27,500,,,,0.243,0.966,3.249,188164.22,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",200000,1335570,1,482.06,1927.86,6466.27,500,,,,0.241,0.964,3.233,198072.14,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",210000,1402348,1,503.10,2019.94,6760.27,500,,,,0.240,0.962,3.219,207980.06,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",220000,1469127,1,524.14,2112.02,7054.27,500,,,,0.238,0.960,3.206,217887.98,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",230000,1535906,1,545.18,2204.09,7348.27,500,,,,0.237,0.958,3.195,227795.91,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",240000,1602684,1,566.22,2296.17,7642.27,500,,,,0.236,0.957,3.184,237703.83,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",250000,1669462,1,587.26,2388.25,7936.27,500,,,,0.235,0.955,3.175,247611.75,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",260000,1736241,1,608.30,2480.33,8230.27,500,,,,0.234,0.954,3.165,257519.67,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",270000,1803020,1,629.34,2572.41,8524.27,500,,,,0.233,0.953,3.157,267427.59,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",280000,1869798,1,650.38,2664.49,8818.27,500,,,,0.232,0.952,3.149,277335.51,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",290000,1936576,1,671.42,2756.57,9112.27,500,,,,0.232,0.951,3.142,287243.43,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",300000,2003355,1,692.46,2848.65,9406.27,500,,,,0.231,0.950,3.135,297151.35,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",310000,2070134,1,713.50,2940.73,9700.27,500,,,,0.230,0.949,3.129,307059.27,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",320000,2136912,1,734.54,3032.81,9994.27,500,,,,0.230,0.948,3.123,316967.19,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",330000,2203690,1,755.58,3124.89,10288.27,500,,,,0.229,0.947,3.118,326875.11,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",340000,2270469,1,776.62,3216.97,10582.27,500,,,,0.228,0.946,3.112,336783.03,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",350000,2337248,1,797.66,3309.05,10876.27,500,,,,0.228,0.945,3.108,346690.95,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",360000,2404026,1,818.70,3401.13,11170.27,500,,,,0.227,0.945,3.103,356598.87,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",370000,2470804,1,839.74,3493.21,11464.27,500,,,,0.227,0.944,3.098,366506.79,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",380000,2537583,1,860.78,3585.29,11758.27,500,,,,0.227,0.943,3.094,376414.71,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",390000,2604362,1,881.82,3677.37,12052.27,500,,,,0.226,0.943,3.090,386322.63,"One remittance, then an offshore conversion",C25 C03,modelled
+L10,"RMB cross-border settlement, converted offshore (CNH)",400000,2671140,1,902.86,3769.44,12346.27,500,,,,0.226,0.942,3.087,396230.56,"One remittance, then an offshore conversion",C25 C03,modelled
+P01,Split purchases / borrowing other people's quotas (分拆),10000,66778,1,,,,,3000,3000,10000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),20000,133557,1,,,,,6000,6000,20000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),30000,200336,1,,,,,9000,9000,30000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),40000,267114,1,,,,,12000,12000,40000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),50000,333892,1,,,,,15000,15000,50000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),60000,400671,1,,,,,18000,18000,60000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),70000,467450,1,,,,,21000,21000,70000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),80000,534228,1,,,,,24000,24000,80000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),90000,601006,1,,,,,27000,27000,90000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),100000,667785,1,,,,,30000,30000,100000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),110000,734564,1,,,,,33000,33000,110000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),120000,801342,1,,,,,36000,36000,120000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),130000,868120,1,,,,,39000,39000,130000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),140000,934899,1,,,,,42000,42000,140000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),150000,1001678,1,,,,,45000,45000,150000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),160000,1068456,1,,,,,48000,48000,160000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),170000,1135234,1,,,,,51000,51000,170000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),180000,1202013,1,,,,,54000,54000,180000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),190000,1268792,1,,,,,57000,57000,190000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),200000,1335570,1,,,,,60000,60000,200000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),210000,1402348,1,,,,,63000,63000,210000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),220000,1469127,1,,,,,66000,66000,220000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),230000,1535906,1,,,,,69000,69000,230000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),240000,1602684,1,,,,,72000,72000,240000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),250000,1669462,1,,,,,75000,75000,250000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),260000,1736241,1,,,,,78000,78000,260000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),270000,1803020,1,,,,,81000,81000,270000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),280000,1869798,1,,,,,84000,84000,280000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),290000,1936576,1,,,,,87000,87000,290000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),300000,2003355,1,,,,,90000,90000,300000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),310000,2070134,1,,,,,93000,93000,310000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),320000,2136912,1,,,,,96000,96000,320000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),330000,2203690,1,,,,,99000,99000,330000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),340000,2270469,1,,,,,102000,102000,340000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),350000,2337248,1,,,,,105000,105000,350000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),360000,2404026,1,,,,,108000,108000,360000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),370000,2470804,1,,,,,111000,111000,370000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),380000,2537583,1,,,,,114000,114000,380000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),390000,2604362,1,,,,,117000,117000,390000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P01,Split purchases / borrowing other people's quotas (分拆),400000,2671140,1,,,,,120000,120000,400000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C22 C09,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),10000,66778,1,,,,,3000,3000,10000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),20000,133557,1,,,,,6000,6000,20000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),30000,200336,1,,,,,9000,9000,30000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),40000,267114,1,,,,,12000,12000,40000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),50000,333892,1,,,,,15000,15000,50000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),60000,400671,1,,,,,18000,18000,60000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),70000,467450,1,,,,,21000,21000,70000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),80000,534228,1,,,,,24000,24000,80000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),90000,601006,1,,,,,27000,27000,90000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),100000,667785,1,,,,,30000,30000,100000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),110000,734564,1,,,,,33000,33000,110000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),120000,801342,1,,,,,36000,36000,120000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),130000,868120,1,,,,,39000,39000,130000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),140000,934899,1,,,,,42000,42000,140000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),150000,1001678,1,,,,,45000,45000,150000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),160000,1068456,1,,,,,48000,48000,160000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),170000,1135234,1,,,,,51000,51000,170000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),180000,1202013,1,,,,,54000,54000,180000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),190000,1268792,1,,,,,57000,57000,190000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),200000,1335570,1,,,,,60000,60000,200000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),210000,1402348,1,,,,,63000,63000,210000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),220000,1469127,1,,,,,66000,66000,220000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),230000,1535906,1,,,,,69000,69000,230000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),240000,1602684,1,,,,,72000,72000,240000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),250000,1669462,1,,,,,75000,75000,250000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),260000,1736241,1,,,,,78000,78000,260000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),270000,1803020,1,,,,,81000,81000,270000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),280000,1869798,1,,,,,84000,84000,280000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),290000,1936576,1,,,,,87000,87000,290000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),300000,2003355,1,,,,,90000,90000,300000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),310000,2070134,1,,,,,93000,93000,310000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),320000,2136912,1,,,,,96000,96000,320000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),330000,2203690,1,,,,,99000,99000,330000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),340000,2270469,1,,,,,102000,102000,340000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),350000,2337248,1,,,,,105000,105000,350000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),360000,2404026,1,,,,,108000,108000,360000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),370000,2470804,1,,,,,111000,111000,370000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),380000,2537583,1,,,,,114000,114000,380000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),390000,2604362,1,,,,,117000,117000,390000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P02,Underground bank / street dealer (地下钱庄 / 黄牛),400000,2671140,1,,,,,120000,120000,400000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C09 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,10000,66778,1,,,,,3000,3000,10000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,20000,133557,1,,,,,6000,6000,20000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,30000,200336,1,,,,,9000,9000,30000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,40000,267114,1,,,,,12000,12000,40000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,50000,333892,1,,,,,15000,15000,50000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,60000,400671,1,,,,,18000,18000,60000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,70000,467450,1,,,,,21000,21000,70000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,80000,534228,1,,,,,24000,24000,80000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,90000,601006,1,,,,,27000,27000,90000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,100000,667785,1,,,,,30000,30000,100000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,110000,734564,1,,,,,33000,33000,110000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,120000,801342,1,,,,,36000,36000,120000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,130000,868120,1,,,,,39000,39000,130000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,140000,934899,1,,,,,42000,42000,140000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,150000,1001678,1,,,,,45000,45000,150000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,160000,1068456,1,,,,,48000,48000,160000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,170000,1135234,1,,,,,51000,51000,170000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,180000,1202013,1,,,,,54000,54000,180000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,190000,1268792,1,,,,,57000,57000,190000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,200000,1335570,1,,,,,60000,60000,200000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,210000,1402348,1,,,,,63000,63000,210000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,220000,1469127,1,,,,,66000,66000,220000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,230000,1535906,1,,,,,69000,69000,230000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,240000,1602684,1,,,,,72000,72000,240000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,250000,1669462,1,,,,,75000,75000,250000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,260000,1736241,1,,,,,78000,78000,260000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,270000,1803020,1,,,,,81000,81000,270000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,280000,1869798,1,,,,,84000,84000,280000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,290000,1936576,1,,,,,87000,87000,290000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,300000,2003355,1,,,,,90000,90000,300000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,310000,2070134,1,,,,,93000,93000,310000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,320000,2136912,1,,,,,96000,96000,320000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,330000,2203690,1,,,,,99000,99000,330000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,340000,2270469,1,,,,,102000,102000,340000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,350000,2337248,1,,,,,105000,105000,350000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,360000,2404026,1,,,,,108000,108000,360000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,370000,2470804,1,,,,,111000,111000,370000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,380000,2537583,1,,,,,114000,114000,380000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,390000,2604362,1,,,,,117000,117000,390000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
+P03,Crypto / USDT / stablecoin conversion,400000,2671140,1,,,,,120000,120000,400000,30.000,30.000,100.000,,"Not lawful - penalty exposure, not a transfer cost",C23 C24,prohibited
