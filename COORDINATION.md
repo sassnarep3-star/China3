@@ -307,7 +307,7 @@ line-by-line correction the brief asks for and is recorded here rather than sile
 
 ### PR and deployment record — T12
 
-- PR: https://github.com/sassnarep3-star/China3/pull/13
+- PR: https://github.com/sassnarep3-star/China3/pull/15
 - Status: see the merge note appended below after `gh pr merge`.
 
 ---
