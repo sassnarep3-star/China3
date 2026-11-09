@@ -218,3 +218,23 @@ provincial SAFE branch Q&As.
 - GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
+
+<!-- cost-estimate-audit session -->
+
+## Session `arena-29381f4c-china3` — cost matrix and consistency audit (current branch)
+
+Branch: `arena/29381f4c-china3` (fixed by Arena). This session follows the fixed-branch
+constraint; no alternate branch or worktree is created. All prior board claims above are
+preserved. No other in-progress claim was present when this scope was claimed.
+
+### Claim — files touched
+
+| Task | Status | File scope |
+|---|---|---|
+| T10 Existing-tree line-by-line consistency audit; document conflicting/stale claims without suppressing uncertainty | in progress | `research/integration-audit.md`, `COORDINATION.md` |
+| T11 Official-source cost model; USD 10k–400k in $10k increments; source-linked per-method rows; unconfirmed all-in values stay blank and flagged | in progress | `research/cost-estimates.md`, `data/cost_scenarios.csv`, `data/cost_sources.csv`, `cost-estimates.html`, `assets/cost-estimates.css`, `scripts/build_cost_estimates.py` |
+| T12 Final integration, site/build/link verification, PR and Pages verification | unclaimed | `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md`, source register / generated pages as required |
+
+This claim was committed and pushed to `arena/29381f4c-china3` before research began. No
+claims from another session are being taken over or edited. Final status, exact sources
+opened, tests, and irregularities will be recorded here at completion.
