@@ -81,3 +81,5 @@ Not legal, tax or banking advice.
   date is mistyped as 2024-11-01 (X-14). 1a9dec1c fixed its spread sign in code (X-01 downgraded).
   New findings X-15 (80597d10 base case charges the full bid-ask spread on a one-way purchase) and
   X-16 (PR #15 rewrites shared deep-layer table data).
+- 01:5x UTC: PR #13 (2eb1c590) merged only a COORDINATION.md record — its own `cost-model.md` /
+  `cost_model.csv` were not merged, so X-02 and X-03 are closed as "content not merged".
