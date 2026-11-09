@@ -347,6 +347,24 @@
     "url": "https://www.csrc.gov.cn/shanxi/c106408/c7616553/content.shtml",
     "verification": "official CSRC article verified"
   },
+  "S59": {
+    "authority": "State Administration of Foreign Exchange (SAFE)",
+    "title": "人民币汇率中间价 — USD/CNY 6.7188 on 2026-11-09",
+    "url": "https://www.safe.gov.cn/safe/rmbhlzjj/index.html",
+    "verification": "fetched 2026-11-09; 2026-11-09 row reads 671.88 per 100 USD"
+  },
+  "S60": {
+    "authority": "Bank of China",
+    "title": "中国银行外汇牌价 — 2026-11-09 09:15:45, 现汇买入 666.38 / 现汇卖出 669.19",
+    "url": "https://www.boc.cn/sourcedb/whpj/",
+    "verification": "fetched 2026-11-09; timestamp and all four price columns read directly"
+  },
+  "S61": {
+    "authority": "People's Bank of China / State Council Gazette",
+    "title": "个人财产对外转移售付汇管理暂行办法（公告〔2004〕第16号）",
+    "url": "https://www.gov.cn/gongbao/content/2005/content_64294.htm",
+    "verification": "fetched 2026-11-09; Arts. 2, 6, 8, 10 and 11 read in full"
+  },
   "U01": {
     "authority": "Internal Revenue Service",
     "title": "Frequently asked questions about international individual tax matters",

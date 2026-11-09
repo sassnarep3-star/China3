@@ -111,6 +111,9 @@ SOURCES = {
     "U24": ("Internal Revenue Service", "Offshore Income and Filing Information for Taxpayers with Foreign Accounts (FS-14-07)", "https://www.irs.gov/pub/irs-news/FS-14-07.pdf", "official IRS fact sheet verified"),
     "U25": ("Internal Revenue Service", "Foreign Gift and Trust Reporting on Forms 3520 and 3520-A", "https://www.irs.gov/pub/irs-npl/2023ntf-15-foreign-gift-and-trust-reporting-on-form-3520-and-3520-a.pdf", "official IRS training verified"),
     "U26": ("Financial Crimes Enforcement Network", "Report to Congress under §361(b) — 'The FBAR is not a tax return'", "https://www.fincen.gov/system/files/shared/ReportToCongress361.PDF", "official report verified"),
+    "S59": ("State Administration of Foreign Exchange (SAFE)", "人民币汇率中间价 — USD/CNY 6.7188 on 2026-11-09", "https://www.safe.gov.cn/safe/rmbhlzjj/index.html", "fetched 2026-11-09; 2026-11-09 row reads 671.88 per 100 USD"),
+    "S60": ("Bank of China", "中国银行外汇牌价 — 2026-11-09 09:15:45, 现汇买入 666.38 / 现汇卖出 669.19", "https://www.boc.cn/sourcedb/whpj/", "fetched 2026-11-09; timestamp and all four price columns read directly"),
+    "S61": ("People's Bank of China / State Council Gazette", "个人财产对外转移售付汇管理暂行办法（公告〔2004〕第16号）", "https://www.gov.cn/gongbao/content/2005/content_64294.htm", "fetched 2026-11-09; Arts. 2, 6, 8, 10 and 11 read in full"),
     # --- project record ---
     "G01": ("GitHub — this repository (official project record)", "COORDINATION.md and branch/PR history", "https://github.com/sassnarep3-star/China3/blob/main/COORDINATION.md", "repository record verified via git + gh api"),
 }
@@ -346,6 +349,14 @@ FLAGS = [
     ("IR-021", "2004 年个人财产转移办法是否有后续修订未逐条复核", "本轮依据 PBOC 2004 答记者问与 SAFE 2021 业务指南；未逐条排查其后所有修订。", "实际办理前请向原户籍所在地外汇局索取现行材料清单。", "S17", "S18", "needs review"),
     ("IR-022", "CNY/CNH 价差数据为历史观测值", "1.94%（2011）与 +163 pips（2014Q1）来自 HKMA 历史报告，不代表当前价差。", "当前价差需实时市场数据，本站点留空。", "S50", "S51", "needs review"),
     ("IR-023", "部分 SAFE 材料为地方分局问答而非国家层面法规", "多条结论来自天津/上海/厦门/重庆等分局的政策问答与业务指南，属于对上位规则的解释，可能存在地区执行差异。", "办理前向开户行所在地外汇局/银行确认执行口径。", "S03", "S44", "needs review"),
+    ("IR-024", "既有来源 S17 已成死链", "复核时（2026-11-09）广东省分局《个人对外财产转移购付汇业务指南》（S17）返回 HTTP 404。2004 年办法的实体规则改由国务院公报全文（S58）承担引用，死链条目保留以便可见。", "建议由仓库所有者下线 S17 条目；实体规则已用 S58 复核。", "S17", "S61", "needs review"),
+    ("IR-025", "汇率成本是一日快照", "成本模型的价差取自 2026-11-09 09:15:45 的中行牌价，当日中行中间价（6.67785）比 SAFE 中间价（6.7188）低 0.61%。实际兑换当日的汇率波动可能远大于手续费。", "实际转账当日重新取银行书面全包报价，不要直接使用本快照。", "S60", "S59", "needs review"),
+    ("IR-026", "四个模型参数是假设值而非官方值", "监管不公布零售价差上限（2014-07-01 已取消）、公证翻译价格、ATM 他行手续费与当日 CNY/CNH 基差。模型因此使用：高价差 1.00%、文件费 0–500 美元、每次取现 5 美元、基准离岸基差 0.50%，并在成本页逐项标注。", "用银行书面数字替换每个假设后再依赖总额。", "S46", "S50 S60", "needs review"),
+    ("IR-027", "美国收款行费用没有单独定价", "模型假定使用中行全额到账（25 美元；收款行在中行纽约分行开户时为 15 美元），使中转行与收款行费用不从本金中扣除。本轮未从美国银行费率表确认其汇入汇款手续费。", "确认收款行汇入费，以及所选汇路是否支持全额到账。", "S48", "S46", "needs review"),
+    ("IR-028", "移民财产转移按规定分期", "人行公告〔2004〕第16号第六条：一次性申请全部金额，首次不超过 50%，满一年后不超过剩余的一半，满两年后汇出剩余；等值人民币 20 万元以下可一次性汇出。成本模型因此对超过该门槛的金额按三次汇款、三次兑换计费，汇率风险持续两年。", "提前安排现金流，并向户籍所在地外汇局确认是否有后续修订。", "S61", "S46", "needs review"),
+    ("IR-029", "ATM 通道存在结构性上限", "汇发〔2017〕29号：本人名下银行卡合计每自然年不超过等值 10 万元人民币，每卡每日不超过等值 1 万元人民币。按 2026-11-09 中间价，年度上限约 14,883 美元，无法在合理期限内转移 40 万美元；模型显示所需年数。", "把 ATM 视为境外消费取现，不作为转移通道。", "S35", "S59", "needs review"),
+    ("IR-030", "单次携带超过 1 万美元现钞一般不适用", "携带现钞超过等值 1 万美元需外汇局《携带证》，仅限公告列举的特殊情形。模型仍按每次 1 万美元计算 40 万美元需 40 次，但未计入差旅成本与人身/损失风险，因此该数字只是下限且路线不现实。", "不要围绕现钞规划大额资金；走单证银行通道。", "S37", "S46", "needs review"),
+    ("IR-031", "中国侧对受赠款项的定性未确认", "个人所得税法列举九类应税所得，未设赠与税；某笔收款是否按“偶然所得”20% 征税取决于未提供的个案事实。", "在依赖“赠与在中国零税”的假设前，取得中国税务顾问对具体情形的意见。", "S23", "S61", "needs review"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -353,7 +364,7 @@ FLAGS = [
 # ---------------------------------------------------------------------------
 def write_csv(name, header, rows):
     with (DATA / name).open("w", newline="", encoding="utf-8") as fh:
-        w = csv.writer(fh, quoting=csv.QUOTE_ALL)
+        w = csv.writer(fh, quoting=csv.QUOTE_ALL, lineterminator="\n")
         w.writerow(header)
         w.writerows(rows)
 
@@ -478,8 +489,47 @@ exec_body = '''
 <section class="section"><div class="section-head"><div><h2 class="section-title">Executive summary</h2><p>The short answer, then the evidence.</p></div></div>
 <div class="hero-band"><strong>Bottom line</strong><p>No official source reviewed establishes a Chinese "conversion tax" on moving your own already-owned CNY principal into USD. The costs that actually bite are (1) Chinese <b>source-of-funds income tax and the tax-clearance documents</b> a bank requires before it will sell you FX, (2) <b>bank spread, wire and correspondent fees</b>, and (3) <b>U.S. information-reporting penalties</b> — the largest of which is a willful FBAR penalty of up to 50% of the account balance. The cheapest-penalty strategy is therefore not a clever conversion trick: it is picking the lawful documentary channel that matches how the money was earned, obtaining a written all-in bank quote, and filing FBAR / Form 8938 / Form 3520 correctly. Informal brokers, quota splitting and crypto/USDT convert a paperwork problem into 30%–100% administrative fines plus criminal exposure.</p></div>
 </section>
-<section class="section"><h2 class="section-title">The single most important structural finding</h2>
-<div class="card"><p>Under the <a href="https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm" target="_blank" rel="noopener">PBOC Individual Foreign Exchange Measures, Art. 37 (S05)</a>, a U.S. citizen holding a passport is an <b>境外个人 (foreign individual)</b>. Under <a href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" target="_blank" rel="noopener">SAFE Current Account Guidelines Art. 59 (S03)</a>, a foreign individual purchases FX using an ID plus evidence of the <i>source</i> of the RMB (including a tax certificate) — and SAFE's own <a href="https://www.safe.gov.cn/chongqing/file/file/20190311/87806e211bb74eb4a44e71395c31cda9.pdf" target="_blank" rel="noopener">Q&amp;A handbook (S43)</a> states that foreign-individual FX purchase has <b>no annual quota limit at all</b>. If the CNY is legitimately earned, tax-paid income, the USD 50,000 "annual quota" that dominates online advice may simply not be the binding constraint. This must be confirmed with the account-opening bank because the 2008 State Council regulation defines 境内个人 differently (see <a href="deep-review.html">IR-007</a>).</p></div></section>
+# ---- cost-model section injected into the executive summary ----------------
+def _cost_summary():
+    import csv as _csv
+    path = ROOT / "data" / "cost_matrix.csv"
+    if not path.exists():
+        return ""
+    rows = list(_csv.DictReader(path.open(encoding="utf-8")))
+    picks = {"10000", "100000", "200000", "400000"}
+    body = []
+    for r in rows:
+        if r["method_id"] != "L01" or r["amount_usd"] not in picks:
+            continue
+        a = int(r["amount_usd"])
+        body.append(
+            "<tr><td><strong>USD {:,}</strong></td><td>USD {:,.0f}</td><td>{}%</td>"
+            "<td>USD {:,.0f}</td><td class=\"src\">"
+            "<a href=\"https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html\" target=\"_blank\" rel=\"noopener\">S46 ↗</a> "
+            "<a href=\"https://www.safe.gov.cn/safe/rmbhlzjj/index.html\" target=\"_blank\" rel=\"noopener\">S56 ↗</a> "
+            "<a href=\"https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821\" target=\"_blank\" rel=\"noopener\">U20 ↗</a>"
+            "</td></tr>".format(a, float(r["cost_base_usd"]), r["pct_base"],
+                                max(165353, a * 0.5)))
+    return (
+        '<section class="section"><h2 class="section-title">The cost answer, at every USD 10,000 step</h2>'
+        '<div class="card"><p>The cost model computes all 40 amount steps for 13 routes. On the primary lawful route '
+        '(foreign individual, current-account income, one wire) the arithmetic gives:</p>'
+        '<div class="table-wrap"><table class="data"><thead><tr><th>Amount</th><th>All-in cost</th>'
+        '<th>Effective %</th><th>Willful FBAR maximum at that balance</th><th>Source</th></tr></thead><tbody>'
+        + "".join(body) + '</tbody></table></div>'
+        '<p>The percentage <em>falls</em> as the amount rises because the wire fee is capped at CNY 260. '
+        'Compare that with 30%-100% of the amount for an unlawful route, and with a willful FBAR penalty of '
+        'the greater of USD 165,353 or 50% of the balance. '
+        '<a href="deep-costs.html"><strong>Open the full 40-step cost model →</strong></a></p></div></section>'
+    )
+
+exec_body = exec_body.replace(
+    '<section class="section"><h2 class="section-title">The single most important structural finding</h2>',
+    _cost_summary() + '<section class="section"><h2 class="section-title">The single most important structural finding</h2>',
+)
+
+
+<div class="card"><p>Under the <a href="https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm" target="_blank" rel="noopener">PBOC Individual Foreign Exchange Measures, Art. 37 (S05)</a>, a U.S. citizen holding a passport is an <b>境外个人 (foreign individual)</b>. Under <a href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" target="_blank" rel="noopener">SAFE Current Account Guidelines Art. 59 (S03)</a>, a foreign individual purchases FX using an ID plus evidence of the <i>source</i> of the RMB (including a tax certificate) — and SAFE's own Q&amp;A states that genuine, lawful current-account FX purchase has <b>no amount limit</b> (<a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener">S01</a>), while the annual convenience amount is available only to holders of a foreign permanent-residence ID (<a href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" target="_blank" rel="noopener">S03</a>). If the CNY is legitimately earned, tax-paid income, the USD 50,000 "annual quota" that dominates online advice may simply not be the binding constraint. This must be confirmed with the account-opening bank because the 2008 State Council regulation defines 境内个人 differently (see <a href="deep-review.html">IR-007</a>).</p></div></section>
 <section class="section"><h2 class="section-title">Recommended sequence (least penalty first)</h2>
 <div class="card">
 <div class="step"><span class="stepnum">1</span><p><strong>Classify the account holder and the money.</strong> Which ID opened the account? Is the CNY salary, business profit, sale of property, inheritance, gift, or previously-converted FX? Collect bank statements, contracts, and Chinese tax receipts. Without this, no route can be selected (<a href="deep-review.html">IR-014</a>).</p></div>
