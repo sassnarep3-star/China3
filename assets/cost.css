@@ -1,0 +1,102 @@
+/* China3 — cost-model layer (session-1a9dec1c)
+   Mobile-first: every cost table collapses to stacked cards below 760px so the
+   numbers that matter (total cost, percentage, penalty) stay readable on a phone. */
+
+.lead { font-size: 1.05rem; color: #34434f; }
+.small, .small a { font-size: 0.82rem; color: #5d6b78; }
+.warnline { border-left: 3px solid var(--unverified-text); padding-left: 0.6rem; }
+
+/* ---------- KPI strip ---------- */
+.kpis { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin: 1.25rem 0; }
+@media (min-width: 620px) { .kpis { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .kpis { grid-template-columns: repeat(4, 1fr); } }
+.kpi { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent);
+  border-radius: var(--radius); padding: 0.85rem 0.95rem; box-shadow: var(--shadow); }
+.kpi-warn { border-left-color: var(--flag); background: var(--flag-bg); }
+.kpi-num { display: block; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px;
+  color: var(--primary); line-height: 1.15; }
+.kpi-warn .kpi-num { color: #8c1d18; }
+.kpi-lab { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+.kpi-lab .small { font-size: 0.72rem; }
+
+/* ---------- cost tables ---------- */
+.tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0.75rem 0; }
+table.cost { width: 100%; border-collapse: collapse; font-size: 0.86rem;
+  font-variant-numeric: tabular-nums; }
+table.cost th { background: #eef3f8; color: #1d3b56; text-align: right; padding: 0.5rem 0.55rem;
+  border: 1px solid var(--border); font-size: 0.76rem; font-weight: 700; line-height: 1.25;
+  position: sticky; top: 0; z-index: 1; }
+table.cost th:first-child, table.cost td:first-child { text-align: left; }
+table.cost th.hi { background: #dcebdf; color: #14512f; }
+table.cost td { padding: 0.42rem 0.55rem; border: 1px solid var(--border); text-align: right; }
+table.cost td.hi { background: #f2f9f4; font-weight: 700; color: #14512f; }
+table.cost tbody tr:nth-child(even) { background: #fafcfd; }
+table.cost tbody tr:hover { background: #eef6fb; }
+table.cost tr.no td { background: #fdf1f0; color: #8c1d18; }
+table.cost td.no { color: #8c1d18; font-weight: 600; }
+table.cost td.blank { background: #fffdf3; }
+table.cost td.unv { text-align: left; font-size: 0.82rem; }
+
+.quote { display: block; font-size: 0.78rem; color: #4a5a68; background: #f6f8fa;
+  border-left: 2px solid var(--border); padding: 0.25rem 0.5rem; border-radius: 3px;
+  word-break: break-word; }
+.badge-bad { background: var(--flag-bg); color: var(--flag); }
+
+/* ---------- method accordions ---------- */
+details.method { border: 1px solid var(--border); border-radius: var(--radius);
+  background: #fff; margin-bottom: 0.7rem; box-shadow: var(--shadow); }
+details.method > summary { cursor: pointer; padding: 0.8rem 1rem; font-size: 0.95rem;
+  background: #f4f8fb; border-radius: var(--radius); list-style: none; }
+details.method > summary::-webkit-details-marker { display: none; }
+details.method > summary::before { content: "▸ "; color: var(--primary); font-weight: 700; }
+details.method[open] > summary::before { content: "▾ "; }
+details.method[open] > summary { border-bottom: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0; }
+details.method .zh { color: var(--muted); font-size: 0.82rem; }
+.mbody { padding: 0.85rem 1rem 1rem; }
+.mbody p { margin: 0 0 0.55rem; }
+
+/* ---------- ordered steps ---------- */
+ol.steps { counter-reset: s; list-style: none; padding: 0; margin: 0.5rem 0 0; }
+ol.steps > li { counter-increment: s; position: relative; padding: 0 0 0.9rem 2.4rem;
+  border-left: 2px solid #e3ebf2; margin-left: 0.85rem; }
+ol.steps > li:last-child { border-left-color: transparent; padding-bottom: 0; }
+ol.steps > li::before { content: counter(s); position: absolute; left: -0.95rem; top: 0;
+  width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--primary); color: #fff;
+  display: grid; place-items: center; font-size: 0.8rem; font-weight: 700; }
+ol.steps > li > strong { display: block; margin-bottom: 0.2rem; color: #16324a; }
+ol.steps > li > p { margin: 0 0 0.3rem; font-size: 0.92rem; }
+
+/* ---------- the phone view ---------- */
+@media (max-width: 759px) {
+  table.cost { font-size: 0.9rem; border: 0; }
+  table.cost thead { display: none; }
+  table.cost, table.cost tbody, table.cost tr, table.cost td { display: block; width: 100%; }
+  table.cost tr { border: 1px solid var(--border); border-radius: var(--radius);
+    margin-bottom: 0.6rem; background: #fff; overflow: hidden; }
+  table.cost tr:nth-child(even) { background: #fff; }
+  table.cost td { border: 0; border-bottom: 1px solid #eef2f5; text-align: right;
+    padding: 0.45rem 0.75rem; display: flex; justify-content: space-between;
+    align-items: baseline; gap: 0.75rem; }
+  table.cost td:last-child { border-bottom: 0; }
+  table.cost td::before { content: attr(data-l); text-align: left; font-size: 0.76rem;
+    font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3px;
+    flex: 0 0 44%; }
+  table.cost td.hi { background: #f2f9f4; }
+  table.cost tr.no td { background: #fdf1f0; }
+  table.cost td.unv { display: block; text-align: left; }
+  table.cost td.unv::before { display: block; margin-bottom: 0.2rem; }
+  table.cost td:empty, table.cost td.blank:empty { display: none; }
+  .kpi-num { font-size: 1.35rem; }
+  .section { padding: 1rem; }
+  nav a { font-size: 0.86rem; padding: 0.4rem 0.65rem; }
+}
+
+/* print: keep the tables usable as a take-away */
+@media print {
+  .site-header, nav, footer.foot { display: none; }
+  .section { box-shadow: none; border: 0; }
+  details.method { break-inside: avoid; }
+  details.method > summary { background: none; }
+  table.cost th { position: static; }
+}
