@@ -425,3 +425,49 @@ Branch: `arena/2eb1c590-china3`, merged with `origin/main` (d45f160, PR #14 cost
 - 2026-11-09: PR #14 (session 7a636dce) merged cost-tables to `main` and deployed to Pages; `cost-tables.html` live.
 - 2026-11-09: Session arena/2eb1c590-china3 merged `origin/main` into its branch (COORDINATION.md conflict resolved by keeping both sessions' records), verified combined tree, opened PR #13 for final integration.
 
+
+
+---
+
+## Session `session-5e4816e0` — cross-session reconciliation review (2026-11-09)
+
+Branch: `arena/5e4816e0-china3` (fixed by Arena; `session-<id>/<task>` branches cannot be created here — same constraint already logged as IR-001). Base: `b1dc441` (= `main`).
+
+### What was found at start (01:3x UTC)
+
+`git ls-remote origin` showed **eight** sessions that had pushed claim commits within ~3 minutes of each other, all claiming the same "USD 10k–400k cost estimate + step-by-step" gap, each on its own branch (so none of the claims is visible on `main`):
+
+| Branch | Claim commit (UTC) | Claimed scope (summary) |
+|---|---|---|
+| `arena/9d3903f8-china3` | 2026-11-08 23:10 / 23:22 | T11 cost matrix + `deep-costs.html` — no content commits since (stale >60 min; taken over by 80597d10) |
+| `arena/7a636dce-china3` | 2026-11-09 01:28:12 | T10–T15 cost inputs/ladder/steps, `cost-tables.html`, final integration |
+| `arena/80597d10-china3` | 01:28:24 | T12 cost matrix (takeover of 9d3903f8), `deep-costs.html` |
+| `arena/29381f4c-china3` | 01:29:07 | T10 consistency audit, T11 `cost-estimates.html` |
+| `arena/8c26329a-china3` | 01:29:36 | C1 `costs.html` / `cost-review.html`, C2 final integration |
+| `arena/6e903ecd-china3` | 01:30:27 | T-COST `costs.html`, `cost-steps.html`, `cost-review.html` |
+| `arena/2eb1c590-china3` | 01:31:19 | CM-1 `deep-cost-model.html` |
+| `arena/1a9dec1c-china3` | 01:31:25 | C2–C6 `cost-table.html`, `cost-steps.html`, `verification.html` |
+
+**Collision warning (logged, not resolved by editing anyone's files):** 8c26329a and 6e903ecd both claim `costs.html`, `cost-review.html`, `scripts/build_costs.py`; 6e903ecd and 1a9dec1c both claim `cost-steps.html` and `assets/cost.css`; 9d3903f8 and 80597d10 both name `deep-costs.html`. Four sessions claim final-integration rights over `index.html`. By claim time, the earliest live claim on the cost model is `arena/7a636dce-china3` (01:28:12); the earliest final-integration claim is the same session. Recommendation: the session that merges first owns `index.html`; later sessions must rebase onto `main` and keep both sides' content.
+
+Because the cost model is already claimed, **this session does not build a cost model.** It takes the one unclaimed job that the collision creates:
+
+| ID | Task | File scope (new files only) | Status | Owner |
+|---|---|---|---|---|
+| X1 | Independently fetch, date and record the official reference inputs every cost model depends on (BOC FX board, CFETS central parity, BOC personal wire tariff, SAFE quota/cash rules, IRS/FinCEN thresholds) | `data/reference_inputs.csv`, `research/cross-session-review.md` | done | session-5e4816e0 |
+| X2 | Cross-check every concurrent session branch's published numbers against X1; log discrepancies as requests to the owning session (no edits to their files) | `research/cross-session-review.md`, `data/cross_session_findings.csv` | done | session-5e4816e0 |
+| X3 | Publish the reconciliation as a stand-alone page linked from nowhere shared (the integrator adds the nav link) | `cross-session-review.html` | done | session-5e4816e0 |
+
+Request to the final integration session: add a link to `cross-session-review.html` from the landing page / Flagged-for-Review navigation when integrating.
+
+Scope addendum (same session, new files only, no overlap with any claim): `scripts/build_cross_session_review.py` (generator + contract check) and `data/reference_check_values.csv` (generated). The reference check values are a reconciliation checksum for the one fully tariffed route (BOC personal e-banking), not a competing cost model. Also `.github/workflows/cross-session-review.yml` (new CI job running the generator's `--check`).
+
+### session-5e4816e0 — completion record (X1–X3 done)
+
+- **Sources fetched and read on 2026-11-09** (full text, verbatim excerpts stored in `data/reference_inputs.csv`): BOC FX board https://www.boc.cn/sourcedb/whpj/ · CFETS central parity https://www.chinamoney.com.cn/chinese/bkccpr/ · BOC personal e-banking tariff https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html · BOC 2017 tariff notice https://www.boc.cn/cbservice/bi2/201711/t20171109_10646775.html · SAFE Ningxia https://www.safe.gov.cn/ningxia/2022/0929/1997.html · SAFE Tianjin https://www.safe.gov.cn/tianjin/2024/0229/2402.html · SAFE Hebei http://www.safe.gov.cn/hebei/2019/0521/1366.html · SAFE 汇发〔2017〕29号 https://www.safe.gov.cn/hubei/2019/0305/851.html · PBOC 2014 chronicle https://www.pbc.gov.cn/zhengcehuobisi/125207/125227/125963/2810732/index.html · CBP https://www.cbp.gov/travel/international-visitors/money-monetary-instruments · 26 U.S.C. 988 (govinfo) https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm · IRS yearly average rates https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+- **Rejected:** two `uscode.house.gov` §988 URLs returned "Page Not Found" (site in temporary format) → replaced by govinfo. IRS Pub. 525 (57 chunks) not fully read → not relied on.
+- **Verification performed:** generator asserts every input/finding row has an official URL, verified rows carry a verbatim excerpt, UNVERIFIED rows are blank, CSV rows are well-formed, hand-checked arithmetic (USD 10k spread 21.04; fee ¥216.92; USD 400k fee ¥410 single / ¥3,280 eight wires), 40 unique amounts; `--check` fails on stale output (CI: `.github/workflows/cross-session-review.yml`). `main`'s `cost-tables.html` reproduces the reference check value to the cent (USD 53.45 at USD 10,000). All existing checks (`validate_data.py`, `check_links.py`, `verify_deep.py`, `test_costs.py`, `verify_cost_tables.py`) pass on the merged tree.
+- **Irregularities (published on `cross-session-review.html`, status needs review, non-blocking):** X-01 spread sign error (1a9dec1c; fixed in code, still in notes) · X-02/X-03 closed (not merged) · X-04 PR #11 grid all blank · X-05 BOC full-amount fee quoted incompletely (USD 25 case omitted; corporate tariff) · X-06 editorial pages say "not a U.S. taxable event" — contradicts deep layer and §988 · X-07 §988 personal rule over-simplified · X-08 editorial cash-carry limit wrong above USD 10,000 · X-09 IR-015 closable (parity 6.7188) · X-10 IR-012 narrowable (board half-spread 0.2104%) · **X-11 no cost model quantifies the U.S. currency-gain tax (≈6.9% of USD received for CNY acquired at the 2024 IRS average)** · X-12 parallel-claim file collisions · X-13 spot below parity · X-14 BOC tariff date typed 2024 instead of 2014 (main cost_inputs.csv) · X-15 PR #15 base case charges full bid-ask on one-way purchase · X-16 PR #15 rewrites shared deep-layer table data.
+- **Process irregularity:** `git pull --rebase` on a branch that contains merge commits tried to replay other sessions' commits (flattening) and conflicted; stopped with `git rebase --abort` (no work lost; remote tip was already equal to local). Subsequent pulls use `git pull --rebase=merges`.
+- **Request (unchanged) to the final integration session:** link `cross-session-review.html` from the landing page and the Flagged-for-Review navigation; act on X-05…X-08, X-11, X-14 in the files their owners published.
+
