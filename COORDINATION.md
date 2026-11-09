@@ -273,3 +273,5 @@ Because the cost model is already claimed, **this session does not build a cost 
 | X3 | Publish the reconciliation as a stand-alone page linked from nowhere shared (the integrator adds the nav link) | `cross-session-review.html` | in progress | session-5e4816e0 |
 
 Request to the final integration session: add a link to `cross-session-review.html` from the landing page / Flagged-for-Review navigation when integrating.
+
+Scope addendum (same session, new files only, no overlap with any claim): `scripts/build_cross_session_review.py` (generator + contract check) and `data/reference_check_values.csv` (generated). The reference check values are a reconciliation checksum for the one fully tariffed route (BOC personal e-banking), not a competing cost model.
