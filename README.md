@@ -43,6 +43,25 @@ One Pages deployment, two complementary layers:
 | `flagged-review.html` | Unverified items, deliberately blank |
 | `review.html`, `sources.html` | Case facts, source register, method |
 
+**Cost tables** (`cost-tables.html`) — the money answers, to the cent:
+
+| Section | Content |
+|---|---|
+| Master ladder | $10,000 → $400,000 in $10,000 steps for the recommended route: CNY needed, spread, wire + cable, total, cost %, net received |
+| Every route at six amounts | all 20 routes side by side at $10k / $50k / $100k / $200k / $300k / $400k |
+| Penalty ladders | what each unlawful route costs if caught, at every amount, plus the US reporting ceilings |
+| Route by route | a full 40-step ladder and a numbered step-by-step procedure per route |
+| Model inputs | all 32 inputs (`CI01`–`CI32`) with value, status and source |
+| Flagged | `IR-024`–`IR-029`, each with the official link |
+
+Headline: **$53.45 on $10,000, $902.86 on $400,000** — 0.535% falling to 0.226%, because the 1‰ wire fee
+hits its CNY 260 cap at about $38,853. No Chinese tax applies to converting your own principal; the
+six-figure risk is a willful FBAR penalty (50% of the balance) or a Chinese 30%–100% penalty on an
+unlawful route. Data: `data/cost_inputs.csv`, `data/cost_methods.csv`, `data/cost_ladder.csv`,
+`data/cost_steps.csv`, `data/cost_sources.csv`. Checks: `scripts/verify_cost_tables.py`
+(re-derives every cell from the inputs with independent arithmetic) and
+`.github/workflows/cost-model-verify.yml`.
+
 **Data dashboard** (`docs/`, generated) — every row is structured data that a script can check:
 
 | Page | Content |
@@ -81,6 +100,8 @@ python3 scripts/validate_data.py      # data contract
 python3 scripts/build_site.py         # regenerate docs/
 python3 scripts/check_links.py        # links, anchors, freshness
 python3 scripts/check_links.py --fetch  # optional: HTTP-check every source URL
+python3 scripts/build_cost_tables.py    # regenerate the cost tables + CSVs
+python3 scripts/verify_cost_tables.py   # re-derive every cost cell
 ```
 
 No third-party dependencies. `.github/workflows/ci.yml` runs the contract check, fails if `docs/` is stale, and checks every external URL. `.github/workflows/pages.yml` validates root navigation and deploys to Pages.
