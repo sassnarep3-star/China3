@@ -575,7 +575,7 @@ def build_cost_table_html(rows, pen):
             "<td data-l='FX margin'>{fx:,.2f}</td>"
             "<td data-l='Bank fees'>{fee:,.2f}</td>"
             "<td data-l='Total cost' class='hi'><strong>{tot:,.2f}</strong></td>"
-            "<td data-l='Cost %' class='hi'>{p}%</td>"
+            "<td data-l='Cost %' class='hi'>{p:.3f}%</td>"
             "<td data-l='You receive'>{net:,.2f}</td></tr>".format(
                 a=r["amount_usd"], cny=r["cny_required"], fx=r["fx_margin_usd"],
                 fee=r["wire_fee_usd"], tot=r["total_cost_usd"], p=r["cost_pct"],
@@ -610,7 +610,7 @@ def build_cost_table_html(rows, pen):
             if r["feasible"] != "Yes":
                 cells.append("<td class='no' data-l='{lab}'>cap</td>".format(lab=lab))
             else:
-                cells.append("<td data-l='{lab}'>{t}<br><span class='small'>{p}%</span></td>".format(
+                cells.append("<td data-l='{lab}'>{t}<br><span class='small'>{p:.3f}%</span></td>".format(
                     lab=lab, t=money(r["total_cost_usd"]), p=r["cost_pct"]))
         out.append("<tr><td data-l='Method'><strong>{id}</strong> {n}<br><span class='small'>{zh}</span></td>{c}</tr>".format(
             id=m["id"], n=m["name"], zh=m["name_zh"], c="".join(cells)))
@@ -657,7 +657,7 @@ def build_cost_table_html(rows, pen):
             out.append(
                 "<tr{cls}><td data-l='Amount'>{a:,}</td><td data-l='FX margin'>{fx:,.2f}</td>"
                 "<td data-l='Fees'>{fee:,.2f}</td><td data-l='Other'>{o:,.2f}</td>"
-                "<td data-l='Total' class='hi'>{t:,.2f}</td><td data-l='%' class='hi'>{p}</td>"
+                "<td data-l='Total' class='hi'>{t:,.2f}</td><td data-l='%' class='hi'>{p:.3f}</td>"
                 "<td data-l='Net'>{n:,.2f}</td><td data-l='Feasible'>{f}</td></tr>".format(
                     cls=cls, a=r["amount_usd"], fx=r["fx_margin_usd"], fee=r["wire_fee_usd"],
                     o=r["other_fixed_usd"], t=r["total_cost_usd"], p=r["cost_pct"],
