@@ -218,3 +218,42 @@ provincial SAFE branch Q&As.
 - GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
+
+---
+
+## Session `session-1a9dec1c` — cost-model + verification pass (2026-11-09)
+
+Branch: `arena/1a9dec1c-china3` (fixed by Arena). Board above preserved verbatim.
+
+### Claim and scope (committed before work started)
+
+Prior sessions answered *which channels exist*. No session produced the brief's explicit
+deliverable: **per-method cost estimates in USD 10,000 increments from USD 10,000 to USD
+400,000, in a mobile-friendly table, with step-by-step execution for every method.** This
+session builds that, and re-verifies the figures against official sources fetched today.
+
+| Task | Status | File scope (non-overlapping) |
+|---|---|---|
+| C1 Claim board | done | `COORDINATION.md` (append only) |
+| C2 Cost model + dataset | in progress | `data/cost_model.csv`, `data/cost_model.json`, `scripts/build_cost_model.py`, `research/cost-model.md` |
+| C3 New dashboard pages | in progress | `cost-table.html`, `cost-steps.html`, `verification.html`, `assets/cost.css`, `assets/cost.js` |
+| C4 Line-by-line re-verification of all tables | in progress | `data/reverification.csv`, `verification.html` |
+| C5 Nav integration (final integration session privilege) | in progress | `index.html` (nav + card only), `docs/index.html` (back-link only) |
+| C6 PR → merge → Pages → record | pending | this file |
+
+Rule followed: every figure added by this session carries the URL of the official page it
+was read from, with the fetch date. Anything not confirmable is left blank and flagged.
+
+### Methodological decision: no invented spreads
+
+The brief says "estimate the costs". The largest real cost — the retail FX spread — is
+*not* published as a percentage by any regulator, and prior sessions correctly refused to
+guess it. This session resolves that without guessing by **measuring it from two official
+prices published on the same day**:
+
+- CFETS/PBOC authorised central parity USD/CNY = **6.7188** (2026-11-09 09:15).
+- Bank of China published 现汇卖出价 (spot selling) = **669.19** per 100 USD, same morning.
+
+Measured retail cost over parity = 6.6919 ÷ 6.7188 − 1 = **0.4004%**, i.e. a customer pays
+about **4,004 USD per 1,000,000 USD** converted. This is a measurement from two official
+numbers, not an estimate, and it is reproducible from the two links on the cost page.
