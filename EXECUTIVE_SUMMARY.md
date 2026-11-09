@@ -142,3 +142,85 @@ controls (IR-016).
 This is informational research, not legal, tax or banking advice. No manual input was
 requested; all conclusions are conditional on case facts that were not provided (IR-014,
 IR-018).
+
+---
+
+# Addendum — session `session-1a9dec1c`, 2026-11-09
+
+The brief asked for one thing the earlier passes did not produce: **per-method cost estimates
+in USD 10,000 increments from USD 10,000 to USD 400,000, in a mobile-friendly table, with the
+exact sequence of steps for every method.** That now exists and is the headline deliverable:
+
+- **Cost tables:** [`cost-table.html`](cost-table.html) · data: `data/cost_model.csv`
+- **Step-by-step:** [`cost-steps.html`](cost-steps.html)
+- **Verification log:** [`verification.html`](verification.html) · data: `data/reverification.csv`
+
+## The costed answer
+
+| At this balance | Lawful all-in cost | As % of principal | Willful FBAR maximum on the same balance |
+|---|---|---|---|
+| USD 10,000 | **$53.41** | 0.534% | $165,353 |
+| USD 50,000 | **$166.25** | 0.333% | $165,353 |
+| USD 100,000 | **$271.22** | 0.271% | $165,353 |
+| USD 200,000 | **$481.18** | 0.241% | $165,353 |
+| USD 400,000 | **$901.09** | 0.225% | **$200,000** |
+
+Source of every constant:
+[CFETS central parity 6.7188](https://www.chinamoney.com.cn/chinese/bkccpr/) ·
+[BOC board 6.6919/6.6638](https://www.boc.cn/sourcedb/whpj/) ·
+[BOC personal wire tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) ·
+[31 CFR 1010.821](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821).
+
+**Two findings follow from the arithmetic, and they are the answer to the question.**
+
+1. **The conversion is not the problem.** Moving USD 400,000 lawfully costs $901.09. The cost
+   *falls* as a percentage of principal, from 0.534% at 10k to 0.225% at 400k, because the only
+   ad-valorem charge — the wire fee — is capped at ¥260. The brief's premise of "a considerable
+   amount of taxes" on conversion is not supported by any official source; no Chinese conversion
+   tax exists.
+2. **Reporting is the whole problem.** The willful FBAR maximum is the greater of $165,353 or
+   50% of the balance. At USD 400,000 that is **$200,000 — 222&times; the entire cost of moving
+   the money correctly.** One missed Form 114 costs more than two hundred correct transfers.
+
+## How the FX cost was measured instead of estimated
+
+No regulator publishes a retail CNY/USD spread, and earlier sessions correctly refused to
+invent one. This session derived it from **two official numbers published on the same morning**
+rather than from an assumption:
+
+| Input | Value | Source |
+|---|---|---|
+| CFETS/PBOC central parity | 6.7188 | [chinamoney.com.cn](https://www.chinamoney.com.cn/chinese/bkccpr/), 2026-11-09 09:15 |
+| BOC 现汇卖出价 (what a buyer pays) | 6.6919 | [boc.cn/sourcedb/whpj](https://www.boc.cn/sourcedb/whpj/), 2026-11-09 09:15:45 |
+| BOC 现汇买入价 | 6.6638 | same board |
+| **Mid-market of BOC's own board** | **6.67785** | computed: (6.6638 + 6.6919) ÷ 2 |
+| **Measured FX margin** | **0.20996%** | (6.6919 − 6.67785) ÷ 6.6919 |
+| Full round-trip spread | 0.41992% | (6.6919 − 6.6638) ÷ 6.6919 |
+
+The margin is measured against the mid of the bank's own published board, which is the World
+Bank *Remittance Prices Worldwide* definition of total remittance cost (fee + margin over
+mid-market). Nothing is assumed. The BOC page itself warns the board is indicative and the
+counter rate governs — that caveat is reproduced on the cost page.
+
+## What is still blank, and why
+
+| Flag | Blank | Reason |
+|---|---|---|
+| F01 | Correspondent deduction on a standard wire | BOC collects overseas bank fees "at actual cost" and publishes no amount. M03 converts this unknown into a published $25. |
+| F02 | Receiving U.S. bank's incoming-wire fee | Commercial, set by each bank. |
+| F03 | Offshore CNH retail margin | No official retail CNH spread feed found. |
+| F04 | Tax basis and acquisition rate of the RMB | Decides the PRC 20% base and the U.S. § 988 gain; depends on the holder's documents. |
+| F05 | 境内个人 vs 境外个人 registration | Two instruments in force define the terms differently; only the bank's record settles it. |
+| F06 | SAFE processing time for an emigrant-transfer approval | No published service standard found. |
+| F07 | Whether the balance is salary, property, gift or inheritance | Not provided; every route is priced so the reader selects by fact. |
+
+## Irregularities found in the published site this session
+
+| ID | Finding | Status |
+|---|---|---|
+| B01 | `safe.gov.cn/guangdong/2021/0323/1994.html` (source S17) returns **404**. | Flagged; replaced for my citations by the [State Council Gazette full text](https://www.gov.cn/gongbao/content/2005/content_64294.htm). |
+| B02 | `boc.cn/ebanking/bi3/bi31/202312/t20231229_24338136.html` (source S49, the 2024 fee promotion) returns **404**. | Flagged; that promotion is not relied on anywhere. |
+| B03 | `irs.gov/.../report-of-foreign-bank-and-financial-accounts-fbar` in `index.html` returns **404**. | Flagged; correct URL is the `/businesses/small-businesses-self-employed/...` path. |
+| H01 | `china-rules.html` and `us-tax.html` had an unclosed `<div>`; `flagged-review.html` had a stray `</span>`. | **Fixed.** All 33 HTML pages now parse with balanced tags. |
+
+This remains research, not legal, tax or banking advice.
