@@ -1,0 +1,38 @@
+[
+  [
+    "COST-01",
+    "All-in cost cannot be verified",
+    "FX spread, intermediary and receiving fees, source taxes, US tax basis, account identity and transaction eligibility are unknown. All numeric total-cost cells remain blank.",
+    "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html"
+  ],
+  [
+    "COST-02",
+    "Old baseline is not a current quote",
+    "The retrieved BOC table describes rates effective 2014-11-01 and local/contract/promotional exceptions. Its linked promotions are not assumed current. Formula rows are conditional arithmetic only.",
+    "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html"
+  ],
+  [
+    "COST-03",
+    "Inherited research is not newly verified",
+    "35 channel entries and 84 source-register entries already existed. A source-domain allowlist and a working link do not prove legal accuracy, currentness or that a linked provision supports each sentence. Prior verification labels are historical, not this session’s attestation. Review the inherited tables before acting.",
+    "https://www.safe.gov.cn/tianjin/2024/0621/2529.html"
+  ],
+  [
+    "COST-04",
+    "No universal tax percentage established",
+    "No supplied money-origin history, acquisition dates, tax returns, basis or filing status. No zero-tax promise and no penalty estimate can be made from the account balance alone.",
+    "https://www.irs.gov/individuals/international-taxpayers/foreign-currency-and-currency-exchange-rates"
+  ],
+  [
+    "COST-05",
+    "Bank product URL returned a soft 404",
+    "An exploratory BOC English product URL redirected to “page does not exist”. It was rejected as substantive evidence. A success HTTP/tool status alone is insufficient. The tariff URL below was actually read.",
+    "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html"
+  ],
+  [
+    "COST-06",
+    "Exact steps remain bank- and case-dependent",
+    "Checklists are analysis rather than bank-certified execution instructions. No false certainty about documents, timing, permanent-resident classification, approval or channel availability is offered.",
+    "https://www.safe.gov.cn/tianjin/2024/0621/2529.html"
+  ]
+]

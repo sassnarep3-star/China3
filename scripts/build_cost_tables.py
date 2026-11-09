@@ -520,6 +520,12 @@ FLAGS = [
      "consular certification. Earlier pages described the emigrant transfer as a single transfer; the ladder "
      "here prices three purchases instead. That is a correction, not a reinterpretation.",
      "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
+    ("IR-030", "A parallel session published a second cost page",
+     "A separate session merged costs.html and cost-review.html (PR #11, PR #12) to the same brief while this "
+     "pass was running. Its 1,400-row grid leaves every exact all-in cost blank; this page prices 20 routes "
+     "from a dated quote. Both are published, neither overwrites the other, and the home page links both. "
+     "Nothing from that session was deleted to resolve the overlap.",
+     "CS01", "https://www.boc.cn/sourcedb/whpj/"),
 ]
 for fid, title, body, sid, url in FLAGS:
     A(f"""    <article class="flag">

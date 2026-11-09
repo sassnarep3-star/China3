@@ -270,7 +270,7 @@ for mid_ in methods:
 for iid in inputs:
     if iid not in page:
         fail(f"page is missing input {iid}")
-for fid in ("IR-024", "IR-025", "IR-026", "IR-027", "IR-028", "IR-029"):
+for fid in ("IR-024", "IR-025", "IR-026", "IR-027", "IR-028", "IR-029", "IR-030"):
     if fid not in page:
         fail(f"page is missing flag {fid}")
 

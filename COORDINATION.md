@@ -219,6 +219,7 @@ provincial SAFE branch Q&As.
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
 
+
 <!-- cost-model-session-v1 -->
 
 ## Session `arena-7a636dce-china3` — cost-estimate pass (T10–T15)
@@ -323,3 +324,55 @@ IR-024 the spread is a one-day observation · IR-025 the PRC 20% is a rate, not 
 IR-026 the 1.94% CNH basis withdrawn · IR-027 `S17` dead link, rule re-sourced ·
 IR-028 the US receiving fee is genuinely unknown, so every total is China-side ·
 IR-029 the emigrant transfer is staged over two years.
+
+<!-- parallel-session-record-preserved -->
+
+### Parallel session `arena/8c26329a-china3` — preserved verbatim
+
+While this pass was running, a second session completed its own cost pass on the same brief and
+merged it to `main` as PR #11 and PR #12. Its record is kept here unchanged. The two passes are
+complementary, not duplicates:
+
+| | `costs.html` (session 8c26329a) | `cost-tables.html` (this session) |
+|---|---|---|
+| Coverage | 1,400 rows across the existing 35 channels | 800 priced rows across 20 routes |
+| Price inputs | left blank — no live rate assumed | priced from a dated BOC board quote + published tariff |
+| Strength | breadth, provenance audit, `cost-review.html` COST-01–06 | exact dollars per amount, staged emigrant payout, per-route step-by-step |
+| Both | unknown fees blank, never zero; official-source links per row | same rule, enforced by a different script |
+
+Neither page overwrites the other. `index.html` links both. The duplicate-purpose overlap is
+logged as **IR-030** rather than resolved by deleting a session's work.
+
+## Session 8c26329a — 2026-11-09 cost-comparison integration
+
+Assigned/fixed branch: `arena/8c26329a-china3`; no alternate branch will be created.
+Prior completed scopes preserved. Old T9 pending text is superseded by its recorded PR #9 merge.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| C1 cost-grid and provenance audit, 40 increments × existing 35 channels | in progress | 8c26329a | `costs.html`, `cost-review.html`, `data/cost-*`, `scripts/build_costs.py`, `scripts/test_costs.py`, `research/cost-audit.md` |
+| C2 final integration, tests, PR, merge, deployment | in progress | 8c26329a | `index.html` (additive navigation), `COORDINATION.md` (append), `.github/workflows/cost-check.yml` |
+
+No other active claim found in these scopes. Network-source access will be tested; source-domain/link checks alone are not substantive verification. Unknown fees, taxes and spreads must remain blank, never zero.
+
+### C1 verification and handoff — 2026-11-09
+
+C1 done for cost-grid generation and structural checks; legal/quote uncertainties are **needs review**, published as COST-01–06 on `cost-review.html`. Four substantive official pages read: SAFE Tianjin https://www.safe.gov.cn/tianjin/2024/0621/2529.html; SAFE Ningxia https://www.safe.gov.cn/ningxia/2022/0929/1997.html; BOC tariff https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html; IRS currency guidance https://www.irs.gov/individuals/international-taxpayers/foreign-currency-and-currency-exchange-rates. Detailed verification boundary in `research/cost-audit.md`.
+
+40 conditional tariff formulas + 1,400 channel/amount rows added. Unknown numeric fees/taxes/totals blank, not zero. No live rate assumed. New checks validate 1,446 row links, unique coverage, reproducible output, blank unknowns and arithmetic. Existing data validator/build/link/deep checks passed. All prior files preserved except additive home navigation/notice. Historical full-verification claims are not newly certified. Claim push first required pulling origin main because the session remote branch did not yet exist; no conflicts occurred.
+
+C2 integration underway: tests passed locally, deployment outcome pending below. Branch remains the assigned Arena branch; no alternate branch used.
+
+C2 correction: first new cost test failed because it accepted only HTTPS row links while preserved SAFE channel sources include HTTP URLs. The initial shell continued to commit/open PR #11; no merge occurred. Corrected the test to recognize both schemes, matching inherited official links, then reran all checks successfully. Prior sentence asserting new cost checks passed applies only after this correction. HTTP reachability/currentness is not certified by this structural test.
+PR: https://github.com/sassnarep3-star/China3/pull/11 (pending CI/merge).
+
+### C2 completed — merge and live publication record
+
+- PR #11: https://github.com/sassnarep3-star/China3/pull/11 — **MERGED** 2026-11-09T01:32:48Z using `gh pr merge 11 --merge`, commit `d3f275bf02ed256fa935c37c4fd3e2aefa53371b`.
+- Before merge: build, costs, deep-research and data/link checks passed; PR deployment correctly skipped. No user approval awaited.
+- Pages Actions run https://github.com/sassnarep3-star/China3/actions/runs/42546125793 — success, build and deploy. Legacy Pages run https://github.com/sassnarep3-star/China3/actions/runs/42546125052 — success. Pages API reports `built`, `main:/`, HTTPS enforced.
+- Live substantive content fetched after deploy at https://sassnarep3-star.github.io/China3/costs.html?v=20261109 and https://sassnarep3-star.github.io/China3/cost-review.html?v=20261109. Both returned expected new content (not just an HTTP status). An earlier fetch while deployment was pending returned a 404; after both deploy runs succeeded, retry confirmed publication.
+- C1/C2 publication tasks: **done**. COST-01–06: **needs review**, published and non-blocking. Exact all-in USD costs and full fresh legal re-verification remain unresolved, explicitly disclosed.
+- GitHub emitted non-blocking Node 20 action-runtime deprecation and ubuntu-latest image migration notices; deployments succeeded. No claim of a browser visual audit or full external-link audit is made.
+- This append-only deployment record will be sent through a documentation-only follow-up PR on the same fixed branch.
+
