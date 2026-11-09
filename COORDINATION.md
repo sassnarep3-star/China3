@@ -218,3 +218,76 @@ provincial SAFE branch Q&As.
 - GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
+
+<!-- session-46c03a7d -->
+## Session `arena/46c03a7d-china3` — unified dashboard, $10k–$400k cost model, full line-by-line verification
+
+Branch `arena/46c03a7d-china3`, branched from `b1dc441` (= `main` after PR #10). No other session is
+active on this branch; the three prior layers (editorial pages, `docs/` generator, `deep-*` pages)
+were all marked `done` and merged. This session is therefore also the **final integration session**
+for its own change set.
+
+### Why a fourth layer, and what it must not do
+
+Three layers already exist and repeat the same findings in three formats. Adding a fourth
+prose layer would be the exact "duplicate work" the brief warns against. So this session adds
+**only what none of the three had**:
+
+1. **A verified live FX anchor.** The 0.40 % BOC customer spread is now a *measured* number
+   (BOC published board rates, 2026-11-09) instead of "unverified, ask your bank".
+2. **An actual cost table.** $10,000 → $400,000 in $10,000 steps, per method, in USD —
+   with every fee line sourced or blank-and-flagged.
+3. **A step-by-step execution script per method**, ordered so the expensive steps are never
+   taken before the cheap eligibility check.
+4. **A unified navigation** across all four layers (integration-session privilege only).
+
+No existing page, CSV, JSON or script is modified except `index.html` (additive link block)
+and `README.md` (additive section), which are the two files the integration role owns.
+
+| ID | Task | File scope | Status | Owner |
+|----|------|------------|--------|-------|
+| U1 | Live FX anchor + measured spread, official sources | `deep-sources.html` append, `data/deep_sources.json` append, `data/sources.csv` append | done | session-46c03a7d |
+| U2 | Cost model $10k–$400k × 6 methods | `data/cost_model.json`, `data/fx_anchor.json` | done | session-46c03a7d |
+| U3 | Dashboard: landing + 6 new subpages + nav | `cost-*.html`, `assets/cost.css`, `assets/cost.js`, `index.html` (additive) | done | session-46c03a7d |
+| U4 | Line-by-line verifier for the new layer | `scripts/verify_cost.py` | done | session-46c03a7d |
+| U5 | CI job; re-run all four verifiers on the merged tree | `.github/workflows/cost-verify.yml` | done | session-46c03a7d |
+| U6 | PR → merge → Pages → this record | GitHub PR / Pages | done | session-46c03a7d |
+
+### Files touched (non-overlapping scope)
+
+- new: `cost-model.html`, `cost-methods.html`, `cost-playbook.html`, `cost-tax.html`,
+  `cost-review.html`, `cost-sources.html`, `assets/cost.css`, `assets/cost.js`,
+  `data/cost_model.json`, `data/fx_anchor.json`, `scripts/verify_cost.py`,
+  `.github/workflows/cost-verify.yml`, `COST_MODEL.md`, `SUMMARY.md`
+- additive only: `index.html` (one nav list + one card block), `README.md` (one section),
+  `COORDINATION.md` (this section), `data/deep_sources.json` + `data/sources.csv`
+  (new source rows only, nothing removed or edited)
+
+### Defects found in the existing repo (flagged, not fixed — they belong to other sessions)
+
+See `cost-review.html` §A. The two that matter most for the user's question:
+
+- **D1.** `index.html` and `methods.html` assert "**no** Chinese conversion tax — the USD 50,000
+  figure is only a *processing threshold*, not a cap". `safe.gov.cn` (Ningxia 2022) does support
+  "not a cap", but `gov.cn` 国务院令第 532 号 **Art. 52(2)** defines 境内个人 as *anyone resident in
+  China ≥ 1 year*, and **Art. 17** requires SAFE registration for individual outbound investment.
+  So for a person who is still resident in China, some transfers of savings to the U.S. are a
+  *capital-account* item, i.e. a permission problem that a bank cannot waive. The prior pages
+  present only the permissive half of that pair. Published here.
+- **D2.** `index.html` describes the salary-repatriation route as "flagging — secondary source".
+  It is not secondary: **PBOC Order [2006] No. 3 Art. 13** and **SAFE 汇发〔2020〕14号 Art. 59**
+  (quoted verbatim by SAFE Tianjin, 2024-06-21) both cover it directly.
+
+Both are recorded as `needs review` and do not block the build.
+
+### Verification performed (this session)
+
+- 27 official pages fetched in full during this session; the 12 load-bearing ones are listed on
+  `cost-sources.html` with the exact proposition each supports and what it does **not** support.
+- `scripts/verify_cost.py`: every row of every new table must carry an `https://` link on the
+  official-domain allowlist and a source id present in `data/fx_anchor.json`; every UNVERIFIED
+  cell must be blank; the arithmetic of every one of the 40 × 6 cost rows is recomputed from
+  `data/fx_anchor.json` and must match to the cent; every internal link and anchor must resolve.
+- Existing verifiers re-run unchanged on the merged tree: `validate_data.py` (0 warnings),
+  `check_links.py` (all links), `verify_deep.py` (PASS), `verify_cost.py` (PASS).
+- `docs/` staleness check re-run (`build_site.py` + `git diff --quiet -- docs`).
