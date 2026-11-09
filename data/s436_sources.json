@@ -1,0 +1,326 @@
+[
+  {
+    "source_id": "S436-01",
+    "title": "BOC USD/CNY exchange-rate board",
+    "issuer": "Bank of China",
+    "official_source_url": "https://www.boc.cn/sourcedb/whpj/enindex_1619.html",
+    "verification_status": "verified",
+    "notes": "Board read 2026-11-09 09:29:12: USD spot ask 6.6924, bid 6.6643, middle 6.7188 CNY/USD.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-02",
+    "title": "Personal e-banking outward remittance tariff",
+    "issuer": "Bank of China",
+    "official_source_url": "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html",
+    "verification_status": "verified",
+    "notes": "1 per mille, CNY 50 minimum/CNY 260 maximum; CNY 150 cable to non-HK/Macau/Taiwan.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-03",
+    "title": "Corporate TT and full-amount-received (OUR) tariff",
+    "issuer": "Bank of China",
+    "official_source_url": "https://www.boc.cn/cbservice/bi2/201711/t20171109_10646775.html",
+    "verification_status": "verified",
+    "notes": "Corporate TT 1 per mille, CNY 50--1,000; standard US OUR USD 25, BOC NY-clearing USD 15.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-04",
+    "title": "Cross-border debit-card ATM fee adjustment",
+    "issuer": "Bank of China",
+    "official_source_url": "https://www.boc.cn/pbservice/bi2/202608/t20260811_25684907.html",
+    "verification_status": "verified",
+    "notes": "UnionPay overseas ATM: CNY 12 + 1%, cap CNY 112 per transaction; Visa/Mastercard change effective 2026-11-11.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-05",
+    "title": "Cross-border multi-currency debit-card features",
+    "issuer": "Bank of China",
+    "official_source_url": "https://www.boc.cn/bcservice/bc2/201704/t20170426_9329829.html",
+    "verification_status": "verified",
+    "notes": "Published 0% currency-conversion fee for the named card product; merchant/network rate is not published here.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-06",
+    "title": "Incoming wire fee disclosure",
+    "issuer": "Bank of China U.S.A.",
+    "official_source_url": "https://www.bocusa.com/personal-banking/remittance-exchange",
+    "verification_status": "verified",
+    "notes": "BOC U.S.A. says it charges no fee for incoming wire transfers.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-07",
+    "title": "Individual foreign-exchange administration rules",
+    "issuer": "People's Bank of China / State Council",
+    "official_source_url": "https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm",
+    "verification_status": "verified",
+    "notes": "PBOC Decree [2006] No. 3, including the foreign-individual documentation framework.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-08",
+    "title": "Foreign individual lawful RMB salary conversion Q&A",
+    "issuer": "State Administration of Foreign Exchange",
+    "official_source_url": "https://www.safe.gov.cn/tianjin/2026/0713/3088.html",
+    "verification_status": "verified",
+    "notes": "SAFE Tianjin Q&A applying Current Account Guidelines Art. 59; tax evidence is part of the bank review.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-09",
+    "title": "Tax recordal for certain outward payments",
+    "issuer": "State Taxation Administration / SAFE",
+    "official_source_url": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html",
+    "verification_status": "verified",
+    "notes": "STA/SAFE Announcement [2013] No. 40, including foreign-individual payment categories over USD 50,000.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-10",
+    "title": "Electronic Tax Bureau recordal Q&A",
+    "issuer": "State Taxation Administration",
+    "official_source_url": "https://www.chinatax.gov.cn/chinatax/c102449/c5237521/content.html",
+    "verification_status": "verified",
+    "notes": "2021 No. 19: online recordal number and verification code replace paper presentation.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-11",
+    "title": "Capital-account administration simplification",
+    "issuer": "State Administration of Foreign Exchange",
+    "official_source_url": "https://www.safe.gov.cn/tianjin/2024/0903/2594.html",
+    "verification_status": "verified",
+    "notes": "Huifa [2014] No. 2 removed the old emigrant-property SAFE-HQ filing and staged-remittance requirement.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-12",
+    "title": "Personal property-transfer rules (2004 gazette)",
+    "issuer": "People's Bank of China",
+    "official_source_url": "https://www.pbc.gov.cn/chubanwu/114566/114579/114643/2839193/index.html",
+    "verification_status": "verified",
+    "notes": "Original 2004 property-transfer framework; read with later Huifa [2014] No. 2 amendments.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-13",
+    "title": "RMB cash at the border",
+    "issuer": "People's Bank of China",
+    "official_source_url": "https://www.pbc.gov.cn/chubanwu/114566/114579/114643/2839193/index.html",
+    "verification_status": "verified",
+    "notes": "PBOC [2004] No. 18 sets the RMB 20,000 per-person/per-trip cash limit.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-14",
+    "title": "Resident annual FX convenience amount Q&A",
+    "issuer": "State Administration of Foreign Exchange",
+    "official_source_url": "https://www.safe.gov.cn/ningxia/2022/0929/1997.html",
+    "verification_status": "verified",
+    "notes": "USD 50,000 annual convenience amount is not a universal FX ceiling; bank evidence may support other lawful transactions.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-15",
+    "title": "Foreign-exchange administration regulations",
+    "issuer": "State Council / SAFE",
+    "official_source_url": "https://www.safe.gov.cn/safe/2008/0806/5321.html",
+    "verification_status": "verified",
+    "notes": "State Council Order 532, including Arts. 39, 40, 44 and 45 administrative sanctions.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-16",
+    "title": "Illegal FX criminal thresholds",
+    "issuer": "Supreme People's Court / Supreme People's Procuratorate",
+    "official_source_url": "https://www.hncourt.gov.cn/public/detail.php?id=176932",
+    "verification_status": "verified",
+    "notes": "Fa Shi [2019] No. 1 effective 2019-02-01; RMB 5m/RMB 2.5m and profit thresholds.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-17",
+    "title": "Virtual-currency financial-activity notice",
+    "issuer": "People's Bank of China",
+    "official_source_url": "https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html",
+    "verification_status": "verified",
+    "notes": "Yinfa [2026] No. 42, effective 2026-02-06.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-18",
+    "title": "U.S. citizens abroad tax guide",
+    "issuer": "Internal Revenue Service",
+    "official_source_url": "https://www.irs.gov/publications/p54",
+    "verification_status": "verified",
+    "notes": "U.S. citizens generally report worldwide income; moving one’s own principal is not separately income.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-19",
+    "title": "Foreign-currency transaction gains",
+    "issuer": "Internal Revenue Service",
+    "official_source_url": "https://www.irs.gov/publications/p525",
+    "verification_status": "verified",
+    "notes": "Personal foreign-currency gain above USD 200 is capital gain; IRC 988 ordinary rules do not apply to personal transactions.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-20",
+    "title": "FBAR filing requirements",
+    "issuer": "Internal Revenue Service",
+    "official_source_url": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar",
+    "verification_status": "verified",
+    "notes": "FBAR required when aggregate foreign financial accounts exceed USD 10,000 at any time in a calendar year.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-21",
+    "title": "FBAR civil penalties",
+    "issuer": "eCFR",
+    "official_source_url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821",
+    "verification_status": "verified",
+    "notes": "31 CFR 1010.821 penalty table; current adjustment status must be checked in an enforcement case.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-22",
+    "title": "Form 8938 and FBAR comparison",
+    "issuer": "Internal Revenue Service",
+    "official_source_url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+    "verification_status": "verified",
+    "notes": "Form 8938 and FBAR have different thresholds and filing rules.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-23",
+    "title": "International information-reporting penalties",
+    "issuer": "Internal Revenue Service",
+    "official_source_url": "https://www.irs.gov/payments/international-information-reporting-penalties",
+    "verification_status": "verified",
+    "notes": "Form 8938 and Form 3520 penalty descriptions.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-24",
+    "title": "Foreign gifts and Form 3520",
+    "issuer": "Internal Revenue Service",
+    "official_source_url": "https://www.irs.gov/businesses/gifts-from-foreign-person",
+    "verification_status": "verified",
+    "notes": "Foreign gifts are not necessarily income, but reportability can apply above USD 100,000.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-25",
+    "title": "Foreign earned income exclusion",
+    "issuer": "Internal Revenue Service",
+    "official_source_url": "https://www.irs.gov/individuals/international-taxpayers/figuring-the-foreign-earned-income-exclusion",
+    "verification_status": "verified",
+    "notes": "Tax-year 2026 FEIE is USD 132,900; conditions apply.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-26",
+    "title": "Foreign tax credit guide",
+    "issuer": "Internal Revenue Service",
+    "official_source_url": "https://www.irs.gov/publications/p514",
+    "verification_status": "verified",
+    "notes": "Foreign tax credit is fact- and limitation-dependent; not an automatic dollar-for-dollar calculation.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-27",
+    "title": "U.S.-China income-tax treaty",
+    "issuer": "Internal Revenue Service",
+    "official_source_url": "https://www.irs.gov/pub/irs-trty/china.pdf",
+    "verification_status": "verified",
+    "notes": "Treaty text; dividend source-country limitation stated in Art. 9, subject to entitlement and facts.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-28",
+    "title": "Currency/monetary-instrument report",
+    "issuer": "eCFR",
+    "official_source_url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.340",
+    "verification_status": "verified",
+    "notes": "FinCEN Form 105 applies when more than USD 10,000 in currency/monetary instruments enters or leaves the U.S.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-29",
+    "title": "FX spread deregulation",
+    "issuer": "People's Bank of China",
+    "official_source_url": "https://www.pbc.gov.cn/zhengcehuobisi/125207/125227/125963/2810732/index.html",
+    "verification_status": "verified",
+    "notes": "PBOC Yinfa [2014] No. 188 removed the statutory retail FX-spread cap; current quotes vary.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-30",
+    "title": "CNH/CNY market report",
+    "issuer": "Hong Kong Monetary Authority",
+    "official_source_url": "https://www.hkma.gov.hk/media/eng/publication-and-research/quarterly-bulletin/qb202503/E_Half-yearly_202503.pdf",
+    "verification_status": "verified",
+    "notes": "Historical market analysis; it does not publish a personal retail conversion tariff.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-31",
+    "title": "Online FX service compliance notice",
+    "issuer": "State Administration of Foreign Exchange",
+    "official_source_url": "https://www.safe.gov.cn/guangdong/2020/0304/1668.html",
+    "verification_status": "verified",
+    "notes": "Licensed payment institutions are still subject to applicable FX authenticity and quota rules.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-32",
+    "title": "Individual income-tax rates",
+    "issuer": "State Taxation Administration",
+    "official_source_url": "https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html",
+    "verification_status": "verified",
+    "notes": "IIT Law Art. 3 rate categories; liability depends on the origin and facts of the money.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-33",
+    "title": "Bank-deposit interest temporary exemption",
+    "issuer": "State Taxation Administration Shanghai",
+    "official_source_url": "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/grsds/200810/t288953.html",
+    "verification_status": "verified",
+    "notes": "Caishui [2008] No. 132 temporary exemption for personal savings-deposit interest.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-34",
+    "title": "Foreign-individual income conversion Q&A",
+    "issuer": "State Administration of Foreign Exchange",
+    "official_source_url": "https://www.safe.gov.cn/tianjin/2024/0621/2529.html",
+    "verification_status": "verified",
+    "notes": "SAFE Q&A: tax-paid lawful remuneration is not taxed again merely when converted/remitted.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-35",
+    "title": "FATCA agreements and arrangements",
+    "issuer": "U.S. Treasury",
+    "official_source_url": "https://home.treasury.gov/policy-issues/tax-policy/foreign-account-tax-compliance-act",
+    "verification_status": "verified",
+    "notes": "Treasury FATCA country/arrangement information; reporting duties are determined by statute and filer facts.",
+    "verified_date": "2026-11-09"
+  },
+  {
+    "source_id": "S436-36",
+    "title": "Foreign cash carried out of China Q&A",
+    "issuer": "State Administration of Foreign Exchange",
+    "official_source_url": "http://www.safe.gov.cn/hebei/2019/0521/1366.html",
+    "verification_status": "verified",
+    "notes": "SAFE cash-carry explanation; obtain a bank/SAFE permit where required before travel.",
+    "verified_date": "2026-11-09"
+  }
+]
