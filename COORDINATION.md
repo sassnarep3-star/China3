@@ -257,3 +257,53 @@ prices published on the same day**:
 Measured retail cost over parity = 6.6919 ÷ 6.7188 − 1 = **0.4004%**, i.e. a customer pays
 about **4,004 USD per 1,000,000 USD** converted. This is a measurement from two official
 numbers, not an estimate, and it is reproducible from the two links on the cost page.
+
+### Session `session-1a9dec1c` — verification log (filled as work completed)
+
+**T-C2 Cost model — done.** `scripts/build_cost_model.py` is the single source of truth.
+It emits `data/cost_model.csv` (320 rows = 8 methods × 40 amounts), `data/cost_model.json`,
+`data/penalty_exposure.csv` (40 rows) and `data/reverification.csv`. It refuses to emit if
+total ≠ components, net ≠ amount − total, or the row count is wrong.
+
+Constants, all read on **2026-11-09**:
+- CFETS central parity 6.7188 — https://www.chinamoney.com.cn/chinese/bkccpr/
+- BOC USD board 现汇买入 6.6638 / 现汇卖出 6.6919 / 现钞买 6.6638 / 现钞卖 6.6919 — https://www.boc.cn/sourcedb/whpj/
+- BOC personal cross-border wire 1‰, min ¥50, max ¥260, cable ¥150 — https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html
+- BOC 中银全球智汇 1.2‰, min ¥200, max ¥1,000 — https://www.boc.cn/cbservice/bi2/201711/t20171109_10646775.html
+- BOC full-amount credit USD 15 / USD 25 — same announcement, note 2
+- FBAR 16,536 non-willful / 165,353 willful — https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821
+- Form 8938 10,000 + 50,000 — https://www.law.cornell.edu/uscode/text/26/6038D
+- Form 3520 5%/month capped 25% — https://www.law.cornell.edu/uscode/text/26/6039F
+- § 988(e) personal-transaction exclusion switches off above USD 200 — https://www.law.cornell.edu/uscode/text/26/988
+
+**Measured, not assumed:** FX margin = (6.6919 − 6.67785) ÷ 6.6919 = **0.20996 %**, where
+6.67785 is the mid of BOC's own two published numbers. Full round-trip spread 0.41991 %.
+No regulator publishes a retail spread; this session therefore measured one from two
+official prices published on the same morning rather than inventing one.
+
+Headline results: **M01 all-in $53.41 (0.534 %) at USD 10,000 → $901.09 (0.225 %) at USD
+400,000.** Willful FBAR maximum at USD 400,000 = **$200,000**, i.e. 222× the entire lawful
+conversion cost.
+
+**T-C3 Pages — done.** `cost-table.html`, `cost-steps.html`, `verification.html`,
+`assets/cost.css`. Mobile-first: every cost table collapses to stacked label/value cards
+below 760 px. NAV updated on all root pages; three cards and the costed answer added to
+`index.html`.
+
+**T-C4 Re-verification — done, and it found real defects.**
+- B01 `safe.gov.cn/guangdong/2021/0323/1994.html` (source S17) → **404**. Cited instead:
+  https://www.gov.cn/gongbao/content/2005/content_64294.htm (State Council Gazette full text).
+- B02 `boc.cn/ebanking/bi3/bi31/202312/t20231229_24338136.html` (source S49) → **404**. The
+  2024 fee promotion is not relied on anywhere.
+- B03 `irs.gov/individuals/international-taxpayers/report-of-foreign-bank-and-financial-accounts-fbar`
+  in `index.html` → **404**. Correct path is `/businesses/small-businesses-self-employed/...`.
+- H01 `china-rules.html` and `us-tax.html` each had an unclosed `<div>`; `flagged-review.html`
+  had a stray `</span>` in place of `</a>`. All **fixed**; all 30 published pages now parse
+  with balanced tags (`scripts/check_html.py`).
+
+**T-C5 CI — done.** `scripts/validate_cost_model.py` re-derives all 320 rows, checks every fee
+against the published tariff clamps, enforces that each method's basis URL is on an official
+domain, enforces that the four declared blanks are published, re-derives the penalty table,
+and pins the two headline figures so prose cannot drift from data. `scripts/check_html.py`
+checks balance, local targets and source retention. `pages.yml` now gates all 13 editorial
+pages. All six checks pass locally.
