@@ -254,3 +254,72 @@ input the reader supplies** — never an invented number.
 Shared outputs (`index.html`, `README.md`, nav blocks) are edited **only** by this session, and
 only because it is the only session with an open branch at claim time. Every other file is new,
 so a later merge cannot overwrite another session's work.
+
+### T10–T15 status: done (cost-estimate pass)
+
+| ID | Task | Status | Output |
+|----|------|--------|--------|
+| T10 | Cost-input register, official link or explicit blank | done | `data/cost_inputs.csv` (32 inputs, CI01–CI32), `data/cost_sources.csv` (39 sources) |
+| T11 | 40-step amount ladder per route | done | `data/cost_ladder.csv` (800 rows = 20 routes × 40 amounts), `data/cost_methods.csv` |
+| T12 | Step-by-step per method | done | `data/cost_steps.csv`, rendered on `cost-tables.html` |
+| T13 | Mobile-first cost page | done | `cost-tables.html`, `assets/cost.css`, `scripts/build_cost_tables.py`, `scripts/cost_engine.py` |
+| T14 | Line-by-line verifier | done | `scripts/verify_cost_tables.py`, `.github/workflows/cost-model-verify.yml` |
+| T15 | Integration + PR/merge record | done | `index.html`, `README.md`, `deep-executive-summary.html`, this file |
+
+### What this pass establishes, with the arithmetic
+
+- **Rate.** BOC board 2026-11-09 09:15:45 (`CS01`): USD 现汇买入价 666.38 and 现汇卖出价 669.19 per 100 USD.
+  Mid is their arithmetic mean, 6.677850. A customer buying USD pays the ask, so the spread cost is
+  (6.6919 − 6.67785) ÷ 6.67785 = **0.2104%** (`CI03`, `CI04`, status `derived`).
+- **Fees.** BOC tariff (`S46`): cross-border telegraphic transfer 1‰ of the amount, minimum CNY 50,
+  maximum CNY 260, plus a cable fee of CNY 150 (CNY 80 for HK/Macau/Taiwan). The 1‰ hits its cap at
+  **USD 38,853**, which is why the cost percentage falls as the amount rises.
+- **Result.** $10,000 → **$53.45** (0.535%); $400,000 → **$902.86** (0.226%). Made up of $21.04 / $841.59
+  spread and $32.42 / $61.27 fees.
+- **Comparison that matters.** A willful FBAR penalty is the greater of $165,353 or 50% of the balance
+  (`U20`), i.e. up to $200,000 on a $400,000 balance — **222×** the lawful transfer cost. A Chinese
+  penalty on an unlawful route is 30%–100% of the amount (`S07` arts. 39/40/45) — up to $400,000.
+
+### Corrections made to earlier pages (not reinterpretations)
+
+1. **`S17` is a dead link.** `https://www.safe.gov.cn/guangdong/2021/0323/1994.html` now returns SAFE's
+   404 page. Every citation of it in this pass was re-sourced to the primary text of PBC [2004] No. 16
+   (`CS04`) and cross-checked against the State Council Gazette copy (`CS05`). Logged as **IR-027**.
+2. **Emigrant transfer is staged, not single-shot.** Art. 6: one application, then at most half, half the
+   remainder after one year, the rest after two years; at or below RMB 200,000 it may go in one payment.
+   Earlier pages described a single transfer. The ladder now prices **three** purchases for balances above
+   RMB 200,000, which is why M03 costs $1,025.39 at $400,000 rather than $902.86. Logged as **IR-029**.
+3. **Art. 2 eligibility is narrower than stated.** The route is confined to property owned *before*
+   acquiring emigrant status, and art. 8 requires a police-issued 户籍注销证明 plus Chinese consular
+   certification of settlement abroad (`CI31`). A US citizen who never held mainland household
+   registration does not qualify.
+4. **The 1.94% CNH basis is withdrawn.** Attributed by the earlier register to HKMA QB 2012-03 ch. 4; on
+   re-check (chunks 0 and 4) the figure is not there. It is therefore **not used as a price**; route M10
+   shows the exact cost of each 1.00% of basis instead. Logged as **IR-026**.
+5. **ATM cash is 27 years, not 6.** The ceiling is RMB 100,000/year (`S35`), about USD 14,943 at this
+   rate, so USD 400,000 needs 27 calendar years. An earlier draft of this session's own text said 6; the
+   engine caught it before publication.
+
+### Verification performed
+
+- `scripts/verify_cost_tables.py` re-derives **all 800 ladder rows** from `data/cost_inputs.csv` using its
+  own arithmetic, so an error in `scripts/cost_engine.py` cannot certify itself. It also checks: 40 amounts
+  per route; net = amount − total; percentage = total ÷ amount; the 0.10% coefficient; unit counts;
+  hand-computed spot values for five cells written out longhand; every input's URL identical to the source
+  register; unverified inputs blank; every data row on the page carrying an official-domain link; every
+  method, input and flag id present; no dangling local link; and that the CSV/HTML artifacts are not stale.
+- Every source link is checked against an official-domain allowlist (`.gov.cn`, `.gov`, `boc.cn`,
+  `hkma.gov.hk`, `chinatax.gov.cn`, `ecfr.gov`, `federalregister.gov`, `irs.gov`, `fincen.gov`,
+  `treasury.gov`). A commercial bank explainer was **removed** from the model because it failed that test.
+- Sources re-fetched and read during this pass (marked `yes` in `data/cost_sources.csv`): CS01, CS03,
+  CS04, CS05, S01, S03, S07, S18, S23, S35, S37, S46. S50 read only in part and marked `partial`. The
+  remaining 26 are inherited from earlier registers and are marked `no` on the page rather than presented
+  as freshly verified.
+- Existing suites re-run clean on the merged tree: `validate_data.py`, `check_links.py`, `verify_deep.py`.
+
+### Flagged (published on `cost-tables.html` §6, non-blocking)
+
+IR-024 the spread is a one-day observation · IR-025 the PRC 20% is a rate, not an amount ·
+IR-026 the 1.94% CNH basis withdrawn · IR-027 `S17` dead link, rule re-sourced ·
+IR-028 the US receiving fee is genuinely unknown, so every total is China-side ·
+IR-029 the emigrant transfer is staged over two years.

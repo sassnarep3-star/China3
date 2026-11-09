@@ -1,0 +1,40 @@
+id,authority_and_title,url,rechecked_this_pass,what_it_verifies
+CS01,Bank of China — 外汇牌价 (official daily FX board),https://www.boc.cn/sourcedb/whpj/,yes,"Read 2026-11-09 09:15:45: USD 现汇买入价 666.38, 现汇卖出价 669.19, per 100 USD."
+CS03,U.S. Customs and Border Protection — Money and Other Monetary Instruments,https://www.cbp.gov/travel/international-visitors/money-monetary-instruments,yes,"FinCEN Form 105 above USD 10,000, group total, seizure and 31 U.S.C. 5321/5322 exposure."
+CS04,PBOC Announcement [2004] No. 16 — 个人财产对外转移售付汇管理暂行办法 (SAFE text),http://m.safe.gov.cn/safe/2004/1116/5461.html,yes,"Full text read: arts. 2, 6, 8, 10, 11, 13."
+CS05,State Council Gazette 2005 No. 22 — same measure (independent official copy),https://www.gov.cn/gongbao/content/2005/content_64294.htm,yes,Used to cross-check arts. 6 and 10 of CS04; wording agrees.
+S01,SAFE Ningxia — 2022 外汇业务政策释疑（八）,https://www.safe.gov.cn/ningxia/2022/0929/1997.html,yes,"USD 50,000 convenience amount is not a ceiling and not a tax; arts. 54–57 of the 2020 current-account guidelines."
+S03,SAFE Tianjin — 2024 经常项目外汇政策问答案例（九）,https://www.safe.gov.cn/tianjin/2024/0621/2529.html,yes,境外个人 buys FX with ID plus source-of-funds evidence including tax evidence; the annual convenience amount applies to 境外个人 holding a foreigner permanent-residence ID.
+S04,SAFE Tianjin — 个人外汇管理办法实施细则,https://www.safe.gov.cn/tianjin/2024/0430/2464.html,no,Inherited from the earlier register; not re-fetched in this pass.
+S07,State Council Order No. 532 — 中华人民共和国外汇管理条例,https://www.safe.gov.cn/safe/2008/0806/5321.html,yes,"Arts. 12, 39, 40, 42, 44, 45 and the art. 52 definitions read in full."
+S09,SAFE — 个人购汇申请书及填报说明（六不得）,https://www.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf,no,Inherited; not re-fetched.
+S11,SAFE Tianjin — 2025 个人外汇（八）关注名单,https://www.safe.gov.cn/tianjin/2025/0613/2811.html,no,Inherited; not re-fetched.
+S14,SAFE Hebei — 七起个人分拆结售汇案,https://www.safe.gov.cn/hebei/2016/0328/615.html,no,Inherited; not re-fetched.
+S18,SAFE — 就《个人财产对外转移售付汇管理暂行办法》答记者问,http://m.safe.gov.cn/safe/2004/1116/4134.html,yes,"Confirms the RMB 500,000 approval split and the RMB 200,000 one-payment threshold."
+S19,SAFE — 汇发〔2017〕3号,https://www.safe.gov.cn/safe/2017/0126/12679.html,no,Inherited; not re-fetched.
+S20,SAFE Shanghai — 汇发〔2017〕3号 答记者问（利润汇出）,https://www.safe.gov.cn/shanghai/2017/0126/76.html,no,Inherited; not re-fetched.
+S21,STA + SAFE Announcement 2013 No. 40 — 对外支付税务备案,https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html,no,Inherited; not re-fetched.
+S23,State Taxation Administration — 中华人民共和国个人所得税法,https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html,yes,"Art. 3 read in full: comprehensive 3%–45%, business 5%–35%, interest/dividends/rent/property-transfer/incidental 20%."
+S24,STA Shanghai — 财税〔2008〕132号 储蓄存款利息暂免征收个人所得税,https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/grsds/200810/t288953.html,no,Inherited; not re-fetched.
+S27,PBOC — 2014年中国货币政策大事记（取消挂牌买卖价差管理）,https://www.pbc.gov.cn/zhengcehuobisi/125207/125227/125963/2810732/index.html,no,Inherited; this is the basis for saying the retail spread is market-set.
+S29,PBOC + 8 agencies — 银发〔2026〕42号 (virtual currency),https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html,no,Inherited; not re-fetched.
+S32,Supreme People's Court — 法释〔2019〕1号 非法买卖外汇解释,http://www.hunan.gov.cn/zqt/zcsd/201901/t20190131_13641628.html,no,Inherited; not re-fetched.
+S34,Xuchang Intermediate People's Court — 刑法第225条 非法经营罪,https://xczy.hncourt.gov.cn/public/detail.php?id=2739,no,Inherited; not re-fetched.
+S35,SAFE Hubei — 汇发〔2017〕29号 规范银行卡境外大额提取现金交易,https://www.safe.gov.cn/hubei/2019/0305/851.html,yes,"Art. 1: RMB 100,000 per natural year, all cards; art. 4: RMB 10,000 per card per day; breach suspends the facility for this and the next year."
+S35b,SAFE Hebei — 规范银行卡境外大额提取现金交易 答记者问,https://www.safe.gov.cn/hebei/2018/0409/1010.html,no,Inherited; not re-fetched.
+S37,SAFE — 汇发〔2003〕102号 携带外币现钞出入境管理暂行办法,https://www.safe.gov.cn/big5/big5/www.safe.gov.cn/tianjin/2024/0430/2466.html,yes,"USD 5,000 free of permit; USD 5,000–10,000 needs a 携带证; above USD 10,000 not permitted in principle."
+S38,PBOC — 关于进一步优化跨境人民币政策,https://www.pbc.gov.cn/tiaofasi/144941/3581332/4158143/index.html,no,Inherited; not re-fetched.
+S39,PBOC Guangzhou — 跨境理财通实施细则问题解答,https://guangzhou.pbc.gov.cn/guangzhou/129196/4332364/4332374/4343888/index.html,no,Inherited; not re-fetched.
+S40,Guangdong Financial Supervision Administration — 跨境理财通解读,http://gdjr.gd.gov.cn/gdjr/zwgk/jrzcfg/content/post_3520533.html,no,Inherited; not re-fetched.
+S41,SAFE Tianjin — QDII 账户开立、使用和关闭,http://www.safe.gov.cn/tianjin/2019/0214/1098.html,no,Inherited; not re-fetched.
+S43,SAFE Chongqing — 常见外汇业务答疑手册,https://www.safe.gov.cn/chongqing/file/file/20190311/87806e211bb74eb4a44e71395c31cda9.pdf,no,Inherited; carries the statement that foreign-individual FX purchase has no annual quota.
+S46,Bank of China — 电子银行个人服务转账汇款费率表,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,yes,"Read in full: 跨境汇款（电汇）1‰, min CNY 50, max CNY 260, cable CNY 80 HK/Macau/Taiwan or CNY 150 elsewhere."
+S50,"HKMA — Quarterly Bulletin 2012-03, ch. 4",https://www.hkma.gov.hk/media/eng/publication-and-research/quarterly-bulletin/qb201203/chapter4.pdf,partial,"Chunks 0 and 4 read; the 1.94% CNH figure the earlier register attributes to it was NOT located, so it is not used as a price."
+S53,SAFE Inner Mongolia — 个人外汇管理政策及常见问题解答,https://www.safe.gov.cn/neimenggu/file/file/20200228/fa90770027ed4d919de981c09bc25751.pdf,no,Inherited; not re-fetched.
+S56,CSRC Shanxi — 虚拟货币 境内严禁、境外严管 (2026),https://www.csrc.gov.cn/shanxi/c106408/c7616553/content.shtml,no,Inherited; not re-fetched.
+U02,"IRS — Publication 54, Tax Guide for U.S. Citizens Abroad",https://www.irs.gov/publications/p54,no,Inherited; not re-fetched.
+U05,"IRS — Publication 514, Foreign Tax Credit",https://www.irs.gov/publications/p514,no,Inherited; not re-fetched.
+U06,IRS — Comparison of Form 8938 and FBAR requirements,https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements,no,Inherited; not re-fetched.
+U09,IRS — Gifts from foreign person (Form 3520),https://www.irs.gov/businesses/gifts-from-foreign-person,no,Inherited; not re-fetched.
+U16,IRS — US–PRC Income Tax Convention (1984),https://www.irs.gov/pub/irs-trty/china.pdf,no,Inherited; not re-fetched.
+U20,eCFR — 31 CFR 1010.821 (penalty table),https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821,no,Inherited; carries the FBAR willful ceiling.
