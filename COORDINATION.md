@@ -251,3 +251,17 @@ PR: https://github.com/sassnarep3-star/China3/pull/11 (pending CI/merge).
 - C1/C2 publication tasks: **done**. COST-01–06: **needs review**, published and non-blocking. Exact all-in USD costs and full fresh legal re-verification remain unresolved, explicitly disclosed.
 - GitHub emitted non-blocking Node 20 action-runtime deprecation and ubuntu-latest image migration notices; deployments succeeded. No claim of a browser visual audit or full external-link audit is made.
 - This append-only deployment record will be sent through a documentation-only follow-up PR on the same fixed branch.
+
+## Session `arena/2eb1c590-china3` — final integration (cost table already on `main`)
+
+Branch: `arena/2eb1c590-china3`, now based on `origin/main` (1ed4f55). The cost table requirement ($10,000–$400,000 in $10,000 increments, mobile-friendly, verified-only values) is satisfied on `main` by session `arena/8c26329a-china3` (`costs.html`, `data/cost-grid.csv`, COST-01–06 on `cost-review.html`), merged via PR #11 and deployed to Pages. This session's duplicate cost files were deliberately not added to avoid duplicate work on a claimed task. This session performs final integration: verification of the combined tree, PR, merge, Pages confirmation, and this record.
+
+| ID | Task | File scope | Status | Owner | Notes |
+| CM-1 | Cost table — satisfied by `main` cost dashboard (session 8c26329a) | `costs.html`, `data/cost-grid.csv`, `cost-review.html` | done | 8c26329a / arena/2eb1c590-china3 | Already merged via PR #11; not duplicated here |
+| CM-2 | Verification of combined tree | scripts + data + deep pages | done | arena/2eb1c590-china3 | validate_data.py, verify_deep.py, check_links.py pass on merged tree |
+| CM-3 | PR from integration branch to main, merge, confirm GitHub Pages deploys, record here | GitHub | in progress | arena/2eb1c590-china3 | PR #13; merge pending |
+
+## Log (session `arena/2eb1c590-china3`)
+
+- 2026-11-09: Session 8c26329a merged cost dashboard (PR #11) and deployed to Pages; site live at https://sassnarep3-star.github.io/China3/ including costs.html and cost-review.html.
+- 2026-11-09: Session arena/2eb1c590-china3 rebased onto origin/main, removed its own duplicate cost files, verified combined tree (validate_data.py / verify_deep.py / check_links.py all pass), appended this integration record, and opened PR #13 for final integration.
