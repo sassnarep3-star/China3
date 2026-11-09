@@ -241,3 +241,13 @@ C2 integration underway: tests passed locally, deployment outcome pending below.
 
 C2 correction: first new cost test failed because it accepted only HTTPS row links while preserved SAFE channel sources include HTTP URLs. The initial shell continued to commit/open PR #11; no merge occurred. Corrected the test to recognize both schemes, matching inherited official links, then reran all checks successfully. Prior sentence asserting new cost checks passed applies only after this correction. HTTP reachability/currentness is not certified by this structural test.
 PR: https://github.com/sassnarep3-star/China3/pull/11 (pending CI/merge).
+
+### C2 completed — merge and live publication record
+
+- PR #11: https://github.com/sassnarep3-star/China3/pull/11 — **MERGED** 2026-11-09T01:32:48Z using `gh pr merge 11 --merge`, commit `d3f275bf02ed256fa935c37c4fd3e2aefa53371b`.
+- Before merge: build, costs, deep-research and data/link checks passed; PR deployment correctly skipped. No user approval awaited.
+- Pages Actions run https://github.com/sassnarep3-star/China3/actions/runs/42546125793 — success, build and deploy. Legacy Pages run https://github.com/sassnarep3-star/China3/actions/runs/42546125052 — success. Pages API reports `built`, `main:/`, HTTPS enforced.
+- Live substantive content fetched after deploy at https://sassnarep3-star.github.io/China3/costs.html?v=20261109 and https://sassnarep3-star.github.io/China3/cost-review.html?v=20261109. Both returned expected new content (not just an HTTP status). An earlier fetch while deployment was pending returned a 404; after both deploy runs succeeded, retry confirmed publication.
+- C1/C2 publication tasks: **done**. COST-01–06: **needs review**, published and non-blocking. Exact all-in USD costs and full fresh legal re-verification remain unresolved, explicitly disclosed.
+- GitHub emitted non-blocking Node 20 action-runtime deprecation and ubuntu-latest image migration notices; deployments succeeded. No claim of a browser visual audit or full external-link audit is made.
+- This append-only deployment record will be sent through a documentation-only follow-up PR on the same fixed branch.
