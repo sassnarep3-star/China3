@@ -230,3 +230,11 @@ Prior completed scopes preserved. Old T9 pending text is superseded by its recor
 | C2 final integration, tests, PR, merge, deployment | in progress | 8c26329a | `index.html` (additive navigation), `COORDINATION.md` (append), `.github/workflows/cost-check.yml` |
 
 No other active claim found in these scopes. Network-source access will be tested; source-domain/link checks alone are not substantive verification. Unknown fees, taxes and spreads must remain blank, never zero.
+
+### C1 verification and handoff — 2026-11-09
+
+C1 done for cost-grid generation and structural checks; legal/quote uncertainties are **needs review**, published as COST-01–06 on `cost-review.html`. Four substantive official pages read: SAFE Tianjin https://www.safe.gov.cn/tianjin/2024/0621/2529.html; SAFE Ningxia https://www.safe.gov.cn/ningxia/2022/0929/1997.html; BOC tariff https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html; IRS currency guidance https://www.irs.gov/individuals/international-taxpayers/foreign-currency-and-currency-exchange-rates. Detailed verification boundary in `research/cost-audit.md`.
+
+40 conditional tariff formulas + 1,400 channel/amount rows added. Unknown numeric fees/taxes/totals blank, not zero. No live rate assumed. New checks validate 1,446 row links, unique coverage, reproducible output, blank unknowns and arithmetic. Existing data validator/build/link/deep checks passed. All prior files preserved except additive home navigation/notice. Historical full-verification claims are not newly certified. Claim push first required pulling origin main because the session remote branch did not yet exist; no conflicts occurred.
+
+C2 integration underway: tests passed locally, deployment outcome pending below. Branch remains the assigned Arena branch; no alternate branch used.
