@@ -606,6 +606,7 @@ Effective % = total ÷ USD amount × 100</div>
 <li>Not a prediction of the CNY/CNH basis: the high case uses a 2011 stress observation (<a href="{registry['C25']['url']}" target="_blank" rel="noopener">C25</a>).</li>
 <li>Not advice. Verify the rate and the documentary checklist with the specific bank branch in writing before instructing anything.</li></ul></div>
 </div>
+<p class="page-note">A second, deliberately conservative view of the same question is published at <a href="costs.html">costs.html</a> (all 35 channels × 40 increments, with numeric costs left blank where no bank quote exists) together with its own <a href="cost-review.html">verification flags</a>. This page is the computed model: same rules, but with every input dated and every assumption exposed.</p>
 <p class="page-note">Every table row carries its own source links. Rates are a 2026-11-09 snapshot. Rows labelled <em>assumption</em> are not official values and are flagged for review. This page is informational research, not legal, tax or banking advice.</p>
 </section>
 """ + FOOT.format(checked=CHECKED)
