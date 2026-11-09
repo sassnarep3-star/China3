@@ -377,6 +377,40 @@ PR: https://github.com/sassnarep3-star/China3/pull/11 (pending CI/merge).
 - This append-only deployment record will be sent through a documentation-only follow-up PR on the same fixed branch.
 
 
+
+### PR / merge / deployment record — cost-estimate pass
+
+- **PR:** https://github.com/sassnarep3-star/China3/pull/14 — `arena/7a636dce-china3` → `main`.
+- **Merge result:** **MERGED** 2026-11-09T01:38:39Z via `gh pr merge 14 --merge` without waiting for
+  approval. Merge commit `d45f16032a86c490ed94eda9933173dab4f4db0f` on `main`.
+- **Conflict resolved before merge:** `origin/main` had advanced to `1ed4f55` (PR #11 and #12 from
+  session `arena/8c26329a-china3`, which built its own `costs.html` grid on the same brief).
+  `git merge origin/main` produced two content conflicts, both resolved **additively** — no side was
+  taken and nothing was deleted:
+  - `index.html` — both sessions' navigation entries kept.
+  - `COORDINATION.md` — that session's record preserved verbatim under
+    "Parallel session `arena/8c26329a-china3` — preserved verbatim", with a table explaining how the
+    two cost pages complement each other. Logged as **IR-030**.
+- **Checks before merge (all six green):** `Verify cost tables`, `Verify cost coverage` (the other
+  session's), `Verify deep-research dashboard`, `Data contract and link check`, `build` (Pages), and
+  `deploy` correctly skipped on the pull request.
+- **Pages deployment after merge:** "Deploy static guide to GitHub Pages" run
+  https://github.com/sassnarep3-star/China3/actions/runs/42546649290 — **success**; "pages build and
+  deployment" run 42546648277 — success. All post-merge verify workflows succeeded.
+- **Live confirmation:** fetched
+  https://sassnarep3-star.github.io/China3/cost-tables.html — served the real content (hero "$53 on
+  $10,000 / $903 on $400,000", all 40 ladder rows, per-row source links), not just an HTTP status.
+  Fetched https://sassnarep3-star.github.io/China3/ — the new card and both cost-page navigation
+  entries are present.
+
+### Outstanding for the reader (not blockers)
+
+- `IR-024` the 0.2104% spread is a one-day observation; re-read the BOC board before relying on it.
+- `IR-028` every total is China-side; the US receiving and correspondent fees are blank, not zero.
+- `IR-027` and `IR-026` record where earlier sources failed re-verification.
+- The exact PRC tax amount on a property sale cannot be computed from public sources — the rate is
+  verified, the base is not (`IR-025`).
+
 ## Session `arena/2eb1c590-china3` — final integration on top of `main`
 
 Branch: `arena/2eb1c590-china3`, merged with `origin/main` (d45f160, PR #14 cost-tables pass by session `arena/7a636dce-china3`). The substantive cost-table work ($10,000–$400,000 ladder, per-route step-by-step, sourced tariffs, staged emigrant transfer) is already on `main` via `cost-tables.html`, `cost_ladder.csv`, `cost_steps.csv` and the preserved `costs.html`/`cost-review.html` pass; this session adds no duplicate cost files (overlap logged as IR-030, not resolved by deletion).
@@ -390,6 +424,8 @@ Branch: `arena/2eb1c590-china3`, merged with `origin/main` (d45f160, PR #14 cost
 
 - 2026-11-09: PR #14 (session 7a636dce) merged cost-tables to `main` and deployed to Pages; `cost-tables.html` live.
 - 2026-11-09: Session arena/2eb1c590-china3 merged `origin/main` into its branch (COORDINATION.md conflict resolved by keeping both sessions' records), verified combined tree, opened PR #13 for final integration.
+
+
 
 ---
 
