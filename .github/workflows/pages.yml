@@ -30,6 +30,10 @@ jobs:
           test -s review.html
           test -s sources.html
           test -s assets/site.css
+          test -s cost-table.html
+          test -s cost-steps.html
+          test -s verification.html
+          test -s assets/cost.css
           python3 - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
@@ -41,7 +45,10 @@ jobs:
                       href = dict(attrs).get('href', '')
                       if href and not href.startswith(('http://', 'https://', 'mailto:', 'tel:', '#')):
                           self.hrefs.append(href.split('#',1)[0])
-          pages = [Path(p) for p in ('index.html','routes.html','tax.html','review.html','sources.html')]
+          pages = [Path(p) for p in ('index.html','routes.html','tax.html','review.html',
+                                     'sources.html','cost-table.html','cost-steps.html',
+                                     'verification.html','methods.html','penalties.html',
+                                     'flagged-review.html','china-rules.html','us-tax.html')]
           missing=[]
           for page in pages:
               parser=Links(); parser.feed(page.read_text(encoding='utf-8'))
