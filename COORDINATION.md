@@ -218,3 +218,39 @@ provincial SAFE branch Q&As.
 - GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
+
+<!-- cost-model-session-v1 -->
+
+## Session `arena-7a636dce-china3` — cost-estimate pass (T10–T15)
+
+Branch: `arena/7a636dce-china3` (fixed by Arena). Started from `b1dc441` (`main` after PR #10).
+At claim time `git branch -r` showed **only** `origin/main` and this branch's base — no other
+session had an unmerged branch, and the last commit on `main` was 2026-11-07. No live claim by
+another session exists, so T10–T15 are claimed here before any file is touched.
+
+### Why this pass exists
+
+The prior passes deliberately **refused** to estimate money amounts: `README.md` states
+"Retail FX spreads and wire fees are commercial, not regulatory, and were deliberately **not**
+estimated. The calculator ships with no default rates." The brief, however, explicitly requires
+*"estimate the costs of transferring and converting CNY to USD in $10,000 USD increments all the
+way up to $400,000"*, *"actually estimate the costs for every method"* and *"tell me exactly step
+by step how it would work"*. Those three requirements were unmet. This session builds that cost
+engine without breaking the no-guess rule: every fee input is either a published tariff with an
+official link, or it is a **formula coefficient** (cost per 0.10% of spread), or it is a **user-set
+input the reader supplies** — never an invented number.
+
+### Claimed tasks
+
+| ID | Task | File scope (new files only, except where noted) | Status | Owner |
+|----|------|-----------------------------------------------|--------|-------|
+| T10 | Cost-input register: every fee/rate input with official link or explicit `blank` | `data/cost_inputs.csv`, `research/cost-model.md` | in progress | arena-7a636dce-china3 |
+| T11 | 40-row amount ladder ($10,000 → $400,000) × every method, generated | `data/cost_ladder.csv`, `data/cost_methods.csv` | in progress | arena-7a636dce-china3 |
+| T12 | Step-by-step for every method, line by line | `data/cost_steps.csv`, `cost-tables.html` | in progress | arena-7a636dce-china3 |
+| T13 | Mobile-first cost page, most-important-info-first | `cost-tables.html`, `assets/cost.css`, `scripts/build_cost_tables.py` | in progress | arena-7a636dce-china3 |
+| T14 | Line-by-line verifier (row → source → live fetch) | `scripts/verify_cost_tables.py`, `.github/workflows/cost-model-verify.yml` | in progress | arena-7a636dce-china3 |
+| T15 | Shared-file integration: nav + `index.html` card + README + PR/merge/Pages record | `index.html`, `README.md`, `COORDINATION.md` (final-integration privilege) | in progress | arena-7a636dce-china3 |
+
+Shared outputs (`index.html`, `README.md`, nav blocks) are edited **only** by this session, and
+only because it is the only session with an open branch at claim time. Every other file is new,
+so a later merge cannot overwrite another session's work.
