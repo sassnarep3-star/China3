@@ -218,3 +218,15 @@ provincial SAFE branch Q&As.
 - GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
+
+## Session 8c26329a — 2026-11-09 cost-comparison integration
+
+Assigned/fixed branch: `arena/8c26329a-china3`; no alternate branch will be created.
+Prior completed scopes preserved. Old T9 pending text is superseded by its recorded PR #9 merge.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| C1 cost-grid and provenance audit, 40 increments × existing 35 channels | in progress | 8c26329a | `costs.html`, `cost-review.html`, `data/cost-*`, `scripts/build_costs.py`, `scripts/test_costs.py`, `research/cost-audit.md` |
+| C2 final integration, tests, PR, merge, deployment | in progress | 8c26329a | `index.html` (additive navigation), `COORDINATION.md` (append), `.github/workflows/cost-check.yml` |
+
+No other active claim found in these scopes. Network-source access will be tested; source-domain/link checks alone are not substantive verification. Unknown fees, taxes and spreads must remain blank, never zero.
