@@ -238,3 +238,6 @@ C1 done for cost-grid generation and structural checks; legal/quote uncertaintie
 40 conditional tariff formulas + 1,400 channel/amount rows added. Unknown numeric fees/taxes/totals blank, not zero. No live rate assumed. New checks validate 1,446 row links, unique coverage, reproducible output, blank unknowns and arithmetic. Existing data validator/build/link/deep checks passed. All prior files preserved except additive home navigation/notice. Historical full-verification claims are not newly certified. Claim push first required pulling origin main because the session remote branch did not yet exist; no conflicts occurred.
 
 C2 integration underway: tests passed locally, deployment outcome pending below. Branch remains the assigned Arena branch; no alternate branch used.
+
+C2 correction: first new cost test failed because it accepted only HTTPS row links while preserved SAFE channel sources include HTTP URLs. The initial shell continued to commit/open PR #11; no merge occurred. Corrected the test to recognize both schemes, matching inherited official links, then reran all checks successfully. Prior sentence asserting new cost checks passed applies only after this correction. HTTP reachability/currentness is not certified by this structural test.
+PR: https://github.com/sassnarep3-star/China3/pull/11 (pending CI/merge).

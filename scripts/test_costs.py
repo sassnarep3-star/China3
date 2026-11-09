@@ -20,7 +20,7 @@ class Audit(HTMLParser):
   if tag=='tr' and self.inbody:self.inrow=True;self.link=False
   if tag=='a':
    href=a.get('href','')
-   if href.startswith('https://') and self.inrow:self.link=True
+   if href.startswith(('http://','https://')) and self.inrow:self.link=True
    if href and not href.startswith(('http:','https:','#')):assert (R/href.split('#')[0]).exists(),href
  def handle_endtag(self,tag):
   if tag=='tr' and self.inrow:assert self.link,'data row missing source';self.rows+=1;self.inrow=False
