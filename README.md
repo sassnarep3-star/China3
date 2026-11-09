@@ -130,6 +130,32 @@ python3 -m http.server 8000 --bind 0.0.0.0
 - Retail FX spreads and wire fees are commercial, not regulatory, and were deliberately **not** estimated. The calculator ships with no default rates.
 - This is research, not legal, tax or investment advice. Have a US tax adviser and a PRC-qualified adviser review the specific file before filing or applying.
 
+## S436 official-source schedule (2026-11-09 snapshot)
+
+A separately namespaced, independently verified schedule is available at
+[`schedule-dashboard.html`](schedule-dashboard.html) and is linked from the live landing page.
+It adds **16 methods × 40 USD targets ($10,000 through $400,000) = 640 rows**, 65
+source-linked compliance-first steps, 36 official sources, and 20 visible review flags.
+
+- [`schedule-cost-10k-400k.html`](schedule-cost-10k-400k.html) — mobile-first filterable cost table; the most important fields (known published cost, net after known cost and missing-cost disclosure) appear first.
+- [`schedule-methods.html`](schedule-methods.html), [`schedule-steps.html`](schedule-steps.html), and [`schedule-penalties.html`](schedule-penalties.html) — eligibility, pros/cons, procedure, tax/reporting and enforcement separation.
+- [`schedule-flagged-review.html`](schedule-flagged-review.html) — 20 inherited/current irregularities and the official source for manual review.
+- [`schedule-sources.html`](schedule-sources.html) — official source register.
+
+This schedule uses the 2026-11-09 BOC board snapshot (USD ask `6.6924`, bid `6.6643` CNY/USD), BOC's published personal wire/cable tariff, and its published standard U.S. `OUR` option (`$25`) only where the source directly supports the component. Its M01 **published-component** result is **$78.41 at a $10,000 target** and **$926.02 at a $400,000 target**; these are not personalized all-in quotes. Receiving/intermediary charges, bank/account eligibility, underlying unpaid tax, tax-return/cure cost, live alternatives and other unquoted variables are blank, never assumed to be zero. This disclosure is intentional; it also explains why snapshots from the separately maintained historical cost tables should not be silently treated as interchangeable quotes.
+
+Rebuild and verify it with no third-party dependency:
+
+```bash
+python3 scripts/build_s436_site.py
+python3 scripts/verify_s436_site.py
+```
+
+The verifier checks every amount/method combination, re-derives published formula cells,
+requires official-source domains and links, enforces blank unverified all-in amounts, verifies
+the 20 flags, and checks the generated local navigation. GitHub Actions runs the same check in
+`.github/workflows/s436-verify.yml`.
+
 ## Licence
 
 No licence was present when this work started and none was added, because choosing one is the repository owner's decision. Content is cited to its sources under those sources' own terms.

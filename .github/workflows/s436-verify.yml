@@ -1,0 +1,40 @@
+name: Verify S436 official-source CNY-to-USD schedule
+
+on:
+  push:
+    paths:
+      - 'data/s436_*'
+      - 'assets/schedule-43606a6b.*'
+      - 'schedule-*.html'
+      - 'scripts/build_s436_site.py'
+      - 'scripts/verify_s436_site.py'
+      - '.github/workflows/s436-verify.yml'
+  pull_request:
+    paths:
+      - 'data/s436_*'
+      - 'assets/schedule-43606a6b.*'
+      - 'schedule-*.html'
+      - 'scripts/build_s436_site.py'
+      - 'scripts/verify_s436_site.py'
+      - '.github/workflows/s436-verify.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-s436-schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate committed dashboard artifacts
+        run: python3 scripts/build_s436_site.py
+      - name: Require deterministic generated files
+        run: >-
+          git diff --exit-code --
+          data/s436_sources.csv data/s436_sources.json data/s436_methods.csv
+          data/s436_cost_schedule.csv data/s436_method_summary_40steps.csv data/s436_steps.csv data/s436_flags.csv
+          assets/schedule-43606a6b.css assets/schedule-43606a6b.js
+          schedule-dashboard.html schedule-cost-10k-400k.html schedule-steps.html schedule-methods.html
+          schedule-penalties.html schedule-flagged-review.html schedule-sources.html
+      - name: Verify source domain, blank-unverified rule, formulas and local navigation
+        run: python3 scripts/verify_s436_site.py

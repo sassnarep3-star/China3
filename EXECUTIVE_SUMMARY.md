@@ -139,6 +139,28 @@ controls (IR-016).
   work is all on the fixed branch, and a parallel session's board/PR/deployment record is
   preserved verbatim in `COORDINATION.md` (IR-001, IR-013).
 
+## Addendum — S436 official tariff schedule (2026-11-09)
+
+The source-bounded schedule layer added after this deep-research summary is at
+[`schedule-dashboard.html`](schedule-dashboard.html), with the full
+[`$10,000–$400,000 cost table`](schedule-cost-10k-400k.html),
+[`step-by-step playbooks`](schedule-steps.html), and
+[`Flagged for Review`](schedule-flagged-review.html). It calculates 16 methods at every
+$10,000 USD increment (640 rows) from Bank of China's timestamped official board and
+published tariffs where applicable, and leaves every unquoted or fact-dependent all-in value
+blank and marked **UNVERIFIED**.
+
+For the documented foreign-individual current-account model (M01), the snapshot uses BOC's
+USD selling rate `6.6924`, bid/ask midpoint `6.67835`, personal remittance tariff (1‰,
+`¥50–¥260`) + `¥150` cable, and the published standard U.S. `OUR` option of `$25`. The
+published-component result is `$78.41` at a `$10,000` target and `$926.02` at `$400,000`.
+These are **not** a personalized all-in quote: receiving/intermediary fees, tax arrears,
+eligibility, actual source documents and U.S. compliance/cure facts have no single official
+number and are deliberately blank. The calculation and inputs are documented in
+[`research/s436-cost-methodology.md`](research/s436-cost-methodology.md); all methods,
+limitations and official source links are in
+[`research/s436-methods-and-penalties.md`](research/s436-methods-and-penalties.md).
+
 This is informational research, not legal, tax or banking advice. No manual input was
 requested; all conclusions are conditional on case facts that were not provided (IR-014,
 IR-018).

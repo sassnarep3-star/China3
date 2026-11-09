@@ -471,6 +471,41 @@ Scope addendum (same session, new files only, no overlap with any claim): `scrip
 - **Irregularities (published on `cross-session-review.html`, status needs review, non-blocking):** X-01 spread sign error (1a9dec1c; fixed in code, still in notes) · X-02/X-03 closed (not merged) · X-04 PR #11 grid all blank · X-05 BOC full-amount fee quoted incompletely (USD 25 case omitted; corporate tariff) · X-06 editorial pages say "not a U.S. taxable event" — contradicts deep layer and §988 · X-07 §988 personal rule over-simplified · X-08 editorial cash-carry limit wrong above USD 10,000 · X-09 IR-015 closable (parity 6.7188) · X-10 IR-012 narrowable (board half-spread 0.2104%) · **X-11 no cost model quantifies the U.S. currency-gain tax (≈6.9% of USD received for CNY acquired at the 2024 IRS average)** · X-12 parallel-claim file collisions · X-13 spot below parity · X-14 BOC tariff date typed 2024 instead of 2014 (main cost_inputs.csv) · X-15 PR #15 base case charges full bid-ask on one-way purchase · X-16 PR #15 rewrites shared deep-layer table data.
 - **Process irregularity:** `git pull --rebase` on a branch that contains merge commits tried to replay other sessions' commits (flattening) and conflicted; stopped with `git rebase --abort` (no work lost; remote tip was already equal to local). Subsequent pulls use `git pull --rebase=merges`.
 - **Request (unchanged) to the final integration session:** link `cross-session-review.html` from the landing page and the Flagged-for-Review navigation; act on X-05…X-08, X-11, X-14 in the files their owners published.
+---
+
+<!-- session-43606a6b-schedule-v1 -->
+
+## Session `session-43606a6b` (`arena/43606a6b-china3`) — Repo Audit, Official Tariff & FX Cost Schedule ($10k–$400k), Step-by-Step Playbooks, Mobile-First Dashboard & Integration
+
+Branch: `arena/43606a6b-china3` (fixed by Arena session binding; logged as irregularity `S436-IR-001` because per-task branches `session-<id>/<task>` cannot be pushed under Arena's single-branch rule).
+Base commit on `main`: `b1dc441bd3a6c30e0a0d525ca611bda582c724e3` (all tasks on `main` — `P1–P6`, `T1–T16`, deep `T1–T9` — are `done`).
+
+### Parallel-branch awareness & non-overlapping file scope
+
+Before claiming, remote branches were inspected via GitHub API:
+- Stale branch (`>60 min` with no content commits): `arena/9d3903f8-china3` (last commit `2026-11-08T23:22:32Z`, `>120 min` old — documentation-only claim).
+- Active sibling branches started around `2026-11-09T01:28Z`: `arena/7a636dce-china3` (`cost-tables.html`, `data/cost_inputs.csv`, `data/cost_ladder.csv`, `data/cost_methods.csv`, `data/cost_steps.csv`), `arena/80597d10-china3` (`deep-costs.html`, `deep-cost-steps.html`, `data/cost_matrix.*`), `arena/29381f4c-china3` (`cost-estimates.html`, `data/cost_scenarios.csv`).
+- To guarantee **zero file-scope collisions** with every active or historical branch, `session-43606a6b` uses an exclusively namespaced file scope (`s436_*` / `schedule-*.html`) for all task artifacts, and touches shared navigation/index files (`index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md`) **only** additively during final integration (`S436-T8`) after merging `origin/main` without discarding any other session's work.
+
+### Claimed Tasks (`session-43606a6b`)
+
+| ID | Task | File scope (strictly disjoint) | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| S436-T1 | Line-by-line review & verification of existing repository files, data tables, and claims against official primary sources; log irregularities & stale/conflicting items | `research/s436-repo-audit.md`, `data/s436_flags.csv` | done | `session-43606a6b` | 20-item audit with SAFE/PBOC/STA/IRS/BOC official links | Existing files preserved; all 20 items are published on schedule Flagged for Review |
+| S436-T2 | Official primary-source verification of CNY→USD conversion/transfer tariffs, FX benchmarks, SAFE/PBOC/STA rules, CIPS/UnionPay/card/emigrant/non-resident channels, and US IRS/FinCEN tax & penalty rules | `research/s436-methods-and-penalties.md`, `data/s436_sources.csv`, `data/s436_sources.json`, `data/s436_methods.csv` | done | `session-43606a6b` | 36 official source-register records | Every method has official source IDs; commercial/fact-dependent figures blank + `UNVERIFIED` |
+| S436-T3 | $10,000 to $400,000 USD cost schedule (40 increments of $10,000 × every method) + exact step-by-step execution table for every method | `data/s436_cost_schedule.csv`, `data/s436_method_summary_40steps.csv`, `data/s436_steps.csv`, `research/s436-cost-methodology.md` | done | `session-43606a6b` | BOC board/tariffs, SAFE/PBOC/STA, IRS/FinCEN | 640 rows + 65 steps; formulas independently re-derived; unquoted all-in totals blank |
+| S436-T4 | Executive summary outlining all critical findings, tax-minimization hierarchy, conversion penalty breakdown, and $10k–$400k takeaways | `research/s436-executive-summary.md` | done | `session-43606a6b` | Links to official evidence register | Important facts first; no personalized eligibility/tax inference |
+| S436-T5 | Clean, mobile-friendly dashboard pages organized by category (most important info first, sticky mobile tables, filterable $10k–$400k cost estimator, step-by-step guides, pros/cons, tax/penalty breakdown, Flagged for Review, official sources) | `schedule-dashboard.html`, `schedule-cost-10k-400k.html`, `schedule-steps.html`, `schedule-methods.html`, `schedule-penalties.html`, `schedule-flagged-review.html`, `schedule-sources.html`, `assets/schedule-43606a6b.css`, `assets/schedule-43606a6b.js`, `scripts/build_s436_site.py` | done | `session-43606a6b` | 36-record official source register linked from every data row | 7 mobile-first pages, all local navigation checked |
+| S436-T6 | Automated line-by-line verification script & CI workflow checking all rows, official URLs, blank-unverified rule, HTML parity, and zero broken links across entire repo | `scripts/verify_s436_site.py`, `.github/workflows/s436-verify.yml` | done | `session-43606a6b` | `python3 scripts/verify_s436_site.py` passes | Checks 640 coverage, formulas, 20 flags, sources and local navigation; CI workflow added |
+| S436-T7 | Final integration pass: fetch/merge latest `origin/main` cleanly without discarding any session's work, add non-destructive navigation links in shared root files, re-verify entire combined site | `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md` | done | `session-43606a6b` | All listed local validators passed on combined tree | Additive links only; existing pages and data remain intact |
+| S436-T8 | Open PR (`arena/43606a6b-china3` → `main`), verify CI checks pass, merge PR without waiting for approval, confirm live GitHub Pages deployment, record PR link & merge result | GitHub PR / Pages / `COORDINATION.md` | in progress | `session-43606a6b` | PR/Actions/Pages pending | Do not merge a broken site |
+
+### S436 verification & integration log
+
+- 2026-11-09: Rebased this fixed Arena branch onto `origin/main` twice as `main` advanced, resolving only the append-only `COORDINATION.md` conflict by preserving the then-current main records and this separate `s436` claim block. No sibling page/data file was removed or overwritten.
+- 2026-11-09: Published 36 official primary/first-party source records, 16 route records, 640 (`16 × 40`) cost rows and 65 step records. Directly quoted values are limited to the timestamped BOC board, BOC tariffs and statutory schedules. Account-specific/market/provider/tax values without a verified public formula are blank and labelled `UNVERIFIED`.
+- 2026-11-09 local verification passed: `validate_data.py`, `build_site.py`, `check_links.py`, `verify_deep.py`, `test_costs.py`, `verify_cost_tables.py`, `build_s436_site.py`, `verify_s436_site.py`, and `git diff --check`. Existing cost-model HTTP-only-source notices were non-failing; no new unverified figure was filled.
+- 2026-11-09: S436-T7 additive navigation/documentation integration completed: `index.html`, `README.md` and `EXECUTIVE_SUMMARY.md` link the new dashboard and explain why historical cost snapshots are not silently interchangeable. The full combined local validation pass completed successfully; S436-T8 (PR, merge and Pages confirmation) is next.
 
 ### session-5e4816e0 — follow-up (01:5x–02:0x UTC)
 
