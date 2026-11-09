@@ -218,3 +218,40 @@ provincial SAFE branch Q&As.
 - GitHub Pages deployment: Actions run https://github.com/sassnarep3-star/China3/actions/runs/42413961692 — **success**. Pages API reports `status: built`, `build_type: legacy`, `source: main:/`, `https_enforced: true`, published at https://sassnarep3-star.github.io/China3/ .
 - Live-site confirmation: fetched https://sassnarep3-star.github.io/China3/ (landing page shows the "Deep research · integration session" category subpage section), https://sassnarep3-star.github.io/China3/deep-review.html (Flagged for Review, 23 items with official links), https://sassnarep3-star.github.io/China3/deep-sources.html (84 official sources) and https://sassnarep3-star.github.io/China3/deep-channels.html (35 channels with per-row source links). All returned live content.
 - Follow-up PR for this record: https://github.com/sassnarep3-star/China3/pull/10 (documentation-only; merged without approval).
+
+<!-- cost-estimates-session-6e903ecd -->
+
+## Session `arena-6e903ecd-china3` — per-amount cost estimates (T-COST)
+
+**Claimed:** 2026-11-09 (UTC), before any file in this scope was edited.
+
+**Task:** the one requirement the earlier passes deliberately left blank — an actual cost
+estimate for every lawful and prohibited method, at USD 10,000 increments from USD 10,000
+to USD 400,000, in mobile-friendly tables, with a step-by-step for each method.
+
+**Why it is a new task and not duplicate work:** `README.md` states that retail FX spreads
+and wire fees were "deliberately not estimated"; `data/penalties.json` leaves all five cost
+components blank. This session fills that gap with a timestamped, reproducible model built
+only from official fee schedules and statutory provisions, and flags every commercial
+parameter that is not regulator-published.
+
+**File scope (new files; no existing page rewritten):**
+`costs.html`, `cost-steps.html`, `cost-review.html`, `assets/cost.css`,
+`data/cost_model.json`, `data/cost_matrix.csv`, `scripts/build_costs.py`,
+`scripts/verify_costs.py`, `COST_ESTIMATES.md`,
+`.github/workflows/cost-verify.yml`.
+**Additive-only edits:** one navigation link + one card in `index.html`; one section appended
+to `README.md`; this append-only section here.
+
+**Coordination note:** PR #8 (`arena/5b145137-china3`) is still open and also modifies
+`index.html`, `README.md`, `COORDINATION.md`, and `.github/workflows/pages.yml`. Those are
+additive in this session and confined to a nav link/section, but a later merge of PR #8 will
+conflict on the root `index.html`; the conflict must be resolved by keeping both
+sessions' content, never by discarding either. Logged here rather than resolved in advance
+because this session cannot edit another session's branch.
+
+**Sources to be used (all official):** BOC personal e-banking fee table and FX board,
+BOC full-value notice, PBOC/CFETS central parity, SAFE/PBOC transfer rules, PRC FX
+Regulations penalties, PRC IIT Law, IRS/FinCEN FBAR and 8938 material already registered.
+
+**Status:** in progress.
