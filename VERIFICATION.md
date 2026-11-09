@@ -65,3 +65,74 @@ Tier key: **O** = official (the issuing authority), **OS** = official secondary 
 - Civil/criminal penalties for an unreported FinCEN Form 105 (I10).
 - The real-estate FX notice behind property-sale remittances (I11).
 - The exact operation of the six-year rule on the reader's own travel history (I14).
+
+---
+
+# Cost-model pass — session `arena/80597d10-china3`, 2026-11-09
+
+**Method.** Every URL in `data/cost_sources.csv` was opened on 2026-11-09 and the number
+used in the model was read from the page itself. A value appears in
+`data/cost_matrix.csv` only if it is one of the verified values below **or** an
+assumption that is labelled `assumption` in `data/cost_params.csv` and printed on the
+page. `scripts/verify_cost_matrix.py` recomputes all 520 rows independently and fails on
+any difference above USD 0.02.
+
+| ID | Tier | Page | What was read | Result |
+|----|------|------|---------------|--------|
+| C01 | O | 人民币汇率中间价 — SAFE | 2026-11-09 USD row = 671.88 per 100 USD → 6.7188 | Verified |
+| C02 | O | 中国银行外汇牌价 — BOC | 2026-11-09 09:15:45: 现汇买入 666.38, 现钞买入 666.38, 现汇卖出 669.19, 中行折算价 671.88 per 100 USD | Verified; measured bid/ask spread 0.421% |
+| C03 | O | 中国银行电子银行个人服务转账汇款费率表 — BOC | 跨境汇款（电汇）: 1‰, min CNY 50, max CNY 260 per transaction; 电讯费 CNY 80 (HK/MO/TW) or CNY 150 (elsewhere) | Verified |
+| C04 | O | 关于调整部分贸易金融服务项目的公告 — BOC | 全额到账: USD 15 per payment if the beneficiary bank holds an account at BOC New York, otherwise USD 25; US full-amount payments must be under USD 100m | Verified |
+| C05 | O | 2022年外汇业务政策释疑（八）— SAFE Ningxia | Genuine lawful current-account FX has no amount limit; the annual convenience amount is not a limit | Verified |
+| C06 | O | 2024年经常项目外汇政策问答案例（九）— SAFE Tianjin | Foreign individual purchase under Guidelines Art.59 with ID + source documents incl. tax evidence; only 外国人永久居留身份证 holders get the convenience amount | Verified |
+| C07 | O | 2021年服务贸易外汇管理问题解答（四）— SAFE Tianjin | Tax evidence = 备案表 or 完税证明 or 免税证明 | Verified |
+| C08 | O | 个人财产对外转移售付汇管理暂行办法 — State Council Gazette | Art.2 scope; Art.6 staged 50% / 50% of remainder / remainder, one-off ≤ CNY 200,000; Art.10 CNY 500,000 local vs HQ; Art.11 own account only, no cash | Verified |
+| C09 | O | 外汇管理条例（国务院令第532号）— SAFE | Art.5 no restriction on current payments/transfers; Arts.39, 40, 44, 45 fines ≤30% (serious 30%–equal value); Art.42 ≤20% for cash | Verified |
+| C10 | O | 汇发〔2017〕29号 — SAFE Hubei | CNY 100,000 per person per calendar year; CNY 10,000 per card per day; suspension for the year and the next | Verified |
+| C11 | O | 汇发〔2003〕102号 — SAFE Tianjin | ≤ USD 5,000 no permit; USD 5,000–10,000 携带证; > USD 10,000 only listed special cases with SAFE permit | Verified |
+| C12 | O | 个人所得税法 — STA | Art.3: 3%–45% comprehensive, flat 20% on interest/dividends/rent/property transfer/incidental; Art.6(5) property base | Verified |
+| C13 | O | 财税〔2008〕132号 — STA Shanghai | Savings-deposit interest exempt for interest accruing on/after 2008-10-09 | Verified |
+| C14 | O | 2014年中国货币政策大事记 — PBOC | Customer spread caps abolished from 2014-07-01 | Verified |
+| C15 | O | 中国人民银行公告〔2014〕第5号 — PBOC Xining | ±2% interbank band around the central parity (not a retail cap) | Verified |
+| C16 | O | 31 CFR 1010.821 — eCFR | Non-willful max USD 16,536; willful max USD 165,353 (on/after 2025-01-17) | Verified |
+| C17 | O | Form 8938 vs FBAR — IRS | Thresholds USD 50k/75k (single, US), 200k/300k (abroad); USD 10,000 + up to 50,000 penalty; FBAR USD 10,000 aggregate | Verified |
+| C18 | O | Gifts from foreign person — IRS | USD 100,000 threshold for Form 3520 Part IV; penalty under IRC 6039F(c) | Verified |
+| C19 | OS | 26 U.S.C. 6039F — Cornell LII | 5% per month, capped at 25%; reasonable-cause exception | Verified as text; non-.gov mirror, flagged |
+| C20 | O | Publication 525 — IRS | Personal foreign-currency transactions; USD 200 rule (also 26 USC 988(e)(2), C21) | Verified |
+| C21 | OS | 26 U.S.C. 988 — Cornell LII | §988(e)(2): no gain on a personal transaction unless it exceeds USD 200 | Verified as text; non-.gov mirror, flagged |
+| C22 | O | 七起个人分拆结售汇案 — SAFE Hebei | 7 cases, 60 people, USD 2.6929m; penalty under Art.39 | Verified |
+| C23 | O | 银发〔2026〕42号 — PBOC | Virtual-currency and stablecoin activity prohibited | Verified |
+| C24 | O | 刑法第225条 — Hunan court | Fine of 1–5× illegal gain; imprisonment increments | Verified |
+| C25 | O | HKMA Quarterly Bulletin March 2012 | 1.94% CNY/CNH disparity on 2011-09-23 | Verified; historical, used only as a stress bound |
+| C26 | O | 个人外汇管理办法 — gov.cn | 境内个人/境外个人 definitions and the personal FX framework | Verified |
+| C27 | O | Publication 54 — IRS | Worldwide income for US citizens; FEIE/FTC mechanics | Verified |
+| C28 | O | Publication 514 — IRS | FTC limited to the lesser of foreign tax and the limitation | Verified |
+| C29 | O | 2024年个人外汇（三）— SAFE Tianjin | Outward-remittance evidence rules | Verified |
+| C30 | O | Streamlined procedures (abroad) — IRS | Remediation route for prior non-willful non-filing | Verified |
+| C31 | O | FATCA information for individuals — IRS | 40% accuracy-related penalty | Verified |
+| C32 | O | 国家税务总局 国家外汇管理局公告2013年第40号 | Single outbound payment above USD 50,000 for listed current-account items requires the 备案表 | Verified |
+
+## Defects found in this pass
+
+| Item | Finding | Action |
+|---|---|---|
+| S17 (prior register) | `https://www.safe.gov.cn/guangdong/2021/0323/1994.html` returns HTTP 404 | Kept visible as **IR-024**; the rule is cited from C08/State Council Gazette instead |
+| Exchange-rate level | BOC mid 6.67785 sat 0.61% below the SAFE parity 6.7188 on 2026-11-09 | **IR-025**: the model benchmarks against the bank's own mid to isolate its charge; the level difference is market movement |
+| Four model inputs | Retail spread ceiling, document prices, ATM fees and the current CNH basis are not officially published | **IR-026**: labelled `assumption`, printed on the page, replaceable by a real quote |
+| US receiving fee | Not confirmed from a US bank tariff in this pass | **IR-027**: covered by the BOC full-amount option; otherwise unknown |
+| Emigrant staging | 50/25/25 over two years is a rule, not a choice | **IR-028**: three tranches modelled above CNY 200,000 |
+| ATM ceiling | CNY 100,000/year ≈ USD 14,883 | **IR-029**: years-to-complete shown per row |
+| Cash ceiling | > USD 10,000 per trip needs a permit limited to special cases | **IR-030**: 40 trips shown but travel/risk excluded |
+| Gift character | PRC treatment of a received gift is fact-dependent | **IR-031**: left conditional |
+
+## Commands run
+
+```sh
+python3 scripts/build_cost_matrix.py     # 520 rows + 2 pages
+python3 scripts/verify_cost_matrix.py    # independent recomputation, 0 failures
+python3 scripts/build_deep_site.py       # 87 sources, 31 flags
+python3 scripts/verify_deep.py           # 948 deep-page rows, all with official links
+python3 scripts/validate_data.py         # data contract
+python3 scripts/build_site.py            # docs/ dashboard
+python3 scripts/check_links.py           # links + anchors
+```

@@ -32,6 +32,20 @@ jobs:
             exit 1
           fi
 
+      - name: Build the cost model
+        run: python3 scripts/build_cost_matrix.py
+
+      - name: Verify the cost model line by line
+        run: python3 scripts/verify_cost_matrix.py
+
+      - name: Check the cost model is not stale
+        run: |
+          if ! git diff --quiet -- data/cost_matrix.csv data/cost_params.csv data/cost_methods.csv data/cost_penalty.csv data/cost_tax.csv deep-costs.html deep-cost-steps.html; then
+            echo "::error::cost-model outputs are out of date with scripts/build_cost_matrix.py"
+            git diff --stat
+            exit 1
+          fi
+
       - name: Check internal links and anchors
         run: python3 scripts/check_links.py
 

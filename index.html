@@ -21,6 +21,8 @@
 <div class="wrap">
 <nav>
   <a href="index.html" class="active">Home</a>
+  <a href="deep-costs.html"><strong>Cost model (10k→400k)</strong></a>
+  <a href="deep-cost-steps.html">Step-by-step</a>
   <a href="methods.html">CNY → USD methods</a>
   <a href="china-rules.html">China FX rules</a>
   <a href="us-tax.html">U.S. tax &amp; reporting</a>
@@ -67,6 +69,35 @@
     <li><strong>Use the narrowest lawful path that matches the facts.</strong> For eligible current-account needs above the convenience amount, provide actual transaction evidence rather than splitting amounts.</li>
     <li><strong>Keep U.S. filings separate from China transfer approval.</strong> Check FBAR/Form 8938 thresholds and whether the original income or account interest was properly reported with a qualified cross-border tax professional.</li>
   </ol>
+</section>
+
+
+<!-- ============ Cost model (integration session, 2026-11-09) ============ -->
+<section class="section">
+  <h2>What it costs, at every USD 10,000 step</h2>
+  <p>The requirement list asks for the cost of converting CNY to USD in USD 10,000 increments from 10,000 to 400,000, for every route. That model now exists: 40 amount steps × 13 routes, each input dated and sourced, each assumption labelled. On the primary lawful route (foreign individual, documented current-account income, one wire) the arithmetic gives:</p>
+  <table class="data">
+    <thead><tr><th>Amount</th><th>All-in cost (base)</th><th>Effective %</th><th>Willful FBAR maximum at that balance</th><th class="source">Source</th></tr></thead>
+    <tbody>
+      <tr><td><strong>USD 10,000</strong></td><td>USD 99</td><td>0.995%</td><td>USD 165,353</td><td class="source"><span class="src">BOC tariff <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">boc.cn</a>; SAFE mid-rate <a href="https://www.safe.gov.cn/safe/rmbhlzjj/index.html" target="_blank" rel="noopener">safe.gov.cn</a>; FBAR <a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">eCFR</a></span></td></tr>
+      <tr><td><strong>USD 100,000</strong></td><td>USD 507</td><td>0.507%</td><td>USD 165,353</td><td class="source"><span class="src">BOC tariff <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">boc.cn</a>; SAFE mid-rate <a href="https://www.safe.gov.cn/safe/rmbhlzjj/index.html" target="_blank" rel="noopener">safe.gov.cn</a>; FBAR <a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">eCFR</a></span></td></tr>
+      <tr><td><strong>USD 200,000</strong></td><td>USD 928</td><td>0.464%</td><td>USD 165,353</td><td class="source"><span class="src">BOC tariff <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">boc.cn</a>; SAFE mid-rate <a href="https://www.safe.gov.cn/safe/rmbhlzjj/index.html" target="_blank" rel="noopener">safe.gov.cn</a>; FBAR <a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">eCFR</a></span></td></tr>
+      <tr><td><strong>USD 400,000</strong></td><td>USD 1,769</td><td>0.442%</td><td>USD 200,000</td><td class="source"><span class="src">BOC tariff <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">boc.cn</a>; SAFE mid-rate <a href="https://www.safe.gov.cn/safe/rmbhlzjj/index.html" target="_blank" rel="noopener">safe.gov.cn</a>; FBAR <a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">eCFR</a></span></td></tr>
+    </tbody>
+  </table>
+  <p class="small">The percentage <em>falls</em> as the amount rises because the wire fee is capped at CNY 260. Compare it with 30%–100% of the amount for an unlawful route, and with a willful FBAR penalty of the greater of USD 165,353 or 50% of the balance. Tax depends on what created the money, not on the amount converted.</p>
+  <div class="grid">
+    <div class="card" style="border:2px solid #0f766e;">
+      <h3>Cost model — all 40 steps <span class="badge badge-ok">newest</span></h3>
+      <p>Every lawful, conditional and prohibited route priced at USD 10,000, 20,000 … 400,000, with the penalty matrix, the tax layers, and every assumption exposed.</p>
+      <a class="btn" href="deep-costs.html">Open the cost model</a>
+    </div>
+    <div class="card">
+      <h3>Step-by-step execution</h3>
+      <p>The documents, the office and the order of operations for each route — from the account classification question to the US filings.</p>
+      <a class="btn" href="deep-cost-steps.html">Open the playbook</a>
+    </div>
+  </div>
 </section>
 
 <!-- ============ Category grid (current session) ============ -->

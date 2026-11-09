@@ -25,6 +25,38 @@ Full reasoning: the editorial guide (`/index.html`) and the dashboard's **Playbo
 
 ---
 
+## What it costs, at every USD 10,000 step
+
+The brief asks for the cost at every USD 10,000 step from 10,000 to 400,000, for every
+method. That is now computed, not estimated by hand:
+[`deep-costs.html`](https://sassnarep3-star.github.io/China3/deep-costs.html) holds
+**40 amount steps × 13 routes = 520 rows**, plus a 40-row penalty matrix, with every input
+listed and each assumption labelled.
+
+| Amount | All-in cost, primary lawful route | Effective % | Willful FBAR maximum at that balance |
+|---|---|---|---|
+| USD 10,000 | USD 99 | 0.995% | USD 165,353 |
+| USD 100,000 | USD 507 | 0.507% | USD 165,353 |
+| USD 400,000 | USD 1,769 | 0.442% | USD 200,000 |
+
+The percentage falls as the amount rises because the wire fee is capped at CNY 260. The
+arithmetic uses the measured BOC bid/ask spread on 2026-11-09 (0.42%), the published BOC
+personal wire tariff (1‰, CNY 50–260, plus CNY 150 cable) and the USD 25 full-amount
+guarantee. The high case is 1.00% spread plus documents; the low case is half the measured
+spread plus the wire fee. Unlawful routes are priced at the statutory fine: 30%–100% of the
+amount plus confiscation.
+
+```sh
+python3 scripts/build_cost_matrix.py    # recompute the 520 rows and both pages
+python3 scripts/verify_cost_matrix.py   # independent recomputation; fails on any mismatch
+```
+
+Step-by-step execution for each route: `deep-cost-steps.html`. The assumptions that are not
+official numbers — 1.00% high spread, USD 0–500 documents, USD 5 per ATM withdrawal, 0.50%
+base offshore basis — are flagged as IR-026.
+
+---
+
 ## The site
 
 One Pages deployment, two complementary layers:
@@ -33,7 +65,9 @@ One Pages deployment, two complementary layers:
 
 | Page | Content |
 |---|---|
-| `index.html` | Landing page, executive brief, recommended sequence |
+| `index.html` | Landing page, executive brief, recommended sequence, cost summary |
+| `deep-costs.html` | 40 amount steps × 13 routes, penalty matrix, tax layers, every input and assumption |
+| `deep-cost-steps.html` | Step-by-step execution (documents, office, order) for every lawful route |
 | `routes.html` | 8 documented transfer routes compared |
 | `methods.html` | 11 CNY→USD methods with pros, cons, cost, US impact |
 | `china-rules.html` | SAFE/PBOC quotas, documentation, cash limits, penalties |
@@ -69,6 +103,10 @@ The dashboard makes no runtime network calls: `docs/assets/data.js` is generated
 | `data/taxes.json` | 25 tax items split US / PRC / treaty |
 | `data/penalties.json` | Five cost layers, 15 provisions, cost model, scenarios |
 | `data/flagged.json` | 19 items that are blank, ambiguous, or depend on the reader's facts |
+| `data/cost_matrix.csv` | 520 computed rows: amount × route × low/base/high, with source ids |
+| `data/cost_params.csv`, `data/cost_sources.csv` | Every model input, its status (verified / assumption) and its official URL |
+| `scripts/build_cost_matrix.py` | Computes the rows and renders both cost pages |
+| `scripts/verify_cost_matrix.py` | Recomputes all 520 rows independently and audits the pages |
 | `scripts/validate_data.py` | Enforces the "official source or explicit flag" contract |
 | `scripts/check_links.py` | Links, anchors, URL hygiene, bundle freshness |
 | `scripts/build_site.py` | Builds `docs/`, refusing to build on a contract violation |
