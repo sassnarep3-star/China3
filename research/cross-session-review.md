@@ -2,7 +2,7 @@
 
 Page: [`cross-session-review.html`](../cross-session-review.html) ·
 Data: [`data/reference_inputs.csv`](../data/reference_inputs.csv) (29 official inputs),
-[`data/cross_session_findings.csv`](../data/cross_session_findings.csv) (13 findings),
+[`data/cross_session_findings.csv`](../data/cross_session_findings.csv) (16 findings),
 [`data/reference_check_values.csv`](../data/reference_check_values.csv) (40 rows, generated) ·
 Generator + contract check: [`scripts/build_cross_session_review.py`](../scripts/build_cross_session_review.py)
 
@@ -56,7 +56,7 @@ the "considerable amount of taxes" in the brief. The tax on it is left blank: wh
 excluded (personal, ≤ USD 200), capital, or ordinary (§988, if the deposit is a §212 investment)
 depends on facts not supplied.
 
-## Findings (X-01 … X-13)
+## Findings (X-01 … X-16)
 
 See the table on the page / CSV. High-severity items: X-01 (spread sign error, 1a9dec1c),
 X-06 (editorial pages state "not a U.S. taxable event" as fact, contradicting the deep layer and §988),
@@ -73,3 +73,11 @@ X-11 (FX-gain tax missing from every cost model), X-12 (file-name collisions bet
   still pass with the new files present.
 
 Not legal, tax or banking advice.
+
+## Re-check log
+
+- 01:4x UTC: `origin/main` advanced to `d45f160` (PR #12, #14 merged). `main`'s `cost-tables.html`
+  (7a636dce) reproduces the reference check values to the cent (USD 53.45 at USD 10,000) — only the tariff
+  date is mistyped as 2024-11-01 (X-14). 1a9dec1c fixed its spread sign in code (X-01 downgraded).
+  New findings X-15 (80597d10 base case charges the full bid-ask spread on a one-way purchase) and
+  X-16 (PR #15 rewrites shared deep-layer table data).

@@ -96,6 +96,9 @@ def build() -> tuple[str, str, list[str]]:
                 errors.append(f"{r['id']}: UNVERIFIED row must have a blank value")
         elif not r["verbatim_excerpt"].strip():
             errors.append(f"{r['id']}: verified row without verbatim excerpt")
+    for row in inputs + findings:
+        if None in row or any(v is None for v in row.values()):
+            errors.append(f"{row.get('id')}: malformed CSV row (column count mismatch)")
     for f in findings:
         if not f["evidence_url"].startswith(("https://", "http://")):
             errors.append(f"{f['id']}: finding without evidence URL")
