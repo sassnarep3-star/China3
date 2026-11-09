@@ -1,8 +1,8 @@
 # Cross-session reconciliation review — session-5e4816e0 (2026-11-09)
 
 Page: [`cross-session-review.html`](../cross-session-review.html) ·
-Data: [`data/reference_inputs.csv`](../data/reference_inputs.csv) (29 official inputs),
-[`data/cross_session_findings.csv`](../data/cross_session_findings.csv) (16 findings),
+Data: [`data/reference_inputs.csv`](../data/reference_inputs.csv) (32 official inputs),
+[`data/cross_session_findings.csv`](../data/cross_session_findings.csv) (17 findings),
 [`data/reference_check_values.csv`](../data/reference_check_values.csv) (40 rows, generated) ·
 Generator + contract check: [`scripts/build_cross_session_review.py`](../scripts/build_cross_session_review.py)
 
@@ -56,7 +56,7 @@ the "considerable amount of taxes" in the brief. The tax on it is left blank: wh
 excluded (personal, ≤ USD 200), capital, or ordinary (§988, if the deposit is a §212 investment)
 depends on facts not supplied.
 
-## Findings (X-01 … X-16)
+## Findings (X-01 … X-17)
 
 See the table on the page / CSV. High-severity items: X-01 (spread sign error, 1a9dec1c),
 X-06 (editorial pages state "not a U.S. taxable event" as fact, contradicting the deep layer and §988),
@@ -83,3 +83,7 @@ Not legal, tax or banking advice.
   X-16 (PR #15 rewrites shared deep-layer table data).
 - 01:5x UTC: PR #13 (2eb1c590) merged only a COORDINATION.md record — its own `cost-model.md` /
   `cost_model.csv` were not merged, so X-02 and X-03 are closed as "content not merged".
+- 01:5x UTC: reviewed open PR #18 (1a9dec1c): totals agree with the reference values within the
+  margin-divisor convention; emigrant route priced as one wire although PBOC [2004] No. 16 Art. 6
+  (fetched: http://m.safe.gov.cn/safe/2004/1116/5461.html) stages payouts above CNY 200,000 over two
+  years → X-17. Added R30–R32 (Art. 6 staging, Art. 2/6 inheritance by foreign citizens, Art. 10 approval level).
