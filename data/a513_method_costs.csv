@@ -1,0 +1,401 @@
+method_id,method,amount_usd,total_usd,pct,note,status,source_ids
+M01,Personal bank wire (SWIFT) through BOC e-banking,10000,53.38,0.5338,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,20000,84.32,0.4216,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,30000,115.26,0.3842,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,40000,145.10,0.3627,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,50000,166.04,0.3321,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,60000,186.98,0.3116,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,70000,207.93,0.2970,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,80000,228.87,0.2861,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,90000,249.81,0.2776,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,100000,270.75,0.2708,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,110000,291.69,0.2652,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,120000,312.64,0.2605,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,130000,333.58,0.2566,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,140000,354.52,0.2532,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,150000,375.46,0.2503,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,160000,396.40,0.2478,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,170000,417.35,0.2455,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,180000,438.29,0.2435,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,190000,459.23,0.2417,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,200000,480.17,0.2401,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,210000,501.11,0.2386,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,220000,522.06,0.2373,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,230000,543.00,0.2361,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,240000,563.94,0.2350,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,250000,584.88,0.2340,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,260000,605.82,0.2330,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,270000,626.77,0.2321,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,280000,647.71,0.2313,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,290000,668.65,0.2306,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,300000,689.59,0.2299,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,310000,710.54,0.2292,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,320000,731.48,0.2286,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,330000,752.42,0.2280,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,340000,773.36,0.2275,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,350000,794.30,0.2269,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,360000,815.25,0.2265,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,370000,836.19,0.2260,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,380000,857.13,0.2256,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,390000,878.07,0.2251,,,V01;V02;V04
+M01,Personal bank wire (SWIFT) through BOC e-banking,400000,899.01,0.2248,,,V01;V02;V04
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),10000,78.38,0.7838,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),20000,109.32,0.5466,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),30000,140.26,0.4675,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),40000,170.10,0.4252,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),50000,191.04,0.3821,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),60000,211.98,0.3533,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),70000,232.93,0.3328,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),80000,253.87,0.3173,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),90000,274.81,0.3053,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),100000,295.75,0.2958,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),110000,316.69,0.2879,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),120000,337.64,0.2814,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),130000,358.58,0.2758,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),140000,379.52,0.2711,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),150000,400.46,0.2670,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),160000,421.40,0.2634,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),170000,442.35,0.2602,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),180000,463.29,0.2574,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),190000,484.23,0.2549,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),200000,505.17,0.2526,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),210000,526.11,0.2505,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),220000,547.06,0.2487,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),230000,568.00,0.2470,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),240000,588.94,0.2454,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),250000,609.88,0.2440,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),260000,630.82,0.2426,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),270000,651.77,0.2414,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),280000,672.71,0.2403,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),290000,693.65,0.2392,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),300000,714.59,0.2382,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),310000,735.54,0.2373,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),320000,756.48,0.2364,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),330000,777.42,0.2356,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),340000,798.36,0.2348,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),350000,819.30,0.2341,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),360000,840.25,0.2334,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),370000,861.19,0.2328,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),380000,882.13,0.2321,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),390000,903.07,0.2316,includes one OUR charge,,V01;V02;V03
+M02,Personal bank wire sent full-amount-received (全额到账 / OUR),400000,924.01,0.2310,includes one OUR charge,,V01;V02;V03
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",10000,53.38,0.5338,1 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",20000,84.32,0.4216,1 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",30000,115.26,0.3842,1 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",40000,145.10,0.3627,1 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",50000,166.04,0.3321,1 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",60000,230.53,0.3842,2 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",70000,261.47,0.3735,2 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",80000,290.20,0.3627,2 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",90000,311.14,0.3457,2 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",100000,332.08,0.3321,2 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",110000,407.68,0.3706,3 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",120000,435.30,0.3627,3 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",130000,456.24,0.3510,3 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",140000,477.18,0.3408,3 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",150000,498.12,0.3321,3 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",160000,580.40,0.3627,4 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",170000,601.34,0.3537,4 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",180000,622.28,0.3457,4 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",190000,643.22,0.3385,4 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",200000,664.16,0.3321,4 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",210000,746.44,0.3554,5 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",220000,767.38,0.3488,5 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",230000,788.32,0.3427,5 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",240000,809.26,0.3372,5 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",250000,830.20,0.3321,5 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",260000,912.48,0.3510,6 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",270000,933.42,0.3457,6 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",280000,954.36,0.3408,6 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",290000,975.30,0.3363,6 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",300000,996.25,0.3321,6 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",310000,1078.52,0.3479,7 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",320000,1099.46,0.3436,7 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",330000,1120.40,0.3395,7 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",340000,1141.34,0.3357,7 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",350000,1162.29,0.3321,7 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",360000,1244.56,0.3457,8 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",370000,1265.50,0.3420,8 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",380000,1286.44,0.3385,8 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",390000,1307.39,0.3352,8 transfers,,V01;V02;V04
+M03,"Personal bank wire split into one transfer per USD 50,000 convenience amount",400000,1328.33,0.3321,8 transfers,,V01;V02;V04
+M04,Emigrant property transfer (移民财产转移),10000,53.38,0.5338,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),20000,84.32,0.4216,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),30000,115.26,0.3842,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),40000,145.10,0.3627,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),50000,166.04,0.3321,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),60000,186.98,0.3116,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),70000,207.93,0.2970,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),80000,228.87,0.2861,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),90000,249.81,0.2776,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),100000,270.75,0.2708,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),110000,291.69,0.2652,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),120000,312.64,0.2605,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),130000,333.58,0.2566,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),140000,354.52,0.2532,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),150000,375.46,0.2503,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),160000,396.40,0.2478,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),170000,417.35,0.2455,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),180000,438.29,0.2435,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),190000,459.23,0.2417,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),200000,480.17,0.2401,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),210000,501.11,0.2386,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),220000,522.06,0.2373,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),230000,543.00,0.2361,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),240000,563.94,0.2350,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),250000,584.88,0.2340,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),260000,605.82,0.2330,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),270000,626.77,0.2321,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),280000,647.71,0.2313,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),290000,668.65,0.2306,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),300000,689.59,0.2299,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),310000,710.54,0.2292,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),320000,731.48,0.2286,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),330000,752.42,0.2280,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),340000,773.36,0.2275,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),350000,794.30,0.2269,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),360000,815.25,0.2265,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),370000,836.19,0.2260,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),380000,857.13,0.2256,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),390000,878.07,0.2251,SAFE approval fee not published,,V01;V02;V07
+M04,Emigrant property transfer (移民财产转移),400000,899.01,0.2248,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),10000,53.38,0.5338,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),20000,84.32,0.4216,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),30000,115.26,0.3842,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),40000,145.10,0.3627,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),50000,166.04,0.3321,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),60000,186.98,0.3116,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),70000,207.93,0.2970,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),80000,228.87,0.2861,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),90000,249.81,0.2776,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),100000,270.75,0.2708,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),110000,291.69,0.2652,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),120000,312.64,0.2605,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),130000,333.58,0.2566,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),140000,354.52,0.2532,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),150000,375.46,0.2503,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),160000,396.40,0.2478,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),170000,417.35,0.2455,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),180000,438.29,0.2435,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),190000,459.23,0.2417,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),200000,480.17,0.2401,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),210000,501.11,0.2386,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),220000,522.06,0.2373,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),230000,543.00,0.2361,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),240000,563.94,0.2350,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),250000,584.88,0.2340,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),260000,605.82,0.2330,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),270000,626.77,0.2321,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),280000,647.71,0.2313,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),290000,668.65,0.2306,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),300000,689.59,0.2299,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),310000,710.54,0.2292,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),320000,731.48,0.2286,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),330000,752.42,0.2280,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),340000,773.36,0.2275,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),350000,794.30,0.2269,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),360000,815.25,0.2265,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),370000,836.19,0.2260,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),380000,857.13,0.2256,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),390000,878.07,0.2251,SAFE approval fee not published,,V01;V02;V07
+M05,Inheritance property transfer (继承财产转移),400000,899.01,0.2248,SAFE approval fee not published,,V01;V02;V07
+M06,Cash withdrawal plus hand-carry across the border,10000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,20000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,30000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,40000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,50000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,60000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,70000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,80000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,90000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,100000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,110000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,120000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,130000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,140000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,150000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,160000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,170000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,180000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,190000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,200000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,210000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,220000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,230000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,240000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,250000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,260000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,270000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,280000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,290000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,300000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,310000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,320000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,330000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,340000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,350000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,360000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,370000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,380000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,390000,,,,UNVERIFIED,V09;V14
+M06,Cash withdrawal plus hand-carry across the border,400000,,,,UNVERIFIED,V09;V14
+M07,Overseas ATM withdrawals on a mainland card,10000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,20000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,30000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,40000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,50000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,60000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,70000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,80000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,90000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,100000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,110000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,120000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,130000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,140000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,150000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,160000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,170000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,180000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,190000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,200000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,210000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,220000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,230000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,240000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,250000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,260000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,270000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,280000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,290000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,300000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,310000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,320000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,330000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,340000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,350000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,360000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,370000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,380000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,390000,,,,UNVERIFIED,V08
+M07,Overseas ATM withdrawals on a mainland card,400000,,,,UNVERIFIED,V08
+M08,Licensed payment institution / remittance platform,10000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,20000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,30000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,40000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,50000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,60000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,70000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,80000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,90000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,100000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,110000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,120000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,130000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,140000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,150000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,160000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,170000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,180000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,190000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,200000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,210000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,220000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,230000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,240000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,250000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,260000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,270000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,280000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,290000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,300000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,310000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,320000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,330000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,340000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,350000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,360000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,370000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,380000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,390000,,,,UNVERIFIED,V04
+M08,Licensed payment institution / remittance platform,400000,,,,UNVERIFIED,V04
+M09,QDII fund or Cross-boundary Wealth Management Connect,10000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,20000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,30000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,40000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,50000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,60000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,70000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,80000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,90000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,100000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,110000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,120000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,130000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,140000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,150000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,160000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,170000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,180000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,190000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,200000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,210000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,220000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,230000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,240000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,250000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,260000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,270000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,280000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,290000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,300000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,310000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,320000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,330000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,340000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,350000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,360000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,370000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,380000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,390000,,,,UNVERIFIED,V01
+M09,QDII fund or Cross-boundary Wealth Management Connect,400000,,,,UNVERIFIED,V01
+M10,Quota splitting / crypto / underground bank / false invoices,10000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,20000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,30000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,40000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,50000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,60000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,70000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,80000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,90000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,100000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,110000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,120000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,130000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,140000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,150000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,160000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,170000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,180000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,190000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,200000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,210000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,220000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,230000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,240000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,250000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,260000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,270000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,280000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,290000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,300000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,310000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,320000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,330000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,340000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,350000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,360000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,370000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,380000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,390000,,,,UNVERIFIED,V05;V06
+M10,Quota splitting / crypto / underground bank / false invoices,400000,,,,UNVERIFIED,V05;V06
