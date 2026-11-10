@@ -23,7 +23,7 @@ official text fetched on 2026-11-10 and checked by `scripts/verify_cn3.py`.
 | [`cn3-methods.html`](cn3-methods.html) | 17 routes with legality, pros, cons, requirements and the prohibitions |
 | [`cn3-tax.html`](cn3-tax.html) | The "conversion penalty" decomposed: spread, fees, IRC §988, FBAR/8938, SAFE fines |
 | [`cn3-steps.html`](cn3-steps.html) | Ordered playbooks for each usable route |
-| [`cn3-review.html`](cn3-review.html) | 24 flags, including two corrections to earlier pages |
+| [`cn3-review.html`](cn3-review.html) | 26 flags, including two corrections to earlier pages |
 | [`cn3-sources.html`](cn3-sources.html) | 23 official sources with the exact text relied on, plus 36 inputs |
 
 Headline (Bank of China board, 2026-11-10 07:32:39): **$53.47 to move $10,000, $903.07 to move

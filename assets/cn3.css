@@ -47,6 +47,8 @@ section.hero.small{background:linear-gradient(160deg,#134e4a,#12395c)}
 .kpi .s{display:block;font-size:.76rem;color:var(--muted)}
 
 .tiny{font-size:.78rem;color:var(--muted)}
+.split{margin:.8rem 0 0;padding:.55rem .7rem;border-radius:8px;background:rgba(255,255,255,.12);
+  font-size:.88rem;border-left:3px solid #9fe3d3}
 .blank{color:var(--blank);background:var(--blankbg);border-radius:4px;padding:0 .25rem;font-size:.82em;
   font-style:italic;white-space:nowrap}
 .alert{background:var(--warnbg);border-color:#f2cdb6}

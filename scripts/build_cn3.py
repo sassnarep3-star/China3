@@ -78,7 +78,7 @@ def compute(mid: str, amount: int) -> dict:
     cny = amount * ASK
     row = dict(
         method_id=mid, amount_usd=amount, cny_at_ask=r2(cny),
-        spread_usd=r2(amount * SPREAD), wire_fee_usd="", cable_usd="",
+        spread_usd="", wire_fee_usd="", cable_usd="",
         transfers="", years="", known_cost_usd="", cost_pct="",
         net_usd="", us_gain_2024="", us_tax_2024="", route_tax_usd="",
         all_in_usd="", status="", note="", source_id="",
@@ -354,6 +354,8 @@ def index_page(ladder):
   <div class="kpi"><span class="k">All-in, $400,000</span><span class="v">${w1_400['all_in_usd']:,.2f}</span>
     <span class="s">{(float(w1_400['all_in_usd'])/400000)*100:.2f}% of the amount</span></div>
 </section>
+<div class="split"><span><strong>Where the 1.89% goes at $400,000:</strong> 0.23% to the Chinese bank,
+1.66% to the IRS under §988, 0% to any PRC conversion tax.</span></div>
 <p class="tiny">* U.S. §988 gain at the 2024 IRS yearly average (7.189 CNY/USD) taxed at an assumed 24% federal
 marginal rate. Both assumptions are yours to change — see <a href="cn3-tax.html">Tax &amp; penalties</a>.
 Every row below links to the official source for its inputs.</p>
@@ -721,7 +723,8 @@ def steps_page():
         groups.setdefault(mid, []).append((step, action, detail, document, sid))
 
     out = []
-    for mid, steps in groups.items():
+    for mid in sorted(groups, key=lambda m: METHODS[m]["rank"]):
+        steps = groups[mid]
         m = METHODS[mid]
         trs = [[str(s), f"<strong>{E(a)}</strong>", E(d), E(doc), src_link(sid)]
                for s, a, d, doc, sid in steps]

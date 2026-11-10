@@ -128,7 +128,7 @@ corrected here, not silently changed:
   Tables that still price the emigrant route with a two-year stage are superseded.
 - **The BOC personal transfer tariff is effective 2014-11-01**, not 2024-11-01.
 
-Twenty-four further flags — every blank, every assumption, the residency question, the missing
+Twenty-six further flags — every blank, every assumption, the residency question, the missing
 U.S. bank fee, the unverified treaty rate, the PRC absence-of-provision finding — are listed with
 their handling on [`cn3-review.html`](cn3-review.html). None of them blocks the analysis; each is
 marked *needs review*.

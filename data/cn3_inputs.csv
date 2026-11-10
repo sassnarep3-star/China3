@@ -3,7 +3,7 @@ C3-I01,USD/CNY 现汇卖出价 (you buy USD),6.6903,CNY per USD,C3-S01,verified,
 C3-I02,USD/CNY 现汇买入价 (bank buys USD),6.6622,CNY per USD,C3-S01,verified,"666.22 CNY per 100 USD, same board."
 C3-I03,Bid/ask midpoint,6.67625,CNY per USD,C3-S01,derived,(C3-I01 + C3-I02) / 2. A calculation on two published numbers.
 C3-I04,One-way spread paid by the customer,0.00210447,fraction of amount,C3-S01,derived,(C3-I01 − C3-I03) / C3-I03 = 0.210447%.
-C3-I05,Wire fee rate,0.001,of CNY amount,C3-S02,verified,每笔汇款金额的1‰.
+C3-I05,Wire fee rate,0.001,of CNY amount,C3-S02,verified,每笔汇款金额的1‰. This is the e-banking personal schedule; branch counter rates may differ (flag C3-F25).
 C3-I06,Wire fee floor,50,CNY per transfer,C3-S02,verified,"最低收取50元/笔. Binds below about USD 7,474."
 C3-I07,Wire fee ceiling,260,CNY per transfer,C3-S02,verified,"最高收取260元/笔. Binds above about USD 38,864."
 C3-I08,"Cable fee, non-HK/Macau/Taiwan",150,CNY per transfer,C3-S02,verified,非港澳台地区人民币150元/笔.
