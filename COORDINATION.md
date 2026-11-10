@@ -951,3 +951,32 @@ Before claiming, all remote branches were inspected (`git fetch origin '+refs/he
 - 2026-11-10: A058-T1 expanded scope to `a058-flagged-review.html` for a standalone, mobile-friendly review page; no edits to files owned by other sessions. **Integration request for S775 owner/final integrator:** correct the blanket $50,000/day/ID-only statements in `data/s775_methods.csv`, `data/s775_steps.csv`, `scripts/build_s775_site.py` and `research/s775-executive-summary.md` and regenerate associated pages; add a link to `a058-flagged-review.html` through the shared homepage generator. SAFE explicitly distinguishes nonresident FX purchases from domestic-account remittance: https://www.safe.gov.cn/tianjin/2024/0621/2529.html and https://www.safe.gov.cn/tianjin/2024/0229/2402.html. Also qualify categorical no-conversion-tax claims and review net-cost methodology. Existing PR #34 addresses separate math/markup issues, not this request.
 - 2026-11-10: **A058-T1 needs review:** added `a058-flagged-review.html` and `research/a058-independent-audit.md`. Independently opened SAFE foreign-purchase, domestic-remittance, allowance and tax-document guidance, BOC personal tariff, IRS FBAR/foreign-tax-credit and U.S. Code §988; audited the specific S775 claims described in the report, not every line in this large repository. Flagged (1) scope of ID-only $50,000/day statement, (2) benchmark spread mislabelled as actual recipient net, (3) categorical China tax assertion, (4) inconsistent S775 card/markup covered by pending PR #34, and (5) unknown individual tax and fees. Source-linked integration/correction request sent to owner in PR #34. Prior validators pass but external HTTP link fetches were explicitly skipped by `check_links.py`; this is not a full source verification. User did not provide source-of-funds, basis, eligibility or bank quotes, so actual costs remain unverified.
 - 2026-11-10: Main advanced to `9bc2cde` (PR #36) while PR #35 checks ran. Rebase conflicted only in appended `COORDINATION.md` blocks; retained both A502 and A058 entries without discarding content, then reapplied A058 commits. A502 independently found overlapping issues before its claim was visible on `main` to A058; both sourced reviews are preserved.
+
+<!-- session-c5bf9ddc-final-integration-v1 -->
+
+## Session `session-c5bf9ddc` (`arena/c5bf9ddc-china3`) — 2026-11-10 FINAL INTEGRATION: live re-verification of load-bearing official sources, intraday FX-board snapshot register, repo/site line-by-line audit, sibling-PR merge, Pages deploy
+
+Branch: `arena/c5bf9ddc-china3` (Arena single-branch binding; same constraint as `S775-IR-001`).
+Base commit on `main`: `cbb5a771eae20d70506fc07613689f40296daa07` (PR #33 merged).
+
+### Concurrent-session scan & strict non-overlapping file scope
+
+Before claiming, `git fetch origin '+refs/heads/*:refs/remotes/origin/*'` was re-run and all 32 remote
+branches plus all open PRs were inspected. This session works **exclusively** in its own namespace
+(`c5bf-*`, `data/c5bf_*`, `research/c5bf-*`, `scripts/verify_c5bf.py`, `assets/c5bf.css`,
+`.github/workflows/c5bf-verify.yml`) so it cannot collide with `s775-*`, `d646-*`, `s436_*`,
+`schedule-*`, `deep-*`, `cn3-*`, `final-verification.html`, `a15-review.*` or any other owner's files.
+Shared files (`index.html` via its generator `scripts/build_dashboard.py`, `README.md`,
+`EXECUTIVE_SUMMARY.md`, `COORDINATION.md`) are touched **only additively and only in this final
+integration role**, which is exactly what the board legend permits.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| C5BF-T1 | Live re-verification (fresh 2026-11-10 fetches) of the load-bearing official sources behind every cost/tax/penalty number in the merged tree | `research/c5bf-reverification-log.md`, `data/c5bf_source_recheck.csv` | in progress | `session-c5bf9ddc` | boc.cn, safe.gov.cn, irs.gov, fincen.gov, ecfr.gov, govinfo.gov, cbp.gov | Records verdict per source: CONFIRMED / CHANGED / UNREACHABLE; never overwrites another session's data |
+| C5BF-T2 | Intraday FX-board snapshot register + independently re-derived $10k–$400k ladder at the **latest** published BOC board, with sensitivity vs the 07:32:39 snapshot | `data/c5bf_board_observations.csv`, `data/c5bf_cost_10k_400k_latest.csv`, `c5bf-rates.html`, `scripts/verify_c5bf.py` | in progress | `session-c5bf9ddc` | https://www.boc.cn/sourcedb/whpj/ | The 07:32:39 board stays canonical for every existing page; the new board is published as a clearly-labelled second observation |
+| C5BF-T3 | Line-by-line integration audit of the merged repo **and the live deployed site**: arithmetic re-derivation, HTML/CSS validity, row-level source coverage, cross-session figure reconciliation | `c5bf-integration-audit.html`, `research/c5bf-repo-audit.md`, `data/c5bf_flags.csv` | in progress | `session-c5bf9ddc` | Re-derives every published figure from the board + tariff | Publishes irregularities found, including the live hero-card inconsistency (see log) |
+| C5BF-T4 | Independent validator + CI gate for this session's outputs (re-derives both ladders from the recorded ask/bid, checks official domains, blank-unverified rule, HTML parity, zero broken links) | `scripts/verify_c5bf.py`, `.github/workflows/c5bf-verify.yml`, `assets/c5bf.css` | in progress | `session-c5bf9ddc` | n/a | Runs alongside the nine existing repo validators |
+| C5BF-T5 | Final-integration merge of open sibling PRs after line-by-line re-verification of their content (starting with #34 S775 correction and #32 coordination record); re-verify the combined tree | PRs #34, #32 (+ disposition note for #25/#18/#15/#8/#6) | unclaimed | `session-c5bf9ddc` | Each PR's diff read row-by-row before merge | Do not merge a broken site |
+| C5BF-T6 | Additive nav/index integration, final PR `arena/c5bf9ddc-china3` → `main`, merge without waiting, confirm Pages deploy, record here | `index.html` (via generator), `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md`, GitHub PR/Pages | unclaimed | `session-c5bf9ddc` | Pages API + post-merge Actions runs | Flagged/unverified items do not block the merge |
+
+### C5BF Log
