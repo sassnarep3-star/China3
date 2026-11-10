@@ -513,3 +513,35 @@ Before claiming, remote branches were inspected via GitHub API:
 - Added R30–R32 (PBOC [2004] No. 16 Arts. 2, 6, 10 — fetched http://m.safe.gov.cn/safe/2004/1116/5461.html) and X-17 (open PR #18 prices the emigrant route as one wire; Art. 6 stages payouts above CNY 200,000 over two years).
 - **Shared-file note:** every session holding an `index.html` integration claim (7a636dce T15, 8c26329a C2, 2eb1c590 CM-3) has marked it **done**, and no other session has linked `cross-session-review.html`. This session therefore made one **additive** edit to `index.html` (one nav link + one footer link, nothing removed or reordered), following the same additive convention those sessions used. Open PRs #15 and #18 also touch `index.html`; their owners should keep this link when they rebase.
 
+
+---
+
+<!-- session-d6467425-verification-refresh-v1 -->
+
+## Session `arena/d6467425-china3` — Independent Verification Refresh (2026-11-10) + Final Consolidation
+
+Branch: `arena/d6467425-china3` (fixed by Arena session binding; per-task branches `session-<id>/<task>` cannot be pushed under Arena's single-branch rule — same noted irregularity as `S436-IR-001`).
+Base: `main` @ `75b67d3` (PR #21 merged). All prior task rows `P1–P6`, `T1–T7`, deep `T1–T9`, `S436-T1…T8` are `done`.
+
+### Claim state at 2026-11-10T01:00Z
+
+- Open PRs, all **stale >24 h** with no commits since 2026-11-09: #18 (`arena/1a9dec1c-china3`, 01:43Z), #15 (`arena/80597d10-china3`, 01:37Z), #8 (`arena/5b145137-china3`, 2026-11-07), #6 (`arena/f83a5122-china3`, 2026-11-07).
+- Per the >60-minute-no-commit takeover rule, this session takes over the **final integration + verification** role. It does **not** take over the open PRs' file scopes (`cost-table.html`, `cost-steps.html`, `deep-costs.html`, `verification.html`, `costs.html`…); those PRs are left open for their owners and are logged as `D646-IR-001` (not merged, not deleted).
+- No other branch had a commit after 2026-11-09T01:53Z, so no live session conflicts with this claim.
+
+### Claimed tasks (`arena/d6467425-china3`) — new files only, plus additive edits to `index.html`
+
+| ID | Task | File scope | Status | Owner |
+|---|---|---|---|---|
+| D646-T1 | Re-fetch and re-verify every load-bearing figure against its official primary source on 2026-11-10; record pass/fail with verbatim excerpt + URL | `research/d646-verification.md`, `data/d646_verification.csv` | in progress | `arena/d6467425-china3` |
+| D646-T2 | Re-derive the full USD 10k→400k ladder from today's timestamped BOC board + published BOC tariff, independently of every prior model; reconcile against `main`'s `cost-tables.html` | `data/d646_ladder.csv`, `scripts/build_d646_site.py` | in progress | `arena/d6467425-china3` |
+| D646-T3 | One consolidated, mobile-first dashboard page set: exec summary, all methods + pros/cons, cost ladder, penalty/tax breakdown, verification log, flagged-for-review, sources | `d646-summary.html`, `d646-methods.html`, `d646-costs-10k-400k.html`, `d646-penalty.html`, `d646-verification.html`, `d646-flagged.html`, `d646-sources.html`, `assets/d646.css` | in progress | `arena/d6467425-china3` |
+| D646-T4 | Automated line-by-line verification script + CI workflow (every row → official URL, blanks flagged, arithmetic re-derived, no broken local links) | `scripts/verify_d646_site.py`, `.github/workflows/d646-verify.yml` | in progress | `arena/d6467425-china3` |
+| D646-T5 | Consolidate landing-page navigation by category (additive only, no page or link removed), open PR, merge without waiting, confirm Pages deploy, record outcome | `index.html`, `README.md`, `COORDINATION.md`, GitHub PR/Pages | in progress | `arena/d6467425-china3` |
+
+File-scope note: the 7 `d646-*` pages are namespaced to this session, so they cannot collide with any prior or concurrent branch. The only shared file touched is `index.html`, and only additively (a new "Start here" card + nav link; nothing removed or reordered).
+
+### D646 log
+
+- 2026-11-10T01:00Z — Claim written and pushed before any content work.
+- 2026-11-10T01:02Z — Local validators on `main` @ `75b67d3` all pass: `validate_data.py`, `check_links.py`, `verify_deep.py`, `test_costs.py`, `verify_cost_tables.py`, `verify_s436_site.py`. Pages API reports `status: built`, `https_enforced: true`.
