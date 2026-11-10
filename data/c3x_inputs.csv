@@ -1,0 +1,28 @@
+id,value,unit,source,note
+ask,6.6851,CNY per USD,S01,现汇卖出价 — the rate at which you buy USD with CNY.
+bid,6.6571,CNY per USD,S01,现汇买入价.
+mid,6.6711,CNY per USD,S01,"Arithmetic mean of the bid and the ask, computed here."
+parity,6.7167,CNY per USD,S01,中行折算价 — BOC's internal conversion reference; NOT a rate a customer can trade at.
+wire_per_mille,0.001,fraction of the CNY amount,S02,每笔汇款金额的1‰.
+wire_min,50,CNY per transfer,S02,最低收取50元/笔.
+wire_max,260,CNY per transfer,S02,最高收取260元/笔.
+cable_non_hk,150,CNY per transfer,S02,非港澳台地区人民币150元/笔.
+fbar_penalty_non_willful,16536,USD per violation,S10,
+fbar_penalty_willful,165353,USD per violation,S10,
+f888_penalty_max,60000,USD,S12,
+f888_threshold_us_unmarried,50000,USD year-end,S12,
+f888_threshold_us_unmarried_anytime,75000,USD any time,S12,
+f888_threshold_abroad_unmarried,200000,USD year-end,S12,
+f888_threshold_abroad_unmarried_anytime,300000,USD any time,S12,
+fbar_threshold,10000,USD aggregate,S13,"Exceeds, not equals."
+cbp_threshold,10000,USD,S14,Exceeds; family aggregate.
+sec988_200,200,USD of gain,S09,Personal-transaction exclusion ceiling.
+irs_avg_2025,7.129,CNY per USD,S11,
+irs_avg_2024,7.189,CNY per USD,S11,
+irs_avg_2023,7.075,CNY per USD,S11,
+irs_avg_2022,6.730,CNY per USD,S11,
+irs_avg_2021,6.452,CNY per USD,S11,
+prc_property_rate,0.20,fraction,S08,20% proportional rate.
+atm_year_cny,100000,CNY per person per year,S15,
+atm_day_cny,10000,CNY per card per day,S15,
+conv_limit_doc_threshold,50000,USD per day,S03,"Above this, ID plus transaction documents — not a cap."
