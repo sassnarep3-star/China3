@@ -5,7 +5,7 @@ Runs without network access. Network reachability of the official sources was
 established when data/verify_2026.csv was written (each row carries the fetch
 timestamp); this script re-checks the things that can be checked mechanically:
 
-  1. every row of every data table on index.html and verify-2026.html carries a
+  1. every row of every data table on legacy-index.html and verify-2026.html carries a
      link to an official domain, or is explicitly marked blank / unverified /
      prohibited with a reason
   2. every local link and anchor on both pages resolves to a real file / id
@@ -120,7 +120,7 @@ def audit_page(path: Path) -> Auditor:
     return au
 
 
-PAGES = [ROOT / "index.html", ROOT / "verify-2026.html"]
+PAGES = [ROOT / "legacy-index.html", ROOT / "verify-2026.html"]  # e347: landing moved to legacy-index.html
 audits = {}
 for page in PAGES:
     if not page.exists():
