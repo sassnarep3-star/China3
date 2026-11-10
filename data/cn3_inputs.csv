@@ -1,0 +1,37 @@
+id,name,value,unit,source,status,note
+C3-I01,USD/CNY 现汇卖出价 (you buy USD),6.6903,CNY per USD,C3-S01,verified,"669.03 CNY per 100 USD on the 2026-11-10 07:32:39 board. Use the ask, not the mid: you are the buyer."
+C3-I02,USD/CNY 现汇买入价 (bank buys USD),6.6622,CNY per USD,C3-S01,verified,"666.22 CNY per 100 USD, same board."
+C3-I03,Bid/ask midpoint,6.67625,CNY per USD,C3-S01,derived,(C3-I01 + C3-I02) / 2. A calculation on two published numbers.
+C3-I04,One-way spread paid by the customer,0.00210447,fraction of amount,C3-S01,derived,(C3-I01 − C3-I03) / C3-I03 = 0.210447%.
+C3-I05,Wire fee rate,0.001,of CNY amount,C3-S02,verified,每笔汇款金额的1‰.
+C3-I06,Wire fee floor,50,CNY per transfer,C3-S02,verified,"最低收取50元/笔. Binds below about USD 7,474."
+C3-I07,Wire fee ceiling,260,CNY per transfer,C3-S02,verified,"最高收取260元/笔. Binds above about USD 38,864."
+C3-I08,"Cable fee, non-HK/Macau/Taiwan",150,CNY per transfer,C3-S02,verified,非港澳台地区人民币150元/笔.
+C3-I09,"Cable fee, HK/Macau/Taiwan",80,CNY per transfer,C3-S02,verified,港澳台地区人民币80元/笔.
+C3-I10,UnionPay overseas ATM fee,"CNY 12 + 1% of cash, cap CNY 112 per withdrawal",per withdrawal,C3-S03,verified,"Effective 2026-11-11. Because 1% of a CNY 10,000 withdrawal is already CNY 100, the cap binds on every full-size withdrawal."
+C3-I11,Visa/Mastercard overseas ATM fee,"2.5% of cash, min USD 3, max USD 40",per withdrawal,C3-S03,verified,Effective 2026-11-11.
+C3-I12,Overseas ATM daily ceiling,10000,CNY per card per day,C3-S16,verified,每卡每日不超过等值人民币1万元.
+C3-I13,Overseas ATM annual ceiling,100000,"CNY per person per year, all cards",C3-S16,verified,合计每个自然年度不得超过等值人民币10万元.
+C3-I14,Resident convenience amount,50000,USD per person per year,C3-S04,verified,"A documentation threshold, not a cap and not a tax."
+C3-I15,Cash you may carry without a permit,5000,USD equivalent,C3-S17,verified,"≤ USD 5,000: no 携带证."
+C3-I16,Cash ceiling with a permit,10000,USD equivalent,C3-S17,verified,"USD 5,000–10,000 needs 携带证; above USD 10,000 not in principle."
+C3-I17,U.S. cash reporting threshold,10000,USD per person per trip,C3-S18,verified,"FinCEN Form 105 above USD 10,000."
+C3-I18,PRC IIT — comprehensive income,3%–45% progressive,rate,C3-S08,verified,"Applies to the income that created the balance, not to the conversion."
+C3-I19,"PRC IIT — interest, dividends, rent, property transfer",0.2,rate,C3-S08,verified,比例税率，税率为百分之二十.
+C3-I20,SAFE fine — 逃汇 / 非法套汇 / private FX dealing,≤30%; serious 30%–100%,of the amount,C3-S07,verified,"Arts. 39, 40 and 45."
+C3-I21,SAFE fine — carrying currency in breach,≤20%,of the amount,C3-S07,verified,Art. 42.
+C3-I22,FBAR non-willful maximum,16536,USD per violation,C3-S11,verified,"31 U.S.C. 5321(a)(5)(B)(i), assessed on/after 2025-01-17."
+C3-I23,FBAR willful maximum,165353,"USD per violation (or 50% of balance, if greater)",C3-S11,verified,31 U.S.C. 5321(a)(5)(C)(i)(I).
+C3-I24,FBAR filing trigger,10000,USD aggregate at any time in the year,C3-S12,verified,FinCEN Form 114.
+C3-I25,"Form 8938 threshold, single, living in the U.S.",50000,"USD year-end (>); 75,000 any time",C3-S12,verified,Different thresholds apply to joint filers and to taxpayers living abroad.
+C3-I26,Form 8938 penalty,"USD 10,000 + 10,000 per 30 days after notice, max 60,000",USD,C3-S12,verified,Plus possible criminal exposure.
+C3-I27,Form 3520 gift reporting threshold,100000,USD aggregate per year,C3-S13,verified,Gifts/bequests from a nonresident alien or foreign estate.
+C3-I28,IRC §988 personal-transaction gain exception,200,USD of gain,C3-S10,verified,Above USD 200 of gain the whole gain is recognised; the exception does not shelter the first 200.
+C3-I29,"IRS yearly average CNY per USD, 2024",7.189,CNY per USD,C3-S09,verified,Scenario basis: CNY acquired during 2024.
+C3-I30,"IRS yearly average CNY per USD, 2025",7.129,CNY per USD,C3-S09,verified,Scenario basis: CNY acquired during 2025.
+C3-I31,Assumed U.S. marginal rate on §988 gain,0.24,rate,,assumption,Not a published figure: an illustrative 24% federal marginal rate. Replace with your own.
+C3-I32,U.S. receiving-bank incoming wire fee,,USD per wire,,blank,"Varies by bank and account tier; no regulator publishes it. Blank, never zero."
+C3-I33,Correspondent / intermediary deduction,,USD per wire,C3-S02,blank,The BOC tariff passes overseas bank charges through at cost without publishing an amount. Blank.
+C3-I34,Card-network FX conversion spread (UnionPay/Visa),,fraction,C3-S03,blank,The BOC announcement prices its own fee only; the network conversion rate is not published. Blank.
+C3-I35,PRC tax on the act of converting personal savings,0.0,rate,C3-S08,verified,No PRC provision taxes the conversion itself; PRC IIT applies to the income that produced the balance.
+C3-I36,Offshore CNH retail spread for a personal conversion,,fraction,,blank,No official personal CNH retail tariff found. Blank; the page shows the cost of each 1.00% instead.
