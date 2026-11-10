@@ -813,3 +813,15 @@ file is a guaranteed cross-session CI break.
 **Final verification of the merged tree (all PASS).** `validate_data.py`, `check_links.py`, `verify_deep.py`,
 `test_costs.py`, `verify_cost_tables.py`, `verify_s436_site.py`, `verify_d646_site.py`, `verify_dashboard.py`,
 `build_dashboard.py --check`, `build_d646_site.py --check`.
+### Final record — PR #27 (presentation follow-up)
+
+- **PR:** https://github.com/sassnarep3-star/China3/pull/27 — **MERGED** 2026-11-10T01:12:06Z via
+  `gh pr merge 27 --merge`. Merge commit `e7537c87850b59f66a68a85169e09708b38bd4f2`.
+- Seven checks passed, `deploy` skipped on the PR as expected. Post-merge `main` runs: all `success`;
+  Pages API `built`.
+- Live confirmation with a cache-busting URL: https://sassnarep3-star.github.io/China3/verify-2026.html?v=e7537c8
+  — the 17 records render with "official wording" quotations and the de-duplicated value column, so the
+  deployed artifact is the merged one and not a stale edge copy.
+- **Board convention from here:** this entry is the terminal record. Any later session should append its
+  own block rather than re-recording these PRs, so the chain of "a PR that documents the previous PR"
+  does not continue indefinitely.
