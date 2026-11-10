@@ -513,3 +513,26 @@ Before claiming, remote branches were inspected via GitHub API:
 - Added R30–R32 (PBOC [2004] No. 16 Arts. 2, 6, 10 — fetched http://m.safe.gov.cn/safe/2004/1116/5461.html) and X-17 (open PR #18 prices the emigrant route as one wire; Art. 6 stages payouts above CNY 200,000 over two years).
 - **Shared-file note:** every session holding an `index.html` integration claim (7a636dce T15, 8c26329a C2, 2eb1c590 CM-3) has marked it **done**, and no other session has linked `cross-session-review.html`. This session therefore made one **additive** edit to `index.html` (one nav link + one footer link, nothing removed or reordered), following the same additive convention those sessions used. Open PRs #15 and #18 also touch `index.html`; their owners should keep this link when they rebase.
 
+
+<!-- session-119a615f-final-integration -->
+
+## Session `session-119a615f` (`arena/119a615f-china3`) — Final integration, §988 currency-gain tax, line-by-line audit, PR & Pages verification
+
+Base: `main` @ `75b67d3` (all prior task boards report done). This branch is fixed by Arena and cannot be renamed, so the task-branch convention is recorded as irregularity `S119-IR-01` (same pattern already logged as S436-IR-001).
+
+### Claim (written before any edit)
+
+| ID | Task | File scope (namespaced, non-overlapping) | Status | Owner |
+|---|---|---|---|---|
+| S119-T1 | Line-by-line audit of the combined site + data; run every existing validator; log irregularities | `research/s119-final-audit.md`, `data/s119_audit.csv` | in progress | `session-119a615f` |
+| S119-T2 | Quantify the missing U.S. §988 currency-gain tax across USD 10k–400k, with official IRS rates; separate it from bank cost and from China-side taxes | `data/fx_gain_scenarios.csv`, `scripts/build_s119_final.py`, `final-review.html` | in progress | `session-119a615f` |
+| S119-T3 | Act on open findings X-05, X-06, X-07, X-08, X-11, X-14 in the files their (finished) owners published | `data/penalty.csv`, `scripts/build_deep_site.py`, `research/penalty-breakdown.md`, `research/us-tax.md`, `methods.html`, `us-tax.html`, `data/cost_inputs.csv`, `README.md` | in progress | `session-119a615f` |
+| S119-T4 | Final integration: additive navigation, regenerate all pages, verify combined site builds with zero broken links | `index.html`, `COORDINATION.md`, `EXECUTIVE_SUMMARY.md`, generated pages | in progress | `session-119a615f` |
+| S119-T5 | PR → `main`, merge without waiting, confirm Pages deploy, record PR + result here | GitHub PR / Pages | in progress | `session-119a615f` |
+
+No other session owns these files on `main` at the time of claiming. Open PRs #6, #8, #15, #18 are on other branches; this session does not merge them and will record their status. `cross-session-review.html` is regenerated from `data/cross_session_findings.csv` only to record status changes on X-05…X-08, X-11, X-14.
+
+### Log
+
+- 2026-11-10: Claim written and pushed before edits. Existing validators were run on the base commit and all pass (`validate_data.py`, `check_links.py`, `verify_deep.py`, `test_costs.py`, `verify_cost_tables.py`, `verify_s436_site.py`).
+- 2026-11-10: Official sources re-fetched during this session: IRS yearly average exchange rates (CNY 2024 = 7.189, 2025 = 7.129), 26 U.S.C. §988 (subsections (a)(1)(A), (e)(1)–(3)), IRS Publication 525, BOC FX board (2026-11-10 07:32:39, USD selling 669.03/100), BOC trade-finance notice (full-amount USD 15 *or* USD 25), SAFE Hebei Q&A on carrying cash (>USD 10,000 needs a SAFE permit and is in principle not allowed), SAFE Tianjin reprint of 汇发〔2003〕102号.
