@@ -143,7 +143,7 @@ def key_cards() -> str:
         ),
         (
             "Bank spread you actually pay",
-            f"{pct(LADDER_BY_AMOUNT['10000']['total_pct'])}–{pct(LADDER_BY_AMOUNT['400000']['total_pct'])}",
+            f"{D(LADDER_BY_AMOUNT['10000']['total_pct']):.2f}% → {D(LADDER_BY_AMOUNT['400000']['total_pct']):.2f}%",
             "All-in China-side cost on a documented current-account wire, from "
             f"{money(LADDER_BY_AMOUNT['10000']['total_usd'])} on $10,000 to "
             f"{money(LADDER_BY_AMOUNT['400000']['total_usd'])} on $400,000. "
@@ -159,10 +159,10 @@ def key_cards() -> str:
         ),
         (
             "FBAR trigger",
-            "$10,000",
-            "Aggregate balance in foreign accounts at any moment in the calendar year. Reporting, not tax — "
-            "the penalty is what costs money.",
-            src("V11", "eCFR"),
+            "> $10,000",
+            "Aggregate value of foreign accounts <em>exceeds</em> $10,000 at any time in the calendar year. It is a "
+            "reporting trigger, not a tax — the penalty is what costs money.",
+            src("V17", "FinCEN"),
         ),
         (
             "Willful FBAR ceiling",
@@ -175,7 +175,8 @@ def key_cards() -> str:
             "U.S. currency-gain rule",
             "$200",
             "A personal transaction in foreign currency recognises no §988 gain unless the gain exceeds $200. "
-            "Business-use currency is not covered by this exception.",
+            "Whether your conversion is a “personal transaction”, and the CNY cost basis, are fact-specific — "
+            "this is not a finding that your conversion is untaxable.",
             src("V15", "26 USC 988"),
         ),
     ]
@@ -216,8 +217,9 @@ def verdict_table() -> str:
         (
             "3 · Only if needed",
             "USD 50,000 annual convenience amount, year after year",
-            "Simplified processing with ID only, but it is per person per year — $400,000 takes eight "
-            "calendar years and eight wire fees.",
+            "Simplified processing with ID only, per person per year, for a PRC-resident individual (境内个人). "
+            "$400,000 takes eight calendar years and eight wire fees. A foreign passport holder does not "
+            "automatically get the same treatment — the bank classifies the person first.",
             "1529.87",
             "8 years",
             "V06",
@@ -226,13 +228,13 @@ def verdict_table() -> str:
         (
             "Avoid",
             "Quota splitting, underground banks, crypto, false invoices",
-            "Expressly prohibited in China and a money-laundering exposure in the United States. Civil "
-            "penalty floor for prohibited FX activity is 30% of the amount; a willful FBAR penalty can reach "
-            "50% of the balance.",
+            "Expressly prohibited in China and a money-laundering exposure in the United States. The Chinese "
+            "administrative fine is up to 30% of the amount (30%–100% where the case is serious); a willful FBAR "
+            "penalty can reach 50% of the balance.",
             "blank by rule",
             "n/a",
-            "V10",
-            "31 USC 5321",
+            "V16",
+            "safe.gov.cn",
         ),
     ]
     html = [
@@ -278,8 +280,10 @@ def ladder_table(rows_: list[dict], with_our: bool = False) -> str:
         )
     html.append("</tbody></table></div>")
     note = (
-        "Cost to the sender. If you also elect full-amount-received (OUR), add "
-        f"${OUR} per transfer so the U.S. bank does not deduct its own charge from the principal."
+        "Cost to the sender, China side. Full-amount-received (OUR) would add "
+        f"${OUR} per transfer so the U.S. bank does not deduct its own charge from the principal — but that charge "
+        "is published in BOC's trade-finance tariff, not in the personal e-banking tariff, so treat it as optional "
+        "and confirm availability with the branch. The totals above exclude it."
     )
     if with_our:
         note += " The 40-row file <code>data/ladder_20261110.csv</code> carries the OUR column too."
@@ -369,6 +373,7 @@ def cards_nav() -> str:
         ("U.S. tax", "FBAR, 8938, FEIE, §988, treaty", "deep-us-tax.html", ""),
         ("Penalties", "Each penalty layer with its ceiling", "deep-penalty.html", ""),
         ("Verify 2026", "What this session re-checked, with quotes", "verify-2026.html", "new"),
+        ("Safety review", "Independent spot checks and their cautions", "a15-review.html", ""),
         ("Flagged for review", "Everything left blank, with the reason", "deep-review.html", ""),
         ("Sources", "84 official pages, by issuer", "deep-sources.html", ""),
         ("Narrative guide", "The earlier editorial passes, preserved", "guide.html", ""),
@@ -417,8 +422,12 @@ def unverified_box() -> str:
   <ul class="tight">
     <li><strong>Other banks' spreads.</strong> The 0.2100% here is one BOC board reading at one timestamp. ICBC,
         CMB and the rest publish their own; so does your branch on the day.</li>
-    <li><strong>Receiving and correspondent fees.</strong> Only BOC's optional OUR charge (USD 25, or USD 15 via
-        its New York branch) is published. A U.S. bank's incoming-wire fee and any intermediary deduction are blank.</li>
+    <li><strong>Receiving and correspondent fees.</strong> A U.S. bank's incoming-wire fee and any intermediary
+        deduction are blank. BOC's USD 25 (or USD 15 via its New York branch) full-amount-received charge is
+        published only in its trade-finance tariff and is not shown as included here.</li>
+    <li><strong>The separate questions raised by the <a href="a15-review.html">safety review</a></strong> — whether
+        the convenience amount applies to you at all, what your CNY cost basis is for §988, and whether late
+        FBAR years need a corrective procedure — are fact-specific and left open.</li>
     <li><strong>The tax base on a property sale.</strong> The 20% rate is verified; the deductible-cost and
         valuation rules that produce the base are transaction-specific.</li>
     <li><strong>Eligibility.</strong> Whether your balance qualifies as documented current-account income,
@@ -470,6 +479,15 @@ def build_index() -> str:
   <p class="lede">A U.S. citizen with a mainland bank balance asks the same question every time: what is the
   cheapest lawful route from CNY to USD, and where does the “tax penalty” actually come from? This page answers
   it in the order that matters: the cost of the transfer first, the reporting risk second, the alternatives last.</p>
+
+  <div class="callout warn" style="margin-top:18px">
+    <p><strong>Read this with the safety review.</strong> The independent review at
+    <a href="a15-review.html">a15-review.html</a> (10 Nov 2026) raises four cautions this page also carries:
+    the USD 50,000 convenience amount is <em>not</em> automatic for a foreign passport holder; a Chinese tax
+    certificate is evidence, not a new tax; whether converting your CNY is “personal” for §988 purposes is
+    fact-specific and unknown here; and every figure below is a China-side cost that still needs a written bank
+    quote. Automated source-link checks do not substitute for that quote.</p>
+  </div>
 
   <div class="answer">
     <h2>The short answer</h2>
