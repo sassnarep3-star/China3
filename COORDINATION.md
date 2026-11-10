@@ -960,3 +960,47 @@ files touched are `index.html` (through its generator `scripts/build_dashboard.p
 step below adds a link to it from the landing page rather than absorbing or deleting it.
 
 - 2026-11-10T09:5xZ (claim): scope written and pushed before any other edit.
+
+### C3X-1…C3X-4 — done (what was built, and what was checked)
+
+**Sources.** 16 official documents were fetched and read in full on 2026-11-10; each carries a verbatim
+excerpt in `data/c3x_sources.csv` and on `c3x-sources.html`: S01 BOC FX board (stamp **17:39:58 Beijing**) ·
+S02 BOC personal e-banking tariff · S03 SAFE Tianjin 2024-02-29 (art. 64) · S04 SAFE Tianjin 2024-06-21
+(art. 59) · S05 State Council Order 532 (full text) · S06 PBC Announcement [2004] No. 16 (full text) ·
+S07 汇发〔2014〕2号 §6 · S08 PRC IIT Law arts. 3/6/7/13 · S09 26 U.S.C. §988 (GPO) · S10 31 CFR 1010.821 ·
+S11 IRS yearly average rates · S12 IRS 8938/FBAR comparison · S13 FinCEN FBAR · S14 CBP currency reporting ·
+S15 汇发〔2017〕29号 · S16 SAFE Tianjin **2026-07-13** on a foreign individual remitting labour remuneration.
+
+**Figures re-derived (not copied).** Board 17:39:58 → bid 6.6571, ask 6.6851, mid 6.6711; half-spread
+0.2094%; wire 1‰ min ¥50 max ¥260 + ¥150 cable. $53.38 on $10,000 (0.5338%) · $166.04 on $50,000 ·
+$899.01 on $400,000 (0.2248%) · $1,328.33 if split into eight $50,000 transfers. The ¥260 cap binds at
+$38,862. §988 gain 7.0093% of USD received at the 2024 IRS average (7.189) → $10,373.79 at 37% on $400,000;
+the $200 exclusion covers ≈ $2,853 converted.
+
+**A prior disagreement closed, not deleted.** `cost-tables.html` prices the $400,000 case as one transfer,
+`d646-costs.html` as eight. S03 settles the legal question: above USD 50,000 a day the rule requires
+*documents*, not splitting. The canonical edition therefore shows **both** columns, labels which is a fee
+assumption, and leaves both earlier pages in place (F10).
+
+**Verification performed.** `scripts/verify_c3x_site.py` re-implements the arithmetic rather than importing
+it: it re-derives all 40 ladder rows and all 200 priced method rows to the cent, checks that all 360 blank
+rows carry a live flag id, enforces an official-domain allowlist on every URL, resolves every local link and
+anchor across the seven pages, and fails if a page on disk differs from a fresh build. All eight inherited
+validators still pass on the combined tree (`validate_data`, `verify_deep`, `check_links`, `test_costs`,
+`verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_s775_site`) plus `verify_dashboard`.
+CI: `.github/workflows/c3x-verify.yml`.
+
+**Irregularities / limitations (published on `c3x-flagged.html`, non-blocking).** F01 facts not supplied ·
+F02 the "considerable taxes" premise is unevidenced · F03 §988 basis unknown, so the tax line is a
+sensitivity · F04 PRC property tax base unknown · F05 unpublished prices and limits left blank (card FX
+rate, ATM fee, PRC cash-export figure, convenience-amount figure) · F06 every total is China-side · F07 one
+timestamped board reading, which moved during the day (07:32:39 vs 17:39:58) · F08 two official definitions
+of 境内个人 · F09 absence of a conversion tax is not a clearance · F10 parallel editions disagree at
+$400,000 · F11 prohibited routes catalogued, not priced · F12 research, not advice · F13 the willful-FBAR
+percentage-of-balance alternative in 31 U.S.C. 5321(a)(5)(C) was not re-read · F14 no tax-treaty analysis.
+
+**Shared files touched, additively.** `index.html` is regenerated from `scripts/build_dashboard.py` (its
+generator, per D646-IR-003): a "Start here" band and three cards were added, and the two parallel-session
+banners were **moved**, not removed, into a new "Parallel editions kept on this page" section below the
+page map. `README.md` and `EXECUTIVE_SUMMARY.md` gained one section each. No other session's page, data file,
+script or stylesheet was modified.
