@@ -651,3 +651,17 @@ presented as optional and conditional rather than added to every total.
 - **Follow-up:** a cosmetic pass (unit handling in the register's value column, label of the collapsed
   quotation) and this record were sent as a documentation-only PR on the same fixed branch. No figure,
   page or check changed in that pass.
+
+---
+
+## Session `arena/d00c14cb-china3` — `/docs/` structured dashboard, `data/*.json` & legacy root editorial updates (2026-11-10)
+
+Branch: `arena/d00c14cb-china3` (Arena-fixed session branch; rebased/fast-forwarded onto `main` at `e7537c8` after PR #27).
+
+### Claim (strictly non-overlapping with `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, cost tables, `s436`, `d646`, `cn3`, `deep-*`, `a15`, `fbbd3b22`)
+
+| ID | Task | File scope | Status | Notes |
+|---|---|---|---|---|
+| D00C-1 | Update `/docs/` structured JSON pipeline (`data/*.json`, `scripts/build_site.py`, `docs/assets/app.js`, rebuilt `docs/*`), `VERIFICATION.md`, and `REPO_AUDIT.md` against 2026-11-10 primary official sources | `data/{sources,channels,taxes,penalties,flagged}.json`, `scripts/build_site.py`, `docs/assets/app.js`, `docs/assets/data.js`, `docs/*.html`, `VERIFICATION.md`, `REPO_AUDIT.md` | in progress | Fixes repealed 2004 emigrant staging & >RMB 500k SAFE HQ escalation via `汇发〔2014〕2号` & `汇发〔2024〕12号` §6.4; replaces third-party Cornell LII mirrors (`§ 988`, `§ 5321`) with official `govinfo.gov` + `irs.gov/publications/p525` (`>$200` personal FX gain = capital gain); populates verified Form 8938 (`§ 6038D`) penalties, CMIR (`§§ 5317, 5321(a)(2), 5322`), `财税〔2008〕132号` savings interest exemption, `财税字〔1994〕20号` / `STA/SAFE [2021] No. 19` dividend rules, WMC 2.0 RMB 3M quota, BOC personal tariff/FX board baseline (preserving corporate-only `$15/$25 OUR` & unverified spread/intermediary warnings), `2026` FEIE `$132,900` / gift `$19,000`, and foreign permanent-resident-ID distinction. |
+| D00C-2 | Remediate verified legal/source defects across unclaimed legacy root editorial pages while preserving existing `deep-*` integration notices and `.github/workflows/pages.yml` local links | `china-rules.html`, `penalties.html`, `routes.html`, `tax.html`, `review.html`, `sources.html`, `COORDINATION.md` | in progress | Fixes `tax.html` `"Amsterdam location"` typo; replaces repealed `汇发〔2009〕56号` (`routes.html`), repealed `USD 200k` criminal FX threshold & `sc.com`/`hsbc.com.cn`/`ecovis.com` secondary claims (`china-rules.html`, `penalties.html`), `§ 988(e)` `"Ordinary income tax"` error (`penalties.html`), `"no official source found"` BOC wire tariff claim, dead IRS comparison URL, and `2026-11-11` BOC ATM fee update. Zero edits to `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `verify-2026.html`, `guide.html`, `a15-review.html`, or any sibling CSV/cost/dashboard files. |
+
