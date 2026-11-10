@@ -1,0 +1,38 @@
+name: Final integration verification
+
+on:
+  push:
+    branches: [main, arena/6907147a-china3]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate inherited data and generated site
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/build_site.py
+          python3 scripts/check_links.py
+          python3 scripts/verify_deep.py
+      - name: Verify inherited cost models
+        run: |
+          python3 scripts/test_costs.py
+          python3 scripts/build_cost_tables.py
+          python3 scripts/verify_cost_tables.py
+          python3 scripts/build_cross_session_review.py --check
+      - name: Rebuild and verify corrected primary schedule
+        run: |
+          python3 scripts/build_s436_site.py
+          python3 scripts/verify_s436_site.py
+          python3 scripts/verify_final_integration.py
+      - name: Confirm generated artifacts and patch hygiene
+        run: |
+          git diff --exit-code
+          git diff --check
