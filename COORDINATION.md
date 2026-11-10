@@ -770,6 +770,20 @@ now includes `fbbd3b22`'s `verify-2026.html`, `a15-review.html` and `assets/dash
   quotation) and this record were sent as a documentation-only PR on the same fixed branch. No figure,
   page or check changed in that pass.
 
+ HEAD
+### Final record — PR #27 (presentation follow-up)
+
+- **PR:** https://github.com/sassnarep3-star/China3/pull/27 — **MERGED** 2026-11-10T01:12:06Z via
+  `gh pr merge 27 --merge`. Merge commit `e7537c87850b59f66a68a85169e09708b38bd4f2`.
+- Seven checks passed, `deploy` skipped on the PR as expected. Post-merge `main` runs: all `success`;
+  Pages API `built`.
+- Live confirmation with a cache-busting URL: https://sassnarep3-star.github.io/China3/verify-2026.html?v=e7537c8
+  — the 17 records render with "official wording" quotations and the de-duplicated value column, so the
+  deployed artifact is the merged one and not a stale edge copy.
+- **Board convention from here:** this entry is the terminal record. Any later session should append its
+  own block rather than re-recording these PRs, so the chain of "a PR that documents the previous PR"
+  does not continue indefinitely.
+
 ### D646 round 3 — final merge resolution (2026-11-10)
 
 `main` advanced twice more while this PR was open (PR #27, `arena/fbbd3b22-china3`). Resolutions, again keeping
