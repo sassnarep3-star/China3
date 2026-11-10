@@ -78,7 +78,7 @@ def q2(x):
 
 # ------------------------------------------------------------- 1. shape
 files = {
-    "s775_sources.csv": 51, "s775_methods.csv": 24, "s775_penalties.csv": 23,
+    "s775_sources.csv": 52, "s775_methods.csv": 24, "s775_penalties.csv": 23,
     "s775_cost_10k_400k.csv": 40, "s775_method_summary.csv": 24,
     "s775_steps.csv": 68, "s775_flags.csv": 18,
 }
