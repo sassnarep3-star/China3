@@ -128,7 +128,7 @@ corrected here, not silently changed:
   Tables that still price the emigrant route with a two-year stage are superseded.
 - **The BOC personal transfer tariff is effective 2014-11-01**, not 2024-11-01.
 
-Twenty-six further flags — every blank, every assumption, the residency question, the missing
+Twenty-seven further flags — every blank, every assumption, the residency question, the missing
 U.S. bank fee, the unverified treaty rate, the PRC absence-of-provision finding — are listed with
 their handling on [`cn3-review.html`](cn3-review.html). None of them blocks the analysis; each is
 marked *needs review*.
@@ -136,14 +136,14 @@ marked *needs review*.
 ## 8. Method and limits
 
 - **Freshly fetched on 2026-11-10:** BOC FX board; BOC personal transfer tariff; BOC ATM tariff
-  (effective 2026-11-11); SAFE 2022 convenience-amount Q&A; Huifa [2014] No. 2; SAFE 2025 watch-list
-  Q&A; the FX Regulations (State Council Order 532); PBC [2004] No. 16; the PRC Individual Income
-  Tax Law; IRS yearly average rates; 26 USC §988; 31 CFR 1010.821; the IRS 8938/FBAR comparison; IRS
-  gifts from a foreign person.
+  (effective 2026-11-11); SAFE 2022 convenience-amount Q&A; the personal-FX implementation rules
+  (Huifa [2007] No. 1, as amended); the overseas-ATM cash notice (Huifa [2017] No. 29); Huifa [2014]
+  No. 2; SAFE 2025 watch-list Q&A; SAFE 2026 foreign-individual salary Q&A; the FX Regulations (State
+  Council Order 532); PBC [2004] No. 16; the PRC Individual Income Tax Law; IRS yearly average rates;
+  26 USC §988; 31 CFR 1010.821; the IRS 8938/FBAR comparison; IRS gifts from a foreign person.
 - **Carried forward** from prior sessions' registers, with the official URL and recorded excerpt:
-  the personal-FX implementation rules, the ATM cash notice, the cash-carry rule, CBP currency
-  reporting, the SAFE salary-conversion Q&A, the tax-recordal rule, the 2026 virtual-currency notice,
-  and the split-transaction enforcement cases.
+  the cash-carry rule, CBP currency reporting, the tax-recordal rule, the 2026 virtual-currency
+  notice, and the split-transaction enforcement cases.
 - **Blank by design:** U.S. receiving-bank fee, correspondent deduction, card-network spread, PRC
   property-gain tax, treaty dividend rate, offshore CNH price, fintech price.
 - **This is research, not advice.** Tax outcomes depend on facts this pack does not have. Confirm with
