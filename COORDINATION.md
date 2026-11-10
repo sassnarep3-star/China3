@@ -1048,3 +1048,18 @@ Existing claimed scopes and open PRs are preserved; no sibling-owned generator/d
 - All inherited verification scripts plus test_costs, validate_data and check_links passed. `scripts/verify_completion.py` independently regenerates this supplemental audit and confirms 40 blank all-in totals. No claim of every inherited statement being freshly verified.
 - Irregularities **needs review**, published at `completion-audit.html#flags`: future inherited S41 timestamp, moving FX snapshot, arithmetic versus official-quote distinction, unknown tax/fees/eligibility. Prior flags preserved. README adds a discoverable link without editing sibling-owned landing-page generators.
 - Concurrent main update during integration caused an append-only COORDINATION conflict. Resolved by retaining both sessions' entries, removing only conflict markers; no other session's content discarded. PR: https://github.com/sassnarep3-star/China3/pull/37. Rebased claim requires lease-protected update of this session branch only.
+
+### C3X-6 — pull request
+
+- **PR:** https://github.com/sassnarep3-star/China3/pull/40 — `arena/2c8d441e-china3` → `main`.
+  Title: "Canonical edition: 16-document verified CNY→USD answer, $10k–$400k ladder, clean 7-page dashboard".
+- First check batch: all data/verification jobs green (`C3X data contract`, `Data contract and link check`,
+  `Dashboard rows`, `Cost model`, `S775`, `deep-research`, `cross-session-review`, `costs`, `verify`). The Pages
+  `build` job was **cancelled, not failed** — annotation: *"Canceling since a higher priority waiting request for
+  pages exists"* — because sibling session `058d6cd7` pushed to its own branch seconds later and the repo-wide
+  `pages` concurrency group gave that run priority. This is the same class of issue already logged as IR-003.
+  Re-triggered by this record commit; the build is re-checked before merge.
+- 2026-11-10: `origin/main` advanced to `89d029e` (PR #37) during this session. Merged here with **both**
+  `COORDINATION.md` records retained verbatim (only the conflict markers removed). The three sibling review pages
+  merged in that PR (`a058-flagged-review.html`, `a502-review.html`, `completion-audit.html`) are now linked from
+  the landing page as their sessions requested.
