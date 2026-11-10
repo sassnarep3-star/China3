@@ -1,0 +1,45 @@
+name: Verify C3X canonical edition
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: C3X data contract, arithmetic and links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild the data files from the engine
+        run: python3 scripts/c3x_engine.py
+
+      - name: Rebuild the c3x pages
+        run: python3 scripts/build_c3x_site.py
+
+      - name: Fail if the committed CSVs or pages were stale
+        run: |
+          if ! git diff --quiet -- data/c3x_*.csv c3x-*.html assets/c3x.css; then
+            echo "::error::C3X data or pages are out of date. Run scripts/c3x_engine.py and scripts/build_c3x_site.py, then commit."
+            git diff --stat -- data/c3x_*.csv c3x-*.html assets/c3x.css
+            exit 1
+          fi
+
+      - name: Independent re-derivation, source domain and link audit
+        run: python3 scripts/verify_c3x_site.py
+
+      - name: All inherited validators still pass
+        run: |
+          for v in validate_data verify_deep check_links test_costs verify_cost_tables verify_s436_site verify_d646_site verify_s775_site verify_dashboard; do
+            echo "== scripts/$v.py"
+            python3 "scripts/$v.py" > /tmp/out.txt 2>&1 || { tail -30 /tmp/out.txt; exit 1; }
+            tail -1 /tmp/out.txt
+          done

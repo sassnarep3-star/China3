@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification register — every number traced to a primary source</title>
+<meta name="description" content="Line-by-line register for the CNY to USD answer: 16 primary sources with verbatim quotes and fetch timestamps.">
+<link rel="stylesheet" href="assets/a513.css">
+</head>
+<body>
+<header class="top"><div class="wrap top-in">
+  <a class="brand" href="a513.html">CNY&nbsp;→&nbsp;USD<span>·</span>verified answer</a>
+  <nav class="nav" aria-label="Main">
+      <a href="a513.html#answer">Answer</a>
+      <a href="a513.html#costs">Costs</a>
+      <a href="a513.html#methods">Methods</a>
+      <a href="a513.html#penalty">Penalty anatomy</a>
+      <a href="a513.html#tax">U.S. tax</a>
+      <a href="a513-steps.html">Steps</a>
+      <a href="a513-verify.html">Verification</a>
+      <a href="a513.html#flags">Flags</a>
+      <a href="a513.html#archive">Archive</a>
+      <a href="index.html">All pages</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+<section class="hero">
+  <p class="eyebrow">Verification · 2026-11-10T18:05Z</p>
+  <h1>Sixteen rows, sixteen primary documents, quoted verbatim.</h1>
+  <p class="lede">Each row below is a proposition this site relies on, the official page that decides it, the exact
+  substring that carries the value, and the moment it was fetched. Anything not on this list is either computed
+  arithmetic or blank and flagged — no figure was carried over from a search snippet, a blog, or another page in this
+  repository.</p>
+  <p class="note">Machine-readable: <a href="data/a513_verification.csv">data/a513_verification.csv</a> ·
+  inputs and their evidence: <a href="data/a513_inputs.csv">data/a513_inputs.csv</a>.
+  The build refuses to run if a value's evidence string is not literally present in its source quote.</p>
+</section>
+
+<section>
+  <div class="tablewrap">
+  <table class="methods verify">
+    <thead><tr><th scope="col">ID</th><th scope="col">Institution</th><th scope="col">Document</th>
+      <th scope="col">What it settles</th><th scope="col">Value taken</th><th scope="col">Verbatim quote</th>
+      <th scope="col">Fetched</th><th scope="col">Verdict</th></tr></thead>
+    <tbody>
+    <tr><th scope="row"><span class="fid">V01</span></th><td data-l="Institution">Bank of China</td><td data-l="Document"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">中国银行外汇牌价 (FX board), USD row</a></td><td data-l="What it settles">Board prices used by the cost ladder</td><td data-l="Value taken"><code>ask 6.6851 / bid 6.6571 / parity 6.7167 CNY per USD; board stamp 2026/11/10 17:39:58</code></td><td data-l="Verbatim quote" class="quote">美元 | 现汇买入价 665.71 | 现钞买入价 665.71 | 现汇卖出价 668.51 | 现钞卖出价 668.51 | 中行折算价 671.67 | 发布日期 2026/11/10 | 发布时间 17:39:58</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V02</span></th><td data-l="Institution">Bank of China</td><td data-l="Document"><a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">中国银行电子银行个人服务转账汇款费率表 (personal e-banking transfer tariff)</a></td><td data-l="What it settles">Outward telegraphic-transfer fee and cable charge</td><td data-l="Value taken"><code>1 per mille, min CNY 50, max CNY 260 per transfer; cable CNY 150 (non-HK/MO/TW) or CNY 80 (HK/MO/TW); effective 2014-11-01</code></td><td data-l="Verbatim quote" class="quote">跨境汇款（电汇）每笔汇款金额的1‰，最低收取50元/笔，最高收取260元/笔；另收电讯费，港澳台地区人民币80元/笔，非港澳台地区人民币150元/笔。</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V03</span></th><td data-l="Institution">Bank of China</td><td data-l="Document"><a href="https://www.boc.cn/pbservice/bi2/201412/t20141231_4404048.html" target="_blank" rel="noopener">关于调整部分个人业务收费标准的公示 (全额到账 / OUR tariff, personal)</a></td><td data-l="What it settles">Full-amount-received (OUR) surcharge on a personal outward wire</td><td data-l="Value taken"><code>USD 15 per transfer where the receiving bank holds an account at BOC New York branch, otherwise USD 25; charged on top of the wire fee and cable charge; effective 2015-04-01; only applies where at least one intermediary bank is needed</code></td><td data-l="Verbatim quote" class="quote">在收取个人汇出境外汇款电汇手续费、电讯费基础上，按以下标准加收：1、美元：收款行在我行纽约分行开立账户的，15美元/笔，其他均为25美元/笔</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V04</span></th><td data-l="Institution">SAFE Ningxia</td><td data-l="Document"><a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener">2022年外汇业务政策释疑（八） (annual convenience amount Q&amp;A)</a></td><td data-l="What it settles">What the USD 50,000 annual convenience amount is and is not</td><td data-l="Value taken"><code>Convenience amount = USD 50,000 equivalent per person per year; it is NOT an annual ceiling on conversion; above it, ID plus source-of-funds or purpose documents are required</code></td><td data-l="Verbatim quote" class="quote">年度便利化额度不是个人每年购汇或者结汇的限额，只是超过等值5万美元的购汇或结汇不能仅凭本人有效身份证件办理</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V05</span></th><td data-l="Institution">State Council (Order 532)</td><td data-l="Document"><a href="https://www.safe.gov.cn/safe/2008/0806/5321.html" target="_blank" rel="noopener">中华人民共和国外汇管理条例 第三十九条 (evasion of FX controls)</a></td><td data-l="What it settles">Administrative penalty for 逃汇</td><td data-l="Value taken"><code>Order to repatriate; fine up to 30% of the amount; 30% to 100% if serious; criminal liability if it constitutes a crime</code></td><td data-l="Verbatim quote" class="quote">责令限期调回外汇，处逃汇金额30%以下的罚款；情节严重的，处逃汇金额30%以上等值以下的罚款</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V06</span></th><td data-l="Institution">State Council (Order 532)</td><td data-l="Document"><a href="https://www.safe.gov.cn/safe/2008/0806/5321.html" target="_blank" rel="noopener">中华人民共和国外汇管理条例 第四十五条 (private FX trading)</a></td><td data-l="What it settles">Administrative penalty for private/quasi FX trading</td><td data-l="Value taken"><code>Warning, confiscation of illegal gains, fine up to 30% of the amount; 30% to 100% if serious; criminal liability if it constitutes a crime</code></td><td data-l="Verbatim quote" class="quote">私自买卖外汇、变相买卖外汇、倒买倒卖外汇或者非法介绍买卖外汇数额较大的，由外汇管理机关给予警告，没收违法所得，处违法金额30%以下的罚款</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V07</span></th><td data-l="Institution">SAFE</td><td data-l="Document"><a href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" target="_blank" rel="noopener">汇发〔2014〕2号 第六条 (emigrant / inheritance property transfer)</a></td><td data-l="What it settles">How an approved emigrant property transfer is remitted</td><td data-l="Value taken"><code>SAFE approval at the original household-registration location; RMB 500,000 filing threshold cancelled; funds may be remitted in one or several instalments within the approved amount</code></td><td data-l="Verbatim quote" class="quote">取消移民财产转移分次汇出的要求。申请人向原户籍所在地外汇局办理移民财产转移核准手续后，银行可在核准件审批额度内一次或分次汇出相关资金</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V08</span></th><td data-l="Institution">SAFE</td><td data-l="Document"><a href="https://www.safe.gov.cn/hubei/2019/0305/851.html" target="_blank" rel="noopener">汇发〔2017〕29号 (overseas card cash withdrawals)</a></td><td data-l="What it settles">Annual and daily limits on overseas ATM cash from a mainland card</td><td data-l="Value taken"><code>CNY 100,000 equivalent per natural year across all cards in the person&#x27;s name; CNY 10,000 equivalent per card per day; over-quota suspends the current and the following year</code></td><td data-l="Verbatim quote" class="quote">本人名下银行卡（含附属卡）合计每个自然年度不得超过等值10万元人民币。超过年度额度的，本年及次年将被暂停持境内银行卡在境外提取现金</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V09</span></th><td data-l="Institution">SAFE Hebei</td><td data-l="Document"><a href="http://www.safe.gov.cn/hebei/2019/0521/1366.html" target="_blank" rel="noopener">外汇知识问答：每次可带外币出境的限额是多少？</a></td><td data-l="What it settles">Cash-carry limits for foreign currency leaving China</td><td data-l="Value taken"><code>Up to USD 5,000: customs release; USD 5,000-10,000: bank-issued 携带外汇出境许可证; above USD 10,000: SAFE permit and in principle not allowed</code></td><td data-l="Verbatim quote" class="quote">个人携带外币现钞金额在5000美元（含）以下的，海关直接放行；5000美元以上10000美元（含）以下的，应向银行申领《携带外汇出境许可证》；10000美元以上的，应向外汇局申领《携带外汇出境许可证》但原则上……不得携带10000美元以上的外币现钞出境。</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V10</span></th><td data-l="Institution">STA</td><td data-l="Document"><a href="https://www.chinatax.gov.cn/chinatax/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">中华人民共和国个人所得税法 第三条 (IIT rates)</a></td><td data-l="What it settles">PRC income-tax rates that can attach to the money before it is converted</td><td data-l="Value taken"><code>Comprehensive income 3%-45% progressive; interest, dividends, property rental, property transfer and incidental income 20% proportional</code></td><td data-l="Verbatim quote" class="quote">利息、股息、红利所得，财产租赁所得，财产转让所得和偶然所得，适用比例税率，税率为百分之二十</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V11</span></th><td data-l="Institution">STA</td><td data-l="Document"><a href="https://www.chinatax.gov.cn/chinatax/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">中华人民共和国个人所得税法 第十条(五)、第十三条 (tax clearance on emigration)</a></td><td data-l="What it settles">Whether an emigrating PRC tax resident must settle tax before leaving</td><td data-l="Value taken"><code>A tax filing is required where the person cancels PRC household registration on emigrating; tax clearance must be completed before the cancellation</code></td><td data-l="Verbatim quote" class="quote">纳税人因移居境外注销中国户籍的，应当在注销中国户籍前办理税款清算</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V12</span></th><td data-l="Institution">IRS</td><td data-l="Document"><a href="https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements" target="_blank" rel="noopener">Comparison of Form 8938 and FBAR requirements</a></td><td data-l="What it settles">FBAR and Form 8938 thresholds and 8938 penalty</td><td data-l="Value taken"><code>FBAR: aggregate value exceeds USD 10,000 at any time in the calendar year; 8938 thresholds for a single US-resident filer USD 50,000 year-end / USD 75,000 any time; 8938 penalty up to USD 10,000 plus USD 10,000 per 30 days, max USD 60,000</code></td><td data-l="Verbatim quote" class="quote">Aggregate value of financial accounts exceeds $10,000 at any time during the calendar year. […] Penalties: Up to $10,000 for failure to disclose and an additional $10,000 for each 30 days of non-filing after IRS notice of a failure to disclose, for a potential maximum penalty of $60,000</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V13</span></th><td data-l="Institution">FinCEN / eCFR</td><td data-l="Document"><a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">31 CFR 1010.821 penalty table</a></td><td data-l="What it settles">Current inflation-adjusted FBAR civil penalty maxima</td><td data-l="Value taken"><code>Willful violation of a foreign financial agency transaction: USD 165,353; non-willful: USD 16,536; amounts applicable to penalties assessed on or after 2025-01-17; eCFR text current as of 2026-11-06</code></td><td data-l="Verbatim quote" class="quote">31 U.S.C. 5321(a)(5)(C)(i)(I) | Foreign Financial Agency Transaction—Willful Violation of Transaction | 100,000 | 165,353</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V14</span></th><td data-l="Institution">U.S. CBP</td><td data-l="Document"><a href="https://www.cbp.gov/travel/international-visitors/money-monetary-instruments" target="_blank" rel="noopener">Money and Other Monetary Instruments</a></td><td data-l="What it settles">Reporting requirement for cash entering or leaving the United States</td><td data-l="Value taken"><code>More than USD 10,000 at one time, into or out of the United States, must be reported on FinCEN Form 105; the threshold applies to a family or group collectively</code></td><td data-l="Verbatim quote" class="quote">Anyone who brings, sends, or receives currency or monetary instruments totaling more than $10,000 at one time, either into or out of the United States, must report it</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V15</span></th><td data-l="Institution">U.S. Congress (govinfo)</td><td data-l="Document"><a href="https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm" target="_blank" rel="noopener">26 U.S.C. § 988(e) personal transactions</a></td><td data-l="What it settles">When converting your own currency escapes U.S. currency-gain recognition</td><td data-l="Value taken"><code>For an individual&#x27;s personal transaction, no gain is recognized from exchange-rate changes between acquisition and disposition unless the gain would exceed USD 200</code></td><td data-l="Verbatim quote" class="quote">The preceding sentence shall not apply if the gain which would otherwise be recognized on the transaction exceeds $200</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr><tr><th scope="row"><span class="fid">V16</span></th><td data-l="Institution">U.S. Congress (govinfo)</td><td data-l="Document"><a href="https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm" target="_blank" rel="noopener">26 U.S.C. § 988(c)(1)(C) disposition of nonfunctional currency</a></td><td data-l="What it settles">Whether selling CNY for USD is a section 988 transaction at all</td><td data-l="Value taken"><code>The disposition of nonfunctional currency is a section 988 transaction and the resulting gain or loss is foreign currency gain or loss, subject to the § 988(e) personal-transaction rule</code></td><td data-l="Verbatim quote" class="quote">In the case of any disposition of any nonfunctional currency— (I) such disposition shall be treated as a section 988 transaction</td><td data-l="Fetched">2026-11-10T18:05Z</td><td data-l="Verdict"><span class="tag ok">verified</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>How the numbers were checked</h2>
+  <ol class="steps">
+    <li><strong>Fetch, do not recall.</strong> Every row was opened on 2026-11-10T18:05Z. Chinese-language pages are quoted in the
+      original and paraphrased in English beside the quote, so a reader can check the translation.</li>
+    <li><strong>One value, one substring.</strong> <code>data/a513_inputs.csv</code> names the register row and the exact
+      characters that carry each number. <code>scripts/build_a513.py</code> aborts if the substring is absent.</li>
+    <li><strong>Re-derive, do not copy.</strong> <code>scripts/verify_a513.py</code> recomputes all 40 increments with a
+      different arrangement of the same published inputs and fails on a one-cent difference.</li>
+    <li><strong>Blank beats plausible.</strong> Counter cash rates, receiving-bank fees, correspondent deductions,
+      SAFE approval fees and platform margins have no official price. They are blank, and flagged.</li>
+    <li><strong>No bank quote exists for this person.</strong> The tariff is published; the branch's execution rate is
+      not. Treat every figure as the published floor or ceiling it is, and ask for the quote in writing.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Limits of this verification</h2>
+  <ul class="flags">
+    <li><span class="fid">L1</span> The BOC board moves during the day. The prices here are the 2026-11-10 17:39:58
+      stamp; an earlier snapshot in this repository (07:32 China time) had ask 6.6903 and parity 6.7188. Same structure,
+      different cents.</li>
+    <li><span class="fid">L2</span> eCFR is authoritative but not an official legal edition; the FBAR maxima shown are the
+      amounts for penalties assessed on or after 2025-01-17, which is the current table.</li>
+    <li><span class="fid">L3</span> The SAFE pages used are provincial-branch publications (Ningxia, Hebei) and a
+      Tianjin republication of 汇发〔2014〕2号. They quote the national instruments; confirm branch practice locally.</li>
+    <li><span class="fid">L4</span> The 2026 Chinese crypto circular and the payment-institution rules were not re-fetched
+      for this page; the crypto prohibition is therefore described only as it appears in the earlier S775 catalogue.</li>
+    <li><span class="fid">L5</span> No account statement, tax return or bank quote was supplied, so no statement here is
+      personalised.</li>
+  </ul>
+</section>
+</main>
+
+<footer class="wrap foot">
+  <p><strong>Built 2026-11-10T18:05Z</strong> · section <code>a513</code> of this repository ·
+  every figure above is either computed from the register in <code>data/a513_inputs.csv</code> or left blank and flagged.</p>
+  <p>Research, not advice. No bank quote, account statement or tax return was supplied, so no figure here is a quote for a
+  particular person. Check the linked official page before acting, and get the bank's written quote for the branch that will
+  execute the transfer.</p>
+</footer>
+<script src="assets/a513.js"></script>
+</body>
+</html>

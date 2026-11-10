@@ -4,7 +4,13 @@ A sourced research pack and two-part website answering one question:
 
 > Personal money is sitting in a Chinese bank account and cannot be turned into USD without what looks like a large tax hit. What are the lawful ways to convert it, what does each really cost, and what is the least-penalty path for a US citizen?
 
-**Start here →** [dashboard](https://sassnarep3-star.github.io/China3/) ·
+**Start here →** [canonical edition, 2026-11-10](https://sassnarep3-star.github.io/China3/c3x-summary.html) ·
+[the consolidated verified answer, 10 Nov 2026 18:05Z](https://sassnarep3-star.github.io/China3/a513.html)
+· [verification register, 16 primary documents, verbatim quotes](https://sassnarep3-star.github.io/China3/a513-verify.html)
+· [step-by-step playbooks](https://sassnarep3-star.github.io/China3/a513-steps.html)
+(register `data/a513_verification.csv`; gate: `python3 scripts/verify_a513.py`, CI `.github/workflows/a513-verify.yml`)
+
+Earlier passes: [dashboard](https://sassnarep3-star.github.io/China3/) ·
 [verification register, 10 Nov 2026](https://sassnarep3-star.github.io/China3/verify-2026.html) ·
 [cost tables](https://sassnarep3-star.github.io/China3/cost-tables.html) ·
 [independent 2026-11-10 refresh](https://sassnarep3-star.github.io/China3/d646-summary.html) ·
@@ -22,6 +28,33 @@ A sourced research pack and two-part website answering one question:
 · editorial guide at `/`
 · structured dashboard at [`/docs/`](https://sassnarep3-star.github.io/China3/docs/)
 (published by GitHub Pages from `main`, root path).
+
+---
+
+## Canonical edition (2026-11-10, session `arena/2c8d441e-china3`)
+
+A single clean answer path, built independently of every earlier pass and readable on a phone:
+
+| Page | What it is |
+|---|---|
+| [`c3x-summary.html`](c3x-summary.html) | **Start here.** The short answer, the routes ranked by tax and penalty exposure, six cost anchors, and a four-question test that picks your route. |
+| [`c3x-costs.html`](c3x-costs.html) | The full $10,000 → $400,000 ladder in $10,000 steps, one transfer vs eight, plus all 14 methods at six amounts. |
+| [`c3x-methods.html`](c3x-methods.html) | All 14 routes with pros, cons, lawfulness and eligibility. |
+| [`c3x-steps.html`](c3x-steps.html) | Step-by-step playbook, document by document, per route. |
+| [`c3x-tax.html`](c3x-tax.html) | §988, FBAR, Form 8938, the PRC 20%, and every Order 532 sanction with its ceiling. |
+| [`c3x-flagged.html`](c3x-flagged.html) | 14 flags: every blank, every ambiguity, every premise that could not be checked. |
+| [`c3x-sources.html`](c3x-sources.html) | 16 official documents with verbatim quotes and fetch dates. |
+
+**Headline, all recomputed from the board reading of 2026-11-10 17:39:58 Beijing** (bid 6.6571, ask 6.6851):
+$53.38 on $10,000 (0.5338%), $166.04 on $50,000, $899.01 on $400,000 (0.2248%), or $1,328.33 if split into
+eight $50,000 transfers. The U.S. §988 currency gain is the real conversion tax: 7.0093% of the dollars
+received if the CNY was acquired at the 2024 IRS average, i.e. $10,373.79 of federal tax at 37% on
+$400,000 — identical for every lawful channel.
+
+Verification: `python3 scripts/c3x_engine.py && python3 scripts/build_c3x_site.py && python3 scripts/verify_c3x_site.py`;
+CI `.github/workflows/c3x-verify.yml`. The verifier re-implements the arithmetic instead of importing it,
+re-derives all 40 ladder rows and 200 priced method rows to the cent, and fails on a stale page.
+Method, formulas and the reading trail: [`research/c3x-verification.md`](research/c3x-verification.md).
 
 ---
 
@@ -217,3 +250,8 @@ account balance; and `银发〔2026〕42号` repealed `银发〔2021〕237号`.
 ## Final integration addendum (2026-11-10, session `arena/3fcb5029-china3`)
 
 Additive only. New page [`us-fx-gain.html`](us-fx-gain.html) quantifies the potential U.S. §988 foreign-currency-gain tax on converting appreciated CNY at every $10,000 step from $10,000 to $400,000 (cross-session finding **X-11**), derived solely from recorded official values (IRS yearly averages, the dated 2026-11-09 BOC board, 26 U.S.C. §988 via govinfo, IRS Pub. 525/54). Editorial corrections applied: methods/us-tax wording on "not a taxable event" (X-06), the cash-carry limits row (X-08), the §988 personal-transaction character marked conditional in `data/penalty.csv` P25 / US-rules U17 / findings F22 (X-07), the BOC 全额到账 quote completed in P11 (X-05, corporate tariff; personal e-banking applicability still flagged unverified), and the BOC tariff date typo `2024-11-01` → `2014-11-01` (X-14, values unchanged). Flags IR-012 (board half-spread 0.2104%) and IR-015 (CFETS parity 6.7188 for 2026-11-09) are annotated as narrowed/closed for that date; both stay `needs review`. Open PRs #15 (flagged X-15/X-16), #18, #8 and #6 were left open for their owners; this session merged none of them.
+
+### Independent completion audit (10 November 2026)
+
+[Fresh official-source spot-check, executive conclusions, 40 fee-only illustrations and Flagged for Review](completion-audit.html).
+This audit separates inherited evidence from five newly read official pages and leaves unverified all-in costs blank. It does not certify every inherited legal statement.

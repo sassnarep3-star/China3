@@ -1,0 +1,23 @@
+field,value,unit,source_id,evidence
+ask_cny_per_usd,6.6851,CNY per USD (board 现汇卖出价 / 100),V01,668.51
+bid_cny_per_usd,6.6571,CNY per USD (board 现汇买入价 / 100),V01,665.71
+parity_cny_per_usd,6.7167,CNY per USD (board 中行折算价 / 100),V01,671.67
+board_stamp,2026-11-10 17:39:58,board date and time,V01,17:39:58
+wire_rate,0.001,fraction of the CNY amount per transfer,V02,1‰
+wire_min_cny,50,CNY per transfer,V02,最低收取50元/笔
+wire_max_cny,260,CNY per transfer,V02,最高收取260元/笔
+cable_other_cny,150,CNY per transfer (non-HK/MO/TW),V02,非港澳台地区人民币150元/笔
+cable_hmt_cny,80,CNY per transfer (HK/MO/TW),V02,港澳台地区人民币80元/笔
+our_usd_other,25,USD per transfer to any other US bank,V03,其他均为25美元/笔
+our_usd_bocny,15,USD per transfer where the receiving bank banks with BOC New York,V03,15美元/笔
+convenience_usd,50000,USD equivalent per person per year,V04,等值5万美元
+atm_year_cny,100000,CNY equivalent per natural year across all cards,V08,合计每个自然年度不得超过等值10万元人民币
+cash_release_usd,5000,USD carried with no permit,V09,5000美元（含）以下
+cash_permit_usd,10000,USD above which a SAFE permit is required and carriage is in principle not allowed,V09,10000美元（含）以下
+fbar_threshold_usd,10000,USD aggregate at any time,V12,exceeds $10,000
+fbar_willful_max_usd,165353,USD maximum per violation (penalties assessed on or after 2025-01-17),V13,165,353
+fbar_nonwillful_max_usd,16536,USD maximum per violation (penalties assessed on or after 2025-01-17),V13,16,536
+form8938_penalty_max_usd,60000,USD maximum,V12,$60,000
+fx_admin_penalty_max,0.30,fraction of the amount for a serious case the ceiling is 100%,V05,30%以下
+iit_proportional_rate,0.20,fraction of the income,V10,百分之二十
+sec988_personal_exempt_usd,200,USD of gain below which a personal transaction is not recognised,V15,$200

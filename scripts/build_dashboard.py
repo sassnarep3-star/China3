@@ -376,7 +376,11 @@ def verify_table() -> str:
 
 def cards_nav() -> str:
     items = [
-        ("Cost tables", "Every route at every $10,000 step", "cost-tables.html", "canonical"),
+        ("Canonical edition", "15 documents re-fetched 10 Nov 2026; $10k–$400k ladder re-derived", "c3x-summary.html", "start here"),
+        ("Canonical cost table", "40 amounts, every method, blanks flagged", "c3x-costs.html", "start here"),
+        ("Canonical tax breakdown", "§988, FBAR, 8938, PRC 20%, Order 532", "c3x-tax.html", "start here"),
+        ("Verified answer", "Consolidated 2026-11-10 pass: 10 routes, 40 increments, 16 sources", "a513.html", "new"),
+        ("Cost tables", "Every route at every $10,000 step", "cost-tables.html", ""),
         ("All 640 rows", "16 methods × 40 amounts, filterable", "schedule-cost-10k-400k.html", ""),
         ("Methods &amp; pros/cons", "35 channels with the legal status of each", "deep-channels.html", ""),
         ("Step-by-step", "Copy-ready procedure per route", "schedule-steps.html", ""),
@@ -394,8 +398,9 @@ def cards_nav() -> str:
         ("S775 audit", "24 methods, $10k–$400k ladder, 52 sources, 18 flags", "s775-dashboard.html", ""),
         ("Integration audit", "17 claims re-read at official source today; 8 corrections applied", "c5bf-integration-audit.html", "new"),
         ("FX board & sensitivity", "Two official BOC boards; the ladder re-derived on the latest", "c5bf-rates.html", "new"),
-        ("A058 review", "Independent critical-claims review of the conversion guidance", "a058-flagged-review.html", ""),
-        ("A502 review", "Independent accuracy review of the repatriation figures", "a502-review.html", ""),
+        ("A058 review", "Convenience amount vs documented remittance; mobile review page", "a058-flagged-review.html", "new"),
+        ("A502 audit", "Independent accuracy audit of the published cost models", "a502-review.html", "new"),
+        ("Completion audit", "Fee-only 40-step supplemental audit (session 4a528a74)", "completion-audit.html", "new"),
     ]
     out = ['<div class="cards cards-nav">']
     for title, sub, href, tag in items:
@@ -456,45 +461,23 @@ def unverified_box() -> str:
 
 
 # ----------------------------------------------------------------------- pages
-def build_index() -> str:
-    top = LADDER_BY_AMOUNT["10000"]
-    big = LADDER_BY_AMOUNT["400000"]
-    summary_amounts = ["10000", "50000", "100000", "200000", "300000", "400000"]
-    summary = [LADDER_BY_AMOUNT[a] for a in summary_amounts]
-    n_verified = len(VERIFY)
-
-    return f"""<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Getting money out of China — CNY to USD dashboard</title>
-<meta name="description" content="Official-source dashboard: every lawful way to convert CNY to USD, what each costs from $10,000 to $400,000, and the tax and reporting rules that actually carry a penalty.">
-<link rel="stylesheet" href="assets/dashboard.css">
-</head>
-<body>
-<header class="top">
-  <div class="wrap top-in">
-    <a class="brand" href="index.html">China&nbsp;money<span>·</span>CNY&nbsp;→&nbsp;USD</a>
-    <nav class="nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="cost-tables.html">Costs</a>
-      <a href="deep-channels.html">Methods</a>
-      <a href="deep-penalty.html">Penalties</a>
-      <a href="deep-china-rules.html">China rules</a>
-      <a href="deep-us-tax.html">U.S. tax</a>
-      <a href="verify-2026.html">Verify</a>
-      <a href="deep-review.html">Flags</a>
-      <a href="us-fx-gain.html">§988</a>
-      <a href="d646-summary.html">2026-11-10 refresh</a>
-      <a href="s775-dashboard.html">S775 audit</a>
-      <a href="c5bf-integration-audit.html">Audit</a>
-      <a href="c5bf-rates.html">FX board</a>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap">
+PARALLEL_BANNERS = """<section style="padding:18px;border-left:5px solid #0d7a4f;background:#e9f8f1;color:#0d3a28;border-radius:9px;margin:20px 0">
+  <p class="eyebrow" style="margin:0 0 6px">Start here &middot; close-of-day re-verification, 2026-11-10</p>
+  <h2 style="margin:0 0 8px;font-size:20px">One consolidated answer: 16 primary documents re-fetched, 40 increments re-derived</h2>
+  <p style="margin:0 0 10px">A later pass than the pages below. It re-fetched the Bank of China board at
+  <strong>17:39:58 China time</strong> (sell 6.6851, buy 6.6571, parity 6.7167), the published personal tariffs,
+  SAFE, 26 U.S.C. &sect;988, the IRS 8938/FBAR comparison, 31 CFR 1010.821 and CBP, then rebuilt the whole
+  USD&nbsp;10,000&ndash;400,000 ladder from those inputs. It prices one transfer <em>and</em> one transfer per
+  USD&nbsp;50,000 tranche, so the disagreement between the two builds below disappears.</p>
+  <p style="margin:0 0 10px"><a href="a513.html"><strong>Read the verified answer &rarr;</strong></a> &middot;
+  <a href="a513.html#costs">Costs $10k&ndash;$400k</a> &middot;
+  <a href="a513.html#methods">10 routes, pros and cons</a> &middot;
+  <a href="a513.html#penalty">Penalty anatomy</a> &middot;
+  <a href="a513-steps.html">Step-by-step</a> &middot;
+  <a href="a513-verify.html">16-row verification register</a> &middot;
+  <a href="a513.html#flags">15 flags</a></p>
+  <p style="margin:0;font-size:14px">Everything below is preserved as it was published, with its own sources.</p>
+</section>
 
 <section style="padding:18px;border-left:5px solid #12a3b8;background:#eaf7fa;color:#0d3340;border-radius:9px;margin:20px 0">
   <p class="eyebrow" style="margin:0 0 6px">Independent re-verification &middot; 2026-11-10</p>
@@ -537,7 +520,6 @@ def build_index() -> str:
   hawala, undeclared cash), the step-by-step playbooks for every route, and an independent CI validator that
   re-derives the ladder from first principles.</p>
 </section>
-
 <section style="padding:18px;border-left:5px solid #0a5f8a;background:#eef6fb;color:#08303f;border-radius:9px;margin:20px 0">
   <p class="eyebrow" style="margin:0 0 6px">Final integration &middot; re-verified 2026-11-10</p>
   <h2 style="margin:0 0 8px;font-size:20px">What the integration pass changed &mdash; and what it confirmed</h2>
@@ -566,6 +548,64 @@ def build_index() -> str:
   <strong>&minus;$0.04 at $10,000</strong> and <strong>&minus;$2.29 at $400,000</strong>. Intraday timing is not what
   drives your cost; the &yen;260 wire-fee cap and the <em>unpublished</em> intermediary and U.S. receiving-bank fees are.
   Those two remain <strong>blank on every row</strong>, not zero.</p>
+</section>
+"""
+
+
+def build_index() -> str:
+    top = LADDER_BY_AMOUNT["10000"]
+    big = LADDER_BY_AMOUNT["400000"]
+    summary_amounts = ["10000", "50000", "100000", "200000", "300000", "400000"]
+    summary = [LADDER_BY_AMOUNT[a] for a in summary_amounts]
+    n_verified = len(VERIFY)
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting money out of China — CNY to USD dashboard</title>
+<meta name="description" content="Official-source dashboard: every lawful way to convert CNY to USD, what each costs from $10,000 to $400,000, and the tax and reporting rules that actually carry a penalty.">
+<link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="index.html">China&nbsp;money<span>·</span>CNY&nbsp;→&nbsp;USD</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="c3x-summary.html">Start here</a>
+      <a href="a513.html">Verified answer</a>
+      <a href="cost-tables.html">Costs</a>
+      <a href="deep-channels.html">Methods</a>
+      <a href="deep-penalty.html">Penalties</a>
+      <a href="deep-china-rules.html">China rules</a>
+      <a href="deep-us-tax.html">U.S. tax</a>
+      <a href="verify-2026.html">Verify</a>
+      <a href="deep-review.html">Flags</a>
+      <a href="us-fx-gain.html">§988</a>
+      <a href="d646-summary.html">2026-11-10 refresh</a>
+      <a href="s775-dashboard.html">S775 audit</a>
+      <a href="c5bf-integration-audit.html">Audit</a>
+      <a href="c5bf-rates.html">FX board</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="startband" style="margin:18px 0;padding:16px 18px;border:1px solid #cfe3e8;border-left:5px solid #0f4c5c;background:#eef6f8;border-radius:10px">
+  <p class="eyebrow" style="margin:0 0 6px">Start here · canonical edition · board 2026-11-10 17:39:58 Beijing</p>
+  <h2 style="margin:0 0 8px;font-size:20px">One clean answer path: summary → costs → tax → steps → flags</h2>
+  <p style="margin:0 0 10px">A single pass that re-fetched 16 official documents on 10 November 2026, re-derived all
+  40 cost increments from the raw board and tariff, and left every unpublished figure blank and flagged.</p>
+  <p style="margin:0"><a href="c3x-summary.html"><strong>Executive summary &rarr;</strong></a> &middot;
+  <a href="c3x-costs.html">Costs $10k&ndash;$400k</a> &middot;
+  <a href="c3x-methods.html">14 methods</a> &middot;
+  <a href="c3x-steps.html">Step by step</a> &middot;
+  <a href="c3x-tax.html">Tax &amp; penalties</a> &middot;
+  <a href="c3x-flagged.html">Flagged for review</a> &middot;
+  <a href="c3x-sources.html">15 sources</a></p>
 </section>
 
 <section class="hero">
@@ -669,6 +709,15 @@ def build_index() -> str:
           registers, all preserved. <a href="deep-review.html">deep-review.html</a> is the consolidated one.</li>
     </ul>
   </details>
+</section>
+
+<section class="section" id="parallel">
+  <h2>Parallel editions kept on this page</h2>
+  <p class="lede">Several sessions worked the same brief at the same time. Nothing was deleted: each edition below is
+  preserved with its own data, its own figures and its own caveats. Where two editions disagree, the disagreement is
+  stated rather than hidden. The <a href="c3x-summary.html">canonical edition</a> at the top of this page is the one that
+  re-derived every figure from the board reading of 2026-11-10 17:39:58 Beijing.</p>
+  {PARALLEL_BANNERS}
 </section>
 
 <section class="section" id="verification">
