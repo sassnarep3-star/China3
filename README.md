@@ -4,6 +4,10 @@ A sourced research pack and two-part website answering one question:
 
 > Personal money is sitting in a Chinese bank account and cannot be turned into USD without what looks like a large tax hit. What are the lawful ways to convert it, what does each really cost, and what is the least-penalty path for a US citizen?
 
+**Start here →** [dashboard](https://sassnarep3-star.github.io/China3/) ·
+[verification register, 10 Nov 2026](https://sassnarep3-star.github.io/China3/verify-2026.html) ·
+[cost tables](https://sassnarep3-star.github.io/China3/cost-tables.html)
+
 **Live site:** https://sassnarep3-star.github.io/China3/
 · editorial guide at `/`
 · structured dashboard at [`/docs/`](https://sassnarep3-star.github.io/China3/docs/)
@@ -16,9 +20,12 @@ A sourced research pack and two-part website answering one question:
 The current, re-verified layer. One model, one source register, one set of numbers, built from the
 official text fetched on 2026-11-10 and checked by `scripts/verify_cn3.py`.
 
+The landing page `index.html` is the generated dashboard from the 2026-11-10 verification pass (its
+build is checked by `scripts/build_dashboard.py --check`). The consolidated layer linked from it is:
+
 | Page | What it answers |
 |---|---|
-| [`index.html`](index.html) | The dashboard: the short answer, the headline cost table, every route at a glance |
+| [`cn3-summary.html`](cn3-summary.html) | The short answer, the headline cost table, every route at a glance |
 | [`cn3-cost.html`](cn3-cost.html) | 40 increments ($10k–$400k) × 17 methods, every row sourced, every blank flagged |
 | [`cn3-methods.html`](cn3-methods.html) | 17 routes with legality, pros, cons, requirements and the prohibitions |
 | [`cn3-tax.html`](cn3-tax.html) | The "conversion penalty" decomposed: spread, fees, IRC §988, FBAR/8938, SAFE fines |

@@ -442,7 +442,9 @@ Every row below links to the official source for its inputs.</p>
       <a href="cross-session-review.html">Cross-check &amp; U.S. FX-gain tax</a></div>
     <div><h4>Verification</h4>
       <a href="cn3-review.html">Flagged for review (consolidated)</a>
+      <a href="verify-2026.html">Verify 2026 — verification register</a>
       <a href="a15-review.html">Independent safety review (2026-11-10)</a>
+      <a href="guide.html">Narrative guide (archived)</a>
       <a href="flagged-review.html">Flagged (prior)</a>
       <a href="review.html">Review (prior)</a>
       <a href="schedule-flagged-review.html">Schedule flags</a>
@@ -464,7 +466,7 @@ Every row below links to the official source for its inputs.</p>
   </div>
 </section>
 """
-    page("index.html", "China → U.S. money guide — CNY to USD costs, methods and taxes",
+    page("cn3-summary.html", "Consolidated summary — CNY → USD costs, methods and taxes",
          "Verified costs of converting CNY to USD from $10,000 to $400,000, every method, with official source links.",
          body)
 

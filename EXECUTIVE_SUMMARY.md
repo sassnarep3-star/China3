@@ -1,9 +1,43 @@
 # Executive summary — getting CNY out of mainland China as a U.S. citizen
 
-Consolidated by session `arena-0fbc51c7-china3` · 2026-11-10 (UTC) · official-source research only.
-Live dashboard: [`index.html`](index.html) · full figures: [`cn3-cost.html`](cn3-cost.html) ·
-verification: [`cn3-review.html`](cn3-review.html) · sources: [`cn3-sources.html`](cn3-sources.html).
+> **Current figures: 10 November 2026.** The first block was added by integration session
+> `arena/fbbd3b22-china3`; the body below it is the consolidated view written by session
+> `arena-0fbc51c7-china3` on the same day. Both are reconciled in the note on conventions below.
+>
+> **The answer in one paragraph.** Converting your own after-tax CNY principal into USD triggers
+> no Chinese conversion tax in any instrument checked here. It costs bank spread plus the 1‰
+> personal wire fee (capped at CNY 260) and a CNY 150 cable charge: **$53.42 on $10,000 and
+> $901.30 on $400,000**, which is 0.534% falling to 0.225%, computed from the 2026-11-10 Bank of
+> China board. The number that should drive the plan is not the exchange rate but the U.S.
+> reporting penalty: a willful FBAR violation is capped at the greater of $165,353 or **50% of
+> the account balance** (31 U.S.C. §5321(a)(5)(C)), i.e. $200,000 on a $400,000 balance. Fix
+> reporting first, choose the route by the documents you can produce, and never split quotas.
+>
+> **Two corrections to earlier passes.** (1) The emigrant property transfer is **not** staged —
+> SAFE 汇发〔2014〕2号 §6 cancels the PBC [2004] No.16 art. 6 instalment requirement and the
+> over-RMB-500,000 head-office filing, so `cost-tables.html` route M03 ($1,025.39 at $400,000)
+> overstates it by three wire fees. (2) Chinese FX fines under State Council Order 532 arts. 39
+> and 45 are **30% or less** of the amount in an ordinary case, rising to 30%–100% only where the
+> case is serious — a ceiling, not the floor an earlier pass described.
+>
+> Machine-readable register: `data/verify_2026.csv` (16 records: official URL, verbatim quote,
+> fetch timestamp). Checks: `python3 scripts/verify_dashboard.py`. Live pages:
+> [`index.html`](index.html) (dashboard) and [`verify-2026.html`](verify-2026.html).
+>
+> **Note on the two cost conventions (why $53.42 and $53.47 both appear).** The two models divide
+> the same half-spread by a different denominator. Dividing by the **ask** (this block) expresses
+> the spread as a share of the CNY you spend: 0.2100%, i.e. $21.00 per $10,000. Dividing by the
+> **midpoint** (the consolidated model below) expresses it as a share of the USD you receive:
+> 0.210447%, i.e. $21.05. The difference is $0.05 at $10,000 and $1.79 at $400,000 — a convention,
+> not a fact. Everything else (wire 0.1% capped at CNY 260, cable CNY 150, no PRC conversion tax)
+> agrees to the cent.
 
+
+Prepared by integration session `session-c703e38c` · 2026-11-07 (UTC) · public, official-source research only.
+Live version: [`deep-executive-summary.html`](deep-executive-summary.html) on the GitHub Pages site.
+Consolidated by session `arena-0fbc51c7-china3` · 2026-11-10 (UTC) · official-source research only.
+Live dashboard: [`index.html`](index.html) · consolidated summary: [`cn3-summary.html`](cn3-summary.html) · full figures: [`cn3-cost.html`](cn3-cost.html) ·
+verification: [`cn3-review.html`](cn3-review.html) · sources: [`cn3-sources.html`](cn3-sources.html).
 This replaces the earlier executive summaries as the current consolidated view. The prior versions
 remain at [`deep-executive-summary.html`](deep-executive-summary.html),
 [`research/s436-executive-summary.md`](research/s436-executive-summary.md) and in git history.

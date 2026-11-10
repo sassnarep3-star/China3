@@ -187,14 +187,14 @@ for kind, attrs, body in TABLE_RE.findall(cost_html):
 if set(rendered) != set(methods):
     fail(f"cn3-cost.html renders {sorted(rendered)} methods, model has {sorted(methods)}")
 
-index_html = (ROOT / "index.html").read_text(encoding="utf-8")
+index_html = (ROOT / "cn3-summary.html").read_text(encoding="utf-8")
 headline = [b for k, a, b in TABLE_RE.findall(index_html) if k == "headline"]
 if not headline:
-    fail("index.html: headline table missing")
+    fail("cn3-summary.html: headline table missing")
 else:
     rows = ROW_RE.findall(headline[0].split("</thead>", 1)[-1])
     if len(rows) != 40:
-        fail(f"index.html: headline table has {len(rows)} rows, expected 40")
+        fail(f"cn3-summary.html: headline table has {len(rows)} rows, expected 40")
 
 sources_html = (ROOT / "cn3-sources.html").read_text(encoding="utf-8")
 for sid in sources:
@@ -221,7 +221,7 @@ for needle in ("§988", "16,536", "165,353", "0.210%", "CNY 260", "CNY 150"):
 # ---------------------------------------------------------------------------------------------
 # 6  internal links
 # ---------------------------------------------------------------------------------------------
-PAGES = ["index.html"] + [f"cn3-{n}.html" for n in
+PAGES = ["cn3-summary.html"] + [f"cn3-{n}.html" for n in
                           ("cost", "methods", "tax", "steps", "review", "sources")]
 LINK_RE = re.compile(r'href="([^"]+)"')
 for page in PAGES:
@@ -241,7 +241,7 @@ for page in PAGES:
 w1_400 = next(r for r in ladder if r["method_id"] == "W1" and r["amount_usd"] == "400000")
 for value in (f"${float(w1_400['known_cost_usd']):,.2f}", f"${float(w1_400['all_in_usd']):,.2f}"):
     if value not in index_html:
-        fail(f"index.html: headline figure {value} not rendered")
+        fail(f"cn3-summary.html: headline figure {value} not rendered")
 
 print(f"checked {len(ladder)} ladder rows, {len(methods)} methods, {len(sources)} sources, "
       f"{len(inputs)} inputs, {len(flags)} flags, {len(PAGES)} pages")
