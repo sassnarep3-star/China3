@@ -4,8 +4,17 @@ A sourced research pack and two-part website answering one question:
 
 > Personal money is sitting in a Chinese bank account and cannot be turned into USD without what looks like a large tax hit. What are the lawful ways to convert it, what does each really cost, and what is the least-penalty path for a US citizen?
 
+<<<<<<< HEAD
+**Start here →** [the consolidated verified answer, 10 Nov 2026 18:05Z](https://sassnarep3-star.github.io/China3/a513.html)
+· [verification register, 16 primary documents, verbatim quotes](https://sassnarep3-star.github.io/China3/a513-verify.html)
+· [step-by-step playbooks](https://sassnarep3-star.github.io/China3/a513-steps.html)
+(register `data/a513_verification.csv`; gate: `python3 scripts/verify_a513.py`, CI `.github/workflows/a513-verify.yml`)
+
+Earlier passes: [dashboard](https://sassnarep3-star.github.io/China3/) ·
+=======
 **Start here →** [canonical edition, 2026-11-10](https://sassnarep3-star.github.io/China3/c3x-summary.html) ·
 [dashboard](https://sassnarep3-star.github.io/China3/) ·
+>>>>>>> origin/main
 [verification register, 10 Nov 2026](https://sassnarep3-star.github.io/China3/verify-2026.html) ·
 [cost tables](https://sassnarep3-star.github.io/China3/cost-tables.html) ·
 [independent 2026-11-10 refresh](https://sassnarep3-star.github.io/China3/d646-summary.html) ·
