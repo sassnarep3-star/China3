@@ -19,7 +19,7 @@
 
 Parallel integration work is preserved at `verify-2026.html` (17 verbatim source records), `a15-review.html` (independent safety review), `guide.html` (archived narrative) and `data/ladder_20261110.csv` (independent 40-row ladder).
 
-**S775 audit addendum (2026-11-10):** an independent line-by-line pass catalogued **24 routes** (including the prohibited ones), registered **51 official sources** with fetch timestamps, re-derived the full **$10,000–$400,000 cost ladder** (40 steps) from the 2026-11-10 BOC board, and documented numbered step-by-step playbooks for every route. Its key verified results agree with the benchmark above: FX spread 0.2104%, personal wire 1‰ (¥50–¥260) + ¥150 cable, **$50.93 total at $10,000** (excl. conditional OUR) rising to **$903.08 at $400,000**. Pages: `s775-dashboard.html`, `s775-cost-10k-400k.html`, `s775-methods.html`, `s775-steps.html`, `s775-penalties-tax.html`, `s775-flagged-review.html` (18 flagged items), `s775-sources.html` (51 sources). Gate: `python3 scripts/verify_s775_site.py`, CI `.github/workflows/s775-verify.yml`.
+**S775 audit addendum (2026-11-10):** an independent line-by-line pass catalogued **24 routes** (including the prohibited ones), registered **51 official sources** with fetch timestamps, re-derived the full **$10,000–$400,000 cost ladder** (40 steps) from the 2026-11-10 BOC board, and documented numbered step-by-step playbooks for every route. Its key verified results agree with the benchmark above: FX half-spread 0.2100% = (ask−mid)/ask, personal wire 1‰ (¥50–¥260) + ¥150 cable, **$53.42 total at $10,000** (excl. conditional OUR) rising to **$901.30 at $400,000**. Pages: `s775-dashboard.html`, `s775-cost-10k-400k.html`, `s775-methods.html`, `s775-steps.html`, `s775-penalties-tax.html`, `s775-flagged-review.html` (18 flagged items), `s775-sources.html` (52 sources after final integration added SAFE art. 59 as S52). Gate: `python3 scripts/verify_s775_site.py`, CI `.github/workflows/s775-verify.yml`.
 
 ## Bottom line
 
@@ -100,3 +100,63 @@ IR-018).
 No Chinese "conversion tax" exists. The most likely candidate for the "considerable amount of taxes" the brief reports is a **U.S. tax on the currency gain embedded in the CNY itself** (IRC §988), not a Chinese fee. CNY acquired at the 2024/2025 IRS yearly averages (7.189 / 7.129) and converted at the recorded 2026-11-09 BOC selling rate (6.6919) carries a gain of about **6.9% / 6.1% of the USD received** — e.g. ≈$6,915 on $100,000 — before any China-side cost. Arithmetic, statute links and the full $10,000–$400,000 ladder: [`us-fx-gain.html`](us-fx-gain.html). Character and the $200 personal-transaction exclusion are conditional on facts only the account holder has (see `data/penalty.csv` P25; cross-check **X-11**). This does not change the recommended sequence — classify the funds, keep U.S. filings clean, use the narrowest lawful documentary route — it adds the missing U.S. line to the cost stack.
 
 General educational research, not personalized legal, tax, immigration, investment or banking advice. Missing personal facts are flagged rather than inferred.
+
+## Final-integration addendum (2026-11-10) — what re-verification changed
+
+The final integration pass re-opened **17 load-bearing claims** at their official primary sources and
+quoted each one verbatim (`data/c5bf_source_recheck.csv`, `research/c5bf-reverification-log.md`,
+`c5bf-integration-audit.html`). Ten were confirmed or newly catalogued, four were corrected,
+re-scoped or had moved intraday, two were irregularities on the **live** site and were fixed, and one
+was flagged but deliberately left to its owner. **No value was filled in by inference.**
+
+**1. The document bar for a U.S. citizen is higher than this summary previously implied.** The
+"no approval up to US$50,000/day on ID documents" line is 汇发〔2020〕14号 **art. 64**, and at source
+it is expressly about **境内个人 (domestic individuals)** remitting FX **from an FX account** for
+current-account expenditure — and only **US$10,000/day** when remitting foreign-currency **cash**.
+A U.S. citizen is a **境外个人 (foreign individual)**, governed by **art. 59**: to buy FX out of
+lawful current-account CNY income earned in China the bank requires a valid ID **plus source-of-funds
+documents showing the transaction amount, including tax certificates (含税务凭证)**. The annual
+purchase convenience quota is available **only** to foreign individuals holding a 外国人永久居留身份证
+(Foreign Permanent Resident ID card). If the CNY in the account is *not* current-account income —
+property proceeds, old savings — art. 59 does not by itself authorise the purchase and the
+capital-account routes (emigrant property transfer under 汇发〔2014〕2号, property-sale repatriation)
+are the ones to examine.
+[SAFE art. 64](https://www.safe.gov.cn/tianjin/2024/0229/2402.html) ·
+[SAFE art. 59](https://www.safe.gov.cn/tianjin/2024/0621/2529.html)
+
+**2. The OUR surcharge is BOC's *personal* tariff, not a corporate one.** The US$15 (beneficiary bank
+holds an account at BOC New York) / US$25 (other US banks) schedule sits in BOC's
+《关于调整部分**个人业务**收费标准的公示》, code 210104021, item **4.个人跨境本外币汇款 / 4.2全额到账**,
+effective 2015-04-01. What is genuinely conditional is **routing**: the service applies only where the
+two banks have no direct account relationship and at least one intermediary bank is required. BOC
+publishes no list of which U.S. banks that covers, so that fact stays blank.
+[BOC personal OUR notice](https://www.boc.cn/pbservice/bi2/201412/t20141231_4404048.html)
+
+**3. The estimate is stable across the day's boards — timing the rate is not the lever.** BOC
+republished its board during the day (07:32:39 → 17:39:58; ask 6.6903 → 6.6851). Re-deriving all 40
+increments on the later board moves the total by **−$0.04 at $10,000** and **−$2.29 at $400,000**.
+The 07:32:39 board stays canonical for every existing page; the newer one is published alongside with
+its own full ladder and per-increment delta (`c5bf-rates.html`, `data/c5bf_cost_10k_400k_latest.csv`).
+What actually drives cost is the **¥260 wire-fee cap** (binding from about $38,862 of transfer) and the
+intermediary / U.S. receiving-bank fees, which have **no official published schedule** and are blank on
+every row — not zero.
+
+**4. Two defects on the deployed site were fixed.** The dashboard hero card advertised **$50.93** at
+$10,000 while its own ladder row said **$53.42** (21.00 spread + 32.42 wire, re-derived from the
+official board and tariff); the hero card is now emitted *from* the ladder row and a validator guard
+enforces it. And `s775-cost-10k-400k.html` shipped 40 rows with a `<td>` nested inside a `<td>`,
+which browsers render as a phantom column — the most important table on the site was mis-aligned on
+every device. Both were fixed in the generators, with regression guards. The owner's own fix (PR #34)
+became unmergeable after main advanced, so it was carried forward under the board's stale-claim
+handoff rule.
+
+**5. Cross-implementation proof of the arithmetic.** A separately written implementation of the same
+official formula (`scripts/gen_c5bf_data.py`) reproduces the canonical 40-row ladder
+(`data/s775_cost_10k_400k.csv`) **exactly — 40 rows × 9 fields, maximum difference $0.00**. Inputs
+still move; the arithmetic no longer can.
+
+**Newly catalogued from primary sources:** the general willful-BSA penalty range **$71,545–$286,184**
+(31 U.S.C. 5321(a)(1), current eCFR table); FEIE housing limitation **$39,870 (2026) / $39,000
+(2025)** and the **2024** FEIE maximum **$126,500**; BOC's intra-bank foreign-currency transfer tariff
+**1‰ capped at ¥200** and domestic interbank CNY remittance **capped at ¥50** (both far below the ¥410
+cross-border wire, which is why consolidating balances before converting is worth doing).

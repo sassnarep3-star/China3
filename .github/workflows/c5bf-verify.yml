@@ -1,0 +1,39 @@
+name: Verify C5BF integration
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  c5bf:
+    name: C5BF board snapshots, dual ladder, cross-implementation match
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate the board/ladder registers deterministically
+        run: python3 scripts/gen_c5bf_data.py && git diff --exit-code -- data/c5bf_
+
+      - name: Confirm the integration pages are not stale
+        run: python3 scripts/build_c5bf_site.py --check
+
+      - name: Independent verification (re-derives both ladders, checks blanks and links)
+        run: python3 scripts/verify_c5bf.py
+
+      - name: S775 namespace must still verify after the integration corrections
+        run: python3 scripts/verify_s775_site.py
+
+      - name: Repo-wide internal link check
+        run: python3 scripts/check_links.py
+
+      - name: Repo-wide data contract
+        run: python3 scripts/validate_data.py

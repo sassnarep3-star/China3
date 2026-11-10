@@ -110,10 +110,19 @@
   {
     "id": "S13",
     "institution": "SAFE Tianjin",
-    "title": "个人外汇业务问答 - 境外汇款",
-    "what_it_establishes": "Remittance on ID documents: same-day cumulative up to US$50,000; above that, transaction documents",
+    "title": "2024年外汇管理互联网信息——个人外汇（三）",
+    "what_it_establishes": "汇发〔2020〕14号 art. 64 — SCOPE: 境内个人 (DOMESTIC individuals) remitting FX abroad for current-account expenditure FROM AN FX ACCOUNT: same-day cumulative ≤US$50,000 (inclusive) on the person's valid ID alone; above that, ID + transaction-amount documents. Remitting FOREIGN CURRENCY CASH: ≤US$10,000/day on ID; above that, ID + customs-stamped declaration or original bank cash-withdrawal slip + transaction documents. Not a rule for 境外个人 (foreign individuals) — see S52",
     "url": "https://www.safe.gov.cn/tianjin/2024/0229/2402.html",
-    "fetched_utc": "2026-11-10T08:30:00Z",
+    "fetched_utc": "2026-11-10T09:52:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S52",
+    "institution": "SAFE Tianjin",
+    "title": "2024年经常项目外汇政策问答案例（九） — 境外个人是否享受年度便利化额度购汇？",
+    "what_it_establishes": "汇发〔2020〕14号 art. 59 — 境外个人 (FOREIGN individuals, e.g. a US citizen): FX purchase out of lawful current-account CNY income obtained in China requires the person's valid ID **plus source-of-funds documents showing the transaction amount, including tax certificates** (有交易额的购汇资金来源材料（含税务凭证）). The annual purchase convenience quota applies ONLY to foreign individuals holding a 外国人永久居留身份证 (Foreign Permanent Resident ID card)",
+    "url": "https://www.safe.gov.cn/tianjin/2024/0621/2529.html",
+    "fetched_utc": "2026-11-10T09:51:00Z",
     "verdict": "verified"
   },
   {

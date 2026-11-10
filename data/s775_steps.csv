@@ -24,7 +24,7 @@ M06,2,Complete the purchase with FX settlement per PBOC [2006] No.3 arts. 7/13.,
 M06,3,"On sale, repatriate proceeds per art. 7 with tax evidence.",PRC IIT 20% on property transfer income,S27|S35
 M07,1,Provide the Foreign Permanent Resident ID and employment documents to the bank.,Permanent resident ID holders get the convenience amount,S11
 M07,2,"Purchase FX for documented salary; above the convenience amount, submit transaction documents.",Convenience amount is not a hard limit,S10
-M07,3,"Remit out (≤US$50,000/day on ID documents).",Same-day cumulative limit on ID,S13
+M07,3,"Remit out. Document scope depends on WHO you are: 境内个人 (domestic individual) from an FX account ≤US$50,000/day on ID alone (art. 64); 境外个人 (foreign individual) needs ID + source-of-funds documents incl. tax certificates (art. 59); foreign-currency cash ≤US$10,000/day on ID.","Same-day cumulative thresholds are per person, per day, and differ by residency status and by account-vs-cash",S13|S52
 M07,4,"Report US tax: wages (FEIE may apply), §988 on conversion, FBAR/8938.",FEIE excludes wages for personal services only,S41|S40|S43
 M08,1,Document mainland employment and pay PRC IIT on the salary.,IIT withheld at source,S35
 M08,2,Purchase FX for the taxed salary without the annual convenience amount.,Not subject to the convenience amount when taxed,S16
