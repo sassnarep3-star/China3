@@ -4,16 +4,12 @@ A sourced research pack and two-part website answering one question:
 
 > Personal money is sitting in a Chinese bank account and cannot be turned into USD without what looks like a large tax hit. What are the lawful ways to convert it, what does each really cost, and what is the least-penalty path for a US citizen?
 
-**Start here (verified 2026-11-10):** [`d646-summary.html`](https://sassnarep3-star.github.io/China3/d646-summary.html)
-— a seven-page dashboard re-verified against 21 primary documents on 2026-11-10:
-[executive summary](https://sassnarep3-star.github.io/China3/d646-summary.html) ·
-[all methods + pros/cons](https://sassnarep3-star.github.io/China3/d646-methods.html) ·
-[costs USD 10k→400k](https://sassnarep3-star.github.io/China3/d646-costs.html) ·
-[tax & penalties](https://sassnarep3-star.github.io/China3/d646-penalty.html) ·
-[verification log](https://sassnarep3-star.github.io/China3/d646-verification.html) ·
-[flagged for review](https://sassnarep3-star.github.io/China3/d646-flagged.html) ·
-[sources](https://sassnarep3-star.github.io/China3/d646-sources.html).
-Gate: `python3 scripts/verify_d646_site.py` (CI: `.github/workflows/d646-verify.yml`).
+**Start here →** [dashboard](https://sassnarep3-star.github.io/China3/) ·
+[verification register, 10 Nov 2026](https://sassnarep3-star.github.io/China3/verify-2026.html) ·
+[cost tables](https://sassnarep3-star.github.io/China3/cost-tables.html) ·
+[independent 2026-11-10 refresh](https://sassnarep3-star.github.io/China3/d646-summary.html)
+(7 pages, 21 primary documents re-read today, 40 cost increments re-derived; gate:
+`python3 scripts/verify_d646_site.py`, CI `.github/workflows/d646-verify.yml`)
 
 **Live site:** https://sassnarep3-star.github.io/China3/
 · editorial guide at `/`
