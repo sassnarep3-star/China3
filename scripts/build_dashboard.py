@@ -392,7 +392,7 @@ def cards_nav() -> str:
         ("Data dashboard", "Structured data + calculator", "docs/index.html", ""),
         ("U.S. §988 FX-gain", "The missing cost line: potential U.S. currency gain, $10k–$400k", "us-fx-gain.html", "new"),
         ("S775 audit", "24 methods, $10k–$400k ladder, 52 sources, 18 flags", "s775-dashboard.html", ""),
-        ("Integration audit", "15 claims re-read at official source today; 8 corrections applied", "c5bf-integration-audit.html", "new"),
+        ("Integration audit", "17 claims re-read at official source today; 8 corrections applied", "c5bf-integration-audit.html", "new"),
         ("FX board & sensitivity", "Two official BOC boards; the ladder re-derived on the latest", "c5bf-rates.html", "new"),
         ("A058 review", "Independent critical-claims review of the conversion guidance", "a058-flagged-review.html", ""),
         ("A502 review", "Independent accuracy review of the repatriation figures", "a502-review.html", ""),
@@ -542,8 +542,9 @@ def build_index() -> str:
   <p class="eyebrow" style="margin:0 0 6px">Final integration &middot; re-verified 2026-11-10</p>
   <h2 style="margin:0 0 8px;font-size:20px">What the integration pass changed &mdash; and what it confirmed</h2>
   <p style="margin:0 0 10px">Every load-bearing claim on this site was re-opened at its official primary source and quoted
-  verbatim: <strong>15 checks</strong>, of which <strong>9 confirmed or newly catalogued</strong>, <strong>4 corrected,
-  re-scoped or moved intraday</strong>, and <strong>2 irregularities found on the live site and fixed</strong>.
+  verbatim: <strong>17 checks</strong> &mdash; <strong>10 confirmed or newly catalogued</strong>, <strong>4 corrected,
+  re-scoped or moved intraday</strong>, <strong>2 irregularities found on the live site and fixed</strong>, and
+  <strong>1 flagged but deliberately not fixed</strong> because it sits in another session&rsquo;s build pipeline.
   <strong>Zero values were filled in by inference</strong> &mdash; anything unconfirmable is blank and flagged.</p>
   <p style="margin:0 0 10px"><a href="c5bf-integration-audit.html"><strong>Integration audit &rarr;</strong></a> &middot;
   <a href="c5bf-rates.html">FX board &amp; cost sensitivity</a> &middot;

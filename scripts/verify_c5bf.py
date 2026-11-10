@@ -72,7 +72,7 @@ delt = read("c5bf_cost_delta.csv")
 recheck = read("c5bf_source_recheck.csv")
 corr = read("c5bf_corrections.csv")
 EXPECT = {"c5bf_board_observations.csv": (obs, 2), "c5bf_cost_10k_400k_latest.csv": (lat, 40),
-          "c5bf_cost_delta.csv": (delt, 40), "c5bf_source_recheck.csv": (recheck, 15),
+          "c5bf_cost_delta.csv": (delt, 40), "c5bf_source_recheck.csv": (recheck, 17),
           "c5bf_corrections.csv": (corr, 8)}
 for name, (rows, n) in EXPECT.items():
     if len(rows) != n:

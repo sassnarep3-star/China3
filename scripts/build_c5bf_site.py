@@ -432,7 +432,7 @@ translation rather than trust it.</li>
 </ul>
 """
     return shell("Final-integration audit", "c5bf-integration-audit.html", body,
-                 "15 claims re-read at source · 8 corrections · 0 inferred values")
+                 "17 claims re-read at source · 8 corrections · 0 inferred values")
 
 
 BUILDERS = {"c5bf-rates.html": build_rates, "c5bf-integration-audit.html": build_audit}

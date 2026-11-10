@@ -10,7 +10,7 @@
 <header class="top">
 <div class="wrap">
 <span class="brand">C5BF · final integration</span>
-<span class="sub">15 claims re-read at source · 8 corrections · 0 inferred values</span>
+<span class="sub">17 claims re-read at source · 8 corrections · 0 inferred values</span>
 <nav class="main"><a href="index.html">Main dashboard</a><a href="c5bf-rates.html">FX board &amp; sensitivity</a><a href="c5bf-integration-audit.html" class="cur">Integration audit</a><a href="s775-dashboard.html">S775 audit</a><a href="s775-cost-10k-400k.html">Cost $10k-$400k</a><a href="s775-methods.html">All methods</a><a href="s775-steps.html">Step playbooks</a><a href="s775-penalties-tax.html">Tax &amp; penalties</a><a href="flagged-review.html">Flagged for review</a><a href="s775-flagged-review.html">S775 flags</a><a href="s775-sources.html">Official sources</a><a href="a058-flagged-review.html">A058 review</a><a href="a502-review.html">A502 review</a></nav>
 </div>
 </header>
@@ -24,10 +24,10 @@ listed in section 3; where a value could not be confirmed, it stays <b>blank</b>
 No row was accepted on the strength of another page in this repository.</p>
 
 <div class="cards">
-<div class="card"><div class="n">15</div><div class="l">Claims re-read against an official primary source today</div></div>
-<div class="card"><div class="n">9</div><div class="l">Confirmed verbatim or newly catalogued</div></div>
+<div class="card"><div class="n">17</div><div class="l">Claims re-read against an official primary source today</div></div>
+<div class="card"><div class="n">10</div><div class="l">Confirmed verbatim or newly catalogued</div></div>
 <div class="card"><div class="n">4</div><div class="l">Corrected, re-scoped, reconciled or moved intraday</div></div>
-<div class="card"><div class="n">2</div><div class="l">Irregularities found on the live site — both fixed</div></div>
+<div class="card"><div class="n">3</div><div class="l">Irregularities found on the live site — both fixed</div></div>
 <div class="card"><div class="n">8</div><div class="l">Corrections applied in this integration pass</div></div>
 <div class="card"><div class="n">0</div><div class="l">Values filled in by inference (the rule is blank, never guess)</div></div>
 </div>
@@ -47,7 +47,7 @@ user is higher than the site implied, and that is now stated everywhere the thre
 <a class="src" href="https://www.safe.gov.cn/tianjin/2024/0229/2402.html" rel="noopener">SAFE art. 64</a>
 <a class="src" href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" rel="noopener">SAFE art. 59</a></div>
 
-<h2>2. Re-verification register (15 checks)</h2>
+<h2>2. Re-verification register (17 checks)</h2>
 <div class="tw"><table class="tbl "><thead><tr>
 <th>Check</th>
 <th>Verdict</th>
@@ -207,6 +207,26 @@ user is higher than the site implied, and that is now stated everywhere the thre
 <td data-l='Verbatim quote'><q>&lt;td data-l='Amount'&gt;&lt;td data-l='Amount'&gt;$80,000&lt;/td&gt;&lt;/td&gt; (40 occurrences on main before the fix)</q></td>
 <td data-l='Action taken'>The builder's generic table() wrapped cells that were already full &lt;td&gt; elements. table() now passes through pre-wrapped cells, and a validator guard fails the build if any nested &lt;td&gt; reappears on an S775 page.</td>
 <td data-l='Files affected'><code>scripts/build_s775_site.py, s775-cost-10k-400k.html, scripts/verify_s775_site.py</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-16</b></td>
+<td data-l='Verdict'><span class='badge badge-warn'>IRREGULARITY - FLAGGED, NOT FIXED</span></td>
+<td data-l='Claim as published'>22 cross-file anchors in the docs/ sub-site point at docs/sources.html#S01..#S27, which has no such element ids</td>
+<td data-l='Official source'><span class="blank">n/a (repository markup finding, no external source)</span></td>
+<td data-l='Fetched (UTC)'>2026-11-10T10:05:00Z</td>
+<td data-l='Verbatim quote'><q>docs/sources.html declares only id="nav" and id="app"; it renders its source list client-side from assets/data.js, so no #S01..#S27 target exists in the served HTML</q></td>
+<td data-l='Action taken'>Found by a repo-wide sweep of all 61 published HTML pages (1,345 cross-file references, 0 broken file targets). The 22 affected anchors are all in docs/playbook.html and docs/methodology.html and all point into a JavaScript-rendered list, so a static check cannot confirm them and the browser will not scroll to them either. NOT fixed here: docs/ belongs to another session's build pipeline (tools/build_site.py, site/assets/app.js lineage) and correcting it means changing that pipeline, which is out of this session's scope. Logged as a cross-scope request in COORDINATION.md. Non-blocking: it affects in-page scrolling inside an optional sub-site, not any figure, table row or source citation.</td>
+<td data-l='Files affected'><code>docs/playbook.html, docs/methodology.html, docs/sources.html (owner: docs/ sub-site pipeline)</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-17</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>CONFIRMED</span></td>
+<td data-l='Claim as published'>The published site has no broken internal links</td>
+<td data-l='Official source'><span class="blank">n/a (repository build finding, no external source)</span></td>
+<td data-l='Fetched (UTC)'>2026-11-10T10:05:00Z</td>
+<td data-l='Verbatim quote'><q>61 HTML pages scanned; 1,345 cross-file href/src references resolved relative to each page's own directory; 0 targets missing</q></td>
+<td data-l='Action taken'>Performed because scripts/check_links.py only walks 9 hand-listed pages, so the two new c5bf pages and the rest of the tree were outside its scope. Each reference was resolved against the page's own directory (the docs/ sub-site is self-contained, which an earlier root-relative pass mis-reported as 81 broken links). Result recorded here so the 'no broken links' claim in the PR rests on a sweep of the whole tree, not a sample.</td>
+<td data-l='Files affected'><code>none (verification only)</code></td>
 </tr>
 </tbody></table></div>
 
