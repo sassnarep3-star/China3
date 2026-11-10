@@ -1,0 +1,26 @@
+name: Verify a513 consolidated answer
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  a513:
+    name: Register, ladder and page verification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild the pages and fail if the committed copy is stale
+        run: python3 scripts/build_a513.py --check
+
+      - name: Verify the register, the arithmetic and every link
+        run: python3 scripts/verify_a513.py

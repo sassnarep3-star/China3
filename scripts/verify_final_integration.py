@@ -107,7 +107,7 @@ def main() -> None:
     assert next(r for r in m01 if r["target_usd"] == "10000.00")["known_cost_usd"] == "53.42"
     assert next(r for r in m01 if r["target_usd"] == "400000.00")["known_cost_usd"] == "901.30"
 
-    home = (ROOT / "index.html").read_text(encoding="utf-8")
+    home = (ROOT / "legacy-index.html").read_text(encoding="utf-8")  # e347: landing moved
     assert home.count("<tr>") >= 40
     assert "Show all 40 rows" in home
     for amount in range(10_000, 400_001, 10_000):
@@ -118,7 +118,7 @@ def main() -> None:
     ):
         assert home.count(url) >= 40, f"homepage row provenance missing: {url}"
     count = 0
-    for name in ("index.html", "final-verification.html", *(f"schedule-{n}.html" for n in (
+    for name in ("legacy-index.html", "final-verification.html", *(f"schedule-{n}.html" for n in (
         "dashboard", "cost-10k-400k", "steps", "methods", "penalties", "flagged-review", "sources"
     ))):
         count += check_local_links(ROOT / name)

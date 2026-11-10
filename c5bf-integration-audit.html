@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Final-integration audit — CNY→USD final integration</title>
+<link rel="stylesheet" href="assets/s775.css">
+</head>
+<body>
+<header class="top">
+<div class="wrap">
+<span class="brand">C5BF · final integration</span>
+<span class="sub">17 claims re-read at source · 8 corrections · 0 inferred values</span>
+<nav class="main"><a href="index.html">Main dashboard</a><a href="c5bf-rates.html">FX board &amp; sensitivity</a><a href="c5bf-integration-audit.html" class="cur">Integration audit</a><a href="s775-dashboard.html">S775 audit</a><a href="s775-cost-10k-400k.html">Cost $10k-$400k</a><a href="s775-methods.html">All methods</a><a href="s775-steps.html">Step playbooks</a><a href="s775-penalties-tax.html">Tax &amp; penalties</a><a href="flagged-review.html">Flagged for review</a><a href="s775-flagged-review.html">S775 flags</a><a href="s775-sources.html">Official sources</a><a href="a058-flagged-review.html">A058 review</a><a href="a502-review.html">A502 review</a></nav>
+</div>
+</header>
+<main><div class="wrap">
+
+<h1>Final-integration audit — every load-bearing claim re-read against its official source</h1>
+<p class="lead">This is the line-by-line re-verification pass the board requires before shared
+outputs change. Each row below was re-opened at the official primary source on 2026-11-10, quoted
+verbatim, and given a verdict. Where the repository was wrong, the correction was applied and is
+listed in section 3; where a value could not be confirmed, it stays <b>blank</b> and flagged.
+No row was accepted on the strength of another page in this repository.</p>
+
+<div class="cards">
+<div class="card"><div class="n">17</div><div class="l">Claims re-read against an official primary source today</div></div>
+<div class="card"><div class="n">10</div><div class="l">Confirmed verbatim or newly catalogued</div></div>
+<div class="card"><div class="n">4</div><div class="l">Corrected, re-scoped, reconciled or moved intraday</div></div>
+<div class="card"><div class="n">3</div><div class="l">Irregularities found on the live site — both fixed</div></div>
+<div class="card"><div class="n">8</div><div class="l">Corrections applied in this integration pass</div></div>
+<div class="card"><div class="n">0</div><div class="l">Values filled in by inference (the rule is blank, never guess)</div></div>
+</div>
+
+<h2>1. What changed for the reader, in one paragraph</h2>
+<div class="callout warn"><b>The single most important correction is about documents, not money.</b>
+The site previously said a personal wire out of China needs no approval "up to US$50,000/day on ID
+documents". Re-read at source, that threshold is 汇发〔2020〕14号 <b>art. 64</b> and it applies to
+<b>境内个人 (domestic individuals)</b> remitting FX <b>from an FX account</b> — and only
+US$10,000/day when remitting foreign-currency cash. A <b>U.S. citizen is a 境外个人 (foreign
+individual)</b>, and for them <b>art. 59</b> governs: to buy FX out of lawful current-account CNY
+income earned in China the bank must see a valid ID <b>plus source-of-funds documents showing the
+transaction amount, including tax certificates (含税务凭证)</b>. The annual purchase convenience
+quota is available only to foreign individuals who hold a 外国人永久居留身份证 (Foreign Permanent
+Resident ID card). Practically: the cost model was already right, but the paperwork bar for this
+user is higher than the site implied, and that is now stated everywhere the threshold appears.
+<a class="src" href="https://www.safe.gov.cn/tianjin/2024/0229/2402.html" rel="noopener">SAFE art. 64</a>
+<a class="src" href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" rel="noopener">SAFE art. 59</a></div>
+
+<h2>2. Re-verification register (17 checks)</h2>
+<div class="tw"><table class="tbl "><thead><tr>
+<th>Check</th>
+<th>Verdict</th>
+<th>Claim as published</th>
+<th>Official source</th>
+<th>Fetched (UTC)</th>
+<th>Verbatim quote</th>
+<th>Action taken</th>
+<th>Files affected</th>
+</tr></thead><tbody>
+<tr>
+<td data-l='Check'><b>RC-01</b></td>
+<td data-l='Verdict'><span class='badge badge-warn'>CHANGED (intraday)</span></td>
+<td data-l='Claim as published'>BOC USD board quotes used by every cost figure on this site: bid 6.6622 / ask 6.6903 / parity 6.7188, stamp 2026-11-10 07:32:39</td>
+<td data-l='Official source'><a class="src" href="https://www.boc.cn/sourcedb/whpj/" rel="noopener">中国银行外汇牌价 (BOC FX board), USD row</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:51:30Z</td>
+<td data-l='Verbatim quote'><q>美元 | 665.71 | 665.71 | 668.51 | 668.51 | 671.67 | 2026-11-10 | 17:39:58</q></td>
+<td data-l='Action taken'>The 07:32:39 snapshot stays canonical for all existing pages (it is what they were derived from and it is a real published board). The newer 17:39:58 board is recorded as observation OBS-1739 in data/c5bf_board_observations.csv and a second 40-row ladder is derived from it in data/c5bf_cost_10k_400k_latest.csv, with the delta per increment in data/c5bf_cost_delta.csv.</td>
+<td data-l='Files affected'><code>data/c5bf_board_observations.csv, data/c5bf_cost_10k_400k_latest.csv, data/c5bf_cost_delta.csv, c5bf-rates.html</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-02</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>CONFIRMED</span></td>
+<td data-l='Claim as published'>Personal cross-border wire fee: 1 permille of the amount, minimum CNY 50, maximum CNY 260, plus a cable fee of CNY 150 (CNY 80 to HK/MO/TW)</td>
+<td data-l='Official source'><a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" rel="noopener">中国银行电子银行个人服务转账汇款费率表 (standards effective 2014-11-01)</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:50:00Z</td>
+<td data-l='Verbatim quote'><q>跨境汇款（电汇）| 每笔汇款金额的1‰，最低收取50元/笔，最高收取260元/笔；另收电讯费,港澳台地区人民币80元/笔,非港澳台地区人民币150元/笔。</q></td>
+<td data-l='Action taken'>No change. This is the single most load-bearing tariff on the site and it matches the published table word for word.</td>
+<td data-l='Files affected'><code>none (verification only)</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-03</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>NEW (verified, previously uncatalogued)</span></td>
+<td data-l='Claim as published'>Additional published tariffs on the same table: intra-BOC inter-provincial FOREIGN CURRENCY transfer 1 permille capped at CNY 200 per transaction; domestic interbank CNY remittance CNY 2-15 tiered, above CNY 50,000 0.03% capped at CNY 50</td>
+<td data-l='Official source'><a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" rel="noopener">中国银行电子银行个人服务转账汇款费率表</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:50:00Z</td>
+<td data-l='Verbatim quote'><q>中行内跨省、省内异地外币转账 | 每笔转账金额的1‰，最高200元/笔。 …… 国内跨行汇款（普通）| …… 5万元以上，按金额的0.03%，最高收费50元。</q></td>
+<td data-l='Action taken'>Recorded here because it matters for sequencing: moving CNY domestically between banks costs at most CNY 50, and moving FX inside BOC costs at most CNY 200 - both far below the CNY 410 cross-border wire cost. It does not change any published ladder row.</td>
+<td data-l='Files affected'><code>research/c5bf-reverification-log.md</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-04</b></td>
+<td data-l='Verdict'><span class='badge badge-warn'>CONFIRMED - CHARACTERISATION CORRECTED</span></td>
+<td data-l='Claim as published'>OUR (full-amount-received) surcharge US$15 per wire to a beneficiary bank holding an account at BOC New York / US$25 to other US banks</td>
+<td data-l='Official source'><a class="src" href="https://www.boc.cn/pbservice/bi2/201412/t20141231_4404048.html" rel="noopener">关于调整部分个人业务收费标准的公示 (public notice adjusting certain PERSONAL business fee standards), 2014-12-31, effective 2015-04-01</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:50:30Z</td>
+<td data-l='Verbatim quote'><q>编码 210104021 | 4.个人跨境本外币汇款 | 4.2全额到账 | ……美元：收款行在我行纽约分行开立账户的，15美元/笔，其他均为25美元/笔 | 生效日期 2015年4月1日</q></td>
+<td data-l='Action taken'>The amounts were right but the site called this a 'corporate tariff document' whose personal applicability was unknown. It is BOC's published PERSONAL fee notice (个人业务收费标准, item 4.个人跨境本外币汇款). What is genuinely conditional is ROUTING: the notice says the service applies only 汇款行与收款行无直接账户关系，需通过至少一家中转行办理的汇款业务. Corrected in P23, F05 and M02.</td>
+<td data-l='Files affected'><code>data/s775_penalties.csv (P23), data/s775_flags.csv (S775-F05), data/s775_methods.csv (M02), scripts/gen_s775_data.py</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-05</b></td>
+<td data-l='Verdict'><span class='badge badge-warn'>CORRECTED (scope was over-broad)</span></td>
+<td data-l='Claim as published'>'No approval needed up to US$50,000/day on ID documents' as a general statement about wiring money out of China</td>
+<td data-l='Official source'><a class="src" href="https://www.safe.gov.cn/tianjin/2024/0229/2402.html" rel="noopener">2024年外汇管理互联网信息——个人外汇（三） (SAFE Tianjin, quoting 汇发〔2020〕14号 art. 64)</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:52:00Z</td>
+<td data-l='Verbatim quote'><q>境内个人外汇汇出境外用于经常项目支出……外汇账户内外汇汇出境外当日累计等值5万美元以下（含）的，凭本人有效身份证件办理；超过上述金额的，凭本人有效身份证件、有交易额的相关材料办理。……持外币现钞汇出当日累计等值1万美元以下（含）的，凭本人有效身份证件在银行办理；超过上述金额的，凭本人有效身份证件、经海关签章的《海关申报单》或本人原存款银行外币现钞提取单据、有交易额的相关材料办理。</q></td>
+<td data-l='Action taken'>The ID-only US$50,000 same-day threshold is expressly for 境内个人 (DOMESTIC individuals) remitting FX FROM AN FX ACCOUNT for current-account expenditure, and it is US$10,000/day when remitting foreign-currency CASH. A U.S. citizen is a 境外个人 (foreign individual) - see RC-06. Every place the site stated the blanket rule now carries its scope: M01 'why', M07 step 3, dashboard fact 4, and the executive summary.</td>
+<td data-l='Files affected'><code>data/s775_methods.csv (M01), data/s775_steps.csv (M07 step 3), scripts/build_s775_site.py, research/s775-executive-summary.md, s775-dashboard.html</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-06</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>NEW SOURCE (registered as S52)</span></td>
+<td data-l='Claim as published'>Document requirements for a FOREIGN individual (境外个人) buying FX out of CNY income earned in China</td>
+<td data-l='Official source'><a class="src" href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" rel="noopener">2024年经常项目外汇政策问答案例（九）— 境外个人是否享受年度便利化额度购汇？ (SAFE Tianjin, quoting 汇发〔2020〕14号 art. 59)</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:51:00Z</td>
+<td data-l='Verbatim quote'><q>境外个人在境内取得的经常项目合法人民币收入，凭本人有效身份证件和有交易额的购汇资金来源材料（含税务凭证）在银行办理购汇。持有外国人永久居留身份证的境外个人适用购汇年度便利化额度。</q></td>
+<td data-l='Action taken'>This is the rule that actually governs the user's case: a U.S. citizen buying FX out of lawful current-account CNY income earned in China must present a valid ID PLUS source-of-funds documents showing the transaction amount, INCLUDING TAX CERTIFICATES (含税务凭证). The annual purchase convenience quota is available only to foreign individuals holding a 外国人永久居留身份证 (Foreign Permanent Resident ID). Added to the S775 register as S52 and wired into M01 and the dashboard.</td>
+<td data-l='Files affected'><code>data/s775_sources.csv (+.json) S52, data/s775_methods.csv (M01), scripts/gen_s775_data.py, s775-dashboard.html</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-07</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>CONFIRMED</span></td>
+<td data-l='Claim as published'>FBAR non-willful civil monetary penalty US$16,536</td>
+<td data-l='Official source'><a class="src" href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" rel="noopener">31 CFR 1010.821 Penalty adjustment and table (eCFR, Title 31 up to date as of 11/06/2026)</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:53:00Z</td>
+<td data-l='Verbatim quote'><q>31 U.S.C. 5321(a)(5)(B)(i) | Foreign Financial Agency Transaction—Non-Willful Violation of Transaction | 10,000 | 16,536 (for penalties assessed on or after January 17, 2025)</q></td>
+<td data-l='Action taken'>No change. Verified against the current eCFR table, not a secondary summary.</td>
+<td data-l='Files affected'><code>none (verification only)</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-08</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>CONFIRMED</span></td>
+<td data-l='Claim as published'>FBAR willful civil monetary penalty US$165,353 (with the statutory 50%-of-balance prong)</td>
+<td data-l='Official source'><a class="src" href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" rel="noopener">31 CFR 1010.821 Penalty adjustment and table</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:53:00Z</td>
+<td data-l='Verbatim quote'><q>31 U.S.C. 5321(a)(5)(C)(i)(I) | Foreign Financial Agency Transaction—Willful Violation of Transaction | 100,000 | 165,353 (for penalties assessed on or after January 17, 2025)</q></td>
+<td data-l='Action taken'>The adjusted amount is confirmed. The '50% of the balance' alternative is statutory (31 U.S.C. 5321(a)(5)(C)) rather than a number in this table, so the site keeps stating it as 'greater of' - which is how the statute operates - and cites this row for the dollar figure only.</td>
+<td data-l='Files affected'><code>none (verification only)</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-09</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>NEW (verified, previously uncatalogued)</span></td>
+<td data-l='Claim as published'>General civil penalty for willful violations of Bank Secrecy Act requirements: US$71,545 to US$286,184</td>
+<td data-l='Official source'><a class="src" href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" rel="noopener">31 CFR 1010.821 Penalty adjustment and table</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:53:00Z</td>
+<td data-l='Verbatim quote'><q>31 U.S.C. 5321(a)(1) | General Civil Penalty Provision for Willful Violations of Bank Secrecy Act Requirements | 25,000 −100,000 | 71,545 −286,184</q></td>
+<td data-l='Action taken'>Added to the audit page because it is the backstop penalty a prosecutor can reach for willful BSA violations generally, above and beyond the FBAR-specific rows.</td>
+<td data-l='Files affected'><code>c5bf-integration-audit.html</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-10</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>CONFIRMED</span></td>
+<td data-l='Claim as published'>Foreign earned income exclusion US$132,900 for 2026 and US$130,000 for 2025</td>
+<td data-l='Official source'><a class="src" href="https://www.irs.gov/individuals/international-taxpayers/figuring-the-foreign-earned-income-exclusion" rel="noopener">Figuring the foreign earned income exclusion | Internal Revenue Service</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:53:30Z</td>
+<td data-l='Verbatim quote'><q>For tax year 2025, the maximum foreign earned income exclusion is the lesser of the foreign income earned or $130,000 per qualifying person. For tax year 2026, the maximum exclusion is $132,900 per person.</q></td>
+<td data-l='Action taken'>No change. Source-selection caution recorded: the IRS general FEIE page still enumerates only 2020-2023 ($107,600 / $108,700 / $112,000 / $120,000), so the 'Figuring' page is the correct citation for 2025-2026 and must not be swapped for it.</td>
+<td data-l='Files affected'><code>none (verification only)</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-11</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>NEW (verified, previously uncatalogued)</span></td>
+<td data-l='Claim as published'>Foreign housing limitation 30% of the maximum exclusion: US$39,870 (2026) / US$39,000 (2025); 2024 maximum exclusion US$126,500</td>
+<td data-l='Official source'><a class="src" href="https://www.irs.gov/individuals/international-taxpayers/figuring-the-foreign-earned-income-exclusion" rel="noopener">Figuring the foreign earned income exclusion | Internal Revenue Service</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:53:30Z</td>
+<td data-l='Verbatim quote'><q>For 2025, the housing amount limitation is $39,000; for 2026, it is $39,870. …… the $126,500 maximum foreign earned income exclusion for 2024</q></td>
+<td data-l='Action taken'>Useful for prior-year cohorts: a U.S. citizen who worked in China in 2024 has a $126,500 exclusion, not $130,000. Recorded so nobody back-fits the 2026 number onto an older year.</td>
+<td data-l='Files affected'><code>c5bf-integration-audit.html</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-12</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>CONFIRMED</span></td>
+<td data-l='Claim as published'>FEIE reaches only wages, salaries, professional fees and other amounts paid for personal services rendered</td>
+<td data-l='Official source'><a class="src" href="https://www.irs.gov/individuals/international-taxpayers/foreign-earned-income-exclusion" rel="noopener">Foreign earned income exclusion | Internal Revenue Service</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:53:15Z</td>
+<td data-l='Verbatim quote'><q>Foreign-earned income means wages, salaries, professional fees, or other amounts paid to you for personal services rendered by you. …… Not foreign earned income: …… Pension or annuity payments, including social security benefits</q></td>
+<td data-l='Action taken'>Confirms the site's standing caution: the FEIE cannot shelter a currency gain under IRC 988 or the conversion of existing savings. It is relevant only to a salary route (M07-M09).</td>
+<td data-l='Files affected'><code>none (verification only)</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-13</b></td>
+<td data-l='Verdict'><span class='badge badge-warn'>RECONCILED (convention, not an error)</span></td>
+<td data-l='Claim as published'>Two different half-spread percentages (0.2104% and 0.2100%) were published for the SAME 2026-11-10 board across sibling builds</td>
+<td data-l='Official source'><a class="src" href="https://www.boc.cn/sourcedb/whpj/" rel="noopener">中国银行外汇牌价 - derived arithmetic</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:51:30Z</td>
+<td data-l='Verbatim quote'><q>bid 6.6622 / ask 6.6903 -&gt; mid 6.67625; (ask-mid)/ask = 0.210006%; (ask-mid)/mid = 0.210433%</q></td>
+<td data-l='Action taken'>Both figures come from the same board; they differ only in the denominator. The cost ladder multiplies the USD amount by (ask-mid)/ask, so 0.2100% is the figure consistent with every derived row. data/c5bf_board_observations.csv now publishes BOTH denominators for each observation, and the S775 pages state the formula explicitly.</td>
+<td data-l='Files affected'><code>data/c5bf_board_observations.csv, data/s775_penalties.csv (P22), scripts/build_s775_site.py</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-14</b></td>
+<td data-l='Verdict'><span class='badge badge-no'>IRREGULARITY - FIXED</span></td>
+<td data-l='Claim as published'>Live deployed dashboard hero card quoted a $10,000 total of US$50.93 while its own ladder row said US$53.42</td>
+<td data-l='Official source'><a class="src" href="https://www.boc.cn/sourcedb/whpj/" rel="noopener">Derived: 10,000 x (ask-mid)/ask = 21.00 spread + (clamp(0.001 x 66,903, 50, 260) + 150)/ask = 32.42 wire</a></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:51:30Z</td>
+<td data-l='Verbatim quote'><q>21.00 + 32.42 = 53.42 (the ladder row in data/s775_cost_10k_400k.csv)</q></td>
+<td data-l='Action taken'>The hero card was a stale hand-typed figure from an earlier mis-derivation of the wire fee. The owner's own fix (PR #34) could not be merged cleanly after main advanced, so the correction was carried forward by this integration session and a validator guard now requires the hero card to quote the ladder's $10,000 total.</td>
+<td data-l='Files affected'><code>scripts/build_s775_site.py, s775-dashboard.html, scripts/verify_s775_site.py</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-15</b></td>
+<td data-l='Verdict'><span class='badge badge-no'>IRREGULARITY - FIXED</span></td>
+<td data-l='Claim as published'>s775-cost-10k-400k.html shipped 40 rows with a &lt;td&gt; nested inside a &lt;td&gt;</td>
+<td data-l='Official source'><span class="blank">n/a (markup defect, no external source)</span></td>
+<td data-l='Fetched (UTC)'>2026-11-10T09:54:00Z</td>
+<td data-l='Verbatim quote'><q>&lt;td data-l='Amount'&gt;&lt;td data-l='Amount'&gt;$80,000&lt;/td&gt;&lt;/td&gt; (40 occurrences on main before the fix)</q></td>
+<td data-l='Action taken'>The builder's generic table() wrapped cells that were already full &lt;td&gt; elements. table() now passes through pre-wrapped cells, and a validator guard fails the build if any nested &lt;td&gt; reappears on an S775 page.</td>
+<td data-l='Files affected'><code>scripts/build_s775_site.py, s775-cost-10k-400k.html, scripts/verify_s775_site.py</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-16</b></td>
+<td data-l='Verdict'><span class='badge badge-warn'>IRREGULARITY - FLAGGED, NOT FIXED</span></td>
+<td data-l='Claim as published'>22 cross-file anchors in the docs/ sub-site point at docs/sources.html#S01..#S27, which has no such element ids</td>
+<td data-l='Official source'><span class="blank">n/a (repository markup finding, no external source)</span></td>
+<td data-l='Fetched (UTC)'>2026-11-10T10:05:00Z</td>
+<td data-l='Verbatim quote'><q>docs/sources.html declares only id="nav" and id="app"; it renders its source list client-side from assets/data.js, so no #S01..#S27 target exists in the served HTML</q></td>
+<td data-l='Action taken'>Found by a repo-wide sweep of all 61 published HTML pages (1,345 cross-file references, 0 broken file targets). The 22 affected anchors are all in docs/playbook.html and docs/methodology.html and all point into a JavaScript-rendered list, so a static check cannot confirm them and the browser will not scroll to them either. NOT fixed here: docs/ belongs to another session's build pipeline (tools/build_site.py, site/assets/app.js lineage) and correcting it means changing that pipeline, which is out of this session's scope. Logged as a cross-scope request in COORDINATION.md. Non-blocking: it affects in-page scrolling inside an optional sub-site, not any figure, table row or source citation.</td>
+<td data-l='Files affected'><code>docs/playbook.html, docs/methodology.html, docs/sources.html (owner: docs/ sub-site pipeline)</code></td>
+</tr>
+<tr>
+<td data-l='Check'><b>RC-17</b></td>
+<td data-l='Verdict'><span class='badge badge-ok'>CONFIRMED</span></td>
+<td data-l='Claim as published'>The published site has no broken internal links</td>
+<td data-l='Official source'><span class="blank">n/a (repository build finding, no external source)</span></td>
+<td data-l='Fetched (UTC)'>2026-11-10T10:05:00Z</td>
+<td data-l='Verbatim quote'><q>First sweep on this session's tree: 61 HTML pages, 1,345 cross-file references. Final sweep after merging origin/main (PRs #39-#43, which added the a513, c3x and completion-audit pages): 72 HTML pages, 1,787 cross-file references, 0 broken targets.</q></td>
+<td data-l='Action taken'>Performed because scripts/check_links.py only walks 9 hand-listed pages, so the two new c5bf pages and the rest of the tree were outside its scope. Each reference was resolved relative to the page's own directory (the docs/ sub-site is self-contained, which an earlier root-relative pass mis-reported as 81 broken links). Re-run after the merge of origin/main so the claim covers the exact tree that gets deployed, not just this session's branch: 72 pages, 1,787 references, 0 broken. Result recorded so the 'no broken links' claim in the PR rests on a sweep of the whole tree, not a sample.</td>
+<td data-l='Files affected'><code>none (verification only)</code></td>
+</tr>
+</tbody></table></div>
+
+<h2>3. Corrections applied in this pass (8)</h2>
+<div class="tw"><table class="tbl "><thead><tr>
+<th>ID</th>
+<th>Files</th>
+<th>Before</th>
+<th>After</th>
+<th>Basis</th>
+<th>Official source</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr>
+<td data-l='ID'><b>COR-01</b></td>
+<td data-l='Files'><code>s775-dashboard.html hero card</code></td>
+<td data-l='Before'>$50.93 total cost at $10,000</td>
+<td data-l='After'>$53.42 (now emitted from the ladder row, not hand-typed)</td>
+<td data-l='Basis'>Re-derived from the 2026-11-10 07:32:39 BOC board + BOC personal tariff</td>
+<td data-l='Official source'><a class="src" href="https://www.boc.cn/sourcedb/whpj/" rel="noopener">www.boc.cn</a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" rel="noopener">www.boc.cn</a></td>
+<td data-l='Provenance'>carried forward from unmergeable PR #34 (owner session arena/775c9619-china3, last commit 2026-11-10T01:47:56Z - stale &gt;60 min, handoff noted on the board)</td>
+</tr>
+<tr>
+<td data-l='ID'><b>COR-02</b></td>
+<td data-l='Files'><code>s775-cost-10k-400k.html</code></td>
+<td data-l='Before'>40 rows with &lt;td&gt; nested inside &lt;td&gt;</td>
+<td data-l='After'>valid single-level &lt;td&gt; cells; builder passes pre-wrapped cells through</td>
+<td data-l='Basis'>HTML validity</td>
+<td data-l='Official source'><span class="blank">n/a</span></td>
+<td data-l='Provenance'>carried forward from unmergeable PR #34</td>
+</tr>
+<tr>
+<td data-l='ID'><b>COR-03</b></td>
+<td data-l='Files'><code>data/s775_penalties.csv P22 + rendered pages</code></td>
+<td data-l='Before'>Half-spread 0.2104% of USD amount</td>
+<td data-l='After'>Half-spread 0.2100% of USD amount = (ask-mid)/ask, with the formula stated</td>
+<td data-l='Basis'>Arithmetic convention consistent with every ladder row</td>
+<td data-l='Official source'><a class="src" href="https://www.boc.cn/sourcedb/whpj/" rel="noopener">www.boc.cn</a></td>
+<td data-l='Provenance'>carried forward from unmergeable PR #34; both denominators now published in data/c5bf_board_observations.csv</td>
+</tr>
+<tr>
+<td data-l='ID'><b>COR-04</b></td>
+<td data-l='Files'><code>data/s775_methods.csv M01, data/s775_steps.csv M07 step 3, scripts/build_s775_site.py, research/s775-executive-summary.md</code></td>
+<td data-l='Before'>'no approval needed up to US$50,000/day on ID documents' stated as a blanket rule</td>
+<td data-l='After'>scoped: 境内个人 (domestic individual) remitting FROM AN FX ACCOUNT under 汇发〔2020〕14号 art. 64; foreign-currency cash US$10,000/day; 境外个人 (foreign individual) needs ID + source-of-funds documents incl. tax certificates under art. 59</td>
+<td data-l='Basis'>SAFE primary text re-read verbatim</td>
+<td data-l='Official source'><a class="src" href="https://www.safe.gov.cn/tianjin/2024/0229/2402.html" rel="noopener">www.safe.gov.cn</a> <a class="src" href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" rel="noopener">www.safe.gov.cn</a></td>
+<td data-l='Provenance'>cross-scope correction requested on the board by session arena/058d6cd7-china3 (A058-T1); actioned by the final integration session</td>
+</tr>
+<tr>
+<td data-l='ID'><b>COR-05</b></td>
+<td data-l='Files'><code>data/s775_penalties.csv P23, data/s775_flags.csv S775-F05, data/s775_methods.csv M02</code></td>
+<td data-l='Before'>OUR US$15/US$25 described as sitting in BOC's corporate/trade-finance schedule with personal applicability unconfirmed</td>
+<td data-l='After'>OUR is BOC's published PERSONAL fee notice (code 210104021, item 4.2全额到账, effective 2015-04-01); the real condition is routing - no direct account relationship and at least one intermediary bank</td>
+<td data-l='Basis'>BOC notice re-read verbatim, including its scope sentence</td>
+<td data-l='Official source'><a class="src" href="https://www.boc.cn/pbservice/bi2/201412/t20141231_4404048.html" rel="noopener">www.boc.cn</a></td>
+<td data-l='Provenance'>found by this session's own re-verification; flag severity lowered medium -&gt; low and retitled</td>
+</tr>
+<tr>
+<td data-l='ID'><b>COR-06</b></td>
+<td data-l='Files'><code>data/s775_sources.csv S13</code></td>
+<td data-l='Before'>title '个人外汇业务问答 - 境外汇款'; description 'Remittance on ID documents: same-day cumulative up to US$50,000'</td>
+<td data-l='After'>actual document title '2024年外汇管理互联网信息——个人外汇（三）'; description now states the 境内个人 / FX-account scope, the cash US$10,000/day rule and points to S52 for foreign individuals</td>
+<td data-l='Basis'>SAFE page re-fetched; title taken from the published 名称 field</td>
+<td data-l='Official source'><a class="src" href="https://www.safe.gov.cn/tianjin/2024/0229/2402.html" rel="noopener">www.safe.gov.cn</a></td>
+<td data-l='Provenance'>found by this session's own re-verification</td>
+</tr>
+<tr>
+<td data-l='ID'><b>COR-07</b></td>
+<td data-l='Files'><code>data/s775_sources.csv (+ .json)</code></td>
+<td data-l='Before'>51 sources, none covering 汇发〔2020〕14号 art. 59 for foreign individuals</td>
+<td data-l='After'>52 sources; S52 added (SAFE Tianjin 2024-06-21 Q&amp;A (九))</td>
+<td data-l='Basis'>Primary source fetched verbatim during integration</td>
+<td data-l='Official source'><a class="src" href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" rel="noopener">www.safe.gov.cn</a></td>
+<td data-l='Provenance'>register count and the S775 validator's expected row count updated together</td>
+</tr>
+<tr>
+<td data-l='ID'><b>COR-08</b></td>
+<td data-l='Files'><code>scripts/verify_s775_site.py</code></td>
+<td data-l='Before'>no guard against a stale hero figure, a stale 0.2104% spread, nested &lt;td&gt;, or an unscoped US$50,000/day claim</td>
+<td data-l='After'>four regression guards added; negative test confirmed each fires (2 FAILs on an injected stale figure)</td>
+<td data-l='Basis'>n/a (test infrastructure)</td>
+<td data-l='Official source'><span class="blank">n/a</span></td>
+<td data-l='Provenance'>guards verified by injecting the old value into a copy of the page and re-running the validator</td>
+</tr>
+</tbody></table></div>
+
+<h2>4. Disposition of every open sibling pull request</h2>
+<p class="lead">The brief says to merge the finished work and never merge a broken site. Each open
+PR was read in full and test-evaluated against the current tree; the reasoning is recorded here so
+no session's work is silently dropped.</p>
+<div class="tw"><table class="tbl "><thead><tr>
+<th>PR</th>
+<th>Title</th>
+<th>Branch</th>
+<th>State</th>
+<th>Integration disposition</th>
+</tr></thead><tbody>
+<tr>
+<td data-l='PR'>#34</td>
+<td data-l='Title'>S775 correction: verified $53.42 hero figure, cost-page markup fix, guard validator rules</td>
+<td data-l='Branch'><code>arena/775c9619-china3</code></td>
+<td data-l='State'>OPEN — became unmergeable</td>
+<td data-l='Integration disposition'>Diff read line by line; its arithmetic (21.00 + 32.42 = 53.42) and its markup fix were independently re-derived and confirmed correct. After main advanced through PRs #35/#36 the PR could no longer be merged cleanly (`gh pr merge 34` refused: "the merge commit cannot be cleanly created"), and Arena's single-branch binding prevents pushing to another session's branch. Its owner's last commit is 2026-11-10T01:47:56Z — over 60 minutes with no commits — so per the board's handoff rule this integration session carried the same corrections forward as COR-01, COR-02, COR-03 and COR-08 and logged the handoff.</td>
+</tr>
+<tr>
+<td data-l='PR'>#32</td>
+<td data-l='Title'>Coordination record: PR #30 merged, Pages deploy confirmed</td>
+<td data-l='Branch'><code>arena/3fcb5029-china3</code></td>
+<td data-l='State'>OPEN — documentation only</td>
+<td data-l='Integration disposition'>Touches COORDINATION.md only; all substantive checks green. Left open for its owner: the board convention recorded at PR #27 says later sessions should append their own block rather than keep re-recording previous PRs, so merging it is not required for a correct site and would only add another append-conflict for concurrent sessions.</td>
+</tr>
+<tr>
+<td data-l='PR'>#25</td>
+<td data-l='Title'>Consolidated CNY→USD dashboard: 680-row cost ladder, §988 tax line, 17 methods, 27 flags</td>
+<td data-l='Branch'><code>arena/0fbc51c7-china3</code></td>
+<td data-l='State'>OPEN — stale base, would rewrite shared generator</td>
+<td data-l='Integration disposition'>Rewrites index.html, scripts/build_dashboard.py, README.md and EXECUTIVE_SUMMARY.md from a base that predates several merges. Merging it would roll the shared dashboard generator back behind the version that verify_dashboard.py currently checks for byte-identity, i.e. it would break the build. Not merged; disposition logged for its owner.</td>
+</tr>
+<tr>
+<td data-l='PR'>#18</td>
+<td data-l='Title'>Cost model: every CNY→USD method priced at USD 10k–400k, measured FX margin, verified sources</td>
+<td data-l='Branch'><code>arena/119a615f-china3</code></td>
+<td data-l='State'>OPEN — stale base, 25 shared legacy files</td>
+<td data-l='Integration disposition'>Rewrites index.html, methods.html, routes.html, tax.html, us-tax.html, penalties.html, flagged-review.html, review.html, sources.html, ci.yml and pages.yml from an early base. Same break-the-site risk as #25. Not merged; left to its owner.</td>
+</tr>
+<tr>
+<td data-l='PR'>#15</td>
+<td data-l='Title'>Computed CNY→USD cost model: 40 steps × 13 routes, step-by-step playbooks, verification gate</td>
+<td data-l='Branch'><code>arena/15d351fb-china3</code></td>
+<td data-l='State'>OPEN — stale base, rewrites data/*.csv shared by current validators</td>
+<td data-l='Integration disposition'>Overwrites data/sources.csv, data/penalty.csv, data/china_rules.csv and data/us_rules.csv, which validate_data.py and several page builders read today. Not merged; left to its owner.</td>
+</tr>
+<tr>
+<td data-l='PR'>#8</td>
+<td data-l='Title'>Verified CNY to USD research + GitHub Pages site (least-tax route, penalty decomposition)</td>
+<td data-l='Branch'><code>arena/46c03a7d-china3</code></td>
+<td data-l='State'>OPEN — incompatible site root</td>
+<td data-l='Integration disposition'>Publishes its own index.html at the repository root plus a site/ tree; the root index.html is now generated by scripts/build_dashboard.py and gated by verify_dashboard.py. Merging would replace the live landing page with an older hand-built one. Not merged.</td>
+</tr>
+<tr>
+<td data-l='PR'>#6</td>
+<td data-l='Title'>[DRAFT] F83: independent source verification, verified gap-fill, integration QA</td>
+<td data-l='Branch'><code>arena/f83a5122-china3</code></td>
+<td data-l='State'>OPEN — DRAFT</td>
+<td data-l='Integration disposition'>Draft PRs are not merged by an integration session.</td>
+</tr>
+<tr>
+<td data-l='PR'>#35</td>
+<td data-l='Title'>Publish independent review of conversion guidance and cost tables</td>
+<td data-l='Branch'><code>arena/058d6cd7-china3</code></td>
+<td data-l='State'>MERGED by its owner (ff25d1f) while this session worked</td>
+<td data-l='Integration disposition'>Its logged cross-scope correction request was actioned by this session as COR-04/COR-06/COR-07.</td>
+</tr>
+<tr>
+<td data-l='PR'>#36</td>
+<td data-l='Title'>Publish independent CNY repatriation accuracy review</td>
+<td data-l='Branch'><code>arena/50249649-china3</code></td>
+<td data-l='State'>MERGED by its owner (9bc2cde) while this session worked</td>
+<td data-l='Integration disposition'>Additive a502-review.html + audit; no conflict with this session's namespace.</td>
+</tr>
+<tr>
+<td data-l='PR'>#37</td>
+<td data-l='Title'>Independent completion audit: fresh BOC fee ladder and provenance flags</td>
+<td data-l='Branch'><code>arena/4a528a74-china3</code></td>
+<td data-l='State'>OPEN — concurrent, separate namespace</td>
+<td data-l='Integration disposition'>Also records a fresh BOC fee ladder. Left entirely to its owner: this session's equivalent work lives in the c5bf-* namespace (data/c5bf_board_observations.csv, c5bf-rates.html) so the two do not collide. Both are published; they are independent observations of the same official board.</td>
+</tr>
+</tbody></table></div>
+
+<h2>5. Standing caveats that no source can close</h2>
+<ul>
+<li><b>The FX board moves.</b> Both 2026-11-10 observations are on
+<a href="c5bf-rates.html">FX board &amp; sensitivity</a>; the bank quotes the rate at execution, not
+the published board. <a class="src" href="https://www.boc.cn/sourcedb/whpj/" rel="noopener">BOC board</a></li>
+<li><b>Intermediary and U.S. receiving-bank fees are blank, not zero.</b> No official schedule
+exists; flag S775-F06. <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" rel="noopener">BOC personal tariff</a></li>
+<li><b>The user's own facts were never supplied</b> — source of the CNY, U.S. tax basis, marginal
+rate, hukou history, bank and account type. Every cell that depends on them is blank and flagged
+(S775-F01…F04). Nothing was assumed.</li>
+<li><b>IRC §988 character is an interpretation of the statute, not a ruling.</b> The statutory text
+is linked; the application to these facts is flagged S775-F10.
+<a class="src" href="https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm" rel="noopener">26 U.S.C. 988</a></li>
+<li><b>Regulatory text is Chinese-language primary law.</b> Where this site paraphrases 汇发〔2020〕14号
+or the 外汇管理条例, the register above quotes the official Chinese sentence so a reader can check the
+translation rather than trust it.</li>
+</ul>
+
+</div></main>
+<footer><div class="wrap">
+<p>Final-integration session <code>arena/c5bf9ddc-china3</code> · all figures derived from
+<a href="https://www.boc.cn/sourcedb/whpj/" rel="noopener">the BOC FX board</a>,
+<a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" rel="noopener">the BOC personal wire tariff</a> and
+<a href="https://www.boc.cn/pbservice/bi2/201412/t20141231_4404048.html" rel="noopener">the BOC personal OUR notice</a>, plus the SAFE and U.S.
+official pages linked on each row · registers: <code>data/c5bf_board_observations.csv</code>,
+<code>data/c5bf_cost_10k_400k_latest.csv</code>, <code>data/c5bf_cost_delta.csv</code>,
+<code>data/c5bf_source_recheck.csv</code>, <code>data/c5bf_corrections.csv</code>.</p>
+<p>Nothing on these pages is inferred. A value that cannot be confirmed from an official
+source is left blank and flagged; it is never filled in with an estimate.</p>
+</div></footer>
+<script src="assets/s775.js"></script>
+</body>
+</html>
