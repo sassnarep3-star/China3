@@ -66,7 +66,10 @@ def table(headers, rows, classes=""):
     for r in rows:
         out.append("<tr>")
         for i, cell in enumerate(r):
-            out.append(f"<td data-l='{esc(headers[i])}'>{cell}</td>")
+            if isinstance(cell, str) and cell.lstrip().startswith("<td"):
+                out.append(cell)          # already a full <td>; do not nest another one
+            else:
+                out.append(f"<td data-l='{esc(headers[i])}'>{cell}</td>")
         out.append("</tr>")
     out.append("</tbody></table></div>")
     return "\n".join(out)
@@ -151,7 +154,7 @@ def page_shell(title, current, body):
 </div></main>
 <footer><div class="wrap">
 <p>S775 session <code>arena/775c9619-china3</code> · verification date 2026-11-10 ·
-sources: <a href="s775-sources.html">data/s775_sources.csv</a> (51 records) ·
+sources: <a href="s775-sources.html">data/s775_sources.csv</a> ({len(read_csv("s775_sources.csv"))} records) ·
 flags: <a href="s775-flagged-review.html">data/s775_flags.csv</a> ·
 audit: <a href="research/s775-repo-audit.md">research/s775-repo-audit.md</a></p>
 <p>Nothing on these pages is inferred. Values that cannot be confirmed from an official source are
@@ -178,19 +181,19 @@ def build_dashboard(sources):
 <p class="lead">Least tax/conversion penalty, verified against official primary sources on 2026-11-10.
 Start with the six facts below, then use the tabs.</p>
 <div class="cards">
-<div class="card"><div class="n">0.2104%</div><div class="l">BOC FX spread (bid 6.6622 / ask 6.6903, 2026-11-10 07:32)</div></div>
+<div class="card"><div class="n">0.2100%</div><div class="l">BOC FX half-spread (ask − mid)/ask, bid 6.6622 / ask 6.6903, 2026-11-10 07:32</div></div>
 <div class="card"><div class="n">¥50–260 + ¥150</div><div class="l">Personal wire fee (1‰ + cable)</div></div>
-<div class="card"><div class="n">$50.93</div><div class="l">Total cost to remit $10,000 (excl. conditional OUR)</div></div>
+<div class="card"><div class="n">${r10['total_usd']}</div><div class="l">Total cost to remit $10,000 (excl. conditional OUR)</div></div>
 <div class="card"><div class="n">$16,536</div><div class="l">FBAR non-willful penalty (31 CFR 1010.821, current 2026-11-06)</div></div>
 <div class="card"><div class="n">24</div><div class="l">Methods catalogued (11+ lawful conditional/approved, 6 prohibited)</div></div>
 <div class="card"><div class="n">{len(flags)}</div><div class="l">Flagged / unverified items (never guessed)</div></div>
 </div>
 <h2>Six facts first</h2>
 <ol>
-<li><b>No PRC tax on conversion.</b> The verified costs are the FX spread, the wire tariff and any US tax consequence. <a class="src" href="s775-sources.html#src-S19">S19</a> <a class="src" href="s775-sources.html#src-S10">S10</a></li>
+<li><b>No PRC tax on the act of conversion itself.</b> No official source reviewed imposes a PRC tax on converting your own CNY into USD; the verified costs are the FX spread, the wire tariff and any US tax consequence. <b>But</b> PRC tax can still apply to the <i>income that produced the CNY</i> (20% on property-transfer, dividend and interest income; IIT on salary), and for a 境外个人 (foreign individual) the bank must see tax certificates as part of the source-of-funds documents before it will sell you FX (<a class="src" href="s775-sources.html#src-S35">S35</a>, <a class="src" href="s775-sources.html#src-S52">S52</a>). <a class="src" href="s775-sources.html#src-S19">S19</a> <a class="src" href="s775-sources.html#src-S10">S10</a></li>
 <li><b>US §988 is measured on your basis.</b> Personal transactions are excluded from §988 and gains ≤$200 are excluded entirely; income-producing accounts are ordinary. Your basis was not provided — the user tax cell stays blank (<a class="src" href="s775-sources.html#src-S40">S40</a>, <a class="src" href="s775-sources.html#src-S42">S42</a>, flag S775-F02).</li>
 <li><b>FBAR dominates small amounts.</b> Aggregate foreign accounts <b>exceeding</b> $10,000 at any time in the year trigger FinCEN Form 114; willful penalties reach the greater of $165,353 or 50% of the balance (<a class="src" href="s775-sources.html#src-S48">S48</a>, <a class="src" href="s775-sources.html#src-S49">S49</a>).</li>
-<li><b>Cleanest lawful route for most people:</b> personal bank wire, no approval up to US$50,000/day on ID; the annual convenience amount is not a hard limit — documents above it (<a class="src" href="s775-sources.html#src-S10">S10</a>, <a class="src" href="s775-sources.html#src-S13">S13</a>).</li>
+<li><b>Cleanest lawful route — but the document rule depends on who you are.</b> A personal bank wire is the official, tracked channel. Under 汇发〔2020〕14号 <b>art. 64</b> a <b>境内个人 (domestic individual)</b> remitting FX abroad <b>from an FX account</b> needs only a valid ID up to US$50,000 same-day cumulative (documents above that; foreign-currency cash only up to US$10,000/day on ID). Under <b>art. 59</b> a <b>境外个人 (foreign individual — a U.S. citizen)</b> purchasing FX out of lawful current-account CNY income earned in China must present ID <b>plus source-of-funds documents with the transaction amount, including tax certificates</b>; the annual purchase convenience quota applies only to foreign individuals holding a Foreign Permanent Resident ID card (<a class="src" href="s775-sources.html#src-S13">S13</a>, <a class="src" href="s775-sources.html#src-S52">S52</a>, <a class="src" href="s775-sources.html#src-S10">S10</a>).</li>
 <li><b>Large approved channel:</b> emigrant property transfer with SAFE approval remits in one or several instalments — the two-year staging was cancelled (<a class="src" href="s775-sources.html#src-S14">S14</a>).</li>
 <li><b>Illegal routes are catastrophic:</b> fines up to 30% (30%–100% if serious) plus criminal liability; crypto is prohibited by PBOC 银发〔2026〕42号 (<a class="src" href="s775-sources.html#src-S19">S19</a>, <a class="src" href="s775-sources.html#src-S39">S39</a>, <a class="src" href="s775-sources.html#src-S29">S29</a>).</li>
 </ol>
@@ -235,7 +238,7 @@ def build_cost_page(sources):
 <h1>Cost ladder — $10,000 to $400,000, $10,000 steps</h1>
 <p class="lead">Reference route: personal bank wire (M01) on the 2026-11-10 BOC board.
 Spread = amount × (ask − mid)/ask. Wire fee = (clamp(1‰ × CNY, ¥50, ¥260) + ¥150)/ask.
-OUR US$25/wire is conditional and shown separately.</p>
+OUR US$25/wire is shown separately: it is BOC's published <b>personal</b> tariff (US$15 if the beneficiary bank holds an account at BOC New York, US$25 otherwise) and applies only where the two banks have no direct account relationship and at least one intermediary bank is required (flag S775-F05).</p>
 <div class="callout warn">Intermediary (correspondent) and US receiving-bank fees are
 <span class="blank">blank — no official schedule exists</span> (flag S775-F06). They are not zero; they are unverified.</div>
 """ + table(headers, rows, "tbl-num") + """

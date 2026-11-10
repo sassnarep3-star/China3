@@ -110,7 +110,7 @@ def checks(files, scan_rows, nonofficial):
     m = read("data/s775_methods.csv")
     out["s775_m01_50k_day_wording"] = (
         "Text 'US$50,000/day on ID documents' is " + ("present" if "50,000/day on ID" in m else "absent") + " in data/s775_methods.csv.",
-        "open; corrected on the dashboard, legacy file left to its owner" if "50,000/day on ID" in m else "fixed by its owner")
+        "open; corrected on the dashboard, legacy file left to its owner" if "50,000/day on ID" in m else "fixed in pull request #44 (session c5bf)")
     m04 = next((l for l in m.splitlines() if l.startswith("M04,")), "")
     m04_status = m04.split(",")[3] if m04.count(",") >= 3 else "row not found"
     out["s775_m04_unrestricted"] = (
@@ -125,7 +125,7 @@ def checks(files, scan_rows, nonofficial):
     hero = read("s775-dashboard.html")
     out["s775_hero_5093"] = (
         f"'50.93' occurs {hero.count('50.93')} time(s) and '53.42' {hero.count('53.42')} time(s) in s775-dashboard.html.",
-        "open; fix is in unmerged pull request #34" if "50.93" in hero else "fixed")
+        "open; fix is in unmerged pull request #34" if "50.93" in hero else "fixed in pull request #44 (session c5bf)")
 
     layers = [("data/s436_cost_schedule.csv", "method_id", ("M01",), "known_cost_usd"),
               ("data/s775_cost_10k_400k.csv", "amount_usd", ("10000",), "total_usd"),
@@ -258,8 +258,8 @@ Lines by file type: {", ".join(f"{t or '(none)'} {n:,}" for t, n in by_type.most
 
 - Legacy pages and data owned by other sessions were not edited. Their known problems are listed above and
   on `dashboard/flagged.html`, and the Archive page labels each layer.
-- Pull request #34 (S775 correction) was not merged: it belongs to another session and its branch predates
-  the current `main`.
+- Pull request #34 (S775 correction) was not merged by this session. Session c5bf applied its content in
+  pull request #44 while this review was in progress, which closed findings R03 and R06.
 - Items that could not be confirmed from an official page are blank on the site and listed as U01 to
   U{len(data.FLAGS):02d} in `data/e347_flags.csv`.
 """)

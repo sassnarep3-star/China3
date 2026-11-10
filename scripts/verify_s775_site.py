@@ -78,7 +78,7 @@ def q2(x):
 
 # ------------------------------------------------------------- 1. shape
 files = {
-    "s775_sources.csv": 51, "s775_methods.csv": 24, "s775_penalties.csv": 23,
+    "s775_sources.csv": 52, "s775_methods.csv": 24, "s775_penalties.csv": 23,
     "s775_cost_10k_400k.csv": 40, "s775_method_summary.csv": 24,
     "s775_steps.csv": 68, "s775_flags.csv": 18,
 }
@@ -255,6 +255,27 @@ r400 = next(r for r in costs if r["amount_usd"] == "400000")
 for label, row in (("$10,000", r10), ("$100,000", r100), ("$400,000", r400)):
     if row["total_usd"] not in dash:
         fail(f"dashboard does not quote the {label} total ({row['total_usd']})")
+
+# ------------------------------------------- 6b. regression guards (C5BF integration)
+# (a) the hero card must quote the SAME $10,000 total as the ladder row, not a
+#     hand-typed figure that can drift (the live site shipped $50.93 vs $53.42).
+if f'<div class="n">${r10["total_usd"]}</div>' not in dash:
+    fail(f"dashboard hero card does not carry the ladder $10,000 total ({r10['total_usd']})")
+# (b) the half-spread must be quoted with the (ask-mid)/ask denominator; the older
+#     (ask-mid)/mid figure 0.2104% contradicts every derived ladder row.
+for p_, body in html_by_page.items():
+    if "0.2104" in body:
+        fail(f"{p_}: stale 0.2104% half-spread survived into a rendered page")
+    # (c) nested <td> inside <td> is invalid markup and renders a phantom column
+    if re.search(r"<td[^>]*>\s*<td", body):
+        fail(f"{p_}: nested <td> markup (invalid HTML, renders an empty column)")
+    # (d) the ID-only US$50,000/day threshold must always carry its scope: it is
+    #     汇发〔2020〕14号 art. 64 for 境内个人 (domestic individuals), NOT a
+    #     blanket rule for a 境外个人 (foreign individual) — art. 59 (S52).
+    if "US$50,000/day" in body and not (
+            "境内个人" in body or "domestic individual" in body.lower()):
+        fail(f"{p_}: quotes the US$50,000/day ID-only threshold without its "
+             f"domestic-individual (art. 64) scope")
 
 # ------------------------------------------- 7. freshness (rebuild + compare)
 for script, args in (("scripts/gen_s775_data.py", []),

@@ -400,7 +400,9 @@ def cards_nav() -> str:
         ("Narrative guide", "The earlier editorial passes, preserved", "guide.html", ""),
         ("Data dashboard", "Structured data + calculator", "docs/index.html", ""),
         ("U.S. §988 FX-gain", "The missing cost line: potential U.S. currency gain, $10k–$400k", "us-fx-gain.html", "new"),
-        ("S775 audit", "24 methods, $10k–$400k ladder, 51 sources, 18 flags", "s775-dashboard.html", ""),
+        ("S775 audit", "24 methods, $10k–$400k ladder, 52 sources, 18 flags", "s775-dashboard.html", ""),
+        ("Integration audit", "17 claims re-read at official source today; 8 corrections applied", "c5bf-integration-audit.html", "new"),
+        ("FX board & sensitivity", "Two official BOC boards; the ladder re-derived on the latest", "c5bf-rates.html", "new"),
         ("A058 review", "Convenience amount vs documented remittance; mobile review page", "a058-flagged-review.html", "new"),
         ("A502 audit", "Independent accuracy audit of the published cost models", "a502-review.html", "new"),
         ("Completion audit", "Fee-only 40-step supplemental audit (session 4a528a74)", "completion-audit.html", "new"),
@@ -507,9 +509,9 @@ PARALLEL_BANNERS = """<section style="padding:18px;border-left:5px solid #0d7a4f
 
 <section style="padding:18px;border-left:5px solid #8a5cf6;background:#f6f0ff;color:#2c1056;border-radius:9px;margin:20px 0">
   <p class="eyebrow" style="margin:0 0 6px">Independent line-by-line audit &middot; 2026-11-10</p>
-  <h2 style="margin:0 0 8px;font-size:20px">S775: 24 methods, 51 official sources, full $10k&ndash;$400k ladder</h2>
+  <h2 style="margin:0 0 8px;font-size:20px">S775: 24 methods, 52 official sources, full $10k&ndash;$400k ladder</h2>
   <p style="margin:0 0 10px">A third independent pass that catalogued every route (including the prohibited ones),
-  registered 51 official sources with fetch timestamps, re-derived the 40-step cost ladder from the 2026-11-10
+  registered 51 official sources with fetch timestamps (52 after final integration added SAFE art.&nbsp;59), re-derived the 40-step cost ladder from the 2026-11-10
   BOC board, and left every unconfirmed value blank and flagged. It agrees with this dashboard on the rates and
   the tariff; it prices one wire per transfer. Published alongside, not in place of, the builds above.</p>
   <p style="margin:0 0 10px"><a href="s775-dashboard.html"><strong>S775 dashboard &rarr;</strong></a> &middot;
@@ -518,11 +520,41 @@ PARALLEL_BANNERS = """<section style="padding:18px;border-left:5px solid #0d7a4f
   <a href="s775-steps.html">Step playbooks</a> &middot;
   <a href="s775-penalties-tax.html">Tax &amp; penalties</a> &middot;
   <a href="s775-flagged-review.html">18 flagged items</a> &middot;
-  <a href="s775-sources.html">51 sources</a></p>
+  <a href="s775-sources.html">52 sources</a></p>
   <p style="margin:0;font-size:14px"><strong>What it adds:</strong> the prohibited-route catalogue (crypto,
   hawala, undeclared cash), the step-by-step playbooks for every route, and an independent CI validator that
   re-derives the ladder from first principles.</p>
-</section>"""
+</section>
+<section style="padding:18px;border-left:5px solid #0a5f8a;background:#eef6fb;color:#08303f;border-radius:9px;margin:20px 0">
+  <p class="eyebrow" style="margin:0 0 6px">Final integration &middot; re-verified 2026-11-10</p>
+  <h2 style="margin:0 0 8px;font-size:20px">What the integration pass changed &mdash; and what it confirmed</h2>
+  <p style="margin:0 0 10px">Every load-bearing claim on this site was re-opened at its official primary source and quoted
+  verbatim: <strong>17 checks</strong> &mdash; <strong>10 confirmed or newly catalogued</strong>, <strong>4 corrected,
+  re-scoped or moved intraday</strong>, <strong>2 irregularities found on the live site and fixed</strong>, and
+  <strong>1 flagged but deliberately not fixed</strong> because it sits in another session&rsquo;s build pipeline.
+  <strong>Zero values were filled in by inference</strong> &mdash; anything unconfirmable is blank and flagged.</p>
+  <p style="margin:0 0 10px"><a href="c5bf-integration-audit.html"><strong>Integration audit &rarr;</strong></a> &middot;
+  <a href="c5bf-rates.html">FX board &amp; cost sensitivity</a> &middot;
+  <a href="research/c5bf-reverification-log.md">Re-verification log (with verbatim quotes)</a> &middot;
+  <a href="a058-flagged-review.html">A058 review</a> &middot;
+  <a href="a502-review.html">A502 review</a> &middot;
+  <a href="flagged-review.html">Flagged for review</a></p>
+  <p style="margin:0 0 10px"><strong>The one correction that changes what you should do:</strong> the
+  &ldquo;US$50,000/day on ID documents&rdquo; threshold is <em>汇发〔２０＠０〕１４号 art.&nbsp;64</em> and it applies to
+  <strong>境内个人 (domestic individuals)</strong> remitting <strong>from an FX account</strong> &mdash; and only
+  US$10,000/day for foreign-currency cash. A U.S. citizen is a <strong>境外个人 (foreign individual)</strong>, for whom
+  <em>art.&nbsp;59</em> requires valid ID <strong>plus source-of-funds documents showing the transaction amount,
+  including tax certificates</strong>; the annual convenience quota is available only to holders of a Foreign Permanent
+  Resident ID card. The cost model was already right &mdash; the paperwork bar was understated.
+  <a href="https://www.safe.gov.cn/tianjin/2024/0229/2402.html" target="_blank" rel="noopener">SAFE art.&nbsp;64</a> &middot;
+  <a href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" target="_blank" rel="noopener">SAFE art.&nbsp;59</a></p>
+  <p style="margin:0;font-size:14px"><strong>Stability finding:</strong> BOC republished its board during the day
+  (07:32:39 &rarr; 17:39:58). Re-deriving all 40 increments on the later board moves the total by
+  <strong>&minus;$0.04 at $10,000</strong> and <strong>&minus;$2.29 at $400,000</strong>. Intraday timing is not what
+  drives your cost; the &yen;260 wire-fee cap and the <em>unpublished</em> intermediary and U.S. receiving-bank fees are.
+  Those two remain <strong>blank on every row</strong>, not zero.</p>
+</section>
+"""
 
 
 def build_index() -> str:
@@ -559,6 +591,8 @@ def build_index() -> str:
       <a href="us-fx-gain.html">§988</a>
       <a href="d646-summary.html">2026-11-10 refresh</a>
       <a href="s775-dashboard.html">S775 audit</a>
+      <a href="c5bf-integration-audit.html">Audit</a>
+      <a href="c5bf-rates.html">FX board</a>
     </nav>
   </div>
 </header>
@@ -859,6 +893,8 @@ def build_verify() -> str:
       <a href="deep-review.html">Flags</a>
       <a href="d646-summary.html">2026-11-10 refresh</a>
       <a href="s775-dashboard.html">S775 audit</a>
+      <a href="c5bf-integration-audit.html">Audit</a>
+      <a href="c5bf-rates.html">FX board</a>
     </nav>
   </div>
 </header>
