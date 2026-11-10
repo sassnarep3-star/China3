@@ -224,8 +224,8 @@ user is higher than the site implied, and that is now stated everywhere the thre
 <td data-l='Claim as published'>The published site has no broken internal links</td>
 <td data-l='Official source'><span class="blank">n/a (repository build finding, no external source)</span></td>
 <td data-l='Fetched (UTC)'>2026-11-10T10:05:00Z</td>
-<td data-l='Verbatim quote'><q>61 HTML pages scanned; 1,345 cross-file href/src references resolved relative to each page's own directory; 0 targets missing</q></td>
-<td data-l='Action taken'>Performed because scripts/check_links.py only walks 9 hand-listed pages, so the two new c5bf pages and the rest of the tree were outside its scope. Each reference was resolved against the page's own directory (the docs/ sub-site is self-contained, which an earlier root-relative pass mis-reported as 81 broken links). Result recorded here so the 'no broken links' claim in the PR rests on a sweep of the whole tree, not a sample.</td>
+<td data-l='Verbatim quote'><q>First sweep on this session's tree: 61 HTML pages, 1,345 cross-file references. Final sweep after merging origin/main (PRs #39-#43, which added the a513, c3x and completion-audit pages): 72 HTML pages, 1,787 cross-file references, 0 broken targets.</q></td>
+<td data-l='Action taken'>Performed because scripts/check_links.py only walks 9 hand-listed pages, so the two new c5bf pages and the rest of the tree were outside its scope. Each reference was resolved relative to the page's own directory (the docs/ sub-site is self-contained, which an earlier root-relative pass mis-reported as 81 broken links). Re-run after the merge of origin/main so the claim covers the exact tree that gets deployed, not just this session's branch: 72 pages, 1,787 references, 0 broken. Result recorded so the 'no broken links' claim in the PR rests on a sweep of the whole tree, not a sample.</td>
 <td data-l='Files affected'><code>none (verification only)</code></td>
 </tr>
 </tbody></table></div>
