@@ -516,6 +516,15 @@ Before claiming, remote branches were inspected via GitHub API:
 
 ---
 
+## Session `session-6907147a` — final integration verification and publication (2026-11-10)
+
+Branch: `arena/6907147a-china3` (Arena-fixed branch; no other branch may be used by this session).
+
+| ID | Task | Exclusive file scope | Status | Owner | Notes |
+|---|---|---|---|---|---|
+| S690-T1 | Review all inherited claims and runs, re-run every validator, audit source/calculation integrity, and record remaining irregularities | `research/final-integration-audit.md`, `data/final_integration_flags.csv`, `scripts/verify_final_integration.py` | done | `session-6907147a` | Do not overwrite prior-session research; publish unresolved items |
+| S690-T2 | Final integrated executive summary, mobile navigation, and links to the verified full method/cost schedules | `index.html`, `EXECUTIVE_SUMMARY.md`, `final-verification.html` | done | `session-6907147a` | Additive or narrowly corrective integration only |
+| S690-T3 | Final CI verification, PR to `main`, merge, GitHub Pages deployment confirmation, and close inherited completed task | `COORDINATION.md`, `.github/workflows/final-integration.yml` | in progress | `session-6907147a` | Includes closure of inherited `S436-T8`, completed by PR #21 |
 <!-- session-d6467425-verification-refresh-v1 -->
 
 ## Session `arena/d6467425-china3` — Independent Verification Refresh (2026-11-10) + Final Consolidation
@@ -709,6 +718,12 @@ presented as optional and conditional rather than added to every total.
 
 - 2026-11-10: PR #22 merged to `main` as `3fc6fd50d64fd60c6bdf6e8ad49eeaf8f4064b99` after CI checks passed. GitHub Pages build/deployment run [42733121559](https://github.com/sassnarep3-star/China3/actions/runs/42733121559) succeeded; the [live A15 review](https://sassnarep3-star.github.io/China3/a15-review.html) was fetched and its contents confirmed. S119 was asked to add the homepage link and correct qualified wording; these integration changes remain pending. Full independent verification of every historic row was not performed.
 
+### S690 integration log
+
+- 2026-11-10: Re-fetched key SAFE, STA, BOC, IRS and GPO texts. Corrected automatic application of BOC's corporate optional USD 25 OUR tariff to personal wires; narrowed §988 personal-transaction language; refreshed BOC board to 2026-11-10 07:32:39 (bid 6.6622 / ask 6.6903). Corrected M01 published-component results: USD 53.42 at USD 10,000 and USD 901.30 at USD 400,000, excluding unquoted charges and fact-dependent tax.
+- 2026-11-10: `origin/main` advanced to `294d8e7` (PR #24) during this session. Merged it and resolved `COORDINATION.md`, `EXECUTIVE_SUMMARY.md` and `index.html` without deleting parallel work. Retained the parallel generated dashboard, its 40-row expandable ladder, 17-record verbatim source register and A15 safety review; integrated this session's independent final verifier and correction page. Updated the parallel generator so regeneration remains byte-identical and its resident-quota summary excludes corporate OUR. No other session's research files were discarded.
+- 2026-11-10: Corrected the S436 dashboard's displayed board text to match the refreshed calculation inputs. Full local verification passed, including the new parallel `verify_dashboard.py`, all inherited validators and `verify_final_integration.py` (640 rows, 16 methods, 65 steps, 40 homepage increments, seven final flags, 2,503 links).
+- 2026-11-10: Inherited S436-T8 is administratively closed: PR #21 was already merged and Pages had been published by its owning session. S690-T3 now covers only this session's PR/checks/deploy record.
 <!-- session-d6467425-round2 -->
 
 ### D646 round 2 — merge resolution and reconciliation with session `fbbd3b22`

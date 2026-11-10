@@ -221,7 +221,7 @@ def verdict_table() -> str:
             "Simplified processing with ID only, per person per year, for a PRC-resident individual (境内个人). "
             "$400,000 takes eight calendar years and eight wire fees. A foreign passport holder does not "
             "automatically get the same treatment — the bank classifies the person first.",
-            "1529.87",
+            "1330.28",
             "8 years",
             "V06",
             "safe.gov.cn",
@@ -240,7 +240,7 @@ def verdict_table() -> str:
     ]
     html = [
         '<div class="tw"><table class="tbl"><thead><tr>',
-        "<th>Path</th><th>What it is</th><th>All-in on $400k</th><th>Time</th><th>Source</th>",
+        "<th>Path</th><th>What it is</th><th>Known cost on $400k</th><th>Time</th><th>Source</th>",
         "</tr></thead><tbody>",
     ]
     for rank, name, desc, cost, time, vid, label in rows_:
@@ -249,7 +249,7 @@ def verdict_table() -> str:
             f'<tr class="{cls}">'
             + cell("Path", f'<strong>{rank}</strong>')
             + cell("Route", f'<strong>{name}</strong><br><span class="mini">{desc}</span>')
-            + cell("All-in on $400,000", money(cost) if cost not in {"see methods", "blank by rule"} else f'<span class="blank">{cost}</span>')
+            + cell("Known cost on $400,000", money(cost) if cost not in {"see methods", "blank by rule"} else f'<span class="blank">{cost}</span>')
 
             + cell("Time", time)
             + cell("Source", src(vid, label))
@@ -384,6 +384,7 @@ def cards_nav() -> str:
         ("U.S. tax", "FBAR, 8938, FEIE, §988, treaty", "deep-us-tax.html", ""),
         ("Penalties", "Each penalty layer with its ceiling", "deep-penalty.html", ""),
         ("Verify 2026", "What this session re-checked, with quotes", "verify-2026.html", "new"),
+        ("Final integration", "Independent 640-row audit and corrections", "final-verification.html", "new"),
         ("Safety review", "Independent spot checks and their cautions", "a15-review.html", ""),
         ("Flagged for review", "Everything left blank, with the reason", "deep-review.html", ""),
         ("Sources", "84 official pages, by issuer", "deep-sources.html", ""),
@@ -510,7 +511,7 @@ def build_index() -> str:
 
 <section class="hero">
   <p class="eyebrow">Dashboard · official sources only · last checked 10 Nov 2026</p>
-  <h1>Your money is not taxed for leaving China.<br>It is taxed — or penalised — for what it is and how you move it.</h1>
+  <h1>No separate China “exit tax” was identified in the official sources reviewed.<br>Tax and penalties depend on the money’s origin and how you move it.</h1>
   <p class="lede">A U.S. citizen with a mainland bank balance asks the same question every time: what is the
   cheapest lawful route from CNY to USD, and where does the “tax penalty” actually come from? This page answers
   it in the order that matters: the cost of the transfer first, the reporting risk second, the alternatives last.</p>
@@ -595,8 +596,8 @@ def build_index() -> str:
     <ul class="tight">
       <li><a href="methods.html">methods.html</a>, <a href="routes.html">routes.html</a> — the first 11-method and
           8-route passes; superseded by <code>deep-channels.html</code> (35 channels) but kept for provenance.</li>
-      <li><a href="schedule-dashboard.html">schedule-dashboard.html</a> — the 2026-11-09 schedule pass that this
-          ladder is derived from; same tariff inputs, one day earlier.</li>
+      <li><a href="schedule-dashboard.html">schedule-dashboard.html</a> — refreshed 2026-11-10 schedule with 640 rows;
+          its personal-wire totals now exclude the corporate OUR charge.</li>
       <li><a href="costs.html">costs.html</a> / <a href="cost-review.html">cost-review.html</a> — a 1,400-row grid
           that deliberately leaves every price blank instead of assuming a rate.</li>
       <li><a href="cross-session-review.html">cross-session-review.html</a> — an independent reconciliation of the
