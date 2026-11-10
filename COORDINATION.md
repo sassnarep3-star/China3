@@ -641,3 +641,30 @@ presented as optional and conditional rather than added to every total.
 - 2026-11-10: `origin/main` advanced to `294d8e7` (PR #24) during this session. Merged it and resolved `COORDINATION.md`, `EXECUTIVE_SUMMARY.md` and `index.html` without deleting parallel work. Retained the parallel generated dashboard, its 40-row expandable ladder, 17-record verbatim source register and A15 safety review; integrated this session's independent final verifier and correction page. Updated the parallel generator so regeneration remains byte-identical and its resident-quota summary excludes corporate OUR. No other session's research files were discarded.
 - 2026-11-10: Corrected the S436 dashboard's displayed board text to match the refreshed calculation inputs. Full local verification passed, including the new parallel `verify_dashboard.py`, all inherited validators and `verify_final_integration.py` (640 rows, 16 methods, 65 steps, 40 homepage increments, seven final flags, 2,503 links).
 - 2026-11-10: Inherited S436-T8 is administratively closed: PR #21 was already merged and Pages had been published by its owning session. S690-T3 now covers only this session's PR/checks/deploy record.
+### D7 completed — pull request, merge and deployment record
+
+- **PR:** https://github.com/sassnarep3-star/China3/pull/24 — `arena/fbbd3b22-china3` → `main`.
+  Title: "Consolidated dashboard, 2026 verification register, and three verified corrections".
+- **Merge result:** **MERGED** 2026-11-10T01:09:04Z via `gh pr merge 24 --merge`, without waiting for
+  approval. Merge commit `294d8e7c880dbb28ae2d9dc562433cedf862607e` on `main`.
+- **Checks before merge (all pass, none failing):** `Verify dashboard` (this session's new workflow),
+  `Data contract and link check`, `Cost model and page verification`, `Verify cost tables`,
+  `Verify cost coverage`, `Verify deep-research dashboard`, `Cross-session review contract`, `build`.
+  `deploy` correctly skipped on the pull request.
+- **Conflicts resolved, nothing discarded:** `main` advanced twice while this session ran — PR #22 and
+  PR #23 from session `arena/15d351fb-china3`. Each time `git merge origin/main` produced exactly one
+  conflict in `COORDINATION.md`; both sessions' blocks were kept verbatim, that session's
+  `a15-review.html` and `research/a15-review.md` were preserved, and its four caveats were integrated
+  into the new dashboard rather than ignored.
+- **Deployment after merge:** all post-merge `main` runs completed `success` — `verify`,
+  `Verify dashboard`, `Verify cost tables`, `Verify cost coverage`, `Verify deep-research dashboard`,
+  `Cross-session review contract`, "Deploy static guide to GitHub Pages" (run 42733669664) and
+  "pages build and deployment" (run 42733668028). Pages API status: `built`; branch `main`; HTTPS.
+- **Live confirmation (content, not status code):** fetched
+  https://sassnarep3-star.github.io/China3/ — the dashboard hero, the six-number cards, the ranked
+  path table and the ladder rows render with the 2026-11-10 figures ($53.42 at $10,000, $901.30 at
+  $400,000). Fetched https://sassnarep3-star.github.io/China3/verify-2026.html — all 17 records render
+  with their official links and quoted text.
+- **Follow-up:** a cosmetic pass (unit handling in the register's value column, label of the collapsed
+  quotation) and this record were sent as a documentation-only PR on the same fixed branch. No figure,
+  page or check changed in that pass.
