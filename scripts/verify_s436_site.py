@@ -17,8 +17,8 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-ASK = Decimal("6.6924")
-BID = Decimal("6.6643")
+ASK = Decimal("6.6903")
+BID = Decimal("6.6622")
 MID = (ASK + BID) / Decimal("2")
 CABLE = Decimal("150")
 OUR = Decimal("25")
@@ -111,18 +111,18 @@ def check_schedule(rows: list[dict[str, str]], methods: list[dict[str, str]], id
         if r["status"] in {"UNVERIFIED", "partial", "PROHIBITED"} and not r["unverified_costs"]:
             fail(f"non-final row lacks disclosure: {mid} {u}")
         if model == "personal":
-            fx = one_way_spread(u); wire = personal_fee(u); total = fx + wire + OUR
+            fx = one_way_spread(u); wire = personal_fee(u); total = fx + wire
             values = (r["fx_spread_usd"], r["bank_wire_and_cable_usd"], r["our_usd"], r["known_cost_usd"], r["net_after_known_cost_usd"])
-            want = (q(fx),q(wire),q(OUR),q(total),q(u-total))
+            want = (q(fx),q(wire),"",q(total),q(u-total))
             if values != want: fail(f"personal formula mismatch: {mid} {u}: {values} != {want}")
         elif model == "quota":
             n = math.ceil(float(u / Decimal("50000")))
             pieces = [min(Decimal("50000"),u-Decimal("50000")*i) for i in range(n)]
             fx=sum((one_way_spread(x) for x in pieces),Decimal())
             wire=sum((personal_fee(x) for x in pieces),Decimal())
-            total=fx+wire+Decimal(n)*OUR
+            total=fx+wire
             values=(r["execution_count"],r["minimum_calendar_years"],r["fx_spread_usd"],r["bank_wire_and_cable_usd"],r["our_usd"],r["known_cost_usd"],r["net_after_known_cost_usd"])
-            want=(str(n),str(n),q(fx),q(wire),q(Decimal(n)*OUR),q(total),q(u-total))
+            want=(str(n),str(n),q(fx),q(wire),"",q(total),q(u-total))
             if values != want: fail(f"quota formula mismatch: {mid} {u}: {values} != {want}")
         elif model == "personal_unknown_tax":
             if any(r[k] for k in ("known_cost_usd","net_after_known_cost_usd","published_statutory_tax_or_fine_usd")):
@@ -130,14 +130,14 @@ def check_schedule(rows: list[dict[str, str]], methods: list[dict[str, str]], id
         elif model == "corporate_dividend":
             fx=one_way_spread(u)
             wire=min(CORPORATE_CAP,max(Decimal("50"),Decimal("0.001")*u*ASK))/ASK+CABLE/ASK
-            tax=Decimal("0.10")*u; total=fx+wire+OUR+tax
+            tax=Decimal("0.10")*u
             values=(r["fx_spread_usd"],r["bank_wire_and_cable_usd"],r["our_usd"],r["published_statutory_tax_or_fine_usd"],r["known_cost_usd"],r["net_after_known_cost_usd"])
-            want=(q(fx),q(wire),q(OUR),q(tax),q(total),q(u-total))
+            want=(q(fx),q(wire),q(OUR),q(tax),"","")
             if values != want: fail(f"corporate formula mismatch: {mid} {u}: {values} != {want}")
         elif model == "usd_wire":
-            wire=personal_fee(u); total=wire+OUR
+            wire=personal_fee(u); total=wire
             values=(r["cny_principal_at_boc_ask"],r["fx_spread_usd"],r["bank_wire_and_cable_usd"],r["our_usd"],r["known_cost_usd"],r["net_after_known_cost_usd"])
-            want=("","0.00",q(wire),q(OUR),q(total),q(u-total))
+            want=("","0.00",q(wire),"",q(total),q(u-total))
             if values != want: fail(f"existing USD formula mismatch: {mid} {u}: {values} != {want}")
         elif model == "unionpay_atm":
             cny=u*ASK; n=math.ceil(float(cny/Decimal("10000")))
