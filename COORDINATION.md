@@ -524,7 +524,7 @@ Branch: `arena/6907147a-china3` (Arena-fixed branch; no other branch may be used
 |---|---|---|---|---|---|
 | S690-T1 | Review all inherited claims and runs, re-run every validator, audit source/calculation integrity, and record remaining irregularities | `research/final-integration-audit.md`, `data/final_integration_flags.csv`, `scripts/verify_final_integration.py` | done | `session-6907147a` | Do not overwrite prior-session research; publish unresolved items |
 | S690-T2 | Final integrated executive summary, mobile navigation, and links to the verified full method/cost schedules | `index.html`, `EXECUTIVE_SUMMARY.md`, `final-verification.html` | done | `session-6907147a` | Additive or narrowly corrective integration only |
-| S690-T3 | Final CI verification, PR to `main`, merge, GitHub Pages deployment confirmation, and close inherited completed task | `COORDINATION.md`, `.github/workflows/final-integration.yml` | in progress | `session-6907147a` | Includes closure of inherited `S436-T8`, completed by PR #21 |
+| S690-T3 | Final CI verification, PR to `main`, merge, GitHub Pages deployment confirmation, and close inherited completed task | `COORDINATION.md`, `.github/workflows/final-integration.yml` | done | `session-6907147a` | Includes closure of inherited `S436-T8`, completed by PR #21 |
 <!-- session-d6467425-verification-refresh-v1 -->
 
 ## Session `arena/d6467425-china3` — Independent Verification Refresh (2026-11-10) + Final Consolidation
@@ -825,3 +825,5 @@ file is a guaranteed cross-session CI break.
 - **Board convention from here:** this entry is the terminal record. Any later session should append its
   own block rather than re-recording these PRs, so the chain of "a PR that documents the previous PR"
   does not continue indefinitely.
+
+- 2026-11-10: **S690 final PR and deployment record.** PR https://github.com/sassnarep3-star/China3/pull/28 merged at 2026-11-10T01:18:53Z; merge commit `b40af01eae65d6361e9f7484fc3c4fa1a3d18ec6`. All substantive PR checks passed. One Pages PR run (`42734669651`) was cancelled by the repository-wide Pages concurrency group during another session's merge, not failed by a site/build assertion. The final post-merge run `42734897375` completed build and deploy successfully; `pages-build-deployment` run `42734896477` succeeded and Pages API reports `built`, `main`, root, HTTPS enforced. Final Integration run `42734897450` succeeded on the merge commit. Live homepage, `final-verification.html`, and the 640-row schedule were fetched; cache-busted homepage confirms the corrected hero, $1,330.28 eight-year constant-snapshot quota scenario, $53.42/$901.30 M01 values and parallel review links.
