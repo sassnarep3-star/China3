@@ -111,6 +111,7 @@ SOURCES = {
     "U24": ("Internal Revenue Service", "Offshore Income and Filing Information for Taxpayers with Foreign Accounts (FS-14-07)", "https://www.irs.gov/pub/irs-news/FS-14-07.pdf", "official IRS fact sheet verified"),
     "U25": ("Internal Revenue Service", "Foreign Gift and Trust Reporting on Forms 3520 and 3520-A", "https://www.irs.gov/pub/irs-npl/2023ntf-15-foreign-gift-and-trust-reporting-on-form-3520-and-3520-a.pdf", "official IRS training verified"),
     "U26": ("Financial Crimes Enforcement Network", "Report to Congress under §361(b) — 'The FBAR is not a tax return'", "https://www.fincen.gov/system/files/shared/ReportToCongress361.PDF", "official report verified"),
+    "U27": ("U.S. Government Publishing Office (govinfo)", "26 U.S.C. §988 — Foreign currency transactions (2023 edition)", "https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm", "official statute text; fetched 2026-11-09 (session-5e4816e0, reference_inputs.csv R18–R21)"),
     # --- project record ---
     "G01": ("GitHub — this repository (official project record)", "COORDINATION.md and branch/PR history", "https://github.com/sassnarep3-star/China3/blob/main/COORDINATION.md", "repository record verified via git + gh api"),
 }
@@ -203,7 +204,7 @@ US_RULES = [
     ("U14", "Foreign gifts are not income tax", "境外赠与/遗赠不属于所得税应税项目；若同一非居民外国个人或外国遗产在纳税年度内合计超过 $100,000，须提交 Form 3520 第四部分", "IRS Gifts from foreign person", "U09", "U25", "verified"),
     ("U15", "Form 3520 penalty", "未按时/完整申报：每月按赠与额的 5% 处罚，最高为赠与额的 25%（有合理事由可免责）", "IRC 6039F(c)；IRS 官方页面", "U09", "U25", "verified"),
     ("U16", "Form 3520 corporate/partnership gift threshold", "$20,116 for 2025；$20,573 for 2026（每年通胀调整）", "IRS Gifts from foreign person（2026 年更新）", "U09", "", "verified"),
-    ("U17", "Personal foreign-currency gain ($200 rule)", "个人外币交易因汇率变动产生的收益，不超过 $200 的不计入所得；超过 $200 的，按资本利得申报", "IRS Publication 525 'Foreign currency transactions'（IRC 988(e)）", "U04", "", "verified"),
+    ("U17", "Personal foreign-currency gain ($200 rule)", "个人外币交易因汇率变动产生的收益，不超过 $200 的不计入所得；超过 $200 的，个人交易例外不适用； Pub. 525 的'按资本利得申报'以'个人交易'为前提（§988(e)(3) 排除 §162/§212 费用）；非个人交易按 §988(a)(1)(A) 作为普通收入", "IRS Publication 525 'Foreign currency transactions' + 26 U.S.C. §988 (govinfo)", "U04", "U27", "verified"),
     ("U18", "Foreign tax credit", "外国所得税抵免通过 Form 1116 申报；抵免额为已付外国税与 FTC 限额中的较小者", "IRS Publication 514", "U05", "", "verified"),
     ("U19", "Foreign earned income exclusion", "Form 2555 境外所得排除要求外国税务住所（tax home）；已排除所得对应的外国税不能再抵免或扣除", "IRS Publication 54 / 国际 FAQ", "U02", "U01", "verified"),
     ("U20", "US–China treaty source-country cap", "1984 年协定将缔约国对另一方居民取得的股息、利息、特许权使用费的来源国税率限制为不超过 10%", "IRS 托管的中美税收协定总统送交文本", "U16", "U15", "verified"),
@@ -268,7 +269,7 @@ PENALTY = [
     ("P08", "China — wire fee (personal e-banking)", "个人跨境汇款（电汇）手续费", "汇款金额 1‰，最低 ¥50/笔，最高 ¥260/笔；另收电讯费：港澳台 ¥80/笔，非港澳台 ¥150/笔", "中国银行电子银行个人服务费率表（2014-11-01起）；实际以银行公示/协议为准", "S46", "", "verified"),
     ("P09", "China — wire fee (corporate schedule)", "对公汇出境外汇款（电汇）", "汇款金额 1‰，最低 ¥50/笔，最高 ¥1,000/笔，另加电讯费", "中国银行国际结算业务资费表；注明为对公基准价，可按客户资信浮动", "S47", "", "verified"),
     ("P10", "China — correspondent/intermediary fees", "境外银行 / 中转行费用", "凡业务发生的境外银行收费，按实收取", "官方资费表备注；具体金额无官方统一数值，按实际发生", "S47", "", "verified"),
-    ("P11", "China — 'full amount received' service", "全额到账服务加收（美元）", "收款行在中行纽约分行开立账户的，另加收 15 美元/笔", "中国银行 2018 年公告；属特定产品定价", "S48", "", "verified"),
+    ("P11", "China — 'full amount received' service", "全额到账服务加收（美元）", "收款行在中行纽约分行开立账户：15 美元/笔；其他情形：25 美元/笔；仅当至少经过一家中间行且收款人要求全额到账时适用（美国境内美元汇款金额须小于1亿美元）", "中国银行 2018 年公告（公司金融·贸易融资资费表）；属特定产品定价；对个人 e-banking 跨境汇款的适用性未经核实", "S48", "", "verified"),
     ("P12", "China — fee promotions", "历史优惠（已过期）", "2024-01-01 至 2024-12-31：手机银行个人外币跨境汇款（向境外中行汇款）手续费及电讯费免费；向境外他行汇款手续费及电讯费9折", "仅为 2024 年活动，不得视为当前费率；见 IR-020", "S49", "", "verified"),
     ("P13", "China — offshore basis (historical)", "CNY 与 CNH 价差（历史官方观测）", "2011-09-23 价差一度达 1.94%；2014 年一季度 CNH 对 CNY 平均溢价由 +163 pips 收窄", "香港金融管理局官方报告；为历史观测值，不是当前价差", "S50", "S51", "verified"),
     ("P14", "China — offshore basis (current)", "当前 CNY/CNH 价差", "", "HKMA 2025 年报告确认在岸/离岸汇率存在差距，但未给出可用于本账户的当前数值。留空并标记 UNVERIFIED。", "S52", "", "unverified"),
@@ -282,7 +283,7 @@ PENALTY = [
     ("P22", "China — quota/time cost", "便利化额度与汇出审核门槛", "每人每年等值 5 万美元；外汇账户汇出当日累计等值 5 万美元以上须提交交易材料", "两个 5 万美元不是同一概念；额度不是法定上限", "S01", "S02", "verified"),
     ("P23", "US — tax on moving one's own principal", "把本人税后本金从中国账户转到美国账户这一行为的美国所得税", "", "官方来源确认美国对全球所得征税、FBAR 是信息申报而非纳税申报表；但本轮研究未找到直接表述'转移本金本身不产生所得税'的官方条文，故不填写数值或结论，留空并标记 UNVERIFIED。", "U01", "U26", "unverified"),
     ("P24", "US — income earned while funds sit in China", "CNY 账户利息 / 收益的美国税", "须计入全球所得并申报（即使中国暂免利息税）", "IRS 国际个人税务 FAQ / Publication 54；具体税额取决于个人情况，未填写", "U01", "U02", "verified"),
-    ("P25", "US — currency gain on conversion", "个人外币交易汇兑收益", "不超过 $200 不计入所得；超过 $200 按资本利得申报", "IRS Publication 525（IRC 988(e) 个人交易规则）", "U04", "", "verified"),
+    ("P25", "US — currency gain on conversion", "个人外币交易汇兑收益", "不超过 $200 不计入所得；超过 $200，个人交易例外不适用（全部收益须确认）；非个人交易按 §988(a)(1)(A) 作为普通收入； Pub. 525 的'按资本利得申报'以属于个人交易为前提（§988(e)(3) 排除 §162/§212 费用）", "IRS Publication 525（个人外币交易）+ 26 U.S.C. §988(a)(1)(A)/(e)（govinfo）；是否属于'个人交易'取决于事实，请由税务师判断", "U04", "U27", "verified"),
     ("P26", "US — FBAR penalty (non-willful)", "FBAR 非故意违规最高罚款", "$16,536 / 每次违规", "31 CFR 1010.821 表，适用于 2025-01-17 起评估的处罚；2026 年通胀调整被取消", "U20", "U21", "verified"),
     ("P27", "US — FBAR penalty (willful)", "FBAR 故意违规最高罚款", "$165,353 或违规时账户余额的 50%（取较大者）", "本项目识别出的最大单项金钱风险：可达账户余额的一半", "U20", "U18", "verified"),
     ("P28", "US — Form 8938 penalty", "未提交 Form 8938", "$10,000；IRS 通知后每30天加 $10,000，上限额外 $50,000（潜在合计 $60,000）", "IRS 对照表 / IRM 5.21.6", "U06", "U10", "verified"),
@@ -318,7 +319,7 @@ FINDINGS = [
     ("F19", "企业利润可无上限汇出，但材料要求更高", "汇发〔2017〕3号：真实合规利润按程序出具证明材料可直接银行办理，没有任何限制；>5万美元须董事会决议、税务备案表、审计报告", "若资金实为公司所有，应走公司路径而非个人购汇", "S20", "", "verified"),
     ("F20", "跨境人民币通道在离岸完成兑换且不占个人外汇额度", "跨境理财通解读明确'业务均使用人民币进行跨境资金划转，资金兑换在离岸市场完成，因此不涉及占用个人的外汇额度'；PBOC 亦支持个人经常项目跨境人民币结算", "可比较在岸购汇与离岸 CNH 兑换两条路径的全包成本", "S40", "S38", "verified"),
     ("F21", "美国申报义务与中国购汇批准是两套独立义务", "IRS 对照表明确 Form 8938 不替代 FBAR，两者可同时适用独立罚款；中国侧则由银行/外汇局审核真实性", "钱成功汇出并不等于美国申报完成；反之亦然", "U06", "S02", "verified"),
-    ("F22", "个人外币汇兑收益有 $200 的免计入门槛", "IRS Publication 525：个人外币交易因汇率变动产生的收益不超过 $200 不计入所得，超过部分按资本利得申报", "若 CNY 相对取得时升值，兑换本身可能产生应申报的美国资本利得", "U04", "", "verified"),
+    ("F22", "个人外币汇兑收益有 $200 的免计入门槛", "IRS Publication 525：个人外币交易因汇率变动产生的收益不超过 $200 不计入所得；超过 $200 个人例外不适用； Pub. 525 的'按资本利得申报'以属于个人交易为前提（§988(e)(3) 排除 §162/§212 费用）；非个人交易按 §988(a)(1)(A) 作为普通收入", "若 CNY 相对取得时升值，兑换本身可能产生应申报的美国所得（多为普通收入，取决于事实与 §988 定性）——见 us-fx-gain.html", "U04", "U27", "verified"),
 ]
 
 # flags: id, item, why_flagged, needed, source_id, extra, status
@@ -334,10 +335,10 @@ FLAGS = [
     ("IR-009", "未找到已签署的中美大陆 FATCA 政府间协议", "美国财政部 2014 年联合成果单只确认'达成实质性一致'并承诺年底前签署；本轮研究未在官方来源找到已签署的中美大陆 IGA 全文（香港、澳门另有协议）。", "如需据此判断银行报送义务，请向美国财政部/IRS 及开户银行核实。", "U23", "U22", "needs review"),
     ("IR-010", "eCFR 为权威但非官方版本", "eCFR 页面自述 'authoritative but unofficial'，正式公布版本为年度 CFR（govinfo.gov）。", "如用于法律程序，请核对 govinfo 上的正式版本。", "U20", "", "needs review"),
     ("IR-011", "未找到'货币兑换税'的官方依据", "本轮检索的 SAFE / PBOC / 税务总局官方文件未规定针对个人人民币本金兑换美元的统一税种或税率。用户所述'可观的税'缺少税种、金额与凭证。", "请提供银行或税务机关的书面收费/征税说明，才能判断其性质。所有相关数值已留空。", "S01", "S21", "needs review"),
-    ("IR-012", "当前银行价差、中转行费用、CNY/CNH 基差不可核实", "官方来源只确认银行自主定价、境外银行费用按实收取、离岸价差历史上存在，未公布某一账户当前数值。", "需银行书面报价与汇路说明；相关表格单元格已留空并标记 UNVERIFIED。", "S27", "S47", "needs review"),
+    ("IR-012", "当前银行价差、中转行费用、CNY/CNH 基差不可核实", "已窄化（2026-11-10，final integration）：BOC 公开牌价给出带日期的官方半价差 — 2026-11-09 09:15:45 现汇卖出价 669.19 对 mid 667.785 → +0.2104%（board 仅'仅供参考'，执行价以实际成交为准）；账户执行价、中转行费用、当前 CNH 基差仍需银行书面报价，相关表格单元格继续留空并标记 UNVERIFIED。", "需银行书面报价与汇路说明；牌价半价差已对照 BOC 牌价表核对（见 cost-tables.html 与 cross-session-review.html X-10）。", "S27", "S47", "needs review"),
     ("IR-013", "合并冲突与 rebase 扁平化冲突", "两个会话同时创建 COORDINATION.md 造成 add/add 冲突；随后 git pull --rebase 试图扁平化合并提交并再次冲突。已停止并 git rebase --abort，未丢弃任何会话的工作。", "复核 COORDINATION.md 中保留的前一会话原始记录与本次合并日志。", "G01", "", "needs review"),
     ("IR-014", "缺少全部个案事实", "未提供：金额、资金来源与完税记录、账户开户证件、在中国的居住情况、持有银行、拟收款行、美国报税历史、是否为赠与/继承。", "所有结论均为条件式；在补齐事实前不能给出个性化路线或税额。", "G01", "", "needs review"),
-    ("IR-015", "2026-11-07 当日 USD/CNY 中间价未核实", "本轮研究未从 PBOC/CFETS 官方公告取得当日中间价，因此不填写任何汇率数值。", "如需要，请查中国人民银行授权中国外汇交易中心公布的当日人民币汇率中间价公告。", "S26", "", "needs review"),
+    ("IR-015", "2026-11-07 当日 USD/CNY 中间价未核实", "已对 2026-11-09 关闭：CFETS（中国外汇交易中心，经 PBOC 授权）公布的 USD/CNY 中间价为 6.7188（2026-11-09 09:15，chinamoney.com.cn 记录于 data/reference_inputs.csv R06，session-5e4816e0 已核实）。其他日期的中间价仍须逐日查证；本行保留 S26（PBOC 2014 公告）作为带宽规则来源。", "逐日中间价请查 CFETS 官方公告（chinamoney.com.cn）；2026-11-09 数值见 R06。", "S26", "", "needs review"),
     ("IR-016", "中文官方文件的英文表述为本站点译文", "多数一手材料为中文法规、问答与公告；本站点英文表述为便于阅读的转述，不构成官方译本。", "请以链接中的中文原文为准。", "S05", "", "needs review"),
     ("IR-017", "跨境理财通 / QDII 资格适配性未确认", "跨境理财通要求大湾区内地9市户籍或连续5年社保/个税、2年投资经历及资产门槛；QDII 需机构额度。这些条件是否满足未知。", "确认居住地、投资经历与资产情况后再考虑。", "S39", "S41", "needs review"),
     ("IR-018", "'无需人工输入'与个案结论的矛盾", "任务书要求全程无人工输入，但最优路径、税额与全包成本都依赖个案事实；因此本站点只给出规则、通道、罚款组件与条件式分析，不填个案数值。", "如需确定数额，须由用户提供材料或授权专业人士调取。", "G01", "", "needs review"),

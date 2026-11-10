@@ -15,7 +15,7 @@
 "U14","Foreign gifts are not income tax","境外赠与/遗赠不属于所得税应税项目；若同一非居民外国个人或外国遗产在纳税年度内合计超过 $100,000，须提交 Form 3520 第四部分","IRS Gifts from foreign person","U09","https://www.irs.gov/businesses/gifts-from-foreign-person","U25","verified"
 "U15","Form 3520 penalty","未按时/完整申报：每月按赠与额的 5% 处罚，最高为赠与额的 25%（有合理事由可免责）","IRC 6039F(c)；IRS 官方页面","U09","https://www.irs.gov/businesses/gifts-from-foreign-person","U25","verified"
 "U16","Form 3520 corporate/partnership gift threshold","$20,116 for 2025；$20,573 for 2026（每年通胀调整）","IRS Gifts from foreign person（2026 年更新）","U09","https://www.irs.gov/businesses/gifts-from-foreign-person","","verified"
-"U17","Personal foreign-currency gain ($200 rule)","个人外币交易因汇率变动产生的收益，不超过 $200 的不计入所得；超过 $200 的，按资本利得申报","IRS Publication 525 'Foreign currency transactions'（IRC 988(e)）","U04","https://www.irs.gov/publications/p525","","verified"
+"U17","Personal foreign-currency gain ($200 rule)","个人外币交易因汇率变动产生的收益，不超过 $200 的不计入所得；超过 $200 的，个人交易例外不适用； Pub. 525 的'按资本利得申报'以'个人交易'为前提（§988(e)(3) 排除 §162/§212 费用）；非个人交易按 §988(a)(1)(A) 作为普通收入","IRS Publication 525 'Foreign currency transactions' + 26 U.S.C. §988 (govinfo)","U04","https://www.irs.gov/publications/p525","U27","verified"
 "U18","Foreign tax credit","外国所得税抵免通过 Form 1116 申报；抵免额为已付外国税与 FTC 限额中的较小者","IRS Publication 514","U05","https://www.irs.gov/publications/p514","","verified"
 "U19","Foreign earned income exclusion","Form 2555 境外所得排除要求外国税务住所（tax home）；已排除所得对应的外国税不能再抵免或扣除","IRS Publication 54 / 国际 FAQ","U02","https://www.irs.gov/publications/p54","U01","verified"
 "U20","US–China treaty source-country cap","1984 年协定将缔约国对另一方居民取得的股息、利息、特许权使用费的来源国税率限制为不超过 10%","IRS 托管的中美税收协定总统送交文本","U16","https://www.irs.gov/pub/irs-trty/china.pdf","U15","verified"

@@ -111,29 +111,29 @@ INPUTS = [
     ),
     dict(
         id="CI06", name="Cross-border telegraphic transfer fee", value="1‰ of the amount",
-        unit="CNY", as_of="2024-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL,
+        unit="CNY", as_of="2014-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL,
         status="verified",
         note="Tariff text: 每笔汇款金额的1‰. Applies to 个人 跨境汇款（电汇）.",
     ),
     dict(
         id="CI07", name="Telegraphic transfer fee — minimum", value="50", unit="CNY",
-        as_of="2024-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL, status="verified",
+        as_of="2014-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL, status="verified",
         note="最低收取50元/笔. Binds only below about USD 7,472, i.e. outside the requested ladder.",
     ),
     dict(
         id="CI08", name="Telegraphic transfer fee — maximum", value="260", unit="CNY",
-        as_of="2024-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL, status="verified",
+        as_of="2014-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL, status="verified",
         note="最高收取260元/笔. Binds from about USD 38,855 upward, which is why the fee stops "
              "growing as the amount grows.",
     ),
     dict(
         id="CI09", name="Cable / telecom fee, destination outside HK-Macau-Taiwan", value="150",
-        unit="CNY per transfer", as_of="2024-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL,
+        unit="CNY per transfer", as_of="2014-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL,
         status="verified", note="另收电讯费…非港澳台地区人民币150元/笔.",
     ),
     dict(
         id="CI10", name="Cable / telecom fee, HK-Macau-Taiwan destination", value="80",
-        unit="CNY per transfer", as_of="2024-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL,
+        unit="CNY per transfer", as_of="2014-11-01 tariff", source_id="S46", url=BOC_TARIFF_URL,
         status="verified", note="港澳台地区人民币80元/笔.",
     ),
     dict(

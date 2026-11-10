@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.S. §988 Currency-Gain Exposure — CNY → USD | China3</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--border); border-radius: var(--radius); }
+.table-wrap table.data { margin: 0; min-width: 620px; font-size: 0.85rem; }
+.pct { color: var(--muted); font-size: 0.78em; }
+.formula { background: #f1f5fc; border: 1px solid var(--border); border-radius: var(--radius); padding: 0.7rem 0.9rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82rem; overflow-x: auto; }
+.key-figure { font-size: 1.6rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+@media (max-width: 700px) { .key-figure { font-size: 1.25rem; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <div class="mark">C3</div>
+    <div>
+      <div style="font-weight:800;">China3</div>
+      <div class="tagline">U.S. §988 foreign-currency gain — the largest missing cost component (cross-check X-11)</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<nav>
+  <a href="index.html">Home</a>
+  <a href="us-fx-gain.html" class="active">U.S. FX-gain tax</a>
+  <a href="methods.html">Conversion methods</a>
+  <a href="us-tax.html">U.S. tax &amp; reporting</a>
+  <a href="cost-tables.html">Cost tables $10k–$400k</a>
+  <a href="cross-session-review.html">Cross-check (X-01…X-17)</a>
+  <a href="flagged-review.html">Flagged for review</a>
+</nav>
+
+<section class="section">
+  <h2>The short version — read this first</h2>
+  <div class="callout warn">
+    <p><strong>The "considerable amount of taxes" the user reports is most likely a <em>U.S.</em> tax, not a Chinese fee.</strong> Under 26 U.S.C. §988, disposing of a nonfunctional-currency bank deposit (including a CNY deposit) is a §988 transaction. If the CNY appreciated against the USD while you held it, converting it recognizes a foreign-currency gain. Every CNY you received when USD/CNY was <em>higher</em> is worth more USD today, and the difference is taxable.</p>
+    <p>Quantified two ways below. CNY acquired at the <strong>2024 IRS yearly average (7.189)</strong> and converted at the recorded <strong>2026-11-09 BOC 现汇卖出价 (6.6919)</strong> carries a built-in currency gain of <span class="key-figure">≈6.91%</span> of the USD received. At the <strong>2025 IRS yearly average (7.129)</strong> it is <span class="key-figure">≈6.13%</span>. Compare: the bank spread and wire fees on the same conversion are ≈0.2–0.6% (see <a href="cost-tables.html">cost tables</a>) — <strong>the §988 gain is roughly 10–30× the entire bank-side cost.</strong></p>
+  </div>
+  <div class="callout info">
+    <p><strong>What this page is / is not.</strong> It is a derived, arithmetic breakdown from recorded official values (IRS yearly averages, one dated BOC board snapshot, and the U.S. Code), built to close cross-session finding <strong>X-11</strong>. It is <em>not</em> a tax calculation for your account: your acquisition-date basis is unknown (flagged <strong>IR-014</strong>), the tax character and even the existence of a recognized gain depend on facts only you and your accountant have. <strong>Not legal, tax, or banking advice — confirm with a qualified U.S. tax professional before converting.</strong></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>1. The rate environment on 2026-11-09 (recorded official observations)</h2>
+  <table class="data">
+    <thead><tr><th>Rate</th><th>Value (CNY per USD)</th><th>Source / status</th></tr></thead>
+    <tbody>
+      <tr><td>BOC customer board — 现汇卖出价 (bank sells USD; what a customer pays to buy USD), 2026-11-09 09:15:45</td><td>669.19 per 100 USD = <strong>6.6919</strong></td><td class="source"><span class="src">Bank of China board — <a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">boc.cn/sourcedb/whpj</a> <span class="badge badge-ok">verified (fetched 2026-11-09)</span> · reference only; executed e-banking rate governs</span></td></tr>
+      <tr><td>CFETS (PBOC-authorised) USD/CNY central parity, 2026-11-09 09:15</td><td><strong>6.7188</strong></td><td class="source"><span class="src">CFETS via chinamoney.com.cn — see <code>data/reference_inputs.csv</code> R06 <span class="badge badge-ok">verified (fetched 2026-11-09)</span> · noted only; NOT used as the customer's cost rate</span></td></tr>
+      <tr><td>IRS yearly average — China yuan, 2025</td><td><strong>7.129</strong></td><td class="source"><span class="src">IRS yearly average currency exchange rates — <a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">irs.gov</a> <span class="badge badge-ok">verified (fetched 2026-11-09)</span></span></td></tr>
+      <tr><td>IRS yearly average — China yuan, 2024</td><td><strong>7.189</strong></td><td class="source"><span class="src">IRS yearly average currency exchange rates — <a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">irs.gov</a> <span class="badge badge-ok">verified (fetched 2026-11-09)</span></span></td></tr>
+      <tr><td>IRS yearly average — China yuan, 2023</td><td><strong>7.075</strong></td><td class="source"><span class="src">IRS yearly average currency exchange rates — <a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">irs.gov</a> <span class="badge badge-ok">verified (fetched 2026-11-09)</span></span></td></tr>
+      <tr><td>IRS yearly average — China yuan, 2022</td><td><strong>6.730</strong></td><td class="source"><span class="src">IRS yearly average currency exchange rates — <a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">irs.gov</a> <span class="badge badge-ok">verified (fetched 2026-11-09)</span></span></td></tr>
+      <tr><td>IRS yearly average — China yuan, 2021</td><td><strong>6.452</strong></td><td class="source"><span class="src">IRS yearly average currency exchange rates — <a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">irs.gov</a> <span class="badge badge-ok">verified (fetched 2026-11-09)</span></span></td></tr>
+    </tbody>
+  </table>
+  <p class="small">IRS: "The Internal Revenue Service has no official exchange rate. Generally, it accepts any posted exchange rate that is used consistently." — same IRS page. The 2026-11-09 board rate is a one-day observation (IR-024); re-read the board before transacting.</p>
+</section>
+
+<section class="section">
+  <h2>2. The arithmetic, shown longhand (so you can audit it)</h2>
+  <p>You hold <em>N</em> CNY in a Chinese bank deposit. You convert to USD at the customer rate S&nbsp;=&nbsp;6.6919 CNY per USD.</p>
+  <div class="formula">USD received  = N ÷ 6.6919
+USD basis     = N ÷ A          (A = IRS yearly average for the year you acquired the CNY)
+§988 gain     = N ÷ 6.6919 − N ÷ A</div>
+  <p>Dividing both sides by the USD received (N ÷ 6.6919) gives the gain as a share of the USD you walk away with:</p>
+  <div class="formula">Gain ÷ USD received = 1 − S ÷ A = 1 − 6.6919 ÷ A</div>
+  <table class="data">
+    <thead><tr><th>CNY acquired at IRS yearly average</th><th>A</th><th>Gain ÷ USD received</th><th>Reading</th></tr></thead>
+    <tbody>
+      <tr><td>2024 average</td><td>7.189</td><td><strong>+6.91%</strong></td><td>CNY appreciated ≈6.9% vs the 2024 average</td></tr>
+      <tr><td>2025 average</td><td>7.129</td><td><strong>+6.13%</strong></td><td>CNY appreciated ≈6.1% vs the 2025 average</td></tr>
+      <tr><td>2023 average</td><td>7.075</td><td><strong>+5.41%</strong></td><td>CNY appreciated ≈5.4% vs the 2023 average</td></tr>
+      <tr><td>2022 average</td><td>6.730</td><td><strong>+0.57%</strong></td><td>≈ flat vs the 2022 average</td></tr>
+      <tr><td>2021 average</td><td>6.452</td><td><strong>−3.72%</strong></td><td>CNY depreciated ≈3.7% vs the 2021 average → §988 <em>loss</em>; personal currency losses are generally not deductible (IRS Pub. 525)</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Sources for the rates above: IRS yearly-average page (China, rows 2021–2025), BOC board for S. Both linked in §1. Formula is self-derived; verify with your own calculator.</p>
+</section>
+
+<section class="section">
+  <h2>3. $10,000 → $400,000, in $10,000 steps — potential §988 gain</h2>
+  <p class="small">Assumes the CNY was acquired at the IRS yearly average shown and converted in one transaction at S = 6.6919. "CNY converted" = USD received × 6.6919. The last column is <strong>illustrative only</strong>: an assumed 24% marginal rate applied to the 2024-average-basis gain — your rate will differ; §988 transactions are generally treated as ordinary income (§988(a)(1)(A)), and IRS Pub. 525 describes personal foreign-currency gains above $200 as reported as capital gains. See §4 for character and exclusions. Values are rounded to the cent by construction (USD = step; CNY = USD × 6.6919; gain = USD × (1 − 6.6919/A)).</p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th>Step (USD received)</th><th>CNY converted</th><th>§988 gain @ 2024 avg (6.91%)</th><th>§988 gain @ 2025 avg (6.13%)</th><th>Illustrative tax @ assumed 24% (2024 basis)</th></tr></thead>
+      <tbody>
+      <tr><td>$10,000</td><td>¥66,919.00</td><td>$691.47 <span class="pct">(6.91%)</span></td><td>$613.13 <span class="pct">(6.13%)</span></td><td>$165.95</td></tr>
+      <tr><td>$20,000</td><td>¥133,838.00</td><td>$1,382.95 <span class="pct">(6.91%)</span></td><td>$1,226.26 <span class="pct">(6.13%)</span></td><td>$331.91</td></tr>
+      <tr><td>$30,000</td><td>¥200,757.00</td><td>$2,074.42 <span class="pct">(6.91%)</span></td><td>$1,839.39 <span class="pct">(6.13%)</span></td><td>$497.86</td></tr>
+      <tr><td>$40,000</td><td>¥267,676.00</td><td>$2,765.89 <span class="pct">(6.91%)</span></td><td>$2,452.52 <span class="pct">(6.13%)</span></td><td>$663.81</td></tr>
+      <tr><td>$50,000</td><td>¥334,595.00</td><td>$3,457.37 <span class="pct">(6.91%)</span></td><td>$3,065.65 <span class="pct">(6.13%)</span></td><td>$829.77</td></tr>
+      <tr><td>$60,000</td><td>¥401,514.00</td><td>$4,148.84 <span class="pct">(6.91%)</span></td><td>$3,678.78 <span class="pct">(6.13%)</span></td><td>$995.72</td></tr>
+      <tr><td>$70,000</td><td>¥468,433.00</td><td>$4,840.31 <span class="pct">(6.91%)</span></td><td>$4,291.91 <span class="pct">(6.13%)</span></td><td>$1,161.67</td></tr>
+      <tr><td>$80,000</td><td>¥535,352.00</td><td>$5,531.78 <span class="pct">(6.91%)</span></td><td>$4,905.04 <span class="pct">(6.13%)</span></td><td>$1,327.63</td></tr>
+      <tr><td>$90,000</td><td>¥602,271.00</td><td>$6,223.26 <span class="pct">(6.91%)</span></td><td>$5,518.17 <span class="pct">(6.13%)</span></td><td>$1,493.58</td></tr>
+      <tr><td>$100,000</td><td>¥669,190.00</td><td>$6,914.73 <span class="pct">(6.91%)</span></td><td>$6,131.29 <span class="pct">(6.13%)</span></td><td>$1,659.54</td></tr>
+      <tr><td>$110,000</td><td>¥736,109.00</td><td>$7,606.20 <span class="pct">(6.91%)</span></td><td>$6,744.42 <span class="pct">(6.13%)</span></td><td>$1,825.49</td></tr>
+      <tr><td>$120,000</td><td>¥803,028.00</td><td>$8,297.68 <span class="pct">(6.91%)</span></td><td>$7,357.55 <span class="pct">(6.13%)</span></td><td>$1,991.44</td></tr>
+      <tr><td>$130,000</td><td>¥869,947.00</td><td>$8,989.15 <span class="pct">(6.91%)</span></td><td>$7,970.68 <span class="pct">(6.13%)</span></td><td>$2,157.40</td></tr>
+      <tr><td>$140,000</td><td>¥936,866.00</td><td>$9,680.62 <span class="pct">(6.91%)</span></td><td>$8,583.81 <span class="pct">(6.13%)</span></td><td>$2,323.35</td></tr>
+      <tr><td>$150,000</td><td>¥1,003,785.00</td><td>$10,372.10 <span class="pct">(6.91%)</span></td><td>$9,196.94 <span class="pct">(6.13%)</span></td><td>$2,489.30</td></tr>
+      <tr><td>$160,000</td><td>¥1,070,704.00</td><td>$11,063.57 <span class="pct">(6.91%)</span></td><td>$9,810.07 <span class="pct">(6.13%)</span></td><td>$2,655.26</td></tr>
+      <tr><td>$170,000</td><td>¥1,137,623.00</td><td>$11,755.04 <span class="pct">(6.91%)</span></td><td>$10,423.20 <span class="pct">(6.13%)</span></td><td>$2,821.21</td></tr>
+      <tr><td>$180,000</td><td>¥1,204,542.00</td><td>$12,446.52 <span class="pct">(6.91%)</span></td><td>$11,036.33 <span class="pct">(6.13%)</span></td><td>$2,987.16</td></tr>
+      <tr><td>$190,000</td><td>¥1,271,461.00</td><td>$13,137.99 <span class="pct">(6.91%)</span></td><td>$11,649.46 <span class="pct">(6.13%)</span></td><td>$3,153.12</td></tr>
+      <tr><td>$200,000</td><td>¥1,338,380.00</td><td>$13,829.46 <span class="pct">(6.91%)</span></td><td>$12,262.59 <span class="pct">(6.13%)</span></td><td>$3,319.07</td></tr>
+      <tr><td>$210,000</td><td>¥1,405,299.00</td><td>$14,520.93 <span class="pct">(6.91%)</span></td><td>$12,875.72 <span class="pct">(6.13%)</span></td><td>$3,485.02</td></tr>
+      <tr><td>$220,000</td><td>¥1,472,218.00</td><td>$15,212.41 <span class="pct">(6.91%)</span></td><td>$13,488.85 <span class="pct">(6.13%)</span></td><td>$3,650.98</td></tr>
+      <tr><td>$230,000</td><td>¥1,539,137.00</td><td>$15,903.88 <span class="pct">(6.91%)</span></td><td>$14,101.98 <span class="pct">(6.13%)</span></td><td>$3,816.93</td></tr>
+      <tr><td>$240,000</td><td>¥1,606,056.00</td><td>$16,595.35 <span class="pct">(6.91%)</span></td><td>$14,715.11 <span class="pct">(6.13%)</span></td><td>$3,982.88</td></tr>
+      <tr><td>$250,000</td><td>¥1,672,975.00</td><td>$17,286.83 <span class="pct">(6.91%)</span></td><td>$15,328.24 <span class="pct">(6.13%)</span></td><td>$4,148.84</td></tr>
+      <tr><td>$260,000</td><td>¥1,739,894.00</td><td>$17,978.30 <span class="pct">(6.91%)</span></td><td>$15,941.37 <span class="pct">(6.13%)</span></td><td>$4,314.79</td></tr>
+      <tr><td>$270,000</td><td>¥1,806,813.00</td><td>$18,669.77 <span class="pct">(6.91%)</span></td><td>$16,554.50 <span class="pct">(6.13%)</span></td><td>$4,480.75</td></tr>
+      <tr><td>$280,000</td><td>¥1,873,732.00</td><td>$19,361.25 <span class="pct">(6.91%)</span></td><td>$17,167.63 <span class="pct">(6.13%)</span></td><td>$4,646.70</td></tr>
+      <tr><td>$290,000</td><td>¥1,940,651.00</td><td>$20,052.72 <span class="pct">(6.91%)</span></td><td>$17,780.75 <span class="pct">(6.13%)</span></td><td>$4,812.65</td></tr>
+      <tr><td>$300,000</td><td>¥2,007,570.00</td><td>$20,744.19 <span class="pct">(6.91%)</span></td><td>$18,393.88 <span class="pct">(6.13%)</span></td><td>$4,978.61</td></tr>
+      <tr><td>$310,000</td><td>¥2,074,489.00</td><td>$21,435.67 <span class="pct">(6.91%)</span></td><td>$19,007.01 <span class="pct">(6.13%)</span></td><td>$5,144.56</td></tr>
+      <tr><td>$320,000</td><td>¥2,141,408.00</td><td>$22,127.14 <span class="pct">(6.91%)</span></td><td>$19,620.14 <span class="pct">(6.13%)</span></td><td>$5,310.51</td></tr>
+      <tr><td>$330,000</td><td>¥2,208,327.00</td><td>$22,818.61 <span class="pct">(6.91%)</span></td><td>$20,233.27 <span class="pct">(6.13%)</span></td><td>$5,476.47</td></tr>
+      <tr><td>$340,000</td><td>¥2,275,246.00</td><td>$23,510.08 <span class="pct">(6.91%)</span></td><td>$20,846.40 <span class="pct">(6.13%)</span></td><td>$5,642.42</td></tr>
+      <tr><td>$350,000</td><td>¥2,342,165.00</td><td>$24,201.56 <span class="pct">(6.91%)</span></td><td>$21,459.53 <span class="pct">(6.13%)</span></td><td>$5,808.37</td></tr>
+      <tr><td>$360,000</td><td>¥2,409,084.00</td><td>$24,893.03 <span class="pct">(6.91%)</span></td><td>$22,072.66 <span class="pct">(6.13%)</span></td><td>$5,974.33</td></tr>
+      <tr><td>$370,000</td><td>¥2,476,003.00</td><td>$25,584.50 <span class="pct">(6.91%)</span></td><td>$22,685.79 <span class="pct">(6.13%)</span></td><td>$6,140.28</td></tr>
+      <tr><td>$380,000</td><td>¥2,542,922.00</td><td>$26,275.98 <span class="pct">(6.91%)</span></td><td>$23,298.92 <span class="pct">(6.13%)</span></td><td>$6,306.23</td></tr>
+      <tr><td>$390,000</td><td>¥2,609,841.00</td><td>$26,967.45 <span class="pct">(6.91%)</span></td><td>$23,912.05 <span class="pct">(6.13%)</span></td><td>$6,472.19</td></tr>
+      <tr><td>$400,000</td><td>¥2,676,760.00</td><td>$27,658.92 <span class="pct">(6.91%)</span></td><td>$24,525.18 <span class="pct">(6.13%)</span></td><td>$6,638.14</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:0.6rem;">If your CNY came in over several years (e.g., salary), each year's CNY has its own basis — a blended gain, usually closer to the 2024/2025 columns for recent earnings. Unrealized gain at any earlier date is not taxed; §988 applies on disposition (the conversion).</p>
+</section>
+
+<section class="section">
+  <h2>4. What actually decides whether you owe — the statutory fine print</h2>
+  <ul>
+    <li><strong>§988(c)(1)(C) — bank deposits are §988 transactions.</strong> "Nonfunctional currency" includes bank demand or time deposits. So converting the CNY deposit itself is the triggering disposal, independent of any China-side approval.</li>
+    <li><strong>§988(e)(2) — personal-transaction de minimis.</strong> No gain is recognized on a personal transaction if the gain does not exceed <strong>$200</strong>. If the gain exceeds $200, the exclusion does not apply at all — the full gain is recognized, not merely the excess over $200.</li>
+    <li><strong>§988(e)(3) — what is "personal".</strong> A transaction is <em>not</em> personal to the extent its allocable expenses meet §162 (trade or business) or §212 (production of income, i.e., investment). An interest-bearing CNY deposit held for investment would generally fail the personal-transaction test — the taxpayer cannot use the $200 exclusion and, per §988(a)(1)(A), the gain is ordinary income, not capital gain. IRS Pub. 525's "report it as a capital gain" language is written for personal foreign-currency transactions; which side of the line your deposit falls on is a fact question for your accountant.</li>
+    <li><strong>§988(a)(1)(A) — character.</strong> Any §988 gain/loss attributable to a §988 transaction "shall be computed separately and treated as ordinary income or loss". The Pub. 525 capital-gain statement applies only to personal transactions. Do not assume preferential capital-gain rates.</li>
+    <li><strong>Losses.</strong> Personal foreign-currency losses are generally not deductible. Investment-character losses are ordinary under §988(a)(1)(A), subject to the usual ordering and limits.</li>
+    <li><strong>Basis.</strong> Basis = amount of CNY paid (in USD) at acquisition, translated at the rate prevailing when the funds were acquired/received (IRS yearly average is commonly used for salary; spot-at-receipt also accepted if used consistently, per the IRS page in §1). Inherited CNY takes a fair-market-value basis; gifts take carryover basis. Wages received in CNY and already taxed in the U.S. still carry a CNY-denominated basis — the §988 gain/loss arises because the USD changed while you held the CNY.</li>
+    <li><strong>Interaction with China-side routes.</strong> Whichever lawful route you use (current-account evidence, salary repatriation, emigrant-property transfer), the U.S. §988 math is identical — it is triggered by the conversion to USD, not by the China approval. Reducing the China-side fee to zero does nothing to the §988 line. What <em>does</em> change the §988 line: (a) converting sooner vs later (depends on future rate, unknowable now); (b) loss harvesting within the same tax year (Investment-character gains can offset ordinary losses; personal transactions cannot create deductible losses); (c) tax character, which only facts can fix.</li>
+    <li><strong>Reporting.</strong> §988 gain on a personal transaction above $200 is reported on your Form 1040 (Pub. 525 directs capital-gain reporting for personal transactions). Investment-character §988 gain is ordinary income reported like other ordinary income. FBAR (FinCEN 114) and Form 8938 thresholds are independent of the §988 computation — see <a href="us-tax.html">U.S. tax &amp; reporting</a>.</li>
+  </ul>
+  <p class="small">Statutory text: <a href="https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm" target="_blank" rel="noopener">26 U.S.C. §988 (govinfo, U.S. Government Publishing Office)</a> · IRS Publication 525, <em>Taxable and Nontaxable Income — Foreign currency transactions</em> — <a href="https://www.irs.gov/publications/p525" target="_blank" rel="noopener">irs.gov</a> · <a href="https://www.law.cornell.edu/uscode/text/26/988" target="_blank" rel="noopener">Cornell LII (U.S. Code mirror)</a> · IRS Publication 54 — <a href="https://www.irs.gov/pub/irs-pdf/p54.pdf" target="_blank" rel="noopener">irs.gov</a></p>
+</section>
+
+<section class="section">
+  <h2>5. Side-by-side: what actually costs money on a $100,000 conversion</h2>
+  <p class="small">Fetched/recorded values only; "illustrative" marks a stated assumption, not a quote.</p>
+  <table class="data">
+    <thead><tr><th>Component</th><th>Cost on $100,000</th><th>Basis of estimate</th></tr></thead>
+    <tbody>
+      <tr><td>FX spread vs BOC board mid (0.2104% half-spread, one-way purchase)</td><td>≈ $210</td><td class="source"><span class="src">Derived from BOC board 2026-11-09 (666.38 buy / 669.19 sell) — <a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">boc.cn</a> <span class="badge badge-ok">verified (fetched 2026-11-09)</span> · IR-024 one-day observation</span></td></tr>
+      <tr><td>BOC cross-border wire fee (1‰, max ¥260) + cable fee ¥150</td><td>≈ $61</td><td class="source"><span class="src">BOC personal e-banking tariff (2014-11-01) — <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">boc.cn</a> <span class="badge badge-ok">verified (fetched 2026-11-09)</span></span></td></tr>
+      <tr><td>U.S.-side receiving / correspondent fees</td><td>blank — no official schedule</td><td class="source"><span class="src"><span class="badge badge-unverified">UNVERIFIED</span> — kept blank on purpose; BOC states overseas bank fees are charged at actual cost (S47/S48); your receiving bank sets its own fee</span></td></tr>
+      <tr><td><strong>Potential U.S. §988 currency gain (CNY acquired at 2024 IRS average)</strong></td><td><strong>≈ $6,915</strong></td><td class="source"><span class="src">Derived: $100,000 × (1 − 6.6919 ÷ 7.189) — IRS averages (<a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">irs.gov</a>), BOC board — <a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">boc.cn</a> <span class="badge badge-ok">verified (fetched 2026-11-09)</span></span></td></tr>
+      <tr><td>… of which illustrative U.S. tax at an assumed 24% marginal rate</td><td><strong>≈ $1,660</strong></td><td class="source"><span class="src"><span class="badge badge-unverified">ASSUMED RATE</span> — 24% is an illustration, not your bracket; §988 character decides the rate (§988(a)(1)(A) ordinary vs Pub. 525 personal/capital) — see §4</span></td></tr>
+    </tbody>
+  </table>
+  <p class="small">Even the pre-tax §988 <em>gain</em> is ≈33× the bank spread+fees; at any plausible marginal rate the <em>tax</em> still exceeds the bank fees. This is why "no conversion tax in China" and "your conversion is nearly free" are both incomplete statements.</p>
+</section>
+
+<section class="section">
+  <h2>6. Practical takeaways (least-tax lawful handling)</h2>
+  <ol>
+    <li><strong>China side:</strong> continue using the narrowest lawful documentary route (current-account evidence, salary repatriation, or the staged emigrant-property transfer) — see <a href="methods.html">methods</a> and <a href="routes.html">routes</a>. Do not split transactions or use nominee quotas; that creates SAFE exposure that dwarfs any FX consideration.</li>
+    <li><strong>U.S. side:</strong> before converting, compute your per-year CNY basis (each year's wages, interest, inheritance) and ask a CPA to quantify and characterize the §988 gain. If the deposit is investment-character, expect ordinary income treatment and no $200 exclusion.</li>
+    <li><strong>Sequencing:</strong> converting while CNY is strong vs weak changes the gain mechanically (a weaker CNY at conversion = smaller/negative §988 gain). Timing decisions have tax consequences; they are not a reason to evade China's controls, only a reason to plan the conversion with your advisor.</li>
+    <li><strong>Reporting hygiene:</strong> FBAR at aggregate &gt;$10,000; Form 8938 thresholds; Form 3520 for large foreign gifts — see <a href="us-tax.html">U.S. tax &amp; reporting</a>. Penalties for non-filing (up to the greater of $165,353 or 50% for willful FBAR) dwarf conversion costs.</li>
+    <li><strong>What remains unverified (not filled in):</strong> your acquisition basis (IR-014), your marginal rate and character (facts), U.S. receiving fees, the executed (not board) rate, and whether any China-side tax was ever due on the original source of funds. Blanks stay blank until quoted/computed from your own documents.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>7. Sources (all rows above link inline)</h2>
+  <ul>
+    <li>26 U.S.C. §988 — govinfo (U.S. Government Publishing Office): <a href="https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm" target="_blank" rel="noopener">§988</a></li>
+    <li>IRS — Yearly average currency exchange rates: <a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">irs.gov</a></li>
+    <li>IRS — Publication 525, Taxable and Nontaxable Income (foreign currency transactions): <a href="https://www.irs.gov/publications/p525" target="_blank" rel="noopener">irs.gov</a></li>
+    <li>IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad: <a href="https://www.irs.gov/pub/irs-pdf/p54.pdf" target="_blank" rel="noopener">irs.gov</a></li>
+    <li>Bank of China — FX board (reference): <a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">boc.cn/sourcedb/whpj</a></li>
+    <li>Bank of China — personal e-banking cross-border wire tariff (2014-11-01): <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">boc.cn</a></li>
+    <li>Cornell LII §988 mirror (non-government): <a href="https://www.law.cornell.edu/uscode/text/26/988" target="_blank" rel="noopener">law.cornell.edu</a></li>
+    <li>Recorded fetch log for every value above: <code>data/reference_inputs.csv</code> (R04, R05, R18–R28) in this repository.</li>
+  </ul>
+  <p class="small">Cross-check flag X-11 was raised by session-5e4816e0 (<code>cross-session-review.html</code>): "no cost model quantifies the potential U.S. currency-gain tax". This page is the response. Not legal, tax or banking advice; consult a qualified U.S. tax professional and the Chinese bank/SAFE before converting.</p>
+</section>
+
+</div>
+
+<footer class="site-footer">
+  China3 · CNY → USD research dashboard · Sources: safe.gov.cn · irs.gov · ecfr.gov · fincen.gov · govinfo.gov · boc.cn · chinamoney.com.cn · law.cornell.edu
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="us-fx-gain.html">U.S. FX-gain tax</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="us-tax.html">U.S. tax</a></li>
+    <li><a href="cost-tables.html">Cost tables</a></li>
+    <li><a href="cross-session-review.html">Cross-check</a></li>
+    <li><a href="flagged-review.html">Flagged review</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

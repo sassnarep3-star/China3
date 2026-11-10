@@ -164,3 +164,7 @@ limitations and official source links are in
 This is informational research, not legal, tax or banking advice. No manual input was
 requested; all conclusions are conditional on case facts that were not provided (IR-014,
 IR-018).
+
+## Addendum — U.S. §988 currency-gain exposure (2026-11-10)
+
+No Chinese "conversion tax" exists. The most likely candidate for the "considerable amount of taxes" the brief reports is a **U.S. tax on the currency gain embedded in the CNY itself** (IRC §988), not a Chinese fee. CNY acquired at the 2024/2025 IRS yearly averages (7.189 / 7.129) and converted at the recorded 2026-11-09 BOC selling rate (6.6919) carries a gain of about **6.9% / 6.1% of the USD received** — e.g. ≈$6,915 on $100,000 — before any China-side cost. Arithmetic, statute links and the full $10,000–$400,000 ladder: [`us-fx-gain.html`](us-fx-gain.html). Character and the $200 personal-transaction exclusion are conditional on facts only the account holder has (see `data/penalty.csv` P25; cross-check **X-11**). This does not change the recommended sequence — classify the funds, keep U.S. filings clean, use the narrowest lawful documentary route — it adds the missing U.S. line to the cost stack.
