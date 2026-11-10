@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
@@ -346,6 +347,16 @@ def penalty_table() -> str:
     return "\n".join(html)
 
 
+def value_with_unit(v: dict) -> str:
+    """Print a unit only where it adds something to a figure that already has one."""
+    value, unit = v["value"].strip(), v["unit"].strip()
+    if not unit or unit in value or value.endswith(("%", "USD", "CNY")):
+        return value
+    if re.fullmatch(r"[\d.,]+", value):
+        return f"{value} {unit}"
+    return value
+
+
 def verify_table() -> str:
     html = ['<div class="tw"><table class="tbl"><thead><tr>']
     html.append("<th>ID</th><th>What was checked</th><th>Value found</th><th>Official source</th><th>Status</th></tr></thead><tbody>")
@@ -354,7 +365,7 @@ def verify_table() -> str:
             f'<tr id="{vid.lower()}">'
             + cell("ID", f'<a href="#{vid.lower()}">{vid}</a>')
             + cell("Checked", f'{v["item"]}<br><span class="mini">{v["source_title"]}</span>')
-            + cell("Value", f'{v["value"]} {v["unit"]}'.strip() + f'<details><summary>quoted text</summary><q>{v["quote"]}</q></details>')
+            + cell("Value", value_with_unit(v) + f'<details><summary>official wording</summary><q>{v["quote"]}</q></details>')
             + cell("Source", f'<a class="src" href="{v["url"]}" target="_blank" rel="noopener">{v["issuer"]}</a>')
             + cell("Status", f'<span class="badge badge-ok">{v["verdict"]}</span>')
             + "</tr>"
