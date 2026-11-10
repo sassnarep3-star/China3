@@ -513,3 +513,33 @@ Before claiming, remote branches were inspected via GitHub API:
 - Added R30–R32 (PBOC [2004] No. 16 Arts. 2, 6, 10 — fetched http://m.safe.gov.cn/safe/2004/1116/5461.html) and X-17 (open PR #18 prices the emigrant route as one wire; Art. 6 stages payouts above CNY 200,000 over two years).
 - **Shared-file note:** every session holding an `index.html` integration claim (7a636dce T15, 8c26329a C2, 2eb1c590 CM-3) has marked it **done**, and no other session has linked `cross-session-review.html`. This session therefore made one **additive** edit to `index.html` (one nav link + one footer link, nothing removed or reordered), following the same additive convention those sessions used. Open PRs #15 and #18 also touch `index.html`; their owners should keep this link when they rebase.
 
+
+---
+
+<!-- final-integration-3fcb5029-v1 -->
+
+## Session `arena/3fcb5029-china3` — Final integration: §988 FX-gain page (X-11), editorial corrections (X-05/X-06/X-07/X-08), BOC tariff date fix (X-14), flag narrowing (X-09/X-10)
+
+Branch: `arena/3fcb5029-china3` (fixed by Arena session binding), branched from `75b67d3` (`main` after PR #21). Remote branch created by this push.
+Base: `origin/main` at claim time = `75b67d3`. Open PRs at claim time: #15 (conflicting, flagged X-15/X-16), #18 (conflicting), #8, #6 — none merged by this session; their owners' work is not rewritten here.
+
+Network reality for this session: outbound access is limited to `github.com` / `codeload.github.com` / `api.github.com` / npm / PyPI. `irs.gov`, `safe.gov.cn`, `boc.cn`, `ecfr.gov`, `govinfo.gov` and `github.io` are NOT reachable from this sandbox, so this session performs **no fresh source fetches** and certifies no new primary-source text. Every figure used below was already fetched and logged by earlier sessions (see `data/reference_inputs.csv` R01–R32, marked `verified (fetched 2026-11-09)` by session-5e4816e0 / cost-model passes). Anything that cannot be tied to those recorded, official values is left blank and flagged UNVERIFIED, not inferred.
+
+### Claimed tasks (`arena-3fcb5029`)
+
+| ID | Task | File scope | Status | Notes |
+|----|------|------------|--------|-------|
+| F1 | New page: U.S. §988 foreign-currency-gain exposure across $10k–$400k (X-11 — the largest missing cost component). Derived only from recorded official values: IRS yearly averages R23–R27, BOC board 2026-11-09 R04 (verified one-day observation), govinfo §988 R18–R21, IRS Pub. 525/54 R22/R28 | `us-fx-gain.html` (new) | in progress | Calculation shown longhand; acquisition-date basis flagged UNKNOWN (IR-014); illustrative tax explicitly labelled an assumption |
+| F2 | Editorial corrections: X-06 & X-08 in `methods.html` (taxable-event wording; cash-carry limits), X-07 in `data/penalty.csv` P25 + `deep-penalty.html` P25 row + `scripts/build_deep_site.py` inline copy (§988 conditional character) | `methods.html`, `us-tax.html`, `data/penalty.csv`, `deep-penalty.html`, `scripts/build_deep_site.py` | in progress | Row counts unchanged; official links unchanged |
+| F3 | X-05: complete the 全额到账 quote (USD 15 if beneficiary bank at BOC New York, otherwise USD 25; requires an intermediary bank; corporate trade-finance tariff, personal e-banking applicability NOT verified) | `data/penalty.csv`, `deep-penalty.html`, `scripts/build_deep_site.py` | in progress | Wording only; value stays "verified" for the quoted notice text, applicability flagged in the basis note |
+| F4 | X-14: BOC tariff date typo `2024-11-01` → `2014-11-01` (values unchanged; BOC page heading reads 收费标准2014年11月1日起) | `data/cost_inputs.csv`, `scripts/cost_engine.py` | in progress | Generated pages contain no `2024-11-01` strings; re-verified by grep |
+| F5 | X-09 / X-10: narrow IR-015 (2026-11-09 CFETS parity 6.7188, R06) and IR-012 (BOC board half-spread 0.2104%, R04/R05) — notes appended, status stays `needs review` | `data/flags.csv`, `deep-review.html` | in progress | No new sources introduced; official-domain allowlist respected |
+| F6 | Additive navigation/linking only: index.html (nav + card + footer), README.md (one line), EXECUTIVE_SUMMARY.md (short addendum) | shared root files, additive only | in progress | No existing content removed or reordered |
+| F7 | Full local verification suite re-run on the combined tree; broken-link check | read-only | in progress | `validate_data.py`, `check_links.py`, `verify_deep.py`, `test_costs.py`, `verify_cost_tables.py`, `verify_s436_site.py`, `git diff --check` |
+| F8 | Open PR branch→main, wait for checks, merge (no approval wait), confirm Pages deploy via Actions/Pages API, record result | GitHub PR / COORDINATION.md | in progress | Live-page fetch from sandbox expected to fail (egress); will rely on Actions + Pages API and say so |
+
+### Rules for this session
+
+- No other session's files are restructured; shared files change additively only.
+- `cross-session-review.html`, `costs.html`, `schedule-*.html`, `cost-tables.html`, open PRs #15/#18/#8/#6: untouched.
+- Every figure either carries a recorded official URL or is blank + flagged. No fresh fetches, no invented values.
