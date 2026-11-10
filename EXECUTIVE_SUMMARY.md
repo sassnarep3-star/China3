@@ -63,4 +63,23 @@ If the account already contains USD, no CNY→USD spread applies to that balance
 - `final-verification.html` and `schedule-flagged-review.html` — corrections, unknowns and irregularities.
 - `research/final-integration-audit.md` — final audit and verification record.
 
+For the documented foreign-individual current-account model (M01), the snapshot uses BOC's
+USD selling rate `6.6924`, bid/ask midpoint `6.67835`, personal remittance tariff (1‰,
+`¥50–¥260`) + `¥150` cable, and the published standard U.S. `OUR` option of `$25`. The
+published-component result is `$78.41` at a `$10,000` target and `$926.02` at `$400,000`.
+These are **not** a personalized all-in quote: receiving/intermediary fees, tax arrears,
+eligibility, actual source documents and U.S. compliance/cure facts have no single official
+number and are deliberately blank. The calculation and inputs are documented in
+[`research/s436-cost-methodology.md`](research/s436-cost-methodology.md); all methods,
+limitations and official source links are in
+[`research/s436-methods-and-penalties.md`](research/s436-methods-and-penalties.md).
+
+This is informational research, not legal, tax or banking advice. No manual input was
+requested; all conclusions are conditional on case facts that were not provided (IR-014,
+IR-018).
+
+## Addendum — U.S. §988 currency-gain exposure (2026-11-10)
+
+No Chinese "conversion tax" exists. The most likely candidate for the "considerable amount of taxes" the brief reports is a **U.S. tax on the currency gain embedded in the CNY itself** (IRC §988), not a Chinese fee. CNY acquired at the 2024/2025 IRS yearly averages (7.189 / 7.129) and converted at the recorded 2026-11-09 BOC selling rate (6.6919) carries a gain of about **6.9% / 6.1% of the USD received** — e.g. ≈$6,915 on $100,000 — before any China-side cost. Arithmetic, statute links and the full $10,000–$400,000 ladder: [`us-fx-gain.html`](us-fx-gain.html). Character and the $200 personal-transaction exclusion are conditional on facts only the account holder has (see `data/penalty.csv` P25; cross-check **X-11**). This does not change the recommended sequence — classify the funds, keep U.S. filings clean, use the narrowest lawful documentary route — it adds the missing U.S. line to the cost stack.
+
 General educational research, not personalized legal, tax, immigration, investment or banking advice. Missing personal facts are flagged rather than inferred.

@@ -20,11 +20,12 @@ A sourced research pack and two-part website answering one question:
 
 ## The finding
 
-There is no Chinese "conversion tax", and no US tax on wiring your own money home. The balance is expensive to move because three unrelated things get confused with each other:
+There is no Chinese "conversion tax". Wiring your own money home is not itself U.S. taxable income — but converting appreciated CNY can recognize a **U.S. §988 currency gain** (roughly 6–7% of the USD received for CNY acquired at the 2024/2025 IRS yearly averages), which is separate from, and usually larger than, every China-side fee. See [`us-fx-gain.html`](us-fx-gain.html) for the $10,000–$400,000 arithmetic. The balance is expensive to move because four unrelated things get confused with each other:
 
 1. **Chinese capital controls** — a *permission* problem, not a tax problem.
 2. **PRC income tax on whatever created the money** — 20% flat on property gains, interest, rent and dividends; nothing further on salary already taxed.
 3. **US information-reporting penalties** — a willful FBAR violation is capped at the greater of **USD 165,353 or 50% of the account balance**, an order of magnitude larger than any FX spread.
+4. **US foreign-currency gain on the conversion (IRC §988)** — not a fee, but a real U.S. income-tax component when the CNY appreciated since acquisition; itemized on [`us-fx-gain.html`](us-fx-gain.html) and cross-check flag **X-11**.
 
 The annual USD 50,000 figure is a *convenience processing amount*, not a tax and not a universal cap on every balance. The cheapest lawful sequence is therefore: classify the money → fix US reporting first → then use the one Chinese channel with no amount ceiling (**emigrant property transfer**, 移民财产转移, PBC Order [2004] No. 16) or the one with no annual quota (**non-resident conversion of current-account income**, 个人外汇管理办法 art. 13).
 
@@ -48,6 +49,7 @@ One Pages deployment, two complementary layers:
 | `tax.html` | Tax vs FX cost vs reporting, separated |
 | `penalties.html` | Penalty and cost breakdown |
 | `flagged-review.html` | Unverified items, deliberately blank |
+| `us-fx-gain.html` | U.S. §988 currency-gain on converting appreciated CNY; $10,000–$400,000 ladder, IRS yearly averages, BOC board |
 | `review.html`, `sources.html` | Case facts, source register, method |
 
 **Cost tables** (`cost-tables.html`) — the money answers, to the cent:
@@ -184,7 +186,7 @@ another session's files.
 | `deep-penalty.html` | Conversion penalty decomposed into 35 verifiable cost layers |
 | `deep-findings.html` | 22 sourced findings and analysis |
 | `deep-review.html` | Clearly labelled **Flagged for Review** register (23 items, each with a source link) |
-| `deep-sources.html` | 84 official sources with verification method |
+| `deep-sources.html` | 85 official sources with verification method |
 
 Machine-readable data: `data/china_rules.csv`, `data/us_rules.csv`, `data/channels.csv`,
 `data/penalty.csv`, `data/findings.csv`, `data/flags.csv`, `data/sources.csv`,
@@ -204,3 +206,7 @@ convenience amount (but the 2008 State Council regulation defines 境内个人 d
 see IR-007); no official source establishes a general tax on converting personal CNY
 principal; the largest single monetary risk is a willful FBAR penalty of up to 50% of the
 account balance; and `银发〔2026〕42号` repealed `银发〔2021〕237号`.
+
+## Final integration addendum (2026-11-10, session `arena/3fcb5029-china3`)
+
+Additive only. New page [`us-fx-gain.html`](us-fx-gain.html) quantifies the potential U.S. §988 foreign-currency-gain tax on converting appreciated CNY at every $10,000 step from $10,000 to $400,000 (cross-session finding **X-11**), derived solely from recorded official values (IRS yearly averages, the dated 2026-11-09 BOC board, 26 U.S.C. §988 via govinfo, IRS Pub. 525/54). Editorial corrections applied: methods/us-tax wording on "not a taxable event" (X-06), the cash-carry limits row (X-08), the §988 personal-transaction character marked conditional in `data/penalty.csv` P25 / US-rules U17 / findings F22 (X-07), the BOC 全额到账 quote completed in P11 (X-05, corporate tariff; personal e-banking applicability still flagged unverified), and the BOC tariff date typo `2024-11-01` → `2014-11-01` (X-14, values unchanged). Flags IR-012 (board half-spread 0.2104%) and IR-015 (CFETS parity 6.7188 for 2026-11-09) are annotated as narrowed/closed for that date; both stay `needs review`. Open PRs #15 (flagged X-15/X-16), #18, #8 and #6 were left open for their owners; this session merged none of them.

@@ -516,6 +516,46 @@ Before claiming, remote branches were inspected via GitHub API:
 
 ---
 
+<!-- final-integration-3fcb5029-v1 -->
+
+## Session `arena/3fcb5029-china3` — Final integration: §988 FX-gain page (X-11), editorial corrections (X-05/X-06/X-07/X-08), BOC tariff date fix (X-14), flag narrowing (X-09/X-10)
+
+Branch: `arena/3fcb5029-china3` (fixed by Arena session binding), branched from `75b67d3` (`main` after PR #21). Remote branch created by this push.
+Base: `origin/main` at claim time = `75b67d3`. Open PRs at claim time: #15 (conflicting, flagged X-15/X-16), #18 (conflicting), #8, #6 — none merged by this session; their owners' work is not rewritten here.
+
+Network reality for this session: outbound access is limited to `github.com` / `codeload.github.com` / `api.github.com` / npm / PyPI. `irs.gov`, `safe.gov.cn`, `boc.cn`, `ecfr.gov`, `govinfo.gov` and `github.io` are NOT reachable from this sandbox, so this session performs **no fresh source fetches** and certifies no new primary-source text. Every figure used below was already fetched and logged by earlier sessions (see `data/reference_inputs.csv` R01–R32, marked `verified (fetched 2026-11-09)` by session-5e4816e0 / cost-model passes). Anything that cannot be tied to those recorded, official values is left blank and flagged UNVERIFIED, not inferred.
+
+### Claimed tasks (`arena-3fcb5029`)
+
+| ID | Task | File scope | Status | Notes |
+|----|------|------------|--------|-------|
+| F1 | New page: U.S. §988 foreign-currency-gain exposure across $10k–$400k (X-11 — the largest missing cost component). Derived only from recorded official values: IRS yearly averages R23–R27, BOC board 2026-11-09 R04 (verified one-day observation), govinfo §988 R18–R21, IRS Pub. 525/54 R22/R28 | `us-fx-gain.html` (new) | done | Page built; 40 derived ladder rows; sources linked inline; internal links checked | Calculation shown longhand; acquisition-date basis flagged UNKNOWN (IR-014); illustrative tax explicitly labelled an assumption |
+| F2 | Editorial corrections: X-06 & X-08 in `methods.html` (taxable-event wording; cash-carry limits), X-07 in `data/penalty.csv` P25 + `deep-penalty.html` P25 row + `scripts/build_deep_site.py` inline copy (§988 conditional character) | `methods.html`, `us-tax.html`, `data/penalty.csv`, `deep-penalty.html`, `scripts/build_deep_site.py`, `research/us-tax.md`, `data/us_rules.csv`, `data/findings.csv` | done | Row counts unchanged; official links unchanged |
+| F3 | X-05: complete the 全额到账 quote (USD 15 if beneficiary bank at BOC New York, otherwise USD 25; requires an intermediary bank; corporate trade-finance tariff, personal e-banking applicability NOT verified) | `data/penalty.csv`, `deep-penalty.html`, `scripts/build_deep_site.py` | done | Wording only; value stays "verified" for the quoted notice text, applicability flagged in the basis note |
+| F4 | X-14: BOC tariff date typo `2024-11-01` → `2014-11-01` (values unchanged; BOC page heading reads 收费标准2014年11月1日起) | `data/cost_inputs.csv`, `scripts/cost_engine.py` | done | Generated pages contain no `2024-11-01` strings; re-verified by grep |
+| F5 | X-09 / X-10: narrow IR-015 (2026-11-09 CFETS parity 6.7188, R06) and IR-012 (BOC board half-spread 0.2104%, R04/R05) — notes appended, status stays `needs review` | `data/flags.csv`, `deep-review.html` | done | No new sources introduced; official-domain allowlist respected |
+| F6 | Additive navigation/linking only: index.html (nav + card + footer + research list), README.md (finding line corrected + addendum), EXECUTIVE_SUMMARY.md (addendum). Also corrected README's overstated "no US tax on wiring your own money home" line (same X-06 class) | shared root files, additive/corrective only | done | No existing content removed or reordered |
+| F7 | Full local verification suite re-run on the combined tree; broken-link check | read-only | done | `validate_data.py` OK (27/22/25/15/19, 0 warnings) · `check_links.py` OK · `verify_deep.py` PASS (85 sources; 278 rows; 39 pages; no broken links) · `test_costs.py` PASS · `verify_cost_tables.py` PASS (page fresh) · `verify_s436_site.py` PASS · `git diff --check` pending at commit | `validate_data.py`, `check_links.py`, `verify_deep.py`, `test_costs.py`, `verify_cost_tables.py`, `verify_s436_site.py`, `git diff --check` |
+| F8 | Open PR branch→main, wait for checks, merge (no approval wait), confirm Pages deploy via Actions/Pages API, record result | GitHub PR / COORDINATION.md | in progress | Live-page fetch from sandbox expected to fail (egress); will rely on Actions + Pages API and say so |
+
+### Rules for this session
+
+- No other session's files are restructured; shared files change additively only.
+- `cross-session-review.html`, `costs.html`, `schedule-*.html`, `cost-tables.html`, open PRs #15/#18/#8/#6: untouched.
+- Every figure either carries a recorded official URL or is blank + flagged. No fresh fetches, no invented values.
+
+### F1–F7 log (2026-11-10)
+
+- New page `us-fx-gain.html` (28 KB): §2 shows the arithmetic longhand (gain ÷ USD received = 1 − 6.6919 ÷ A); §3 tabulates every $10,000 step from $10,000 to $400,000 for the 2024 (+6.91%) and 2025 (+6.13%) IRS averages, plus an explicitly-labelled illustrative tax column at an **assumed** 24% marginal rate; §5 puts §988 next to the bank-side costs (spread ≈$210, wire+cable ≈$61 on $100,000); §6 lists least-tax lawful handling. Acquisition-date basis remains unknown (IR-014) and the personal/investment character question is flagged to a CPA, not decided.
+- **Regeneration hazard caught and avoided:** the tracked `scripts/build_deep_site.py` is stale relative to `main` for `deep-executive-summary.html` (main carries a hand-added `cost-tables.html` nav link and hero CTA that the generator cannot reproduce). The generator was used only for the intended rows/files; `deep-executive-summary.html` was restored to `origin/main`'s version after regeneration (`git checkout -- deep-executive-summary.html`) BEFORE any other step. Word-level diffs confirm every other regenerated file changed only in the intended cells (84→85 source count on deep-sources.html incl. the new U27 row; U17/P25/F22 §988 wording; P11 full-amount quote; IR-012/IR-015 annotations).
+- `data/sources.csv` gained `U27` (govinfo §988, 2023 edition; fetched 2026-11-09 per session-5e4816e0's recorded log). `research/sources.md`, `data/deep_sources.json`, `deep-sources.html` regenerated consistently. `verify_deep.py` reports 85/85 source ids present on the sources page and PASS.
+- `data/cost_inputs.csv` CI06–CI10 and `scripts/cost_engine.py`: BOC tariff date `2024-11-01` → `2014-11-01` (X-14). No generated HTML contained the wrong date (grep-verified).
+- `research/us-tax.md` §5 rewritten to the conditional §988 reading (full gain recognized above $200, not just the excess; §988(e)(3) personal-transaction carve-out; §988(a)(1)(A) ordinary character; cross-link to the new page).
+- `methods.html`: rows 1–6 no longer assert a flat "not a U.S. taxable event" (X-06 class) — each now notes the §988 possibility and links `us-fx-gain.html`; row 4 cash-carry limits corrected to the SAFE Hebei Q&A values (≤USD 5,000 released; USD 5,000–10,000 bank-issued permit; >USD 10,000 SAFE permit, in principle not allowed) and the source swapped to the SAFE Hebei Q&A + CBP FinCEN Form 105 page (X-08).
+- `us-tax.html`: §1 retitled to "Moving principal is not income — but the conversion can trigger §988"; §7 rewritten with the statutory fine print (§988(c)(1)(C), §988(e)(2) full-gain rule, §988(e)(3), §988(a)(1)(A)) citing govinfo + Pub. 525; link added to `us-fx-gain.html`.
+- README: corrected the "no US tax on wiring your own money home" sentence to the §988-aware version; added `us-fx-gain.html` row; deep-sources count 84→85; new additive "Final integration addendum (2026-11-10)" section. EXECUTIVE_SUMMARY.md: short addendum linking the new page. index.html: nav link, first-position card, research-list bullet, footer link — all additive, nothing removed or reordered.
+- `git diff --check` ran clean as part of committing (see log). All verification scripts listed under F7 pass on the combined tree.
+- Honesty note: this sandbox cannot reach irs.gov/safe.gov.cn/boc.cn/ecfr.gov/govinfo.gov/github.io (egress limited to github.com, codeload, api.github.com, npm, PyPI). **No fresh fetches were made this session.** Every externally-sourced value in the new page comes from earlier sessions' recorded retrievals (`data/reference_inputs.csv`, `data/sources.csv`, `research/sources.md`), and is labelled "verified (fetched 2026-11-09)" accordingly. The live Pages site will be confirmed via Actions + the Pages API, not by fetching github.io from here.
 ## Session `session-6907147a` — final integration verification and publication (2026-11-10)
 
 Branch: `arena/6907147a-china3` (Arena-fixed branch; no other branch may be used by this session).
@@ -827,6 +867,15 @@ file is a guaranteed cross-session CI break.
 **Final verification of the merged tree (all PASS).** `validate_data.py`, `check_links.py`, `verify_deep.py`,
 `test_costs.py`, `verify_cost_tables.py`, `verify_s436_site.py`, `verify_d646_site.py`, `verify_dashboard.py`,
 `build_dashboard.py --check`, `build_d646_site.py --check`.
+
+### Merge-note — origin/main advanced while this session worked (resolved 2026-11-10)
+
+- `origin/main` moved `75b67d3` → `b40af01` during this session (PRs #22–#29 from sessions `session-6907147a` and `arena/d6467425-china3`: refreshed verification register, `d646-*` dashboard pages, `verify-2026.html`, `a15-review.html`, `final-verification.html`, `guide.html`, generator `scripts/build_dashboard.py`, new CI workflows). This branch was merged with `origin/main`; three files conflicted and were resolved as follows, discarding nothing:
+  - `COORDINATION.md` — union of both sides (this session's F1–F8 block kept verbatim; the two newer session blocks kept verbatim).
+  - `EXECUTIVE_SUMMARY.md` — both sides kept (M01 model + IR note + this session's §988 addendum + the new "General educational research" line).
+  - `index.html` — `main` had been **rewritten** by its sessions and is generated by `scripts/build_dashboard.py`. Resolution: `main`'s version kept as the base; this session's §988 items (nav `§988` link, a cards entry, a parallel-passes entry, a Research & documentation section before `</main>`, and the `84`→`85` Sources subtitle) were moved **into the generator** and the page rebuilt, because the first hand-resolved file failed `scripts/verify_dashboard.py` freshness ("STALE: index.html"). After the generator patch, `verify_dashboard.py` reports PASS and the file is byte-identical to a fresh build. The pre-rewrite "Category grid / Research & documentation" block from this session's base was dropped as superseded by `main`'s consolidated "Every page, by category" section (every link it contained is still present there); its unique research-list bullets were carried forward, updated, into the new Research & documentation section.
+- Intermediate state, recorded honestly: an earlier hand-resolved `index.html` failed `verify_dashboard.py` freshness and additionally had a stale `research/cost-model.md` link (file never existed on `main`); both were fixed before pushing (§988 items now live in the generator; the link points at `research/cross-session-review.md`).
+- Post-merge checks on the combined tree: see the F7 list — `validate_data.py` OK · `check_links.py` OK · `verify_deep.py` PASS (85 sources) · `test_costs.py` PASS · `verify_cost_tables.py` PASS · `verify_s436_site.py` PASS · `verify_d646_site.py` PASS · `verify_dashboard.py` PASS · `verify_final_integration.py` PASS (640 rows, 2525 links) · `git diff --check` clean.
 ### Final record — PR #27 (presentation follow-up)
 
 - **PR:** https://github.com/sassnarep3-star/China3/pull/27 — **MERGED** 2026-11-10T01:12:06Z via

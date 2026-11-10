@@ -502,5 +502,11 @@
     "title": "Report to Congress under §361(b) — 'The FBAR is not a tax return'",
     "url": "https://www.fincen.gov/system/files/shared/ReportToCongress361.PDF",
     "verification": "official report verified"
+  },
+  "U27": {
+    "authority": "U.S. Government Publishing Office (govinfo)",
+    "title": "26 U.S.C. §988 — Foreign currency transactions (2023 edition)",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm",
+    "verification": "official statute text; fetched 2026-11-09 (session-5e4816e0, reference_inputs.csv R18–R21)"
   }
 }

@@ -387,9 +387,10 @@ def cards_nav() -> str:
         ("Final integration", "Independent 640-row audit and corrections", "final-verification.html", "new"),
         ("Safety review", "Independent spot checks and their cautions", "a15-review.html", ""),
         ("Flagged for review", "Everything left blank, with the reason", "deep-review.html", ""),
-        ("Sources", "84 official pages, by issuer", "deep-sources.html", ""),
+        ("Sources", "85 official pages, by issuer", "deep-sources.html", ""),
         ("Narrative guide", "The earlier editorial passes, preserved", "guide.html", ""),
         ("Data dashboard", "Structured data + calculator", "docs/index.html", ""),
+        ("U.S. §988 FX-gain", "The missing cost line: potential U.S. currency gain, $10k–$400k", "us-fx-gain.html", "new"),
     ]
     out = ['<div class="cards cards-nav">']
     for title, sub, href, tag in items:
@@ -479,6 +480,7 @@ def build_index() -> str:
       <a href="deep-us-tax.html">U.S. tax</a>
       <a href="verify-2026.html">Verify</a>
       <a href="deep-review.html">Flags</a>
+      <a href="us-fx-gain.html">§988</a>
       <a href="d646-summary.html">2026-11-10 refresh</a>
     </nav>
   </div>
@@ -602,6 +604,9 @@ def build_index() -> str:
           that deliberately leaves every price blank instead of assuming a rate.</li>
       <li><a href="cross-session-review.html">cross-session-review.html</a> — an independent reconciliation of the
           parallel sessions' numbers, including the U.S. currency-gain question.</li>
+      <li><a href="us-fx-gain.html">us-fx-gain.html</a> — the §988 currency-gain line no earlier cost model priced;
+          a $10,000–$400,000 ladder derived from recorded official values (IRS yearly averages, dated BOC board,
+          26 U.S.C. §988).</li>
       <li><a href="flagged-review.html">flagged-review.html</a>, <a href="schedule-flagged-review.html">schedule-flagged-review.html</a>,
           <a href="cost-review.html">cost-review.html</a>, <a href="review.html">review.html</a> — four separate flag
           registers, all preserved. <a href="deep-review.html">deep-review.html</a> is the consolidated one.</li>
@@ -629,6 +634,22 @@ def build_index() -> str:
 </section>
 
 {unverified_box()}
+
+<section class="section" id="research">
+  <h2>Research &amp; documentation</h2>
+  <ul class="tight">
+    <li>Full research with citations: <a href="research/cny-usd-conversion-research.md">research/cny-usd-conversion-research.md</a></li>
+    <li>Official-source executive summaries: <a href="research/s436-executive-summary.md">research/s436-executive-summary.md</a> and <a href="research/analysis.md">research/analysis.md</a></li>
+    <li>2026 cost methodology and audit: <a href="research/s436-cost-methodology.md">research/s436-cost-methodology.md</a>, <a href="research/cost-audit.md">research/cost-audit.md</a>, <a href="research/cross-session-review.md">research/cross-session-review.md</a></li>
+    <li>Executive summary (editorial): <a href="docs/executive-summary.md">docs/executive-summary.md</a></li>
+    <li>U.S. §988 currency-gain exposure (X-11): <a href="us-fx-gain.html">us-fx-gain.html</a> — $10,000–$400,000 ladder with sources</li>
+    <li>Final-integration audit and verification: <a href="research/final-integration-audit.md">research/final-integration-audit.md</a></li>
+    <li>Shared task board: <a href="COORDINATION.md">COORDINATION.md</a></li>
+    <li>Structured data pack: <a href="data/channels.json">data/channels.json</a> and the other <code>data/*.csv|json</code> registers</li>
+    <li>Local checks: <code>scripts/validate_data.py</code>, <code>scripts/check_links.py</code>, <code>scripts/verify_deep.py</code>, <code>scripts/verify_cost_tables.py</code>, <code>scripts/verify_s436_site.py</code></li>
+  </ul>
+  <p class="lede">Scope: mainland-China bank account to U.S. destination. Source-based general research, not legal, tax, or bank advice. Rules and bank implementation may change; confirm with the bank/SAFE and qualified counsel before acting. Amount, province, residency status, account-holder status, source of funds and bank details were not supplied, so no personalized route or tax figure can be confirmed.</p>
+</section>
 
 </main>
 

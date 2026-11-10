@@ -102,10 +102,17 @@ IRS Publication 525, "Foreign currency transactions": "If you have a gain on a p
 foreign currency transaction because of changes in exchange rates, you don't have to include
 that gain in your income unless it's more than $200. If the gain is more than $200, report it
 as a capital gain." [U04](https://www.irs.gov/publications/p525). This is the IRC 988(e)
-personal-transaction de minimis rule. It is a real (if usually small) U.S. tax consequence of
-CNY appreciating between the time the funds were acquired and the time they are converted.
-No individual gain amount is computed here because the acquisition-date basis is unknown
-(IR-014).
+personal-transaction rule, but note the statute's limits: if the gain exceeds $200 the
+exclusion does not apply at all — the **full** gain is recognized, not merely the excess over
+$200 ([26 U.S.C. §988(e)(2), govinfo](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm)).
+A transaction is **not** "personal" to the extent allocable expenses qualify under §162 or
+§212 (§988(e)(3)), so an interest-bearing CNY deposit held for investment can fail the
+personal-transaction test; §988(a)(1)(A) then treats the gain as **ordinary income**, not a
+capital gain. The Pub. 525 "capital gain" statement presumes the personal-transaction
+character, which is fact-dependent. The qualitative exposure across $10,000–$400,000 — on the
+order of 6–7% of the USD received at the 2024/2025 IRS yearly average rates — is quantified
+in `us-fx-gain.html` and cross-check flag **X-11**. No individual gain amount can be
+computed here because the acquisition-date basis is unknown (IR-014).
 
 ## 6. Treaty, credits and remediation
 
