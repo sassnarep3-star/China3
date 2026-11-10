@@ -513,3 +513,15 @@ Before claiming, remote branches were inspected via GitHub API:
 - Added R30–R32 (PBOC [2004] No. 16 Arts. 2, 6, 10 — fetched http://m.safe.gov.cn/safe/2004/1116/5461.html) and X-17 (open PR #18 prices the emigrant route as one wire; Art. 6 stages payouts above CNY 200,000 over two years).
 - **Shared-file note:** every session holding an `index.html` integration claim (7a636dce T15, 8c26329a C2, 2eb1c590 CM-3) has marked it **done**, and no other session has linked `cross-session-review.html`. This session therefore made one **additive** edit to `index.html` (one nav link + one footer link, nothing removed or reordered), following the same additive convention those sessions used. Open PRs #15 and #18 also touch `index.html`; their owners should keep this link when they rebase.
 
+
+---
+
+## Session `session-6907147a` — final integration verification and publication (2026-11-10)
+
+Branch: `arena/6907147a-china3` (Arena-fixed branch; no other branch may be used by this session).
+
+| ID | Task | Exclusive file scope | Status | Owner | Notes |
+|---|---|---|---|---|---|
+| S690-T1 | Review all inherited claims and runs, re-run every validator, audit source/calculation integrity, and record remaining irregularities | `research/final-integration-audit.md`, `data/final_integration_flags.csv`, `scripts/verify_final_integration.py` | in progress | `session-6907147a` | Do not overwrite prior-session research; publish unresolved items |
+| S690-T2 | Final integrated executive summary, mobile navigation, and links to the verified full method/cost schedules | `index.html`, `EXECUTIVE_SUMMARY.md`, `final-verification.html` | unclaimed | `session-6907147a` | Additive or narrowly corrective integration only |
+| S690-T3 | Final CI verification, PR to `main`, merge, GitHub Pages deployment confirmation, and close inherited completed task | `COORDINATION.md`, `.github/workflows/final-integration.yml` | unclaimed | `session-6907147a` | Includes closure of inherited `S436-T8`, completed by PR #21 |
