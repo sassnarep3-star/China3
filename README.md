@@ -213,3 +213,8 @@ account balance; and `银发〔2026〕42号` repealed `银发〔2021〕237号`.
 ## Final integration addendum (2026-11-10, session `arena/3fcb5029-china3`)
 
 Additive only. New page [`us-fx-gain.html`](us-fx-gain.html) quantifies the potential U.S. §988 foreign-currency-gain tax on converting appreciated CNY at every $10,000 step from $10,000 to $400,000 (cross-session finding **X-11**), derived solely from recorded official values (IRS yearly averages, the dated 2026-11-09 BOC board, 26 U.S.C. §988 via govinfo, IRS Pub. 525/54). Editorial corrections applied: methods/us-tax wording on "not a taxable event" (X-06), the cash-carry limits row (X-08), the §988 personal-transaction character marked conditional in `data/penalty.csv` P25 / US-rules U17 / findings F22 (X-07), the BOC 全额到账 quote completed in P11 (X-05, corporate tariff; personal e-banking applicability still flagged unverified), and the BOC tariff date typo `2024-11-01` → `2014-11-01` (X-14, values unchanged). Flags IR-012 (board half-spread 0.2104%) and IR-015 (CFETS parity 6.7188 for 2026-11-09) are annotated as narrowed/closed for that date; both stay `needs review`. Open PRs #15 (flagged X-15/X-16), #18, #8 and #6 were left open for their owners; this session merged none of them.
+
+### Independent completion audit (10 November 2026)
+
+[Fresh official-source spot-check, executive conclusions, 40 fee-only illustrations and Flagged for Review](completion-audit.html).
+This audit separates inherited evidence from five newly read official pages and leaves unverified all-in costs blank. It does not certify every inherited legal statement.
