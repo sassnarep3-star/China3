@@ -7,9 +7,12 @@ A sourced research pack and two-part website answering one question:
 **Start here →** [dashboard](https://sassnarep3-star.github.io/China3/) ·
 [verification register, 10 Nov 2026](https://sassnarep3-star.github.io/China3/verify-2026.html) ·
 [cost tables](https://sassnarep3-star.github.io/China3/cost-tables.html) ·
-[independent 2026-11-10 refresh](https://sassnarep3-star.github.io/China3/d646-summary.html)
+[independent 2026-11-10 refresh](https://sassnarep3-star.github.io/China3/d646-summary.html) ·
+[S775 audit, 24 methods and full $10k–$400k ladder](https://sassnarep3-star.github.io/China3/s775-dashboard.html)
 (7 pages, 21 primary documents re-read today, 40 cost increments re-derived; gate:
-`python3 scripts/verify_d646_site.py`, CI `.github/workflows/d646-verify.yml`)
+`python3 scripts/verify_d646_site.py`, CI `.github/workflows/d646-verify.yml`; the S775 pass adds
+24 methods, 51 sources, step playbooks and its own validator, `scripts/verify_s775_site.py` +
+`.github/workflows/s775-verify.yml`)
 
 **Live site:** https://sassnarep3-star.github.io/China3/
 · editorial guide at `/`

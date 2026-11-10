@@ -4,6 +4,8 @@
 
 Parallel integration work is preserved at `verify-2026.html` (17 verbatim source records), `a15-review.html` (independent safety review), `guide.html` (archived narrative) and `data/ladder_20261110.csv` (independent 40-row ladder).
 
+**S775 audit addendum (2026-11-10):** an independent line-by-line pass catalogued **24 routes** (including the prohibited ones), registered **51 official sources** with fetch timestamps, re-derived the full **$10,000–$400,000 cost ladder** (40 steps) from the 2026-11-10 BOC board, and documented numbered step-by-step playbooks for every route. Its key verified results agree with the benchmark above: FX spread 0.2104%, personal wire 1‰ (¥50–¥260) + ¥150 cable, **$50.93 total at $10,000** (excl. conditional OUR) rising to **$903.08 at $400,000**. Pages: `s775-dashboard.html`, `s775-cost-10k-400k.html`, `s775-methods.html`, `s775-steps.html`, `s775-penalties-tax.html`, `s775-flagged-review.html` (18 flagged items), `s775-sources.html` (51 sources). Gate: `python3 scripts/verify_s775_site.py`, CI `.github/workflows/s775-verify.yml`.
+
 ## Bottom line
 
 For a U.S. citizen, the lowest-penalty lawful route is usually the **ordinary licensed-bank route that matches the documented origin of the money**, not a workaround. If the bank classifies the holder as a foreign individual (`境外个人`) and the balance is lawful, documented, already-taxed current-account RMB income, SAFE’s 2026 guidance says the bank can handle the FX purchase using valid ID and transaction/source evidence, including tax evidence. Eligibility cannot be established from citizenship alone. [SAFE, 2026-07-13](https://www.safe.gov.cn/tianjin/2026/0713/3088.html)
