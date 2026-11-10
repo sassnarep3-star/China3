@@ -959,3 +959,8 @@ Before claiming, all remote branches were inspected (`git fetch origin '+refs/he
 | Additive final integration link and deployment record | unclaimed | arena/4a528a74-china3 | `README.md` additive only; `COORDINATION.md` append only |
 
 Existing claimed scopes and open PRs are preserved; no sibling-owned generator/data edits. Arena requires the assigned branch, so the requested per-task branch naming cannot be followed. This session uses only `arena/4a528a74-china3`. New verification will distinguish inherited evidence from independently retrieved official text. No claim of a new full official-source audit without successful retrieval.
+
+### 4a528a74 completion and verification
+- Evidence/provenance task **done**; additive final integration **in progress**. Five official pages independently read; exact source links and 40 fee-only rows on `completion-audit.html`. Scope and limitations in `research/completion-audit.md`.
+- All inherited verification scripts plus test_costs, validate_data and check_links passed. `scripts/verify_completion.py` independently regenerates this supplemental audit and confirms 40 blank all-in totals. No claim of every inherited statement being freshly verified.
+- Irregularities **needs review**, published at `completion-audit.html#flags`: future inherited S41 timestamp, moving FX snapshot, arithmetic versus official-quote distinction, unknown tax/fees/eligibility. Prior flags preserved. README adds a discoverable link without editing sibling-owned landing-page generators.
