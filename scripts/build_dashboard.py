@@ -376,7 +376,10 @@ def verify_table() -> str:
 
 def cards_nav() -> str:
     items = [
-        ("Cost tables", "Every route at every $10,000 step", "cost-tables.html", "canonical"),
+        ("Canonical edition", "15 documents re-fetched 10 Nov 2026; $10k–$400k ladder re-derived", "c3x-summary.html", "start here"),
+        ("Canonical cost table", "40 amounts, every method, blanks flagged", "c3x-costs.html", "start here"),
+        ("Canonical tax breakdown", "§988, FBAR, 8938, PRC 20%, Order 532", "c3x-tax.html", "start here"),
+        ("Cost tables", "Every route at every $10,000 step", "cost-tables.html", ""),
         ("All 640 rows", "16 methods × 40 amounts, filterable", "schedule-cost-10k-400k.html", ""),
         ("Methods &amp; pros/cons", "35 channels with the legal status of each", "deep-channels.html", ""),
         ("Step-by-step", "Copy-ready procedure per route", "schedule-steps.html", ""),
@@ -452,45 +455,7 @@ def unverified_box() -> str:
 
 
 # ----------------------------------------------------------------------- pages
-def build_index() -> str:
-    top = LADDER_BY_AMOUNT["10000"]
-    big = LADDER_BY_AMOUNT["400000"]
-    summary_amounts = ["10000", "50000", "100000", "200000", "300000", "400000"]
-    summary = [LADDER_BY_AMOUNT[a] for a in summary_amounts]
-    n_verified = len(VERIFY)
-
-    return f"""<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Getting money out of China — CNY to USD dashboard</title>
-<meta name="description" content="Official-source dashboard: every lawful way to convert CNY to USD, what each costs from $10,000 to $400,000, and the tax and reporting rules that actually carry a penalty.">
-<link rel="stylesheet" href="assets/dashboard.css">
-</head>
-<body>
-<header class="top">
-  <div class="wrap top-in">
-    <a class="brand" href="index.html">China&nbsp;money<span>·</span>CNY&nbsp;→&nbsp;USD</a>
-    <nav class="nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="cost-tables.html">Costs</a>
-      <a href="deep-channels.html">Methods</a>
-      <a href="deep-penalty.html">Penalties</a>
-      <a href="deep-china-rules.html">China rules</a>
-      <a href="deep-us-tax.html">U.S. tax</a>
-      <a href="verify-2026.html">Verify</a>
-      <a href="deep-review.html">Flags</a>
-      <a href="us-fx-gain.html">§988</a>
-      <a href="d646-summary.html">2026-11-10 refresh</a>
-      <a href="s775-dashboard.html">S775 audit</a>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap">
-
-<section style="padding:18px;border-left:5px solid #12a3b8;background:#eaf7fa;color:#0d3340;border-radius:9px;margin:20px 0">
+PARALLEL_BANNERS = """<section style="padding:18px;border-left:5px solid #12a3b8;background:#eaf7fa;color:#0d3340;border-radius:9px;margin:20px 0">
   <p class="eyebrow" style="margin:0 0 6px">Independent re-verification &middot; 2026-11-10</p>
   <h2 style="margin:0 0 8px;font-size:20px">Seven-page refresh: 21 primary documents re-read today</h2>
   <p style="margin:0 0 10px">A parallel build that re-fetched every load-bearing document on 10 November 2026
@@ -530,6 +495,60 @@ def build_index() -> str:
   <p style="margin:0;font-size:14px"><strong>What it adds:</strong> the prohibited-route catalogue (crypto,
   hawala, undeclared cash), the step-by-step playbooks for every route, and an independent CI validator that
   re-derives the ladder from first principles.</p>
+</section>"""
+
+
+def build_index() -> str:
+    top = LADDER_BY_AMOUNT["10000"]
+    big = LADDER_BY_AMOUNT["400000"]
+    summary_amounts = ["10000", "50000", "100000", "200000", "300000", "400000"]
+    summary = [LADDER_BY_AMOUNT[a] for a in summary_amounts]
+    n_verified = len(VERIFY)
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting money out of China — CNY to USD dashboard</title>
+<meta name="description" content="Official-source dashboard: every lawful way to convert CNY to USD, what each costs from $10,000 to $400,000, and the tax and reporting rules that actually carry a penalty.">
+<link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="index.html">China&nbsp;money<span>·</span>CNY&nbsp;→&nbsp;USD</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="c3x-summary.html">Start here</a>
+      <a href="cost-tables.html">Costs</a>
+      <a href="deep-channels.html">Methods</a>
+      <a href="deep-penalty.html">Penalties</a>
+      <a href="deep-china-rules.html">China rules</a>
+      <a href="deep-us-tax.html">U.S. tax</a>
+      <a href="verify-2026.html">Verify</a>
+      <a href="deep-review.html">Flags</a>
+      <a href="us-fx-gain.html">§988</a>
+      <a href="d646-summary.html">2026-11-10 refresh</a>
+      <a href="s775-dashboard.html">S775 audit</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="startband" style="margin:18px 0;padding:16px 18px;border:1px solid #cfe3e8;border-left:5px solid #0f4c5c;background:#eef6f8;border-radius:10px">
+  <p class="eyebrow" style="margin:0 0 6px">Start here · canonical edition · board 2026-11-10 17:39:58 Beijing</p>
+  <h2 style="margin:0 0 8px;font-size:20px">One clean answer path: summary → costs → tax → steps → flags</h2>
+  <p style="margin:0 0 10px">A single pass that re-fetched 16 official documents on 10 November 2026, re-derived all
+  40 cost increments from the raw board and tariff, and left every unpublished figure blank and flagged.</p>
+  <p style="margin:0"><a href="c3x-summary.html"><strong>Executive summary &rarr;</strong></a> &middot;
+  <a href="c3x-costs.html">Costs $10k&ndash;$400k</a> &middot;
+  <a href="c3x-methods.html">14 methods</a> &middot;
+  <a href="c3x-steps.html">Step by step</a> &middot;
+  <a href="c3x-tax.html">Tax &amp; penalties</a> &middot;
+  <a href="c3x-flagged.html">Flagged for review</a> &middot;
+  <a href="c3x-sources.html">15 sources</a></p>
 </section>
 
 <section class="hero">
@@ -633,6 +652,15 @@ def build_index() -> str:
           registers, all preserved. <a href="deep-review.html">deep-review.html</a> is the consolidated one.</li>
     </ul>
   </details>
+</section>
+
+<section class="section" id="parallel">
+  <h2>Parallel editions kept on this page</h2>
+  <p class="lede">Several sessions worked the same brief at the same time. Nothing was deleted: each edition below is
+  preserved with its own data, its own figures and its own caveats. Where two editions disagree, the disagreement is
+  stated rather than hidden. The <a href="c3x-summary.html">canonical edition</a> at the top of this page is the one that
+  re-derived every figure from the board reading of 2026-11-10 17:39:58 Beijing.</p>
+  {PARALLEL_BANNERS}
 </section>
 
 <section class="section" id="verification">
