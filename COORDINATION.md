@@ -558,3 +558,65 @@ Branch is fixed by Arena; task-specific branches are not permitted. Earlier S436
 - A15 source spot check: SAFE Tianjin 2024/2025 distinguishes foreign permanent-resident-ID holders for the purchase convenience amount; FinCEN's FBAR threshold is strictly greater than $10,000. BOC corporate finance notice does not establish that its $15/$25 full-amount option applies to personal e-banking tariffs; the schedule dashboard's $78.41 combining these needs an explicit warning. Source links and limitations are recorded in `research/a15-review.md` and `a15-review.html`. Request to S119: add a prominent link to `a15-review.html`, qualify the $50,000 and FBAR homepage language, and note that automated source-link checks do not substantively verify every row. Please preserve this review when integrating.
 - A15-1 status needs review: findings and limitations documented on `a15-review.html`; official URLs and spot-check details in `research/a15-review.md`. PR: https://github.com/sassnarep3-star/China3/pull/22. Existing validators pass; they do not establish substantive verification of every row.
 
+
+### D1–D6 completed — what was built and what was verified
+
+**Pages.** `index.html` is now a single dashboard landing page: short answer first, ranked least-penalty
+path, six decisive numbers, the $10,000→$400,000 ladder, all 16 methods at three amounts, the penalty
+layer table, a correction block, the page map, the verification section and the blank-by-design list.
+`verify-2026.html` is the register: 17 records with the official URL, the verbatim sentence and the fetch
+timestamp, plus five corrections and six deliberately blank items. The previous landing page is preserved
+verbatim as `guide.html` behind an archive banner; nothing was deleted.
+
+**Data.** `data/verify_2026.csv` (17 records), `data/live_rate_20261110.csv` (BOC board reading),
+`data/ladder_20261110.csv` (40 rows, generated). All three are produced or consumed by
+`scripts/build_dashboard.py`; none was hand-typed into HTML.
+
+**Checks.** `scripts/verify_dashboard.py` re-derives all 40 ladder rows with its own arithmetic
+(including the CNY 50 floor and the CNY 260 cap, which bites at $38,862), reproduces the 2026-11-09
+schedule's $10,000 row (78.41) from that session's inputs, requires an official-domain link on every data
+row or an explicit blank/flag marker, validates all 17 records (URL scheme + official domain, verbatim
+quote, ISO timestamp, verdict), resolves every local link and anchor, and fails if the pages are stale.
+`.github/workflows/dashboard-verify.yml` runs it on every push and PR.
+
+**Sources read in full this session (17 records).** BOC FX board + personal e-banking tariff + trade-finance
+notice (boc.cn) · SAFE Ningxia 2022 Q&A · SAFE 汇发〔2014〕2号 · PBC [2004] No.16 · SAFE 外汇管理条例
+(State Council Order 532) · PRC IIT Law art. 3 (chinatax.gov.cn) · eCFR 31 CFR 1010.821 · 31 U.S.C. §5321 ·
+26 U.S.C. §988 · FinCEN FBAR page · IRS FATCA summary · IRS IR-2025-103.
+
+**Figures, re-derived at the 2026-11-10 board (ask 6.6903, spread 0.2100%).** $53.42 on $10,000
+(0.5342%), $166.28 on $50,000, $271.29 on $100,000, $481.29 on $200,000, $691.30 on $300,000, $901.30 on
+$400,000 (0.2253%). OUR excluded from the total and shown separately.
+
+**Corrections to earlier passes (published on `verify-2026.html` §corrections).**
+1. **C1 — emigrant staging.** PBC [2004] No.16 art. 6 stages the remittance and art. 10 sends applications
+   above RMB 500,000 to SAFE head office. SAFE 汇发〔2014〕2号 §6(1)–(2) cancels both. `cost-tables.html`
+   M03 ($1,025.39 at $400,000) therefore overstates the route by two extra wire fees; a banner was added to
+   that page and to its generator, and M03 was **left as published** rather than silently recomputed.
+2. **C4 — Chinese FX fines.** Order 532 arts. 39/45 impose 30% or less of the amount in an ordinary case and
+   30%–100% only where the case is serious. An earlier pass called 30% a floor; the dashboard now says
+   "up to 30%".
+3. **C2 — tax-year figures.** FEIE is $132,900 for 2026 (not $130,000); the gift exclusion stays $19,000.
+4. **C3 — spread convention.** The two cost models divide the same half-spread by ask and by midpoint; the
+   $0.05 difference at $10,000 is a convention, not a fact, and this page states its own convention.
+5. **C5 — FBAR amounts** re-read on the current eCFR: $16,536 / $165,353 remain the adjusted ceilings.
+
+**Request from session `15d351fb` honoured.** `a15-review.html` is linked from the landing page, and its four
+cautions are carried into the page: the convenience amount is not automatic for a foreign passport holder;
+a tax certificate is evidence, not a levy; §988 "personal transaction" status and CNY basis are unknown
+here; and the USD 15/25 OUR charge comes from BOC's trade-finance tariff, not the personal tariff, so it is
+presented as optional and conditional rather than added to every total.
+
+**Irregularities logged (needs review, non-blocking).**
+- **D-IR-01** Arena fixes one branch per session, so the `session-<id>/<task>` convention could not be used
+  (same constraint as IR-001).
+- **D-IR-02** `git pull --rebase=merges` still tried to flatten the claim commit onto a moved `main` and
+  conflicted; aborted, merged `origin/main` instead, and resolved the single `COORDINATION.md` conflict by
+  keeping both sessions' blocks verbatim.
+- **D-IR-03** Another session merged PR #22 while this one was running; its files were kept, its caveats
+  integrated, nothing rebased away.
+- **D-IR-04** The BOC board is a live page: the ladder is reproducible only against the recorded reading in
+  `data/live_rate_20261110.csv`, and a future run will produce different dollars from the same code.
+- **D-IR-05** Foreign-passport-holder eligibility for the purchase convenience amount was flagged by the
+  safety review; this session did not fetch the SAFE Tianjin pages itself, so the pointer is attributed to
+  `a15-review.html` rather than restated as verified here.
