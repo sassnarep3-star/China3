@@ -442,6 +442,7 @@ Every row below links to the official source for its inputs.</p>
       <a href="cross-session-review.html">Cross-check &amp; U.S. FX-gain tax</a></div>
     <div><h4>Verification</h4>
       <a href="cn3-review.html">Flagged for review (consolidated)</a>
+      <a href="a15-review.html">Independent safety review (2026-11-10)</a>
       <a href="flagged-review.html">Flagged (prior)</a>
       <a href="review.html">Review (prior)</a>
       <a href="schedule-flagged-review.html">Schedule flags</a>
@@ -789,6 +790,19 @@ def review_page():
 <section>
   <h2>All flags</h2>
   {table(["ID", "Item", "Severity", "What is missing or disputed", "How it is handled here", "Source"], rows)}
+</section>
+
+<section>
+  <h2>Independent safety review</h2>
+  <p>A separate session reviewed this repository on 2026-11-10 and published
+  <a href="a15-review.html">its own findings</a>. Two of its warnings are answered directly here:</p>
+  <ul>
+    <li><strong>The $25 “OUR” charge is not added to any total on this site.</strong> It appears only in a
+    corporate trade-finance notice, not the personal e-banking tariff, so it is left blank and flagged
+    (C3-F03, C3-F04) rather than combined with the personal schedule.</li>
+    <li><strong>§988 is quantified, not assumed away.</strong> The gain is shown per row and per bracket on
+    <a href="cn3-tax.html">Tax &amp; penalties</a>, with the acquisition-date gap flagged as C3-F02.</li>
+  </ul>
 </section>
 
 <section>
