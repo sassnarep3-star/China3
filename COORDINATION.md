@@ -1117,3 +1117,22 @@ other preserved passes instead of above the fold, so the page opens with the can
 **Re-verified after the fix.** All twelve validators pass on the merged tree: `validate_data`,
 `verify_deep`, `check_links`, `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`,
 `verify_s775_site`, `verify_dashboard`, `verify_c3x_site`, `verify_completion`, `verify_a513`.
+
+### C3X-5/C3X-6 — merge and deployment record
+
+- **PR #40** (canonical edition): https://github.com/sassnarep3-star/China3/pull/40 — **MERGED**
+  2026-11-10T09:56:21Z, merge commit `26c98ca04eaf0ab7237b70540a605636170a9b6f`. All checks green at merge
+  (`C3X data contract`, `Data contract and link check`, `Dashboard rows`, `Cost model`, `S775`, `deep-research`,
+  `cross-session-review`, `costs`, `verify`, `build`; `deploy` correctly skipped on the pull request).
+- **PR #42** (repair of the conflict markers merged to `main` by PR #41): 
+  https://github.com/sassnarep3-star/China3/pull/42 — **MERGED** 2026-11-10T10:00:20Z, merge commit
+  `feb165bade58c1164d1dad47ce1e06f251206f04`. Twelve checks green, `deploy` skipped as expected.
+- **Post-merge workflows on `main`:** all `success`, including **Verify C3X canonical edition**
+  (run 42795428720) and **Deploy static guide to GitHub Pages** (run 42795428951). The previously red
+  **Verify dashboard** job is green again after the repair.
+- **Live confirmation (cache-busted):** `https://sassnarep3-star.github.io/China3/c3x-summary.html?v=feb165b` and
+  `.../c3x-costs.html?v=feb165b` returned the real pages — hero, short answer ($53.38 / $899.01 / 7.0093% /
+  $10,373.79 / $2,853), the ranked-routes table with per-row official links, and the 40-row ladder with the
+  spread, the ¥216.85–¥410 bank fee and the §988 column. Not just HTTP 200.
+- **Presentation follow-up in this PR:** money cells now carry thousands separators (`$1,328.33`, `$2,593.45`,
+  `$1,037.38`) instead of raw CSV strings. No figure changed.
