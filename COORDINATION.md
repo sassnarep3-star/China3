@@ -513,3 +513,52 @@ Before claiming, remote branches were inspected via GitHub API:
 - Added R30–R32 (PBOC [2004] No. 16 Arts. 2, 6, 10 — fetched http://m.safe.gov.cn/safe/2004/1116/5461.html) and X-17 (open PR #18 prices the emigrant route as one wire; Art. 6 stages payouts above CNY 200,000 over two years).
 - **Shared-file note:** every session holding an `index.html` integration claim (7a636dce T15, 8c26329a C2, 2eb1c590 CM-3) has marked it **done**, and no other session has linked `cross-session-review.html`. This session therefore made one **additive** edit to `index.html` (one nav link + one footer link, nothing removed or reordered), following the same additive convention those sessions used. Open PRs #15 and #18 also touch `index.html`; their owners should keep this link when they rebase.
 
+
+<!-- session-0fbc51c7-consolidation-v1 -->
+
+## Session `arena-0fbc51c7-china3` — consolidation, re-verification, and final integration
+
+Branch: `arena/0fbc51c7-china3` (fixed by Arena session binding; logged as `C3-IR-001`, same
+constraint every prior session recorded). Base commit `75b67d3` on `main`.
+
+### Claim and scope
+
+Claimed at 2026-11-10 (UTC) before any file was touched. Open PRs #15 and #18 belong to other
+sessions and are **not** claimed or modified here. Their file scopes (`deep-costs.html`,
+`cost-estimates.html`, `data/cost_matrix.*`, `data/cost_scenarios.csv`) are avoided.
+
+This session uses an exclusively namespaced file scope (`cn3_*` / `cn3-*.html` /
+`assets/cn3.*` / `scripts/*_cn3.py`) and touches shared files (`index.html`, `README.md`,
+`EXECUTIVE_SUMMARY.md`, `COORDINATION.md`) only as the final integration session.
+
+| ID | Task | File scope | Status | Owner |
+|----|------|------------|--------|-------|
+| C3-T1 | Re-verify every load-bearing input against the live official page (BOC board 2026-11-10, BOC personal tariff, BOC ATM tariff, SAFE convenience amount, Huifa [2014] No.2 Art.6, PBC [2004] No.16, PRC IIT Law, IRC §988, 31 CFR 1010.821, IRS 8938/FBAR comparison, IRS yearly average rates, Form 3520) | `data/cn3_sources.csv`, `data/cn3_inputs.csv` | in progress | arena-0fbc51c7-china3 |
+| C3-T2 | One consolidated cost model: 40 amounts ($10k–$400k) × every method, components separated, US §988 gain tax shown separately, blanks left blank | `data/cn3_methods.csv`, `data/cn3_ladder.csv`, `scripts/build_cn3.py` | in progress | arena-0fbc51c7-china3 |
+| C3-T3 | Step-by-step playbook per method | `data/cn3_steps.csv` | in progress | arena-0fbc51c7-china3 |
+| C3-T4 | Clean mobile-first dashboard + category subpages, most important first | `cn3-*.html`, `assets/cn3.css` | in progress | arena-0fbc51c7-china3 |
+| C3-T5 | Line-by-line verifier + CI gate | `scripts/verify_cn3.py`, `.github/workflows/cn3-verify.yml` | in progress | arena-0fbc51c7-china3 |
+| C3-T6 | Integration: landing page, README, executive summary, PR, merge, Pages | `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md` | in progress | arena-0fbc51c7-china3 |
+
+### Corrections this session will publish (found by re-reading the primary text)
+
+- **C-01 — emigrant-property staging is repealed.** Huifa [2014] No. 2 Art. 6(2) reads
+  「取消移民财产转移分次汇出的要求」 (fetched 2026-11-10 from
+  https://www.safe.gov.cn/tianjin/2024/0903/2594.html). The older tables that price M03 with a
+  two-year stage, and flag **X-17**, rest on PBC [2004] No. 16 Art. 6 as unamended. Art. 6(1)
+  also removed the >RMB 500,000 head-office filing. The 2014 notice is republished on the SAFE
+  Tianjin site marked 「（已修改）」 and its Art. 6 was **not** among the clauses later amended by
+  Huifa [2023] No. 28.
+- **C-02 — BOC tariff date.** The personal transfer tariff is effective **2014-11-01**, not
+  2024-11-01 (`X-14`). Fetched text: 「收费标准2014年11月1日起」.
+- **C-03 — board snapshot is time-stamped and one day stale in older layers.** Today's BOC board
+  (2026-11-10 07:32:39) is USD 现汇买入价 666.22 / 现汇卖出价 669.03 per 100 USD. All figures in
+  this session's model are re-derived from that snapshot.
+- **C-04 — the missing tax line (`X-11`).** Every prior cost model stopped at bank spread and
+  fees. For a U.S. citizen the larger number is usually IRC §988 gain on the currency itself:
+  §988(e)(2) exempts a personal transaction only while the gain is **$200 or less**, so a
+  conversion at today's rate of CNY acquired at the 2024 IRS yearly average (7.189) produces
+  gain of about 6.94% of the USD received, taxed as ordinary income. Quantified in this
+  session's model, with the assumption stated per row.
+
+No other session's file is edited, removed, or reordered by this claim.
