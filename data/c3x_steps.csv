@@ -1,0 +1,31 @@
+method_id,step,action,document,source
+M01,1,"Ask your branch, in writing, which rule it will apply to you: documented current-account income (S04 art. 59), or the domestic-individual remittance rule (S03 art. 64). The answer decides which documents you need.",Written branch answer,S03|S04
+M01,2,"Assemble the source-of-funds file: the contract or sale document, the PRC tax certificate or receipt, and the bank statements showing the money arriving.",Source-of-funds file,S04|S06
+M01,3,"Buy the USD at the branch's 现汇卖出价 and remit in one transfer. Above USD 50,000/day the bank takes the same ID plus the transaction documents — it does not require you to split the payment.",ID + documents,S03
+M01,4,"Check the debit: 1‰ of the CNY amount, minimum CNY 50, capped at CNY 260, plus CNY 150 cable to a non-HK/Macau/Taiwan destination. Any other line on the receipt is a local or negotiated charge and should be queried against that tariff.",Bank receipt,S02
+M01,5,"Record the USD amount received and the CNY amount debited. That pair is your starting point for the §988 computation, and the bank's rate is the consistently-applied posted rate the IRS accepts.",Bank advice,S09|S11
+M01,6,"Report the account if the aggregate of your foreign accounts exceeded USD 10,000 at any point in the calendar year (FBAR) and if the Form 8938 threshold applies to you.",FinCEN Form 114 / Form 8938,S12|S13
+M02,1,"Confirm with the branch that it will process a transfer above USD 50,000 with documents. If it will, M01 is cheaper; M02 is the fallback, not the default.",Written branch answer,S03
+M02,2,"Divide the total into whole USD 50,000 transfers and schedule them.",Transfer schedule,S03
+M02,3,"Expect the CNY 260 cap plus CNY 150 cable on every transfer, i.e. CNY 410 each, and budget the spread on each purchase.",Bank receipts,S02
+M02,4,"Test the §988 USD 200 exclusion per transfer, because each disposal is its own transaction.",Computation,S09
+M03,1,Confirm you are an emigrant within art. 2 of the 2004 measures: you moved from the mainland to a foreign country and the property was yours before you acquired that status. A U.S. citizen who never held mainland household registration does not qualify.,Status documents,S06
+M03,2,Settle PRC tax first and obtain the tax certificate or payment receipt — it is a listed application document.,PRC tax certificate,S06|S08
+M03,3,"Apply once, to the SAFE branch at your original household-registration locality, with the cancelled-registration certificate and the embassy/consulate proof of settlement abroad.",Application file,S06
+M03,4,"After approval, instruct the bank to remit within the approved amount. Since 2014 it may be one lump sum or instalments — the old half/half/rest staging is cancelled.",SAFE approval + bank instruction,S07
+M03,5,Take payment into your own overseas account. The bank may not hand you domestic FX cash (art. 11).,Remittance advice,S06
+M04,1,"Establish the inheritance with notarised documents: your status, the deceased's property rights, and the link between you.",Notarised inheritance file,S06
+M04,2,Obtain the tax certificate from the tax authority where the deceased's property is located.,Tax certificate,S06
+M04,3,"Apply to the SAFE branch at the deceased's last registered locality. If you inherited from more than one person, the 2014 rules let you combine the applications.",SAFE application,S06|S07
+M04,4,"Instruct the bank to remit within the approved amount, to your own account abroad.",Bank instruction,S06
+M05,1,Check the card: only a 外国人永久居留身份证 holder gets the annual convenience amount for FX purchase.,Residence card,S04
+M05,2,Buy FX within the convenience amount on ID; keep the income documents in case the branch asks.,ID,S04
+M06,1,"Gather the evidence that the balance is lawful current-account income: employment or service contract, payslips, PRC tax withholding records. The 2026-07-13 branch answer addresses exactly this case — labour remuneration earned in China by a foreign individual.",Income file,S04|S16|S08
+M06,2,Present ID plus the source-of-funds materials including tax documents for the purchase. The bank tests whether the purpose of purchase matches the purpose of remittance.,ID + income file,S03|S04
+M06,3,Expect the same tariff as M01 and no published cap in the article quoted — but also no entitlement: the branch decides on the documents.,Bank receipt,S02|S04
+M07,1,Use your own card only. Lending or borrowing cards to get around the limit is expressly prohibited.,Own card,S15
+M07,2,"Stay within CNY 10,000 per card per day and CNY 100,000 per person per calendar year; exceeding the annual figure suspends the facility this year and next.",Withdrawal log,S15
+M07,3,"Price it from the issuer's own conversion rate and ATM fee — neither is published in the sources reviewed, so no number is shown.",Issuer tariff,S15
+M08,1,Check the PRC export limit with the bank or SAFE before carrying anything. The regulation delegates the figure to SAFE and it was not re-verified in this pass.,SAFE guidance,S05
+M08,2,"File FinCEN Form 105 if the amount you carry exceeds USD 10,000; the threshold applies to the family or group total, not per person.",FinCEN Form 105,S14
+M08,3,Keep the declaration receipt. Failure to file risks seizure and forfeiture of the currency itself.,CBP receipt,S14

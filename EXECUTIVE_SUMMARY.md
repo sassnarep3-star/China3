@@ -1,5 +1,20 @@
 # Executive summary — China money (CNY → USD)
 
+> **Canonical edition, 2026-11-10 (session `arena/2c8d441e-china3`).** An independent pass re-fetched 16
+> official documents on 10 November 2026 and re-derived the whole cost ladder from the 17:39:58 Beijing
+> board (bid 6.6571 / ask 6.6851). Its answer, in one paragraph: there is **no PRC tax on converting CNY to
+> USD** in any instrument reviewed; the charges that feel like one are the bank spread (0.2094% half-spread),
+> the 1‰ wire tariff capped at ¥260 plus ¥150 cable (a total of **$53.38 on $10,000** and **$899.01 on
+> $400,000**), the PRC income tax on whatever created the money (20% on property gains, interest, dividends),
+> and — the only genuine conversion tax — the **U.S. §988 gain** on disposing of the CNY: **7.0093%** of the
+> dollars received at a 2024-average cost basis, equal to **$10,373.79** of federal tax at 37% on $400,000 and
+> unavoidable by changing channel. For a U.S. passport holder the decisive rule is SAFE's: the annual
+> convenience amount belongs to a **外国人永久居留身份证** holder, and everyone else buys FX from lawful
+> current-account RMB income with ID **plus source-of-funds materials including tax documents**
+> ([2026-07-13 Q&A](https://www.safe.gov.cn/tianjin/2026/0713/3088.html), [2024-06-21 Q&A](https://www.safe.gov.cn/tianjin/2024/0621/2529.html)).
+> Start at [`c3x-summary.html`](c3x-summary.html); method and formulas in
+> [`research/c3x-verification.md`](research/c3x-verification.md).
+
 **Final integration review:** 2026-11-10 · **Live guide:** `index.html` · **Full evidence schedule:** `schedule-dashboard.html`
 
 Parallel integration work is preserved at `verify-2026.html` (17 verbatim source records), `a15-review.html` (independent safety review), `guide.html` (archived narrative) and `data/ladder_20261110.csv` (independent 40-row ladder).
