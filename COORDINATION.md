@@ -1095,3 +1095,25 @@ independent review pages. To avoid a fourth parallel dashboard, this session cla
 Non-overlap: this session does not touch `s775-*`, `d646-*`, `a502-*`, `a058-*`, `deep-*`,
 `costs.html`, `cost-tables.html`, `schedule-*`, `docs/**`, `assets/{cost,d646,dashboard,s775}.*`
 or any other session's data files.
+
+### Incident and fix — unresolved conflict markers merged into `main` (2026-11-10)
+
+**What happened.** After PR #40 merged, sibling session `5130fbc0` merged `origin/main` and opened PR #41.
+That PR was merged with the conflict in `scripts/build_dashboard.py` **still marked up**: the file shipped
+`<<<<<<< HEAD` / `=======` / `>>>>>>> origin/main` and contained **two** `def build_index()` definitions.
+Because `index.html` is generated from that file, the published landing page and `README.md` also carried
+conflict markers, and `scripts/verify_dashboard.py` failed on `main` (`SyntaxError: invalid decimal literal`)
+— so the dashboard CI was red and the live home page was serving marker text. This is logged as **F15**.
+
+**Fix (no work discarded).** `scripts/build_dashboard.py` was rebuilt from the last verified version and the
+sibling session's additive work was re-applied on top of it rather than dropped:
+its green "close-of-day re-verification" banner, its `a513.html` navigation entry and its `Verified answer`
+card are all present. The banner now sits inside the **Parallel editions kept on this page** section with the
+other preserved passes instead of above the fold, so the page opens with the canonical band and the hero.
+`index.html` was regenerated from the fixed generator, never hand-edited. `README.md` keeps both sessions'
+"Start here" lines, canonical first. Zero conflict markers remain anywhere in the tree (grep over
+`*.html *.py *.md *.csv *.css *.yml`).
+
+**Re-verified after the fix.** All twelve validators pass on the merged tree: `validate_data`,
+`verify_deep`, `check_links`, `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`,
+`verify_s775_site`, `verify_dashboard`, `verify_c3x_site`, `verify_completion`, `verify_a513`.
