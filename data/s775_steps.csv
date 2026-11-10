@@ -1,0 +1,69 @@
+method_id,step,what_you_do,documents_or_conditions,source_ids
+M01,1,Log into BOC online banking and open 跨境汇款 (cross-border remittance); select the recipient's USD account.,BOC debit card with CNY balance; recipient account details,S03
+M01,2,Enter the amount. The bank quotes the current spot selling rate at submission (2026-11-10 07:32:39: 6.6903).,Rate changes intraday; use the quote at execution,S01
+M01,3,"Confirm the fee: 1‰ (min ¥50, max ¥260) + cable ¥150 (HK/MO/TW ¥80).",Tariff effective 2014-11-01; mobile waiver ended 2025-12-31,S03|S09
+M01,4,Authorise the debit; save the remittance receipt and the rate quote.,Receipt is your proof of conversion price and date,S03
+M01,5,File US reports: FBAR (aggregate >$10k at any time) and Form 8938 if thresholds met; report §988 gain/loss on the return.,"Strictly greater than $10,000; Form 8938 thresholds per IRS page",S48|S43|S40
+M02,1,Ask the BOC branch for 全额到账 (OUR) on a personal USD wire to the US.,Corporate tariff lists US$15 to BOC NY / US$25 to other US banks; personal applicability must be confirmed,S04|S05
+M02,2,Request the OUR charge be added to the transfer instruction.,Confirm total debit before authorising,S04
+M02,3,Track the MT103 SWIFT message; the US bank posts the net amount to the beneficiary.,BOC USA: US$0 incoming personal wire,S07
+M02,4,Save the fee breakdown; report US tax as per M01 step 5.,Same reporting duties as M01,S48|S43|S40
+M03,1,"Withdraw CNY via a UnionPay ATM: ¥100,000 per card per year, ¥10,000 per card per day.",UnionPay fee ¥12 + 1% (max ¥112/tx),S20|S06
+M03,2,Exchange the CNY to USD at a bank counter.,Counter cash price differs from the spot board; not officially published (blank),S01
+M03,3,"Carry ≤US$10,000 per person without declaration; above that declare to customs.",">US$10,000 - FinCEN Form 105; family/group threshold is collective",S21|S51
+M03,4,Deposit at destination; keep the declaration receipt and the exchange receipt.,Receipts support US tax reporting,S51
+M04,1,Use a UnionPay debit card at an overseas ATM.,UnionPay fee ¥12 + 1% (max ¥112/tx),S06
+M04,2,Decline DCC; withdraw in USD or local currency at the network rate.,MC/Visa cards: 2.5% ($3-$40) from 2026-11-11 - prefer UnionPay,S06
+M04,3,Deposit the cash; note the ATM fee on the statement.,FBAR applies if any foreign account exceeds $10k,S48
+M05,1,Cancel mainland hukou (if PRC-born) and collect the certificate; assemble property-value evidence.,A US citizen by birth without hukou does not qualify,S28
+M05,2,Apply to SAFE at the former hukou location for 移民财产转移核准 (emigrant property transfer approval).,Documents per SAFE; approval required,S14
+M05,3,"On approval, the bank remits the approved amount in one or several installments (no mandatory two-year staging).",汇发〔2014〕2号 §6: 一次或分次汇出,S14
+M05,4,Report US tax: §988 gain measured against your basis (IRS yearly averages).,Basis not provided - leave blank unless supplied,S40|S42
+M06,1,Confirm eligibility to hold mainland property as a foreign individual (residence permit / permanent residence ID; city rules).,City-specific eligibility,S15|S17
+M06,2,Complete the purchase with FX settlement per PBOC [2006] No.3 arts. 7/13.,Contract/receipt-based settlement,S27
+M06,3,"On sale, repatriate proceeds per art. 7 with tax evidence.",PRC IIT 20% on property transfer income,S27|S35
+M07,1,Provide the Foreign Permanent Resident ID and employment documents to the bank.,Permanent resident ID holders get the convenience amount,S11
+M07,2,"Purchase FX for documented salary; above the convenience amount, submit transaction documents.",Convenience amount is not a hard limit,S10
+M07,3,"Remit out (≤US$50,000/day on ID documents).",Same-day cumulative limit on ID,S13
+M07,4,"Report US tax: wages (FEIE may apply), §988 on conversion, FBAR/8938.",FEIE excludes wages for personal services only,S41|S40|S43
+M08,1,Document mainland employment and pay PRC IIT on the salary.,IIT withheld at source,S35
+M08,2,Purchase FX for the taxed salary without the annual convenience amount.,Not subject to the convenience amount when taxed,S16
+M08,3,Remit through the bank with tax payment evidence.,Authenticity review,S16
+M08,4,Claim foreign tax credit for PRC IIT on the US return where applicable.,Form 1116,S47
+M09,1,Ask the employer to process the salary remittance through its payroll provider.,Employer cooperation required,S16
+M09,2,Provide employment contract and tax payment evidence.,PRC IIT withheld,S35
+M09,3,Receive net USD; note provider fees (not officially published - blank).,Fees blank/unverified,S16
+M10,1,Confirm the security or deposit is in your own name.,Individual holding,S35
+M10,2,Receive CNY dividends/interest: deposit interest is IIT-exempt (财税〔2008〕132号); stock dividends bear 20%.,Treaty rate 10% may apply to US residents,S36|S35|S50
+M10,3,Convert and remit via M01.,Documentation per amount,S03
+M10,4,Claim foreign tax credit for PRC withholding on the US return.,Form 1116; treaty rate 10%,S47|S50
+M11,1,Verify the platform holds a SAFE payment-institution FX licence (汇发〔2019〕13号 scope).,Licensed institutions list,S24
+M11,2,Confirm the platform covers your use case: current-account shopping/study/travel.,Scope is current-account business only,S24
+M11,3,Complete KYC and convert via the partner bank.,Platform fees not published officially (blank),S24
+M12,1,Trade real goods through a licensed cross-border e-commerce platform.,Transaction records required,S24
+M12,2,Use the platform's settlement with FX purchase on evidence.,Above US$50k - tax filing recordal,S24|S33
+M13,1,Buy a QDII fund with CNY at a Chinese fund/bank.,No individual approval needed,S25
+M13,2,The fund invests offshore; redemption returns CNY at market.,Fund fees not officially published (blank),S25
+M14,1,Confirm GBA WMC eligibility: 2-year social insurance/tax or ¥400k annual income.,GBA residency required,S31
+M14,2,Open a WMC account at a designated bank; ¥3M individual closed-loop quota (¥1.5M bank + ¥1.5M securities).,Closed loop,S30|S31
+M14,3,Buy HK products; redeem and transfer back within the closed loop.,Not a direct cash conversion,S30
+M15,1,Sell the mainland property and pay PRC IIT (20% on transfer income).,Property documents,S35|S27
+M15,2,Repatriate proceeds per PBOC [2006] No.3 art. 7 with tax evidence.,Approval/documentation,S27
+M16,1,Prepare the board dividend resolution and audited financials.,Corporate documents,S25
+M16,2,"For >US$50,000, complete the tax filing recordal (STA/SAFE No.40/19).",税务备案表,S33|S34
+M16,3,The bank remit after review; treaty dividend rate 10%.,Corporate route only,S37|S50
+M17,1,Structure the deal as 内保外贷 or cross-border financing with bank approval.,Capital-account registration required,S25
+M17,2,Register in the capital-account system; use funds within the approved scope.,Misuse draws Decree 532 penalties,S25|S19
+M18,1,Request termination of the social insurance relationship in writing.,MOHRSS Order No.16 art. 5,S38
+M18,2,Receive the account balance as a lump sum (CNY).,Account retained if not terminated,S38
+M18,3,Convert the CNY via M01.,PRC tax treatment flagged,S03|S35
+M19,1,Do not use crypto routes.,PBOC 银发〔2026〕42号 prohibits crypto-related business activities,S29
+M19,2,Penalty exposure: Decree 532 arts. 39/45 fines 30%-100%; criminal liability per 法释〔2019〕1号.,Turnover ≥¥5M or gain ≥¥100k,S19|S39
+M20,1,"Do not carry undeclared cash above US$10,000 per person.",FinCEN Form 105 declaration required,S51
+M20,2,Family/group threshold applies collectively.,CBP states the collective threshold,S51
+M21,1,Do not use hawala/underground transfer.,Illegal FX trading under Decree 532 arts. 39/45,S19
+M22,1,Do not bypass SAFE approval on emigrant transfers.,Approval is mandatory; bypass is illegal FX transfer,S14|S19
+M23,1,Individual offshore RMB (CNH) account eligibility is not published as a single national rule.,Treat as restricted; confirm with the bank and SAFE,S32|S17
+M23,2,"If available, convert offshore; the offshore conversion fee is not officially published (blank).","Leave blank, flag UNVERIFIED",S32
+M24,1,Plan conversions across calendar years.,Each year's documented purchase keeps records clean,S10
+M24,2,Keep real transaction documents for every above-convenience purchase.,Convenience amount is not a limit - documents are,S10|S13

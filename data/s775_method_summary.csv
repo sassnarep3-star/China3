@@ -1,0 +1,25 @@
+method_id,method,verified_usd_10k,verified_usd_100k,verified_usd_400k,unverified_components,notes
+M01,Personal bank wire (SWIFT) via BOC e-banking,53.42,271.29,901.30,,Verified FX spread + wire tariff only; intermediary and US receiving-bank fees blank (unverified)
+M02,Full-amount-received (OUR) wire to the US,78.42,296.29,926.30,Personal OUR applicability,OUR US$25 per wire on top of M01; personal applicability conditional
+M03,Cash withdrawal + border carry,18.53,,,Cash exchange price vs spot; border declaration,ATM fee only; cash-to-USD price at counter not the spot board (blank)
+M04,Overseas ATM withdrawal on a CNY card,101.79,18.53,,Card daily limits; MC/Visa 2.5% from 2026-11-11,UnionPay fee ¥12 + 1% capped ¥112/tx
+M05,Emigrant property transfer (移民财产转移),,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M06,Foreigner mainland property purchase / inheritance,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M07,Foreign permanent resident ID salary FX,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M08,"Foreign passport salary FX (taxed, uncapped)",,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M09,Employer payroll remittance,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M10,Dividends & interest repatriation,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M11,Licensed remittance / payment platform,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M12,Cross-border e-commerce settlement,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M13,QDII fund route,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M14,GBA Wealth Management Connect,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M15,Mainland property sale proceeds,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M16,Company dividend remittance,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M17,Corporate cross-border financing / guarantee,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M18,Retained social insurance account payout,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M19,Crypto conversion route,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M20,"Undeclared cash carry above $10,000",,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M21,Hawala / underground money transfer,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M22,Bypassing SAFE approval on emigrant transfer,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M23,Offshore RMB (CNH) account + offshore conversion,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists
+M24,Staged / annual-planned conversion,,,,Commercial/product fees not published officially,See method status and eligibility; costs blank where no official schedule exists

@@ -1,0 +1,36 @@
+name: Verify S775 site
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  s775:
+    name: S775 rows, ladder, sources and links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate data deterministically (must be idempotent)
+        run: python3 scripts/gen_s775_data.py && git diff --exit-code -- data/s775_
+
+      - name: Confirm pages are not stale
+        run: python3 scripts/build_s775_site.py --check
+
+      - name: Independent verification of every row, source and link
+        run: python3 scripts/verify_s775_site.py
+
+      - name: Repo-wide internal link check
+        run: python3 scripts/check_links.py
+
+      - name: Repo-wide data contract
+        run: python3 scripts/validate_data.py

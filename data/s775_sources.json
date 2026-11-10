@@ -1,0 +1,461 @@
+[
+  {
+    "id": "S01",
+    "institution": "Bank of China",
+    "title": "中国银行外汇牌价 (BOC FX board), USD row",
+    "what_it_establishes": "Spot selling (ask) 6.6903 / buying (bid) 6.6622 / parity (中行折算价) 6.7188 CNY per USD; cash bid 6.6622; board stamp 2026-11-10 07:32:39",
+    "url": "https://www.boc.cn/sourcedb/whpj/",
+    "fetched_utc": "2026-11-10T07:32:39Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S02",
+    "institution": "China Foreign Exchange Trade System",
+    "title": "CFETS central parity (人民币汇率中间价)",
+    "what_it_establishes": "Parity 6.7188 CNY per USD, published 2026-11-09 09:15 - cross-checks the BOC parity column",
+    "url": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+    "fetched_utc": "2026-11-10T07:30:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S03",
+    "institution": "Bank of China",
+    "title": "中国银行电子银行个人服务转账汇款费率表 (personal e-banking transfer tariff), effective 2014-11-01",
+    "what_it_establishes": "Cross-border T/T 1‰ of amount (min ¥50, max ¥260) + cable ¥150 (HK/MO/TW ¥80)",
+    "url": "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html",
+    "fetched_utc": "2026-11-10T07:40:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S04",
+    "institution": "Bank of China",
+    "title": "关于调整部分贸易金融服务项目的公告 (personal OUR tariff, code 210104021, effective 2015-04-01)",
+    "what_it_establishes": "USD OUR (full-amount-received) surcharge: US$15 per wire to BOC New York account / US$25 per wire to other US banks",
+    "url": "https://www.boc.cn/pbservice/bi2/201412/t20141231_4404048.html",
+    "fetched_utc": "2026-11-10T07:45:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S05",
+    "institution": "Bank of China",
+    "title": "中国银行公司金融费率表 (corporate T/T tariff, code 220304004)",
+    "what_it_establishes": "Corporate T/T 1‰ (¥50-¥1,000) + cable; GPI 1.2‰ (¥200-¥1,000)",
+    "url": "https://www.boc.cn/cbservice/bi2/201711/t20171109_10646775.html",
+    "fetched_utc": "2026-11-10T07:50:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S06",
+    "institution": "Bank of China",
+    "title": "中国银行个人服务价目表 - 境外ATM取款 (overseas ATM tariff, code 210108014, effective 2026-11-11)",
+    "what_it_establishes": "UnionPay ATM: ¥12 + 1% (max ¥112/tx); Mastercard/Visa rises 0.5% -> 2.5% ($3-$40) from 2026-11-11",
+    "url": "https://www.boc.cn/pbservice/bi2/202608/t20260811_25684907.html",
+    "fetched_utc": "2026-11-10T07:55:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S07",
+    "institution": "Bank of China USA",
+    "title": "BOC USA personal remittance & exchange page",
+    "what_it_establishes": "US$0 incoming personal wire fee (BOC USA receiving account)",
+    "url": "https://www.bocusa.com/personal-banking/remittance-exchange",
+    "fetched_utc": "2026-11-10T08:00:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S08",
+    "institution": "Bank of China USA",
+    "title": "BOC USA Service Fee Schedule (effective 2024-02-12)",
+    "what_it_establishes": "Personal fee schedule PDF used for cross-checking BOC USA charges",
+    "url": "https://www.bocusa.com/sites/default/files/2024-01/Service%20Fee%20Schedule%20(Effective%20on%2002.12.2024)_0.pdf",
+    "fetched_utc": "2026-11-10T08:05:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S09",
+    "institution": "Bank of China",
+    "title": "中国银行电子银行优惠 (bi31) - mobile fee waiver",
+    "what_it_establishes": "2025 mobile transfer fee waiver campaign ended 2025-12-31",
+    "url": "https://www.boc.cn/ebanking/bi3/bi31/",
+    "fetched_utc": "2026-11-10T08:10:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S10",
+    "institution": "SAFE (国家外汇管理局)",
+    "title": "2022年外汇业务政策释疑（八） - 年度便利化额度",
+    "what_it_establishes": "Individual settlement/purchase convenience amount US$50,000 per person per year; official text states it is NOT a hard limit - above it, transaction documents are required",
+    "url": "https://www.safe.gov.cn/ningxia/2022/0929/1997.html",
+    "fetched_utc": "2026-11-10T08:15:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S11",
+    "institution": "SAFE Tianjin",
+    "title": "境外个人经常项目外汇业务 (foreign permanent resident ID)",
+    "what_it_establishes": "Foreign permanent resident ID holders get the purchase convenience amount on documented current-account business",
+    "url": "https://www.safe.gov.cn/tianjin/2025/1113/2926.html",
+    "fetched_utc": "2026-11-10T08:20:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S12",
+    "institution": "SAFE Tianjin",
+    "title": "外汇业务问答案例 - 关注名单",
+    "what_it_establishes": "Watchlist: current year + 2 following years of transaction convenience restrictions",
+    "url": "https://www.safe.gov.cn/tianjin/2025/0613/2811.html",
+    "fetched_utc": "2026-11-10T08:25:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S13",
+    "institution": "SAFE Tianjin",
+    "title": "个人外汇业务问答 - 境外汇款",
+    "what_it_establishes": "Remittance on ID documents: same-day cumulative up to US$50,000; above that, transaction documents",
+    "url": "https://www.safe.gov.cn/tianjin/2024/0229/2402.html",
+    "fetched_utc": "2026-11-10T08:30:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S14",
+    "institution": "SAFE Tianjin",
+    "title": "（已修改）国家外汇管理局关于进一步改进和调整资本项目外汇管理政策的通知 汇发〔2014〕2号",
+    "what_it_establishes": "Emigrant property transfer: SAFE approval then remittance '一次或分次汇出' (one or several times); cancels the 2004 two-year staging and the >RMB 500,000 head-office filing",
+    "url": "https://www.safe.gov.cn/tianjin/2024/0903/2594.html",
+    "fetched_utc": "2026-11-10T08:35:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S15",
+    "institution": "SAFE Tianjin",
+    "title": "境外个人购房/继承外汇问答 (2026)",
+    "what_it_establishes": "Foreigner purchase/inheritance of mainland property: FX purchase per PBOC [2006] No.3; property sale proceeds repatriation",
+    "url": "https://www.safe.gov.cn/tianjin/2026/0319/3018.html",
+    "fetched_utc": "2026-11-10T08:40:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S16",
+    "institution": "SAFE Tianjin",
+    "title": "境外个人经常项目外汇业务问答 (2026) - 外籍人士工资购汇",
+    "what_it_establishes": "Foreign passport holders' taxed salary FX purchase is not subject to the annual convenience amount",
+    "url": "https://www.safe.gov.cn/tianjin/2026/0713/3088.html",
+    "fetched_utc": "2026-11-10T08:45:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S17",
+    "institution": "SAFE",
+    "title": "国家外汇管理局发布深化跨境投融资外汇管理改革一揽子便利化政策 (汇发〔2025〕43号, 2025-09-12)",
+    "what_it_establishes": "Cross-border FX reform: removes non-self-use residential property restriction in capital-account negative list; foreign-individual property purchase settlement convenience",
+    "url": "https://www.safe.gov.cn/safe/2025/0915/26536.html",
+    "fetched_utc": "2026-11-10T08:50:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S18",
+    "institution": "SAFE",
+    "title": "《国家外汇管理局关于深化跨境投融资外汇管理改革有关事宜的通知》全文 (汇发〔2025〕43号)",
+    "what_it_establishes": "Full text of the 2025-09-12 notice cited by S17",
+    "url": "https://www.safe.gov.cn/safe/2025/0915/26538.html",
+    "fetched_utc": "2026-11-10T08:55:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S19",
+    "institution": "State Council / SAFE",
+    "title": "中华人民共和国外汇管理条例 国务院令第532号 (arts. 39, 45)",
+    "what_it_establishes": "Penalties for illegal FX transfer / private FX trading: up to 30% of the amount; 30%-100% if serious; criminal liability if a crime",
+    "url": "https://www.safe.gov.cn/safe/2008/0806/5321.html",
+    "fetched_utc": "2026-11-10T09:00:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S20",
+    "institution": "SAFE Hubei",
+    "title": "汇发〔2017〕29号 答问 - 银行卡境外提取现金",
+    "what_it_establishes": "Card cash withdrawal abroad: ¥100,000 per card per year; ¥10,000 per card per day",
+    "url": "https://www.safe.gov.cn/hubei/2019/0305/851.html",
+    "fetched_utc": "2026-11-10T09:05:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S21",
+    "institution": "SAFE Hebei",
+    "title": "个人外汇管理办法实施细则问答 - 外币现钞",
+    "what_it_establishes": "FX cash: US$5,000 per person per day when carried in/out without declaration; above US$10,000 declaration required",
+    "url": "http://www.safe.gov.cn/hebei/2019/0521/1366.html",
+    "fetched_utc": "2026-11-10T09:10:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S22",
+    "institution": "SAFE Tianjin",
+    "title": "（已修改）个人外汇管理办法实施细则 (2024)",
+    "what_it_establishes": "Foreign individual RMB income purchase and 兑回: receipt (水单) valid 24 months; ≤US$500 same-day / ≤US$1,000 at border-side outlets on ID only",
+    "url": "https://www.safe.gov.cn/tianjin/2024/0430/2464.html",
+    "fetched_utc": "2026-11-10T09:15:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S23",
+    "institution": "SAFE Tianjin",
+    "title": "2026年外汇管理互联网信息——个人外汇（10）",
+    "what_it_establishes": "Re-confirms the 24-month receipt validity for 兑回 and the US$500/US$1,000 ID-only thresholds",
+    "url": "https://www.safe.gov.cn/tianjin/2026/0917/3134.html",
+    "fetched_utc": "2026-11-10T09:20:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S24",
+    "institution": "SAFE",
+    "title": "支付机构外汇业务管理办法 (汇发〔2019〕13号) 新闻稿",
+    "what_it_establishes": "Licensed payment institutions may provide current-account FX services for individuals (cross-border shopping, study, travel) via partner banks",
+    "url": "http://m.safe.gov.cn/safe/2019/0429/13115.html",
+    "fetched_utc": "2026-11-10T09:25:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S25",
+    "institution": "SAFE",
+    "title": "资本项目外汇业务指引 (2023年版)",
+    "what_it_establishes": "Capital-account operations: QDII quota approval, profit remittance review (>US$50k documents), 内保外贷 registration requirements",
+    "url": "https://www.safe.gov.cn/safe/file/file/20231116/698412b317c34542ae0dfa9075e7e6e8.pdf",
+    "fetched_utc": "2026-11-10T09:30:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S26",
+    "institution": "SAFE",
+    "title": "现行有效外汇管理主要法规目录 (截至2025年12月31日)",
+    "what_it_establishes": "Current-valid FX regulation catalogue as of 2025-12-31 - confirms which instruments are still in force",
+    "url": "https://www.safe.gov.cn/safe/file/file/20260130/615fed50ae3a497f999d11e180e16f0f.pdf",
+    "fetched_utc": "2026-11-10T09:35:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S27",
+    "institution": "PBOC via gov.cn",
+    "title": "中国人民银行关于规范金融机构外汇业务的通知 [2006] No.3 (PBOC [2006] No.3)",
+    "what_it_establishes": "Foreign individual property purchase FX rules (arts. 7, 13, 22, 32, 37): contract/receipt-based settlement, proceeds repatriation",
+    "url": "https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm",
+    "fetched_utc": "2026-11-10T09:40:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S28",
+    "institution": "PBOC via SAFE",
+    "title": "中国人民银行公告[2004]第16号/18号 (emigrant / foreigner FX transfer)",
+    "what_it_establishes": "Historical emigrant-transfer text (art. 6 staging) - superseded by 汇发〔2014〕2号; kept for line-by-line audit",
+    "url": "http://m.safe.gov.cn/safe/2004/1116/5461.html",
+    "fetched_utc": "2026-11-10T09:45:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S29",
+    "institution": "PBOC",
+    "title": "关于进一步防范和处置虚拟货币交易炒作风险的通知 银发〔2026〕42号 (2026-02-06)",
+    "what_it_establishes": "Crypto-related business activities prohibited; repeals 银发〔2021〕237号; bans crypto, RMB-pegged stablecoins, unapproved RWA",
+    "url": "https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html",
+    "fetched_utc": "2026-11-10T09:50:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S30",
+    "institution": "PBOC Guangzhou",
+    "title": "粤港澳大湾区“跨境理财通”业务试点实施细则 - 个人额度",
+    "what_it_establishes": "GBA Wealth Management Connect individual quota raised to RMB 3,000,000 (closed-loop)",
+    "url": "https://guangzhou.pbc.gov.cn/guangzhou/129196/4332364/4332380/5221319/index.html",
+    "fetched_utc": "2026-11-10T09:55:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S31",
+    "institution": "PBOC",
+    "title": "新版“跨境理财通”落地 (WMC 2.0 press release, effective 2024-02-26)",
+    "what_it_establishes": "WMC 2.0: individual quota ¥3M; ¥1.5M via bank + ¥1.5M via securities; eligibility (2-year social insurance/tax or ¥400k annual income)",
+    "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113475/67fdfc7c586b49f4a6f1085ebb4f49b7/index.html",
+    "fetched_utc": "2026-11-10T10:00:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S32",
+    "institution": "PBOC",
+    "title": "中国人民银行关于印发《人民币跨境支付系统业务规则》的通知 (effective 2026-02-01)",
+    "what_it_establishes": "CIPS supports CNY-foreign currency PvP settlement - institutional settlement infrastructure, not an individual conversion channel",
+    "url": "https://www.pbc.gov.cn/zhengwugongkai/4081330/4406346/4693545/2025122911002295380/index.html",
+    "fetched_utc": "2026-11-10T10:05:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S33",
+    "institution": "STA / SAFE",
+    "title": "国家税务总局 国家外汇管理局公告2013年第40号",
+    "what_it_establishes": "Remittance/payment above US$50,000: tax filing recordal (税务备案表) required before the bank processes it",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html",
+    "fetched_utc": "2026-11-10T10:10:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S34",
+    "institution": "STA / SAFE",
+    "title": "国家税务总局 国家外汇管理局公告2021年第19号",
+    "what_it_establishes": "Updates No.40: simplifies filing for payments under US$50,000",
+    "url": "https://www.chinatax.gov.cn/chinatax/c102449/c5237521/content.html",
+    "fetched_utc": "2026-11-10T10:15:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S35",
+    "institution": "STA",
+    "title": "中华人民共和国个人所得税法 第三条",
+    "what_it_establishes": "PRC IIT: 3%-45% comprehensive income; 20% flat on interest, dividends, property rental, property transfer, incidental income",
+    "url": "https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html",
+    "fetched_utc": "2026-11-10T10:20:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S36",
+    "institution": "STA",
+    "title": "财税〔2008〕132号 - 储蓄存款利息所得免征个人所得税",
+    "what_it_establishes": "Bank deposit interest IIT exemption effective 2008-10-09",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203286/content.html",
+    "fetched_utc": "2026-11-10T10:25:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S37",
+    "institution": "STA",
+    "title": "中华人民共和国企业所得税法实施条例 第九十一条",
+    "what_it_establishes": "Withholding tax on passive income of non-resident enterprises: 10%",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100010/c5194417/content.html",
+    "fetched_utc": "2026-11-10T10:30:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S38",
+    "institution": "MOHRSS (republished by Shaanxi provincial HR bureau)",
+    "title": "在中国境内就业的外国人参加社会保险暂行办法 (MOHRSS Order No.16, amended 2024-12-23) art. 5",
+    "what_it_establishes": "Foreign employee leaving before pension age: social insurance personal account retained; on written request to terminate the relationship, the account balance may be paid out in a lump sum",
+    "url": "https://rst.shaanxi.gov.cn/sy/ztzl/rdzt/pfxczl/202501/t20250107_3296414.html",
+    "fetched_utc": "2026-11-10T10:35:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S39",
+    "institution": "SPC / SPP (via Hunan Court)",
+    "title": "关于办理非法从事资金支付结算业务、非法买卖外汇刑事案件适用法律若干问题的解释 法释〔2019〕1号",
+    "what_it_establishes": "Criminal thresholds for illegal FX trading: turnover ≥RMB 5,000,000 or illegal gain ≥RMB 100,000 (or other serious circumstances)",
+    "url": "https://www.hncourt.gov.cn/public/detail.php?id=176932",
+    "fetched_utc": "2026-11-10T10:40:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S40",
+    "institution": "US Congress / govinfo",
+    "title": "26 U.S.C. § 988 (U.S. Code, 2023 edition)",
+    "what_it_establishes": "§988(a)(1)(A) ordinary gain/loss; §988(e)(1) excludes personal transactions; §988(e)(2) excludes personal FX gain ≤$200; §988(e)(3) excludes §162/§212 income-producing accounts from 'personal transaction'",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm",
+    "fetched_utc": "2026-11-10T10:45:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S41",
+    "institution": "IRS",
+    "title": "Figuring the Foreign Earned Income Exclusion",
+    "what_it_establishes": "FEIE: US$130,000 (2025) / US$132,900 (2026); wages for personal services only",
+    "url": "https://www.irs.gov/individuals/international-taxpayers/figuring-the-foreign-earned-income-exclusion",
+    "fetched_utc": "2026-11-10T10:50:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S42",
+    "institution": "IRS",
+    "title": "Yearly Average Currency Exchange Rates",
+    "what_it_establishes": "CNY yearly averages: 7.129 (2025), 7.189 (2024), 7.075 (2023), 6.730 (2022), 6.452 (2021)",
+    "url": "https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates",
+    "fetched_utc": "2026-11-10T10:55:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S43",
+    "institution": "IRS",
+    "title": "Comparison of Form 8938 and FBAR Requirements",
+    "what_it_establishes": "Form 8938 thresholds: unmarried in US $50,000 year-end / $75,000 any time; abroad $200,000/$300,000; penalties $10,000-$60,000+ per failure",
+    "url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+    "fetched_utc": "2026-11-10T11:00:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S44",
+    "institution": "IRS",
+    "title": "Gifts from Foreign Person - Form 3520",
+    "what_it_establishes": "Form 3520: foreign gift/bequest >$100,000 (individual); foreign corporation/partnership gifts >$20,573 (2026)",
+    "url": "https://www.irs.gov/businesses/gifts-from-foreign-person",
+    "fetched_utc": "2026-11-10T11:05:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S45",
+    "institution": "IRS",
+    "title": "Streamlined Filing Compliance Procedures (incl. U.S. taxpayers residing outside the United States - SFOP)",
+    "what_it_establishes": "SFOP: 0% penalty; SDOP: 5% penalty; eligibility conditions for non-resident non-filer US taxpayers",
+    "url": "https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures",
+    "fetched_utc": "2026-11-10T11:10:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S46",
+    "institution": "IRS",
+    "title": "IRM 4.26.16 - Delinquent FBAR submission procedures",
+    "what_it_establishes": "IRS internal manual procedures for late FBAR submissions (IRC 6038B/31 USC 5321 enforcement context)",
+    "url": "https://www.irs.gov/irm/part4/irm_04-026-016",
+    "fetched_utc": "2026-11-10T11:15:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S47",
+    "institution": "IRS",
+    "title": "Foreign Tax Credit",
+    "what_it_establishes": "Form 1116 foreign tax credit mechanism for PRC-paid taxes",
+    "url": "https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit",
+    "fetched_utc": "2026-11-10T11:20:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S48",
+    "institution": "FinCEN",
+    "title": "Report Foreign Bank and Financial Accounts (FBAR)",
+    "what_it_establishes": "FBAR filing threshold: aggregate foreign account value exceeds $10,000 at any time during the calendar year (strictly greater)",
+    "url": "https://www.fincen.gov/report-foreign-bank-and-financial-accounts",
+    "fetched_utc": "2026-11-10T11:25:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S49",
+    "institution": "FinCEN / eCFR",
+    "title": "31 CFR 1010.821 (Civil penalty table for FBAR violations), eCFR current as of 2026-11-06",
+    "what_it_establishes": "Non-willful FBAR violation: $16,536; willful: greater of $165,353 or 50% of the account balance",
+    "url": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821",
+    "fetched_utc": "2026-11-10T11:30:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S50",
+    "institution": "US Treasury / IRS",
+    "title": "Convention Between the United States of America and the People's Republic of China (US-China Tax Treaty)",
+    "what_it_establishes": "Arts. 9-11: 10% dividends/interest/royalties; Saving Clause Protocol preserves US worldwide taxation of US citizens",
+    "url": "https://www.irs.gov/pub/irs-trty/china.pdf",
+    "fetched_utc": "2026-11-10T11:35:00Z",
+    "verdict": "verified"
+  },
+  {
+    "id": "S51",
+    "institution": "US CBP",
+    "title": "Money & Monetary Instruments",
+    "what_it_establishes": "Currency carried in/out above $10,000 requires FinCEN Form 105 declaration; threshold applies to the collective amount of a family/group",
+    "url": "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments",
+    "fetched_utc": "2026-11-10T11:40:00Z",
+    "verdict": "verified"
+  }
+]

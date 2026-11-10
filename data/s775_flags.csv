@@ -1,0 +1,19 @@
+id,severity,item,status,detail,source_ids
+S775-F01,high,User's funds type (savings / salary / investment / corporate),UNVERIFIED,No user input. Eligibility depends on this; the method ranking cannot be narrowed without it.,S10|S16
+S775-F02,high,US tax basis (acquisition date and CNY-per-USD rate),UNVERIFIED,§988 gain is measured against basis. Left blank; cohort sensitivities shown on the cost page instead.,S40|S42
+S775-F03,high,User's marginal US ordinary tax rate,UNVERIFIED,Determines tax on §988 ordinary gain; left blank.,S40
+S775-F04,high,Whether the user ever held mainland hukou,UNVERIFIED,Determines eligibility for M05 emigrant property transfer.,S28
+S775-F05,medium,Personal applicability of the US$15/$25 OUR surcharge,CONDITIONAL,The OUR tariff sits in BOC's corporate/trade-finance schedule; personal e-banking applicability must be confirmed with the branch.,S04|S05|S03
+S775-F06,medium,Intermediary (correspondent) and US receiving-bank wire fees,UNVERIFIED,"No official published schedule; left blank, not zero.",S03|S07
+S775-F07,medium,Counter cash price vs spot board price,UNVERIFIED,M03 cash conversion price is not the spot board; not officially published as a formula.,S01
+S775-F08,medium,Offshore CNH conversion fee,UNVERIFIED,No official published reference; left blank.,S32
+S775-F09,medium,Exact Form 8938 penalty amounts for a specific year,UNVERIFIED,"IRS page gives a range ($10,000-$60,000+); exact figures depend on the year and conduct.",S43
+S775-F10,medium,Capital vs ordinary treatment of personal §988 gain above $200,INTERPRETATION,§988(e)(1) excludes personal transactions from §988(a)(1)(A); the residual gain is analysed under §1221. The statute text is verified; the characterisation is a legal interpretation and is flagged.,S40
+S775-F11,medium,BOC board intraday movement,ONE-DAY OBSERVATION,Board stamped 2026-11-10 07:32:39; the percentage spread is stable across 2026-11-09/10 readings but the level moves.,S01
+S775-F12,low,"Wire fee cap reached at about US$38,862 of transfer",DERIVED,Arithmetic on ¥260 / 1‰ / ask 6.6903; verified by the sibling dashboard's independent validator.,S03|S01
+S775-F13,low,FBAR threshold wording,NOTE,"FinCEN: aggregate value exceeds $10,000 - strictly greater, at any time during the calendar year.",S48
+S775-F14,low,Cohort sensitivity of §988 gain,DERIVED,2024 cohort (7.189): +$693.70/$10k; 2025 cohort (7.129): +$615.37/$10k; 2021 cohort (6.452): -$369.34/$10k loss ($0 tax).,S42|S40
+S775-F15,low,Arena single-branch constraint,IRREGULARITY S775-IR-001,Per-task branches session-<id>/<task> cannot be pushed under Arena's single-branch rule; all work is on arena/775c9619-china3.,
+S775-F16,low,Cross-branch claim visibility,IRREGULARITY S775-IR-002,COORDINATION.md claims on unmerged branches are invisible to sessions reading main; namespaced file prefixes avoid collisions but do not fix visibility.,
+S775-F17,low,Sibling open PRs #15 / #18 (2026-11-09) remain open,NEEDS REVIEW,"Owners stopped committing >24h ago; left open rather than merged, because merging would republish figures not re-verified row by row.",
+S775-F18,low,MOHRSS foreigner insurance text sourcing,NOTE,Art. 5 text verified via a provincial re-publish (Shaanxi HR bureau) of MOHRSS Order No.16; the MOHRSS original page was not fetched this session.,S38
