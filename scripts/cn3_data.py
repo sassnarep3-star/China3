@@ -451,7 +451,7 @@ METHODS = [
         name="Split the balance across relatives' USD 50,000 quotas",
         legality="Prohibited", formula="prohibited", transfers="", years="",
         pros="None.",
-        cons="Borrowing another person's convenience amount triggers the watch list for the year plus two more, and 逃汇 fines of up to 30% (30%–100% if serious).",
+        cons="Borrowing another person's convenience amount puts you on the watch list for this year and the next two, and the conduct can be penalised under the FX Regulations at up to 30% of the amount (30%–100% if serious).",
         requires="—", sources=["C3-S06", "C3-S07", "C3-S22"],
         verdict="Do not use.",
     ),
