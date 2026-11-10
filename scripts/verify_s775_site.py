@@ -255,6 +255,13 @@ r400 = next(r for r in costs if r["amount_usd"] == "400000")
 for label, row in (("$10,000", r10), ("$100,000", r100), ("$400,000", r400)):
     if row["total_usd"] not in dash:
         fail(f"dashboard does not quote the {label} total ({row['total_usd']})")
+# the hero card must carry the SAME $10,000 total as the ladder row (catches
+# hard-coded card figures that drift from the re-derived ladder)
+if f'>${r10["total_usd"]}<' not in dash:
+    fail(f"dashboard hero card does not carry the ladder $10,000 total ({r10['total_usd']})")
+if "0.2104" in dash or "0.2104" in html_by_page.get("s775-penalties-tax.html", "") \
+        or "0.2104" in html_by_page.get("s775-cost-10k-400k.html", ""):
+    fail("a stale 0.2104% spread figure survived into a rendered page")
 
 # ------------------------------------------- 7. freshness (rebuild + compare)
 for script, args in (("scripts/gen_s775_data.py", []),

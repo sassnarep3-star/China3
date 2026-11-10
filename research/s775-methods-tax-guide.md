@@ -8,7 +8,7 @@ cited by source id; unconfirmed values are blank and flagged in `data/s775_flags
 ### Bank wires (cleanest for most people)
 
 - **M01 Personal bank wire (SWIFT).** Unrestricted; up to US$50,000/day on ID documents
-  ([S13](https://www.safe.gov.cn/tianjin/2024/0229/2402.html)). Cost: FX spread 0.2104% +
+  ([S13](https://www.safe.gov.cn/tianjin/2024/0229/2402.html)). Cost: FX spread 0.2100% +
   1‰ (¥50–¥260) + ¥150 cable ([S03](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html)).
 - **M02 OUR wire.** Full-amount-received adds US$15 (BOC NY) / US$25 (other US banks) per wire —
   corporate tariff document, personal applicability conditional ([S04](https://www.boc.cn/pbservice/bi2/201412/t20141231_4404048.html)).

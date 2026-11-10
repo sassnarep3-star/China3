@@ -20,5 +20,5 @@ P18,US - FEIE,IRS FEIE page,Exclusion,"$132,900 (2026) / $130,000 (2025)",Wages 
 P19,US - Foreign tax credit,IRS FTC page / Form 1116,Credit,Credit for PRC-paid taxes subject to limitations,May offset US tax on the same income,S47
 P20,US - Streamlined procedures,IRS streamlined page,Penalty relief,SFOP: 0% penalty; SDOP: 5% penalty,Eligibility conditions; non-willful conduct required,S45
 P21,US - border currency,CBP money & monetary instruments page,Declaration,">$10,000 carried or sent - FinCEN Form 105; threshold applies collectively to a family/group",Applies to physical currency,S51
-P22,US - bank FX spread,Derived from BOC board 2026-11-10,Conversion cost,Half-spread 0.2104% of USD amount (bid 6.6622 / ask 6.6903),One-day observation; the board changes intraday,S01
+P22,US - bank FX spread,Derived from BOC board 2026-11-10,Conversion cost,Half-spread 0.2100% of USD amount (bid 6.6622 / ask 6.6903),One-day observation; the board changes intraday,S01
 P23,US/China - wire tariffs,BOC personal tariff + OUR schedule,Bank fee,1‰ (¥50-¥260) + ¥150 cable per wire; optional OUR US$15-$25,OUR surcharge shown as conditional (corporate tariff document),S03|S04
