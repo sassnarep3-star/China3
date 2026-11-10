@@ -8,7 +8,7 @@ a value cannot be confirmed from an official source it is left blank and flagged
 
 1. **There is no PRC tax on converting your own CNY to USD.** The "considerable taxes" premise is
    not established by any official source. The real, verified costs are: (a) the bank FX spread
-   **0.2104%** of the USD amount at the 2026-11-10 BOC board (bid 6.6622 / ask 6.6903), (b) the
+   **0.2100%** of the USD amount at the 2026-11-10 BOC board (bid 6.6622 / ask 6.6903), (b) the
    BOC wire tariff **1‰ (min ¥50, max ¥260) + ¥150 cable**, and (c) any US tax consequence.
    ([S01](https://www.boc.cn/sourcedb/whpj/), [S03](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html), [S19](https://www.safe.gov.cn/safe/2008/0806/5321.html), [P11](data/s775_penalties.csv))
 2. **The largest single exposure is usually the US side, not China.** Under **IRC §988**, currency
@@ -38,9 +38,9 @@ a value cannot be confirmed from an official source it is left blank and flagged
 
 | Amount | FX spread | Wire fee | Total (excl. OUR) | Total (incl. OUR) | Net USD |
 |---|---|---|---|---|---|
-| $10,000 | $21.04 | $29.89 | **$50.93** (0.51%) | $75.93 | $9,949.07 |
-| $100,000 | $210.45 | $61.29 | **$271.74** (0.27%) | $296.74 | $99,728.26 |
-| $400,000 | $841.79 | $61.29 | **$903.08** (0.23%) | $928.08 | $399,096.92 |
+| $10,000 | $21.00 | $32.42 | **$53.42** (0.53%) | $78.42 | $9,946.58 |
+| $100,000 | $210.01 | $61.28 | **$271.29** (0.27%) | $296.29 | $99,728.71 |
+| $400,000 | $840.02 | $61.28 | **$901.30** (0.23%) | $926.30 | $399,098.70 |
 
 Arithmetic: spread = amount × (ask − mid)/ask with mid = (6.6903+6.6622)/2; wire fee =
 (clamp(1‰ × CNY, ¥50, ¥260) + ¥150)/ask. OUR = US$25 per wire is **conditional** (corporate tariff

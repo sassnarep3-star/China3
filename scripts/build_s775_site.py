@@ -178,9 +178,9 @@ def build_dashboard(sources):
 <p class="lead">Least tax/conversion penalty, verified against official primary sources on 2026-11-10.
 Start with the six facts below, then use the tabs.</p>
 <div class="cards">
-<div class="card"><div class="n">0.2104%</div><div class="l">BOC FX spread (bid 6.6622 / ask 6.6903, 2026-11-10 07:32)</div></div>
+<div class="card"><div class="n">0.2100%</div><div class="l">BOC FX spread (bid 6.6622 / ask 6.6903, 2026-11-10 07:32)</div></div>
 <div class="card"><div class="n">¥50–260 + ¥150</div><div class="l">Personal wire fee (1‰ + cable)</div></div>
-<div class="card"><div class="n">$50.93</div><div class="l">Total cost to remit $10,000 (excl. conditional OUR)</div></div>
+<div class="card"><div class="n">$53.42</div><div class="l">Total cost to remit $10,000 (excl. conditional OUR)</div></div>
 <div class="card"><div class="n">$16,536</div><div class="l">FBAR non-willful penalty (31 CFR 1010.821, current 2026-11-06)</div></div>
 <div class="card"><div class="n">24</div><div class="l">Methods catalogued (11+ lawful conditional/approved, 6 prohibited)</div></div>
 <div class="card"><div class="n">{len(flags)}</div><div class="l">Flagged / unverified items (never guessed)</div></div>
@@ -214,23 +214,27 @@ and were never guessed. See <a href="s775-flagged-review.html">Flagged for Revie
 
 def build_cost_page(sources):
     costs = read_csv("s775_cost_10k_400k.csv")
-    rows = []
+    out = ['<div class="tw"><table class="tbl tbl-num"><thead><tr>']
+    for h in ["Amount", "CNY needed", "Spread", "Wire CNY", "Wire USD", "Total",
+              "Total+OUR", "%", "Net", "Net+OUR", "Sources"]:
+        out.append(f"<th>{esc(h)}</th>")
+    out.append("</tr></thead><tbody>")
     for r in costs:
         amt = f'${int(r["amount_usd"]):,}'
-        cells = [f"<td data-l='Amount'>{amt}</td>",
-                 f"<td data-l='CNY needed' class='num'>{r['cny_needed']}</td>",
-                 f"<td data-l='Spread' class='num'>{r['spread_usd']}</td>",
-                 f"<td data-l='Wire CNY' class='num'>{r['wire_cny']}</td>",
-                 f"<td data-l='Wire USD' class='num'>{r['wire_usd']}</td>",
-                 f"<td data-l='Total' class='num'><b>{r['total_usd']}</b></td>",
-                 f"<td data-l='Total+OUR' class='num'>{r['total_with_our_usd']}</td>",
-                 f"<td data-l='%' class='num'>{r['total_pct']}%</td>",
-                 f"<td data-l='Net' class='num'>{r['net_usd']}</td>",
-                 f"<td data-l='Net+OUR' class='num'>{r['net_with_our_usd']}</td>",
-                 f"<td data-l='Sources'>{src_link(r['source_ids'], sources)}</td>"]
-        rows.append(cells)
-    headers = ["Amount", "CNY needed", "Spread", "Wire CNY", "Wire USD", "Total",
-               "Total+OUR", "%", "Net", "Net+OUR", "Sources"]
+        out.append("<tr>")
+        out.append(f"<td data-l='Amount'>{amt}</td>")
+        out.append(f"<td data-l='CNY needed' class='num'>{r['cny_needed']}</td>")
+        out.append(f"<td data-l='Spread' class='num'>{r['spread_usd']}</td>")
+        out.append(f"<td data-l='Wire CNY' class='num'>{r['wire_cny']}</td>")
+        out.append(f"<td data-l='Wire USD' class='num'>{r['wire_usd']}</td>")
+        out.append(f"<td data-l='Total' class='num'><b>{r['total_usd']}</b></td>")
+        out.append(f"<td data-l='Total+OUR' class='num'>{r['total_with_our_usd']}</td>")
+        out.append(f"<td data-l='%' class='num'>{r['total_pct']}%</td>")
+        out.append(f"<td data-l='Net' class='num'>{r['net_usd']}</td>")
+        out.append(f"<td data-l='Net+OUR' class='num'>{r['net_with_our_usd']}</td>")
+        out.append(f"<td data-l='Sources'>{src_link(r['source_ids'], sources)}</td>")
+        out.append("</tr>")
+    out.append("</tbody></table></div>")
     body = """
 <h1>Cost ladder — $10,000 to $400,000, $10,000 steps</h1>
 <p class="lead">Reference route: personal bank wire (M01) on the 2026-11-10 BOC board.
@@ -238,7 +242,7 @@ Spread = amount × (ask − mid)/ask. Wire fee = (clamp(1‰ × CNY, ¥50, ¥260
 OUR US$25/wire is conditional and shown separately.</p>
 <div class="callout warn">Intermediary (correspondent) and US receiving-bank fees are
 <span class="blank">blank — no official schedule exists</span> (flag S775-F06). They are not zero; they are unverified.</div>
-""" + table(headers, rows, "tbl-num") + """
+""" + "\n".join(out) + """
 <p class="lead">40 increments × verified components. The percentage falls as the amount rises because the
 ¥260 wire-fee cap is reached at about $38,862 (derived; see flag S775-F12).</p>
 """

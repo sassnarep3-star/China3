@@ -445,7 +445,7 @@ PENALTIES = [
      "Declaration", ">$10,000 carried or sent - FinCEN Form 105; threshold applies collectively to a family/group",
      "Applies to physical currency", "S51"),
     ("P22", "US - bank FX spread", "Derived from BOC board 2026-11-10",
-     "Conversion cost", "Half-spread 0.2104% of USD amount (bid 6.6622 / ask 6.6903)",
+     "Conversion cost", "Half-spread 0.2100% of USD amount (bid 6.6622 / ask 6.6903)",
      "One-day observation; the board changes intraday", "S01"),
     ("P23", "US/China - wire tariffs", "BOC personal tariff + OUR schedule",
      "Bank fee", "1‰ (¥50-¥260) + ¥150 cable per wire; optional OUR US$15-$25",
