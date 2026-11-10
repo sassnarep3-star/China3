@@ -513,3 +513,31 @@ Before claiming, remote branches were inspected via GitHub API:
 - Added R30–R32 (PBOC [2004] No. 16 Arts. 2, 6, 10 — fetched http://m.safe.gov.cn/safe/2004/1116/5461.html) and X-17 (open PR #18 prices the emigrant route as one wire; Art. 6 stages payouts above CNY 200,000 over two years).
 - **Shared-file note:** every session holding an `index.html` integration claim (7a636dce T15, 8c26329a C2, 2eb1c590 CM-3) has marked it **done**, and no other session has linked `cross-session-review.html`. This session therefore made one **additive** edit to `index.html` (one nav link + one footer link, nothing removed or reordered), following the same additive convention those sessions used. Open PRs #15 and #18 also touch `index.html`; their owners should keep this link when they rebase.
 
+
+<!-- session-fbbd3b22-dashboard-v1 -->
+
+## Session `arena/fbbd3b22-china3` — consolidated dashboard, 2026 re-verification, final integration
+
+Branch: `arena/fbbd3b22-china3` (fixed by Arena; per-task branches `session-<id>/<task>` cannot be
+pushed under that rule — same constraint already logged as IR-001). Base: `75b67d3` (PR #21 merged).
+
+### Claim (written before any push on this branch)
+
+At claim time `git ls-remote origin` showed **no other branch with a commit newer than `main`**, and
+every task on the boards above was `done` or `needs review`. No overlap therefore existed to negotiate.
+Scopes claimed:
+
+| ID | Task | File scope (new unless stated) | Status |
+|----|------|-------------------------------|--------|
+| D1 | Clean dashboard landing page organised by category, mobile-first, most important first | `index.html` (rewritten), `assets/dashboard.css`, `scripts/build_dashboard.py` | in progress |
+| D2 | Independent 2026 verification register: 16 figures, verbatim quotes, fetch timestamps | `data/verify_2026.csv`, `verify-2026.html` | in progress |
+| D3 | Re-price the ladder at the 2026-11-10 board with its own engine | `data/live_rate_20261110.csv`, `data/ladder_20261110.csv` | in progress |
+| D4 | Verifier + CI for the new pages | `scripts/verify_dashboard.py`, `.github/workflows/dashboard-verify.yml` | in progress |
+| D5 | Preserve the previous landing page instead of deleting it | `guide.html` | in progress |
+| D6 | Correction banner on the affected generated page (additive only) | `cost-tables.html`, `scripts/build_cost_tables.py` | in progress |
+| D7 | PR → merge → Pages deploy → record here | GitHub PR / Pages | pending |
+
+Shared files touched, additively only: `README.md` (one pointer), `EXECUTIVE_SUMMARY.md` (dated block
+above the existing text), `COORDINATION.md` (this block). No other session's page or data file was
+deleted, renamed or overwritten; the previously published landing page is preserved verbatim as
+`guide.html` with an archive banner.

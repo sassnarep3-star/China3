@@ -1,5 +1,29 @@
 # Executive summary — China money (CNY → USD)
 
+> **Current figures: 10 November 2026.** This block was added by the integration session
+> `arena/fbbd3b22-china3`; everything below it is the earlier summary, preserved unchanged.
+>
+> **The answer in one paragraph.** Converting your own after-tax CNY principal into USD triggers
+> no Chinese conversion tax in any instrument checked here. It costs bank spread plus the 1‰
+> personal wire fee (capped at CNY 260) and a CNY 150 cable charge: **$53.42 on $10,000 and
+> $901.30 on $400,000**, which is 0.534% falling to 0.225%, computed from the 2026-11-10 Bank of
+> China board. The number that should drive the plan is not the exchange rate but the U.S.
+> reporting penalty: a willful FBAR violation is capped at the greater of $165,353 or **50% of
+> the account balance** (31 U.S.C. §5321(a)(5)(C)), i.e. $200,000 on a $400,000 balance. Fix
+> reporting first, choose the route by the documents you can produce, and never split quotas.
+>
+> **Two corrections to earlier passes.** (1) The emigrant property transfer is **not** staged —
+> SAFE 汇发〔2014〕2号 §6 cancels the PBC [2004] No.16 art. 6 instalment requirement and the
+> over-RMB-500,000 head-office filing, so `cost-tables.html` route M03 ($1,025.39 at $400,000)
+> overstates it by three wire fees. (2) Chinese FX fines under State Council Order 532 arts. 39
+> and 45 are **30% or less** of the amount in an ordinary case, rising to 30%–100% only where the
+> case is serious — a ceiling, not the floor an earlier pass described.
+>
+> Machine-readable register: `data/verify_2026.csv` (16 records: official URL, verbatim quote,
+> fetch timestamp). Checks: `python3 scripts/verify_dashboard.py`. Live pages:
+> [`index.html`](index.html) (dashboard) and [`verify-2026.html`](verify-2026.html).
+
+
 Prepared by integration session `session-c703e38c` · 2026-11-07 (UTC) · public, official-source research only.
 Live version: [`deep-executive-summary.html`](deep-executive-summary.html) on the GitHub Pages site.
 
