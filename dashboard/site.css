@@ -79,6 +79,9 @@ table.num td,table.num th{white-space:nowrap;font-variant-numeric:tabular-nums}
 table.num td:not(:first-child):not(.src),table.num th:not(:first-child):not(.src){text-align:right}
 table.num th:first-child,table.num td:first-child{position:sticky;left:0;background:var(--surface);font-weight:600;border-right:1px solid var(--line)}
 table.num td.key{font-weight:700}
+/* route names are long: let the sticky first column wrap instead of covering a phone screen */
+table.num.routes th:first-child,table.num.routes td:first-child{white-space:normal;min-width:9.5rem;max-width:13rem;font-weight:500}
+@media (min-width:720px){table.num.routes th:first-child,table.num.routes td:first-child{max-width:22rem}}
 tr:target td{background:var(--accent-soft)}
 
 /* text tables turn into stacked cards on phones */
