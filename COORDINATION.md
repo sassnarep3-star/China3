@@ -1136,3 +1136,22 @@ other preserved passes instead of above the fold, so the page opens with the can
   spread, the ¥216.85–¥410 bank fee and the §988 column. Not just HTTP 200.
 - **Presentation follow-up in this PR:** money cells now carry thousands separators (`$1,328.33`, `$2,593.45`,
   `$1,037.38`) instead of raw CSV strings. No figure changed.
+---
+
+## Session `arena/ea347561-china3` (`e347`) — final integration: one clean dashboard, repo-wide consistency review, independent re-verification
+
+Branch: `arena/ea347561-china3` (fixed by Arena; the per-task `session-<id>/<task>` branch naming cannot be used — same irregularity earlier sessions logged).
+Base: `main` @ `cbb5a77` (PR #33 merged). Claimed 2026-11-10T09:50Z.
+
+Concurrent sessions seen at claim time (all remote branches fetched): `arena/058d6cd7-china3` (scope `research/a058-independent-audit.md`, `a058-flagged-review.html`) and `arena/50249649-china3` (scope `research/a502-audit.md`, `a502-review.html`, `scripts/a502_audit.py`). Neither claims the landing page, a consolidated data set or the corrections they request from "the final integrator". This session takes that role and does not touch their files.
+
+| ID | Task | Exclusive file scope | Status | Owner | Notes |
+|---|---|---|---|---|---|
+| E347-T1 | Repo review: inventory every page/data layer, cross-layer consistency check of the headline figures, list irregularities | `research/e347-repo-review.md`, `data/e347_irregularities.csv` | in progress | `arena/ea347561-china3` | Read-only on every other session's file |
+| E347-T2 | Independent re-verification of every figure the new dashboard prints, against the official page, fetched today | `data/e347_sources.csv`, `data/e347_facts.csv` | in progress | `arena/ea347561-china3` | Value left blank + flagged when the official page could not be read |
+| E347-T3 | One canonical data set: methods (pros/cons/steps), cost model USD 10k–400k × every method, tax/penalty breakdown | `data/e347_*.csv`, `scripts/e347_*.py` | in progress | `arena/ea347561-china3` | |
+| E347-T4 | One clean, mobile-first dashboard in its own directory | `dashboard/**`, `.github/workflows/e347-verify.yml` | in progress | `arena/ea347561-china3` | New directory, no collision with any existing page |
+| E347-T5 | **Final integration (shared outputs)** — done last, after re-pulling `main`: root `index.html` becomes the clean landing page; the previous generated landing page is preserved (not deleted) as `legacy-index.html` by retargeting its generator; every older page stays reachable from an Archive page; links added to the A058 / A502 review pages; corrections requested by A058 (blanket "$50,000 / ID only" wording) applied in the new canonical pages and flagged against the legacy pages | `index.html`, `legacy-index.html`, output-path lines of `scripts/build_dashboard.py` + `scripts/verify_dashboard.py`, `.github/workflows/pages.yml`, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md` | in progress | `arena/ea347561-china3` | Owners of `build_dashboard.py` (`arena/fbbd3b22-china3`) finished > 8 h ago; takeover of the output path only, logged here |
+| E347-T6 | PR → `main`, merge, confirm Pages deploy, record result | GitHub PR / Pages, `COORDINATION.md` | in progress | `arena/ea347561-china3` | Will not merge a broken site |
+
+- 2026-11-10T09:50Z: claim written and pushed before any task work.
