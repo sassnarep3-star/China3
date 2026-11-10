@@ -939,3 +939,63 @@ Before claiming, all remote branches were inspected (`git fetch origin '+refs/he
 - 2026-11-10: Targeted review completed; status **needs review** for existing S775 high-impact claims. See `a502-review.html` and `research/a502-audit.md`. Findings cover domestic/overseas scope of the daily-remittance rule, double-counted/mixed conversion benchmark, categorical Chinese tax assertion, §988 conditions, and incomplete individual tax/reporting facts. This does not certify every row of the repository. The fixed Arena branch requirement supersedes the user-requested per-task branch convention.
 - Official sources checked: [SAFE overseas employment income, 2026](https://www.safe.gov.cn/tianjin/2026/0713/3088.html), [SAFE nontaxable income, 2025](https://www.safe.gov.cn/tianjin/2025/0715/2834.html), [SAFE domestic remittance, 2024](https://www.safe.gov.cn/tianjin/2024/0229/2402.html), [BOC personal online tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html), [26 USC §988](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm), [FinCEN FBAR](https://bsaefiling.fincen.gov/resources/FinCENFBARHelp.pdf), [IRS foreign tax credit](https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit), [IRS FEIE](https://www.irs.gov/individuals/international-taxpayers/foreign-earned-income-exclusion). Automated checks passed: `a502_audit.py`, `validate_data.py`, `check_links.py`, `verify_deep.py`, `verify_dashboard.py`, `test_costs.py`, `verify_cost_tables.py`, `build_cross_session_review.py --check`, `verify_s436_site.py`, `verify_s775_site.py`, `verify_final_integration.py`; checks are structural/arithmetic, not full source verification; external HTTP checks skipped in link checker.
 - **Integration request to S775/final integration:** Correct source data and generators rather than just generated output; review applicability and currency-flow assumptions; add official source links to every summary cost row; link `a502-review.html` from the main navigation and existing Flagged for Review. Shared files were not edited under the non-overlapping-scope rule. Comment posted at https://github.com/sassnarep3-star/China3/pull/34#issuecomment-6764149009. The issues are documented for review, not invented personal costs.
+
+---
+
+<!-- session-5f1925df-m5f19-v1 -->
+
+## Session `session-5f1925df` (`arena/5f1925df-china3`) — 2026-11-10 independent primary-source re-verification, cost-ladder reconciliation, and `m5f19` verified edition
+
+Branch: `arena/5f1925df-china3` (fixed by Arena's one-branch-per-session binding; the `session-<id>/<task>` per-task branch
+convention cannot be used — same constraint already logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001).
+Base on `main`: `9bc2cde` (PR #36 merged 2026-11-10T09:47:47Z).
+
+### Live-claim scan performed before claiming (2026-11-10T09:48Z)
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune` + `gh pr list` showed **six** sibling branches with
+commits inside the previous 5 minutes, all respected in full and none of whose files this session edits:
+
+| Sibling | Claimed scope (verbatim from their board entry) | This session's behaviour |
+|---|---|---|
+| `arena/05552f6e-china3` (`session-05552f6e`) | `s055-*`, `data/s055_*`, `research/s055-*`, `assets/s055.*`, `scripts/*_s055*`, `.github/workflows/s055-verify.yml`; **plus S055-T7 shared integration of `index.html`, `verify-2026.html`, `README.md`, `EXECUTIVE_SUMMARY.md`** | Not touched. |
+| `arena/2c8d441e-china3` (`session-2c8d441e`) | `c3x-*`, `data/c3x_*`, `research/c3x-*`, `assets/c3x.css`, `scripts/*c3x*`; **plus C3X-5 shared integration of `scripts/build_dashboard.py`, `index.html`, `README.md`** | Not touched. |
+| `arena/ea347561-china3` (`e347`) | `dashboard/**`, `data/e347_*`, `research/e347-*`; **plus E347-T5 shared integration of `index.html`, `legacy-index.html`, `scripts/build_dashboard.py`, `scripts/verify_dashboard.py`, `.github/workflows/pages.yml`, `README.md`, `EXECUTIVE_SUMMARY.md`** | Not touched. `e347` has explicitly claimed the *final integration* role. |
+| `arena/4a528a74-china3` | `completion-audit.html`, `research/completion-audit.md`, `scripts/verify_completion.py`; `README.md` additive | Not touched. |
+| `arena/058d6cd7-china3` (`a058`) | `a058-flagged-review.html`, `research/a058-independent-audit.md` | Not touched. |
+| `arena/50249649-china3` (`a502`) | `a502-review.html`, `research/a502-audit.md`, `scripts/a502_audit.py` — **already merged as PR #36** | Not touched; its findings are read and acted on (see M5F19-T1). |
+| open PR #34 (`arena/775c9619-china3`) | `s775-*` corrections | Not touched. |
+
+**Shared-output decision (deliberate, logged).** Three live siblings (`05552f6e`, `2c8d441e`, `ea347561`) have each
+independently claimed the *same* shared files — `index.html`, `scripts/build_dashboard.py`, `README.md`. Under the board
+rule *"Shared outputs … are changed only by a final integration session once all other tasks are done"* and *"never start a
+task another session has claimed"*, this session **does not claim or edit `index.html`, `scripts/build_dashboard.py`,
+`README.md`, `EXECUTIVE_SUMMARY.md`, `verify-2026.html` or `.github/workflows/pages.yml`.** Instead it files a formal
+**link request** (M5F19-REQ-01 below) addressed to whichever of those three lands the integration, and keeps 100% of its
+deliverables inside the unclaimed `m5f19` namespace. This is the only way to add work without producing a four-way
+conflict on the landing page.
+
+### Tasks claimed by `session-5f1925df`
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| M5F19-T0 | Claim scope on the board and push before any content work | `COORDINATION.md` (append only) | done | `session-5f1925df` | n/a | This block; pushed immediately |
+| M5F19-T1 | Line-by-line repo review of the published layers, incl. reading the merged `a502` audit and the pending `a058` findings; log irregularities + non-invasive correction requests to sibling-owned files | `research/m5f19-repo-review.md`, `data/m5f19_flags.csv`, `m5f19-flagged.html` | unclaimed | `session-5f1925df` | pending live 2026-11-10 primary fetches | Never edits a sibling-owned file; requests are logged here instead |
+| M5F19-T2 | Independent primary-source register: fetch each load-bearing official document **today**, store URL + verbatim quote + fetch timestamp; anything unreadable is left blank and flagged | `data/m5f19_facts.csv`, `data/m5f19_sources.csv`, `m5f19-sources.html` | unclaimed | `session-5f1925df` | pending | No inherited value is copied; every row is either a today-fetch or blank+flagged |
+| M5F19-T3 | Re-derive the USD 10,000 → 400,000 cost ladder ($10k increments) from the fetched inputs and **reconcile** the four conflicting published headline figures ($53.42 / $53.47 / $901.30 / $1,332.05) under one stated arithmetic convention | `data/m5f19_ladder.csv`, `data/m5f19_reconciliation.csv`, `scripts/m5f19_engine.py`, `m5f19-costs.html`, `m5f19-reconciliation.html` | unclaimed | `session-5f1925df` | pending | Own arithmetic only; convention stated on the page |
+| M5F19-T4 | Method catalogue (lawful + prohibited) with pros/cons/eligibility/caps, and numbered step-by-step execution playbooks | `data/m5f19_methods.csv`, `data/m5f19_steps.csv`, `m5f19-methods.html`, `m5f19-steps.html` | unclaimed | `session-5f1925df` | pending | Every row links an official source or is blank+`UNVERIFIED` |
+| M5F19-T5 | Tax & penalty decomposition (PRC side and U.S. side) + executive summary, most-important-first | `data/m5f19_tax.csv`, `research/m5f19-executive-summary.md`, `m5f19-tax.html`, `m5f19-summary.html` | unclaimed | `session-5f1925df` | pending | No inferred personal facts |
+| M5F19-T6 | Mobile-first dashboard shell + independent verifier + CI (re-derives the ladder, enforces official-domain links, blank⇒flag, HTML/data parity, zero broken links) | `m5f19-dashboard.html`, `assets/m5f19.css`, `assets/m5f19.js`, `scripts/build_m5f19_site.py`, `scripts/verify_m5f19_site.py`, `.github/workflows/m5f19-verify.yml` | unclaimed | `session-5f1925df` | pending | Runs alongside the 10 existing validators, all of which pass at base `9bc2cde` |
+| M5F19-T7 | PR (`arena/5f1925df-china3` → `main`), all checks green, merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / `COORDINATION.md` (append only) | unclaimed | `session-5f1925df` | pending | Do not merge a broken site |
+
+### M5F19-REQ-01 — link request to the final integrator (`05552f6e` / `2c8d441e` / `ea347561`, whoever lands `index.html`)
+
+Please add **one** nav entry to the landing page pointing at `m5f19-dashboard.html`, labelled
+*"M5F19 — independent re-verification & cost reconciliation (10 Nov 2026)"*. No other change to shared files is
+requested. This session will not edit `index.html` itself. If none of the three integrators lands, the pages remain
+reachable by direct URL and this request stays open on the board.
+
+### M5F19 Log
+- `2026-11-10T09:48Z`: Fetched all remote branches and the open/merged PR list; merged `origin/main` (`9bc2cde`, PR #36) into
+  this branch; confirmed all ten inherited validators PASS at that base (`validate_data`, `check_links`, `verify_deep`,
+  `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`,
+  `verify_final_integration`). Wrote this claim and pushed it before touching any content file.
