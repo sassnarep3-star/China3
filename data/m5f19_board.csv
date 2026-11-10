@@ -1,0 +1,14 @@
+field,value,unit,source_url,fetched
+board_date,2026-11-10,date,https://www.boc.cn/sourcedb/whpj/,2026-11-10
+board_time,17:39:58,time,https://www.boc.cn/sourcedb/whpj/,2026-11-10
+usd_bid_per_100,665.71,CNY per 100 USD,https://www.boc.cn/sourcedb/whpj/,2026-11-10
+usd_ask_per_100,668.51,CNY per 100 USD,https://www.boc.cn/sourcedb/whpj/,2026-11-10
+boc_conversion_per_100,671.67,CNY per 100 USD,https://www.boc.cn/sourcedb/whpj/,2026-11-10
+usd_bid,6.6571,CNY per USD,https://www.boc.cn/sourcedb/whpj/,2026-11-10
+usd_ask,6.6851,CNY per USD,https://www.boc.cn/sourcedb/whpj/,2026-11-10
+midpoint,6.6711,CNY per USD,derived (ask+bid)/2,2026-11-10
+wire_fee_rate,0.001,fraction of remittance amount,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,2026-11-10
+wire_fee_min,50,CNY per transaction,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,2026-11-10
+wire_fee_max,260,CNY per transaction,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,2026-11-10
+telecom_non_hmt,150,CNY per transaction,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,2026-11-10
+telecom_hmt,80,CNY per transaction,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,2026-11-10
