@@ -12,8 +12,11 @@ permissions:
   pages: write
   id-token: write
 
+# e347: pull-request builds used to share one group with the deploy on main, so a push to any
+# open PR cancelled a deploy in progress (logged several times in COORDINATION.md). Each PR now
+# has its own group and deploys from main only ever replace an older deploy from main.
 concurrency:
-  group: pages
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'deploy' }}
   cancel-in-progress: true
 
 jobs:
@@ -51,6 +54,12 @@ jobs:
               raise SystemExit('Missing local links:\n'+'\n'.join(missing))
           print(f'Checked local navigation in {len(pages)} pages')
           PY
+      - name: Build and check the dashboard (landing page, dashboard/, archive list)
+        run: |
+          python3 scripts/e347_build.py
+          python3 scripts/e347_verify.py
+          test -s dashboard/site.css
+          test -s legacy-index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact

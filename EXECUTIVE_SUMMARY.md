@@ -1,162 +1,73 @@
-# Executive summary — China money (CNY → USD)
+# Executive summary
 
-> **Canonical edition, 2026-11-10 (session `arena/2c8d441e-china3`).** An independent pass re-fetched 16
-> official documents on 10 November 2026 and re-derived the whole cost ladder from the 17:39:58 Beijing
-> board (bid 6.6571 / ask 6.6851). Its answer, in one paragraph: there is **no PRC tax on converting CNY to
-> USD** in any instrument reviewed; the charges that feel like one are the bank spread (0.2094% half-spread),
-> the 1‰ wire tariff capped at ¥260 plus ¥150 cable (a total of **$53.38 on $10,000** and **$899.01 on
-> $400,000**), the PRC income tax on whatever created the money (20% on property gains, interest, dividends),
-> and — the only genuine conversion tax — the **U.S. §988 gain** on disposing of the CNY: **7.0093%** of the
-> dollars received at a 2024-average cost basis, equal to **$10,373.79** of federal tax at 37% on $400,000 and
-> unavoidable by changing channel. For a U.S. passport holder the decisive rule is SAFE's: the annual
-> convenience amount belongs to a **外国人永久居留身份证** holder, and everyone else buys FX from lawful
-> current-account RMB income with ID **plus source-of-funds materials including tax documents**
-> ([2026-07-13 Q&A](https://www.safe.gov.cn/tianjin/2026/0713/3088.html), [2024-06-21 Q&A](https://www.safe.gov.cn/tianjin/2024/0621/2529.html)).
-> Start at [`c3x-summary.html`](c3x-summary.html); method and formulas in
-> [`research/c3x-verification.md`](research/c3x-verification.md).
+Question: a U.S. citizen has money in a Chinese bank account and is told that turning it into dollars
+means "a considerable amount of taxes". What is the best lawful way out, and what does it really cost?
 
-**Final integration review:** 2026-11-10 · **Live guide:** `index.html` · **Full evidence schedule:** `schedule-dashboard.html`
+All figures were read from official pages on 2026-11-10. Bank figures use the Bank of China board
+published 2026/11/10 17:39:58 (Beijing). Live site: https://sassnarep3-star.github.io/China3/
 
-Parallel integration work is preserved at `verify-2026.html` (17 verbatim source records), `a15-review.html` (independent safety review), `guide.html` (archived narrative) and `data/ladder_20261110.csv` (independent 40-row ladder).
+## The answer in five points
 
-**S775 audit addendum (2026-11-10):** an independent line-by-line pass catalogued **24 routes** (including the prohibited ones), registered **51 official sources** with fetch timestamps, re-derived the full **$10,000–$400,000 cost ladder** (40 steps) from the 2026-11-10 BOC board, and documented numbered step-by-step playbooks for every route. Its key verified results agree with the benchmark above: FX half-spread 0.2100% = (ask−mid)/ask, personal wire 1‰ (¥50–¥260) + ¥150 cable, **$53.42 total at $10,000** (excl. conditional OUR) rising to **$901.30 at $400,000**. Pages: `s775-dashboard.html`, `s775-cost-10k-400k.html`, `s775-methods.html`, `s775-steps.html`, `s775-penalties-tax.html`, `s775-flagged-review.html` (18 flagged items), `s775-sources.html` (52 sources after final integration added SAFE art. 59 as S52). Gate: `python3 scripts/verify_s775_site.py`, CI `.github/workflows/s775-verify.yml`.
+1. **Converting and wiring is not taxed.** No official source read here puts a tax on the conversion or the
+   wire. China's Foreign Exchange Regulation says current payments and transfers are not restricted
+   ([S17](https://www.safe.gov.cn/safe/2008/0806/5321.html)). What the bank must see is proof of where the money came from and that tax on it was handled
+   ([S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html), [S11](https://www.safe.gov.cn/tianjin/2021/1102/1777.html)).
+2. **The only large tax found is on the underlying income, not on the transfer.** If Chinese income tax
+   was never paid on the money, it is owed whether or not the money moves: 3% to 45% on wages, 20% on dividends, rent and
+   property gains ([S25](https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html)). Bank-deposit interest is exempt ([S26](https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203286/content.html)). Which of these applies to you
+   is not known (flags U01, U02).
+3. **The bank's own cost is small.** $53.38 on $10,000 and $899.01 on $400,000 in
+   one wire ([S01](https://www.boc.cn/sourcedb/whpj/enindex_1619.html), [S02](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html)). Fees taken by intermediary and receiving banks are not published and
+   are left blank (flag U04).
+4. **A U.S. passport holder does not get the USD 50,000-a-year allowance** that Chinese citizens use on ID
+   alone; only holders of the Chinese Foreign Permanent Resident ID do ([S05](https://www.safe.gov.cn/tianjin/2024/0621/2529.html), [S06](https://www.safe.gov.cn/ningxia/2022/0929/1997.html)). The lawful
+   route depends on what the money is: documented income, a home sale, an inheritance, an emigrant's
+   pre-departure property, money you brought in and can change back, or foreign currency already in the
+   account.
+5. **The U.S. side can be the bigger number.** Selling RMB for dollars is a currency sale ([S27](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm)). RMB
+   acquired at the 2024 IRS average rate shows a gain of about 7% today ([S28](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates)). FBAR, Form 8938 and
+   Form 3520 each carry their own penalty if missed ([S31](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821), [S29](https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements), [S32](https://www.irs.gov/businesses/gifts-from-foreign-person)).
 
-## Bottom line
+## Cost at a glance
 
-For a U.S. citizen, the lowest-penalty lawful route is usually the **ordinary licensed-bank route that matches the documented origin of the money**, not a workaround. If the bank classifies the holder as a foreign individual (`境外个人`) and the balance is lawful, documented, already-taxed current-account RMB income, SAFE’s 2026 guidance says the bank can handle the FX purchase using valid ID and transaction/source evidence, including tax evidence. Eligibility cannot be established from citizenship alone. [SAFE, 2026-07-13](https://www.safe.gov.cn/tianjin/2026/0713/3088.html)
+Known bank cost only. The last two columns are the U.S. currency gain (not the tax) if the RMB had been
+acquired at that year's IRS average rate.
 
-No official source reviewed establishes a separate PRC “conversion tax” on already-taxed personal principal. That is not the same as saying every conversion is tax-free: unpaid PRC source-income tax, U.S. worldwide-income obligations, and foreign-currency gain are separate questions. [SAFE source-income Q&A](https://www.safe.gov.cn/tianjin/2024/0621/2529.html) · [IRS Publication 54](https://www.irs.gov/publications/p54) · [26 U.S.C. §988](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm)
+| Amount | Already USD: wire only | Convert and wire once | USD 50,000 a year (PR-ID holders) | Gain if acquired 2024 | Gain if acquired 2025 |
+|---|---|---|---|---|---|
+| $10,000 | $32.44 | $53.38 | $53.38 (1 yr) | $701 | $623 |
+| $50,000 | $61.33 | $166.04 | $166.04 (1 yr) | $3,505 | $3,113 |
+| $100,000 | $61.33 | $270.75 | $332.08 (2 yr) | $7,009 | $6,227 |
+| $200,000 | $61.33 | $480.17 | $664.16 (4 yr) | $14,019 | $12,453 |
+| $300,000 | $61.33 | $689.59 | $996.25 (6 yr) | $21,028 | $18,680 |
+| $400,000 | $61.33 | $899.01 | $1,328.33 (8 yr) | $28,037 | $24,907 |
 
-## Current published-cost benchmark
+Every $10,000 step for every route: https://sassnarep3-star.github.io/China3/dashboard/costs.html (data: `data/e347_costs.csv`).
 
-The integrated schedule uses Bank of China’s official board timestamped **2026-11-10 07:32:39**: USD spot buying **6.6622**, selling **6.6903**, board midpoint **6.67625** CNY/USD. [BOC board](https://www.boc.cn/sourcedb/whpj/enindex_1619.html)
+## Which route
 
-For M01 (documented foreign-individual current-account income), the reproducible published-component estimate is:
+| If the money is | Route | What the bank or SAFE needs | Source |
+|---|---|---|---|
+| Foreign currency already in the account | L03 wire out | Passport | [S08](http://m.safe.gov.cn/safe/file/file/20200831/f0127756271c43ef9b3908d5d157bd91.pdf), [S18](http://m.safe.gov.cn/safe/2006/1225/5319.html) |
+| RMB you converted from your own foreign currency in the last 24 months | L02 change back | Passport and the original exchange slip | [S09](https://www.safe.gov.cn/tianjin/2026/0917/3134.html) |
+| Income earned in China | L01 buy USD and wire | Passport, source documents, tax evidence | [S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html), [S11](https://www.safe.gov.cn/tianjin/2021/1102/1777.html) |
+| Proceeds of selling your home in China | L04 | Registered contract, registration proof, tax certificate; capped at price minus taxes | [S15](https://www.safe.gov.cn/anhui/file/file/20250925/43f09589bb2046c2a01a58d3a80c2b5f.pdf) |
+| An inheritance | L05 | SAFE approval where the decedent was registered; inheritance proof; tax certificate | [S12](http://m.safe.gov.cn/safe/2004/1116/5461.html), [S13](https://www.safe.gov.cn/tianjin/2024/0903/2594.html) |
+| Property from before you emigrated from China | L06 | SAFE approval at the former hukou location; hukou cancellation; tax certificates | [S12](http://m.safe.gov.cn/safe/2004/1116/5461.html), [S13](https://www.safe.gov.cn/tianjin/2024/0903/2594.html) |
+| A gift, or money with no documents | none verified | See flag U07 | [S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
 
-| Target USD | FX half-spread | Personal wire + cable | Known cost | Net after known cost |
-|---:|---:|---:|---:|---:|
-| $10,000 | $21.00 | $32.42 | **$53.42** | $9,946.58 |
-| $100,000 | $210.01 | $61.28 | **$271.29** | $99,728.71 |
-| $400,000 | $840.03 | $61.28 | **$901.30** | $399,098.70 |
+Do not use relatives' quotas, private swaps, money changers, false documents or crypto. Fines run up to 30%
+of the amount, 30% to 100% in serious cases, with criminal liability possible ([S17](https://www.safe.gov.cn/safe/2008/0806/5321.html), [S10](https://www.safe.gov.cn/tianjin/2025/0613/2811.html),
+[S21](https://www.safe.gov.cn/guangdong/2020/0304/1668.html), [S23](https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html)).
 
-Sources for every amount: [BOC board](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) and [BOC personal e-banking tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html). Formula: `U × (ask − bid/ask midpoint) ÷ ask + [clamp(0.001 × U × ask, ¥50, ¥260) + ¥150] ÷ ask`.
+## What is not known
 
-These are **not all-in quotes**. Receiving/intermediary charges, account-specific execution, any optional full-amount service, underlying tax, and professional/compliance costs are not known and remain blank or disclosed. In particular, the inherited model’s automatic **$25 personal-wire OUR charge was removed**: its source is BOC’s corporate trade-services tariff and describes an optional service with conditions. [BOC corporate tariff, notes 1–2](https://www.boc.cn/cbservice/bi2/201711/t20171109_10646775.html)
+19 items are open and listed at https://sassnarep3-star.github.io/China3/dashboard/flagged.html. The three that decide the answer:
 
-If the account already contains USD, no CNY→USD spread applies to that balance; the same personal wire/cable benchmark is **$32.42 at $10,000** and **$61.28 at $100,000–$400,000**, before unquoted receiving/intermediary charges. Eligibility and documentary review still apply.
+- **U01** where the money came from;
+- **U02** what the "considerable taxes" actually are (no tax, rate or office is named in the brief);
+- **U07** no verified route exists for money received as a gift or without documents.
 
-## What may look like a “conversion penalty”
+This is research from public official sources. It is not legal, tax or banking advice.
 
-1. **FX spread:** the dated BOC one-way half-spread is about **0.2100%** against its own bid/ask midpoint. It is a benchmark, not the user’s guaranteed execution rate. [BOC](https://www.boc.cn/sourcedb/whpj/enindex_1619.html)
-2. **Transfer charges:** BOC personal e-banking cross-border TT is **1‰, minimum ¥50, maximum ¥260**, plus **¥150** cable outside Hong Kong/Macao/Taiwan; agreements, discounts and local differences can apply. [BOC personal tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html)
-3. **PRC tax/document gate:** a single outbound payment above USD 50,000 in listed categories generally requires tax recordal, subject to exceptions. Recordal is not itself a second tax; unpaid underlying tax is fact-dependent. [STA/SAFE Announcement 2013 No. 40](https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html)
-4. **U.S. tax and currency gain:** U.S. citizens generally report worldwide income. Disposition of nonfunctional currency can be a §988 transaction. For a qualifying **personal** transaction, IRS Publication 525 says gain above $200 is capital gain; business/investment facts can produce a different §988 analysis. Acquisition basis and dates are missing, so this project does not invent a tax amount. [IRS Pub. 54](https://www.irs.gov/publications/p54) · [IRS Pub. 525](https://www.irs.gov/publications/p525) · [26 U.S.C. §988(c), (e)](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm)
-5. **Reporting exposure:** FBAR generally applies when aggregate foreign financial accounts exceed **$10,000 at any time** in the year. Form 8938 has separate thresholds and does not replace FBAR. [IRS FBAR](https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar) · [IRS comparison](https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements)
-
-## Route hierarchy
-
-- **First:** wire an already-held USD balance if the bank accepts the account/remittance evidence.
-- **Usually next:** M01, foreign-individual lawful current-account RMB income with ID, transaction/source evidence and tax evidence.
-- **Only if the facts fit:** emigrant/inheritance property transfer, property-sale proceeds, re-conversion against an original FX memo, or company dividends. Do not relabel savings to fit a route.
-- **If classified as a domestic individual:** the USD 50,000 annual convenience amount is simplified processing, not a universal legal cap. Genuine documented current-account transactions above it follow a documentary route. The schedule’s multi-year quota costs reuse today’s board and are scenarios, not forecasts. [SAFE Q&A](https://www.safe.gov.cn/ningxia/2022/0929/1997.html)
-- **Do not use:** borrowed quotas/splitting, underground banks, false documents, or virtual currency to bypass controls.
-
-## Exact action sequence
-
-1. Establish the bank’s account-holder FX classification and obtain its current written checklist.
-2. Match the balance to authentic source records: salary/service income, property sale, inheritance, company profit, gift, or original FX conversion.
-3. Resolve source-income tax evidence and any required tax recordal/SAFE review before execution.
-4. Obtain a live itemized quote: customer rate, timestamp, wire, cable, charge-bearer option, intermediary and receiving fees, and expected net USD.
-5. Execute only the lawful route supported by those documents; keep the complete evidence and transfer trail.
-6. Review U.S. income, §988 basis/holding-period facts, FBAR, Form 8938 and any foreign-gift reporting with a qualified cross-border tax professional.
-
-## Deliverables
-
-- `index.html` — clean landing page and the full M01 40-increment table.
-- `schedule-cost-10k-400k.html` — **16 methods × 40 amounts = 640 rows**, mobile filters and per-row official links.
-- `schedule-methods.html` — pros, cons, eligibility and prohibited routes.
-- `schedule-steps.html` — step-by-step playbooks.
-- `schedule-penalties.html` — tax, reporting and enforcement separated.
-- `final-verification.html` and `schedule-flagged-review.html` — corrections, unknowns and irregularities.
-- `research/final-integration-audit.md` — final audit and verification record.
-
-For the documented foreign-individual current-account model (M01), the snapshot uses BOC's
-USD selling rate `6.6924`, bid/ask midpoint `6.67835`, personal remittance tariff (1‰,
-`¥50–¥260`) + `¥150` cable, and the published standard U.S. `OUR` option of `$25`. The
-published-component result is `$78.41` at a `$10,000` target and `$926.02` at `$400,000`.
-These are **not** a personalized all-in quote: receiving/intermediary fees, tax arrears,
-eligibility, actual source documents and U.S. compliance/cure facts have no single official
-number and are deliberately blank. The calculation and inputs are documented in
-[`research/s436-cost-methodology.md`](research/s436-cost-methodology.md); all methods,
-limitations and official source links are in
-[`research/s436-methods-and-penalties.md`](research/s436-methods-and-penalties.md).
-
-This is informational research, not legal, tax or banking advice. No manual input was
-requested; all conclusions are conditional on case facts that were not provided (IR-014,
-IR-018).
-
-## Addendum — U.S. §988 currency-gain exposure (2026-11-10)
-
-No Chinese "conversion tax" exists. The most likely candidate for the "considerable amount of taxes" the brief reports is a **U.S. tax on the currency gain embedded in the CNY itself** (IRC §988), not a Chinese fee. CNY acquired at the 2024/2025 IRS yearly averages (7.189 / 7.129) and converted at the recorded 2026-11-09 BOC selling rate (6.6919) carries a gain of about **6.9% / 6.1% of the USD received** — e.g. ≈$6,915 on $100,000 — before any China-side cost. Arithmetic, statute links and the full $10,000–$400,000 ladder: [`us-fx-gain.html`](us-fx-gain.html). Character and the $200 personal-transaction exclusion are conditional on facts only the account holder has (see `data/penalty.csv` P25; cross-check **X-11**). This does not change the recommended sequence — classify the funds, keep U.S. filings clean, use the narrowest lawful documentary route — it adds the missing U.S. line to the cost stack.
-
-General educational research, not personalized legal, tax, immigration, investment or banking advice. Missing personal facts are flagged rather than inferred.
-
-## Final-integration addendum (2026-11-10) — what re-verification changed
-
-The final integration pass re-opened **17 load-bearing claims** at their official primary sources and
-quoted each one verbatim (`data/c5bf_source_recheck.csv`, `research/c5bf-reverification-log.md`,
-`c5bf-integration-audit.html`). Ten were confirmed or newly catalogued, four were corrected,
-re-scoped or had moved intraday, two were irregularities on the **live** site and were fixed, and one
-was flagged but deliberately left to its owner. **No value was filled in by inference.**
-
-**1. The document bar for a U.S. citizen is higher than this summary previously implied.** The
-"no approval up to US$50,000/day on ID documents" line is 汇发〔2020〕14号 **art. 64**, and at source
-it is expressly about **境内个人 (domestic individuals)** remitting FX **from an FX account** for
-current-account expenditure — and only **US$10,000/day** when remitting foreign-currency **cash**.
-A U.S. citizen is a **境外个人 (foreign individual)**, governed by **art. 59**: to buy FX out of
-lawful current-account CNY income earned in China the bank requires a valid ID **plus source-of-funds
-documents showing the transaction amount, including tax certificates (含税务凭证)**. The annual
-purchase convenience quota is available **only** to foreign individuals holding a 外国人永久居留身份证
-(Foreign Permanent Resident ID card). If the CNY in the account is *not* current-account income —
-property proceeds, old savings — art. 59 does not by itself authorise the purchase and the
-capital-account routes (emigrant property transfer under 汇发〔2014〕2号, property-sale repatriation)
-are the ones to examine.
-[SAFE art. 64](https://www.safe.gov.cn/tianjin/2024/0229/2402.html) ·
-[SAFE art. 59](https://www.safe.gov.cn/tianjin/2024/0621/2529.html)
-
-**2. The OUR surcharge is BOC's *personal* tariff, not a corporate one.** The US$15 (beneficiary bank
-holds an account at BOC New York) / US$25 (other US banks) schedule sits in BOC's
-《关于调整部分**个人业务**收费标准的公示》, code 210104021, item **4.个人跨境本外币汇款 / 4.2全额到账**,
-effective 2015-04-01. What is genuinely conditional is **routing**: the service applies only where the
-two banks have no direct account relationship and at least one intermediary bank is required. BOC
-publishes no list of which U.S. banks that covers, so that fact stays blank.
-[BOC personal OUR notice](https://www.boc.cn/pbservice/bi2/201412/t20141231_4404048.html)
-
-**3. The estimate is stable across the day's boards — timing the rate is not the lever.** BOC
-republished its board during the day (07:32:39 → 17:39:58; ask 6.6903 → 6.6851). Re-deriving all 40
-increments on the later board moves the total by **−$0.04 at $10,000** and **−$2.29 at $400,000**.
-The 07:32:39 board stays canonical for every existing page; the newer one is published alongside with
-its own full ladder and per-increment delta (`c5bf-rates.html`, `data/c5bf_cost_10k_400k_latest.csv`).
-What actually drives cost is the **¥260 wire-fee cap** (binding from about $38,862 of transfer) and the
-intermediary / U.S. receiving-bank fees, which have **no official published schedule** and are blank on
-every row — not zero.
-
-**4. Two defects on the deployed site were fixed.** The dashboard hero card advertised **$50.93** at
-$10,000 while its own ladder row said **$53.42** (21.00 spread + 32.42 wire, re-derived from the
-official board and tariff); the hero card is now emitted *from* the ladder row and a validator guard
-enforces it. And `s775-cost-10k-400k.html` shipped 40 rows with a `<td>` nested inside a `<td>`,
-which browsers render as a phantom column — the most important table on the site was mis-aligned on
-every device. Both were fixed in the generators, with regression guards. The owner's own fix (PR #34)
-became unmergeable after main advanced, so it was carried forward under the board's stale-claim
-handoff rule.
-
-**5. Cross-implementation proof of the arithmetic.** A separately written implementation of the same
-official formula (`scripts/gen_c5bf_data.py`) reproduces the canonical 40-row ladder
-(`data/s775_cost_10k_400k.csv`) **exactly — 40 rows × 9 fields, maximum difference $0.00**. Inputs
-still move; the arithmetic no longer can.
-
-**Newly catalogued from primary sources:** the general willful-BSA penalty range **$71,545–$286,184**
-(31 U.S.C. 5321(a)(1), current eCFR table); FEIE housing limitation **$39,870 (2026) / $39,000
-(2025)** and the **2024** FEIE maximum **$126,500**; BOC's intra-bank foreign-currency transfer tariff
-**1‰ capped at ¥200** and domestic interbank CNY remittance **capped at ¥50** (both far below the ¥410
-cross-border wire, which is why consolidating balances before converting is worth doing).
+Earlier versions of this file are kept in `research/archive/executive-summary-before-e347.md`.
