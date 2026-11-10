@@ -441,16 +441,27 @@ def check_I_engine():
 
 def check_J_scope():
     print("J. scope — no file outside this session's claim was modified")
+
+    def git(*args):
+        return subprocess.run(["git", *args], cwd=ROOT, capture_output=True,
+                              text=True, check=True).stdout
+
     try:
-        out = subprocess.run(
-            ["git", "diff", "--name-only", "9bc2cde", "HEAD"],
-            cwd=ROOT, capture_output=True, text=True, check=True).stdout
-        out += subprocess.run(
-            ["git", "diff", "--name-only"], cwd=ROOT,
-            capture_output=True, text=True, check=True).stdout
-        out += subprocess.run(
-            ["git", "ls-files", "--others", "--exclude-standard"],
-            cwd=ROOT, capture_output=True, text=True, check=True).stdout
+        # Diff against the merge base with the integration branch, NOT a
+        # hardcoded commit. A pinned base goes stale the moment origin/main is
+        # merged in and then reports every sibling's files as "modified by us",
+        # which is exactly what happened on the first run after merging main.
+        try:
+            base = git("merge-base", "HEAD", "origin/main").strip()
+        except subprocess.CalledProcessError:
+            base = git("merge-base", "HEAD", "main").strip()
+        if not base:
+            fail("J: could not determine a merge base")
+            return
+        out = git("diff", "--name-only", base, "HEAD")
+        out += git("diff", "--name-only")
+        out += git("diff", "--name-only", "--cached")
+        out += git("ls-files", "--others", "--exclude-standard")
     except subprocess.CalledProcessError as exc:
         fail(f"J: git diff failed: {exc.stderr.strip()[:200]}")
         return
@@ -463,8 +474,8 @@ def check_J_scope():
     if foreign:
         fail(f"J: modified files outside the claim: {foreign}")
     if not foreign:
-        ok(f"{len(touched)} files touched, all inside the m5f19 namespace "
-           f"(plus append-only COORDINATION.md)")
+        ok(f"{len(touched)} files touched vs merge base {base[:7]}, all inside "
+           f"the m5f19 namespace (plus append-only COORDINATION.md)")
 
 
 def check_K_determinism():
