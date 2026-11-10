@@ -2,6 +2,8 @@
 
 **Final integration review:** 2026-11-10 · **Live guide:** `index.html` · **Full evidence schedule:** `schedule-dashboard.html`
 
+Parallel integration work is preserved at `verify-2026.html` (17 verbatim source records), `a15-review.html` (independent safety review), `guide.html` (archived narrative) and `data/ladder_20261110.csv` (independent 40-row ladder).
+
 ## Bottom line
 
 For a U.S. citizen, the lowest-penalty lawful route is usually the **ordinary licensed-bank route that matches the documented origin of the money**, not a workaround. If the bank classifies the holder as a foreign individual (`境外个人`) and the balance is lawful, documented, already-taxed current-account RMB income, SAFE’s 2026 guidance says the bank can handle the FX purchase using valid ID and transaction/source evidence, including tax evidence. Eligibility cannot be established from citizenship alone. [SAFE, 2026-07-13](https://www.safe.gov.cn/tianjin/2026/0713/3088.html)

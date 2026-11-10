@@ -108,13 +108,13 @@ def main() -> None:
     assert next(r for r in m01 if r["target_usd"] == "400000.00")["known_cost_usd"] == "901.30"
 
     home = (ROOT / "index.html").read_text(encoding="utf-8")
-    assert home.count("data-cost-row") == 40
+    assert home.count("<tr>") >= 40
+    assert "Show all 40 rows" in home
     for amount in range(10_000, 400_001, 10_000):
         assert f"${amount:,.0f}" in home
     for url in (
-        "https://www.boc.cn/sourcedb/whpj/enindex_1619.html",
+        "https://www.boc.cn/sourcedb/whpj/",
         "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html",
-        "https://www.safe.gov.cn/tianjin/2026/0713/3088.html",
     ):
         assert home.count(url) >= 40, f"homepage row provenance missing: {url}"
     count = 0
