@@ -365,6 +365,9 @@ def verify_table() -> str:
 
 def cards_nav() -> str:
     items = [
+        ("Consolidated summary", "The ladder, the §988 tax line and the flags in one place", "cn3-summary.html", "new"),
+        ("Verified ladder $10k–$400k", "17 methods × 40 amounts, every row re-derived and sourced", "cn3-cost.html", "new"),
+        ("Tax &amp; penalties", "Spread, fees, IRC §988, FBAR/8938 and SAFE fines, decomposed", "cn3-tax.html", "new"),
         ("Cost tables", "Every route at every $10,000 step", "cost-tables.html", "canonical"),
         ("All 640 rows", "16 methods × 40 amounts, filterable", "schedule-cost-10k-400k.html", ""),
         ("Methods &amp; pros/cons", "35 channels with the legal status of each", "deep-channels.html", ""),

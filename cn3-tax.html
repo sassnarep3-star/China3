@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CNY → USD tax and penalty breakdown — spread, §988, FBAR, SAFE fines</title>
+<meta name="description" content="Decomposition of the conversion &#x27;penalty&#x27;: bank spread, wire fees, IRC 988 currency gain, FBAR and Form 8938 penalties, SAFE fines.">
+<link rel="stylesheet" href="assets/cn3.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mk">C3</span><span>China → U.S. money guide</span></div>
+  <nav class="nav"><a href="index.html">Dashboard</a><a href="cn3-cost.html">Costs $10k–$400k</a><a href="cn3-methods.html">Methods</a><a href="cn3-tax.html" class="on">Tax & penalties</a><a href="cn3-steps.html">Step by step</a><a href="cn3-review.html">Flagged for review</a><a href="cn3-sources.html">Sources</a></nav>
+</header>
+<main>
+
+<section class="hero small">
+  <h1>The “conversion penalty”, line by line</h1>
+  <p class="lede">People describe a “considerable tax” on getting money out of China. Decomposed against
+  official sources, the Chinese side is a bank spread and a capped fee. The large number is a U.S. income
+  tax on the currency gain — and it is avoidable only by basis and timing, not by choosing another rail.</p>
+</section>
+
+<section>
+  <h2>Where the money actually goes</h2>
+  <div class="scroll"><table class="" ><thead><tr><th>Line</th><th>Size</th><th>Charged by</th><th>Official source</th><th>Notes</th></tr></thead><tbody><tr><td data-label="Line">Bank FX spread (one way)</td><td data-label="Size">0.210% of the amount</td><td data-label="Charged by">Bank of China</td><td data-label="Official source"><a href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">BOC FX board</a></td><td data-label="Notes">Difference between the mid and the ask you pay. One board reading, 2026-11-10.</td></tr><tr><td data-label="Line">Wire fee</td><td data-label="Size">0.1%, min CNY 50, max CNY 260 per transfer</td><td data-label="Charged by">Bank of China</td><td data-label="Official source"><a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">BOC personal transfer tariff</a></td><td data-label="Notes">Above ≈ USD 38,900 the cap binds and the fee stops growing.</td></tr><tr><td data-label="Line">Cable / telecom fee</td><td data-label="Size">CNY 150 per transfer (CNY 80 to HK/Macau/Taiwan)</td><td data-label="Charged by">Bank of China</td><td data-label="Official source"><a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">BOC personal transfer tariff</a></td><td data-label="Notes">Charged per wire, so it is the only reason not to split a large transfer.</td></tr><tr><td data-label="Line">Correspondent bank deduction</td><td data-label="Size"><span class="blank">blank</span></td><td data-label="Charged by">Intermediary bank</td><td data-label="Official source"><a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">BOC personal transfer tariff</a></td><td data-label="Notes">Passed through at actual cost; no amount published.</td></tr><tr><td data-label="Line">U.S. receiving-bank fee</td><td data-label="Size"><span class="blank">blank</span></td><td data-label="Charged by">Your U.S. bank</td><td data-label="Official source">—</td><td data-label="Notes">Varies by bank and tier; read your own schedule.</td></tr><tr><td data-label="Line"><strong>PRC tax on converting savings</strong></td><td data-label="Size"><strong>none found</strong></td><td data-label="Charged by">—</td><td data-label="Official source"><a href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">PRC Individual Income Tax Law</a></td><td data-label="Notes">PRC IIT attaches to income, not to the exchange. No provision taxes the conversion.</td></tr><tr><td data-label="Line">PRC tax on the income that created the balance</td><td data-label="Size">3–45% salary; 20% interest, dividends, rent, property gain</td><td data-label="Charged by">State Taxation Administration</td><td data-label="Official source"><a href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">PRC Individual Income Tax Law</a></td><td data-label="Notes">Already due when earned, not because you convert.</td></tr><tr><td data-label="Line"><strong>U.S. IRC §988 gain</strong></td><td data-label="Size"><strong>≈6.94% of the USD received</strong> (2024 basis)</td><td data-label="Charged by">IRS</td><td data-label="Official source"><a href="https://www.law.cornell.edu/uscode/text/26/988" target="_blank" rel="noopener">IRC §988</a></td><td data-label="Notes">Ordinary income. A personal transaction with USD 200 or less of gain is untaxed; above USD 200 the whole gain is taxed.</td></tr><tr><td data-label="Line">FBAR penalty if missed</td><td data-label="Size">USD 16,536 non-willful; USD 165,353 willful per violation</td><td data-label="Charged by">FinCEN</td><td data-label="Official source"><a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">31 CFR 1010.821</a></td><td data-label="Notes">Information return: no tax, large penalty.</td></tr><tr><td data-label="Line">Form 8938 penalty if missed</td><td data-label="Size">USD 10,000 + 10,000 per 30 days, max 60,000</td><td data-label="Charged by">IRS</td><td data-label="Official source"><a href="https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements" target="_blank" rel="noopener">IRS 8938 vs FBAR</a></td><td data-label="Notes">Separate from the FBAR, same accounts.</td></tr><tr><td data-label="Line">SAFE fine if you use a prohibited route</td><td data-label="Size">≤30%; 30%–100% if serious, of the amount</td><td data-label="Charged by">SAFE</td><td data-label="Official source"><a href="https://www.safe.gov.cn/safe/2008/0806/5321.html" target="_blank" rel="noopener">FX Regulations (State Council 532)</a></td><td data-label="Notes">Arts. 39, 40, 45. Before criminal exposure.</td></tr></tbody></table></div>
+</section>
+
+<section>
+  <h2>The one real tax: IRC §988</h2>
+  <p>The statute is short and does not care how you move the money. Disposing of foreign currency in a
+  personal transaction, “no gain shall be recognized … The preceding sentence shall not apply if the gain
+  which would otherwise be recognized on the transaction exceeds $200.” Above USD 200 of gain, the whole
+  gain is ordinary income — not just the excess. <a href="https://www.law.cornell.edu/uscode/text/26/988" target="_blank" rel="noopener">IRC §988</a></p>
+  <p>Gain = amount received × (1 − today's rate ÷ your acquisition rate). With the 2026-11-10 ask of 6.6903
+  and the IRS 2024 yearly average of 7.189, that is 6.94% of everything you convert.</p>
+  <div class="scroll"><table class="" ><thead><tr><th>Amount converted</th><th>Gain @ 2024 avg (7.189)</th><th>Tax @24%</th><th>Tax @32%</th><th>Tax @37%</th><th>Gain @ 2025 avg (7.129)</th><th>Tax @24%</th><th>PRC tax on the conversion</th></tr></thead><tbody><tr><td data-label="Amount converted">$10,000</td><td data-label="Gain @ 2024 avg (7.189)">$694</td><td data-label="Tax @24%">$166</td><td data-label="Tax @32%">$222</td><td data-label="Tax @37%">$257</td><td data-label="Gain @ 2025 avg (7.129)">$615</td><td data-label="Tax @24%">$148</td><td data-label="PRC tax on the conversion">$0</td></tr><tr><td data-label="Amount converted">$50,000</td><td data-label="Gain @ 2024 avg (7.189)">$3,468</td><td data-label="Tax @24%">$832</td><td data-label="Tax @32%">$1,110</td><td data-label="Tax @37%">$1,283</td><td data-label="Gain @ 2025 avg (7.129)">$3,077</td><td data-label="Tax @24%">$738</td><td data-label="PRC tax on the conversion">$0</td></tr><tr><td data-label="Amount converted">$100,000</td><td data-label="Gain @ 2024 avg (7.189)">$6,937</td><td data-label="Tax @24%">$1,665</td><td data-label="Tax @32%">$2,220</td><td data-label="Tax @37%">$2,567</td><td data-label="Gain @ 2025 avg (7.129)">$6,154</td><td data-label="Tax @24%">$1,477</td><td data-label="PRC tax on the conversion">$0</td></tr><tr><td data-label="Amount converted">$200,000</td><td data-label="Gain @ 2024 avg (7.189)">$13,874</td><td data-label="Tax @24%">$3,330</td><td data-label="Tax @32%">$4,440</td><td data-label="Tax @37%">$5,133</td><td data-label="Gain @ 2025 avg (7.129)">$12,307</td><td data-label="Tax @24%">$2,954</td><td data-label="PRC tax on the conversion">$0</td></tr><tr><td data-label="Amount converted">$300,000</td><td data-label="Gain @ 2024 avg (7.189)">$20,811</td><td data-label="Tax @24%">$4,995</td><td data-label="Tax @32%">$6,660</td><td data-label="Tax @37%">$7,700</td><td data-label="Gain @ 2025 avg (7.129)">$18,461</td><td data-label="Tax @24%">$4,431</td><td data-label="PRC tax on the conversion">$0</td></tr><tr><td data-label="Amount converted">$400,000</td><td data-label="Gain @ 2024 avg (7.189)">$27,748</td><td data-label="Tax @24%">$6,660</td><td data-label="Tax @32%">$8,879</td><td data-label="Tax @37%">$10,267</td><td data-label="Gain @ 2025 avg (7.129)">$24,615</td><td data-label="Tax @24%">$5,908</td><td data-label="PRC tax on the conversion">$0</td></tr></tbody></table></div>
+  <p class="tiny">Acquisition rates: <a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">IRS yearly average rates</a>. The 24/32/37% columns are arithmetic on your own
+  marginal rate, not published brackets for 2026. If your CNY was acquired at today's rate, the gain is zero;
+  if it was acquired when the yuan was stronger, your gain is larger.</p>
+</section>
+
+<section>
+  <h2>Ranking the routes by tax, not by fee</h2>
+  <p>Every lawful route that disposes of CNY carries the same §988 gain, because the tax follows the
+  currency and not the rail. What differs is the PRC tax attached to the underlying item, and the fine
+  attached to a prohibited one.</p>
+  <div class="scroll"><table class="" ><caption>PRC rates from the Individual Income Tax Law; §988 from the U.S. Code; fines from the FX Regulations.</caption><thead><tr><th>Route</th><th>PRC tax on the conversion</th><th>PRC tax on the income</th><th>U.S. §988</th><th>Fine exposure</th><th>Least-tax verdict</th></tr></thead><tbody><tr><td data-label="Route">W1 documented bank wire</td><td data-label="PRC tax on the conversion">none found</td><td data-label="PRC tax on the income">already paid when earned</td><td data-label="U.S. §988">yes</td><td data-label="Fine exposure">none</td><td data-label="Least-tax verdict"><strong>Lowest. This is the route to use.</strong></td></tr><tr><td data-label="Route">W2 USD 50,000 convenience amount</td><td data-label="PRC tax on the conversion">none found</td><td data-label="PRC tax on the income">already paid when earned</td><td data-label="U.S. §988">yes</td><td data-label="Fine exposure">none</td><td data-label="Least-tax verdict">Same tax, slower.</td></tr><tr><td data-label="Route">W3 emigrant / W4 inheritance</td><td data-label="PRC tax on the conversion">none found</td><td data-label="PRC tax on the income">tax clearance required</td><td data-label="U.S. §988">yes</td><td data-label="Fine exposure">none</td><td data-label="Least-tax verdict">Same tax, more documents.</td></tr><tr><td data-label="Route">W7 wire out existing USD</td><td data-label="PRC tax on the conversion">none — no conversion</td><td data-label="PRC tax on the income">already paid when earned</td><td data-label="U.S. §988"><strong>none — no CNY disposed</strong></td><td data-label="Fine exposure">none</td><td data-label="Least-tax verdict"><strong>Lowest of all, if you hold USD already.</strong></td></tr><tr><td data-label="Route">W5 property-sale proceeds</td><td data-label="PRC tax on the conversion">none found</td><td data-label="PRC tax on the income"><strong>20% of the gain</strong></td><td data-label="U.S. §988">yes</td><td data-label="Fine exposure">none</td><td data-label="Least-tax verdict">Cheap conversion, expensive income tax.</td></tr><tr><td data-label="Route">W8 company dividend</td><td data-label="PRC tax on the conversion">none found</td><td data-label="PRC tax on the income"><strong>20% of the dividend</strong> (treaty may reduce)</td><td data-label="U.S. §988">yes</td><td data-label="Fine exposure">none</td><td data-label="Least-tax verdict">Expensive unless the treaty applies.</td></tr><tr><td data-label="Route">A1 / A2 / C1 ATM and cash</td><td data-label="PRC tax on the conversion">none found</td><td data-label="PRC tax on the income">already paid when earned</td><td data-label="U.S. §988">yes</td><td data-label="Fine exposure">none (if within limits)</td><td data-label="Least-tax verdict">Same tax as W1, higher fees.</td></tr><tr><td data-label="Route">X1 / X2 / X3 prohibited</td><td data-label="PRC tax on the conversion">none found</td><td data-label="PRC tax on the income">already paid when earned</td><td data-label="U.S. §988">yes</td><td data-label="Fine exposure">≤30%, 30%–100% if serious</td><td data-label="Least-tax verdict">The most expensive possible choice.</td></tr></tbody></table></div>
+  <p class="tiny">Sources: <a href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">PRC Individual Income Tax Law</a> · <a href="https://www.law.cornell.edu/uscode/text/26/988" target="_blank" rel="noopener">IRC §988</a> · <a href="https://www.safe.gov.cn/safe/2008/0806/5321.html" target="_blank" rel="noopener">FX Regulations (State Council 532)</a> · <a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">IRS yearly average rates</a></p>
+</section>
+
+<section>
+  <h2>What actually reduces the U.S. tax</h2>
+  <ol>
+    <li><strong>Get the basis right.</strong> Your basis is the USD value of the CNY on the day you acquired it.
+    If part of the balance was acquired at a weaker yuan, that part carries a smaller gain. Sort the balance by
+    acquisition date and rate before converting anything.</li>
+    <li><strong>Spread the conversion across tax years.</strong> The gain is ordinary income; keeping it inside a
+    lower bracket in each year is the only lever the statute leaves you. Converting USD 400,000 at once can push
+    you into the top bracket.</li>
+    <li><strong>Do not expect a loss to help.</strong> The quoted text exempts gain; it does not give a deduction
+    for a personal loss. Treat a loss as non-deductible until an adviser says otherwise (flag C3-F15).</li>
+    <li><strong>Treat the reporting returns as the real penalty risk.</strong> FBAR at USD 10,000 aggregate and
+    Form 8938 at USD 50,000/75,000 are information returns. Missing them costs more than the conversion does.</li>
+    <li><strong>Check whether the money is a gift or a bequest.</strong> A genuine gift from a foreign person above
+    USD 100,000 is reported on Form 3520; that is a different analysis from selling your own currency.</li>
+  </ol>
+  <p class="tiny">What does <em>not</em> reduce the tax: using a different bank, an ATM, cash, Hong Kong, a
+  fintech, or a relative. §988 follows the currency, not the rail. Prohibited routes add a fine on top.</p>
+</section>
+
+<section class="alert">
+  <h2>If you have never filed an FBAR for this account</h2>
+  <p>The exposure is the penalty table above, not the conversion cost. Prior-year non-filing is a separate
+  question from how to move the money now, and it should be resolved with a tax adviser before you convert,
+  because the transfer itself creates the record.</p>
+</section>
+</main>
+<footer>
+  <p><strong>Research, not advice.</strong> Figures are recomputed from the official pages listed in the
+  <a href="cn3-sources.html">source register</a>. Blanks mean “no official source publishes this”, not zero.
+  Tax treatment depends on facts this page does not have; confirm with a qualified cross-border tax adviser.</p>
+  <p>Snapshot: Bank of China board 2026-11-10 07:32:39 · model build <span id="build"></span> ·
+  <a href="cn3-review.html">Flagged for review</a> · <a href="cn3-sources.html">Sources</a></p>
+</footer>
+<script>document.getElementById('build').textContent=document.lastModified;</script>
+</body>
+</html>

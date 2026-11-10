@@ -623,3 +623,76 @@ presented as optional and conditional rather than added to every total.
   `a15-review.html` rather than restated as verified here.
 
 - 2026-11-10: PR #22 merged to `main` as `3fc6fd50d64fd60c6bdf6e8ad49eeaf8f4064b99` after CI checks passed. GitHub Pages build/deployment run [42733121559](https://github.com/sassnarep3-star/China3/actions/runs/42733121559) succeeded; the [live A15 review](https://sassnarep3-star.github.io/China3/a15-review.html) was fetched and its contents confirmed. S119 was asked to add the homepage link and correct qualified wording; these integration changes remain pending. Full independent verification of every historic row was not performed.
+
+<!-- session-0fbc51c7-consolidation-v1 -->
+
+## Session `arena-0fbc51c7-china3` — consolidation, re-verification, and final integration
+
+Branch: `arena/0fbc51c7-china3` (fixed by Arena session binding; logged as `C3-IR-001`, same
+constraint every prior session recorded). Base commit `75b67d3` on `main`.
+
+### Claim and scope
+
+Claimed at 2026-11-10 (UTC) before any file was touched. Open PRs #15 and #18 belong to other
+sessions and are **not** claimed or modified here. Their file scopes (`deep-costs.html`,
+`cost-estimates.html`, `data/cost_matrix.*`, `data/cost_scenarios.csv`) are avoided.
+
+This session uses an exclusively namespaced file scope (`cn3_*` / `cn3-*.html` /
+`assets/cn3.*` / `scripts/*_cn3.py`) and touches shared files (`index.html`, `README.md`,
+`EXECUTIVE_SUMMARY.md`, `COORDINATION.md`) only as the final integration session.
+
+| ID | Task | File scope | Status | Owner |
+|----|------|------------|--------|-------|
+| C3-T1 | Re-verify every load-bearing input against the live official page (BOC board 2026-11-10, BOC personal tariff, BOC ATM tariff, SAFE convenience amount, Huifa [2014] No.2 Art.6, PBC [2004] No.16, PRC IIT Law, IRC §988, 31 CFR 1010.821, IRS 8938/FBAR comparison, IRS yearly average rates, Form 3520) | `data/cn3_sources.csv`, `data/cn3_inputs.csv` | in progress | arena-0fbc51c7-china3 |
+| C3-T2 | One consolidated cost model: 40 amounts ($10k–$400k) × every method, components separated, US §988 gain tax shown separately, blanks left blank | `data/cn3_methods.csv`, `data/cn3_ladder.csv`, `scripts/build_cn3.py` | in progress | arena-0fbc51c7-china3 |
+| C3-T3 | Step-by-step playbook per method | `data/cn3_steps.csv` | in progress | arena-0fbc51c7-china3 |
+| C3-T4 | Clean mobile-first dashboard + category subpages, most important first | `cn3-*.html`, `assets/cn3.css` | in progress | arena-0fbc51c7-china3 |
+| C3-T5 | Line-by-line verifier + CI gate | `scripts/verify_cn3.py`, `.github/workflows/cn3-verify.yml` | in progress | arena-0fbc51c7-china3 |
+| C3-T6 | Integration: landing page, README, executive summary, PR, merge, Pages | `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md` | in progress | arena-0fbc51c7-china3 |
+
+### Corrections this session will publish (found by re-reading the primary text)
+
+- **C-01 — emigrant-property staging is repealed.** Huifa [2014] No. 2 Art. 6(2) reads
+  「取消移民财产转移分次汇出的要求」 (fetched 2026-11-10 from
+  https://www.safe.gov.cn/tianjin/2024/0903/2594.html). The older tables that price M03 with a
+  two-year stage, and flag **X-17**, rest on PBC [2004] No. 16 Art. 6 as unamended. Art. 6(1)
+  also removed the >RMB 500,000 head-office filing. The 2014 notice is republished on the SAFE
+  Tianjin site marked 「（已修改）」 and its Art. 6 was **not** among the clauses later amended by
+  Huifa [2023] No. 28.
+- **C-02 — BOC tariff date.** The personal transfer tariff is effective **2014-11-01**, not
+  2024-11-01 (`X-14`). Fetched text: 「收费标准2014年11月1日起」.
+- **C-03 — board snapshot is time-stamped and one day stale in older layers.** Today's BOC board
+  (2026-11-10 07:32:39) is USD 现汇买入价 666.22 / 现汇卖出价 669.03 per 100 USD. All figures in
+  this session's model are re-derived from that snapshot.
+- **C-04 — the missing tax line (`X-11`).** Every prior cost model stopped at bank spread and
+  fees. For a U.S. citizen the larger number is usually IRC §988 gain on the currency itself:
+  §988(e)(2) exempts a personal transaction only while the gain is **$200 or less**, so a
+  conversion at today's rate of CNY acquired at the 2024 IRS yearly average (7.189) produces
+  gain of about 6.94% of the USD received, taxed as ordinary income. Quantified in this
+  session's model, with the assumption stated per row.
+
+No other session's file is edited, removed, or reordered by this claim.
+---
+
+### Conflict resolution — second merge of `origin/main` (2026-11-10)
+
+While PR #25 was open, `main` advanced to `294d8e7` (PR #24, session `arena/fbbd3b22-china3`), which had
+generated its own `index.html` from `scripts/build_dashboard.py` and preserved the earlier editorial page as
+`guide.html`. That generator is gated by `.github/workflows/dashboard-verify.yml`
+(`build_dashboard.py --check`), so the landing page cannot be hand-edited without failing their check.
+
+Resolution, recorded rather than silent:
+
+- **`index.html` — other session's generated dashboard kept.** Their generator remains the source of the
+  landing page and their `--check` stays green. Three cards were **added** to `cards_nav()` in their
+  generator pointing at the consolidated layer (`cn3-summary.html`, `cn3-cost.html`, `cn3-tax.html`), then
+  the page was regenerated with their own script. Nothing in their page was removed or reordered.
+- **This session's dashboard moved to `cn3-summary.html`** (same content, generated by
+  `scripts/build_cn3.py`), so both landing pages exist and the newest one is not thrown away.
+- **`EXECUTIVE_SUMMARY.md`** — their 2026-11-10 block kept at the top, this session's consolidated body below
+  it, plus a note reconciling the two spread conventions: dividing the half-spread by the **ask** gives
+  0.2100% ($53.42 at $10,000); dividing by the **midpoint** gives 0.210447% ($53.47). A convention, not a
+  fact, and now stated on the page.
+- **`COORDINATION.md`** — their board kept verbatim; this block appended.
+- No file from either session was deleted. All eight validators plus both generators' determinism checks
+  pass on the merged tree.

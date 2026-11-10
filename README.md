@@ -15,13 +15,42 @@ A sourced research pack and two-part website answering one question:
 
 ---
 
+## Start here — consolidated dashboard (2026-11-10)
+
+The current, re-verified layer. One model, one source register, one set of numbers, built from the
+official text fetched on 2026-11-10 and checked by `scripts/verify_cn3.py`.
+
+The landing page `index.html` is the generated dashboard from the 2026-11-10 verification pass (its
+build is checked by `scripts/build_dashboard.py --check`). The consolidated layer linked from it is:
+
+| Page | What it answers |
+|---|---|
+| [`cn3-summary.html`](cn3-summary.html) | The short answer, the headline cost table, every route at a glance |
+| [`cn3-cost.html`](cn3-cost.html) | 40 increments ($10k–$400k) × 17 methods, every row sourced, every blank flagged |
+| [`cn3-methods.html`](cn3-methods.html) | 17 routes with legality, pros, cons, requirements and the prohibitions |
+| [`cn3-tax.html`](cn3-tax.html) | The "conversion penalty" decomposed: spread, fees, IRC §988, FBAR/8938, SAFE fines |
+| [`cn3-steps.html`](cn3-steps.html) | Ordered playbooks for each usable route |
+| [`cn3-review.html`](cn3-review.html) | 27 flags, including two corrections to earlier pages |
+| [`cn3-sources.html`](cn3-sources.html) | 23 official sources with the exact text relied on, plus 36 inputs |
+
+Headline (Bank of China board, 2026-11-10 07:32:39): **$53.47 to move $10,000, $903.07 to move
+$400,000** through a documented bank wire — 0.535% falling to 0.226% as the CNY 260 wire cap binds.
+Add the U.S. IRC §988 line and $400,000 costs **$7,562.58 all-in (1.89%)**. There is no PRC tax on the
+conversion itself.
+
+Data: `data/cn3_*.csv` · build: `scripts/build_cn3.py` · check: `scripts/verify_cn3.py` ·
+CI: `.github/workflows/cn3-verify.yml`.
+
+---
+
 ## The finding
 
-There is no Chinese "conversion tax", and no US tax on wiring your own money home. The balance is expensive to move because three unrelated things get confused with each other:
+There is no Chinese "conversion tax". There *is* a U.S. tax on the currency gain: IRC §988 treats the gain on converting personal foreign currency above USD 200 as ordinary income, and at the 2024 average rate that is about 6.94% of the dollars received. The balance is expensive to move because four unrelated things get confused with each other:
 
 1. **Chinese capital controls** — a *permission* problem, not a tax problem.
 2. **PRC income tax on whatever created the money** — 20% flat on property gains, interest, rent and dividends; nothing further on salary already taxed.
-3. **US information-reporting penalties** — a willful FBAR violation is capped at the greater of **USD 165,353 or 50% of the account balance**, an order of magnitude larger than any FX spread.
+3. **The U.S. §988 gain on the currency itself** — ordinary income on the difference between the USD value of the CNY when you acquired it and when you convert it; the personal-transaction exemption stops at USD 200 of gain.
+4. **US information-reporting penalties** — a willful FBAR violation is capped at the greater of **USD 165,353 or 50% of the account balance**, an order of magnitude larger than any FX spread.
 
 The annual USD 50,000 figure is a *convenience processing amount*, not a tax and not a universal cap on every balance. The cheapest lawful sequence is therefore: classify the money → fix US reporting first → then use the one Chinese channel with no amount ceiling (**emigrant property transfer**, 移民财产转移, PBC Order [2004] No. 16) or the one with no annual quota (**non-resident conversion of current-account income**, 个人外汇管理办法 art. 13).
 
