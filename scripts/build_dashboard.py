@@ -467,11 +467,35 @@ def build_index() -> str:
       <a href="deep-us-tax.html">U.S. tax</a>
       <a href="verify-2026.html">Verify</a>
       <a href="deep-review.html">Flags</a>
+      <a href="d646-summary.html">2026-11-10 refresh</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
+
+<section style="padding:18px;border-left:5px solid #12a3b8;background:#eaf7fa;color:#0d3340;border-radius:9px;margin:20px 0">
+  <p class="eyebrow" style="margin:0 0 6px">Independent re-verification &middot; 2026-11-10</p>
+  <h2 style="margin:0 0 8px;font-size:20px">Seven-page refresh: 21 primary documents re-read today</h2>
+  <p style="margin:0 0 10px">A parallel build that re-fetched every load-bearing document on 10 November 2026
+  &mdash; Bank of China&rsquo;s stamped board and published tariff, SAFE, PBOC, the State Council FX Regulations,
+  the STA Individual Income Tax Law, 26 U.S.C. &sect;988, FinCEN 31 CFR 1010.821, IRS Rev. Proc. 2025-32 and
+  CBP &mdash; and re-derived all 40 cost increments from the raw published inputs rather than copying any
+  earlier model. It is published alongside this dashboard, not in place of it.</p>
+  <p style="margin:0 0 10px"><a href="d646-summary.html"><strong>Executive summary &rarr;</strong></a> &middot;
+  <a href="d646-costs.html">Costs $10k&ndash;$400k</a> &middot;
+  <a href="d646-methods.html">16 methods</a> &middot;
+  <a href="d646-penalty.html">Tax &amp; penalties</a> &middot;
+  <a href="d646-verification.html">Verification log</a> &middot;
+  <a href="d646-flagged.html">16 flagged items</a> &middot;
+  <a href="d646-sources.html">Sources</a></p>
+  <p style="margin:0;font-size:14px"><strong>The one open difference between the two builds:</strong> the wire
+  count at large amounts. This dashboard prices one wire; the refresh prices one wire per documented
+  US$50,000 convenience amount. That is why the refresh shows <strong>$53.47</strong> at $10,000 and
+  <strong>$1,332.05</strong> at $400,000 against this page&rsquo;s <strong>$53.42</strong> and
+  <strong>$901.30</strong>. The spread, the tariff and the tax treatment agree; only the number of transfers
+  differs, and both assumptions are labelled on their own pages.</p>
+</section>
 
 <section class="hero">
   <p class="eyebrow">Dashboard · official sources only · last checked 10 Nov 2026</p>
@@ -721,6 +745,7 @@ def build_verify() -> str:
       <a href="deep-us-tax.html">U.S. tax</a>
       <a href="verify-2026.html" aria-current="page">Verify</a>
       <a href="deep-review.html">Flags</a>
+      <a href="d646-summary.html">2026-11-10 refresh</a>
     </nav>
   </div>
 </header>
