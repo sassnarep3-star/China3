@@ -1,0 +1,10 @@
+field,value,unit,source_url,note
+board_timestamp,2026-11-10 07:32:39,Beijing time,https://www.boc.cn/sourcedb/whpj/,Column heading 发布时间 on the BOC board
+ask_spot_selling,669.03,CNY per 100 USD,https://www.boc.cn/sourcedb/whpj/,现汇卖出价 — you buy USD at this rate
+bid_spot_buying,666.22,CNY per 100 USD,https://www.boc.cn/sourcedb/whpj/,现汇买入价
+parity_reference,671.88,CNY per 100 USD,https://www.boc.cn/sourcedb/whpj/,中行折算价
+wire_fee_per_mille,0.001,fraction of CNY amount,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,Every CNY 1,000 of the transfer attracts CNY 1
+wire_fee_min,50,CNY,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,最低收取50元/笔
+wire_fee_max,260,CNY,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,最高收取260元/笔
+cable_fee_non_hk,150,CNY,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,非港澳台地区人民币150元/笔
+our_usd_optional,25,USD,https://www.boc.cn/cbservice/bi2/201711/t20171109_10646775.html,Only if you elect full-amount-received; USD 15 if the receiving bank is at BOC New York

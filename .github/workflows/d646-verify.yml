@@ -1,0 +1,58 @@
+name: D646 verification refresh
+
+on:
+  push:
+    paths:
+      - "d646-*.html"
+      - "assets/d646.css"
+      - "data/d646_*.csv"
+      - "research/d646-*.md"
+      - "scripts/build_d646_site.py"
+      - "scripts/verify_d646_site.py"
+      - ".github/workflows/d646-verify.yml"
+  pull_request:
+    paths:
+      - "d646-*.html"
+      - "assets/d646.css"
+      - "data/d646_*.csv"
+      - "scripts/build_d646_site.py"
+      - "scripts/verify_d646_site.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Line-by-line verification gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild and confirm nothing is stale
+        run: |
+          python3 scripts/build_d646_site.py
+          if ! git diff --quiet -- d646-summary.html d646-methods.html d646-costs.html \
+               d646-penalty.html d646-verification.html d646-flagged.html d646-sources.html \
+               assets/d646.css data/d646_ladder.csv data/d646_methods.csv \
+               data/d646_sources.csv data/d646_verification.csv data/d646_penalty.csv \
+               research/d646-executive-summary.md research/d646-verification.md; then
+            echo "::error::Generated output is out of date. Run scripts/build_d646_site.py and commit."
+            git diff --stat
+            exit 1
+          fi
+
+      - name: Independent arithmetic and sourcing audit
+        run: python3 scripts/verify_d646_site.py
+
+      - name: Confirm the whole site's existing checks still pass
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/check_links.py
+          python3 scripts/verify_deep.py
+          python3 scripts/test_costs.py
+          python3 scripts/verify_cost_tables.py
+          python3 scripts/verify_s436_site.py

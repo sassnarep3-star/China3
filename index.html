@@ -1,200 +1,357 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>China3 — Getting Money Out of China (CNY → USD)</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting money out of China — CNY to USD dashboard</title>
+<meta name="description" content="Official-source dashboard: every lawful way to convert CNY to USD, what each costs from $10,000 to $400,000, and the tax and reporting rules that actually carry a penalty.">
+<link rel="stylesheet" href="assets/dashboard.css">
 </head>
 <body>
-
-<header class="site-header">
-  <div class="brand">
-    <div class="mark">C3</div>
-    <div>
-      <div style="font-weight:800;">China3 · China Funds Transfer Guide</div>
-      <div class="tagline">Official-source research dashboard: lawful ways to move personal funds from a mainland China bank account to the United States · CNY → USD conversion methods · tax and reporting distinctions</div>
-    </div>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="index.html">China&nbsp;money<span>·</span>CNY&nbsp;→&nbsp;USD</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="cost-tables.html">Costs</a>
+      <a href="deep-channels.html">Methods</a>
+      <a href="deep-penalty.html">Penalties</a>
+      <a href="deep-china-rules.html">China rules</a>
+      <a href="deep-us-tax.html">U.S. tax</a>
+      <a href="verify-2026.html">Verify</a>
+      <a href="deep-review.html">Flags</a>
+      <a href="us-fx-gain.html">§988</a>
+      <a href="d646-summary.html">2026-11-10 refresh</a>
+    </nav>
   </div>
 </header>
 
-<div class="wrap">
-<section style="padding:18px;border-left:4px solid #b45309;background:#fff7ed;color:#422006"><h2>New: all 40 transfer increments, all 35 channels</h2><p><a href="costs.html">Open the cost comparison and executive decision brief</a>. Published BOC fee formulas are separated from unknown all-in costs. Unknown values are blank, not zero. <a href="cost-review.html">Read the verification limitations</a>: prior research has not all been freshly reverified.</p></section>
-<section style="padding:18px;border-left:4px solid #007587;background:#edfafd;color:#123a47"><h2>Official-source schedule: 16 methods × $10,000–$400,000</h2><p><a href="schedule-dashboard.html">Open the independently verified schedule dashboard</a>. It uses a timestamped Bank of China board snapshot and published BOC tariffs, separately displays every known component, and leaves non-quoted or fact-dependent costs blank. It includes step-by-step playbooks, source links per row, and a <a href="schedule-flagged-review.html">Flagged for Review register</a>.</p></section>
-<nav>
-  <a href="index.html" class="active">Home</a>
-  <a href="schedule-dashboard.html"><strong>Verified schedule $10k–$400k</strong></a>
-  <a href="schedule-cost-10k-400k.html">All 640 cost rows</a>
-  <a href="schedule-flagged-review.html">Schedule review flags</a>
-  <a href="cost-tables.html"><strong>Cost tables $10k–$400k</strong></a>
-  <a href="costs.html">Cost comparison grid (parallel session)</a>
-  <a href="cost-review.html">Cost verification flags</a>
-  <a href="cross-session-review.html">Cross-check &amp; U.S. FX-gain tax</a>
-  <a href="us-fx-gain.html">U.S. FX-gain tax (§988)</a>
-  <a href="methods.html">CNY → USD methods</a>
-  <a href="china-rules.html">China FX rules</a>
-  <a href="us-tax.html">U.S. tax &amp; reporting</a>
-  <a href="penalties.html">Penalty breakdown</a>
-  <a href="flagged-review.html">Flagged for review</a>
-  <a href="routes.html">Transfer routes (prior session)</a>
-  <a href="tax.html">Tax &amp; reporting (prior session)</a>
-  <a href="review.html">Flagged items (prior session)</a>
-  <a href="sources.html">Source register (prior session)</a>
-  <a href="docs/index.html"><strong>Data dashboard &amp; calculator</strong></a>
-</nav>
+<main class="wrap">
 
-<!-- ============ Executive brief (prior session, preserved) ============ -->
-<section class="section hero">
-  <div class="hero">
-    <h1>Get the money out lawfully—without mistaking paperwork for tax.</h1>
-    <p>A primary-source guide for a U.S. citizen with personal funds in a mainland China bank account. The right path depends on why the money is in China, who owns it, and whether the underlying income was taxed—not just the account balance.</p>
-  </div>
-
-  <div class="callout info">
-    <p><strong>Executive takeaway:</strong> Official sources do <strong>not</strong> establish a universal tax or “conversion penalty” for converting personal CNY savings to USD. China’s USD 50,000 annual individual convenience amount is a simplified processing threshold, not a blanket annual legal cap. A genuine, documented eligible transaction above that amount may be processed by a bank; a transfer of ordinary accumulated savings with no qualifying current-account purpose is not automatically made eligible by using more people, another payment rail, or a third party. Ask the holding bank to classify the funds and issue a written checklist before making any exchange.</p>
-  </div>
-
-  <table class="data">
-    <thead><tr><th style="width:260px;">Key figure</th><th>Value / meaning</th><th class="source">Source</th></tr></thead>
-    <tbody>
-      <tr><td>China individual FX convenience amount</td><td>USD 50,000 equivalent per person per year — processing threshold, not a tax or universal cap</td><td class="source"><span class="src">SAFE — <a href="https://www.safe.gov.cn/en/2007/0105/819.html" target="_blank" rel="noopener">safe.gov.cn</a> <span class="badge badge-ok">verified</span>; <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener">SAFE Q&amp;A 2022</a></span></td></tr>
-      <tr><td>FBAR aggregate foreign-account trigger</td><td>USD 10,000 at any time during the calendar year (U.S. person)</td><td class="source"><span class="src">IRS / FinCEN — <a href="https://www.irs.gov/pub/fatca/int_practice_units/fincen-form114-fbar.pdf" target="_blank" rel="noopener">irs.gov</a> <span class="badge badge-ok">verified</span></span></td></tr>
-      <tr><td>FBAR non-willful penalty</td><td>Up to $16,536 per violation (penalties assessed on/after Jan 17, 2025)</td><td class="source"><span class="src">31 CFR 1010.821 — <a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">eCFR</a> <span class="badge badge-ok">verified</span></span></td></tr>
-      <tr><td>FBAR willful penalty</td><td>Greater of $165,353 or 50% of account balance</td><td class="source"><span class="src">31 CFR 1010.821 — <a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">eCFR</a> <span class="badge badge-ok">verified</span></span></td></tr>
-      <tr><td>FEIE (2025)</td><td>USD 130,000</td><td class="source"><span class="src">IRS Rev. Proc. 2024-40 (§911) — <a href="https://www.irs.gov/pub/irs-drop/rp-24-40.pdf" target="_blank" rel="noopener">irs.gov</a> <span class="badge badge-ok">verified</span></span></td></tr>
-    </tbody>
-  </table>
-
-  <div class="callout warn">
-    <p><strong>Do not evade the controls.</strong> SAFE expressly prohibits using multiple people/quotas to split transactions, and banks may reject or report suspected splitting. This guide does not recommend informal exchangers, crypto conversion, false invoices, third-party accounts, or disguising the purpose of funds.</p>
-  </div>
-
-  <h3 style="margin-top:1.25rem;">Recommended sequence (minimize avoidable cost and compliance risk)</h3>
-  <ol>
-    <li><strong>Identify the owner and source.</strong> Personal savings, salary, investment proceeds, inheritance, company money, or money already converted to foreign currency? Gather bank statements, source documents, and Chinese tax-payment/filing records.</li>
-    <li><strong>Ask the bank to classify the transfer before you transact.</strong> Whether it qualifies as a bona fide current-account payment or another permitted route; exact supporting documents required; whether the annual convenience amount applies; which branch/SAFE approval applies.</li>
-    <li><strong>Get the all-in quote in writing.</strong> Bank’s CNY/USD customer rate, reference rate and timestamp, spread, conversion charge, wire fee, correspondent/intermediary charges, receiving-bank fee, and expected net USD.</li>
-    <li><strong>Use the narrowest lawful path that matches the facts.</strong> For eligible current-account needs above the convenience amount, provide actual transaction evidence rather than splitting amounts.</li>
-    <li><strong>Keep U.S. filings separate from China transfer approval.</strong> Check FBAR/Form 8938 thresholds and whether the original income or account interest was properly reported with a qualified cross-border tax professional.</li>
-  </ol>
+<section style="padding:18px;border-left:5px solid #12a3b8;background:#eaf7fa;color:#0d3340;border-radius:9px;margin:20px 0">
+  <p class="eyebrow" style="margin:0 0 6px">Independent re-verification &middot; 2026-11-10</p>
+  <h2 style="margin:0 0 8px;font-size:20px">Seven-page refresh: 21 primary documents re-read today</h2>
+  <p style="margin:0 0 10px">A parallel build that re-fetched every load-bearing document on 10 November 2026
+  &mdash; Bank of China&rsquo;s stamped board and published tariff, SAFE, PBOC, the State Council FX Regulations,
+  the STA Individual Income Tax Law, 26 U.S.C. &sect;988, FinCEN 31 CFR 1010.821, IRS Rev. Proc. 2025-32 and
+  CBP &mdash; and re-derived all 40 cost increments from the raw published inputs rather than copying any
+  earlier model. It is published alongside this dashboard, not in place of it.</p>
+  <p style="margin:0 0 10px"><a href="d646-summary.html"><strong>Executive summary &rarr;</strong></a> &middot;
+  <a href="d646-costs.html">Costs $10k&ndash;$400k</a> &middot;
+  <a href="d646-methods.html">16 methods</a> &middot;
+  <a href="d646-penalty.html">Tax &amp; penalties</a> &middot;
+  <a href="d646-verification.html">Verification log</a> &middot;
+  <a href="d646-flagged.html">16 flagged items</a> &middot;
+  <a href="d646-sources.html">Sources</a></p>
+  <p style="margin:0;font-size:14px"><strong>The one open difference between the two builds:</strong> the wire
+  count at large amounts. This dashboard prices one wire; the refresh prices one wire per documented
+  US$50,000 convenience amount. That is why the refresh shows <strong>$53.47</strong> at $10,000 and
+  <strong>$1,332.05</strong> at $400,000 against this page&rsquo;s <strong>$53.42</strong> and
+  <strong>$901.30</strong>. The spread, the tariff and the tax treatment agree; only the number of transfers
+  differs, and both assumptions are labelled on their own pages.</p>
 </section>
 
-<!-- ============ Category grid (current session) ============ -->
-<section class="section">
-  <h2>Explore all site pages</h2>
-  <p class="small">Pages from both research sessions are linked below. Every table row carries an official-source link or is intentionally blank and flagged UNVERIFIED.</p>
-  <div class="grid">
-    <div class="card" style="border:2px solid #b91c1c;">
-      <h3>U.S. §988 FX-gain tax — the missing cost line <span class="badge badge-ok">new</span></h3>
-      <p>Every $10,000 step from $10,000 to $400,000: the potential U.S. currency-gain tax on converting appreciated CNY (≈6.9% / 6.1% of USD received at the 2024/2025 IRS yearly averages), derived from recorded official values. Method by method, line by line.</p>
-      <a class="btn" href="us-fx-gain.html">Open the §988 analysis</a>
-    </div>
-    <div class="card" style="border:2px solid #007587;">
-      <h3>Verified 40-step schedule <span class="badge badge-ok">official-source</span></h3>
-      <p>16 methods across every $10,000 increment from $10,000 through $400,000. A mobile-first table shows only published FX, wire, cable, OUR, ATM and statutory components; case-specific tax and unquoted fees remain blank and flagged.</p>
-      <a class="btn" href="schedule-dashboard.html">Open verified schedule</a>
-    </div>
-    <div class="card" style="border:2px solid #b45309;">
-      <h3>Cost tables: $10,000 → $400,000 <span class="badge badge-ok">newest</span></h3>
-      <p>All 40 amount steps across every route, priced from published tariffs rather than averages: bank spread
-      from a dated official BOC quote, the 1‰ wire fee with its CNY&nbsp;260 cap, cable charges, and the statutory
-      penalty ceiling for each unlawful route. Plus a numbered step-by-step for every method.</p>
-      <a class="btn" href="cost-tables.html">Open the cost tables</a>
-    </div>
-    <div class="card" style="border:2px solid #0f766e;">
-      <h3>Data dashboard &amp; cost calculator <span class="badge badge-ok">newest</span></h3>
-      <p>Every route, tax item, penalty provision and flagged item as structured data: 22 channels with pros and cons, 27 official sources, 19 flagged items, an effective-cost calculator, and a build that fails if any figure lacks a source.</p>
-      <a class="btn" href="docs/index.html">Open the dashboard</a>
-    </div>
-    <div class="card">
-      <h3>CNY → USD conversion methods</h3>
-      <p>11 routes with pros, cons, estimated costs, U.S. impact, and official sources per row — incl. salary repatriation, bank wire, cash carry, underground banking (avoid), smurfing (avoid).</p>
-      <a class="btn" href="methods.html">View methods table</a>
-    </div>
-    <div class="card">
-      <h3>China foreign-exchange rules</h3>
-      <p>SAFE/PBOC quotas, documentation, cash limits, overseas card withdrawal rules, foreigner salary repatriation (flagged — secondary source), circumvention penalties.</p>
-      <a class="btn" href="china-rules.html">View China rules</a>
-    </div>
-    <div class="card">
-      <h3>U.S. tax &amp; reporting</h3>
-      <p>FBAR (FinCEN 114), Form 8938 (FATCA), FEIE $130,000 (2025), Foreign Tax Credit, U.S.–China treaty, IRC §988 currency gains ($200 personal de minimis).</p>
-      <a class="btn" href="us-tax.html">View U.S. tax guide</a>
-    </div>
-    <div class="card">
-      <h3>Penalty &amp; cost breakdown</h3>
-      <p>Every cost/penalty component with verified amounts (FBAR $16,536 non-willful / greater of $165,353 or 50% willful) and blanks where no official source confirms a value.</p>
-      <a class="btn" href="penalties.html">View breakdown</a>
-    </div>
-    <div class="card">
-      <h3>Flagged for review</h3>
-      <p>9 items that could not be confirmed from an official source — deliberately left blank, listed with suggested official sources to check.</p>
-      <a class="btn" href="flagged-review.html">View flagged items</a>
-    </div>
-    <div class="card">
-      <h3>Transfer routes (prior session)</h3>
-      <p>8 documented transfer routes compared — current-account transfers, existing FX balances, foreign-inividual income, emigration/inheritance property transfers, company dividends, CIPS rail — plus routes not recommended.</p>
-      <a class="btn" href="routes.html">View routes</a>
-    </div>
-    <div class="card">
-      <h3>Tax &amp; reporting (prior session)</h3>
-      <p>Table distinguishing China FX convenience amount (not a tax), FX spread, bank fees, China tax on source income, U.S. worldwide income, FBAR, Form 8938 thresholds.</p>
-      <a class="btn" href="tax.html">View tax &amp; reporting</a>
-    </div>
-    <div class="card">
-      <h3>Source register (prior session)</h3>
-      <p>Official source register and research method: SAFE, PBOC, IRS, FinCEN, Treasury sources — what each establishes and what it does not.</p>
-      <a class="btn" href="sources.html">View sources</a>
-    </div>
+<section class="hero">
+  <p class="eyebrow">Dashboard · official sources only · last checked 10 Nov 2026</p>
+  <h1>No separate China “exit tax” was identified in the official sources reviewed.<br>Tax and penalties depend on the money’s origin and how you move it.</h1>
+  <p class="lede">A U.S. citizen with a mainland bank balance asks the same question every time: what is the
+  cheapest lawful route from CNY to USD, and where does the “tax penalty” actually come from? This page answers
+  it in the order that matters: the cost of the transfer first, the reporting risk second, the alternatives last.</p>
+
+  <div class="callout warn" style="margin-top:18px">
+    <p><strong>Read this with the safety review.</strong> The independent review at
+    <a href="a15-review.html">a15-review.html</a> (10 Nov 2026) raises four cautions this page also carries:
+    the USD 50,000 convenience amount is <em>not</em> automatic for a foreign passport holder; a Chinese tax
+    certificate is evidence, not a new tax; whether converting your CNY is “personal” for §988 purposes is
+    fact-specific and unknown here; and every figure below is a China-side cost that still needs a written bank
+    quote. Automated source-link checks do not substitute for that quote.</p>
+  </div>
+
+  <div class="answer">
+    <h2>The short answer</h2>
+    <ol class="tight">
+      <li><strong>Converting your own after-tax principal costs about 0.5342% at $10,000 and
+      0.2253% at $400,000</strong> — $53.42 and $901.30
+      on today's Bank of China board. That is bank spread plus the 1‰ wire fee and its cable charge. There is no
+      Chinese “conversion tax” in any instrument checked here.</li>
+      <li><strong>The expensive number is a reporting penalty, not an exchange rate.</strong> A willful FBAR
+      violation is capped at the greater of USD 165,353 or <em>50% of the balance</em> — USD 200,000 on a
+      $400,000 account <a class="src" href="https://www.law.cornell.edu/uscode/text/31/5321" target="_blank" rel="noopener">31 USC 5321<span class="sr"> — 31 U.S.C. § 5321(a)(5)(C)</span></a>. Fix U.S. reporting before optimising anything else.</li>
+      <li><strong>Choose the route by the documents you can produce, not by the fee table.</strong> A documented
+      current-account income remittance and an emigrant property transfer cost the same at the bank; both differ
+      from the USD 50,000 convenience amount, which is a per-person, per-year processing allowance
+      <a class="src" href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener">SAFE<span class="sr"> — 2022年外汇业务政策释疑（八）</span></a> — not a legal ceiling and not a tax.</li>
+    </ol>
   </div>
 </section>
 
-<section class="section">
-  <h2>Research &amp; documentation</h2>
-  <ul>
-    <li>Full research with citations: <a href="research/cny-usd-conversion-research.md" target="_blank">research/cny-usd-conversion-research.md</a> (GitHub)</li>
-    <li>2026 official-source executive summary: <a href="research/s436-executive-summary.md" target="_blank">research/s436-executive-summary.md</a> (GitHub)</li>
-    <li>2026 cost methodology: <a href="research/s436-cost-methodology.md" target="_blank">research/s436-cost-methodology.md</a> (GitHub)</li>
-    <li>Executive summary: <a href="docs/executive-summary.md" target="_blank">docs/executive-summary.md</a> (GitHub)</li>
-    <li>U.S. §988 currency-gain exposure (X-11): <a href="us-fx-gain.html">us-fx-gain.html</a> — $10,000–$400,000 ladder with sources</li>
-    <li>Shared task board: <a href="COORDINATION.md" target="_blank">COORDINATION.md</a> (GitHub)</li>
-    <li>Structured data pack: <a href="data/channels.json">data/</a> — sources, channels, taxes, penalties, flagged items (JSON)</li>
-    <li>Build and checks: <code>scripts/validate_data.py</code>, <code>scripts/check_links.py</code>, <code>scripts/build_site.py</code></li>
-  </ul>
-  <p class="small">Scope: mainland-China bank account to U.S. destination. Source-based general research, not legal, tax, or bank advice. Rules and bank implementation may change; confirm with the bank/SAFE and qualified counsel before acting. The user has not supplied amount, province, residency status in China, account-holder status, source of funds, or bank details, so no personalized route or tax number can be confirmed.</p>
+<section class="section" id="verdict">
+  <h2>Least-penalty path, ranked</h2>
+  <p class="lede">Cost column is today's board, single transfer, China side. All four rows link to the instrument
+  that decides them.</p>
+  <div class="tw"><table class="tbl"><thead><tr>
+<th>Path</th><th>What it is</th><th>Known cost on $400k</th><th>Time</th><th>Source</th>
+</tr></thead><tbody>
+<tr class=""><td data-l="Path"><strong>1 · Best</strong></td><td data-l="Route"><strong>Documented current-account income, wired out by the bank</strong><br><span class="mini">A non-resident (or resident) individual converts lawful, tax-paid onshore income with ID plus source/purpose documents. No annual ceiling applies when the documents exist.</span></td><td data-l="Known cost on $400,000">$901.30</td><td data-l="Time">1 transfer</td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener">safe.gov.cn<span class="sr"> — 2022年外汇业务政策释疑（八）</span></a></td></tr>
+<tr class=""><td data-l="Path"><strong>2 · If you emigrated</strong></td><td data-l="Route"><strong>Emigrant property transfer (移民财产转移)</strong><br><span class="mini">For property you owned <em>before</em> acquiring emigrant status. Requires the police-issued household-registration cancellation certificate and consular proof of settlement abroad. One application; a single remittance is permitted since 2014.</span></td><td data-l="Known cost on $400,000">$901.30</td><td data-l="Time">1 transfer</td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" target="_blank" rel="noopener">safe.gov.cn<span class="sr"> — （已修改）国家外汇管理局关于进一步改进和调整资本项目外汇管理政策的通知 汇发〔2014〕2号</span></a></td></tr>
+<tr class=""><td data-l="Path"><strong>3 · Only if needed</strong></td><td data-l="Route"><strong>USD 50,000 annual convenience amount, year after year</strong><br><span class="mini">Simplified processing with ID only, per person per year, for a PRC-resident individual (境内个人). $400,000 takes eight calendar years and eight wire fees. A foreign passport holder does not automatically get the same treatment — the bank classifies the person first.</span></td><td data-l="Known cost on $400,000">$1,330.28</td><td data-l="Time">8 years</td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener">safe.gov.cn<span class="sr"> — 2022年外汇业务政策释疑（八）</span></a></td></tr>
+<tr class="row-no"><td data-l="Path"><strong>Avoid</strong></td><td data-l="Route"><strong>Quota splitting, underground banks, crypto, false invoices</strong><br><span class="mini">Expressly prohibited in China and a money-laundering exposure in the United States. The Chinese administrative fine is up to 30% of the amount (30%–100% where the case is serious); a willful FBAR penalty can reach 50% of the balance.</span></td><td data-l="Known cost on $400,000"><span class="blank">blank by rule</span></td><td data-l="Time">n/a</td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/safe/2008/0806/5321.html" target="_blank" rel="noopener">safe.gov.cn<span class="sr"> — 中华人民共和国外汇管理条例 国务院令第532号 (arts. 39 and 45)</span></a></td></tr>
+</tbody></table></div>
 </section>
 
+<section class="section" id="numbers">
+  <h2>The six numbers that decide this</h2>
+  <div class="cards">
+<div class="card"><div class="card-k">No Chinese conversion tax</div><div class="card-v">$0</div><p>No official instrument taxes the act of converting your own CNY principal to USD. The PRC 20% rate below applies to the <em>income that created</em> the money, not the exchange.</p><div class="card-s"><a class="src" href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">chinatax.gov.cn<span class="sr"> — 中华人民共和国个人所得税法 第三条</span></a></div></div>
+<div class="card"><div class="card-k">Bank spread you actually pay</div><div class="card-v">0.53% → 0.23%</div><p>All-in China-side cost on a documented current-account wire, from $53.42 on $10,000 to $901.30 on $400,000. Built on the 2026-11-10 07:32:39 BOC board (ask 6.6903 CNY/USD).</p><div class="card-s"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">BOC board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a></div></div>
+<div class="card"><div class="card-k">Wire fee</div><div class="card-v">1‰, cap ¥260</div><p>Plus a cable fee of CNY 150 outside Hong Kong/Macau/Taiwan. The CNY 260 cap bites at about $38,862 of transfer, so the fee stops growing there.</p><div class="card-s"><a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">BOC tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></div></div>
+<div class="card"><div class="card-k">FBAR trigger</div><div class="card-v">> $10,000</div><p>Aggregate value of foreign accounts <em>exceeds</em> $10,000 at any time in the calendar year. It is a reporting trigger, not a tax — the penalty is what costs money.</p><div class="card-s"><a class="src" href="https://www.fincen.gov/report-foreign-bank-and-financial-accounts" target="_blank" rel="noopener">FinCEN<span class="sr"> — Report Foreign Bank and Financial Accounts</span></a></div></div>
+<div class="card"><div class="card-k">Willful FBAR ceiling</div><div class="card-v">50% of balance</div><p>Greater of the inflation-adjusted USD 165,353 or 50% of the account balance. On $400,000 that ceiling is $200,000 — about 222× the cost of moving the money lawfully.</p><div class="card-s"><a class="src" href="https://www.law.cornell.edu/uscode/text/31/5321" target="_blank" rel="noopener">31 USC 5321<span class="sr"> — 31 U.S.C. § 5321(a)(5)(C)</span></a></div></div>
+<div class="card"><div class="card-k">U.S. currency-gain rule</div><div class="card-v">$200</div><p>A personal transaction in foreign currency recognises no §988 gain unless the gain exceeds $200. Whether your conversion is a “personal transaction”, and the CNY cost basis, are fact-specific — this is not a finding that your conversion is untaxable.</p><div class="card-s"><a class="src" href="https://www.law.cornell.edu/uscode/text/26/988" target="_blank" rel="noopener">26 USC 988<span class="sr"> — 26 U.S.C. § 988(e)(2)</span></a></div></div>
 </div>
-
-<footer class="site-footer">
-  China3 · CNY → USD research dashboard · Sources: safe.gov.cn · irs.gov · ecfr.gov · fincen.gov · pbc.gov.cn · law.cornell.edu (U.S. Code mirror) · Secondary: hsbc.com.cn · sc.com · ecovis.com
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="schedule-dashboard.html">Verified schedule dashboard</a></li>
-    <li><a href="schedule-cost-10k-400k.html">Verified 40-step costs</a></li>
-    <li><a href="schedule-flagged-review.html">Verified schedule flags</a></li>
-    <li><a href="cost-tables.html">Cost tables ($10k–$400k)</a></li>
-    <li><a href="cross-session-review.html">Cross-session review (official inputs, FX-gain tax, flagged discrepancies)</a></li>
-    <li><a href="us-fx-gain.html">U.S. FX-gain tax (§988)</a></li>
-    <li><a href="methods.html">CNY→USD methods</a></li>
-    <li><a href="china-rules.html">China FX rules</a></li>
-    <li><a href="us-tax.html">U.S. tax</a></li>
-    <li><a href="penalties.html">Penalties</a></li>
-    <li><a href="flagged-review.html">Flagged review</a></li>
-    <li><a href="routes.html">Transfer routes</a></li>
-    <li><a href="tax.html">Tax &amp; reporting</a></li>
-    <li><a href="review.html">Flagged items</a></li>
-    <li><a href="sources.html">Source register</a></li>
-  </ul>
-</footer>
-
-<!-- deep-research-integration-v2 -->
-<section style="max-width:1100px;margin:38px auto;padding:26px;border:1px solid #dfe7f2;border-radius:16px;background:#fff">
-  <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4067bd;font-weight:800">Deep research · integration session</div>
-  <h2 style="font-size:22px;margin:8px 0 6px">Category subpages — verified line by line</h2>
-  <p style="color:#53657f;margin:0 0 12px">A second research pass added without altering any earlier page. Every table row links to an official source; unconfirmed values are blank and listed on <a href="deep-review.html">Flagged for Review</a>.</p>
-  <ul style="padding-left:20px;margin:0;line-height:1.7"><li style="margin:7px 0"><a href="deep-executive-summary.html" style="font-weight:700;text-decoration:none">Executive summary</a> <span style="color:#5b6b82">— Important details, ranked recommendation and requirement coverage</span></li><li style="margin:7px 0"><a href="deep-china-rules.html" style="font-weight:700;text-decoration:none">China rules</a> <span style="color:#5b6b82">— 50 SAFE / PBOC / State Council rules, line by line</span></li><li style="margin:7px 0"><a href="deep-us-tax.html" style="font-weight:700;text-decoration:none">US tax &amp; reporting</a> <span style="color:#5b6b82">— 28 IRS / FinCEN / Treasury / eCFR rules</span></li><li style="margin:7px 0"><a href="deep-channels.html" style="font-weight:700;text-decoration:none">All channels</a> <span style="color:#5b6b82">— 35 conversion methods with pros, cons and penalty exposure</span></li><li style="margin:7px 0"><a href="deep-penalty.html" style="font-weight:700;text-decoration:none">Penalty breakdown</a> <span style="color:#5b6b82">— 35 separately verifiable cost and penalty layers</span></li><li style="margin:7px 0"><a href="deep-findings.html" style="font-weight:700;text-decoration:none">Analysis</a> <span style="color:#5b6b82">— 22 sourced findings and the deep analysis</span></li><li style="margin:7px 0"><a href="deep-review.html" style="font-weight:700;text-decoration:none">Flagged for Review</a> <span style="color:#5b6b82">— 23 irregularities, each with an official source link</span></li><li style="margin:7px 0"><a href="deep-sources.html" style="font-weight:700;text-decoration:none">Official sources</a> <span style="color:#5b6b82">— 84 primary sources with verification method</span></li></ul>
-  <p style="font-size:12px;color:#7c899b;margin:14px 0 0">Also see the machine-readable data in <code>data/*.csv</code>, the memos in <code>research/</code>, and the shared task/verification log in <code>COORDINATION.md</code>.</p>
 </section>
+
+<section class="section" id="ladder">
+  <h2>What $10,000 to $400,000 costs, step by step</h2>
+  <p class="lede">Documented current-account route, priced from the 2026-11-10 07:32:39 BOC board
+  (ask 6.6903 CNY/USD, spread 0.2100%, all-in 0.5342%), the published personal wire tariff
+  and the cable charge. Spreadsheet version: <code>data/ladder_20261110.csv</code>.</p>
+  <div class="tw"><table class="tbl tbl-num"><thead><tr>
+<th>Amount</th><th>CNY needed</th><th>FX spread</th><th>Wire + cable</th><th>Total cost</th><th>% of amount</th><th>Net received</th><th>Source</th>
+</tr></thead><tbody>
+<tr><td data-l="Amount" class="num">$10,000</td><td data-l="CNY needed" class="num">¥66,903.00</td><td data-l="FX spread" class="num">$21.00</td><td data-l="Wire + cable" class="num">$32.42</td><td data-l="Total cost" class="num"><strong>$53.42</strong></td><td data-l="% of amount" class="num">0.5342%</td><td data-l="Net received" class="num">$9,946.58</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$50,000</td><td data-l="CNY needed" class="num">¥334,515.00</td><td data-l="FX spread" class="num">$105.00</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$166.28</strong></td><td data-l="% of amount" class="num">0.3326%</td><td data-l="Net received" class="num">$49,833.72</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$100,000</td><td data-l="CNY needed" class="num">¥669,030.00</td><td data-l="FX spread" class="num">$210.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$271.29</strong></td><td data-l="% of amount" class="num">0.2713%</td><td data-l="Net received" class="num">$99,728.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$200,000</td><td data-l="CNY needed" class="num">¥1,338,060.00</td><td data-l="FX spread" class="num">$420.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$481.29</strong></td><td data-l="% of amount" class="num">0.2406%</td><td data-l="Net received" class="num">$199,518.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$300,000</td><td data-l="CNY needed" class="num">¥2,007,090.00</td><td data-l="FX spread" class="num">$630.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$691.30</strong></td><td data-l="% of amount" class="num">0.2304%</td><td data-l="Net received" class="num">$299,308.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$400,000</td><td data-l="CNY needed" class="num">¥2,676,120.00</td><td data-l="FX spread" class="num">$840.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$901.30</strong></td><td data-l="% of amount" class="num">0.2253%</td><td data-l="Net received" class="num">$399,098.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+</tbody></table></div><p class="foot">Cost to the sender, China side. Full-amount-received (OUR) would add $25 per transfer so the U.S. bank does not deduct its own charge from the principal — but that charge is published in BOC's trade-finance tariff, not in the personal e-banking tariff, so treat it as optional and confirm availability with the branch. The totals above exclude it. The 40-row file <code>data/ladder_20261110.csv</code> carries the OUR column too.</p>
+  <details class="more">
+    <summary>Show all 40 rows ($10,000 → $400,000)</summary>
+    <div class="tw"><table class="tbl tbl-num"><thead><tr>
+<th>Amount</th><th>CNY needed</th><th>FX spread</th><th>Wire + cable</th><th>Total cost</th><th>% of amount</th><th>Net received</th><th>Source</th>
+</tr></thead><tbody>
+<tr><td data-l="Amount" class="num">$10,000</td><td data-l="CNY needed" class="num">¥66,903.00</td><td data-l="FX spread" class="num">$21.00</td><td data-l="Wire + cable" class="num">$32.42</td><td data-l="Total cost" class="num"><strong>$53.42</strong></td><td data-l="% of amount" class="num">0.5342%</td><td data-l="Net received" class="num">$9,946.58</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$20,000</td><td data-l="CNY needed" class="num">¥133,806.00</td><td data-l="FX spread" class="num">$42.00</td><td data-l="Wire + cable" class="num">$42.42</td><td data-l="Total cost" class="num"><strong>$84.42</strong></td><td data-l="% of amount" class="num">0.4221%</td><td data-l="Net received" class="num">$19,915.58</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$30,000</td><td data-l="CNY needed" class="num">¥200,709.00</td><td data-l="FX spread" class="num">$63.00</td><td data-l="Wire + cable" class="num">$52.42</td><td data-l="Total cost" class="num"><strong>$115.42</strong></td><td data-l="% of amount" class="num">0.3847%</td><td data-l="Net received" class="num">$29,884.58</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$40,000</td><td data-l="CNY needed" class="num">¥267,612.00</td><td data-l="FX spread" class="num">$84.00</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$145.28</strong></td><td data-l="% of amount" class="num">0.3632%</td><td data-l="Net received" class="num">$39,854.72</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$50,000</td><td data-l="CNY needed" class="num">¥334,515.00</td><td data-l="FX spread" class="num">$105.00</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$166.28</strong></td><td data-l="% of amount" class="num">0.3326%</td><td data-l="Net received" class="num">$49,833.72</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$60,000</td><td data-l="CNY needed" class="num">¥401,418.00</td><td data-l="FX spread" class="num">$126.00</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$187.28</strong></td><td data-l="% of amount" class="num">0.3121%</td><td data-l="Net received" class="num">$59,812.72</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$70,000</td><td data-l="CNY needed" class="num">¥468,321.00</td><td data-l="FX spread" class="num">$147.00</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$208.28</strong></td><td data-l="% of amount" class="num">0.2975%</td><td data-l="Net received" class="num">$69,791.72</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$80,000</td><td data-l="CNY needed" class="num">¥535,224.00</td><td data-l="FX spread" class="num">$168.00</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$229.28</strong></td><td data-l="% of amount" class="num">0.2866%</td><td data-l="Net received" class="num">$79,770.72</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$90,000</td><td data-l="CNY needed" class="num">¥602,127.00</td><td data-l="FX spread" class="num">$189.00</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$250.28</strong></td><td data-l="% of amount" class="num">0.2781%</td><td data-l="Net received" class="num">$89,749.72</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$100,000</td><td data-l="CNY needed" class="num">¥669,030.00</td><td data-l="FX spread" class="num">$210.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$271.29</strong></td><td data-l="% of amount" class="num">0.2713%</td><td data-l="Net received" class="num">$99,728.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$110,000</td><td data-l="CNY needed" class="num">¥735,933.00</td><td data-l="FX spread" class="num">$231.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$292.29</strong></td><td data-l="% of amount" class="num">0.2657%</td><td data-l="Net received" class="num">$109,707.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$120,000</td><td data-l="CNY needed" class="num">¥802,836.00</td><td data-l="FX spread" class="num">$252.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$313.29</strong></td><td data-l="% of amount" class="num">0.2611%</td><td data-l="Net received" class="num">$119,686.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$130,000</td><td data-l="CNY needed" class="num">¥869,739.00</td><td data-l="FX spread" class="num">$273.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$334.29</strong></td><td data-l="% of amount" class="num">0.2571%</td><td data-l="Net received" class="num">$129,665.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$140,000</td><td data-l="CNY needed" class="num">¥936,642.00</td><td data-l="FX spread" class="num">$294.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$355.29</strong></td><td data-l="% of amount" class="num">0.2538%</td><td data-l="Net received" class="num">$139,644.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$150,000</td><td data-l="CNY needed" class="num">¥1,003,545.00</td><td data-l="FX spread" class="num">$315.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$376.29</strong></td><td data-l="% of amount" class="num">0.2509%</td><td data-l="Net received" class="num">$149,623.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$160,000</td><td data-l="CNY needed" class="num">¥1,070,448.00</td><td data-l="FX spread" class="num">$336.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$397.29</strong></td><td data-l="% of amount" class="num">0.2483%</td><td data-l="Net received" class="num">$159,602.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$170,000</td><td data-l="CNY needed" class="num">¥1,137,351.00</td><td data-l="FX spread" class="num">$357.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$418.29</strong></td><td data-l="% of amount" class="num">0.2461%</td><td data-l="Net received" class="num">$169,581.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$180,000</td><td data-l="CNY needed" class="num">¥1,204,254.00</td><td data-l="FX spread" class="num">$378.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$439.29</strong></td><td data-l="% of amount" class="num">0.2440%</td><td data-l="Net received" class="num">$179,560.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$190,000</td><td data-l="CNY needed" class="num">¥1,271,157.00</td><td data-l="FX spread" class="num">$399.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$460.29</strong></td><td data-l="% of amount" class="num">0.2423%</td><td data-l="Net received" class="num">$189,539.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$200,000</td><td data-l="CNY needed" class="num">¥1,338,060.00</td><td data-l="FX spread" class="num">$420.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$481.29</strong></td><td data-l="% of amount" class="num">0.2406%</td><td data-l="Net received" class="num">$199,518.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$210,000</td><td data-l="CNY needed" class="num">¥1,404,963.00</td><td data-l="FX spread" class="num">$441.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$502.29</strong></td><td data-l="% of amount" class="num">0.2392%</td><td data-l="Net received" class="num">$209,497.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$220,000</td><td data-l="CNY needed" class="num">¥1,471,866.00</td><td data-l="FX spread" class="num">$462.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$523.29</strong></td><td data-l="% of amount" class="num">0.2379%</td><td data-l="Net received" class="num">$219,476.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$230,000</td><td data-l="CNY needed" class="num">¥1,538,769.00</td><td data-l="FX spread" class="num">$483.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$544.29</strong></td><td data-l="% of amount" class="num">0.2366%</td><td data-l="Net received" class="num">$229,455.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$240,000</td><td data-l="CNY needed" class="num">¥1,605,672.00</td><td data-l="FX spread" class="num">$504.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$565.29</strong></td><td data-l="% of amount" class="num">0.2355%</td><td data-l="Net received" class="num">$239,434.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$250,000</td><td data-l="CNY needed" class="num">¥1,672,575.00</td><td data-l="FX spread" class="num">$525.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$586.29</strong></td><td data-l="% of amount" class="num">0.2345%</td><td data-l="Net received" class="num">$249,413.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$260,000</td><td data-l="CNY needed" class="num">¥1,739,478.00</td><td data-l="FX spread" class="num">$546.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$607.29</strong></td><td data-l="% of amount" class="num">0.2336%</td><td data-l="Net received" class="num">$259,392.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$270,000</td><td data-l="CNY needed" class="num">¥1,806,381.00</td><td data-l="FX spread" class="num">$567.01</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$628.29</strong></td><td data-l="% of amount" class="num">0.2327%</td><td data-l="Net received" class="num">$269,371.71</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$280,000</td><td data-l="CNY needed" class="num">¥1,873,284.00</td><td data-l="FX spread" class="num">$588.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$649.30</strong></td><td data-l="% of amount" class="num">0.2319%</td><td data-l="Net received" class="num">$279,350.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$290,000</td><td data-l="CNY needed" class="num">¥1,940,187.00</td><td data-l="FX spread" class="num">$609.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$670.30</strong></td><td data-l="% of amount" class="num">0.2311%</td><td data-l="Net received" class="num">$289,329.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$300,000</td><td data-l="CNY needed" class="num">¥2,007,090.00</td><td data-l="FX spread" class="num">$630.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$691.30</strong></td><td data-l="% of amount" class="num">0.2304%</td><td data-l="Net received" class="num">$299,308.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$310,000</td><td data-l="CNY needed" class="num">¥2,073,993.00</td><td data-l="FX spread" class="num">$651.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$712.30</strong></td><td data-l="% of amount" class="num">0.2298%</td><td data-l="Net received" class="num">$309,287.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$320,000</td><td data-l="CNY needed" class="num">¥2,140,896.00</td><td data-l="FX spread" class="num">$672.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$733.30</strong></td><td data-l="% of amount" class="num">0.2292%</td><td data-l="Net received" class="num">$319,266.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$330,000</td><td data-l="CNY needed" class="num">¥2,207,799.00</td><td data-l="FX spread" class="num">$693.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$754.30</strong></td><td data-l="% of amount" class="num">0.2286%</td><td data-l="Net received" class="num">$329,245.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$340,000</td><td data-l="CNY needed" class="num">¥2,274,702.00</td><td data-l="FX spread" class="num">$714.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$775.30</strong></td><td data-l="% of amount" class="num">0.2280%</td><td data-l="Net received" class="num">$339,224.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$350,000</td><td data-l="CNY needed" class="num">¥2,341,605.00</td><td data-l="FX spread" class="num">$735.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$796.30</strong></td><td data-l="% of amount" class="num">0.2275%</td><td data-l="Net received" class="num">$349,203.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$360,000</td><td data-l="CNY needed" class="num">¥2,408,508.00</td><td data-l="FX spread" class="num">$756.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$817.30</strong></td><td data-l="% of amount" class="num">0.2270%</td><td data-l="Net received" class="num">$359,182.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$370,000</td><td data-l="CNY needed" class="num">¥2,475,411.00</td><td data-l="FX spread" class="num">$777.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$838.30</strong></td><td data-l="% of amount" class="num">0.2266%</td><td data-l="Net received" class="num">$369,161.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$380,000</td><td data-l="CNY needed" class="num">¥2,542,314.00</td><td data-l="FX spread" class="num">$798.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$859.30</strong></td><td data-l="% of amount" class="num">0.2261%</td><td data-l="Net received" class="num">$379,140.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$390,000</td><td data-l="CNY needed" class="num">¥2,609,217.00</td><td data-l="FX spread" class="num">$819.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$880.30</strong></td><td data-l="% of amount" class="num">0.2257%</td><td data-l="Net received" class="num">$389,119.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+<tr><td data-l="Amount" class="num">$400,000</td><td data-l="CNY needed" class="num">¥2,676,120.00</td><td data-l="FX spread" class="num">$840.02</td><td data-l="Wire + cable" class="num">$61.28</td><td data-l="Total cost" class="num"><strong>$901.30</strong></td><td data-l="% of amount" class="num">0.2253%</td><td data-l="Net received" class="num">$399,098.70</td><td data-l="Source"><a class="src" href="https://www.boc.cn/sourcedb/whpj/" target="_blank" rel="noopener">board<span class="sr"> — 中国银行外汇牌价 (BOC FX board)</span></a> <a class="src" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">tariff<span class="sr"> — 中国银行电子银行个人服务转账汇款费率表</span></a></td></tr>
+</tbody></table></div><p class="foot">Cost to the sender, China side. Full-amount-received (OUR) would add $25 per transfer so the U.S. bank does not deduct its own charge from the principal — but that charge is published in BOC's trade-finance tariff, not in the personal e-banking tariff, so treat it as optional and confirm availability with the branch. The totals above exclude it.</p>
+  </details>
+</section>
+
+<section class="section" id="methods">
+  <h2>Every method, at three amounts</h2>
+  <p class="lede">Sixteen routes, all 40 amounts each on the full page. “Blank” means no official source publishes
+  the number — it is not zero. Prohibited routes are listed so that they can be recognised and refused, not used.</p>
+  <div class="tw"><table class="tbl"><thead><tr>
+<th>#</th><th>Method</th><th>Legal status</th><th>$10k</th><th>$100k</th><th>$400k</th><th>Time</th><th>Status</th><th>Source</th>
+</tr></thead><tbody>
+<tr><td data-l="#" class="num">1</td><td data-l="Method">Foreign individual: tax-paid salary / lawful current-account income → BOC USD wire<br><span class="mini">Usually best for a foreign-passport holder whose RMB is lawful, tax-paid income</span></td><td data-l="Legal status">Lawful when documented</td><td data-l="$10k" class="num">$53.42</td><td data-l="$100k" class="num">$271.29</td><td data-l="$400k" class="num">$901.30</td><td data-l="Time">1 yr</td><td data-l="Status"><span class="badge badge-ok">sourced</span></td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/tianjin/2026/0713/3088.html" target="_blank" rel="noopener">S436-08</a></td></tr>
+<tr><td data-l="#" class="num">2</td><td data-l="Method">Emigrant property transfer after local SAFE evidence review<br><span class="mini">Can be a single remittance; the old 2-year staging and RMB 500k SAFE-HQ filing were removed</span></td><td data-l="Legal status">Lawful when approved/documented</td><td data-l="$10k" class="num">$53.42</td><td data-l="$100k" class="num">$271.29</td><td data-l="$400k" class="num">$901.30</td><td data-l="Time">1 yr</td><td data-l="Status"><span class="badge badge-ok">sourced</span></td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" target="_blank" rel="noopener">S436-11</a></td></tr>
+<tr><td data-l="#" class="num">3</td><td data-l="Method">PRC resident annual USD 50,000 convenience amount<br><span class="mini">Simple when the account holder is classified as a resident and amount fits the annual quota</span></td><td data-l="Legal status">Lawful, conditional</td><td data-l="$10k" class="num">$53.42</td><td data-l="$100k" class="num">$332.57</td><td data-l="$400k" class="num">$1,330.28</td><td data-l="Time">8 yr</td><td data-l="Status"><span class="badge badge-ok">sourced</span></td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener">S436-14</a></td></tr>
+<tr><td data-l="#" class="num">4</td><td data-l="Method">Tax-recorded mainland property-sale proceeds → USD wire<br><span class="mini">One documented remittance can be possible; transfer itself is not a new conversion tax</span></td><td data-l="Legal status">Lawful when documented</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">1 yr</td><td data-l="Status"><span class="badge badge-blank">unverified</span></td><td data-l="Source"><a class="src" href="https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html" target="_blank" rel="noopener">S436-09</a></td></tr>
+<tr><td data-l="#" class="num">5</td><td data-l="Method">PRC-company dividend / profit distribution to U.S. owner<br><span class="mini">Formal capital-account route; treaty may limit dividend withholding</span></td><td data-l="Legal status">Lawful when company and tax documents qualify</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">1 yr</td><td data-l="Status"><span class="badge badge-blank">unverified</span></td><td data-l="Source"><a class="src" href="https://www.boc.cn/cbservice/bi2/201711/t20171109_10646775.html" target="_blank" rel="noopener">S436-03</a></td></tr>
+<tr><td data-l="#" class="num">6</td><td data-l="Method">Re-convert unused RMB against original FX exchange memo<br><span class="mini">Can avoid the resident convenience-amount problem when the original inbound exchange and time limit are evidenced</span></td><td data-l="Legal status">Lawful, narrow</td><td data-l="$10k" class="num">$53.42</td><td data-l="$100k" class="num">$271.29</td><td data-l="$400k" class="num">$901.30</td><td data-l="Time">1 yr</td><td data-l="Status"><span class="badge badge-ok">sourced</span></td><td data-l="Source"><a class="src" href="https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm" target="_blank" rel="noopener">S436-07</a></td></tr>
+<tr><td data-l="#" class="num">7</td><td data-l="Method">Wire USD already held in a China foreign-currency savings account<br><span class="mini">No CNY→USD conversion spread on the USD balance</span></td><td data-l="Legal status">Lawful when account/remittance evidence accepted</td><td data-l="$10k" class="num">$32.42</td><td data-l="$100k" class="num">$61.28</td><td data-l="$400k" class="num">$61.28</td><td data-l="Time">1 yr</td><td data-l="Status"><span class="badge badge-ok">sourced</span></td><td data-l="Source"><a class="src" href="https://www.gov.cn/zhengce/2006-11/30/content_5712728.htm" target="_blank" rel="noopener">S436-07</a></td></tr>
+<tr><td data-l="#" class="num">8</td><td data-l="Method">Documented CNY cross-border remittance to Hong Kong / offshore CNH then USD<br><span class="mini">May be relevant only where a lawful RMB remittance and offshore account are independently available</span></td><td data-l="Legal status">Conditional / quote unavailable</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">n/a</td><td data-l="Status"><span class="badge badge-blank">unverified</span></td><td data-l="Source"><a class="src" href="https://www.hkma.gov.hk/media/eng/publication-and-research/quarterly-bulletin/qb202503/E_Half-yearly_202503.pdf" target="_blank" rel="noopener">S436-30</a></td></tr>
+<tr><td data-l="#" class="num">9</td><td data-l="Method">China-issued UnionPay debit-card overseas POS spending<br><span class="mini">Can pay foreign merchants; named BOC multi-currency card advertises 0% conversion fee</span></td><td data-l="Legal status">Lawful spending, not USD transfer</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">n/a</td><td data-l="Status"><span class="badge badge-blank">unverified</span></td><td data-l="Source"><a class="src" href="https://www.boc.cn/bcservice/bc2/201704/t20170426_9329829.html" target="_blank" rel="noopener">S436-05</a></td></tr>
+<tr><td data-l="#" class="num">10</td><td data-l="Method">China-issued UnionPay card overseas ATM cash withdrawal<br><span class="mini">Official BOC per-withdrawal fee is published</span></td><td data-l="Legal status">Lawful but impractical</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">27 yr</td><td data-l="Status"><span class="badge badge-blank">unverified</span></td><td data-l="Source"><a class="src" href="https://www.boc.cn/pbservice/bi2/202608/t20260811_25684907.html" target="_blank" rel="noopener">S436-04</a></td></tr>
+<tr><td data-l="#" class="num">11</td><td data-l="Method">China-issued Visa / Mastercard debit card overseas ATM cash withdrawal<br><span class="mini">Published BOC fee schedule effective 2026-11-11 exists</span></td><td data-l="Legal status">Lawful but impractical</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">n/a</td><td data-l="Status"><span class="badge badge-blank">unverified</span></td><td data-l="Source"><a class="src" href="https://www.boc.cn/pbservice/bi2/202608/t20260811_25684907.html" target="_blank" rel="noopener">S436-04</a></td></tr>
+<tr><td data-l="#" class="num">12</td><td data-l="Method">Buy USD and carry it physically with required Chinese permit / U.S. CMIR<br><span class="mini">Avoids wire fees if travel is already necessary</span></td><td data-l="Legal status">Lawful only within cash-control rules</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">1 yr</td><td data-l="Status"><span class="badge badge-blank">unverified</span></td><td data-l="Source"><a class="src" href="http://www.safe.gov.cn/hebei/2019/0521/1366.html" target="_blank" rel="noopener">S436-36</a></td></tr>
+<tr><td data-l="#" class="num">13</td><td data-l="Method">Licensed fintech/payment-institution outward service<br><span class="mini">Potentially convenient if a licensed provider accepts the person and purpose</span></td><td data-l="Legal status">Conditional / quote unavailable</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">n/a</td><td data-l="Status"><span class="badge badge-blank">unverified</span></td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/guangdong/2020/0304/1668.html" target="_blank" rel="noopener">S436-31</a></td></tr>
+<tr><td data-l="#" class="num">14</td><td data-l="Method">Use relatives’ quotas / split transactions<br><span class="mini">None</span></td><td data-l="Legal status">Prohibited</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">1 yr</td><td data-l="Status"><span class="badge badge-no">prohibited</span></td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/safe/2008/0806/5321.html" target="_blank" rel="noopener">S436-15</a></td></tr>
+<tr><td data-l="#" class="num">15</td><td data-l="Method">Underground bank / OTC matched orders<br><span class="mini">None</span></td><td data-l="Legal status">Prohibited; potentially criminal</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">1 yr</td><td data-l="Status"><span class="badge badge-no">prohibited</span></td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/safe/2008/0806/5321.html" target="_blank" rel="noopener">S436-15</a></td></tr>
+<tr><td data-l="#" class="num">16</td><td data-l="Method">Convert CNY to USDT/other virtual currency then sell overseas<br><span class="mini">None</span></td><td data-l="Legal status">Prohibited</td><td data-l="$10k" class="num"><span class="blank">blank</span></td><td data-l="$100k" class="num"><span class="blank">blank</span></td><td data-l="$400k" class="num"><span class="blank">blank</span></td><td data-l="Time">n/a</td><td data-l="Status"><span class="badge badge-blank">unverified</span></td><td data-l="Source"><a class="src" href="https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html" target="_blank" rel="noopener">S436-17</a></td></tr>
+</tbody></table></div>
+  <p class="foot"><a href="schedule-cost-10k-400k.html">All 640 rows →</a> ·
+  <a href="cost-tables.html">Cost tables with per-route step-by-step →</a> ·
+  <a href="deep-channels.html">35 channels with pros and cons →</a></p>
+</section>
+
+<section class="section" id="penalties">
+  <h2>Where the “tax penalty” actually comes from</h2>
+  <p class="lede">Seven separate charges get conflated into one scary number. They apply to different things and
+  most of them are avoidable by reporting correctly.</p>
+  <div class="tw"><table class="tbl"><thead><tr>
+<th>Charge</th><th>Amount</th><th>What it actually applies to</th><th>Source</th></tr></thead><tbody>
+<tr><td data-l="Charge"><strong>PRC income tax on the source of the money</strong></td><td data-l="Amount">20% flat</td><td data-l="What it applies to">Property transfer, interest, rent, dividends, incidental income. A rate, not an amount: the tax base depends on the individual transaction.</td><td data-l="Source"><a class="src" href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">chinatax<span class="sr"> — 中华人民共和国个人所得税法 第三条</span></a></td></tr>
+<tr><td data-l="Charge"><strong>PRC tax already deducted at source</strong></td><td data-l="Amount">already paid</td><td data-l="What it applies to">If the 20% (or salary tax) was withheld when you earned or sold, converting the after-tax balance does not tax it again.</td><td data-l="Source"><a class="src" href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">chinatax<span class="sr"> — 中华人民共和国个人所得税法 第三条</span></a></td></tr>
+<tr><td data-l="Charge"><strong>U.S. income tax on receipt of your own money</strong></td><td data-l="Amount">no tax on principal</td><td data-l="What it applies to">Moving your own after-tax savings is not income. What is taxable is unreported income that created the balance, or currency gain above the §988 personal-transaction threshold.</td><td data-l="Source"><a class="src" href="https://www.law.cornell.edu/uscode/text/26/988" target="_blank" rel="noopener">26 USC 988<span class="sr"> — 26 U.S.C. § 988(e)(2)</span></a></td></tr>
+<tr><td data-l="Charge"><strong>FBAR — non-willful</strong></td><td data-l="Amount">$16,536 per violation (max)</td><td data-l="What it applies to">Inflation-adjusted ceiling for penalties assessed on or after 2025-01-17. Reasonable cause can eliminate it entirely.</td><td data-l="Source"><a class="src" href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">eCFR<span class="sr"> — 31 CFR 1010.821 (Table 1)</span></a></td></tr>
+<tr><td data-l="Charge"><strong>FBAR — willful</strong></td><td data-l="Amount">greater of $165,353 or 50% of balance</td><td data-l="What it applies to">On a $400,000 balance the 50% branch yields $200,000. This, not the exchange rate, is the number that should drive the plan.</td><td data-l="Source"><a class="src" href="https://www.law.cornell.edu/uscode/text/31/5321" target="_blank" rel="noopener">31 USC 5321<span class="sr"> — 31 U.S.C. § 5321(a)(5)(C)</span></a></td></tr>
+<tr><td data-l="Charge"><strong>Form 8938 (FATCA)</strong></td><td data-l="Amount">no tax; reporting only</td><td data-l="What it applies to">Filed with the return when the threshold is met. USD 50,000 year-end / 75,000 any time for an unmarried filer living in the U.S.</td><td data-l="Source"><a class="src" href="https://www.irs.gov/businesses/corporations/summary-of-fatca-reporting-for-us-taxpayers" target="_blank" rel="noopener">irs.gov<span class="sr"> — Summary of FATCA reporting for U.S. taxpayers</span></a></td></tr>
+<tr><td data-l="Charge"><strong>Prohibited Chinese FX routes</strong></td><td data-l="Amount">up to 30% of the amount</td><td data-l="What it applies to">State Council Order 532 arts. 39 and 45: an administrative fine of 30% or less of the amount for an ordinary case, rising to 30%–100% of the amount where the case is serious, plus confiscation of illegal gains and criminal liability. Not a floor of 30%.</td><td data-l="Source"><a class="src" href="https://www.safe.gov.cn/safe/2008/0806/5321.html" target="_blank" rel="noopener">safe.gov.cn<span class="sr"> — 中华人民共和国外汇管理条例 国务院令第532号 (arts. 39 and 45)</span></a></td></tr>
+</tbody></table></div>
+</section>
+
+
+<section class="section" id="correction">
+  <h2>Correction published with this dashboard</h2>
+  <div class="callout warn">
+    <p><strong>The emigrant property transfer is no longer remitted in stages.</strong>
+    PBC Order [2004] No. 16 art. 6 says an emigrant applies once for the whole estate and receives it in
+    stages: half, then half the remainder after a year, then the rest after two years (<a class="src" href="http://m.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener">2004 text<span class="sr"> — 中国人民银行公告[2004]第16号</span></a>).
+    The later SAFE circular 汇发〔2014〕2号 §6(2) expressly cancels that requirement —
+    <q>取消移民财产转移分次汇出的要求 … 可一次或分次汇出</q> (<a class="src" href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" target="_blank" rel="noopener">2014 circular<span class="sr"> — （已修改）国家外汇管理局关于进一步改进和调整资本项目外汇管理政策的通知 汇发〔2014〕2号</span></a>) — and §6(1) of the
+    same circular cancels the over-RMB-500,000 head-office filing.
+    </p>
+    <p>The cost model on <a href="cost-tables.html">cost-tables.html</a> prices route M03 as three separate FX
+    purchases, which is how it reaches $1,025.39 at $400,000. On the law as it now reads, that route costs the
+    same as any other single documented wire — <strong>$901.30</strong>
+    at today's board on $400,000, before the optional $25 OUR charge. The M03 row has been left as published
+    (it is a faithful price of the 2004 text) and is listed with this correction on
+    <a href="verify-2026.html#corrections">Verify 2026</a> and in <code>COORDINATION.md</code>.</p>
+  </div>
+</section>
+
+<section class="section" id="pages">
+  <h2>Every page, by category</h2>
+  <p class="lede">Earlier sessions produced several parallel passes over the same brief. Nothing was deleted;
+  the canonical page for each topic is listed first, the parallel passes follow it.</p>
+  <div class="cards cards-nav">
+<a class="card card-link" href="cost-tables.html"><div class="card-k">Cost tables <span class="badge badge-new">canonical</span></div><p>Every route at every $10,000 step</p><span class="go">Open →</span></a>
+<a class="card card-link" href="schedule-cost-10k-400k.html"><div class="card-k">All 640 rows </div><p>16 methods × 40 amounts, filterable</p><span class="go">Open →</span></a>
+<a class="card card-link" href="deep-channels.html"><div class="card-k">Methods &amp; pros/cons </div><p>35 channels with the legal status of each</p><span class="go">Open →</span></a>
+<a class="card card-link" href="schedule-steps.html"><div class="card-k">Step-by-step </div><p>Copy-ready procedure per route</p><span class="go">Open →</span></a>
+<a class="card card-link" href="deep-china-rules.html"><div class="card-k">China rules </div><p>SAFE / PBOC instruments, article by article</p><span class="go">Open →</span></a>
+<a class="card card-link" href="deep-us-tax.html"><div class="card-k">U.S. tax </div><p>FBAR, 8938, FEIE, §988, treaty</p><span class="go">Open →</span></a>
+<a class="card card-link" href="deep-penalty.html"><div class="card-k">Penalties </div><p>Each penalty layer with its ceiling</p><span class="go">Open →</span></a>
+<a class="card card-link" href="verify-2026.html"><div class="card-k">Verify 2026 <span class="badge badge-new">new</span></div><p>What this session re-checked, with quotes</p><span class="go">Open →</span></a>
+<a class="card card-link" href="final-verification.html"><div class="card-k">Final integration <span class="badge badge-new">new</span></div><p>Independent 640-row audit and corrections</p><span class="go">Open →</span></a>
+<a class="card card-link" href="a15-review.html"><div class="card-k">Safety review </div><p>Independent spot checks and their cautions</p><span class="go">Open →</span></a>
+<a class="card card-link" href="deep-review.html"><div class="card-k">Flagged for review </div><p>Everything left blank, with the reason</p><span class="go">Open →</span></a>
+<a class="card card-link" href="deep-sources.html"><div class="card-k">Sources </div><p>85 official pages, by issuer</p><span class="go">Open →</span></a>
+<a class="card card-link" href="guide.html"><div class="card-k">Narrative guide </div><p>The earlier editorial passes, preserved</p><span class="go">Open →</span></a>
+<a class="card card-link" href="docs/index.html"><div class="card-k">Data dashboard </div><p>Structured data + calculator</p><span class="go">Open →</span></a>
+<a class="card card-link" href="us-fx-gain.html"><div class="card-k">U.S. §988 FX-gain <span class="badge badge-new">new</span></div><p>The missing cost line: potential U.S. currency gain, $10k–$400k</p><span class="go">Open →</span></a>
+</div>
+  <details class="more">
+    <summary>Parallel passes that were kept (and how they differ)</summary>
+    <ul class="tight">
+      <li><a href="methods.html">methods.html</a>, <a href="routes.html">routes.html</a> — the first 11-method and
+          8-route passes; superseded by <code>deep-channels.html</code> (35 channels) but kept for provenance.</li>
+      <li><a href="schedule-dashboard.html">schedule-dashboard.html</a> — refreshed 2026-11-10 schedule with 640 rows;
+          its personal-wire totals now exclude the corporate OUR charge.</li>
+      <li><a href="costs.html">costs.html</a> / <a href="cost-review.html">cost-review.html</a> — a 1,400-row grid
+          that deliberately leaves every price blank instead of assuming a rate.</li>
+      <li><a href="cross-session-review.html">cross-session-review.html</a> — an independent reconciliation of the
+          parallel sessions' numbers, including the U.S. currency-gain question.</li>
+      <li><a href="us-fx-gain.html">us-fx-gain.html</a> — the §988 currency-gain line no earlier cost model priced;
+          a $10,000–$400,000 ladder derived from recorded official values (IRS yearly averages, dated BOC board,
+          26 U.S.C. §988).</li>
+      <li><a href="flagged-review.html">flagged-review.html</a>, <a href="schedule-flagged-review.html">schedule-flagged-review.html</a>,
+          <a href="cost-review.html">cost-review.html</a>, <a href="review.html">review.html</a> — four separate flag
+          registers, all preserved. <a href="deep-review.html">deep-review.html</a> is the consolidated one.</li>
+    </ul>
+  </details>
+</section>
+
+<section class="section" id="verification">
+  <h2>Verification performed in this session</h2>
+  <p class="lede">Every figure on this page comes from one of 17 records in
+  <code>data/verify_2026.csv</code>, each with the official URL, the verbatim text and the fetch timestamp.
+  <a href="verify-2026.html">Open the verification register</a> — or check it yourself with
+  <code>python3 scripts/verify_dashboard.py</code>, which re-derives the ladder, re-checks every row's source
+  domains and confirms every local link resolves.</p>
+  <ul class="tight">
+    <li>Re-read in full during this pass: the BOC board and personal/corporate tariffs, SAFE Ningxia 2022 Q&amp;A,
+        SAFE 汇发〔2014〕2号, PBC [2004] No.16, eCFR 1010.821, 31 U.S.C. §5321, 26 U.S.C. §988, the IRS FATCA
+        summary and IRS IR-2025-103, and the PRC Individual Income Tax Law art. 3.</li>
+    <li>Two prior-session findings were corrected or superseded (emigrant staging, 2025-only tax figures); both
+        are recorded below and on the verification page.</li>
+    <li>Two parallel cost models disagree by $0.05 at $10,000 because they divide the same spread by different
+        denominators (ask vs midpoint). The reconciliation is shown on
+        <a href="cross-session-review.html">cross-session-review.html</a>; neither figure is presented here.</li>
+  </ul>
+</section>
+
+
+<section class="section" id="limits">
+  <h2>What is still blank, and why</h2>
+  <p class="lede">Nothing below is estimated or filled with an industry average. Each item stays blank and is
+  listed on the <a href="deep-review.html">Flagged for Review</a> page with the official source a bank visit
+  should resolve it against.</p>
+  <ul class="tight">
+    <li><strong>Other banks' spreads.</strong> The 0.2100% here is one BOC board reading at one timestamp. ICBC,
+        CMB and the rest publish their own; so does your branch on the day.</li>
+    <li><strong>Receiving and correspondent fees.</strong> A U.S. bank's incoming-wire fee and any intermediary
+        deduction are blank. BOC's USD 25 (or USD 15 via its New York branch) full-amount-received charge is
+        published only in its trade-finance tariff and is not shown as included here.</li>
+    <li><strong>The separate questions raised by the <a href="a15-review.html">safety review</a></strong> — whether
+        the convenience amount applies to you at all, what your CNY cost basis is for §988, and whether late
+        FBAR years need a corrective procedure — are fact-specific and left open.</li>
+    <li><strong>The tax base on a property sale.</strong> The 20% rate is verified; the deductible-cost and
+        valuation rules that produce the base are transaction-specific.</li>
+    <li><strong>Eligibility.</strong> Whether your balance qualifies as documented current-account income,
+        emigrant property or something else is a bank/SAFE determination on documents this research does not have.</li>
+    <li><strong>Current CNH basis and card-network rates.</strong> No official retail quotation exists to price them.</li>
+  </ul>
+</section>
+
+<section class="section" id="research">
+  <h2>Research &amp; documentation</h2>
+  <ul class="tight">
+    <li>Full research with citations: <a href="research/cny-usd-conversion-research.md">research/cny-usd-conversion-research.md</a></li>
+    <li>Official-source executive summaries: <a href="research/s436-executive-summary.md">research/s436-executive-summary.md</a> and <a href="research/analysis.md">research/analysis.md</a></li>
+    <li>2026 cost methodology and audit: <a href="research/s436-cost-methodology.md">research/s436-cost-methodology.md</a>, <a href="research/cost-audit.md">research/cost-audit.md</a>, <a href="research/cross-session-review.md">research/cross-session-review.md</a></li>
+    <li>Executive summary (editorial): <a href="docs/executive-summary.md">docs/executive-summary.md</a></li>
+    <li>U.S. §988 currency-gain exposure (X-11): <a href="us-fx-gain.html">us-fx-gain.html</a> — $10,000–$400,000 ladder with sources</li>
+    <li>Final-integration audit and verification: <a href="research/final-integration-audit.md">research/final-integration-audit.md</a></li>
+    <li>Shared task board: <a href="COORDINATION.md">COORDINATION.md</a></li>
+    <li>Structured data pack: <a href="data/channels.json">data/channels.json</a> and the other <code>data/*.csv|json</code> registers</li>
+    <li>Local checks: <code>scripts/validate_data.py</code>, <code>scripts/check_links.py</code>, <code>scripts/verify_deep.py</code>, <code>scripts/verify_cost_tables.py</code>, <code>scripts/verify_s436_site.py</code></li>
+  </ul>
+  <p class="lede">Scope: mainland-China bank account to U.S. destination. Source-based general research, not legal, tax, or bank advice. Rules and bank implementation may change; confirm with the bank/SAFE and qualified counsel before acting. Amount, province, residency status, account-holder status, source of funds and bank details were not supplied, so no personalized route or tax figure can be confirmed.</p>
+</section>
+
+</main>
+
+<footer class="foot-main">
+  <div class="wrap">
+    <p><strong>Research, not advice.</strong> Rules, rates and bank practice change; the board reading here is a
+    timestamped snapshot, not a quote. Confirm the route and documents with the holding bank and a qualified
+    cross-border tax adviser before transferring.</p>
+    <p class="mini">Sources: boc.cn · safe.gov.cn · pbc.gov.cn · chinatax.gov.cn · irs.gov · fincen.gov · ecfr.gov ·
+    law.cornell.edu. Full register: <a href="deep-sources.html">deep-sources.html</a>. Data: <code>data/verify_2026.csv</code>,
+    <code>data/ladder_20261110.csv</code>, <code>data/live_rate_20261110.csv</code>. Task board:
+    <a href="COORDINATION.md">COORDINATION.md</a>.</p>
+  </div>
+</footer>
 </body>
 </html>
