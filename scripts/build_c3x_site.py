@@ -40,6 +40,14 @@ ASK = E.ASK
 SPREAD = E.spread_pct() * 100
 
 
+def fm(v: str) -> str:
+    """Format a numeric CSV string for display: thousands separators, two decimals."""
+    try:
+        return f"{D(v):,.2f}"
+    except Exception:
+        return v
+
+
 def esc(t: str) -> str:
     return html.escape(t, quote=False)
 
@@ -250,10 +258,10 @@ def build_summary() -> str:
     anchors = ["10000", "50000", "100000", "200000", "300000", "400000"]
     anchor_rows = "\n".join(
         f"<tr><td data-label=\"Amount\">${int(a):,}</td>"
-        f"<td class=\"num\" data-label=\"One transfer\">${next(r['single_total_usd'] for r in LADDER if r['amount_usd']==a)}</td>"
+        f"<td class=\"num\" data-label=\"One transfer\">${fm(next(r['single_total_usd'] for r in LADDER if r['amount_usd']==a))}</td>"
         f"<td class=\"num\" data-label=\"% of amount\">{next(r['single_total_pct'] for r in LADDER if r['amount_usd']==a)}%</td>"
-        f"<td class=\"num\" data-label=\"Split at $50k\">${next(r['staged_total_usd'] for r in LADDER if r['amount_usd']==a)}</td>"
-        f"<td class=\"num\" data-label=\"U.S. §988 tax @37%\">${next(r['sec988_tax_37_usd'] for r in LADDER if r['amount_usd']==a)}</td>"
+        f"<td class=\"num\" data-label=\"Split at $50k\">${fm(next(r['staged_total_usd'] for r in LADDER if r['amount_usd']==a))}</td>"
+        f"<td class=\"num\" data-label=\"U.S. §988 tax @37%\">${fm(next(r['sec988_tax_37_usd'] for r in LADDER if r['amount_usd']==a))}</td>"
         f"<td data-label=\"Source\">{link('S01|S02|S09')}</td></tr>"
         for a in anchors
     )
@@ -297,7 +305,7 @@ def build_summary() -> str:
       <div class="n">{top['single_total_pct']}% · spread ${top['spread_usd']} + fee ${top['fee_usd']}</div></div>
     <div class="card"><div class="k">Bank cost, $400,000</div><div class="v">${big['single_total_usd']}</div>
       <div class="n">{big['single_total_pct']}% · one transfer</div></div>
-    <div class="card"><div class="k">Split into 8 wires</div><div class="v">${big['staged_total_usd']}</div>
+    <div class="card"><div class="k">Split into 8 wires</div><div class="v">${fm(big['staged_total_usd'])}</div>
       <div class="n">{big['staged_total_pct']}% · the expensive assumption</div></div>
     <div class="card neg"><div class="k">U.S. §988 tax, $400,000 @37%</div><div class="v">${tax24:,.0f}</div>
       <div class="n">if the CNY was acquired at the 2024 average</div></div>
@@ -393,12 +401,12 @@ def build_costs() -> str:
         rows.append(
             f"<tr><td data-label=\"Amount\">${int(r['amount_usd']):,}</td>"
             f"<td class=\"num\" data-label=\"CNY to buy\">{float(r['cny_needed']):,.2f}</td>"
-            f"<td class=\"num\" data-label=\"Spread\">${r['spread_usd']}</td>"
-            f"<td class=\"num\" data-label=\"Bank fee\">¥{r['fee_cny']} = ${r['fee_usd']}</td>"
-            f"<td class=\"num\" data-label=\"One transfer\">${r['single_total_usd']}</td>"
+            f"<td class=\"num\" data-label=\"Spread\">${fm(r['spread_usd'])}</td>"
+            f"<td class=\"num\" data-label=\"Bank fee\">¥{fm(r['fee_cny'])} = ${fm(r['fee_usd'])}</td>"
+            f"<td class=\"num\" data-label=\"One transfer\">${fm(r['single_total_usd'])}</td>"
             f"<td class=\"num\" data-label=\"%\">{r['single_total_pct']}%</td>"
-            f"<td class=\"num\" data-label=\"Split at $50k\">{r['staged_wires']} × → ${r['staged_total_usd']}</td>"
-            f"<td class=\"num\" data-label=\"U.S. §988 @37%\">${r['sec988_tax_37_usd']}</td>"
+            f"<td class=\"num\" data-label=\"Split at $50k\">{r['staged_wires']} × → ${fm(r['staged_total_usd'])}</td>"
+            f"<td class=\"num\" data-label=\"U.S. §988 @37%\">${fm(r['sec988_tax_37_usd'])}</td>"
             f"<td data-label=\"Source\">{link('S01|S02|S09')}</td></tr>"
         )
 
@@ -410,7 +418,7 @@ def build_costs() -> str:
         for a in anchors:
             g = next(x for x in GRID if x["method_id"] == m["id"] and x["amount_usd"] == a)
             if g["cost_usd"]:
-                cells.append(f'<td class="num" data-label="${int(a):,}">${g["cost_usd"]}<br><span class="foot">{g["cost_pct"]}%</span></td>')
+                cells.append(f'<td class="num" data-label="${int(a):,}">${fm(g["cost_usd"])}<br><span class="foot">{g["cost_pct"]}%</span></td>')
             else:
                 cells.append(f'<td class="num" data-label="${int(a):,}"><span class="blank">blank</span><br><a class="flag" href="c3x-flagged.html#{g["flag"]}">{g["flag"]}</a></td>')
         badge = {"Lawful": "ok", "Prohibited": "no"}.get(m["lawfulness"].split(",")[0], "mid")
