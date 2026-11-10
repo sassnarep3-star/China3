@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification log · China3</title>
+<meta name="description" content="Verified, official-source guide to converting CNY to USD and moving it to the United States.">
+<link rel="stylesheet" href="assets/d646.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="mark">C3</div>
+    <div>China3 · Money out of China
+      <div class="sub">Verified 2026-11-10 · every figure carries an official source link or is blank and flagged</div>
+    </div>
+  </div>
+</header>
+<nav>
+  <a href="d646-summary.html">Start here</a>
+  <a href="d646-methods.html">All methods</a>
+  <a href="d646-costs.html">$10k–$400k costs</a>
+  <a href="d646-penalty.html">Tax &amp; penalties</a>
+  <a href="d646-verification.html" class="on">Verification log</a>
+  <a href="d646-flagged.html">Flagged for review</a>
+  <a href="d646-sources.html">Sources</a>
+  <a href="index.html">Full archive</a>
+</nav>
+<main>
+
+
+<h1>Line-by-line verification</h1>
+<p class="lead">Each source below was fetched and read on 2026-11-10. The quoted text is copied from the page,
+not summarised. Anything that could not be confirmed from an official source is blank and listed on
+<a href="d646-flagged.html">Flagged for review</a>.</p>
+
+<div class="cards">
+  <div class="card"><div class="k">Official documents read</div><div class="v">21</div>
+    <div class="n">SAFE, PBOC, STA, BOC, IRS, FinCEN/eCFR, CBP, govinfo</div></div>
+  <div class="card"><div class="k">Ladder rows re-derived</div><div class="v">40</div>
+    <div class="n">40 amounts × every published component</div></div>
+  <div class="card"><div class="k">Rows left blank</div><div class="v">44</div>
+    <div class="n">Intermediary and receiving-bank fees, card ATM fees</div></div>
+  <div class="card"><div class="k">Flagged items</div><div class="v">16</div>
+    <div class="n">Published with source links, non-blocking</div></div>
+</div>
+
+<h2>How each figure was checked</h2>
+<ol class="steps">
+  <li><strong>Arithmetic is re-derived in code.</strong> <code>scripts/build_d646_site.py</code> computes every
+      spread, tariff, gain and tax from the constants at the top of the file; no total is typed by hand.</li>
+  <li><strong><code>scripts/verify_d646_site.py</code> recomputes them independently</strong> and fails the build
+      if any printed number disagrees, if a data row has no official URL, or if a blank cell contains a value.</li>
+  <li><strong>Every quoted figure appears verbatim</strong> in the source table below, with the URL it came from.</li>
+  <li><strong>Hand-checked reference points:</strong> USD 10,000 spread $21.04;
+      USD 400,000 known bank cost $1,332.05;
+      USD 10,000 §988 gain $693.70.</li>
+</ol>
+
+<h2>Source register</h2>
+<p>Full detail, with verbatim excerpts, on <a href="d646-sources.html">Sources</a>.</p>
+<div class="tbl"><table>
+<thead><tr><th>ID</th><th>Issuer</th><th>Document</th><th>Published</th><th>Status</th><th>Link</th></tr></thead>
+<tbody>
+
+<tr id="S01"><td class="first" data-l="ID">S01</td><td data-l="Issuer">State Administration of Foreign Exchange (SAFE)</td><td data-l="Document">SAFE spokesman press conference on the Detailed Rules for the Administration of Individual Foreign Exchange</td><td data-l="Published">2007-01-05</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.safe.gov.cn/en/2007/0105/819.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S02"><td class="first" data-l="ID">S02</td><td data-l="Issuer">SAFE Ningxia branch</td><td data-l="Document">2022 foreign-exchange policy Q&amp;A (8): is there a hard USD 50,000 annual cap?</td><td data-l="Published">2022-09-29</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S03"><td class="first" data-l="ID">S03</td><td data-l="Issuer">SAFE Tianjin branch</td><td data-l="Document">2024 individual FX Q&amp;A (3): outbound remittance of foreign exchange for current-account expenses</td><td data-l="Published">2024-02-29</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.safe.gov.cn/tianjin/2024/0229/2402.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S04"><td class="first" data-l="ID">S04</td><td data-l="Issuer">SAFE</td><td data-l="Document">Huifa [2015] No.49 - further improving individual foreign-exchange administration (splitting ban, watch list)</td><td data-l="Published">2015-12-31</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.safe.gov.cn/safe/2015/1231/5442.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S05"><td class="first" data-l="ID">S05</td><td data-l="Issuer">SAFE Hebei branch</td><td data-l="Document">Notice on further improving individual settlement/sale of FX business (splitting characteristics)</td><td data-l="Published">2015-05-04</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.safe.gov.cn/hebei/2015/0504/415.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S06"><td class="first" data-l="ID">S06</td><td data-l="Issuer">SAFE / General Administration of Customs</td><td data-l="Document">Huifa [2003] No.102 - interim measures on carrying foreign-currency cash across the border</td><td data-l="Published">2003-08-28</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.safe.gov.cn/safe/2003/0828/5444.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S07"><td class="first" data-l="ID">S07</td><td data-l="Issuer">SAFE</td><td data-l="Document">Huifa [2017] No.29 - regulating large overseas ATM cash withdrawals on bank cards (press Q&amp;A)</td><td data-l="Published">2017-12-30</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="http://m.safe.gov.cn/safe/2017/1230/8129.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S08"><td class="first" data-l="ID">S08</td><td data-l="Issuer">SAFE</td><td data-l="Document">State Council Order No.532 - Regulations on Foreign Exchange Administration (penalties)</td><td data-l="Published">2008-08-06</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.safe.gov.cn/safe/2008/0806/5321.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S09"><td class="first" data-l="ID">S09</td><td data-l="Issuer">People's Bank of China (PBOC)</td><td data-l="Document">PBOC Announcement [2004] No.16 - interim measures on the transfer abroad of individual property</td><td data-l="Published">2004-11-16</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="http://m.safe.gov.cn/safe/2004/1116/5461.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S10"><td class="first" data-l="ID">S10</td><td data-l="Issuer">State Taxation Administration (STA) / SAFE</td><td data-l="Document">STA &amp; SAFE Announcement 2013 No.40 - tax filing for outbound payments of services and other items</td><td data-l="Published">2013-07-09</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S11"><td class="first" data-l="ID">S11</td><td data-l="Issuer">State Taxation Administration (STA)</td><td data-l="Document">Individual Income Tax Law of the PRC - taxable income categories and rates</td><td data-l="Published">2018-08-31</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://shanghai.chinatax.gov.cn/zcfw/zcfgk/grsds/201809/t441789.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S12"><td class="first" data-l="ID">S12</td><td data-l="Issuer">PBOC et al.</td><td data-l="Document">Yinfa [2021] No.237 - further preventing and handling risks of virtual-currency speculation</td><td data-l="Published">2021-09-24</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="http://m.safe.gov.cn/safe/2021/0924/19911.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S13"><td class="first" data-l="ID">S13</td><td data-l="Issuer">Internal Revenue Service (IRS)</td><td data-l="Document">Yearly average currency exchange rates (China, Yuan)</td><td data-l="Published">current</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S14"><td class="first" data-l="ID">S14</td><td data-l="Issuer">U.S. Congress (govinfo, 2023 edition)</td><td data-l="Document">26 U.S.C. 988 - treatment of certain foreign currency transactions</td><td data-l="Published">2023 ed.</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S15"><td class="first" data-l="ID">S15</td><td data-l="Issuer">FinCEN / eCFR (OFR)</td><td data-l="Document">31 CFR 1010.821 - penalty adjustment and table (foreign financial agency transaction penalties)</td><td data-l="Published">amended 2025-01-17</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S16"><td class="first" data-l="ID">S16</td><td data-l="Issuer">Internal Revenue Service (IRS)</td><td data-l="Document">Comparison of Form 8938 and FBAR requirements</td><td data-l="Published">current</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S17"><td class="first" data-l="ID">S17</td><td data-l="Issuer">Internal Revenue Service (IRS)</td><td data-l="Document">Revenue Procedure 2025-32 - 2026 inflation-adjusted amounts</td><td data-l="Published">2025</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S18"><td class="first" data-l="ID">S18</td><td data-l="Issuer">Internal Revenue Service (IRS)</td><td data-l="Document">Topic no. 409 - capital gains and losses</td><td data-l="Published">current</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.irs.gov/taxtopics/tc409" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S19"><td class="first" data-l="ID">S19</td><td data-l="Issuer">U.S. Customs and Border Protection (CBP)</td><td data-l="Document">Money and other monetary instruments - report currency exceeding $10,000</td><td data-l="Published">2025-11-24</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.cbp.gov/travel/international-visitors/money-monetary-instruments" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S20"><td class="first" data-l="ID">S20</td><td data-l="Issuer">Bank of China (BOC)</td><td data-l="Document">BOC personal e-banking transfer and remittance tariff schedule (effective 2014-11-01)</td><td data-l="Published">2014-11-01</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+<tr id="S21"><td class="first" data-l="ID">S21</td><td data-l="Issuer">Bank of China (BOC)</td><td data-l="Document">BOC foreign-exchange rate board (USD against CNY)</td><td data-l="Published">2026-11-10 07:32:39</td><td data-l="Status"><span class="badge ok">verified</span></td><td data-l="Link"><a href="https://www.boc.cn/sourcedb/whpj/enindex_1619.html" target="_blank" rel="noopener">open ↗</a></td></tr>
+</tbody></table></div>
+
+<h2>What was rejected or corrected during this pass</h2>
+<div class="callout warn">
+  <p><strong>Corrected:</strong> earlier pages describe the §988 personal-transaction exclusion loosely. The
+  statute's actual condition is a <strong>USD 200 gain ceiling</strong> (S14), which fails at every rung of this
+  ladder. This pass states the test, not a summary of it.</p>
+  <p><strong>Corrected:</strong> a 15% capital-gain rate is sometimes applied to this gain. §988(a)(1)(A) makes it
+  ordinary; the capital election is limited to forward/futures/option contracts (S14). No capital rate is shown
+  in the ladder.</p>
+  <p><strong>Not carried forward:</strong> the 2026-11-09 board stamp of 6.6919 is replaced by today's
+  6.6903 (S21). Both are genuine; only one is current. See flag D646-11.</p>
+  <p><strong>Left blank on purpose:</strong> intermediary/correspondent fees, U.S. receiving-bank fees, offshore
+  CNY/CNH basis, card ATM operator fees. No official schedule was found for any of them.</p>
+</div>
+
+<h2>What this pass did not verify</h2>
+<p>The 30+ pages already in the repository were <em>not</em> re-derived line by line this time. Their own
+validators pass on <code>main</code>, and their figures remain on their own pages, unchanged. This refresh adds a
+current, independently computed set alongside them; where a rate has moved, the difference is recorded as
+D646-11 rather than silently rewritten. Treat any page whose header says 2026-11-09 as a historical snapshot.</p>
+
+
+</main>
+<footer>
+  <p><strong>Built 2026-11-10T02:20Z.</strong> Research dashboard, not legal, tax or investment advice.
+  Every figure is either quoted from an official source linked on the row or left blank and listed on
+  <a href="d646-flagged.html">Flagged for review</a>. Rates are a frozen timestamp, not a live quote.</p>
+  <p>Method: <code>scripts/build_d646_site.py</code> · checker: <code>scripts/verify_d646_site.py</code> ·
+  board: <a href="COORDINATION.md">COORDINATION.md</a></p>
+</footer>
+</body>
+</html>

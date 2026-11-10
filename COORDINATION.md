@@ -525,6 +525,89 @@ Branch: `arena/6907147a-china3` (Arena-fixed branch; no other branch may be used
 | S690-T1 | Review all inherited claims and runs, re-run every validator, audit source/calculation integrity, and record remaining irregularities | `research/final-integration-audit.md`, `data/final_integration_flags.csv`, `scripts/verify_final_integration.py` | done | `session-6907147a` | Do not overwrite prior-session research; publish unresolved items |
 | S690-T2 | Final integrated executive summary, mobile navigation, and links to the verified full method/cost schedules | `index.html`, `EXECUTIVE_SUMMARY.md`, `final-verification.html` | done | `session-6907147a` | Additive or narrowly corrective integration only |
 | S690-T3 | Final CI verification, PR to `main`, merge, GitHub Pages deployment confirmation, and close inherited completed task | `COORDINATION.md`, `.github/workflows/final-integration.yml` | in progress | `session-6907147a` | Includes closure of inherited `S436-T8`, completed by PR #21 |
+<!-- session-d6467425-verification-refresh-v1 -->
+
+## Session `arena/d6467425-china3` — Independent Verification Refresh (2026-11-10) + Final Consolidation
+
+Branch: `arena/d6467425-china3` (fixed by Arena session binding; per-task branches `session-<id>/<task>` cannot be pushed under Arena's single-branch rule — same noted irregularity as `S436-IR-001`).
+Base: `main` @ `75b67d3` (PR #21 merged). All prior task rows `P1–P6`, `T1–T7`, deep `T1–T9`, `S436-T1…T8` are `done`.
+
+### Claim state at 2026-11-10T01:00Z
+
+- Open PRs, all **stale >24 h** with no commits since 2026-11-09: #18 (`arena/1a9dec1c-china3`, 01:43Z), #15 (`arena/80597d10-china3`, 01:37Z), #8 (`arena/5b145137-china3`, 2026-11-07), #6 (`arena/f83a5122-china3`, 2026-11-07).
+- Per the >60-minute-no-commit takeover rule, this session takes over the **final integration + verification** role. It does **not** take over the open PRs' file scopes (`cost-table.html`, `cost-steps.html`, `deep-costs.html`, `verification.html`, `costs.html`…); those PRs are left open for their owners and are logged as `D646-IR-001` (not merged, not deleted).
+- No other branch had a commit after 2026-11-09T01:53Z, so no live session conflicts with this claim.
+
+### Claimed tasks (`arena/d6467425-china3`) — new files only, plus additive edits to `index.html`
+
+| ID | Task | File scope | Status | Owner |
+|---|---|---|---|---|
+| D646-T1 | Re-fetch and re-verify every load-bearing figure against its official primary source on 2026-11-10; record pass/fail with verbatim excerpt + URL | `research/d646-verification.md`, `data/d646_verification.csv` | done | `arena/d6467425-china3` |
+| D646-T2 | Re-derive the full USD 10k→400k ladder from today's timestamped BOC board + published BOC tariff, independently of every prior model; reconcile against `main`'s `cost-tables.html` | `data/d646_ladder.csv`, `scripts/build_d646_site.py` | done | `arena/d6467425-china3` |
+| D646-T3 | One consolidated, mobile-first dashboard page set: exec summary, all methods + pros/cons, cost ladder, penalty/tax breakdown, verification log, flagged-for-review, sources | `d646-summary.html`, `d646-methods.html`, `d646-costs.html`, `d646-penalty.html`, `d646-verification.html`, `d646-flagged.html`, `d646-sources.html`, `assets/d646.css` | done | `arena/d6467425-china3` |
+| D646-T4 | Automated line-by-line verification script + CI workflow (every row → official URL, blanks flagged, arithmetic re-derived, no broken local links) | `scripts/verify_d646_site.py`, `.github/workflows/d646-verify.yml` | done | `arena/d6467425-china3` |
+| D646-T5 | Consolidate landing-page navigation by category (additive only, no page or link removed), open PR, merge without waiting, confirm Pages deploy, record outcome | `index.html`, `README.md`, `COORDINATION.md`, GitHub PR/Pages | in progress | `arena/d6467425-china3` |
+
+File-scope note: the 7 `d646-*` pages are namespaced to this session, so they cannot collide with any prior or concurrent branch. The only shared file touched is `index.html`, and only additively (a new "Start here" card + nav link; nothing removed or reordered).
+
+### D646 log
+
+- 2026-11-10T01:00Z — Claim written and pushed before any content work.
+- 2026-11-10T01:02Z — Local validators on `main` @ `75b67d3` all pass: `validate_data.py`, `check_links.py`, `verify_deep.py`, `test_costs.py`, `verify_cost_tables.py`, `verify_s436_site.py`. Pages API reports `status: built`, `https_enforced: true`.
+
+### D646 completion record (2026-11-10)
+
+**Sources verified.** 21 official primary documents were fetched and read on 2026-11-10; each carries a
+verbatim excerpt in `data/d646_sources.csv` and `d646-sources.html`:
+S01 SAFE 2007 press conference · S02 SAFE Ningxia 2022 Q&A · S03 SAFE Tianjin 2024 Q&A · S04 Huifa [2015]
+No.49 · S05 SAFE Hebei splitting indicia · S06 Huifa [2003] No.102 cash carry · S07 Huifa [2017] No.29 card
+cash · S08 State Council Order 532 · S09 PBOC [2004] No.16 · S10 STA/SAFE 2013 No.40 · S11 IIT Law (STA
+Shanghai) · S12 Yinfa [2021] No.237 crypto · S13 IRS yearly average rates · S14 26 USC 988 (govinfo) ·
+S15 31 CFR 1010.821 (eCFR) · S16 IRS 8938/FBAR comparison · S17 Rev. Proc. 2025-32 · S18 IRS Topic 409 ·
+S19 CBP currency reporting · S20 BOC e-banking tariff · S21 BOC FX board stamped 2026/11/10 07:32:39.
+
+**Figures established.** Bank spread 0.2104% (sell 6.6903 vs bid/ask mid 6.67625) · wire tariff 0.1%,
+CNY 50 min, CNY 260 max, + CNY 150 cable · known bank cost USD 53.47 at 10k (0.5347%) and USD 1,332.05 at
+400k (0.3330%) · §988 gain 6.9369% of USD received at the 2024 IRS average 7.189 (6.1668% at 2025's 7.129)
+· USD 200 exclusion ceiling ≈ USD 2,883 converted · FBAR 10k / 16,536 / 165,353 · Form 8938 ceiling 60,000 ·
+FEIE 2026 132,900 · card cash RMB 100,000/yr, 10,000/day · cash carry 5k / 10k USD.
+
+**Corrections published (not silently rewritten).**
+1. `D646-C1` — the spread reference. Using the published parity column (6.7188) instead of the bid/ask mid
+   (6.67625) overstates the spread ~3x and yields a *negative* cost. Caught by the verifier on the first
+   build; fixed in the model. `main`'s existing pages already use the midpoint and are unaffected.
+2. `D646-C2` — capital-gain framing. §988(a)(1)(A) is ordinary income; the §988(a)(1)(B) capital election
+   covers forward/futures/option contracts, not disposing of a currency deposit. No capital rate is used.
+3. `D646-C3` — the §988(e)(2) personal exclusion is conditional on the gain **not exceeding USD 200**;
+   earlier pages described it loosely.
+4. `D646-C4` — the board moved: 2026-11-09 stamp 6.6919 → 2026-11-10 stamp 6.6903. Recorded as D646-11;
+   the earlier pages were not edited.
+
+**Verification performed.** `python3 scripts/verify_d646_site.py` PASS — 40 ladder rows re-derived
+independently with `Decimal` from the raw published inputs, 119 HTML table rows audited for an official link,
+blank⇔UNVERIFIED enforced both directions, 21 source ids resolved, 7 pages with no broken local link or
+anchor, generated output confirmed fresh. All six pre-existing validators still pass on the combined tree:
+`validate_data.py`, `check_links.py`, `verify_deep.py`, `test_costs.py`, `verify_cost_tables.py`,
+`verify_s436_site.py`. CI: `.github/workflows/d646-verify.yml`.
+
+**Irregularities / unverified items (16, published on `d646-flagged.html`, non-blocking).** D646-01 the
+user's "considerable taxes" premise is unevidenced · 02 character of the money unknown · 03 hukou/emigrant
+eligibility unknown · 04 USD basis unknown · 05 marginal rate unknown · 06 intermediary & receiving-bank fees
+unpublished (blank, not zero) · 07 offshore CNY/CNH basis · 08 bank-specific handling · 09 prior-year
+FBAR/8938 status · 10 Form 105 family allocation · 11 board timestamp drift · 12 open PRs #15/#18 left open ·
+13 cross-branch claim invisibility · 14 capital-vs-ordinary treatment · 15 FEIE does not reach this gain ·
+16 "quota" misdescription.
+
+**Requests logged, not acted on.** PRs #15 (`arena/80597d10-china3`) and #18 (`arena/1a9dec1c-china3`) remain
+open, stale >24 h. This session did not merge, close, or edit them; their branches own `cost-table.html`,
+`cost-steps.html`, `deep-costs.html`, `verification.html`. If their owners return, they should rebase on this
+merge and keep the `D646-C1` spread correction.
+
+**Shared files touched (additive only).** `index.html`: one new "Start here" card + one nav link, nothing
+removed or reordered. `README.md`: one paragraph of links. No other session's page, data file or CSS was
+modified.
+
+---
 
 <!-- session-fbbd3b22-dashboard-v1 -->
 
@@ -641,6 +724,39 @@ presented as optional and conditional rather than added to every total.
 - 2026-11-10: `origin/main` advanced to `294d8e7` (PR #24) during this session. Merged it and resolved `COORDINATION.md`, `EXECUTIVE_SUMMARY.md` and `index.html` without deleting parallel work. Retained the parallel generated dashboard, its 40-row expandable ladder, 17-record verbatim source register and A15 safety review; integrated this session's independent final verifier and correction page. Updated the parallel generator so regeneration remains byte-identical and its resident-quota summary excludes corporate OUR. No other session's research files were discarded.
 - 2026-11-10: Corrected the S436 dashboard's displayed board text to match the refreshed calculation inputs. Full local verification passed, including the new parallel `verify_dashboard.py`, all inherited validators and `verify_final_integration.py` (640 rows, 16 methods, 65 steps, 40 homepage increments, seven final flags, 2,503 links).
 - 2026-11-10: Inherited S436-T8 is administratively closed: PR #21 was already merged and Pages had been published by its owning session. S690-T3 now covers only this session's PR/checks/deploy record.
+<!-- session-d6467425-round2 -->
+
+### D646 round 2 — merge resolution and reconciliation with session `fbbd3b22`
+
+**Merge resolution (no work discarded).** `main` advanced while this PR was open (PRs #22, #23, #24). The three
+conflicts were resolved by **keeping both sides**:
+
+- `COORDINATION.md` — this session's D646 block and `fbbd3b22`'s dashboard block are both retained verbatim,
+  separated by a rule. Nothing from either block was edited, reordered or deleted.
+- `index.html` — `fbbd3b22` **rewrote** this file (new `assets/dashboard.css` shell). Their version is taken as
+  the base, and the D646 entry is re-applied **into their structure**: one nav link plus one banner section.
+  Nothing of theirs was removed or reordered. The D646 card is explicitly labelled as a parallel build
+  published *alongside* their dashboard, not in place of it.
+- `README.md` — their "Start here" line is kept and the D646 link is appended to it.
+
+**Duplicate effort logged (D646-IR-002).** Two sessions independently ran a 2026-11-10 verification pass
+(`d6467425` and `fbbd3b22`) without seeing each other's claims, because claims live on unmerged branches. This is
+the same failure mode already logged as X-12 and D646-13. No data was lost; the cost is duplicated work and two
+current dashboards.
+
+**The two passes agree on the rates and disagree on the wire assumption — deliberately left visible.**
+
+| Quantity | `d646` (this session) | `fbbd3b22` (main) | Why they differ |
+|---|---|---|---|
+| Bank spread at USD 10,000 | USD 21.04 (0.2104%) | consistent with the same midpoint | Same board, same midpoint method |
+| Known bank cost at USD 10,000 | **USD 53.47** (0.5347%) | **USD 53.42** (0.5342%) | Same one-wire case; USD 0.05 rounding in the fee conversion |
+| Known bank cost at USD 400,000 | **USD 1,332.05** (0.3330%) | **USD 901.30** (0.2253%) | D646 books **8 wires** (one per documented USD 50,000 convenience amount); `fbbd3b22` books **1**. Both are labelled on their own pages; neither is silently reconciled. This is the single largest open methodological difference in the repo and is now stated on both landing-page cards instead of being hidden. |
+
+**Verification of the merged tree.** All seven validators pass after the merge: `validate_data.py`,
+`check_links.py`, `verify_deep.py`, `test_costs.py`, `verify_cost_tables.py`, `verify_s436_site.py` and
+`verify_d646_site.py`. `check_links.py` reports no broken internal link or anchor across the combined site, which
+now includes `fbbd3b22`'s `verify-2026.html`, `a15-review.html` and `assets/dashboard.css` alongside the D646 pages.
+
 ### D7 completed — pull request, merge and deployment record
 
 - **PR:** https://github.com/sassnarep3-star/China3/pull/24 — `arena/fbbd3b22-china3` → `main`.
@@ -668,3 +784,32 @@ presented as optional and conditional rather than added to every total.
 - **Follow-up:** a cosmetic pass (unit handling in the register's value column, label of the collapsed
   quotation) and this record were sent as a documentation-only PR on the same fixed branch. No figure,
   page or check changed in that pass.
+
+### D646 round 3 — final merge resolution (2026-11-10)
+
+`main` advanced twice more while this PR was open (PR #27, `arena/fbbd3b22-china3`). Resolutions, again keeping
+both sides:
+
+- `COORDINATION.md` — this session's round-2 block and `fbbd3b22`'s D7 record are both retained verbatim. Nothing
+  from either was edited, reordered or deleted.
+- `scripts/build_dashboard.py` — **this is the important one.** `index.html` is a *generated* artifact of
+  `build_dashboard.py`, and `dashboard-verify.yml` fails on any byte drift. Hand-editing `index.html` therefore
+  broke another session's CI (`Dashboard rows, ladder and links` → fail). Fixed properly: `index.html` was
+  reverted to their generated output and the D646 entry is now applied **through their generator** — one nav link
+  and one banner section, additively, so the links survive regeneration. `build_dashboard.py --check`,
+  `verify_dashboard.py` and the whole `verify_dashboard` job now pass.
+- `verify-2026.html` — auto-merged cleanly; regenerated by their script and byte-identical.
+
+**Disclosure on the landing page.** The banner added through the generator states the one open difference between
+the two builds rather than hiding it: the wire count at large amounts (one wire vs one per documented USD 50,000),
+which is why USD 400,000 reads USD 901.30 on their page and USD 1,332.05 on D646. Spread, tariff and tax treatment
+agree; only the number of transfers differs, and both assumptions are labelled on their own pages.
+
+**Lesson logged for future sessions (D646-IR-003).** Before editing `index.html`, `verify-2026.html`,
+`data/ladder_20261110.csv`, `assets/dashboard.css`, `cost-tables.html` or any other generated page, check for a
+`build_*.py` producer and a `*-verify.yml` freshness gate, and edit the generator instead. Hand-editing a generated
+file is a guaranteed cross-session CI break.
+
+**Final verification of the merged tree (all PASS).** `validate_data.py`, `check_links.py`, `verify_deep.py`,
+`test_costs.py`, `verify_cost_tables.py`, `verify_s436_site.py`, `verify_d646_site.py`, `verify_dashboard.py`,
+`build_dashboard.py --check`, `build_d646_site.py --check`.
