@@ -1004,3 +1004,47 @@ generator, per D646-IR-003): a "Start here" band and three cards were added, and
 banners were **moved**, not removed, into a new "Parallel editions kept on this page" section below the
 page map. `README.md` and `EXECUTIVE_SUMMARY.md` gained one section each. No other session's page, data file,
 script or stylesheet was modified.
+
+---
+
+<!-- resolved additively on 2026-11-10: both sessions' records kept verbatim, conflict markers removed -->
+
+## Session `arena/50249649-china3` — independent accuracy and release audit
+
+| ID | Task | File scope | Status | Owner | Notes |
+|---|---|---|---|---|---|
+| A502-1 | Independently audit high-impact legal/financial claims and published cost-model limitations against primary sources; publish actionable, sourced review findings and a reproducible local check | `research/a502-audit.md`, `a502-review.html`, `scripts/a502_audit.py`, `COORDINATION.md` | in progress | `arena/50249649-china3` | Existing pages and generator owned by prior/concurrent sessions will not be edited; integration requests will be logged. Arena fixes this session's branch name. |
+| A502-2 | Validate release, PR, merge and live deployment if safe | GitHub PR / Pages, `COORDINATION.md` | in progress | `arena/50249649-china3` | Do not claim all repository rows verified unless actually checked. |
+
+- 2026-11-10: Claimed exclusively named audit files and board entries. PR #34 from S775 is open and its files remain outside this session's scope.
+
+### A502 audit results and integration request
+- 2026-11-10: Targeted review completed; status **needs review** for existing S775 high-impact claims. See `a502-review.html` and `research/a502-audit.md`. Findings cover domestic/overseas scope of the daily-remittance rule, double-counted/mixed conversion benchmark, categorical Chinese tax assertion, §988 conditions, and incomplete individual tax/reporting facts. This does not certify every row of the repository. The fixed Arena branch requirement supersedes the user-requested per-task branch convention.
+- Official sources checked: [SAFE overseas employment income, 2026](https://www.safe.gov.cn/tianjin/2026/0713/3088.html), [SAFE nontaxable income, 2025](https://www.safe.gov.cn/tianjin/2025/0715/2834.html), [SAFE domestic remittance, 2024](https://www.safe.gov.cn/tianjin/2024/0229/2402.html), [BOC personal online tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html), [26 USC §988](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm), [FinCEN FBAR](https://bsaefiling.fincen.gov/resources/FinCENFBARHelp.pdf), [IRS foreign tax credit](https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit), [IRS FEIE](https://www.irs.gov/individuals/international-taxpayers/foreign-earned-income-exclusion). Automated checks passed: `a502_audit.py`, `validate_data.py`, `check_links.py`, `verify_deep.py`, `verify_dashboard.py`, `test_costs.py`, `verify_cost_tables.py`, `build_cross_session_review.py --check`, `verify_s436_site.py`, `verify_s775_site.py`, `verify_final_integration.py`; checks are structural/arithmetic, not full source verification; external HTTP checks skipped in link checker.
+- **Integration request to S775/final integration:** Correct source data and generators rather than just generated output; review applicability and currency-flow assumptions; add official source links to every summary cost row; link `a502-review.html` from the main navigation and existing Flagged for Review. Shared files were not edited under the non-overlapping-scope rule. Comment posted at https://github.com/sassnarep3-star/China3/pull/34#issuecomment-6764149009. The issues are documented for review, not invented personal costs.
+
+## Session `arena/058d6cd7-china3` — independent publication and critical-claims audit
+
+| ID | Task | Exclusive file scope | Status | Owner | Notes |
+|---|---|---|---|---|---|
+| A058-T1 | Independently audit publication state, current cost presentation, primary-source support and remaining blockers; record limitations without changing other sessions' files | `research/a058-independent-audit.md` | in progress | `arena/058d6cd7-china3` | Fixed Arena branch overrides requested per-task branch; existing S775 and other scoped work remains untouched. |
+| A058-T2 | Integrate only if safe, run existing checks, PR and deployment verification | `COORDINATION.md`, GitHub PR / Pages | in progress | `arena/058d6cd7-china3` | Do not merge broken work; respect concurrent open PRs and preserve all records. |
+
+- 2026-11-10: Read board and observed merged PR #33 plus open S775 correction PR #34; claim scoped to an independent audit rather than duplicating the correction.
+- 2026-11-10: A058-T1 expanded scope to `a058-flagged-review.html` for a standalone, mobile-friendly review page; no edits to files owned by other sessions. **Integration request for S775 owner/final integrator:** correct the blanket $50,000/day/ID-only statements in `data/s775_methods.csv`, `data/s775_steps.csv`, `scripts/build_s775_site.py` and `research/s775-executive-summary.md` and regenerate associated pages; add a link to `a058-flagged-review.html` through the shared homepage generator. SAFE explicitly distinguishes nonresident FX purchases from domestic-account remittance: https://www.safe.gov.cn/tianjin/2024/0621/2529.html and https://www.safe.gov.cn/tianjin/2024/0229/2402.html. Also qualify categorical no-conversion-tax claims and review net-cost methodology. Existing PR #34 addresses separate math/markup issues, not this request.
+- 2026-11-10: **A058-T1 needs review:** added `a058-flagged-review.html` and `research/a058-independent-audit.md`. Independently opened SAFE foreign-purchase, domestic-remittance, allowance and tax-document guidance, BOC personal tariff, IRS FBAR/foreign-tax-credit and U.S. Code §988; audited the specific S775 claims described in the report, not every line in this large repository. Flagged (1) scope of ID-only $50,000/day statement, (2) benchmark spread mislabelled as actual recipient net, (3) categorical China tax assertion, (4) inconsistent S775 card/markup covered by pending PR #34, and (5) unknown individual tax and fees. Source-linked integration/correction request sent to owner in PR #34. Prior validators pass but external HTTP link fetches were explicitly skipped by `check_links.py`; this is not a full source verification. User did not provide source-of-funds, basis, eligibility or bank quotes, so actual costs remain unverified.
+- 2026-11-10: Main advanced to `9bc2cde` (PR #36) while PR #35 checks ran. Rebase conflicted only in appended `COORDINATION.md` blocks; retained both A502 and A058 entries without discarding content, then reapplied A058 commits. A502 independently found overlapping issues before its claim was visible on `main` to A058; both sourced reviews are preserved.
+## Session arena/4a528a74-china3 — 2026-11-10 independent completion audit
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Evidence/provenance audit, honest estimate limitations, publication validation | in progress | arena/4a528a74-china3 | `completion-audit.html`, `research/completion-audit.md`, `scripts/verify_completion.py` |
+| Additive final integration link and deployment record | unclaimed | arena/4a528a74-china3 | `README.md` additive only; `COORDINATION.md` append only |
+
+Existing claimed scopes and open PRs are preserved; no sibling-owned generator/data edits. Arena requires the assigned branch, so the requested per-task branch naming cannot be followed. This session uses only `arena/4a528a74-china3`. New verification will distinguish inherited evidence from independently retrieved official text. No claim of a new full official-source audit without successful retrieval.
+
+### 4a528a74 completion and verification
+- Evidence/provenance task **done**; additive final integration **in progress**. Five official pages independently read; exact source links and 40 fee-only rows on `completion-audit.html`. Scope and limitations in `research/completion-audit.md`.
+- All inherited verification scripts plus test_costs, validate_data and check_links passed. `scripts/verify_completion.py` independently regenerates this supplemental audit and confirms 40 blank all-in totals. No claim of every inherited statement being freshly verified.
+- Irregularities **needs review**, published at `completion-audit.html#flags`: future inherited S41 timestamp, moving FX snapshot, arithmetic versus official-quote distinction, unknown tax/fees/eligibility. Prior flags preserved. README adds a discoverable link without editing sibling-owned landing-page generators.
+- Concurrent main update during integration caused an append-only COORDINATION conflict. Resolved by retaining both sessions' entries, removing only conflict markers; no other session's content discarded. PR: https://github.com/sassnarep3-star/China3/pull/37. Rebased claim requires lease-protected update of this session branch only.

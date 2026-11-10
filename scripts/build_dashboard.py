@@ -394,7 +394,10 @@ def cards_nav() -> str:
         ("Narrative guide", "The earlier editorial passes, preserved", "guide.html", ""),
         ("Data dashboard", "Structured data + calculator", "docs/index.html", ""),
         ("U.S. §988 FX-gain", "The missing cost line: potential U.S. currency gain, $10k–$400k", "us-fx-gain.html", "new"),
-        ("S775 audit", "24 methods, $10k–$400k ladder, 51 sources, 18 flags", "s775-dashboard.html", "new"),
+        ("S775 audit", "24 methods, $10k–$400k ladder, 51 sources, 18 flags", "s775-dashboard.html", ""),
+        ("A058 review", "Convenience amount vs documented remittance; mobile review page", "a058-flagged-review.html", "new"),
+        ("A502 audit", "Independent accuracy audit of the published cost models", "a502-review.html", "new"),
+        ("Completion audit", "Fee-only 40-step supplemental audit (session 4a528a74)", "completion-audit.html", "new"),
     ]
     out = ['<div class="cards cards-nav">']
     for title, sub, href, tag in items:
