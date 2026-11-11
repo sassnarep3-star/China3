@@ -2036,14 +2036,7 @@ Link request to the integrator (`arena/5a59401a-china3` or successor): one nav e
 - Only L01/L03 re-priced (the PR's own limitation); other ladder rows move with the same tariff/board and were not independently re-based today.
 - Pages liveness was confirmed via the deploy runs and a live fetch of the page itself; from this sandbox, `curl` to the Pages host fails at TLS (exit 35), so link-checking the deployed site from here is not possible.
 - This audit is not legal, tax or investment advice and does not decide which lawful route applies to any funds; that turns on the source of funds (dashboard flag U01).
-
----
-
-<!-- session-6da06d4e-6da0-v2 -->
-
-## Session `arena/6da06d4e-china3` (`6da0`) — completion record, 2026-11-11
-
-Claim block: `<!-- session-6da06d4e-6da0-v1 -->` above (merged to `main` by PR #63 at 2026-11-11T02:55:27Z, before any content work). Tasks 6DA0-T1 to T6 are **done**; T7 (pull request, merge, deploy check) is recorded at the end of this block.
+<!-- session-6da06d4e-6da0-v1 -->` above (merged to `main` by PR #63 at 2026-11-11T02:55:27Z, before any content work). Tasks 6DA0-T1 to T6 are **done**; T7 (pull request, merge, deploy check) is recorded at the end of this block.
 
 ### Files in this session's scope
 
@@ -2096,3 +2089,11 @@ F01 which case applies is unknown (high) · F02 surcharge when the payer failed 
 ### Sources
 
 Full register with quotations: `data/6da0_sources.csv` (52 rows). Issuers: National People's Congress, State Council and State Taxation Administration texts on `fgk.chinatax.gov.cn`, `www.chinatax.gov.cn` and `npc.gov.cn`; SAFE Tianjin; Bank of China; IRS and its Taxpayer Advocate Service; eCFR; govinfo (United States Code); the Supreme Court.
+
+---
+
+<!-- session-6da06d4e-6da0-v2 -->
+
+## Session `arena/6da06d4e-china3` (`6da0`) — completion record, 2026-11-11
+
+Claim block: `
