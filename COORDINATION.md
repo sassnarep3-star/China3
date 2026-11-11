@@ -1296,3 +1296,39 @@ reachable by direct URL and this request stays open on the board.
   this branch; confirmed all ten inherited validators PASS at that base (`validate_data`, `check_links`, `verify_deep`,
   `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`,
   `verify_final_integration`). Wrote this claim and pushed it before touching any content file.
+
+---
+
+<!-- session-f931fde1-r11-claim-v1 -->
+
+## Session `session-f931fde1` (`arena/f931fde1-china3`) — 2026-11-11 live re-verification release + final integration
+
+Branch: `arena/f931fde1-china3` (fixed by Arena; the `session-<id>/<task>` per-task branch convention cannot be used —
+same constraint logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001). Base: `main` @ `15a7986` (PR #47 merged).
+**This session has live outbound access to official sites on 2026-11-11 and is acting as the final integration session
+for this release.**
+
+### Live-claim scan performed before claiming (2026-11-11)
+
+`git fetch --prune` + `gh pr list` + `git ls-remote --heads` were run first. Result: **no sibling branch has commits
+newer than `main` @ `15a7986`, and no open pull request exists.** No competing claim to respect. All 15 inherited
+validators pass at this base (`validate_data`, `check_links`, `verify_deep`, `test_costs`, `verify_cost_tables`,
+`verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`, `verify_final_integration`,
+`verify_a513`, `verify_c3x_site`, `verify_c5bf`, `verify_completion`, `verify_m5f19_site`), and a link sweep over
+89 HTML files / 2,683 internal links reports 0 broken targets.
+
+### Claimed tasks (`session-f931fde1`) — non-overlapping namespace `r11-*`
+
+| ID | Task | Exclusive file scope | Status | Owner |
+|---|---|---|---|---|
+| R11-T0 | Claim scope on the board and push before any content work | `COORDINATION.md` (append only) | done | `session-f931fde1` |
+| R11-T1 | Live re-verification of every load-bearing official source **today (2026-11-11)**: record URL, the exact numbers/quotes, and the fetch timestamp; anything unreadable is left blank + flagged | `data/r11_sources.csv`, `data/r11_facts.csv` | in progress | `session-f931fde1` |
+| R11-T2 | Re-derive the USD 10,000 → 400,000 ladder at the 2026-11-11 board reading under one stated convention; reconcile against the published `$53.38 / $899.01` and `$53.42 / $901.30` figures | `data/r11_ladder.csv`, `scripts/r11_engine.py`, `r11-costs.html` | in progress | `session-f931fde1` |
+| R11-T3 | **Decision-gate question register**: every question that must be answered before a route can be chosen — what we know (sourced), what we do not know, and the exact way to discover it | `data/r11_questions.csv`, `r11-questions.html` | in progress | `session-f931fde1` |
+| R11-T4 | Line-by-line repo review of the published layers; log irregularities, do not edit a file owned by another session | `data/r11_repo_review.csv`, `r11-repo-review.html` | in progress | `session-f931fde1` |
+| R11-T5 | Mobile-first release dashboard + independent verifier + CI gate | `r11-summary.html`, `r11-flagged.html`, `assets/r11.css`, `scripts/build_r11_site.py`, `scripts/verify_r11_site.py`, `.github/workflows/r11-verify.yml` | in progress | `session-f931fde1` |
+| R11-T6 | **Shared-output integration** (final-integration privilege, logged takeover): add one nav entry and one release band to `index.html`; refresh `EXECUTIVE_SUMMARY.md`, `README.md` | `index.html`, `EXECUTIVE_SUMMARY.md`, `README.md` | in progress | `session-f931fde1` |
+| R11-T7 | PR → `main`, merge without waiting, confirm Pages deploy, record PR link + result here | GitHub PR / Pages / `COORDINATION.md` | in progress | `session-f931fde1` |
+
+### R11 log
+- 2026-11-11: claim written and pushed before any content file was touched.
