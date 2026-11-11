@@ -2802,3 +2802,8 @@ comment "so that its pages are listed as soon as they land".
 - `13:35Z`: `PASS — 9350 checks`. Four bugs in my own work found and fixed by the verifier (see `research/c348-verification-log.md`).
 - `13:48Z`: PR #92 opened; all checks green; **merged as `58dd301`**.
 - `13:52Z`: Pages deploy succeeded; `https://sassnarep3-star.github.io/China3/c348-dashboard.html` fetched and verified live.
+### 5903 scope amendment — stale-gate takeover (6DA0-IR-02 / 6DA0-REQ-03)
+
+`arena/5903db91-china3`, 2026-11-11T13:15Z. PR #93 went red on **one** check, `m5f19 provenance … gate`, which passes on `main` and passed on PR #89. Cause is the documented defect, not this session's files: `scripts/verify_m5f19_site.py` resolves "the current branch's block" with `git rev-parse --abbrev-ref HEAD`, which returns the literal string `HEAD` on a pull-request checkout. `HEAD` occurs in this board's prose, so the lookup locked onto another session's block and reported this session's own files as outside its claim — the failure mode logged as **6DA0-IR-02** and requested as **6DA0-REQ-03**.
+
+The namespace owner's last commit to that script is from 06:44Z and its work is merged, so the >60-minute takeover rule applies. The change is exactly the one 6DA0-REQ-03 asked for and nothing else: read `GITHUB_HEAD_REF` first, and treat a detached `HEAD` with no environment hint as "no claim found" so the existing additive fallback applies. Checks A–I and K–L are untouched; no cost model, page or data file of the m5f19 layer changes. Verified locally with and without `GITHUB_HEAD_REF`: `PASS — 10 checks, 0 failures` both ways. Check J skips `scripts/verify_m5f19_*` as its own namespace, so this edit cannot mask a future violation.
