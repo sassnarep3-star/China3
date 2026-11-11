@@ -1,0 +1,26 @@
+# Independent publication audit — 11 November 2026
+
+Scope: selected high-impact statements on the landing page and the existing e347 and m5f19 automated checks. This is not a line-by-line verification of the entire repository or a confirmation of the user's personal eligibility, taxes, or bank quote.
+
+## Official sources independently read
+
+| Check | Result | Official source |
+|---|---|---|
+| Foreign individuals buying FX with domestic legitimate current-account RMB income | SAFE Tianjin says valid ID and source-of-funds documents stating the transaction amount, including tax documents, are needed; a holder of a foreign permanent resident ID qualifies for the annual convenience amount. | [SAFE Tianjin, 21 June 2024](https://www.safe.gov.cn/tianjin/2024/0621/2529.html) |
+| BOC personal electronic-banking cross-border wire tariff | Published tariff is 0.1%, minimum RMB 50, maximum RMB 260, plus RMB 150 telecommunications fee for destinations outside Hong Kong, Macao and Taiwan; local prices, agreements or promotions may differ. This is not proof that a particular customer can use electronic banking for the transaction. | [Bank of China](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) |
+| BOC USD rate | Board viewed 11 November 2026: buying 666.30, selling 669.11, middle 671.91, timestamp 2026/11/11 10:25:02. These are published board numbers, not a customer-specific quote; confirm units and applicable rate with the bank. | [Bank of China rate board](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) |
+| U.S. foreign account reporting | IRS states FBAR and Form 8938 are separate obligations and gives different thresholds. The FBAR threshold is aggregate foreign financial accounts exceeding $10,000 at any time during the calendar year; Form 8938 thresholds depend on circumstances. | [IRS comparison](https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements) |
+
+## Needs review / integration requests
+
+1. **Important inconsistency in the landing page:** it says categorically “A U.S. passport holder does not get the $50,000 a year that Chinese citizens convert on ID alone”, yet the same page includes a foreign permanent resident ID route. The SAFE source above explicitly recognizes that ID exception. Replace the categorical language with a qualified statement and verify the scope of eligibility with the bank. Request to the final integrator; this session did not modify claimed shared files.
+2. **Pricing is a historical illustration, not a personalized cost or tax estimate.** The landing page's prominently displayed 6.6851 rate and $53.38/$899.01 are based on the earlier snapshot; the board observed above differs. The fee table is specific to BOC personal electronic banking, permits local differences, and does not establish recipient/intermediary costs. Do not treat the total as a quote or the FX spread versus an assumed midpoint as an official fee. The existing flag U15 notes the drift; headline prominence still merits review. [BOC rates](https://www.boc.cn/sourcedb/whpj/enindex_1619.html); [BOC tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html).
+3. **Unresolved merge markers in the committed coordination board:** lines near 1240 include `<<<<<<< HEAD`, `=======`, and `>>>>>>> f6ae79e`. They are repository content, not an active Git merge conflict; retain both sides and have a coordination owner clean them up without deleting other sessions' work. No site or legal conclusion should rely on the malformed section.
+4. **Scope of verification:** automated checks test source-link presence and model consistency, not whether each legal proposition is supported by the linked source or whether links are reachable over the public internet. Source links, a passing arithmetic check and a bank's public rate do not substantiate an individualized legal/tax recommendation. Full line-by-line verification across all historical pages was not completed in this audit.
+5. **Claim of categorical prohibition and penalties:** the landing page groups “crypto” with quota borrowing and private swaps, and gives an upper penalty in the same sentence. Whether a specific transaction and penalty are applicable requires checking the actual conduct, rule, jurisdiction, and exceptions. Request that final integration qualify the claim and cite the exact applicable provision; this audit does not determine legality. [SAFE online exchange warning](https://www.safe.gov.cn/guangdong/2020/0304/1668.html).
+
+## Local checks and publication
+
+At base `6750ddba4367f53300cc7c86379db9f757d130f4`, `python scripts/e347_verify.py` passed (440 modeled cost rows recomputed; 658 table rows with source links; 2138 local links resolved). `python scripts/verify_m5f19_site.py` passed; it explicitly skipped external HTTP checks. `python scripts/check_links.py` passed for its scoped pages. These tools do not verify all historical files or the substance of all linked documents.
+
+GitHub Pages API reported the published site configured as legacy deployment from `main` root, status `built`: https://sassnarep3-star.github.io/China3/ . At audit time PR #49 was open and its integration changes were in progress; no claim is made that it or this audit has deployed.
