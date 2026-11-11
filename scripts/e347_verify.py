@@ -22,7 +22,8 @@ ROOT = Path(__file__).resolve().parent.parent
 PAGES = [ROOT / "index.html"] + [ROOT / "dashboard" / f"{n}.html" for n in
                                  ("decisions", "methods", "costs", "steps", "tax", "flagged", "sources", "archive")]
 OFFICIAL = ("boc.cn", "safe.gov.cn", "chinatax.gov.cn", "pbc.gov.cn", "irs.gov", "govinfo.gov",
-            "fincen.gov", "ecfr.gov", "cbp.gov", "gd.gov.cn")
+            "fincen.gov", "ecfr.gov", "cbp.gov", "gd.gov.cn", "mof.gov.cn", "wise.com",
+            "westernunion.com", "bankofamerica.com", "abchina.com")
 REPO_HOST = "github.com"
 errors = []
 
@@ -42,7 +43,7 @@ def rows(name):
 
 
 # ------------------------------------------------------------------ 1. arithmetic
-BID, ASK = F(66571, 10000), F(66851, 10000)   # BOC board 665.71 / 668.51 per 100 USD
+BID, ASK = F(66606, 10000), F(66886, 10000)   # BOC board 666.06 / 668.86 per 100 USD, 2026-11-11 15:30:04
 MID = (BID + ASK) / 2
 IRS = {"2021": F(6452, 1000), "2022": F(6730, 1000), "2023": F(7075, 1000), "2024": F(7189, 1000), "2025": F(7129, 1000)}
 
@@ -78,8 +79,8 @@ def expect(model, usd):
     if model == "cash":
         s = usd * (ASK - MID) / ASK
         return s, None, None, s, math.ceil(usd / 5000), None
-    if model == "dividend":
-        tax = usd / 5
+    if model in ("dividend", "dividend_treaty"):
+        tax = usd / (5 if model == "dividend" else 10)
         net = usd - tax
         s, w = net * (ASK - MID) / ASK, wire_cny(net) / ASK
         return s, w, tax, tax + s + w, 1, 1

@@ -2,7 +2,7 @@
 
 **Live site:** https://sassnarep3-star.github.io/China3/
 
-One clean dashboard, built from official sources read on 2026-11-10:
+One clean dashboard. The canonical evidence was read on 2026-11-10; the current integration re-read the FX board and new evidence on 2026-11-11. The live cost model uses the BOC board published 2026/11/11 15:30:04 Beijing and now includes 13 lawful routes plus a conditional dividend-treaty scenario. Unknown provider and personal costs remain blank and flagged.
 
 | Page | What it holds |
 |---|---|
@@ -19,9 +19,10 @@ One clean dashboard, built from official sources read on 2026-11-10:
 | [Source re-check](https://sassnarep3-star.github.io/China3/76e-verification.html) | Freshness re-verification of the load-bearing official sources (11 Nov 2026); linked from the landing-page nav |
 | [F52 decision checklist](https://sassnarep3-star.github.io/China3/f52-summary.html) | 17-question checklist, fresh 11 Nov 2026 cost ladder, per-route playbooks; linked from the landing-page nav and the "Parallel editions" section |
 | [B9B3 verified decision brief](https://sassnarep3-star.github.io/China3/b9b3-dashboard.html) | 50-source register, 30-question register, 880-row cost matrix; linked from the landing-page nav and the "Parallel editions" section |
-| [G8D8 new evidence](https://sassnarep3-star.github.io/China3/g8d8-summary.html) | Other banks compared, U.S. receiving fees, Wise/Western Union, 40 SAFE cases; linked from the landing-page nav and the "Parallel editions" section |
+| [Banks, providers & enforcement](https://sassnarep3-star.github.io/China3/g8d8-summary.html) | Other bank tariffs, U.S. receiving fees, Wise/Western Union terms and 40 SAFE enforcement cases |
 | [E0F4 audit of PR #49](https://sassnarep3-star.github.io/China3/e0f4-76e-audit.html) | Independent line-by-line audit of the 11 Nov re-check layer; linked from the landing-page nav and the "Parallel editions" section |
 | [N676 decision brief](https://sassnarep3-star.github.io/China3/n676-summary.html) | 19 sources re-read on 11 Nov 2026, questions register, 160-row ladder; linked from the landing-page nav and the "Parallel editions" section |
+| [Unpaid Chinese tax](https://sassnarep3-star.github.io/China3/6da0-settle-up.html) | Late-payment surcharge, fines, look-back periods and U.S. compliance procedures |
 
 Short version: [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). Repository review: [`research/e347-repo-review.md`](research/e347-repo-review.md).
 

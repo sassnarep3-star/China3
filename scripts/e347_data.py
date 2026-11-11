@@ -15,14 +15,15 @@ blank) and a flag ID explains why.
 from decimal import Decimal as D
 
 SNAPSHOT_DATE = "2026-11-10"
+INTEGRATION_DATE = "2026-11-11"
 
 # --------------------------------------------------------------------------- rates
 RATE = {
-    "board_time": "2026/11/10 17:39:58 (Beijing)",
-    "bid": D("6.6571"),      # BOC USD "Buying Rate" 665.71 per 100
-    "ask": D("6.6851"),      # BOC USD "Selling Rate" 668.51 per 100
-    "cash_ask": D("6.6851"), # BOC USD "Cash Selling Rate" 668.51 per 100
-    "boc_middle": D("6.7167"),  # BOC "Middle Rate" column 671.67 (reference rate, not used in the model)
+    "board_time": "2026/11/11 15:30:04 (Beijing)",
+    "bid": D("6.6606"),      # BOC USD "Buying Rate" 666.06 per 100
+    "ask": D("6.6886"),      # BOC USD "Selling Rate" 668.86 per 100
+    "cash_ask": D("6.6886"), # BOC USD "Cash Selling Rate" 668.86 per 100
+    "boc_middle": D("6.7191"),  # BOC "Middle Rate" column 671.91 (reference rate, not used in the model)
     "wire_rate": D("0.001"),
     "wire_min": D("50"),
     "wire_max": D("260"),
@@ -45,7 +46,7 @@ RATE = {
 SOURCES = [
     ("S01", "Bank of China", "BOC Exchange Rate board (USD row)",
      "https://www.boc.cn/sourcedb/whpj/enindex_1619.html", "direct",
-     "USD per 100: Buying 665.71, Cash Buying 665.71, Selling 668.51, Cash Selling 668.51, Middle 671.67; Pub Time 2026/11/10 17:39:58."),
+     "USD per 100: Buying 666.06, Cash Buying 666.06, Selling 668.86, Cash Selling 668.86, Middle 671.91; Pub Time 2026/11/11 15:30:04."),
     ("S02", "Bank of China", "中国银行电子银行个人服务转账汇款费率表 (personal e-banking transfer tariff)",
      "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html", "direct",
      "跨境汇款（电汇）: 每笔汇款金额的1‰，最低50元/笔，最高260元/笔；另收电讯费，非港澳台地区150元/笔. Standard since 2014-11-01. Note 1: agreements, discounts and local differences can apply."),
@@ -148,6 +149,27 @@ SOURCES = [
     ("S35", "U.S. Customs and Border Protection", "Money and Other Monetary Instruments",
      "https://www.cbp.gov/travel/international-visitors/money-monetary-instruments", "direct",
      "Amounts exceeding $10,000 entering or leaving the United States must be reported (FinCEN Form 105); for families or groups the threshold applies to the collective total. Failure to file risks seizure and forfeiture, civil or criminal penalties."),
+    ("S36", "Internal Revenue Service", "United States–China Income Tax Convention, Article 9",
+     "https://www.irs.gov/pub/irs-trty/china.pdf", "direct",
+     "Article 9(2): if the recipient is the beneficial owner and a resident of the other Contracting State, source-country tax on dividends shall not exceed 10 percent of the gross amount. Article 9(4) excludes holdings effectively connected with a permanent establishment or fixed base."),
+    ("S37", "Ministry of Finance (PRC)", "财税函〔2017〕197号 — inheritance-tax reply",
+     "http://szs.mof.gov.cn/jytafwgk_8391/2017jytafwgk/2017zxwytafwgk/201710/t20171017_2726094.htm", "direct",
+     "我国目前并未开征遗产税，也从未发布遗产税相关条例或条例草案. Dated 2017-08-21; it does not eliminate taxes on assets sold or income within an estate."),
+    ("S38", "U.S. Government Publishing Office", "31 U.S.C. § 5321(a)(5)(C)-(D) — willful FBAR penalty",
+     "https://www.govinfo.gov/content/pkg/USCODE-2023-title31/html/USCODE-2023-title31-subtitleIV-chap53-subchapII-sec5321.htm", "direct",
+     "Willful maximum: greater of the inflation-adjusted statutory amount or 50 percent of the account balance at the time of the violation for failure to report an account."),
+    ("S39", "Wise (first-party provider terms)", "Guide to CNY transfers — Sending from CNY",
+     "https://wise.com/help/articles/2955298/guide-to-cny-transfers", "direct",
+     "For non-mainland-Chinese personal customers who worked in China and supply Chinese tax records from the last 3 years. Own-name recipient only. China bank app maximum CNY 300,000 per transfer; overall limit generally after-tax Chinese salary. Wise states it uses a PBOC-regulated licensed third-party payment provider. No numeric fee is stated on this page."),
+    ("S40", "Western Union (first-party provider terms)", "Send money from China",
+     "https://www.westernunion.com/cn/en/send-money.html", "direct",
+     "Passport accepted (excluding Hong Kong, Macau and Taiwan passports). Online through partner banks or in person; overseas cash pickup. Bank-account delivery is temporarily unavailable. Fees and limits are not stated on this page."),
+    ("S41", "Bank of America", "Receiving international wire transfers",
+     "https://info.bankofamerica.com/en/digital-banking/wire-transfers", "direct",
+     "Inbound wire transfers may incur a $15 fee per wire; the account's schedule of fees controls. International transfers typically credit in 1 to 2 business days."),
+    ("S42", "Agricultural Bank of China", "Personal cross-border financial services — international telegraphic transfer",
+     "https://www.abchina.com/cn/PersonalServices/Forex/", "direct",
+     "国际电汇汇款: 汇款金额的千分之一（最低20元，最高200元），邮电费80元. Counter and online banking; the page does not provide a current USD retail rate."),
 ]
 
 # ------------------------------------------------------------------------- methods
@@ -191,8 +213,8 @@ METHODS = [
          limit="One application for the whole estate; after approval the bank may remit once or in instalments.",
          pros="A dedicated legal route for large sums. Money goes straight to your own account in your country of residence.",
          cons="Needs SAFE approval at the decedent's last hukou location, inheritance proof, property documents and a tax certificate. Takes preparation.",
-         tax="A tax certificate from the tax office where the estate's property is located is required. No Chinese tax specific to inheritance was confirmed in this pass (flag U08). In the U.S., a foreign bequest above USD 100,000 is reported on Form 3520.",
-         src=["S12", "S13", "S14", "S32"], flags=["U08", "U16", "U03", "U04"]),
+         tax="A tax certificate is still required. A 2017 Ministry of Finance reply says China had not introduced inheritance tax; that dated statement does not remove taxes on estate assets or income. In the U.S., a foreign bequest above USD 100,000 is reported on Form 3520.",
+         src=["S12", "S13", "S14", "S32", "S37"], flags=["U08", "U16", "U03", "U04"]),
     dict(id="L06", status="Lawful, needs SAFE approval", model="fx_wire",
          name="Emigrant property transfer (移民财产转移)",
          fits="You used to live in mainland China, emigrated, and the assets were yours before you obtained emigrant status.",
@@ -222,9 +244,33 @@ METHODS = [
          fits="The money sits in a company you own, not in a personal account.",
          limit="Limited to genuine distributable profit. Above USD 50,000 the bank checks the profit-distribution resolution and the tax filing form.",
          pros="The proper route for business profit; no annual quota.",
-         cons="20% Chinese income tax on the dividend. Needs company accounts, a resolution and tax filing. Not a route for personal savings.",
-         tax="20% individual income tax on dividends. A lower treaty rate was not verified in this pass (flag U06). Tax paid in China may be creditable in the U.S.",
-         src=["S13", "S25", "S16", "S34"], flags=["U06", "U03", "U04"]),
+         cons="20% statutory Chinese income tax scenario. Needs company accounts, a resolution and tax filing. Not a route for personal savings.",
+         tax="20% statutory scenario. Article 9(2) caps source-country tax at 10% for a qualifying beneficial owner resident in the other treaty state; see L09T. Tax paid in China may be creditable in the U.S.",
+         src=["S13", "S25", "S16", "S34", "S36"], flags=["U20", "U03", "U04"]),
+    dict(id="L09T", status="Lawful, treaty conditions", model="dividend_treaty",
+         name="Dividend with the U.S.–China treaty 10% cap (conditional scenario)",
+         fits="A beneficial owner who is a U.S. treaty resident receives a dividend from a Chinese company and Article 9(4) does not apply.",
+         limit="Treaty residence, beneficial ownership and Article 9 must be established; otherwise use the 20% statutory scenario in L09.",
+         pros="Article 9(2) caps Chinese source-country tax at 10% of the gross dividend when its conditions are met.",
+         cons="Not an automatic rate based on citizenship. Company documents, beneficial ownership, treaty residence and any permanent-establishment/fixed-base issue must be reviewed.",
+         tax="10% treaty-cap scenario. U.S. tax and foreign-tax-credit rules still apply.",
+         src=["S36", "S13", "S16", "S34"], flags=["U20", "U03", "U04"]),
+    dict(id="L12", status="Lawful, provider conditions", model="blank",
+         name="Wise outbound CNY transfer through its licensed Chinese partner",
+         fits="A non-mainland-Chinese personal customer who worked in China and can supply Chinese tax records from the last three years; salary route only.",
+         limit="CNY 300,000 per transfer from a China bank app; overall limit generally after-tax Chinese salary; own-name recipient only.",
+         pros="Published online process and limits; own-name U.S. account or Wise account; an alternative to a conventional bank wire for eligible salary.",
+         cons="Provider fee and exchange rate are not stated on the official help page. Not for gifts, undocumented savings or third-party recipients.",
+         tax="Same underlying-income and U.S. tax/reporting considerations as L01; no separate conversion tax is stated by the provider.",
+         src=["S39", "S04"], flags=["U21", "U03", "U04"]),
+    dict(id="L13", status="Lawful, provider conditions", model="blank",
+         name="Western Union through a Chinese partner bank, with overseas cash pickup",
+         fits="A passport holder who can satisfy the partner bank's compliance checks and wants cash pickup rather than bank-account delivery.",
+         limit="Bank-account delivery is temporarily unavailable; partner-bank country and passport restrictions apply. No general dollar limit is stated on the page.",
+         pros="Passport accepted; online partner-bank and in-person options; recipient can collect cash abroad.",
+         cons="Transfer fee, FX rate and transaction limits are not published on the page. Cash pickup adds handling and U.S. cash-declaration considerations.",
+         tax="Provider page states no tax. Underlying source-of-funds and U.S. tax/reporting obligations remain.",
+         src=["S40", "S35"], flags=["U21", "U03"]),
     dict(id="L10", status="Lawful, small amounts", model="atm",
          name="Cash withdrawals abroad with a mainland UnionPay debit card",
          fits="You have a UnionPay debit card on the RMB account and travel outside the mainland.",
@@ -342,10 +388,30 @@ STEPS = {
     "L09": [
         ("Confirm the company has distributable profit and has paid its taxes.", ["S13"]),
         ("Pass a board or shareholder profit-distribution resolution.", ["S13"]),
-        ("The company withholds 20% individual income tax on the dividend.", ["S25"]),
+        ("The company applies 20% individual income tax unless the conditional treaty-cap scenario in L09T is established.", ["S25", "S36"]),
         ("For a remittance above USD 50,000, complete the tax filing and give the bank the original filing form with the resolution.", ["S13", "S16"]),
         ("The bank converts and remits the after-tax dividend to you.", ["S01"]),
         ("U.S. side: the dividend is taxable income; Chinese tax paid may be claimed as a foreign tax credit on Form 1116.", ["S34"]),
+    ],
+    "L09T": [
+        ("Confirm the company has distributable profit and complete the profit-distribution resolution and outbound-payment tax filing.", ["S13", "S16"]),
+        ("Document U.S. treaty residence and beneficial ownership; review Article 9(4) for a permanent establishment or fixed base. Citizenship alone is not the test.", ["S36"]),
+        ("Apply the 10% Article 9(2) cap only if those conditions are satisfied; otherwise use the 20% statutory scenario in L09.", ["S36", "S25"]),
+        ("Convert and remit the after-tax dividend, then address U.S. income reporting and any allowable foreign tax credit.", ["S34"]),
+    ],
+    "L12": [
+        ("Confirm you are not mainland Chinese, worked in China, and can obtain Chinese tax records showing tax paid within the last three years.", ["S39"]),
+        ("Start a personal Wise from-CNY transfer and complete first-time identity verification; upload tax records when requested.", ["S39"]),
+        ("Send only to an account in your own name outside China or your own Wise account. The overall limit is generally after-tax Chinese salary.", ["S39"]),
+        ("Fund from your China bank app, up to CNY 300,000 per transfer. Obtain the actual provider fee and exchange rate before approving; the help page does not publish a numeric price.", ["S39"]),
+        ("Keep the tax and transfer records for Chinese review and U.S. tax/reporting.", ["S04", "S30"]),
+    ],
+    "L13": [
+        ("Check with a listed Western Union partner bank that your passport, destination and transfer purpose are accepted; bank and country restrictions apply.", ["S40"]),
+        ("Register through the partner bank's online/mobile channel, or visit a partner branch with your passport and transfer details.", ["S40"]),
+        ("Review the actual fee, exchange rate and limit before paying; Western Union's page does not publish these figures.", ["S40"]),
+        ("Choose overseas cash pickup, pay, retain the receipt/MTCN and share it only with the intended recipient. Bank-account delivery is temporarily unavailable.", ["S40"]),
+        ("If carrying more than USD 10,000 into the U.S., file FinCEN Form 105; the threshold applies to a family or group collectively.", ["S35"]),
     ],
     "L10": [
         ("Make sure the RMB account has a UnionPay debit card that works abroad.", ["S19"]),
@@ -381,14 +447,14 @@ TAX_ROWS = [
      "A filing with the tax office before a single outbound payment above USD 50,000 in listed categories. It is a record the bank checks, not an extra tax. If the filing shows tax is unpaid, the tax office collects it.",
      "USD 0 for the filing itself", ["S16"], []),
     ("T06", "Bank cost", "Exchange spread at Bank of China",
-     "The gap between the bank's selling rate and the midpoint of its buying and selling rates, measured on the 17:39:58 board of 10 November 2026.",
-     "0.2094% of the amount", ["S01"], ["U03", "U15"]),
+     "The gap between the bank's selling rate and the midpoint of its buying and selling rates, measured on the 15:30:04 board of 11 November 2026.",
+     "0.2093% of the amount", ["S01"], ["U03", "U15"]),
     ("T07", "Bank cost", "Outbound wire fee at Bank of China (personal e-banking)",
      "Charged per wire. The percentage part stops growing once the wire is about USD 39,000.",
      "0.1%, min RMB 50, max RMB 260, plus RMB 150 cable", ["S02"], ["U03"]),
     ("T08", "Bank cost", "Intermediary and receiving-bank fees",
-     "Charged by banks in the payment chain and by the U.S. bank. No single official figure exists.",
-     None, ["S02"], ["U04"]),
+     "Charged by banks in the payment chain and by the U.S. bank. Bank of America says an inbound wire may incur $15; the account schedule controls. Actual intermediary charges remain unknown.",
+     None, ["S02", "S41"], ["U04"]),
     ("T09", "U.S. tax", "U.S. income tax on worldwide income",
      "A U.S. citizen is taxed on worldwide income wherever they live, so income earned in China belongs on the U.S. return for the year it was earned. Chinese tax paid on it may be credited (Form 1116). No source read in this pass taxes the later transfer of the same money, apart from the currency gain in the next row.",
      "Depends on your return", ["S34"], ["U01"]),
@@ -397,7 +463,7 @@ TAX_ROWS = [
      "Your tax rate x the gain; see the table by year acquired", ["S27", "S28"], ["U05"]),
     ("T11", "U.S. reporting", "FBAR (FinCEN Form 114)",
      "Required if the total of your foreign accounts exceeded USD 10,000 at any time in the calendar year. No tax is due with it.",
-     "Penalty ceiling: USD 16,536 non-willful; USD 165,353 willful (2025 table)", ["S30", "S31"], ["U12"]),
+     "Non-willful ceiling USD 16,536; willful: greater of USD 165,353 or 50% of the account balance", ["S30", "S31", "S38"], []),
     ("T12", "U.S. reporting", "Form 8938 (specified foreign financial assets)",
      "Filed with the tax return above the thresholds (unmarried in the U.S.: more than USD 50,000 at year end or USD 75,000 at any time).",
      "USD 10,000, plus up to USD 50,000 after IRS notice", ["S29"], []),
@@ -432,19 +498,21 @@ FLAGS = [
     ("U03", "medium", "Your bank's actual rate and fees", "All bank costs use Bank of China's public board and public personal tariff. Other banks, branch-level differences, negotiated rates and promotions are not captured; the tariff itself says local differences can apply.", "A dated written quote from your branch.", ["S02"]),
     ("U04", "medium", "Intermediary and receiving-bank fees", "No official single figure. Left blank in every cost table and not included in any total.", "Your U.S. bank's fee schedule and the sending bank's charge option.", ["S02"]),
     ("U05", "medium", "Whether a currency gain is a 'personal transaction'", "§ 988(e) excludes personal transactions with gain of USD 200 or less, and says a transaction is not personal to the extent its expenses fall under §162 or §212. Which side a savings balance falls on is a legal judgement this site does not make.", "A U.S. tax professional, with the dates and rates at which the RMB was acquired.", ["S27"]),
-    ("U06", "medium", "U.S.-China treaty rate on dividends", "The treaty text was not read in this pass. The dividend route is priced at the statutory 20% only.", "Read Article 9 of the treaty on irs.gov.", ["S25"]),
+    ("U06", "medium", "U.S.-China treaty dividend conditions", "Article 9(2) now confirms a 10% cap, but only for a beneficial owner resident in the other treaty state and subject to Article 9(4). L09 keeps the 20% statutory scenario; L09T prices the conditional 10% scenario.", "Treaty residence and beneficial-ownership documents; review any permanent establishment or fixed base.", ["S36"]),
     ("U07", "high", "Money received as a gift, or with no documents", "No official rule was found that lets a foreign passport holder convert RMB received as a gift or RMB whose origin cannot be documented. No route is listed for this case.", "Ask the bank in writing; the person who gave the money may have their own lawful remittance options.", ["S04"]),
-    ("U08", "medium", "Chinese tax on an inheritance", "The Individual Income Tax Law lists nine taxable categories and inheritance is not one of them, but no official statement saying 'inheritance is not taxed' was read. Left unconfirmed.", "The tax certificate issued for the estate (required anyway for route L05).", ["S25", "S12"]),
+    ("U08", "low", "Chinese inheritance statement is dated 2017", "The Ministry of Finance said in 2017 that China had not introduced inheritance tax. This closes the narrow historical question, not future law or other taxes on estate assets and income. A tax certificate remains required for L05.", "Confirm current treatment with the estate's tax office and obtain the required tax certificate.", ["S37", "S12"]),
     ("U09", "medium", "Cost of the cross-border RMB route (L08)", "Neither the outbound RMB wire fee nor the offshore conversion rate was confirmed from an official page. Every cost cell for L08 is blank.", "Quotes from the sending bank and the receiving bank.", ["S24"]),
     ("U10", "medium", "Two definitions of 'domestic individual'", "The State Council Regulation (Art. 52) counts a foreigner who has lived in China for one continuous year as a 境内个人; the PBOC Measures classify by ID document, and say the bank sets the category from the ID used at account opening. Which one your bank applied to your account is unknown.", "The bank's written confirmation of your account category.", ["S17", "S18"]),
     ("U11", "low", "Nine sources read as excerpts, not in full", "S08, S15 (section 8), S18, S22, S23, S24, S26, S33 and S34 were confirmed from the official page's own text returned by a search of that URL, not by opening the whole page. The quoted sentences are exact; surrounding context was not reviewed.", "Open each link on the Sources page and read the cited article.", ["S08", "S15", "S18", "S22", "S23", "S24", "S26", "S33", "S34"]),
-    ("U12", "low", "FBAR willful-penalty ceiling", "The eCFR table gives USD 165,353. The statute's alternative of 50% of the account balance was not read in this pass and is not stated as verified.", "31 U.S.C. 5321(a)(5)(C).", ["S31"]),
+    ("U12", "low", "FBAR penalty: statute and adjustment read separately", "Closed for the rule: eCFR supplies the inflation-adjusted USD 165,353 figure and 31 U.S.C. 5321(a)(5)(C)-(D) supplies the 50%-of-balance alternative. Application to any person and year remains fact-dependent.", "Apply the table for the assessment date and determine willfulness and the balance at violation.", ["S31", "S38"]),
     ("U13", "medium", "ATM route: exchange rate and ATM-owner fee", "Only Bank of China's own card fee is priced. The UnionPay conversion rate and any fee charged by the foreign ATM are blank.", "UnionPay's published rate for the day and the ATM's on-screen fee.", ["S03"]),
     ("U14", "medium", "Cash route: banknote withdrawal fee", "Priced at the board's cash selling rate only. Any fee for withdrawing foreign banknotes, and travel cost, are blank.", "The branch's counter tariff.", ["S01"]),
-    ("U15", "low", "One rate snapshot", "Every figure uses the Bank of China board published 2026/11/10 17:39:58 (USD selling 668.51 per 100). The same BOC board, re-read on 2026-11-11 (published 2026/11/11 10:25:02 Beijing), shows USD buying 666.30 and selling 669.11 per 100; the figures were NOT repriced to that reading. The board's 'Middle Rate' column is a reference rate, not the midpoint of buying and selling, so the site's fair value (the midpoint of buying and selling) is its own calculation. Rows that span several years (L07, L10) reuse one day's rate and are scenarios, not forecasts.", "Re-run scripts/e347_build.py with a new board reading.", ["S01"]),
+    ("U15", "low", "One rate snapshot", "Every figure uses the Bank of China board published 2026/11/11 15:30:04 (USD buying 666.06 and selling 668.86 per 100). The board's 'Middle Rate' column is a reference rate, not the midpoint of buying and selling, so the site's fair value is its own calculation. Rows that span several years (L07, L10) reuse one day's rate and are scenarios, not forecasts.", "Re-run scripts/e347_build.py with a new board reading before executing a transfer.", ["S01"]),
     ("U16", "low", "2024 Capital Account Guidelines not read in full", "Section 6.4 of 汇发〔2024〕12号 is known only through the SAFE Tianjin answer of 19 March 2026. The document lists in the 2004 PBOC announcement were read in full; whether the 2024 guidelines changed them was not checked.", "Read section 6.4 of the 2024 guidelines.", ["S14"]),
     ("U17", "low", "Property-sale route: 2025 notice not read in full", "The document list comes from section 8 of SAFE Anhui's operating guide to 汇发〔2025〕43号 (excerpt). Other property taxes (VAT, deed tax, land appreciation tax) were not verified.", "Read the guide's section 8 and ask the local tax office.", ["S15"]),
-    ("U18", "medium", "Money-transfer companies and apps", "No official page was read that confirms any named transfer company can send a personal RMB balance out of mainland China to the U.S., or at what price. None is listed as a route. SAFE's notice says only banks and licensed exchange institutions may convert currency.", "The provider's licence and its written terms for outbound transfers from mainland China.", ["S21"]),
+    ("U18", "medium", "Money-transfer companies and apps", "Wise and Western Union first-party pages now support conditional routes L12/L13, but neither publishes a numeric fee and FX quote on the cited page. Availability and provider/partner compliance checks remain case-specific.", "A live written quote and confirmation from the provider and its Chinese partner.", ["S39", "S40", "S21"]),
+    ("U20", "high", "Treaty eligibility for the 10% dividend scenario", "Article 9(2)'s rate is conditional on treaty residence and beneficial ownership, with exceptions in Article 9(4). U.S. citizenship alone does not settle it.", "Treaty-residence analysis and beneficial-ownership documents, reviewed by a cross-border tax professional.", ["S36"]),
+    ("U21", "medium", "Provider fee and exchange-rate quote", "Wise and Western Union confirm conditional outbound services but the cited pages publish no numeric transfer fee or CNY/USD execution rate. Every L12/L13 cost cell is blank, not zero.", "A transaction-specific written quote before approval.", ["S39", "S40"]),
     ("U19", "low", "Ten routes from earlier passes not re-read", "The routes listed at the bottom of the Methods page were catalogued by earlier sessions with an official page cited. This pass did not re-open those pages, so they carry no verdict and no cost.", "Open the official page linked on each row.", ["S21"]),
 ]
 
@@ -518,12 +586,12 @@ LEGACY_ROUTES = [
 SITUATIONS = [
     ("Part of the balance is still dollars in a foreign-currency account", "L03", "Wire it out on your passport. Wire fee only."),
     ("I brought dollars in and converted them less than 24 months ago, and I have the exchange slip", "L02", "Change the unused RMB back with passport and slip."),
-    ("It is my salary or other income earned in China", "L01", "Buy USD with source documents and tax evidence; one wire."),
+    ("It is my salary or other income earned in China", "L01", "Buy USD with source documents and tax evidence; one wire. Eligible salary can also use Wise (L12)."),
     ("It is what I got for selling my home in China", "L04", "Bank route with the registered contract and the tax certificate."),
     ("I inherited it", "L05", "Apply to SAFE where the decedent was registered; then one or more wires."),
     ("I used to live in China, emigrated, and it is from before I left", "L06", "Apply to SAFE at your former hukou location."),
     ("I hold a Chinese Foreign Permanent Resident ID Card", "L07", "USD 50,000 a year on the card alone; more with documents."),
-    ("It is profit inside my Chinese company", "L09", "Pay it out as a dividend (20% tax), then remit."),
+    ("It is profit inside my Chinese company", "L09", "Pay a dividend: 20% statutory scenario, or the conditional 10% treaty scenario in L09T."),
     ("It was a gift, or I cannot document where it came from", "", "No verified route. See flag U07 before doing anything."),
 ]
 
@@ -531,4 +599,5 @@ AMOUNTS = [D(x) for x in range(10000, 400001, 10000)]
 OFFICIAL_DOMAINS = (
     "boc.cn", "safe.gov.cn", "chinatax.gov.cn", "pbc.gov.cn", "irs.gov",
     "govinfo.gov", "fincen.gov", "ecfr.gov", "cbp.gov", "gd.gov.cn",
+    "mof.gov.cn", "wise.com", "westernunion.com", "bankofamerica.com", "abchina.com",
 )

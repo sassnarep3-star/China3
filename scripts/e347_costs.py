@@ -79,8 +79,8 @@ def row(method, usd):
         s = spread_usd(usd, RATE["cash_ask"])
         r.update(units=ceil_int(usd / RATE["cash_no_permit_usd"]), units_label="trips at USD 5,000",
                  extra=ceil_int(usd / RATE["cash_bank_permit_usd"]), spread_usd=s, known_cost_usd=s)
-    elif model == "dividend":
-        tax = usd * RATE["iit_flat"]
+    elif model in ("dividend", "dividend_treaty"):
+        tax = usd * (RATE["iit_flat"] if model == "dividend" else D("0.10"))
         net = usd - tax
         s, w = spread_usd(net), wire_usd(net)
         r.update(units=1, units_label="wire", calendar_years=1, tax_usd=tax, spread_usd=s, fee_usd=w,
