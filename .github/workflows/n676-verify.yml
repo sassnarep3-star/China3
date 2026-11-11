@@ -1,0 +1,59 @@
+name: n676 verify
+
+# Namespaced to the files this session owns. Running on every branch like the older
+# sibling workflows does causes verifiers to fail on pull requests whose declared
+# scope they know nothing about — logged as A9 in research/n676-repo-audit.md.
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "n676-*.html"
+      - "assets/n676.css"
+      - "data/n676_*.csv"
+      - "scripts/n676_*.py"
+      - "research/n676-*.md"
+      - ".github/workflows/n676-verify.yml"
+  pull_request:
+    paths:
+      - "n676-*.html"
+      - "assets/n676.css"
+      - "data/n676_*.csv"
+      - "scripts/n676_*.py"
+      - "research/n676-*.md"
+      - ".github/workflows/n676-verify.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: n676 data, pages and scope
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # check K diffs against the merge base with origin/main, so the history
+          # has to be there.
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate the data pack and the pages
+        run: |
+          python3 scripts/n676_engine.py
+          python3 scripts/n676_data.py
+          python3 scripts/n676_build.py
+
+      - name: Fail if the committed files are not what the generators produce
+        run: |
+          if ! git diff --quiet -- 'n676-*.html' 'assets/n676.css' 'data/n676_*.csv'; then
+            echo "::error::the committed n676 pages and data are out of date with the generators."
+            git diff --stat -- 'n676-*.html' 'assets/n676.css' 'data/n676_*.csv'
+            exit 1
+          fi
+
+      - name: Verify — re-derive the ladder, check every row is sourced, check scope
+        run: python3 scripts/n676_verify.py
