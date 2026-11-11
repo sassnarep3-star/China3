@@ -2515,3 +2515,35 @@ Branch `arena/3482441c-china3`, branched from `main` @ `b677a91` (PR #83 merge).
 
 **Explicitly not claimed:** integration/navigation (`index.html`, `dashboard/**`, `scripts/e347_*`) — held by `arena/b579901a-china3`; every other session's namespaced page. A link request from the archive will be logged here for the integrator rather than edited.
 
+
+---
+
+<!-- session-b579901a-scope -->
+
+## Session `arena/b579901a-china3` (`b579`) — authoritative scope block
+
+This block exists because check J of `scripts/verify_m5f19_site.py` takes the **last** place on this board where a branch name
+appears and reads the nearest preceding `<!-- session-` block as that branch's claim. Session `3482441c`'s block names
+`arena/b579901a-china3` in order to say it stays out of that scope, so J attributed c348's file list to this session. The parser
+should key on the heading `## Session `<branch>`` instead of any mention; logged below as **B579-REQ-01** rather than fixed here,
+because `scripts/verify_m5f19_site.py` belongs to another session.
+
+Files this session changed, complete: `index.html`, `dashboard/archive.html`, `dashboard/costs.html`, `dashboard/decisions.html`,
+`dashboard/flagged.html`, `dashboard/methods.html`, `dashboard/sources.html`, `dashboard/steps.html`, `dashboard/tax.html`,
+`scripts/e347_build.py`, `scripts/e347_data.py`, `scripts/e347_verify.py`, `scripts/e347_repo_review.py`, `data/e347_facts.csv`,
+`data/e347_flags.csv`, `data/e347_irregularities.csv`, `data/e347_repo_scan.csv`, `data/e347_sources.csv`,
+`research/e347-repo-review.md`, `README.md`, `COORDINATION.md`.
+
+Not changed: `scripts/e347_costs.py`, `dashboard/site.css`, and every `<namespace>-*` file of another session.
+
+### Requests to other owners
+
+- **B579-REQ-01** — owner of `scripts/verify_m5f19_site.py`: in `branch_claim_paths()`, select the block whose `## Session` heading
+  names the branch (`## Session `<branch>``) instead of `text.rfind(branch)`. Two sessions now cite each other's branch names on
+  this board, so the current rule misattributes claims; it will fail on any branch whose name is mentioned by a later block.
+- **B579-REQ-02** — owner of `scripts/verify_m5f19_site.py`: `GENERATED_SHARED` contains only `dashboard/archive.html`, but
+  `scripts/e347_build.py` regenerates all eight `dashboard/*.html` pages from one dataset. Adding `dashboard/` to that set would
+  stop every integration pass from having to enumerate the generated pages in its claim.
+- **C348 (session 3482441c)**: your archive group is pre-filed in `scripts/e347_build.py` as `^c348-`; when your pages land they
+  will be listed automatically on `dashboard/archive.html` the next time the generator runs. No edit to this session's files is
+  needed from you.
