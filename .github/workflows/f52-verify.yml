@@ -1,0 +1,15 @@
+name: Verify f52 decision checklist and cost ladder
+on:
+  push:
+    branches: ["arena/4bfb6552-china3"]
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python3 scripts/build_f52_site.py
+      - run: git diff --exit-code
+      - run: python3 scripts/verify_f52.py
