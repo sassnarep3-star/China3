@@ -269,12 +269,12 @@ def page():
     A('<p class="eyebrow">Decision readiness · read on ' + READ_ON + '</p>')
     A('<h1>Before you decide</h1>')
     A('<p class="lead">A U.S. citizen has RMB in a Chinese bank account and has been told that turning it into '
-      'dollars means "a considerable amount of taxes". The repository already holds a long-form Q&amp;A register '
-      '(<a href="QNA.md">QNA.md</a>). This page is its site-ready counterpart: the <b>questions that must be answered '
-      'before any route can be chosen</b>, ordered by what they decide, each with a status and the route it unlocks — '
-      'plus <b>three open items that were closed today</b> against the official text and the cost ladder recomputed '
-      'at today\'s board. Every figure and every statement here carries a link to the official page it was read from '
-      'on ' + READ_ON + '.</p>')
+      'dollars means "a considerable amount of taxes". The repo already carries a 36-question register on '
+      '<a href="dashboard/decisions.html">Decide</a> and a long-form Q&amp;A in <a href="QNA.md">QNA.md</a>. This page '
+      'does not repeat them: it is the short path through the questions that actually change the answer, and it adds '
+      '<b>three open items that were closed today</b> — items the register still marks unread — with the money each '
+      'one moves, plus the cost ladder recomputed at today\'s board. Every figure and every statement here carries a '
+      'link to the official page it was read from on ' + READ_ON + '.</p>')
 
     A('<div class="kpis">')
     A(f'<div class="kpi"><b>{usd(l01_10k["total"])}</b><span>Bank cost to convert and wire $10,000 at today\'s board</span>'
@@ -309,7 +309,9 @@ def page():
     # ---------------- questions
     A('<h2 id="questions">1. The 12 questions, in the order they decide things</h2>')
     A('<p class="lead">Each question changes which route is lawful or what it costs. "Open" means no public source '
-      'can answer it — it depends on your documents. The last column says what the answer unlocks.</p>')
+      'can answer it — it depends on your documents. The last column says what the answer unlocks. The full register, '
+      'with 36 questions and the discovery plan for each, is on <a href="dashboard/decisions.html">Decide</a>; these '
+      'twelve are the ones that move the route or the number.</p>')
     rows = []
     for r in QUESTIONS:
         kind = {"open": "high", "answered": "ok", "part": "med"}.get(
@@ -535,7 +537,8 @@ def page():
     A('<p><b>Scope.</b> Research from public official pages, read on ' + READ_ON + '. It is not legal, tax or '
       'banking advice and makes no finding about any person\'s case. Rates move daily; the ones shown are dated.</p>')
     A('<p><a href="index.html">Home</a> · <a href="dashboard/flagged.html">Open items</a> · '
-      '<a href="dashboard/sources.html">All sources</a> · <a href="QNA.md">Q&amp;A register</a> · '
+      '<a href="dashboard/sources.html">All sources</a> · <a href="dashboard/decisions.html">Decide register</a> · '
+      '<a href="QNA.md">Q&amp;A register</a> · '
       '<a href="REPO_AUDIT.md">Repository audit</a> · '
       '<a href="https://github.com/sassnarep3-star/China3">Repository</a></p>')
     A('</div></footer></body></html>')
