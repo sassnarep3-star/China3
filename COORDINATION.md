@@ -2475,3 +2475,38 @@ Branch `arena/3482441c-china3`, branched from `main` @ `b677a91` (PR #83 merge).
 
 **Explicitly not claimed:** integration/navigation (`index.html`, `dashboard/**`, `scripts/e347_*`) — held by `arena/b579901a-china3`; every other session's namespaced page. A link request from the archive will be logged here for the integrator rather than edited.
 
+---
+
+<!-- session-ea4701f7-claim -->
+
+## Session `arena/ea4701f7-china3` (`ea47`) — claim, 2026-11-11
+
+Branch fixed by Arena: `arena/ea4701f7-china3` (rebased onto `main` @ `522eb7b`). Working tree clean on arrival.
+
+State verified on arrival (`2026-11-11T12:55Z`):
+- Sibling sessions with active claims (< 60 min old): `arena/b579901a-china3` and `arena/205cf99c-china3` claim the shared canonical integration files (`scripts/e347_data.py`, `scripts/e347_build.py`, `scripts/b2d_data.py`, `index.html`, `dashboard/*.html`, `EXECUTIVE_SUMMARY.md`, `README.md`, `data/e347_*.csv`); `arena/3e2dbf57-china3` claims `3e2d*`; `arena/3482441c-china3` claims `c348*`; `arena/5903db91-china3` claims `5903*`.
+- **This session (`ea47`) touches NONE of those files or namespaces.** All shared-file integration items are logged as `EA47-REQ-*` requests below rather than edited directly.
+- Namespace `ea47` is verified completely unclaimed on `main` and across all remote branches.
+
+Claims (strictly exclusive `ea47` file scope + append-only `COORDINATION.md`):
+
+| ID | Task | File scope | Status |
+|----|------|------------|--------|
+| EA47-T0 | Read `COORDINATION.md`, scan live branches & open PRs, claim exclusive `ea47` scope, commit & push immediately | `COORDINATION.md` (append only) | done |
+| EA47-T1 | Live 2026-11-11 official-source verification: fetch & read primary PRC (SAFE, PBOC, STA, NPC, State Council, SPC, BOC) and U.S. (IRS, U.S. Code, eCFR, FinCEN, CBP, Fed, Supreme Court) sources; record verbatim quotes, URLs & UTC read timestamps | `data/ea47_sources.csv`, `research/ea47-verification-log.md` | in progress |
+| EA47-T2 | Executive summary + pre-decision questions, known vs missing facts, conditional answers & concrete discovery plan | `research/ea47-executive-summary.md`, `data/ea47_questions.csv`, `ea47-summary.html`, `ea47-questions.html` | unclaimed |
+| EA47-T3 | Exhaustive CNY→USD methods catalogue (pros/cons, statutory basis, caps, tax interaction) + deep conversion-penalty & least-tax legal analysis (6 distinct tax/penalty mechanisms: PRC tax record vs unpaid IIT, PRC withholding/treaty, U.S. § 988 vs § 988(e) capital gain & Form 1116 FTC, FBAR/8938/Streamlined SFOP 0% vs SDOP 5%, bank/FX spread friction, and Order 532 / criminal structuring penalties) | `data/ea47_methods.csv`, `data/ea47_penalties.csv`, `data/ea47_tax_scenarios.csv`, `ea47-methods.html`, `ea47-tax-penalties.html` | unclaimed |
+| EA47-T4 | Mobile-friendly $10,000–$400,000 cost schedule in $10,000 increments (40 steps × every method, most important info first; unverified fees left blank & flagged, never inferred) + step-by-step execution playbooks | `scripts/ea47_engine.py`, `data/ea47_inputs.csv`, `data/ea47_ladder.csv`, `data/ea47_method_costs.csv`, `data/ea47_steps.csv`, `ea47-costs.html`, `ea47-steps.html` | unclaimed |
+| EA47-T5 | Line-by-line repository review & irregularity register (audit existing files, formulas, source URLs & cross-edition drift without modifying sibling-owned files) | `scripts/ea47_repo_audit.py`, `data/ea47_flags.csv`, `data/ea47_repo_audit.csv`, `research/ea47-repo-audit.md`, `ea47-audit.html`, `ea47-flagged.html` | unclaimed |
+| EA47-T6 | Clean mobile-first GitHub Pages dashboard (`ea47-dashboard.html` + 8 category subpages + `ea47-sources.html`), deterministic builder, fault-injecting verifier & path-scoped CI workflow | `ea47-*.html`, `assets/ea47.css`, `assets/ea47.js`, `scripts/ea47_build.py`, `scripts/ea47_verify.py`, `.github/workflows/ea47-verify.yml` | unclaimed |
+| EA47-T7 | Rebase onto `origin/main`, pass all gates, open PR (`arena/ea4701f7-china3` → `main`), merge without waiting for approval, confirm GitHub Pages deploy, record PR link & merge result here | GitHub PR / Pages / `COORDINATION.md` (append only) | unclaimed |
+
+### Cross-scope requests logged for the active integration owner (`arena/b579901a-china3` / `arena/205cf99c-china3`)
+
+- **EA47-REQ-01:** When regenerating shared navigation (`scripts/e347_build.py` → `index.html`, `dashboard/archive.html`), please add an `ARCHIVE_GROUPS` entry `(r"^ea47-", "EA47 least-tax & full-method decision dashboard (session ea4701f7)", "Executive summary, 6-mechanism tax/penalty analysis, pre-decision discovery register, 18 CNY→USD methods, mobile-first $10k–$400k cost matrix, step-by-step playbooks, repo audit & Flagged for Review.")` and link `ea47-dashboard.html`.
+
+### EA47 log
+
+- `2026-11-11T12:55Z`: Exclusive `ea47` claim committed and pushed before creating any content file.
+
+
