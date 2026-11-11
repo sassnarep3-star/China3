@@ -1296,3 +1296,34 @@ reachable by direct URL and this request stays open on the board.
   this branch; confirmed all ten inherited validators PASS at that base (`validate_data`, `check_links`, `verify_deep`,
   `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`,
   `verify_final_integration`). Wrote this claim and pushed it before touching any content file.
+
+---
+
+## Session `arena/6cd77131-china3` — final integration session (2026-11-11)
+
+### Claim (written and pushed before any content file was touched)
+
+| ID | Task | File scope | Status | Owner |
+|----|------|------------|--------|-------|
+| I6C-T1 | Repository review, line by line, against official sources; flag irregularities | `research/i6c-repo-review.md` (new, own namespace) | in progress | arena/6cd77131-china3 |
+| I6C-T2 | Verify `/dashboard/costs.html` — all 440 rows re-derived independently, spreadsheet + page | `research/i6c-cost-verification.md`, `data/i6c_cost_10k_400k.csv` | in progress | arena/6cd77131-china3 |
+| I6C-T3 | Independent re-verification of the load-bearing claims at the official source (Art. 64 vs 65, Art. 59, tariffs, §988, FBAR ceilings) | `research/i6c-source-recheck.md`, `data/i6c_source_recheck.csv` | in progress | arena/6cd77131-china3 |
+| I6C-T4 | Question register: every question that must be answered before a decision, with what is missing and how to obtain it | `dashboard/questions.html` (additive nav entry) | in progress | arena/6cd77131-china3 |
+| I6C-T5 | Executive summary dated 2026-11-11 (supersedes the 2026-11-10 summary) | `EXECUTIVE_SUMMARY.md`, `data/i6c_exec_summary.csv` | in progress | arena/6cd77131-china3 |
+| I6C-T6 | Integration: nav entry for the question register, flag page additions, coordination record, PR + merge + Pages verification | `scripts/e347_build.py` (NAV only), `dashboard/flagged.html` via `scripts/e347_data.py`, `COORDINATION.md`, `README.md` | in progress | arena/6cd77131-china3 |
+
+**Claim boundaries.** This session owns the I6C namespace and the shared integration outputs, and is
+the final integration session for this round. Other sessions' namespaces (`a513*`, `c3x-*`, `c5bf-*`,
+`d646-*`, `m5f19-*`, `s775-*`, `s436*`, `docs/`, `deep-*`) are read but never edited; corrections to
+those files are published in `research/i6c-repo-review.md` and linked from the Flagged page instead.
+`scripts/e347_data.py` is edited only to add rows to the flagged register (additive), and
+`scripts/e347_build.py` only to add the one nav entry each for `questions` and `sources-map`.
+
+### Log
+
+- `2026-11-11T02:4xZ`: Branch cut from `f6ae79e` (main after PR #46). Fetched: PR **#47 (m5f19) was merged by
+  the repository owner at 2026-11-11T02:29:49Z** (merge commit `15a7986`) while this session was reading
+  the board — the merge attempt returned "already merged". `origin/main` merged into this branch; nothing
+  discarded. All workflows on the resulting `main` finished `success`, Pages status `built`.
+- `2026-11-11T02:4xZ`: Bootstrapped the inherited gates at the merged tip before any edit — `verify_dashboard`,
+  `e347_verify`, `check_links` all PASS. Claim written and pushed before content work, as the board requires.
