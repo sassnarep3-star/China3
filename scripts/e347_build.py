@@ -455,6 +455,7 @@ ARCHIVE_GROUPS = [
     (r"^a513", "A513 answer page (session 5130fbc0)", "Independent pass on the same board; figures match."),
     (r"^e8b7-", "E8B7 edition (session e8b70ef3)", ""),
     (r"^s055-", "S055 edition (session 05552f6e)", ""),
+    (r"^m5f19", "M5F19 verified edition (session 5f1925df)", "Independent re-verification; reconciles four conflicting headline figures under one stated convention."),
     (r"^c5bf-", "C5BF integration audit (session c5bf9ddc)", "Corrections to the S775 layer and a fresh-board ladder."),
     (r"^s775-", "S775 audit", "Known problems: R01, R04, R10 on the Flagged page. Uses the earlier 6.6903 rate."),
     (r"^d646-", "D646 verification refresh", "Uses the earlier 6.6903 rate and prices $400,000 as eight wires."),
@@ -629,6 +630,18 @@ def page_index():
 <a href="{ctx.page("tax")}"><b>Tax</b><span>Chinese tax, U.S. tax, reporting forms, penalties</span></a>
 <a href="{ctx.page("flagged")}"><b>Flagged for review</b><span>Unverified values and repository problems</span></a>
 <a href="{ctx.page("sources")}"><b>Sources</b><span>{len(data.SOURCES)} official pages with what each one says</span></a>
+</div>
+<h2>Parallel editions &amp; independent audits</h2>
+<p class="note">Independent passes written by parallel sessions, kept as published. Where they disagree with this dashboard, the dashboard is the later reading. Each is reachable directly and listed on the <a href="{ctx.page("archive")}">Archive</a>.</p>
+<div class="links">
+<a href="m5f19-dashboard.html"><b>M5F19 verified edition</b><span>Independent re-verification and cost reconciliation (10 Nov 2026)</span></a>
+<a href="cross-session-review.html"><b>Cross-session review</b><span>Every concurrent session's published numbers checked against one board</span></a>
+<a href="c5bf-integration-audit.html"><b>C5BF integration audit</b><span>Line-by-line audit of the merged repo and the live site</span></a>
+<a href="a058-flagged-review.html"><b>A058 publication audit</b><span>Publication state, cost presentation, primary-source support</span></a>
+<a href="a502-review.html"><b>A502 accuracy &amp; release audit</b><span>High-impact legal/financial claims audited against primary sources</span></a>
+<a href="a15-review.html"><b>A15 safety review</b><span>Independent integration safety review</span></a>
+<a href="completion-audit.html"><b>Completion audit</b><span>Fresh official-source spot-check and executive conclusions</span></a>
+<a href="us-fx-gain.html"><b>U.S. §988 currency gain</b><span>The conversion tax on appreciated RMB, $10k–$400k</span></a>
 </div>
 <p class="note">Earlier research passes are kept in the <a href="{ctx.page("archive")}">Archive</a>.</p>
 """
