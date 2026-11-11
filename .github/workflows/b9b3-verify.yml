@@ -1,0 +1,67 @@
+name: Verify B9B3 research dashboard
+
+# Session arena/9b36086f-china3. Scoped to this branch and its pull request so
+# sibling sessions are not failed by a gate on files they do not own.
+on:
+  push:
+    branches: ["arena/9b36086f-china3"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  b9b3:
+    name: B9B3 — exact arithmetic, official sources, blanks, links, inherited gates
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'arena/9b36086f-china3'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate the shared archive with the new B9B3 pages
+        run: python3 scripts/e347_build.py
+
+      - name: Rebuild the B9B3 engine and site
+        run: |
+          python3 scripts/b9b3_engine.py
+          python3 scripts/build_b9b3_site.py
+
+      - name: Independent B9B3 verification gate
+        run: python3 scripts/verify_b9b3_site.py
+
+      - name: Dashboard and every inherited verification gate
+        run: |
+          python3 scripts/e347_build.py --check
+          python3 scripts/e347_verify.py
+          for s in scripts/verify*.py scripts/check_links.py scripts/validate_data.py scripts/test_costs.py; do
+            case "$s" in scripts/verify_b9b3_site.py) continue;; esac
+            echo "--- $s ---"
+            python3 "$s"
+          done
+
+      - name: Whitespace and conflict-marker sanity
+        run: |
+          git diff --check
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          bad = []
+          marker = re.compile(r'^(<<<<<<<|=======|>>>>>>>)', re.M)
+          for p in [Path('COORDINATION.md')] + sorted(Path('.').rglob('*b9b3*')):
+              if p.is_file() and '.git' not in p.parts:
+                  try:
+                      if marker.search(p.read_text(encoding='utf-8')):
+                          bad.append(str(p))
+                  except (UnicodeDecodeError, OSError):
+                      pass
+          if bad:
+              raise SystemExit('conflict markers: ' + ', '.join(bad))
+          print('No conflict markers in COORDINATION.md or B9B3 files')
+          PY
