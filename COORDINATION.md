@@ -1440,7 +1440,7 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 | V2 | done | `QNA.md` (new, root) | Questions, information and answers to address before any decision, grouped by the money itself, China rules, cost, U.S. tax/reporting, routes, and a decision checklist; every blank flagged with a suggestion to discover missing information. |
 | V3 | done | `data/e347_costs.csv`, `dashboard/costs.html` | Spot-checked cost math at $10,000/$100,000/$400,000 against the BOC tariff and board: $10,000 → spread $20.94 + fee $32.44 = $53.38; $100,000 → $209.42 + $61.33 = $270.75; $400,000 → $837.68 + $61.33 = $899.01. All match. Full ladder recomputed by e347_verify.py (440 rows exact). |
 | V4 | done | `.github/workflows/pages.yml`, root `index.html` | e347_build.py: 15 files, 0 changed. e347_verify.py: PASS (440 cost rows, 658 table rows sourced, 380 blanks flagged, 2138 links resolved). Live site serving at https://sassnarep3-star.github.io/China3/ (homepage fetched successfully). |
-| V5 | in progress | GitHub | PR from this branch to `main`; merge; record PR link and merge result here. |
+| V5 | done | GitHub | PR #52 (https://github.com/sassnarep3-star/China3/pull/52) merged via merge commit ce35f734356c613a52067e950b05d104604ea010; branch rebased onto main at 8ba1616 before merge. |
 
 ### Log
 
@@ -1448,4 +1448,4 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 - 2026-11-11: Independent official-source checks completed (V1): IRS irs.gov yearly average rates; ecfr.gov 31 CFR 1010.821; safe.gov.cn SAFE FX Regulation No. 532; boc.cn rate board and personal tariff. All reachable and consistent.
 - 2026-11-11: QNA.md created and committed (V2).
 - 2026-11-11: Cost-table spot-check passed (V3); e347_build.py + e347_verify.py PASS; live site confirmed serving (V4).
-- 2026-11-11: Creating PR from `arena/78c46684-china3` to `main` (V5).
+- 2026-11-11: PR #52 from `arena/78c46684-china3` to `main` merged via merge commit ce35f734356c613a52067e950b05d104604ea010 (V5 done). GitHub Pages deploy run 42948074108 succeeded (build + deploy jobs green); live site at https://sassnarep3-star.github.io/China3/.
