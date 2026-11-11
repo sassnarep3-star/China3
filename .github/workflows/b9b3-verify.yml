@@ -1,0 +1,79 @@
+name: Verify B9B3 research dashboard
+
+# Session arena/9b36086f-china3. Scoped to this branch and its pull request so
+# sibling sessions are not failed by a gate on files they do not own.
+on:
+  push:
+    branches: ["arena/9b36086f-china3"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  b9b3:
+    name: B9B3 — exact arithmetic, official sources, blanks, links, inherited gates
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'arena/9b36086f-china3'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate the shared archive with the new B9B3 pages
+        run: python3 scripts/e347_build.py
+
+      - name: Rebuild the B9B3 engine and site
+        run: |
+          python3 scripts/b9b3_engine.py
+          python3 scripts/build_b9b3_site.py
+
+      - name: Independent B9B3 verification gate
+        run: python3 scripts/verify_b9b3_site.py
+
+      - name: Dashboard and inherited data gates
+        run: |
+          python3 scripts/e347_build.py --check
+          python3 scripts/e347_verify.py
+          python3 scripts/verify_b2d_decisions.py
+          python3 scripts/check_links.py
+          python3 scripts/validate_data.py
+          python3 scripts/verify_dashboard.py
+          python3 scripts/verify_76e.py
+          python3 scripts/verify_m5f19_site.py
+          python3 scripts/verify_c3x_site.py
+          python3 scripts/verify_d646_site.py
+          python3 scripts/verify_s775_site.py
+          python3 scripts/verify_s436_site.py
+          python3 scripts/verify_c5bf.py
+          python3 scripts/verify_a513.py
+          python3 scripts/verify_final_integration.py
+          python3 scripts/verify_cost_tables.py
+          python3 scripts/verify_completion.py
+          python3 scripts/verify_deep.py
+          python3 scripts/test_costs.py
+
+      - name: Whitespace and conflict-marker sanity
+        run: |
+          git diff --check
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          bad = []
+          marker = re.compile(r'^(<<<<<<<|=======|>>>>>>>)', re.M)
+          for p in [Path('COORDINATION.md')] + sorted(Path('.').rglob('*b9b3*')):
+              if p.is_file() and '.git' not in p.parts:
+                  try:
+                      if marker.search(p.read_text(encoding='utf-8')):
+                          bad.append(str(p))
+                  except (UnicodeDecodeError, OSError):
+                      pass
+          if bad:
+              raise SystemExit('conflict markers: ' + ', '.join(bad))
+          print('No conflict markers in COORDINATION.md or B9B3 files')
+          PY
