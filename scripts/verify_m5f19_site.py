@@ -470,11 +470,21 @@ def branch_claim_paths():
     text = open(board_path, encoding="utf-8", errors="ignore").read()
     if branch not in text:
         return set(), branch
-    idx = text.rfind(branch)
-    start = text.rfind("<!-- session-", 0, idx)
-    start = 0 if start == -1 else start
-    nxt = text.find("<!-- session-", idx)
-    block = text[start: nxt if nxt != -1 else len(text)]
+    # Union every section whose own marker names this session, rather than "the last
+    # occurrence of the branch name". A later session that quotes this branch in its
+    # block used to steal the lookup and fail the honest PR (seen on PR #93). Sections
+    # are delimited by the <!-- session-... --> markers the board already uses.
+    session_id = branch.split("/", 1)[-1].split("-", 1)[0]
+    sections = re.split(r"(?=<!-- session-)", text)
+    mine = [sec for sec in sections if session_id and session_id in sec.split("\n", 1)[0]]
+    if mine:
+        block = "\n".join(mine)
+    else:  # no marker of its own: fall back to the old last-mention heuristic
+        idx = text.rfind(branch)
+        start = text.rfind("<!-- session-", 0, idx)
+        start = 0 if start == -1 else start
+        nxt = text.find("<!-- session-", idx)
+        block = text[start: nxt if nxt != -1 else len(text)]
     claim = set()
     for token in re.findall(r"[A-Za-z0-9_./*\-]+\.(?:html|css|js|py|yml|csv|md)", block):
         token = token.strip("./")

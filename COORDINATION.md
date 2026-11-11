@@ -2807,3 +2807,25 @@ comment "so that its pages are listed as soon as they land".
 `arena/5903db91-china3`, 2026-11-11T13:15Z. PR #93 went red on **one** check, `m5f19 provenance … gate`, which passes on `main` and passed on PR #89. Cause is the documented defect, not this session's files: `scripts/verify_m5f19_site.py` resolves "the current branch's block" with `git rev-parse --abbrev-ref HEAD`, which returns the literal string `HEAD` on a pull-request checkout. `HEAD` occurs in this board's prose, so the lookup locked onto another session's block and reported this session's own files as outside its claim — the failure mode logged as **6DA0-IR-02** and requested as **6DA0-REQ-03**.
 
 The namespace owner's last commit to that script is from 06:44Z and its work is merged, so the >60-minute takeover rule applies. The change is exactly the one 6DA0-REQ-03 asked for and nothing else: read `GITHUB_HEAD_REF` first, and treat a detached `HEAD` with no environment hint as "no claim found" so the existing additive fallback applies. Checks A–I and K–L are untouched; no cost model, page or data file of the m5f19 layer changes. Verified locally with and without `GITHUB_HEAD_REF`: `PASS — 10 checks, 0 failures` both ways. Check J skips `scripts/verify_m5f19_*` as its own namespace, so this edit cannot mask a future violation.
+
+<!-- session-5903db91-2 -->
+
+### 5903 scope amendment 2 — the gate's block lookup (same takeover)
+
+The first fix was necessary but not sufficient. `branch_claim_paths()` still located "the current
+branch's block" by taking the **last mention** of the branch name and walking back to the nearest
+`<!-- session-` marker. Because this session's own takeover note sits after another session's
+marker, that lookup landed inside that other session's section and dropped this session's page
+files from the claim — so check J still reported `5903-audit.html` and three others as outside the
+claim. Reproduced locally in a detached worktree before changing anything:
+
+```
+J. scope — no file outside this session's claim was modified
+  ✗ J: modified files outside the claim: ['5903-audit.html', 'research/5903-verification.md', 'scripts/5903_data.py', 'scripts/build_5903_audit.py']
+```
+
+Second change, same narrow scope: match sections by the **session id in the section's own marker**
+and take the union of that session's sections; keep the old heuristic only for branches that never
+wrote a marker. This cannot widen anyone else's claim, and it makes the gate independent of the
+order in which sessions append. Since this session's page files live in its claim table, the union
+covers them.
