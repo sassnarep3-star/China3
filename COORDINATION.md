@@ -1304,4 +1304,15 @@ reachable by direct URL and this request stays open on the board.
 
 - **Session:** `arena/b8720152-china3` (branch of this session; claimed 2026-11-11, UTC).
 - **Scope:** `scripts/e347_data.py` (flag U15 text only), regenerated `data/e347_flags.csv`, `dashboard/flagged.html`, `index.html` and the other generated pages, `COORDINATION.md`. No figures changed.
-- **Status:** in progress.
+- **Status:** done (2026-11-11).
+- **Sources re-read this pass (official, fetched 2026-11-11):**
+  - BOC e-banking personal transfer tariff (https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html): cross-border wire 1 per mille, min RMB 50, max RMB 260, plus RMB 150 telegraph fee for non-HK/Macau/Taiwan. Matches S02 and the cost engine.
+  - BOC exchange-rate board (https://www.boc.cn/sourcedb/whpj/enindex_1619.html): USD row now reads buying 666.30, selling 669.11, middle 671.91, published 2026/11/11 10:25:02. The site's figures use the earlier 2026/11/10 17:39:58 snapshot (selling 668.51).
+  - SAFE Ningxia 2022 Q&A No. 8 (https://www.safe.gov.cn/ningxia/2022/0929/1997.html): the USD 50,000 annual convenience amount is set by ID, not by amount; amounts above it need source-of-funds documents (汇发〔2020〕14号 arts. 56-57).
+  - SAFE Tianjin 2024 Q&A No. 9 (https://www.safe.gov.cn/tianjin/2024/0621/2529.html): art. 59 (foreign individuals) and the statement that only holders of a Foreign Permanent Resident ID get the annual convenience amount. Matches S05.
+- **Changes:** flag U15 (rate snapshot) text now records the 2026-11-11 reading and says the figures were not repriced. Rebuilt with `scripts/e347_build.py`; `scripts/e347_verify.py` PASS (440 cost rows recomputed exactly, 658 table rows sourced, 380 blanks flagged, 2138 links resolved).
+- **Irregularities flagged:**
+  - The BOC board's "Middle Rate" column (671.91 on 2026/11/11; 671.67 on 2026/11/10) is not the midpoint of buying and selling. The site's "fair value" is its own midpoint calculation and says so.
+  - The rate on the site is one day old against the live board. Repricing needs a fresh, dated board reading and a rebuild, so it is logged here instead of changed.
+  - The repository's local clone was shallow in this session; it was unshallowed before pushing. No repository content was affected.
+- **Coordination:** PR #47 (`arena/5f1925df-china3`, m5f19 pages) was merged to main before this session pushed. It is additive and does not touch the e347 files.
