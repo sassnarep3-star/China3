@@ -2140,6 +2140,8 @@ Full register with quotations: `data/6da0_sources.csv` (52 rows). Issuers: Natio
 
 ---
 
+<!-- session-arena/495be42b-china3-final-v1 -->
+
 ## Session `arena/495be42b-china3` — final integration: honoring pending link requests, combined-tree verification, PR/merge/Pages
 
 Branch: `arena/495be42b-china3` (fixed by Arena; the `session-<id>/<task>` branch rule cannot be applied — same constraint logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001).
@@ -2171,7 +2173,8 @@ Also outstanding: 6DA0-REQ-04 (shorten the two long NAV labels) and G8D8-REQ-03 
 | ID | Task | File scope | Status | Owner |
 |----|------|------------|--------|-------|
 | FI-1 | Claim scope and push before any content work | `COORDINATION.md` (append only) | done | `arena/495be42b-china3` |
-| FI-2 | Honor the six link requests + 6DA0-REQ-04 + G8D8-REQ-03 through the generator `scripts/e347_build.py`; regenerate | `scripts/e347_build.py`, `scripts/e347_verify.py` (nav count), regenerated `index.html` + `dashboard/*.html` | in progress | `arena/495be42b-china3` |
+| FI-2 | Honor the six link requests + 6DA0-REQ-04 + G8D8-REQ-03 through the generator `scripts/e347_build.py`; regenerate | `scripts/e347_build.py`, `scripts/e347_verify.py` (nav count), regenerated `index.html` + `dashboard/*.html` | done | `arena/495be42b-china3` | Generator rebuilt; `e347_build.py --check` clean |
+| FI-2b | Takeover (>60-min rule, logged): `arena/676d2a67-china3`'s PR #72 is stale, no commits since 2026-11-11T03:07Z; the durable fix it was asked for (6DA0-IR-03) is applied here — `scripts/n676_verify.py` check K is now claim-aware like the m5f19 check J. No figure, page or data file of the n676 layer changed | `scripts/n676_verify.py` (check K only) | done | `arena/495be42b-china3` | Handoff noted in this block |
 | FI-3 | Combined-tree verification: full validator suite + independent spot-check of the published ladder from the recorded inputs | read-only + this file | in progress | `arena/495be42b-china3` |
 | FI-4 | Additive README / EXECUTIVE_SUMMARY pointers for the newly linked editions | `README.md`, `EXECUTIVE_SUMMARY.md` (additive only) | pending | `arena/495be42b-china3` |
 | FI-5 | PR → `main`, checks green, merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / this file | pending | `arena/495be42b-china3` |
