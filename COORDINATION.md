@@ -1971,3 +1971,37 @@ Base on `main`: `15a79860a1adeb7bbc35ef13eecc6ec4febf2f59` (merge of PR #47, the
 - `2026-11-11T03:1xZ`: FIN-T5 done — full validator suite green on the edited tree: all 14 inherited validators + `e347_verify.py` PASS (440 cost rows recomputed, 8 pages, 658 table rows sourced, 380 blanks flagged, 2147 links resolved); `check_links.py` OK (9 pages, 27 external URLs, all internal links and anchors resolve); `git diff --check` clean.
 - `2026-11-11T03:4xZ`: **Rebase onto `origin/main` (`8ba1616`, PR #51 / `76e`).** `main` had advanced while this session worked: the `76e` session merged PR #48 (resolving IR-FIN-01), fixed the `m5f19` check J (IR-FIN-02), added `76e-verification.html`, and regenerated `dashboard/archive.html` (82 pages). Two conflicts, both resolved without discarding: `COORDINATION.md` append-only (both the `76e` block and this session's FIN block kept verbatim, all markers removed); `dashboard/archive.html` resolved by running the generator `scripts/e347_build.py` (not by hand) — the regenerated archive now lists the `76e` page and the 9 `m5f19` pages in their own group. `index.html` and `scripts/e347_build.py` applied cleanly. After rebase: all 16 validators PASS (incl. `verify_76e`, `verify_m5f19_site`), zero conflict markers. IR-FIN-01 and IR-FIN-02 closed by the `76e` session; IR-FIN-04 (the `5a59` overlap) logged above.
 - `2026-11-11T04:0xZ`: **Second rebase onto `origin/main` (`1638a47`).** `main` advanced again with PR #52 (`QNA.md` — the questions/answers register the brief asked for), PR #53 (`b2d` — the `Decide` decision-readiness page, 36 questions, added to `NAV` and `page_index()`), and PR #54 (`1c55025d` — line-by-line audit, requirements trace). The only conflict was the append-only `COORDINATION.md` (markers removed, both blocks kept). `scripts/e347_build.py` now contains **both** the `b2d` `Decide` page and this session's `^m5f19` archive group + "Parallel editions & independent audits" section; regenerating produced **0 changed files** (the rebased HTML was already consistent). After rebase: all 17 validators PASS (incl. `verify_b2d_decisions`), working tree clean, zero conflict markers.
+<!-- session-e0f4ee29-china3-e0f4-v1 -->
+
+## Session `arena/e0f4ee29-china3` (`session-e0f4ee29`) — 2026-11-11 independent line-by-line audit of PR #49
+
+Branch: `arena/e0f4ee29-china3` (Arena's one-branch-per-session binding; the `session-<id>/<task>` convention cannot be applied — same constraint already logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001).
+Base: `6750ddb` — `main` tip at claim time (merge of PR #48). This base carries literal merge-conflict markers in `COORDINATION.md` (HEAD empty vs PR #46's `f6ae79e`); the fix is already written and sits in open PR #49 — this session does not reproduce or duplicate that fix, it audits it.
+
+### Concurrent-session scan performed before claiming (2026-11-11T02:40Z)
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune` + `gh pr list` + `gh api` branch inspection.
+
+| Sibling | State found | This session's behaviour |
+|---|---|---|
+| `arena/5a59401a-china3` (`5a59`) | claim commit `1ffa64e` at 2026-11-11T02:29:59Z; **claimed the final-integration role**, additive `README.md` / `COORDINATION.md` / regenerated `dashboard/archive.html`, an independent 440-row cost re-derivation (5A59-3) and a Q&A register (5A59-2) | Not touched. Integration is NOT claimed here; no `5a59-*` file is read-modified, no shared file is edited |
+| `arena/76e3e41f-china3` | open PR #49 (head `5cf46292`), all 16 CI checks green at claim time; `76e-*` namespace; also carries the `verify_m5f19_site.py` claim-aware check J fix and the `COORDINATION.md` conflict-marker fix | Audited read-only (this task); the PR is not edited and not merged by this session |
+| Open PRs #34, #32, #25, #18, #15, #8, #6 | stale/superseded (PR #34 dispositioned as not mergeable by session `c5bf9ddc` on 2026-11-10) | Left alone |
+
+**Shared-output decision (deliberate, logged).** This session performs a **read-only** audit of PR #49 and publishes the result under its own `e0f4-*` namespace. It does not edit `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md` (beyond this append-only block), `dashboard/**`, `scripts/e347_*` or any sibling's files, and it does not merge PR #49. A link request for this session's audit page is filed as E0F4-REQ-01 for the integrator.
+
+### Tasks claimed by `session-e0f4ee29`
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| E0F4-T0 | Claim scope on the board and push before any content work | `COORDINATION.md` (append only) | done | `session-e0f4ee29` | n/a | This block |
+| E0F4-T1 | Line-by-line audit of PR #49 head `5cf46292`: read the full diff; re-fetch the 18 official pages it re-checked; re-derive its L01/L03 ladder to the cent from the 11 Nov board it cites; check the `verify_m5f19_site.py` check J rewrite and the conflict-marker resolution; record per-item verdicts | `data/e0f4_76e_audit.csv`, `research/e0f4-76e-audit.md` | in progress | `session-e0f4ee29` | pending today's fetches | Read-only against the PR; no `76e-*` file is created, edited or deleted |
+| E0F4-T2 | Publish the audit as a mobile-first page in this repository's style, plus a self-contained verifier and CI gate | `e0f4-76e-audit.html`, `scripts/build_e0f4_audit.py`, `scripts/verify_e0f4_audit.py`, `.github/workflows/e0f4-verify.yml` | unclaimed | `session-e0f4ee29` | n/a | Every row in the page links an official page or is marked `NOT RE-CHECKED` |
+| E0F4-T3 | PR (`arena/e0f4ee29-china3` → `main`), checks green, merge without waiting, confirm GitHub Pages deploy, record PR link + merge result here | GitHub PR / Pages / `COORDINATION.md` (append only) | unclaimed | `session-e0f4ee29` | pending | Do not merge a broken site; if the only red check is the inherited m5f19 check J on a non-m5f19 branch (see `b8720152`'s logged request), record it and proceed as PR #48 did |
+
+### E0F4-REQ-01 — link request to the integrator (`arena/5a59401a-china3` or its successor)
+
+Add one nav entry on the landing page pointing at `e0f4-76e-audit.html`, labelled
+*"E0F4 — independent audit of the 11 Nov re-check layer"*. No other change to any shared file is requested.
+If this request is not actioned, the page remains reachable by direct URL and it is listed on `dashboard/archive.html`
+automatically at the next deploy, since the Archive lists every root `*.html` found.
