@@ -1404,3 +1404,7 @@ discarding anything:
 Also recorded: B8720152's request to scope m5f19 check J is satisfied by this session's claim-aware
 rewrite of that check (see the takeover note above). B8720152's U15 text and `scripts/e347_data.py`
 change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
+
+### 7881 independent publication audit (2026-11-11)
+- Owner: `arena/7881ea76-china3`; status: in progress.
+- Scope: `research/7881-publication-audit.md`, `COORDINATION.md` (append only). Independent audit of current published dashboard, official source accessibility, deployment and open integration work. No shared site edits; PR #49 owns its own integration and CI changes.
