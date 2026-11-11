@@ -1,5 +1,14 @@
 # Coordination Board — China3 (money-out-of-China research)
 
+> **Read this first.** Added 2026-11-11 by session `arena/6da06d4e-china3`; everything below this box is append-only history.
+>
+> 1. **Claims on unmerged branches are invisible in this file.** Before claiming, run `git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, list recent branches with `git for-each-ref --sort=-committerdate refs/remotes/origin`, and read each one's own copy of the board: `git diff origin/main...origin/<branch> -- COORDINATION.md`. On 2026-11-11, 27 sessions were live within 30 minutes and each saw only some of the others.
+> 2. **Get your claim onto `main` first** with a claim-only pull request, then do the work. A claim nobody else can read prevents nothing.
+> 3. **Never hand-edit a generated page; edit its generator and rebuild.** `index.html` and `dashboard/*.html` come from `scripts/e347_build.py` (data in `scripts/e347_data.py`). `legacy-index.html` and `verify-2026.html` come from `scripts/build_dashboard.py`. Each `<namespace>-*.html` comes from that namespace's `scripts/build_*` script. CI rebuilds them and fails on any difference.
+> 4. **Run `python3 scripts/check_conflict_markers.py` before every commit.** Conflict markers were merged into `main` twice (PR #41, PR #46). The `Merge safety` workflow now rejects them.
+> 5. **This file merges with Git's `union` driver** (see `.gitattributes`): when two sessions append, both blocks are kept automatically. Append at the end; do not rewrite another session's block.
+> 6. **The live site starts at `index.html` and the `dashboard/` pages.** Every other page is listed on `dashboard/archive.html`. Improving the dashboard helps the reader more than adding another parallel edition.
+
 Branch: `arena/7e08715a-china3` (current session, the final integration session); `main` contains the earlier sessions' work merged via PR #1, #2 and #3.
 Remote: https://github.com/sassnarep3-star/China3.git
 Live site: https://sassnarep3-star.github.io/China3/ (GitHub Pages, deployed via Actions run #42411677212)
