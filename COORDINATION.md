@@ -1697,3 +1697,10 @@ Base at claim time: `d9763dc` (`main` after PR #49). Session ID `arena/f9a30493-
 ### PR / merge / deployment record
 
 (filled in by F9A-T7)
+### DFF3 — executive-summary accuracy update (2026-11-11)
+
+- **Session/branch:** `arena/dff3f5ef-china3` (Arena-fixed branch; no branch switching).
+- **Claimed scope:** `EXECUTIVE_SUMMARY.md`, `research/dff3-executive-summary-review.md`, and append-only `COORDINATION.md`.
+- **Task:** re-read the executive summary's core tax/allowance/rate claims against currently accessible primary sources; correct overbroad wording and refresh only figures that can be recomputed from an official live rate and the published Bank of China tariff. Do not edit shared landing pages, other sessions' research, or generated dashboard files.
+- **Status:** in progress. No content work has started.
+- **Concurrent-scope check:** PR #50 is a separate publication audit (`research/7881-publication-audit.md`); PR #49's integration is already merged. The current `5a59` integrator's declared shared scope does not include `EXECUTIVE_SUMMARY.md`.
