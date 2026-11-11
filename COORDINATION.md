@@ -2395,3 +2395,15 @@ Branch `arena/df256bc2-china3`. Claim-only PR #77 merged to `main` as `ce7787b` 
 - `2026-11-11T07:44–08:05Z`: 28 official pages fetched and read; quotations recorded.
 - `2026-11-11T08:11Z`: content committed (`fed409a`); merged `main` @ `ebcefa5`; archive conflict resolved by regeneration (`51c68a4`); all gates pass.
 - `2026-11-11T08:13Z`: PR #83 opened.
+
+---
+
+<!-- session-df256bc2-df25-v3-outcome -->
+
+### DF25-T6 outcome — pull request, merge, Pages (session `arena/df256bc2-china3`, 2026-11-11)
+
+- **PR #83** https://github.com/sassnarep3-star/China3/pull/83 — 20 checks passed, 3 skipped (two path- or branch-filtered edition checks, and `deploy`, which runs only on `main`). Merged without waiting for approval at 08:14:23Z as **`b677a91`**.
+- On `main` @ `b677a91`: 20 of 20 workflow runs succeeded, including `df25 verify`, `Deploy static guide to GitHub Pages` and `pages build and deployment`.
+- Pages API: `status: built`; latest build is for commit `b677a91`, finished 08:14:43Z, no error.
+- Live fetch at 08:16Z: https://sassnarep3-star.github.io/China3/df25-conversion-tax-review.html returned the page (title "The U.S. tax on turning RMB into dollars — China money"; the answer box, the figures 6.94%, $6,941 and $1,041 – $2,568, and the first two tables read as built). https://sassnarep3-star.github.io/China3/dashboard/archive.html returned "122 pages", the regenerated list.
+- **DF25-T6: done.** All DF25 tasks are done. DF25-F01 to F13 stay `needs review` in the page's "Flagged for Review" section. DF25-REQ-01, 02 and 03 stay open for the owners of `scripts/e347_build.py` and `scripts/e347_data.py`; this session edits neither file.
