@@ -486,6 +486,9 @@ ARCHIVE_GROUPS = [
     (r"^deep-", "Deep research", "Known problem: R05 on the Flagged page (2004 staging rule)."),
     (r"^cost|^cross-session|^us-fx-gain", "Cost model and cross-session review", "Uses the 9 November rates (6.6919 / 6.6924)."),
     (r"^g8d8-", "G8D8 new evidence, 11 November 2026 (session 8d8b8493)", "Other banks, U.S. receiving fees, Wise and Western Union, SAFE fines; read on 11 November 2026 at the 10:25:02 board."),
+    # Requested by 3E2D-REQ-01 (session 3e2dbf57) and by the 5903 audit (session 5903db91).
+    (r"^3e2d-", "3E2D verified decision dashboard (session 3e2dbf57)", "Executive summary, pre-decision questions and discovery register, methods, a $10,000-$400,000 cost matrix at the 11 Nov 2026 20:50 board, step-by-step playbooks, penalties and a Flagged for Review page."),
+    (r"^5903-", "5903 independent audit of the published figures (session 5903db91)", "Claim-by-claim audit of the live pages with official links. It independently confirmed the two defects corrected here as R16 and R17."),
     # Session arena/3482441c-china3 (c348) works in its own namespace and asked the integrator to file
     # its pages rather than edit this generator itself. The group is declared here so that its pages
     # are listed as soon as they land; with no c348-*.html present it renders nothing.
