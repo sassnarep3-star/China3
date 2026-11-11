@@ -75,7 +75,9 @@ board, **28,037.34** on the 10 Nov board.
    "≤US$5,000 per person per day without declaration; >US$10,000 declaration required". The cited SAFE
    Hebei answer says per trip, requires a bank permit for USD 5,000–10,000, and a SAFE permit above
    USD 10,000 that is in principle not granted. → needs review.
-3. **F03 — headline costs are one trading day old**, quantified on the page. → needs review.
+3. **F03 — headline costs are one trading day old**, quantified on the page. Session `b8720152`
+   (PR #48, merged the same morning) updated flag U15 to record the 11 November board but did not
+   reprice; this pass quantifies what repricing would do. → needs review.
 4. **F04 — the ATM tariff cited is a notice effective today**; the Great Wall International card's
    overseas ATM cap rises from USD 5 to USD 40 per withdrawal. → needs review.
 5. **F05 — the eCFR "up to date as of" string has moved** from 11/06/2026 to 11/09/2026. → cosmetic.
@@ -101,3 +103,17 @@ All other checks in that file are untouched, and the gate passes on this branch.
   them, but were not re-derived here.
 * No bank, tax office or SAFE branch was contacted, and no personal facts were assumed.
 * No route is recommended. Which route applies turns on where the money came from (dashboard flag U01).
+
+## Merge note (PR #48)
+
+`main` advanced to `6750ddb` (PR #48, session `b8720152`) while this branch was open, and its
+`COORDINATION.md` had been committed with literal merge-conflict markers (`<<<<<<< HEAD`, `=======`,
+`>>>>>>> f6ae79e`) around the m5f19 block — a defect from that session's own merge, not from this one.
+The conflict here was resolved by rebuilding the file from the two clean sides: every block kept
+verbatim (`m5f19`, `76e`, `B8720152`), all marker lines removed. `dashboard/archive.html` was resolved
+by running the generator (`scripts/e347_build.py`) rather than by hand, and lists 82 pages.
+
+Session `b8720152` logged a request to the m5f19 owner to scope check J to its own branch. This session
+took that task over (the m5f19 claim is more than 60 minutes old with no commits) and made the check
+claim-aware instead of branch-name-based, so every future session that declares its files on this board
+passes while edits to another layer's existing files are still blocked.
