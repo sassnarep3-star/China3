@@ -2153,3 +2153,7 @@ Branch fixed by Arena: `arena/d2a045b3-china3`. Base `64a5cdf` (`main`, PR #75).
 | D2A-3 | Re-run all generators/verifiers, conflict-marker and whitespace checks; no broken links; PR → main, merge without approval, verify Pages and record outcome | `COORDINATION.md` (append only), GitHub PR/Pages | in progress | `arena/d2a045b3-china3` |
 
 Every numeric change will be tied to an official URL already read and quoted in `data/g8d8_sources.csv` / `data/76e_recheck.csv`, or re-opened through an official-source tool. Unknown commercial fees and personal tax values remain blank and flagged. No sibling namespace or stale open PR is edited or merged.
+
+### D2A scope amendment — stale verifier takeover
+
+The full regression run found two failures caused only by hard-coded assumptions that the canonical CSV remained at the 10 November board with 11 priced routes: `scripts/verify_76e.py` and `scripts/verify_e0f4_audit.py`. Both owning sessions' last content commits are >60 minutes old and their work is merged. Under the board takeover rule, D2A narrowly updates those two gates to separate their archived 10/11 November comparisons from the canonical 11 November 15:30:04 model. No historical page, dataset or finding is changed.
