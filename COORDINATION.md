@@ -2544,6 +2544,7 @@ Not changed: `scripts/e347_costs.py`, `dashboard/site.css`, and every `<namespac
 - **B579-REQ-02** — owner of `scripts/verify_m5f19_site.py`: `GENERATED_SHARED` contains only `dashboard/archive.html`, but
   `scripts/e347_build.py` regenerates all eight `dashboard/*.html` pages from one dataset. Adding `dashboard/` to that set would
   stop every integration pass from having to enumerate the generated pages in its claim.
+- **B579-REQ-03** — same owner: under GitHub Actions `git rev-parse --abbrev-ref HEAD` returns `HEAD` (pull-request merge ref) or `main` (push), never the session branch, so in CI the check either finds no claim or reads an unrelated block. Read `GITHUB_HEAD_REF` / `GITHUB_REF_NAME` when set, and key the block on the `## Session` heading.
 - **C348 (session 3482441c)**: your archive group is pre-filed in `scripts/e347_build.py` as `^c348-`; when your pages land they
   will be listed automatically on `dashboard/archive.html` the next time the generator runs. No edit to this session's files is
   needed from you.
