@@ -2168,3 +2168,49 @@ Branch: `arena/54e4bfc5-china3` (fixed by Arena; no branch switch). Base: `64a5c
 - Bank of China exchange-rate board: https://www.boc.cn/sourcedb/whpj/enindex_1619.html — fetched in this session; the page reported the USD row at `2026/11/11 15:30:04` (Beijing): buying 666.06, selling 668.86, middle 671.91 per 100 USD.
 - Bank of China personal e-banking transfer tariff: https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html — fetched in this session; it states 1‰, minimum RMB 50, maximum RMB 260, plus RMB 150 telecom fee for non-HK/Macao/Taiwan destinations, and notes agreement/promotional/local differences.
 - The B9B3 source register records its full-method cost matrix at the earlier 2026-11-11 10:40:02 board. The new reading differs, so the published matrix stays a time-stamped estimate and is not represented as a current branch quote. Intermediary, receiving-bank, tax, and account-specific amounts are not filled in.
+
+---
+
+<!-- session-df256bc2-df25-v1 -->
+
+## Session `arena/df256bc2-china3` (`df25`) — 2026-11-11: the U.S. tax on the conversion itself, read at the paragraph level (closes U05 and the "ordinary vs capital" conflict), with a $10,000–$400,000 tax ladder
+
+Branch: `arena/df256bc2-china3` (fixed by Arena; the `session-<id>/<task>` branch rule cannot be applied — same constraint logged as IR-001). Base: `main` @ `9977fd8` (PR #76, the 54e4 claim). Session ID `arena/df256bc2-china3`, namespace `df25`. Claimed 2026-11-11T07:50Z, before any content file was touched.
+
+### Live-claims map at claim time (each block read on its own branch)
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*'` at 07:43Z showed six branches with a commit in the previous ten minutes:
+
+| Job | Live sessions claiming it |
+|---|---|
+| Canonical dashboard integration (`scripts/e347_*`, `index.html`, `dashboard/*.html`, `README.md`, `EXECUTIVE_SUMMARY.md`) | `d2a045b3` (07:36Z), `54e4bfc5` (claim on `main`, PR #76), `f5a5499c` (T4/T5), `495be42b` (FI-2/FI-4) |
+| Same-day re-read of the existing sources, repricing of the bank ladder | `bea42a88` (`bea4`), `f5a5499c` (`f5a5`), `0fe05ac2` (`fe05`), `54e4bfc5` |
+| A further full edition (summary, questions, methods, costs, steps, flags) | `0fe05ac2` (`fe05`) |
+| Retired emigrant-staging rows in the first cost model | `f5a5499c` |
+
+**Consequence.** This session claims none of those jobs: no edit to the canonical generator or its pages, no repricing of the bank ladder, no question register, no new edition.
+
+### The gap this session fills (searched before claiming)
+
+The brief asks for "the least amount of tax penalties" for a U.S. citizen. The dashboard prices the bank at 0.2%–0.5% and shows a U.S. currency gain of up to about 7% of the dollars received, then stops: flag **U05** ("whether a currency gain is a personal transaction") is open; `g8d8` flag F14 records that 26 CFR 1.988-1(a)(9) "was opened … but the paragraph was not read"; `f52` flag F52-U05 records "ordinary per §988(a) vs capital per Pub. 525 … this site does not reconcile them"; the Tax page says "whether a loss is usable was not verified". A search of every tracked file on `main` found **zero** occurrences of `1.988-2` (the regulation that sets the basis of currency withdrawn from a bank account), `reasonable method`, `LIFO`, `pro rata`, `6707A`, `reportable transaction`, `Net Investment Income`, `Schedule 1`, `Form 8949`, `step-up`; `§1014`/`§1015` basis for inherited or gifted money appear in no rule table; the gain table covers five acquisition years only and applies no tax rate except one illustrative 24%. So the one cost component that differs by a factor of ten depending on facts the reader controls has never been worked through from the official text.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| DF25-T0 | Claim scope; push; claim-only pull request so the claim is readable on `main` | `COORDINATION.md` (append only) | in progress | `arena/df256bc2-china3` | n/a | This block |
+| DF25-T1 | **Source register**, every row fetched today from the official page with a verbatim quotation: 26 U.S.C. 988, 985, 1001, 1012, 1014, 1015, 1221, 1222, 165, 1411, 6707A, 1(h)/(j); 26 CFR 1.988-1(a)(9), 1.988-2(a), 1.985-1, 1.6011-4, 1.1411-4; IRS Publication 525, Form 8886 instructions, the IRS 2026 inflation-adjustment release, the IRS yearly-average-rate page, an official daily-rate source for the acquisition date; the Bank of China board | `data/df25_sources.csv`, `data/df25_rules.csv`, `research/df25-us-conversion-tax.md` | unclaimed | `arena/df256bc2-china3` | pending | A value that cannot be read on the official page stays blank and is flagged |
+| DF25-T2 | **Tax ladder**, USD 10,000 → 400,000 in USD 10,000 steps: currency gain or loss by year the RMB was acquired (every year the IRS publishes), then the tax on that gain at each statutory rate for each character (ordinary / long-term capital / excluded), break-even rate, and a labelled worked example of the bank-account basis methods | `data/df25_inputs.csv`, `data/df25_ladder.csv`, `data/df25_example.csv`, `scripts/build_df25.py` | unclaimed | `arena/df256bc2-china3` | pending | Scale, not a finding about any person |
+| DF25-T3 | One mobile-first page: answer first, which rule applies to which money, the ladder, step-by-step worksheet, lawful ways the number changes, open items (its own Flagged for Review section) | `df25-us-conversion-tax.html`, `assets/df25.css`, `data/df25_steps.csv`, `data/df25_flags.csv` | unclaimed | `arena/df256bc2-china3` | pending | One page, not an edition |
+| DF25-T4 | Independent verifier (does not import the builder) + CI | `scripts/verify_df25.py`, `.github/workflows/df25-verify.yml` | unclaimed | `arena/df256bc2-china3` | n/a | Recomputes every ladder cell; official-domain allowlist; blank ⇒ flag; links resolve |
+| DF25-T5 | Repository review limited to this subject: how each existing page states the character, the exclusion and the loss rule; list every inconsistency with file and line; requests to the owners | `data/df25_repo_review.csv` (published on the page) | unclaimed | `arena/df256bc2-china3` | n/a | No file of another session is edited |
+| DF25-T6 | Pull request → checks → merge without waiting → confirm Pages → record the link and the result here | GitHub / `COORDINATION.md` (append only), `dashboard/archive.html` (regenerated by its generator only, never hand-edited) | unclaimed | `arena/df256bc2-china3` | Actions + Pages API + live fetch | Will not merge a broken site |
+
+**Not touched by this session:** `index.html`, `dashboard/*.html` other than the generator-refreshed archive list, `README.md`, `EXECUTIVE_SUMMARY.md`, `QNA.md`, `scripts/e347_*`, `data/e347_*`, `scripts/cost_engine.py`, `data/cost_*`, every other session's namespace.
+
+### DF25-REQ-01 — request to whichever integrator holds `scripts/e347_build.py` (`d2a045b3`, `54e4bfc5`, `f5a5499c` or `495be42b`)
+
+Once `df25-us-conversion-tax.html` is on `main`: (a) one `ARCHIVE_GROUPS` row `(r"^df25-", "U.S. tax on the conversion itself (session df256bc2)", "Character of the currency gain, basis rules, loss rule and a $10,000–$400,000 tax ladder; read on 11 November 2026.")`; (b) on the Tax page, in the row "Currency gain when RMB is converted to USD", one link to that page next to flag U05. No file of yours is edited by this session.
+
+### DF25 log
+
+- `2026-11-11T07:35Z`: session start on `64a5cdf`. Read this board in full; fetched every remote branch; read each live block on its own branch (`d2a045b3`, `bea42a88`, `54e4bfc5`, `f5a5499c`, `495be42b`, `0fe05ac2`).
+- `2026-11-11T07:50Z`: merged `main` @ `9977fd8` (54e4 claim, PR #76); claim written and pushed before any content file.
