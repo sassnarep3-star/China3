@@ -1,0 +1,10 @@
+id,location,finding,official_source
+F01,data/d646_methods.csv:2–4,"Foreign passport holders are not automatically eligible for the $50,000 ID-only purchase quota.",https://www.safe.gov.cn/tianjin/2026/0713/3088.html
+F02,data/d646_methods.csv:6; data/channels.csv:9,Mandatory two-year staging and head-office threshold are superseded by 2014 reform.,https://www.safe.gov.cn/tianjin/2024/0903/2594.html
+F03,data/s775_methods.csv:5; data/s775_sources.csv:22,"ATM is not unrestricted; the annual cap aggregates cards in the person’s name, not per card.",https://www.safe.gov.cn/hubei/2019/0305/851.html
+F04,data/s775_methods.csv:4; data/s775_sources.csv:23,"China departure permit rules differ from U.S. >$10,000 reporting; verify entry history and permits.",https://www.safe.gov.cn/hebei/2019/0521/1366.html
+F05,data/d646_sources.csv:13,2021 crypto notice was repealed in 2026; check current notice rather than treating the old text as current.,https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html
+F06,"index.html:38,104; data/cost_inputs.csv:2–5","Historical FX snapshots differ from today’s quote; not necessarily errors, but not executable current rates.",https://www.boc.cn/sourcedb/whpj/
+F07,data/s775_sources.csv:35; data/e347_steps.csv:5,"Do not assume every >$50,000 individual remittance needs the same tax recordal: announcement distinguishes categories and foreign-individual payments; check bank and tax authority.",https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html
+F08,This supplement: all scenario costs,"Intermediary deductions, account-specific fees, actual execution price, taxes and eligibility unknown; total landed cost left blank.",https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html
+F09,Repository-wide audit coverage,"Selected high-risk rows and automated pattern scans reviewed, not a complete line-by-line verification of all repository content. Remaining claims require independent review.",https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html

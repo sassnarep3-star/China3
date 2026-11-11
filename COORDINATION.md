@@ -2283,3 +2283,8 @@ Ran `git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune`, `git for-e
 
 - **FE05-REQ-01:** When regenerating shared navigation (`scripts/e347_build.py` → `index.html`, `dashboard/archive.html`), please add an `ARCHIVE_GROUPS` entry `(r"^fe05-", "FE05 verified decision dashboard (session 0fe05ac2)", "Executive summary, pre-decision questions & discovery register, exhaustive CNY→USD methods, $10k–$400k cost matrix, step-by-step playbooks, penalty breakdown, repo audit & Flagged for Review (11 Nov 2026).")` and a link to `fe05-dashboard.html`. While sibling claims on `scripts/e347_build.py` / `index.html` / `dashboard/*.html` are active (<60 min), this session will not touch those files.
 
+
+### FE05 progress update — 2026-11-11
+
+- Added a standalone, source-linked FE05 supplement with decision questions, 15 route categories, steps, risks, flags and 40 gross-USD increments per route. The BOC illustration is not a landed-cost estimate: unknown taxes and intermediary/receiving fees remain blank. Source observations and methodology are in `research/fe05-verification-log.md`; selected audit findings and its explicit coverage limitations are in `research/fe05-repo-audit.md`.
+- FE05-T1–T6: partial deliverables generated and local FE05 verifier passed; the requested exhaustive line-by-line repository audit and exhaustive method verification are **not complete**. This limitation is published, not presented as a completed audit. Shared files remain untouched; FE05-REQ-01 remains pending with the integrators.
