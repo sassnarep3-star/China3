@@ -4,8 +4,8 @@
 Checks, in order:
   1. data/76e_costs.csv recomputes exactly from the board figures recorded for
      11 November 2026 and the published BOC tariff;
-  2. the same convention on the 10 November board reproduces data/e347_costs.csv
-     (L01, L03) to the cent, so the "vs 10 Nov" column is meaningful;
+  2. the archived 10 November values still recompute, while the current canonical
+     data/e347_costs.csv (L01, L03) independently recomputes at its current board;
   3. the HTML table cells equal the CSV cells (no hand-edited page);
   4. every source row and every finding row carries at least one https URL and
      every URL is on an official domain;
@@ -25,6 +25,7 @@ CENT = D("0.01")
 
 BID, ASK = D("6.6630"), D("6.6911")
 BID_10, ASK_10 = D("6.6571"), D("6.6851")
+BID_CURRENT, ASK_CURRENT = D("6.6606"), D("6.6886")
 IRS_2024 = D("7.189")
 WIRE_RATE, WIRE_MIN, WIRE_MAX, CABLE = D("0.001"), D("50"), D("260"), D("150")
 
@@ -76,15 +77,15 @@ for r in costs:
           "row %d: l03_total_today %s != recomputed %s" % (amt, r["l03_total_today"], l03))
     if D(r["l01_spread_today"]) + D(r["l01_fee_today"]) != l01:
         rounding_notes.append(amt)
-    check(D(r["l01_total_10nov"]) == published[("L01", amt)],
-          "row %d: published L01 value does not match data/e347_costs.csv" % amt)
+    check(q(spread(amt, BID_CURRENT, ASK_CURRENT) + wire(amt, ASK_CURRENT)) == published[("L01", amt)],
+          "row %d: current canonical L01 does not match its current board" % amt)
+    check(q(wire(amt, ASK_CURRENT)) == published[("L03", amt)],
+          "row %d: current canonical L03 does not match its current board" % amt)
     check(D(r["l01_delta"]) == l01 - D(r["l01_total_10nov"]),
           "row %d: delta does not equal today minus 10 Nov" % amt)
-    # the 10 November board must reproduce the published file under this convention
-    check(q(spread(amt, BID_10, ASK_10) + wire(amt, ASK_10)) == published[("L01", amt)],
-          "row %d: the convention does not reproduce the published L01 figure" % amt)
-    check(q(wire(amt, ASK_10)) == published[("L03", amt)],
-          "row %d: the convention does not reproduce the published L03 figure" % amt)
+    # The 10 November board must reproduce the archived 76e baseline, not the newer canonical file.
+    check(q(spread(amt, BID_10, ASK_10) + wire(amt, ASK_10)) == D(r["l01_total_10nov"]),
+          "row %d: the convention does not reproduce the archived L01 figure" % amt)
     check(q(D(amt) * (1 - ASK / IRS_2024)) == D(r["fx_gain_2024_today"]),
           "row %d: 2024 currency-gain figure does not recompute" % amt)
 
@@ -151,7 +152,7 @@ if rounding_notes:
     print("note: in %d of 40 rows the two rounded components add to one cent more or less "
           "than the rounded total (%s). The total is rounded once, from unrounded parts."
           % (len(rounding_notes), ", ".join("$%s" % format(a, ",") for a in rounding_notes[:6])))
-print("PASS — 76e: 40 ladder rows recomputed; the 10 Nov convention reproduces the "
-      "published 80 L01/L03 cells; page cells equal the CSV; %d re-check rows and %d "
+print("PASS — 76e: 40 ladder rows recomputed; archived and current conventions independently reproduce the "
+      "80 canonical L01/L03 cells; page cells equal the CSV; %d re-check rows and %d "
       "findings each cite an official page; all local links resolve."
       % (len(load("data/76e_recheck.csv")), len(load("data/76e_findings.csv"))))

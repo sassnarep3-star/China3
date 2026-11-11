@@ -2157,3 +2157,7 @@ Every numeric change will be tied to an official URL already read and quoted in 
 ### D2A scope amendment — stale verifier takeover
 
 The full regression run found two failures caused only by hard-coded assumptions that the canonical CSV remained at the 10 November board with 11 priced routes: `scripts/verify_76e.py` and `scripts/verify_e0f4_audit.py`. Both owning sessions' last content commits are >60 minutes old and their work is merged. Under the board takeover rule, D2A narrowly updates those two gates to separate their archived 10/11 November comparisons from the canonical 11 November 15:30:04 model. No historical page, dataset or finding is changed.
+
+### D2A scope amendment — N676 ownership-gate takeover
+
+The expanded suite also ran `scripts/n676_verify.py`, whose check K rejects every later integration for modifying non-N676 files (the same defect class as M5F19 check J; previously logged 6DA0-IR-03). N676 is merged and stale >60 minutes. D2A narrowly scopes check K to the N676 branch using `GITHUB_HEAD_REF` or the local branch name; checks A–J and L still run everywhere. No N676 content changes.

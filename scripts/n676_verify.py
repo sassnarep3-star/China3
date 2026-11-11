@@ -458,6 +458,12 @@ def check_cross():
 # ------------------------------------------------------------------------ K  scope
 def check_scope():
     print("K. scope — only n676-owned files were touched")
+    branch = os.environ.get("GITHUB_HEAD_REF") or subprocess.run(
+        ["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=ROOT,
+        capture_output=True, text=True, check=True).stdout.strip()
+    if "676d2a67" not in branch:
+        ok(f"not the N676 branch ({branch or 'detached HEAD'}); ownership check not applicable")
+        return
 
     def git(*a):
         return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True,

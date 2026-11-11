@@ -11,7 +11,8 @@ Checks:
      github.com (this repository) or govinfo.gov;
   5. every finding ID F01-F07 appears in the page;
   6. no tracked *.md file contains literal merge-conflict markers;
-  7. data/e347_costs.csv monetary cells still re-derive to the cent at the 10 Nov board (the audit's A04 claim).
+  7. data/e347_costs.csv monetary cells re-derive at the current canonical 11 Nov board;
+     the audit's historical A04 claim remains an archived comparison.
 
 Exit 0 on pass, 1 on the first failure. Run: python3 scripts/verify_e0f4_audit.py
 """
@@ -156,7 +157,7 @@ except subprocess.CalledProcessError as exc:
     print("warning: git ls-files failed (%s); conflict-marker gate skipped" % exc)
 
 # 7 -----------------------------------------------------------------------
-BID10, ASK10 = D("6.6571"), D("6.6851")
+BID10, ASK10 = D("6.6606"), D("6.6886")  # current canonical board; historical board checked above
 mid10 = (BID10 + ASK10) / 2
 mon_checks = mon_mm = 0
 with open(rel("data/e347_costs.csv"), newline="") as fh:
@@ -184,8 +185,8 @@ with open(rel("data/e347_costs.csv"), newline="") as fh:
             wires = [D(50000)] * n_full + ([D(rem)] if rem else [])
             fee = sum(wire_cny(w * ASK10) / ASK10 for w in wires)
             cells = [("spread_usd", spread), ("fee_usd", fee), ("known_cost_usd", spread + fee)]
-        elif model == "dividend":
-            tax = DA * D("0.2")
+        elif model in ("dividend", "dividend_treaty"):
+            tax = DA * (D("0.2") if model == "dividend" else D("0.1"))
             base = DA - tax
             sp = base * (ASK10 - mid10) / ASK10
             fee = wire_cny(base * ASK10) / ASK10
@@ -204,10 +205,10 @@ with open(rel("data/e347_costs.csv"), newline="") as fh:
             if abs(r2(got) - D(r[col])) > D("0.005"):
                 mon_mm += 1
 if mon_mm:
-    fail("data/e347_costs.csv: %d monetary mismatches at the 10 Nov board (of %d cells)" % (mon_mm, mon_checks))
+    fail("data/e347_costs.csv: %d monetary mismatches at the current canonical board (of %d cells)" % (mon_mm, mon_checks))
 
 if failures:
     for msg in failures:
         print("FAIL: %s" % msg)
     sys.exit(1)
-print("e0f4 audit gate passed: %d CSV rows; 40-row ladder re-derived; page parity ok; %d monetary cells re-derived (10 Nov board); %d findings present; no conflict markers in tracked *.md" % (len(rows), mon_checks, 7))
+print("e0f4 audit gate passed: %d CSV rows; 40-row ladder re-derived; page parity ok; %d monetary cells re-derived (current canonical board); %d findings present; no conflict markers in tracked *.md" % (len(rows), mon_checks, 7))
