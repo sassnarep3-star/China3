@@ -1697,3 +1697,18 @@ Base at claim time: `d9763dc` (`main` after PR #49). Session ID `arena/f9a30493-
 ### PR / merge / deployment record
 
 (filled in by F9A-T7)
+### DFF3 — executive-summary accuracy update (2026-11-11)
+
+- **Session/branch:** `arena/dff3f5ef-china3` (Arena-fixed branch; no branch switching).
+- **Claimed scope:** `EXECUTIVE_SUMMARY.md`, `research/dff3-executive-summary-review.md`, and append-only `COORDINATION.md`.
+- **Task:** re-read the executive summary's core tax/allowance/rate claims against currently accessible primary sources; correct overbroad wording and refresh only figures that can be recomputed from an official live rate and the published Bank of China tariff. Do not edit shared landing pages, other sessions' research, or generated dashboard files.
+- **Status:** done (2026-11-11).
+- **Concurrent-scope check:** PR #50 is a separate publication audit (`research/7881-publication-audit.md`); PR #49's integration is already merged. The current `5a59` integrator's declared shared scope does not include `EXECUTIVE_SUMMARY.md`.
+
+**Completion record — DFF3 (2026-11-11).** Updated `EXECUTIVE_SUMMARY.md` and added `research/dff3-executive-summary-review.md`. The summary now marks the alleged conversion tax as unverified, separates underlying income tax from bank FX/wire costs, treats foreign-resident-card eligibility vs the FX Regulation's “domestic individual” definition as unresolved, labels U.S. currency differences as non-tax scenarios, refreshes the six L01/L03 comparison rows to the 11 Nov BOC snapshot, and puts source links on every data row in both summary tables.
+
+**Official pages re-read on 2026-11-11:** BOC rate board and personal wire tariff; SAFE Tianjin foreign-individual income Q&A, permanent-resident-card Q&A and unused-RMB exchange-slip Q&A; SAFE Ningxia convenience-amount Q&A; State Council FX Regulation; SAFE/MOFCOM full 2020 Current-Account Guidelines; SAFE Anhui 2025 real-estate sale-proceeds section 8; PBOC/SAFE individual emigration/inheritance transfer measures; SAFE Tianjin notice amending those measures; PRC Individual Income Tax Law; IRS yearly-average currency rates and Form 8938/FBAR comparison; FinCEN FBAR requirements; 26 U.S.C. §988 from GovInfo. These are direct primary-source URLs in the edited summary/audit. `fetch_page` supplied page content but no HTTP status, so none is claimed.
+
+**Verification:** `scripts/validate_data.py` OK; `scripts/check_links.py` OK (offline external checks skipped); `scripts/e347_verify.py` PASS; `scripts/verify_76e.py` PASS; `scripts/verify_final_integration.py` PASS; `scripts/verify_m5f19_site.py` PASS. A separate assertion compared all six summary costs and modeled FX differences exactly to `data/76e_costs.csv`, and checked that each cost/route table data row contains an official-source link. `git diff --check` clean. Cost model excludes unknown correspondent/recipient fees and is not a quote or tax calculation.
+
+**Irregularities/caveats:** older summary headline values were dated to the prior BOC rate board and are now refreshed only for L01/L03; other method pages remain date-stamped historical estimates. No personal status, account statement, source-of-funds records, tax assessment, or bank quote exists, so the alleged tax and individual eligibility remain unresolved. The summary explicitly advises obtaining a written breakdown and written route confirmation rather than assuming tax is due or absent.

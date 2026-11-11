@@ -1,101 +1,89 @@
-# Executive summary
+# Executive summary — moving money from China to the United States
 
-> **Integration addendum (2026-11-11, session `arena/f9a30493-china3`).** The landing-page navigation now
-> links two independently verified editions that were merged to `main` earlier today and were reachable only
-> by direct URL: the [M5F19 re-verification & cost reconciliation](m5f19-dashboard.html) (10 Nov 2026, PR #47)
-> and the [source freshness re-check](76e-verification.html) (11 Nov 2026, PR #49). Both nav entries were
-> requested on the coordination board (M5F19-REQ-01, 76E-REQ-01) and are additive. No figure in this summary
-> changed; the 2026-11-11 board reading is recorded on the Flagged page (U15) and in the 76e ledger.
+> **Integration note (2026-11-11).** The combined repository now links the [M5F19 independent re-verification and cost reconciliation](m5f19-dashboard.html) (PR #47) and the [11 November source re-check](76e-verification.html) (PR #49) from the dashboard navigation. Both are linked here for context; this summary separately refreshes the BOC-based examples to the 11 November board reading.
 
-Question: a U.S. citizen has money in a Chinese bank account and is told that turning it into dollars
-means "a considerable amount of taxes". What is the best lawful way out, and what does it really cost?
+**Decision status: no route can be selected responsibly until the origin of the funds and the alleged tax charge are identified.** The research does not establish that this person owes a tax merely because CNY is converted or wired. It also does not establish that every conversion is tax-free. Ask the bank or tax office to name the charge, legal basis, taxpayer, taxable event, and calculation in writing before paying it.
 
-All figures were read from official pages on 2026-11-10. Bank figures use the Bank of China board
-published 2026/11/10 17:39:58 (Beijing). Live site: https://sassnarep3-star.github.io/China3/
+**Research/rate snapshot:** primary pages re-read 2026-11-11. Bank examples below use Bank of China’s published USD selling rate **CNY 6.6911 per USD** (board says 669.11 per 100 USD, published 2026/11/11 10:25:02). Bank of China is an example, not a promise that the holder’s bank will quote the same rate or fees. [Current board](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) · [published wire tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) · [independent rate re-check and 40-step ladder](https://sassnarep3-star.github.io/China3/76e-verification.html).
 
-## The answer in five points
+## The five points that matter most
 
-1. **Converting and wiring is not taxed.** No official source read here puts a tax on the conversion or the
-   wire. China's Foreign Exchange Regulation says current payments and transfers are not restricted
-   ([S17](https://www.safe.gov.cn/safe/2008/0806/5321.html)). What the bank must see is proof of where the money came from and that tax on it was handled
-   ([S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html), [S11](https://www.safe.gov.cn/tianjin/2021/1102/1777.html)).
-2. **The only large tax found is on the underlying income, not on the transfer.** If Chinese income tax
-   was never paid on the money, it is owed whether or not the money moves: 3% to 45% on wages, 20% on dividends, rent and
-   property gains ([S25](https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html)). Bank-deposit interest is exempt ([S26](https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203286/content.html)). Which of these applies to you
-   is not known (flags U01, U02).
-3. **The bank's own cost is small.** $53.38 on $10,000 and $899.01 on $400,000 in
-   one wire ([S01](https://www.boc.cn/sourcedb/whpj/enindex_1619.html), [S02](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html)). Fees taken by intermediary and receiving banks are not published and
-   are left blank (flag U04).
-4. **A U.S. passport holder does not get the USD 50,000-a-year allowance** that Chinese citizens use on ID
-   alone; only holders of the Chinese Foreign Permanent Resident ID do ([S05](https://www.safe.gov.cn/tianjin/2024/0621/2529.html), [S06](https://www.safe.gov.cn/ningxia/2022/0929/1997.html)). The lawful
-   route depends on what the money is: documented income, a home sale, an inheritance, an emigrant's
-   pre-departure property, money you brought in and can change back, or foreign currency already in the
-   account.
-5. **The U.S. side can be the bigger number.** Selling RMB for dollars is a currency sale ([S27](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm)). RMB
-   acquired at the 2024 IRS average rate shows a gain of about 7% today ([S28](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates)). FBAR, Form 8938 and
-   Form 3520 each carry their own penalty if missed ([S31](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821), [S29](https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements), [S32](https://www.irs.gov/businesses/gifts-from-foreign-person)).
+1. **Find the source of funds first.** The practical route and documents depend on whether the balance is documented Chinese income, foreign currency previously converted into RMB, foreign currency already held, sale proceeds, inheritance, emigration property, a gift, or something else. For a foreign individual’s lawful current-account RMB income, SAFE’s guidance calls for valid ID and transaction-specific source documents, including tax evidence. A bank may review the underlying transaction; an FX fee is not the same as an income tax. China’s individual income-tax law lists taxable income categories and different rules/rates by category, so the source and prior tax treatment—not just the act of remitting—must be checked. ([SAFE Tianjin, 2026-07-13](https://www.safe.gov.cn/tianjin/2026/0713/3088.html); [SAFE current-account rules, full text](https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html); [PRC Individual Income Tax Law, Arts. 1–6](https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html))
+2. **Do not assume a USD 50,000 annual convenience amount applies—or that it is a cap.** SAFE says foreign individuals holding a Chinese Foreign Permanent Resident ID Card apply the annual purchase convenience amount. Separate rules define “domestic individual” to include some foreigners resident in China for at least one continuous year, while SAFE guidance distinguishes foreign individuals and the permanent-residence card. The application of those provisions to this person is unresolved: confirm eligibility and documentation with the handling bank/SAFE in writing. The annual convenience amount is not automatically permission to transfer this balance, nor does it necessarily cap documented legitimate transactions. ([SAFE Tianjin Q&A, 2024-06-21](https://www.safe.gov.cn/tianjin/2024/0621/2529.html); [State Council FX Regulation, Arts. 5, 12, 39–45, 52](https://www.safe.gov.cn/safe/2008/0806/5321.html); [SAFE Ningxia Q&A, scope is “domestic individuals”](https://www.safe.gov.cn/ningxia/2022/0929/1997.html))
+3. **A bank-cost estimate is not a tax estimate.** Under the stated BOC example, buying USD from CNY and sending one wire has an estimated known bank cost of **$53.42 per $10,000** and **$901.20 per $400,000**. If the account already holds USD, the modeled wire fee alone is **$32.42 per $10,000**, capped at **$61.28** for larger transfers under this tariff. Intermediary/receiving-bank charges, the account’s actual exchange quote, local pricing exceptions, tax due on the source income, and any U.S. tax are not included. The source tariff itself notes agreements, promotions, and local differences can apply.
+4. **U.S. currency gain is a separate question, not the transfer fee or a tax bill.** As an illustration only, if CNY had been acquired at the IRS 2024 yearly-average rate (7.189 CNY/USD), selling it at the BOC 2026-11-11 rate produces an arithmetic exchange difference of **$27,703.44 per $400,000** under the model below. This is not a calculation of tax due: actual acquisition dates, basis, purpose, account facts, and applicable rules matter. IRS says it has no official exchange rate and taxpayers generally use a posted rate consistently. IRC §988 includes rules for foreign-currency transactions and a personal-transaction exception (including a $200 threshold); classification is fact-specific. Get U.S. tax advice before treating this modeled difference as taxable or exempt. ([IRS rates](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates); [26 U.S.C. §988](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm))
+5. **Check U.S. reporting separately from income tax.** U.S. citizens may have FBAR and Form 8938 filing duties for foreign accounts; those are distinct filings with different thresholds and rules, and one does not replace the other. A transfer to the U.S. does not retroactively answer whether an account was reportable in earlier years. Use the IRS comparison and current instructions for the specific tax year. ([IRS FBAR/Form 8938 comparison](https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements); [FinCEN FBAR](https://www.fincen.gov/report-foreign-bank-and-financial-accounts))
 
-## Cost at a glance
+## Modeled known bank cost (USD)
 
-Known bank cost only. The last two columns are the U.S. currency gain (not the tax) if the RMB had been
-acquired at that year's IRS average rate.
+Most decision-relevant estimates first. Amount means the intended USD delivered before intermediary or receiving-bank charges. Route L01 models buying USD with CNY and wiring once; L03 models wiring USD already held in a Chinese foreign-currency account. The adjacent column is a **hypothetical exchange difference**, not tax due.
 
-| Amount | Already USD: wire only | Convert and wire once | USD 50,000 a year (PR-ID holders) | Gain if acquired 2024 | Gain if acquired 2025 |
-|---|---|---|---|---|---|
-| $10,000 | $32.44 | $53.38 | $53.38 (1 yr) | $701 | $623 |
-| $50,000 | $61.33 | $166.04 | $166.04 (1 yr) | $3,505 | $3,113 |
-| $100,000 | $61.33 | $270.75 | $332.08 (2 yr) | $7,009 | $6,227 |
-| $200,000 | $61.33 | $480.17 | $664.16 (4 yr) | $14,019 | $12,453 |
-| $300,000 | $61.33 | $689.59 | $996.25 (6 yr) | $21,028 | $18,680 |
-| $400,000 | $61.33 | $899.01 | $1,328.33 (8 yr) | $28,037 | $24,907 |
+| USD amount | L01: buy USD + one wire | L03: wire USD already held | Illustrative 2024-basis exchange difference* | Official inputs |
+|---:|---:|---:|---:|---|
+| $10,000 | $53.42 | $32.42 | $692.59 | [BOC rate](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) · [BOC tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) · [IRS rate](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) |
+| $50,000 | $166.27 | $61.28 | $3,462.93 | [BOC rate](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) · [BOC tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) · [IRS rate](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) |
+| $100,000 | $271.26 | $61.28 | $6,925.86 | [BOC rate](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) · [BOC tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) · [IRS rate](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) |
+| $200,000 | $481.24 | $61.28 | $13,851.72 | [BOC rate](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) · [BOC tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) · [IRS rate](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) |
+| $300,000 | $691.22 | $61.28 | $20,777.58 | [BOC rate](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) · [BOC tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) · [IRS rate](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) |
+| $400,000 | $901.20 | $61.28 | $27,703.44 | [BOC rate](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) · [BOC tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) · [IRS rate](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) |
 
-Every $10,000 step for every route: https://sassnarep3-star.github.io/China3/dashboard/costs.html (data: `data/e347_costs.csv`).
+**Method:** use the BOC buying/selling midpoint for an illustrative FX reference; spread cost = USD amount × (selling rate − midpoint) ÷ selling rate. Wire cost = (0.1% of CNY amount, bounded by CNY 50 minimum and CNY 260 maximum) + CNY 150 cable charge, converted at the BOC selling rate. Total is rounded once to cents. For L03, only the modeled wire charge is included. The 2024-basis comparison is USD amount × (1 − 6.6911 ÷ 7.189). The 2024 IRS rate is only a scenario basis, not the holder’s documented acquisition cost. See the [40-step $10,000–$400,000 source-checked table](https://sassnarep3-star.github.io/China3/76e-verification.html) and [all-method cost tables](https://sassnarep3-star.github.io/China3/dashboard/costs.html); the all-method dashboard uses its clearly dated 2026-11-10 board snapshot, while the 76e page re-derives L01/L03 on 2026-11-11.
 
-## Which route
 
-| If the money is | Route | What the bank or SAFE needs | Source |
+*The exchange-difference column is an arithmetic sensitivity only. It is not a tax estimate, and actual tax treatment cannot be derived without the taxpayer’s facts.*
+
+## How to choose the lawful route
+
+| If the balance is… | First route to discuss with the bank | What to ask/produce | Official reference |
 |---|---|---|---|
-| Foreign currency already in the account | L03 wire out | Passport | [S08](http://m.safe.gov.cn/safe/file/file/20200831/f0127756271c43ef9b3908d5d157bd91.pdf), [S18](http://m.safe.gov.cn/safe/2006/1225/5319.html) |
-| RMB you converted from your own foreign currency in the last 24 months | L02 change back | Passport and the original exchange slip | [S09](https://www.safe.gov.cn/tianjin/2026/0917/3134.html) |
-| Income earned in China | L01 buy USD and wire | Passport, source documents, tax evidence | [S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html), [S11](https://www.safe.gov.cn/tianjin/2021/1102/1777.html) |
-| Proceeds of selling your home in China | L04 | Registered contract, registration proof, tax certificate; capped at price minus taxes | [S15](https://www.safe.gov.cn/anhui/file/file/20250925/43f09589bb2046c2a01a58d3a80c2b5f.pdf) |
-| An inheritance | L05 | SAFE approval where the decedent was registered; inheritance proof; tax certificate | [S12](http://m.safe.gov.cn/safe/2004/1116/5461.html), [S13](https://www.safe.gov.cn/tianjin/2024/0903/2594.html) |
-| Property from before you emigrated from China | L06 | SAFE approval at the former hukou location; hukou cancellation; tax certificates | [S12](http://m.safe.gov.cn/safe/2004/1116/5461.html), [S13](https://www.safe.gov.cn/tianjin/2024/0903/2594.html) |
-| A gift, or money with no documents | none verified | See flag U07 | [S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
+| CNY from documented income earned in China | Purchase USD against the documented income, then remit | Valid ID; evidence identifying the actual income and transaction; tax evidence if applicable; bank’s exact document checklist and written eligibility decision | [SAFE Tianjin, 2026](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
+| USD or another foreign currency already in the account | Remit foreign-currency balance without repurchasing FX | Account-holder identity, receiving-bank instructions, fee and correspondent-bank details | [SAFE 2020 rules, Art. 65](https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html); [BOC tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) |
+| CNY converted from the holder’s own foreign currency within the validity period | Ask whether re-conversion under the original exchange transaction is available | Original exchange slip, identity, date, amount, and account record | [SAFE Tianjin, 2026](https://www.safe.gov.cn/tianjin/2026/0917/3134.html); [SAFE 2020 rules, Art. 60](https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html) |
+| Proceeds from sale of China real estate | Use the asset-specific sale-proceeds route | Ownership, registered contract, tax payment evidence, and other documents required by the bank/SAFE | [SAFE Anhui guidance](https://www.safe.gov.cn/anhui/file/file/20250925/43f09589bb2046c2a01a58d3a80c2b5f.pdf) |
+| Inheritance or property connected to emigration | Use the asset-specific remittance/approval route | Inheritance/ownership proof, location-specific SAFE approval, and tax evidence required for that category | [PBOC/Safe implementing measures](https://m.safe.gov.cn/safe/2004/1116/5461.html); [SAFE Tianjin notice](https://www.safe.gov.cn/tianjin/2024/0903/2594.html) |
+| Gift or undocumented origin | No route was verified for this fact pattern | Do not disguise the origin or borrow another person’s quota; request a written case-specific decision | [SAFE Tianjin, 2026](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
 
-Do not use relatives' quotas, private swaps, money changers, false documents or crypto. Fines run up to 30%
-of the amount, 30% to 100% in serious cases, with criminal liability possible ([S17](https://www.safe.gov.cn/safe/2008/0806/5321.html), [S10](https://www.safe.gov.cn/tianjin/2025/0613/2811.html),
-[S21](https://www.safe.gov.cn/guangdong/2020/0304/1668.html), [S23](https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html)).
+Avoid false or altered documents, quota-sharing arrangements, unlicensed FX swaps, and cryptocurrency conversion. The legal characterization and consequences depend on facts; China’s FX regulation provides serious penalties for specified illegal transactions and a 2026 PBOC notice bans specified crypto-related FX activities. Do not assume every private transfer has the same legal treatment. ([FX Regulation](https://www.safe.gov.cn/safe/2008/0806/5321.html); [PBOC 2026 notice](https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html))
 
-## What is not known
+## Questions to answer before deciding
 
-19 items are open and listed at https://sassnarep3-star.github.io/China3/dashboard/flagged.html. The three that decide the answer:
+1. Who legally owns the account and the funds? What is the account currency and balance?
+2. What created the balance: salary, business income, sale, inheritance, gift, prior FX conversion, or another source? What original records exist?
+3. What exactly is the “considerable tax”: official name, issuing authority, legal article, taxable event, rate/base, assessment notice, and payment recipient? Is it a tax, bank fee, FX spread, or something else?
+4. Was tax already paid on the underlying income or transaction? If so, where are the return, withholding certificate, or official receipts?
+5. What is the holder’s China residence/immigration status and duration, and do they hold a Foreign Permanent Resident ID Card? Ask the bank/SAFE how the applicable category applies.
+6. How was the CNY originally funded, and when was it acquired? The dates/rates and use of the funds affect U.S. tax analysis.
+7. Are there other foreign accounts, account signatory powers, joint owners, or prior FBAR/Form 8938 filing gaps?
+8. What are the sending bank’s current conversion quote, wire fee, correspondent/recipient fees, document review process, and any limits? Get each item separately in writing.
 
-- **U01** where the money came from;
-- **U02** what the "considerable taxes" actually are (no tax, rate or office is named in the brief);
-- **U07** no verified route exists for money received as a gift or without documents.
+## Suggested next steps
+
+1. Obtain the bank statement, account ownership proof, source-of-funds documents, historical FX slips, and tax-payment records.
+2. Ask the Chinese bank, in writing, to separate (a) tax assessed by a tax authority, (b) FX spread, (c) the bank’s outgoing fee, and (d) intermediary/receiving fees. Request the authority, legal basis, calculation, and document checklist for every tax item.
+3. Have the bank confirm which SAFE route applies to the actual origin of funds, the status/eligibility question, and whether it can remit the full supported amount. Do not split a transaction to evade a control.
+4. Ask a U.S. international tax professional to review the actual CNY acquisition dates/basis, source-income treatment, foreign tax credit possibilities, §988/personal-transaction rules, and FBAR/Form 8938 duties.
+5. Compare the bank’s written net-USD quote with the dated model. Transfer only through a bank-approved, documented route; keep the approvals, slips, tax records, conversion ticket, and wire confirmation.
 
 ## Questions that must be settled before a decision
 
-36 questions, each marked with whether an official page answers it: 20 are answered by a source, 7 need a
-document only the account holder can produce, and 9 cannot be settled from any public source. The full
-register, with what is missing and how to obtain it for every row, is
-https://sassnarep3-star.github.io/China3/dashboard/decisions.html (data: `data/b2d_decisions.csv`,
-gate: `python3 scripts/verify_b2d_decisions.py`).
+A separate 36-question register marks what official pages answer, what requires private records, what remains unknown, and how to obtain the missing information: [decision-readiness register](https://sassnarep3-star.github.io/China3/dashboard/decisions.html) (machine-checked against `data/b2d_decisions.csv`). These are the decision-critical questions:
 
-The ones that change the answer:
-
-| # | Question | Status | Source |
+| Question | Current answer/status | What would settle it | Official source |
 |---|---|---|---|
-| A01 | Where did the RMB come from, and was Chinese tax paid on it? | Open | [S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
-| A02 | Is the account recorded as a foreign individual's (境外个人) account? | Open | [S18](http://m.safe.gov.cn/safe/2006/1225/5319.html), [S17](https://www.safe.gov.cn/safe/2008/0806/5321.html) |
-| A04 | When and at what rate was the RMB acquired? (decides the U.S. currency gain) | Open | [S27](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm), [S28](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) |
-| B01 | Does a U.S. passport alone get the USD 50,000-a-year amount? | Answered: no | [S05](https://www.safe.gov.cn/tianjin/2024/0621/2529.html) |
-| C01 | Is there a Chinese tax on the conversion itself? | Answered: none found | [S17](https://www.safe.gov.cn/safe/2008/0806/5321.html), [S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
-| C05 | Is an inheritance taxed in China? | Open | [S25](https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html) |
-| D03 | Does the personal-transaction rule remove the currency gain? | Open (legal judgement) | [S27](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm) |
-| E03 | What do intermediary and receiving banks charge? | Open | [S02](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) |
+| Where did the RMB come from, and was tax paid on the underlying source? | Open; the brief gives no provenance or tax documents. | Statements plus the authentic documents behind deposits; ask the bank which route and documents apply. | [SAFE current-income guidance](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
+| Which FX person/account category does the bank record? | Open; nationality alone is insufficient to determine account classification or eligibility. | Ask the bank to identify the applicable category in writing, with the rule it relies on. | [PBOC FX Measures](http://m.safe.gov.cn/safe/2006/1225/5319.html) · [FX Regulation, Art. 52](https://www.safe.gov.cn/safe/2008/0806/5321.html) |
+| When and at what rate was the RMB acquired? | Open; the 2024-average example is not the user's basis. | Original conversion tickets, deposit dates, account statements, and intended use. | [26 U.S.C. §988](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm) · [IRS exchange rates](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) |
+| Does a U.S. passport alone determine access to the USD 50,000 convenience amount? | No; SAFE says holders of a Foreign Permanent Resident ID Card apply it, but other category definitions create a scope question. Individual eligibility remains unconfirmed. | Provide exact immigration/residence status and get a written bank/SAFE determination. | [SAFE Tianjin Q&A](https://www.safe.gov.cn/tianjin/2024/0621/2529.html) · [FX Regulation](https://www.safe.gov.cn/safe/2008/0806/5321.html) |
+| Is a tax due simply because CNY is converted? | No specific conversion tax was verified in the reviewed material; this is not proof that no underlying tax or other liability applies. | Get the named tax, authority, legal basis, taxable event, calculation, and assessment in writing. | [FX Regulation](https://www.safe.gov.cn/safe/2008/0806/5321.html) · [SAFE current-income guidance](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
+| Is inherited money taxed in China? | Open for this case; source, tax history and applicable facts are unknown. | Ask the tax authority for a case-specific tax certificate/position and SAFE for the remittance process. | [PRC Individual Income Tax Law](https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html) |
+| Does the U.S. personal-transaction rule remove any currency gain? | Open; depends on transaction purpose, facts, and the legal rule. | Ask a U.S. international-tax professional to review records and apply §988. | [26 U.S.C. §988](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm) |
+| What do intermediary and receiving banks charge? | Open; no universal official amount verified. | Request a written end-to-end quote naming correspondent and recipient charges. | [BOC published tariff](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) |
 
-This is research from public official sources. It is not legal, tax or banking advice.
+## Repository pages and review items
 
-Earlier versions of this file are kept in `research/archive/executive-summary-before-e347.md`.
+- [Main dashboard](https://sassnarep3-star.github.io/China3/)
+- [Methods](https://sassnarep3-star.github.io/China3/dashboard/methods.html) · [all costs](https://sassnarep3-star.github.io/China3/dashboard/costs.html) · [steps](https://sassnarep3-star.github.io/China3/dashboard/steps.html)
+- [Tax and U.S. reporting](https://sassnarep3-star.github.io/China3/dashboard/tax.html) · [decision-readiness register](https://sassnarep3-star.github.io/China3/dashboard/decisions.html) · [flagged/unverified items](https://sassnarep3-star.github.io/China3/dashboard/flagged.html) · [sources](https://sassnarep3-star.github.io/China3/dashboard/sources.html) · [Q&A](https://github.com/sassnarep3-star/China3/blob/main/QNA.md)
+- [Independent 2026-11-11 re-check](https://sassnarep3-star.github.io/China3/76e-verification.html)
+
+This is general research, not legal, tax, immigration, or banking advice. No personal facts were supplied, no financial institution or tax authority reviewed this person’s case, and the estimates are not bank quotes. Earlier executive-summary drafts are archived in `research/archive/executive-summary-before-e347.md`.
