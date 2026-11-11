@@ -1,0 +1,6 @@
+id,claim,official_source,verbatim_found_today,verdict,fetched
+V1,BOC USD selling rate 6.6851 (RMB/USD) at board 2026/11/10 17:39:58,https://www.boc.cn/sourcedb/whpj/enindex_1619.html,"USD | 666.3 | 666.3 | 669.11 | 669.11 | 671.91 | 2026/11/11 10:25:02",CONFIRMED,2026-11-11
+V2,BOC personal wire 1 per mille min 50 max 260 + cable 150 (non-HK/MO/TW),https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,"跨境汇款（电汇）每笔汇款金额的1‰，最低收取50元/笔，最高收取260元/笔；另收电讯费,港澳台地区人民币80元/笔,非港澳台地区人民币150元/笔。",CONFIRMED,2026-11-11
+V3,IRS yearly average CNY/USD 2024=7.189 2025=7.129,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates,"China | Yuan | 7.129 | 7.189 | 7.075 | 6.730 | 6.452",CONFIRMED,2026-11-11
+V4,FBAR non-willful 16536 willful 165353 (31 CFR 1010.821),https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821,"5321(a)(5)(B)(i) Non-Willful 10000->16536; 5321(a)(5)(C)(i)(I) Willful 100000->165353",CONFIRMED,2026-11-11
+V5,SAFE art.59 境外个人 ID + source docs (含税务凭证); PR-ID holders get convenience quota,https://www.safe.gov.cn/tianjin/2024/0621/2529.html,"境外个人在境内取得的经常项目合法人民币收入，凭本人有效身份证件和有交易额的购汇资金来源材料（含税务凭证）在银行办理购汇。持有外国人永久居留身份证的境外个人适用购汇年度便利化额度。",CONFIRMED,2026-11-11
