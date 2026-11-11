@@ -451,6 +451,7 @@ ARCHIVE_GROUPS = [
     (r"^schedule-|^final-verification", "S436 schedule", "Uses the earlier 6.6903 rate."),
     (r"^deep-", "Deep research", "Known problem: R05 on the Flagged page (2004 staging rule)."),
     (r"^cost|^cross-session|^us-fx-gain", "Cost model and cross-session review", "Uses the 9 November rates (6.6919 / 6.6924)."),
+    (r"^g8d8-", "G8D8 new evidence, 11 November 2026 (session 8d8b8493)", "Other banks, U.S. receiving fees, Wise and Western Union, SAFE fines; read on 11 November 2026 at the 10:25:02 board."),
     (r"review|audit", "Independent reviews", "Other sessions' findings, kept as published."),
     (r"^docs/", "First docs site", "Earliest pass; not updated since."),
     (r".", "First editorial pages", "Earliest pass; partly corrected later."),

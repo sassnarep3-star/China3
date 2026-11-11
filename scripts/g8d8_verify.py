@@ -21,7 +21,9 @@ OFFICIAL = ("boc.cn", "abchina.com", "abchina.com.cn", "ccb.com", "cmbchina.com"
             "bankofamerica.com", "chase.com", "wellsfargo.com", "schwab.com", "fidelity.com", "wise.com", "westernunion.com",
             "irs.gov", "mof.gov.cn", "chinatax.gov.cn", "govinfo.gov", "ecfr.gov")
 OWN = re.compile(r"^(g8d8-[a-z]+\.html|data/g8d8_[a-z_]+\.csv|research/g8d8-[a-z-]+\.md|scripts/g8d8_[a-z]+\.py|assets/g8d8\.css|"
-                 r"\.github/workflows/g8d8-verify\.yml|COORDINATION\.md)$")
+                 r"\.github/workflows/g8d8-verify\.yml|COORDINATION\.md|"
+                 # logged takeover: one additive ARCHIVE_GROUPS row, and the archive list it regenerates
+                 r"scripts/e347_build\.py|dashboard/archive\.html)$")
 fails, notes = [], []
 
 
