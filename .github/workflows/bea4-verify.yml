@@ -1,0 +1,48 @@
+name: bea4 re-verification gate
+
+# Session arena/bea42a88-china3 (11 Nov 2026). Scoped to this namespace's files only: it re-derives
+# the cost ladder in independent code, rebuilds the two bea4 pages and fails on any drift, then checks
+# that every table row carries an official source link and every internal link resolves.
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "bea4-*.html"
+      - "data/bea4_*.csv"
+      - "data/bea4_summary.json"
+      - "data/e347_*.csv"
+      - "scripts/bea4_recheck.py"
+      - "scripts/build_bea4_site.py"
+      - "scripts/verify_bea4_site.py"
+      - ".github/workflows/bea4-verify.yml"
+  pull_request:
+    paths:
+      - "bea4-*.html"
+      - "data/bea4_*.csv"
+      - "data/bea4_summary.json"
+      - "data/e347_*.csv"
+      - "scripts/bea4_*.py"
+      - "scripts/build_bea4_site.py"
+      - "scripts/verify_bea4_site.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Re-derive the cost ladder, rebuild the pages, check every row and link
+        run: |
+          python3 scripts/bea4_recheck.py
+          git diff --quiet -- data/bea4_cost_recheck.csv data/bea4_repricing.csv \
+            data/bea4_penalty_exposure.csv data/bea4_summary.json || {
+              echo "::error::bea4 data files are stale — run python3 scripts/bea4_recheck.py and commit";
+              exit 1; }
+          python3 scripts/verify_bea4_site.py
