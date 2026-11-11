@@ -285,6 +285,7 @@ def page():
 <footer><div class="wrap">
 <p>Bank of China board published {BOARD}; personal tariff in force since 2014-11-01; official pages read {READ_ON}. General research from public official pages - not legal, tax or banking advice, and no finding about any person's case.</p>
 <p><a href="#questions">Questions</a> · <a href="#ladder">Ladder</a> · <a href="#sources">Sources</a> · <a href="#flagged">Flagged</a> · <a href="{REPO}">Repository</a> · built by <code>scripts/f52c_build.py</code></p>
+<p>Parallel editions of the same exercise, kept as their authors published them: <a href="https://github.com/sassnarep3-star/China3/blob/main/QNA.md">QNA.md</a>, <a href="76e-verification.html">76e verification</a>, <a href="m5f19-dashboard.html">m5f19</a>. Where they disagree with this page, the source ids here are the ones re-read on {READ_ON}.</p>
 </div></footer>
 </body>
 </html>
