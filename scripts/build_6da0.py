@@ -162,7 +162,7 @@ SOURCES = [
     ("U02", "U.S.", IRS, "U.S. taxpayers residing outside the United States (Streamlined Foreign Offshore Procedures)",
      "https://www.irs.gov/individuals/international-taxpayers/us-taxpayers-residing-outside-the-united-states", "full",
      "in any one or more of the most recent three years for which the U.S. tax return due date (or properly applied for extended due date) has passed, the individual did not have a U.S. abode and the individual was physically outside the United States for at least 330 full days. […] (1) for each of the most recent 3 years for which the U.S. tax return due date (or properly applied for extended due date) has passed, file delinquent or amended tax returns, together with all required information returns (e.g., Forms 3520, 5471, and 8938) and (2) for each of the most recent 6 years for which the FBAR due date has passed, file any delinquent FBARs […] will not be subject to failure-to-file and failure-to-pay penalties, accuracy-related penalties, information return penalties, or FBAR penalties.",
-     "Living abroad test: no U.S. home and 330 full days outside the U.S. in at least one of the last three years. File three years of returns and six years of FBARs and pay the tax and interest. No penalties."),
+     "Living abroad test: no U.S. abode and 330 full days outside the U.S. in at least one of the last three years. File three years of returns and six years of FBARs and pay the tax and interest. No penalties."),
     ("U03", "U.S.", IRS, "U.S. taxpayers residing in the United States (Streamlined Domestic Offshore Procedures)",
      "https://www.irs.gov/individuals/international-taxpayers/us-taxpayers-residing-in-the-united-states", "full",
      "have previously filed a U.S. tax return (if required) for each of the most recent 3 years for which the U.S. tax return due date (or properly applied for extended due date) has passed […] The Title 26 miscellaneous offshore penalty is equal to 5 percent of the highest aggregate balance/value of the taxpayer’s foreign financial assets that are subject to the miscellaneous offshore penalty during the years in the covered tax return period and the covered FBAR period. […] will be subject only to the Title 26 miscellaneous offshore penalty and will not be subject to accuracy-related penalties, information return penalties, or FBAR penalties.",
@@ -412,7 +412,7 @@ PATHS = [
     ("P3", "The income was reported, but another international form is missing", "File it the normal way. Attach a reasonable-cause statement if you have one.", "Penalties may be assessed under the existing rules.", None,
      "Form 8938 and Form 3520 amounts are on the dashboard Tax page.", ["U05"]),
     ("P4", "Income or interest was not reported, it was not willful, and you live outside the U.S.", "Streamlined Foreign Offshore: 3 years of returns, 6 years of FBARs, Form 14653.", "$0 penalty. The tax and interest are still due.", None,
-     "Test: in at least one of the last three years you had no U.S. home and spent 330 full days outside the U.S.", ["U02", "U18", "U01"]),
+     "Test: in at least one of the last three years you had no U.S. abode (the IRS's word) and spent 330 full days outside the U.S.", ["U02", "U18", "U01"]),
     ("P5", "Income or interest was not reported, it was not willful, and you live in the U.S.", "Streamlined Domestic Offshore: 3 years of amended returns, 6 years of FBARs, Form 14654.", "5% of the highest year-end total of the unreported foreign accounts, plus the tax and interest.", None,
      "You must have filed a return for each of the last three years.", ["U03", "U18", "U01"]),
     ("P6", "It was willful", "IRS Criminal Investigation Voluntary Disclosure Practice, Form 14457.", None, "F07",
@@ -462,7 +462,7 @@ FLAGS = [
      "The law limits how far back tax can be recovered. Whether a tax office will still accept payment and issue a record for an older year, and whether a bank accepts money for which no record can be issued, was not found on any official page.",
      "Ask the tax office and the bank in writing.", ["C01.52", "C03", "C10"]),
     ("F06", "low", "The IRS page on late FBARs is gone",
-     "The address the National Taxpayer Advocate cites for the Delinquent FBAR Submission Procedures returned 'Page Not Found' on 11 November 2026, and the IRS options page now lists three options without it. The Taxpayer Advocate Service page still states the no-penalty rule, and that is the page cited here.",
+     "The IRS address for its Delinquent FBAR Submission Procedures (irs.gov/individuals/international-taxpayers/delinquent-fbar-submission-procedures) returned 'Page Not Found' on 11 November 2026, and the IRS options page lists three options without it. The Taxpayer Advocate Service page still states the no-penalty rule, and that is the page cited here.",
      "An IRS statement of where the procedure now lives, or that it was withdrawn.", ["U04", "U07"]),
     ("F07", "medium", "Penalty under the Voluntary Disclosure Practice",
      "The IRS published proposed new terms on 22 December 2025 and took comments until 22 March 2026. The page describes them as proposed. Whether they are final was not found, so no figure is shown for the willful route.",
@@ -665,7 +665,7 @@ def build_page():
 <p>The tax office's own mistake: three years, no surcharge. Never filed: generally three years, up to five. Evasion: no limit. Not having filed is not evasion; refusing to file after the tax office tells you to is.</p>
 <p class="src">{src_links(["C01.52", "C03", "C01.63"])} · <a href="#china">China rules</a></p></div>
 <div class="card"><h3>3. Only the tax itself comes back</h3>
-<p>Chinese income tax can be credited against U.S. tax on the same income. The surcharge and the fine cannot. The credit belongs to the year you pay, which may not be the year the U.S. taxed the income.</p>
+<p>Chinese income tax can be credited against U.S. tax on the same income. The surcharge and the fine cannot. For a cash-method taxpayer the credit belongs to the year you pay, which may not be the year the U.S. taxed the income.</p>
 <p class="src">{src_links(["U11", "U20"])} · <a href="#back">What comes back</a></p></div>
 <div class="card"><h3>4. In the U.S. the procedure matters more than the tax</h3>
 <p>If the income and the accounts were reported, there is nothing to settle. If not, and it was not willful, the penalty is nothing for someone living abroad and 5% of the highest balance for someone living in the U.S. Outside those procedures the ceiling is $16,536 for each missed yearly report, or for a willful case the greater of $165,353 or half the balance.</p>
@@ -699,7 +699,7 @@ def build_page():
 <details><summary>All 40 steps <span>$10,000 to $400,000 in $10,000 steps</span></summary>
 {all_b}
 </details>
-<p class="note">Example: $400,000 is {rmb(r400["rmb_at_boc_sell"])}. Earned in one year the tax is {rmb(r400["wage_tax_one_year_rmb"])}, or {usd(r400["wage_tax_one_year_usd"])}. Earned over five years it is {rmb(r400["wage_tax_five_years_rmb"])}, or {usd(r400["wage_tax_five_years_usd"])}. Wages paid by a Chinese employer normally had tax withheld (case A), in which case none of this is owed.</p>
+<p class="note">Example: $400,000 is {rmb(r400["rmb_at_boc_sell"])}. Earned in one year the tax is {rmb(r400["wage_tax_one_year_rmb"])}, or {usd(r400["wage_tax_one_year_usd"])}. Earned over five years it is {rmb(r400["wage_tax_five_years_rmb"])}, or {usd(r400["wage_tax_five_years_usd"])}. The law makes whoever pays the wages the withholding agent, so wages from a Chinese employer should already have had tax withheld (case A). If they did, none of this is owed.</p>
 
 <h2 id="back">What comes back on the U.S. side</h2>
 {table(["Item", "Answer", "Source"], credit_rows)}
