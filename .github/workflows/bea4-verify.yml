@@ -38,11 +38,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Re-derive the cost ladder, rebuild the pages, check every row and link
+      # Split into two steps so a red run says which half broke, and surface the first 20 lines
+      # of any failure as an annotation (the job log host is not always reachable from a session).
+      - name: Re-derive the cost ladder and penalty exposure (must be idempotent)
         run: |
-          python3 scripts/bea4_recheck.py
-          git diff --quiet -- data/bea4_cost_recheck.csv data/bea4_repricing.csv \
-            data/bea4_penalty_exposure.csv data/bea4_summary.json || {
-              echo "::error::bea4 data files are stale — run python3 scripts/bea4_recheck.py and commit";
-              exit 1; }
-          python3 scripts/verify_bea4_site.py
+          set -o pipefail
+          python3 scripts/bea4_recheck.py 2>&1 | tail -40
+          if ! git diff --quiet -- data/bea4_cost_recheck.csv data/bea4_repricing.csv \
+               data/bea4_penalty_exposure.csv data/bea4_summary.json; then
+            git --no-pager diff --stat -- data/bea4_* | sed 's/^/::error::stale: /'
+            echo "::error::bea4 data files are stale — run python3 scripts/bea4_recheck.py and commit"
+            exit 1
+          fi
+      - name: Every row sourced, every link resolved, figures recomputed
+        run: |
+          set -o pipefail
+          python3 scripts/verify_bea4_site.py 2>&1 | tee /tmp/bea4-verify.log | tail -40
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            head -20 /tmp/bea4-verify.log | sed 's/^/::error::/'
+            exit "$status"
+          fi
