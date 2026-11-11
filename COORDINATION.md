@@ -1406,6 +1406,7 @@ rewrite of that check (see the takeover note above). B8720152's U15 text and `sc
 change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
 
 <!-- session-arena/4bfb6552-china3-f52-v1 -->
+### 76E-T4 — pull request, merge and deployment record
 
 ## Session `arena/4bfb6552-china3` — decision checklist + fresh-priced $10k–$400k ladder ("f52")
 
@@ -1507,3 +1508,39 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 ### F52 — merge resolution log (2026-11-11)
 
 Merged `origin/main` at `46ac821` (PRs #51/#52/#54 landed while PR #60 was open). One conflict, in this file only: both sides had appended session blocks at the tail. Resolved by keeping every block verbatim from both sides (F52 claim + completion, and the `arena/1c55025d-china3` audit block incl. its `QNA.md` work) and removing only the marker lines — verified zero `<<<<<<<`/`>>>>>>>` lines remain and both sessions' headings are present. No other file conflicted; no work was discarded. F52-T6 (PR #60 merge + Pages verification) is now `in progress`.
+---
+## B2D4FF40 — decision-readiness register (claimed 2026-11-11T02:40Z)
+- **Session:** `arena/b2d4ff40-china3` (branch of this session). Session ID for the board: `session-b2d4ff40`.
+- **Live-claim scan before claiming** (`git ls-remote`, `gh pr list`, `git log -1` on every sibling branch, 2026-11-11T02:38Z):
+  - `arena/76e3e41f-china3` — **active** (last commit 02:36:59Z, PR #49 open). Claims `76e-*`, `data/76e_*`, `research/76e-*`, `assets/76e.css`, `scripts/build_76e_site.py`, `scripts/verify_76e.py`, `.github/workflows/76e-verify.yml`, `scripts/verify_m5f19_site.py` (check-J scope fix), `COORDINATION.md` (conflict-marker repair), regenerated `dashboard/archive.html`. It is doing the same-day (11 Nov) re-verification of every load-bearing page. **This session does not duplicate that work and does not edit those files.**
+  - `arena/b8720152-china3` — last commit 02:33:11Z (PR #48, merged as `6750ddb`).
+  - `ea347561`, `5f1925df`, `2c8d441e`, `05552f6e` — last commits 2026-11-10; no live work detected.
+- **Gap this session fills:** the brief asks for *"a clear list of questions, informations and answers that need to be addressed before any decision can be reasonably made … suggestions to discover missing information."* No page in the repository does this in one register. The Flagged page lists what is unverified but is organised as defects, not as a decision sequence.
+- **Exclusive file scope claimed:**
+  | Path | Change |
+  |---|---|
+  | `data/b2d_decisions.csv` | new: the register (question, status, what we know, missing, how to discover) |
+  | `scripts/b2d_data.py` | new: the register's content (36 rows, discovery plan, questions to ask) |
+| `scripts/verify_b2d_decisions.py` | new: independent gate (official source on every row, an open or partial row needs a discovery step, page/CSV parity, nav reachability, arithmetic recomputed) |
+  | `.github/workflows/b2d-verify.yml` | new: CI, scoped to this branch and its own pull request, so no sibling branch is failed |
+  | `dashboard/decisions.html` | new: generated page |
+  | `scripts/e347_build.py`, `scripts/e347_verify.py`, `dashboard/*.html`, `index.html`, `dashboard/site.css` | **integration edit (shared, deliberately taken):** one nav entry "Decide" so the register is reachable from every page, a section link and a paragraph on the landing page, `ol.plain` list styling, and the e347 verifier extended from 8 to 9 pages. No figure, source, flag, method or cost cell is changed. |
+  | `README.md`, `EXECUTIVE_SUMMARY.md` | additive only: one row in the page table, one "Questions that must be settled" section pointing at the register |
+  | `COORDINATION.md` | append only (this block: claim, log, PR/merge record) |
+- **Not touched:** `76e-*`, `data/76e_*`, `research/76e-*`, `scripts/verify_m5f19_site.py`, `.github/workflows/76e-verify.yml`, and every other session's namespace.
+- **Status:** done (2026-11-11T03:20Z). PR: https://github.com/sassnarep3-star/China3/pull/53 (merge result and Pages deploy recorded below once they happen).
+- **Official pages re-read by this session on 2026-11-11:** BOC board (USD buying 666.30, selling 669.11, middle 671.91, published 2026/11/11 10:25:02); BOC personal e-banking tariff (1‰, min RMB 50, max RMB 260, cable RMB 150 outside HK/Macao/Taiwan); SAFE Tianjin Q&A 2024 No. 9 (art. 59; only Foreign Permanent Resident ID holders get the convenience amount); SAFE Ningxia Q&A 2022 No. 8 (USD 50,000 is a convenience amount, not a ceiling); PBOC Announcement [2004] No. 16 (arts. 2, 5, 6, 8-11, 13 read in full); eCFR 31 CFR 1010.821 (non-willful 16,536 / willful 165,353); IRS yearly average rates (2025 7.129, 2024 7.189).
+- **Gates passed:** `verify_b2d_decisions.py` (36 rows: 20 answered, 7 partly answered, 9 open; official source on every row; discovery step on every open row; page and CSV agree row for row); `e347_build.py --check` clean; `e347_verify.py` (9 pages, 694 table rows sourced, 380 blanks flagged, 2,254 links resolved); plus `check_links`, `validate_data`, `verify_dashboard`, `verify_final_integration`, `verify_s775_site`, `verify_c5bf`, `verify_d646_site`, `verify_s436_site`, `verify_cost_tables`, `verify_a513`, `verify_c3x_site`, `verify_completion`, `test_costs` — all PASS.
+- **Irregularities found and how each was handled:**
+  - `verify_m5f19_site.py` check J failed on this branch while it hardcoded the m5f19 namespace. Not edited here (owned by session 76e, which fixed it in PR #49, merged as `d9763dc`).
+  - The published cost cells use the 2026-11-10 board; this register quotes the 2026-11-11 board on the two rows where the date is the point (D02, E02). Both are labelled with their date and flag U15 already records that no repricing was done. No figure was changed.
+  - `main` carried literal merge-conflict markers in this file from PR #46 until 76e repaired them in PR #49. No validator checks for marker lines — still true after this session.
+  - An earlier draft of this block listed a separate `scripts/build_b2d_decisions.py`; the register was in fact built inside `scripts/e347_build.py` so that all nine pages share one generator and one navigation. The table above is the corrected record.
+  - The rebase onto `main` three times produced a conflict in this file with other sessions' appended blocks (76e twice, 78c46684 once). Each was resolved keeping **both** sides verbatim; no other session's text was edited or dropped.
+  - **Overlapping work, disclosed:** session `78c46684` added `QNA.md` (PR #52) with a question/answer register on the same subject. That document and this page answer the same brief; this page is the rendered, navigable, machine-checked version. Neither was copied into the other. The decisions page now links `QNA.md` explicitly, and `QNA.md` is left exactly as its session wrote it.
+### B2D4FF40 log
+- `2026-11-11T02:40Z`: claim written and pushed before any content file was touched. All 16 inherited validators pass at base `6750ddb` (`e347_verify` PASS reproduced before the claim).
+
+### F52 — second merge resolution (2026-11-11)
+
+Merged `origin/main` at `1638a47` (PR #53, decision-readiness register). Single conflict in this file (tail appends); resolved as before by keeping both sides verbatim and removing only markers. Incoming changes to `EXECUTIVE_SUMMARY.md`, `README.md` and `dashboard/**` are `main`'s own merged work, taken as-is; this session still edits no shared file directly. F52-T6 remains `in progress` pending PR #60 merge + Pages check.
