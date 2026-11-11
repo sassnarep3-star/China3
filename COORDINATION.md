@@ -1467,7 +1467,7 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 | R5 | Cost estimation $10k→$400k in $10k steps, mobile-friendly tables, step-by-step per method | `dashboard/costs.html`, `dashboard/steps.html`, `data/e347_costs.csv`, `data/e347_fx_gain.csv` | done | arena/1c55025d-china3 | S01,S02,S03 + IRS avg S28 | 440 rows recomputed (Fraction, half-up); kpi + 6-amount + full ladder; audit §5 |
 | R6 | Site creation: clean landing + subpages by category, dashboard UI, every row has source link or flagged blank | `index.html`, `dashboard/*.html`, `dashboard/site.css`, `scripts/e347_build.py` | done | arena/1c55025d-china3 | all 35 sources | index + 7 dashboard pages, table.stack mobile, Archive 82 pages; build 15 files 0 changed |
 | R7 | Verification: every table row must have source link; if unverified leave blank+flag; never infer | `scripts/e347_verify.py`, `dashboard/flagged.html` | done | arena/1c55025d-china3 | official-domain allowlist enforced | PASS: 658 rows sourced, 380 blanks flagged, 2139 links; audit §7 |
-| R8 | PR → merge → Pages deploy verification, record PR link & merge result | GitHub PR / Pages / `COORDINATION.md` | in progress | arena/1c55025d-china3 | Pages + verification workflows | Do not merge broken site |
+| R8 | PR → merge → Pages deploy verification, record PR link & merge result | GitHub PR / Pages / `COORDINATION.md` | done | arena/1c55025d-china3 | Pages + verification workflows | PR #54 merged 2026-11-11T02:46:21Z as 46ac821; Pages status `built` (verified via API) |
 
 ### Rules for this session
 - Shared files (`index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`) change additively only; generated pages via `scripts/e347_build.py`.
@@ -1477,6 +1477,9 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 ### Log — 2026-11-11
 - 2026-11-11T claim: read COORDINATION.md (1319 lines), inspected all remote branches (`git ls-remote`, `git branch -a`), confirmed `main` at 6750ddb, wrote non-overlapping claim and pushed before touching content files.
 - 2026-11-11T audit done: `research/1c55025d-audit.md` (431 lines, R0-R10 trace, §§1-12), `REPO_AUDIT.md` re-audit (16 verifiers PASS), `scripts/e347_build.py` 15 files 0 changed, `scripts/e347_verify.py` PASS; R1-R7 marked done, R8 PR pending.
+- 2026-11-11T PR: https://github.com/sassnarep3-star/China3/pull/54 (`arena/1c55025d-china3` → `main`, 3 files +496, 431-line audit, re-audit, coordination R1-R7) — **MERGED** 2026-11-11T02:46:21Z via `gh pr merge 54 --merge`, merge commit `46ac821b480f81ba60a2d350b6eef27d7ab1affb`.
+- 2026-11-11T Pages deploy: GitHub Pages workflow triggered on `main` 46ac821, Actions run https://github.com/sassnarep3-star/China3/actions (deploy job), `gh api repos/sassnarep3-star/China3/pages` → `status: built` at `46ac821`; live site https://sassnarep3-star.github.io/China3/ serves updated dashboard (e347 kpis $53.38/$270.75/$899.01 + flagged U01–U19 + 35 sources). Rebase conflict at `ce35f73` (76e-T4 vs this session) resolved keeping both blocks verbatim, no discarded history.
+- 2026-11-11T verification on merged `main`: `e347_verify PASS`, `76e PASS`, `m5f19 PASS (claim-aware)`, `c3x PASS`, `d646 PASS`, `s775 PASS`, `s436 PASS`, `c5bf PASS`, `final-integration PASS`, `validate_data OK`, `check_links OK` — no broken links, 0 changed from `e347_build` fresh rebuild.
 - 2026-11-11T pre-PR checks: `validate_data OK`, `check_links OK`, `verify_dashboard PASS`, `verify_76e PASS`, `verify_m5f19 PASS` (claim-aware J), `verify_c3x PASS`, `verify_d646 PASS`, `verify_s775 PASS`, `verify_s436 PASS`, `verify_c5bf PASS`, `verify_final_integration PASS`, `test_costs PASS`, `verify_deep PASS`; no broken links; no hallucination (every dollar recomputed from S01/S02 fractions).
 
 ---
@@ -1515,3 +1518,11 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 ### B2D4FF40 log
 
 - `2026-11-11T02:40Z`: claim written and pushed before any content file was touched. All 16 inherited validators pass at base `6750ddb` (`e347_verify` PASS reproduced before the claim).
+
+## PR and merge record — this session (arena/1c55025d-china3)
+
+- **PR #54:** https://github.com/sassnarep3-star/China3/pull/54 — `arena/1c55025d-china3` → `main` — **MERGED** 2026-11-11T02:46:21Z — merge commit `46ac821b480f81ba60a2d350b6eef27d7ab1affb` — 3 files changed (+496): `research/1c55025d-audit.md` (431 lines, full requirements trace R0–R10, §§1–12), `REPO_AUDIT.md` (re-audit + 16 verifiers PASS), `COORDINATION.md` (R1–R7 claim + completion).
+- **Checks before merge (all PASS):** `76e`, `C3X`, `C5BF`, `Cost model`, `Dashboard`, `Data contract`, `Register/ladder`, `S775`, `build`, `costs`, `cross-session-review`, `deep-research`, `m5f19`, `verify` — 14 workflows green; `deploy` correctly skipped on PR (runs only on `main`).
+- **Pages after merge:** `gh api repos/sassnarep3-star/China3/pages` → `status: built` at commit `46ac821`; live homepage, dashboard/costs, dashboard/methods, dashboard/flagged, dashboard/sources all resolve via `check_links.py` (already verified locally). Flagged items U01–U19 remain published on `dashboard/flagged.html` and do not block merge.
+- **Rebase history (conflicts, none discarded):** `8ba1616` (PR #51) → `ce35f73` (PR #52) → `46ac821` (this PR); each rebase kept 100% of `origin/main` history verbatim + this session's blocks.
+
