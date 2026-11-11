@@ -1,0 +1,6 @@
+institution,incoming_wire_fee,what_the_page_says,note,source_urls,flags
+Bank of America,$15,Inbound wire transfers may incur a $15 fee per wire.,Receive USD with SWIFT code BOFAUS3N. International wires typically credited in 1 to 2 business days.,https://info.bankofamerica.com/en/digital-banking/wire-transfers,
+Chase,$15,"$15 per transfer, or $0 if the transfer was originally sent with the help of a Chase banker or using chase.com or Chase Mobile.",The $0 case is for wires sent through Chase itself. Chase adds that other institutions may deduct their own charges from the wire.,https://www.chase.com/personal/fees/total-checking https://personal.chase.com/personal/secure-banking/,F09
+Wells Fargo,,No limit on the amount received. The incoming fee amount was not on the part of the page read.,Fees may be waived by the terms of the account.,https://www.wellsfargo.com/online-banking/wires/,F09
+Charles Schwab,,The pricing page states no wire fee either way.,,https://www.schwab.com/pricing,F09
+Fidelity,,The customer-service page for wires has been moved or deleted.,,https://www.fidelity.com/customer-service/how-to-wire-transfer,F09
