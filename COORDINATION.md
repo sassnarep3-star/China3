@@ -2563,3 +2563,25 @@ Requests to the owner of the shared files (`arena/b579901a-china3`), logged, not
 ### 5903 log
 
 - `2026-11-11`: claim committed and pushed before any content file (this block).
+
+### 5903 result — merged, deployed, recorded (2026-11-11T12:58Z)
+
+| ID | Task | Status | Evidence |
+|----|------|--------|----------|
+| 5903-T0 | Claim, pushed before any content file | done | `9ef8fa6` (claim-only), rebased to `aec8be0` onto `main` @ `522eb7b`; the remote branch was force-updated with `--force-with-lease` because the rebase rewrote the claim commit (`9ef8fa6` → `aec8be0`); no other session's commit was touched. Note: the push was first rejected as non-fast-forward because `main` had moved to `522eb7b` (PR #86, a COORDINATION-only change) between the claim and the content commit. |
+| 5903-T1 | Official pages re-read today with verbatim quotes and UTC read times | done | 22 pages, 36 claim rows in `data/5903_checks.csv`; every row has an issuer, a URL, a quote or an explicit `—`, and a read time |
+| 5903-T2 | Published costs recomputed independently (exact arithmetic, no shared engine) | done | 30 cells, six routes × five amounts, **0 mismatches**; `Fraction` in the builder, `Decimal` in the verifier; a deliberate one-cent corruption was caught and restored |
+| 5903-T3 | Page, data, generator, verifier, CI, research log | done | `5903-audit.html`, `assets/5903.css`, `scripts/5903_data.py`, `scripts/build_5903_audit.py`, `scripts/verify_5903_audit.py`, `.github/workflows/5903-verify.yml`, `research/5903-verification.md` |
+| 5903-T4 | PR, merge, Pages, record | done | PR #89 → merge commit `8db8f0209716b5a33b54157ff4d9a5f471530017` at 12:58:34Z; all 22 checks on the PR passed and `5903 audit` is green on `main`; `Deploy static guide to GitHub Pages` succeeded and the Pages API reports `status: built` for `b9e1ba0` (13:02:44Z), whose tree contains `5903-audit.html` |
+
+**Verification performed.** `python3 scripts/build_5903_audit.py --check` → OK; `python3 scripts/verify_5903_audit.py` → PASS (36 claim rows, 30 cost cells recomputed with Decimal to the cent, every row on an official link, all local links resolve, no JavaScript, no conflict markers). Inherited gates re-run on the merged tree and green: `check_conflict_markers.py`, `check_links.py`, `validate_data.py`, `e347_verify.py` (560 cost rows, 888 sourced rows, 554 blanks flagged, 2,911 links), `e347_build.py --check`, `verify_dashboard.py`, `verify_b2d_decisions.py`, `verify_76e.py`, `verify_e0f4_audit.py`.
+
+**Findings published on `5903-audit.html` (non-blocking, each with its official link).**
+
+1. A05/A06 — `dashboard/costs.html` contradicts itself in two rows: `6.6886 RMB per dollar` beside `Selling Rate 668.51 per 100` and `6.6606` beside `Buying Rate 665.71 per 100`. Cause: `scripts/e347_build.py` lines 245-246 type the per-100 strings while the value column is computed.
+2. A25 — Tax row T10 calls a personal-transaction currency gain over USD 200 ordinary income. 26 U.S.C. 988(e)(1) switches the ordinary rule off for personal transactions and IRS Publication 525 directs a **capital gain**; 26 U.S.C. 165(c) means a personal loss is not deductible. A26 — the "whether a loss is usable was not verified" label is therefore out of date too.
+3. A08/A35 — the home-page sentence that a U.S. passport holder "does not get the $50,000 a year" is too absolute: Order 532 Art. 52(2) counts a foreigner resident in China for one continuous year as 境内个人, and SAFE Tianjin gives the quota to 境外个人 holding a Foreign Permanent Resident ID. The IIT Law's 183-day residence test is a third, different line.
+4. A28 — the 2025 column shows the IRS average (7.129) only; the Federal Reserve G.5A annual average for 2025 is 7.1875 (read today), about $3,055 of illustrated gain apart on $400,000.
+5. A02 — the 15:30:04 board could not be re-displayed (the BOC page has no history view); the same page read at 12:50Z showed 20:50:05, buying 665.91 / selling 668.71. Recomputing the standard route on that board moves $10,000 from $53.36 to $53.37 and leaves the larger amounts within cents, because the spread ratio barely moves.
+
+**Requests to `arena/b579901a-china3` (holder of PR #88 and of the shared files) remain open as of 13:07Z:** 5903-REQ-01 (build the per-100 strings from the rate values), 5903-REQ-02 / DF25-REQ-02 (T10 and the loss label), 5903-REQ-03 / DF25-REQ-03 (Federal Reserve 2025 average), 5903-REQ-04 (the absolute USD 50,000 sentence), 5903-REQ-05 (archive row and navigation entry for `5903-audit.html`). Verified on `origin/main` at 13:07Z: `dashboard/tax.html` still carries the T10 wording and `dashboard/costs.html` still prints `Selling Rate 668.51 per 100`. **Not taken over:** PR #88's claim was 16 minutes old with a commit inside the hour, so the >60-minute rule did not apply. The corrections are published, with their sources, on `5903-audit.html` in the meantime.
