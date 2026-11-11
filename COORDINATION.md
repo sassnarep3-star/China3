@@ -1296,3 +1296,28 @@ reachable by direct URL and this request stays open on the board.
   this branch; confirmed all ten inherited validators PASS at that base (`validate_data`, `check_links`, `verify_deep`,
   `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`,
   `verify_final_integration`). Wrote this claim and pushed it before touching any content file.
+
+<!-- session-arena/5a59401a-china3-5a59-v1 -->
+
+## Session `arena/5a59401a-china3` — 2026-11-11 FINAL INTEGRATION + REFRESH: PR #47 disposition, questions/answers register, independent cost re-derivation, repo audit, site refresh
+
+Branch: `arena/5a59401a-china3` (Arena single-branch binding). Base: `f6ae79e` (PR #46 merged, main tip at claim time).
+Live site: https://sassnarep3-star.github.io/China3/ (Pages API `built`, `build_type: legacy`, main `/`).
+Session ID: `arena/5a59401a-china3`, task namespace `5a59`.
+
+### Concurrent-session scan at claim time (2026-11-11)
+
+- `main` tip `f6ae79e` (PR #46, e347). No other session has claimed `5a59-*` scope.
+- Open PRs: #47 (`arena/5f1925df-china3`, `m5f19-*` namespace, all checks pass, additive except `COORDINATION.md`) — disposition below; #34, #32, #25, #18, #15, #8, #6 — previously dispositioned by C5BF-T5 as not mergeable without breaking the build; this session does not re-open them except to confirm they remain unmerged.
+- This session acts as final integration for PR #47 plus its own refresh. Shared files (`index.html` via `scripts/e347_build.py`, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md`, `dashboard/archive.html` via regeneration) are touched only additively and only in this integration role.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|------------|--------|-------|------------------|-------|
+| 5A59-1 | Disposition of PR #47 (m5f19): read diff row-by-row, run its verifier locally, confirm additive scope, merge to main if green, rebase this branch onto new main | GitHub PR #47 / `COORDINATION.md` | in progress | arena/5a59401a-china3 | PR #47 CI (15 checks pass) + local verifier | Do not merge a broken site; flagged items do not block |
+| 5A59-2 | Questions / Information / Answers register: every decision-blocking question, what is known, what is missing, how to discover it (bank, tax office, SAFE, IRS) | `research/5a59-questions-answers.md`, `data/5a59_questions.csv` | in progress | arena/5a59401a-china3 | Every row links to an official source or is flagged blank | Fills the gap the brief asks for; no manual input required to publish |
+| 5A59-3 | Independent cost re-derivation: recompute e347 440-row ladder + fx-gain table from board/tariff without importing the engine; publish delta report | `research/5a59-cost-audit.md`, `data/5a59_cost_check.csv`, `scripts/verify_5a59.py` | in progress | arena/5a59401a-china3 | BOC board + tariff (S01/S02), IRS averages (S28) | Any mismatch is flagged, never silently corrected in another session's data |
+| 5A59-4 | Executive summary refresh (2026-11-11) + repo audit line-by-line | `research/5a59-executive-summary.md`, `research/5a59-repo-audit.md` | in progress | arena/5a59401a-china3 | Official sources listed per row | Does not overwrite `EXECUTIVE_SUMMARY.md` (e347-owned); links to it |
+| 5A59-5 | Site pages: mobile-first dashboard subpages for Q&A, costs, audit, flagged (namespaced `5a59-*`) + CI gate | `5a59-*.html`, `assets/5a59.css`, `scripts/build_5a59_site.py`, `.github/workflows/5a59-verify.yml` | in progress | arena/5a59401a-china3 | Every table row carries official link or blank+flag | Landing page unchanged; pages discovered via `dashboard/archive.html` regeneration + README links |
+| 5A59-6 | PR from this branch to main, merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / this file | in progress | arena/5a59401a-china3 | Pages API + Actions runs | Flagged/unverified items published, do not block |
+
+- 2026-11-11: Claim written and pushed before any other edit. Scope is exclusively `5a59-*`, `data/5a59_*`, `research/5a59-*`, `scripts/verify_5a59.py`, `scripts/build_5a59_site.py`, `assets/5a59.css`, `.github/workflows/5a59-verify.yml`, plus additive shared-file integration (`README.md`, `COORDINATION.md`, regenerated `dashboard/archive.html`) in this final-integration role. No other session's page, data file, script or stylesheet will be edited except through the PR #47 merge and the archive regeneration.
