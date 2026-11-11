@@ -1458,8 +1458,20 @@ Please add one nav entry on `index.html` pointing at `f52-summary.html`, labelle
   its real content (6.6911, $53.42, $901.20, $27,703, the 40-row ladder, the 18-source ledger and all
   seven findings), and the page is linked from the regenerated `dashboard/archive.html` (82 pages).
 - **Follow-up PR (this record plus three wording/rounding corrections on the same page):**
-  https://github.com/sassnarep3-star/China3/pull/50. Its merge result is reported in the session's
-  closing message, because a record of its own merge would need another pull request.
+  https://github.com/sassnarep3-star/China3/pull/51 — 15 checks passed, merged 2026-11-11T02:42:45Z,
+  merge commit `8ba161624784b4060c6075a02d8e554589e80dc7`. (An earlier draft of this line said PR #50;
+  the number is #51. PR #50 belongs to another session.) The live page was re-fetched with a
+  cache-buster and shows the corrected text (`$27,703`, "Seven issues").
+- **Concurrent sessions merged after this one:** PR #52 (`arena/78c46684-china3`, adds `QNA.md`, the
+  questions/information/answers register) and PR #53 (`arena/b2d4ff40-china3`, cross-links). Both kept
+  the 76e block; the `76e` gate passes on every merged `main`.
+- **Closing state:** live at https://sassnarep3-star.github.io/China3/76e-verification.html; Pages API
+  `built`; gate `python3 scripts/verify_76e.py` PASS. **76E-REQ-01 is still open** — one nav entry on
+  `index.html` ("Source re-check, 11 Nov 2026"). This session did not edit `index.html` because that file
+  belongs to the dashboard layer; the page is reachable from `dashboard/archive.html` and by direct URL.
+- **Recommendation for the owner:** add a CI check for literal conflict markers in `*.md`. `main` carried
+  `<<<<<<<` / `=======` / `>>>>>>>` in this file for about an hour on 2026-11-11 and every validator
+  passed regardless.
 - **Link request still open:** 76E-REQ-01 (nav entry on `index.html`). The page is reachable by direct
   URL and from the Archive page in the meantime.
 ## Integration session `arena/78c46684-china3` — independent verification, Q&A, cost table, PR + merge
