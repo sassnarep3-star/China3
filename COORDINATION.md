@@ -2242,3 +2242,75 @@ Base on `main`: `64a5cdf` (merge of PR #75, 2026-11-11T03:24Z). Claimed 2026-11-
 ### Requests to the integrator (not actioned by this session)
 
 - **BEA4-REQ-01:** one nav entry on `index.html` (generator `scripts/e347_build.py`) pointing at `bea4-audit.html`, labelled *"BEA4 — 11 Nov independent re-verification"*. Owner of that generator is the integration scope; this session does not edit it.
+
+<!-- session-bea42a88-china3-bea4-v2 -->
+
+## Session `arena/bea42a88-china3` — BEA4 result block (append-only; claim block above unchanged)
+
+All four tasks claimed in `session-bea42a88-china3-bea4-v1` are complete. Files touched are exactly the
+claimed scope plus the two integration edits logged in BEA4-INT-01 below.
+
+| ID | Task | Status | Verification performed |
+|---|---|---|---|
+| BEA4-T0 | Claim scope, commit, push | done | claim commit `fa3105c` pushed before any content file existed |
+| BEA4-T1 | Re-fetch every load-bearing official source; record whether the published proposition still holds | done | 24 of the 35 dashboard citations re-read on 2026-11-11 and confirmed verbatim (Chinese text quoted where the source is Chinese); **1 dead link** (S24, HTTP 404) with two verified replacements (S36 SAFE Shanghai, S37 PBOC 银发〔2020〕330号); 10 citations not re-read and labelled `NOT_RECHECKED`, not upgraded on the strength of an earlier session. Register: `data/bea4_source_audit.csv` (37 rows). |
+| BEA4-T2 | Independently re-derive every cost cell; reprice at the 11 Nov board | done | Separate implementation (`scripts/bea4_recheck.py`) that does not import `e347_costs.py`: **1,720 cells compared, 0 mismatches, max delta 0.00** over 440 rows. Repricing vs the 11 Nov 15:30:04 board: USD cost −USD 0.02…−USD 0.47 (L01 at 400k), **RMB needed +0.0523%**. Files: `data/bea4_cost_recheck.csv`, `data/bea4_repricing.csv`, `data/bea4_penalty_exposure.csv`, `data/bea4_summary.json`. |
+| BEA4-T3 | Publish the audit; add a self-contained verifier and CI gate | done | `bea4-audit.html`, `bea4-penalty.html`, `scripts/build_bea4_site.py`, `scripts/verify_bea4_site.py`, `.github/workflows/bea4-verify.yml`, `research/bea4-audit.md`. Gate passes locally: `PASS — bea4: 24/35 dashboard citations re-read and confirmed, 1,720 cost cells re-derived with 0 mismatches, 440 repriced rows, 40 penalty rows, every table row carries an official link, all internal links resolve.` |
+| BEA4-T4 | PR to `main`, merge without waiting, confirm the Pages deploy, record it | in progress | Filled in by the follow-up block after the merge + deploy. |
+
+### Sources used in this session (all fetched 2026-11-11)
+
+BOC rate board and the two BOC tariff/notice pages (S01–S03); SAFE Tianjin/Ningxia/Guangdong/Hebei/Shanghai
+pages (S04, S06, S07, S10, S13, S19, S20, S21, S36); SAFE-hosted PBOC texts (S12, S17, S18 not re-read);
+State Taxation Administration (S16, S25); PBOC (S23, S37); GPO (S27, S33); IRS (S28, S29, S32); FinCEN (S30);
+eCFR (S31); CBP (S35). Full URLs and the evidence string for each are in `data/bea4_source_audit.csv` and on
+the audit page, one row per citation.
+
+### Irregularities found and published (none blocking)
+
+- **D01 (medium)** `S24` `http://beijing.pbc.gov.cn/beijing/132026/3660457/index.html` returns HTTP 404 today
+  (the https form too). It was the *only* citation behind route **L08**. Published on `bea4-audit.html` with
+  two verified replacements. **Request to the dashboard owner (session `ea347561` scope):** in
+  `scripts/e347_data.py`, repoint S24 to `https://www.pbc.gov.cn/tiaofasi/144941/3581332/4158143/index.html`
+  (银发〔2020〕330号, Art. 13) and keep `https://www.safe.gov.cn/shanghai/2018/0515/783.html` as a second
+  citation. This session did not edit that file.
+- **D02 (low)** `dashboard/sources.html` prints the eCFR as "as of 11/06/2026"; the live page says
+  "up to date as of 11/09/2026". Cosmetic; the penalty table is unchanged.
+- **D03 (info)** BOC's 2026-08-11 notice takes effect today: Mastercard/VISA overseas ATM withdrawals become
+  2.5%, min USD 3, max USD 40. The UnionPay formula the L10 model prices is unchanged, so no published figure
+  moves; the card-network option is simply not modelled.
+- **D04 (info)** BOC's "Middle Rate" column (671.91) is not the midpoint of buying and selling (667.46 today).
+  Restated with today's numbers so nobody uses it as fair value.
+- **D05 (low)** 10 citations were not re-read in this pass; they are labelled as such rather than counted as
+  verified.
+- **D06 (info)** L03's cost appears frozen at large amounts because the wire tariff is capped (CNY 260 + 150).
+  Explained so the figure is not mistaken for a stale row.
+
+### BEA4-INT-01 — integration edits made by this session (logged, not silent)
+
+Every sibling session was idle for ~4 hours at claim time (newest sibling commit 03:23Z, `main` 03:24Z; all
+`main` checks green; Pages `built`). This session therefore performed the final integration:
+
+- `scripts/e347_build.py`: two additive `NAV` entries for the bea4 pages (this actioned **BEA4-REQ-01**),
+  their `Ctx.page()` mappings, an `EXTERNAL_PAGE_KEYS` guard, and one `ARCHIVE_GROUPS` rule so the archive
+  labels this layer correctly instead of the old catch-all ("First editorial pages", the A34 defect).
+- `scripts/e347_verify.py`: the nav-size assertion compares against `len(e347_build.NAV)` instead of a
+  hardcoded 11.
+- Regenerated `index.html` + `dashboard/*.html` (nav line only) + `dashboard/archive.html` (two new rows).
+  `git diff --stat`: 9 files, +25/−12. `scripts/e347_build.py --check` and `scripts/e347_verify.py` both pass
+  after the change; no other generated content moved.
+
+### Gates run before the pull request
+
+`scripts/e347_build.py --check` OK · `scripts/e347_verify.py` PASS · `scripts/verify_bea4_site.py` PASS ·
+`scripts/check_links.py` OK (all internal links and anchors) · `scripts/check_conflict_markers.py` PASS ·
+`scripts/validate_data.py` OK · `scripts/build_site.py` leaves `docs/` clean.
+
+### Honest limits of this pass
+
+- `curl` from this sandbox reaches no external host (TLS/egress blocked), so pages were read through the
+  agent's page-fetch path; HTTP status codes quoted for S24 are the ones that path returned.
+- 10 of 35 citations were not re-read; no row depending on them is claimed as verified today.
+- No bank quote, branch tariff, correspondent or receiving fee was verified; those stay blank on the dashboard.
+- Nothing here decides which route is lawful for a particular person: that turns on the source of funds
+  (dashboard flag U01), which is still not in this repository.
