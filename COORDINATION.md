@@ -2487,3 +2487,31 @@ Declared file scope for check J (complete list; supersedes the amendment above):
 - **R18 (low, changed).** Sixteen top-bar links pushed the four core sections off a phone screen. Now nine; all seven root-level editions remain one click away on the Archive page.
 - **R19 (low, open).** The Board of China board moved during the day. Pinned on the site: 2026/11/11 15:30:04, buying 666.06 and selling 668.86 per 100. Re-read today at 20:50:05: buying 665.91, selling 668.71. Recomputing the $400,000 documented-wire route on the newer board gives $898.75 against $898.54, a change of $0.20, because both rates moved together and the spread barely changed. Every figure remains priced at the pinned board, which the page states and flag U15 explains.
 - **R20 (low, open).** Seventeen pull requests from earlier sessions remain open (#84, #78, #72, #67, #66, #61, #59, #58, #57, #50, #34, #32, #25, #18, #15, #8, #6) although `main` carries later merged work. They are parallel editions; this session neither merges nor closes them, because closing another session's PR could discard content its owner has not published elsewhere.
+<!-- session-3482441c-claim -->
+
+## Session `arena/3482441c-china3` (`c348`) — claim, 2026-11-11
+
+Branch `arena/3482441c-china3`, branched from `main` @ `b677a91` (PR #83 merge). Arrived at 12:52Z.
+
+**What I verified on arrival (not assumed):**
+
+- `main` @ `b677a91`; all Pages/WIF workflows green on that commit (run 42985461226 and siblings).
+- GitHub Pages reports `status: built`, `https://sassnarep3-star.github.io/China3/`.
+- 15 open pull requests from earlier sessions are parallel editions; this session does not touch them.
+- Session `arena/b579901a-china3` claimed the **integration** scope at 12:51Z (`scripts/e347_data.py`, `scripts/e347_build.py`, `dashboard/*`, `index.html`, `README.md`). **I stay out of that scope entirely.** I do not edit `index.html`, `dashboard/**`, `scripts/e347_*`, `README.md`, `EXECUTIVE_SUMMARY.md`, or any other session's `<namespace>-*` files.
+
+**What the repository still lacks** (established by reading the data, not by guessing): a *reconciliation*. Fifteen editions publish different headline costs for the same $10,000 (the m5f19 reconciliation file itself lists $53.42 / $53.47 / $901.30 / $1,332.05), different method counts, and different answers to "what will it cost". No page explains which figure is right, under which assumption, or which of the 15 editions a reader should trust. That is this session's task.
+
+| ID | Task | File scope | Status |
+|----|------|------------|--------|
+| C348-T1 | Re-quote the load-bearing official pages **today** (SAFE/PBOC/STA/BOC/IRS/FinCEN/eCFR/govinfo); store URL, timestamp, verbatim quotation | `data/c348_sources.csv`, `research/c348-verification-log.md` | in progress |
+| C348-T2 | Independent cost engine: every lawful CNY→USD method × USD 10,000–400,000 in 10,000 steps; each component either quoted today or **left blank and flagged** (never $0 by assumption) | `data/c348_methods.csv`, `data/c348_costs.csv`, `data/c348_inputs.csv`, `scripts/c348_engine.py` | in progress |
+| C348-T3 | Reconciliation: every headline figure published by the 15 editions, its file, its convention, and the verdict (agrees / differs-because / wrong) | `data/c348_reconciliation.csv`, `c348-audit.html` | in progress |
+| C348-T4 | Tax & penalty decomposition: PRC side and U.S. side, with the § 988 arithmetic recomputed at each amount; least-tax lawful route as a decision tree | `data/c348_tax.csv`, `c348-tax.html` | in progress |
+| C348-T5 | Decision-readiness register: question, what is known, what is missing, exactly how to obtain it | `data/c348_questions.csv`, `c348-questions.html` | in progress |
+| C348-T6 | Mobile-first edition: dashboard + category subpages, every row a source link or a flag | `c348-*.html`, `assets/c348.css`, `scripts/build_c348.py` | in progress |
+| C348-T7 | Independent verifier + CI (recompute every cell, official-domain allowlist, blank⇒flag, link resolution) | `scripts/verify_c348.py`, `.github/workflows/c348-verify.yml` | in progress |
+| C348-T8 | PR → `main`, all checks green, merge, confirm Pages live, record result | GitHub PR / Pages / this file | in progress |
+
+**Explicitly not claimed:** integration/navigation (`index.html`, `dashboard/**`, `scripts/e347_*`) — held by `arena/b579901a-china3`; every other session's namespaced page. A link request from the archive will be logged here for the integrator rather than edited.
+
