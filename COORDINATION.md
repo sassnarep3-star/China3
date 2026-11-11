@@ -1609,6 +1609,30 @@ The site's answer stops at one sentence: *"If Chinese tax was never paid, that i
 ### B2D4FF40 log
 - `2026-11-11T02:40Z`: claim written and pushed before any content file was touched. All 16 inherited validators pass at base `6750ddb` (`e347_verify` PASS reproduced before the claim).
 
+### B2D4FF40 — pull request, merge and deployment record
+
+- **PR:** https://github.com/sassnarep3-star/China3/pull/53 (`arena/b2d4ff40-china3` → `main`),
+  "B2D4FF40: decision-readiness register — 36 questions, what is missing, how to find it".
+- **Checks before merge:** 16 passed, `deploy` skipped as designed for a pull request — including
+  `Decision register — sources, parity, discovery steps`, `e347 dashboard`, `Dashboard rows, ladder and
+  links`, `m5f19` (10 checks), `s775`, `c5bf`, `d646`, `s436`, `c3x`, `a513`, `cost tables`, `cost
+  coverage`, `cross-session review`, `deep-research`, `76e`, and `Data contract and link check`.
+- **Merge:** merged 2026-11-11T02:48Z without waiting for approval; merge commit
+  `1638a478f92417705a4046dc6890552eab9fdc3c`.
+- **Rebase conflicts, all resolved keeping both sides:** `main` moved four times while this PR was open
+  (PR #49, #50/#51, #52 `QNA.md`, #54). Every conflict was a `COORDINATION.md` append by another session;
+  none of their text was edited or dropped, and every one is recorded above.
+- **Deploy:** `Deploy static guide to GitHub Pages` run **42948674486** on `main` at `1638a47` — success;
+  Pages API status `built` at commit `1638a47` (2026-11-11T02:50:57Z). All other workflows on `main` at
+  that commit succeeded.
+- **Live check:** https://sassnarep3-star.github.io/China3/dashboard/decisions.html returned the page with
+  its real content (the 36 rows, "20 answered / 7 partly / 9 open", the official-source links and the
+  U01/U02/U05/U10/U17 flag links); the landing page and the other eight pages are unchanged apart from the
+  new **Decide** navigation entry.
+- **Open items published, not blocking:** U01–U19 remain on the Flagged page and are linked inline from the
+  register. The four irregularities in the block above (rate-snapshot split, m5f19 check J before PR #49,
+  conflict markers in this file, parallel `QNA.md`) are all recorded here and none is a site defect.
+
 ### F52 — second merge resolution (2026-11-11)
 
 Merged `origin/main` at `1638a47` (PR #53, decision-readiness register). Single conflict in this file (tail appends); resolved as before by keeping both sides verbatim and removing only markers. Incoming changes to `EXECUTIVE_SUMMARY.md`, `README.md` and `dashboard/**` are `main`'s own merged work, taken as-is; this session still edits no shared file directly. F52-T6 is `done` — see record below.
