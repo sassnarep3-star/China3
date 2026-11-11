@@ -1,0 +1,45 @@
+name: df25 verify
+
+# The df25 layer: the U.S. tax on turning RMB into dollars. Path-filtered so it runs
+# only when its own files change; the verifier makes no claim about other sessions' files.
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "df25-*.html"
+      - "assets/df25.css"
+      - "data/df25_*.csv"
+      - "research/df25-*.md"
+      - "scripts/build_df25.py"
+      - "scripts/verify_df25.py"
+      - ".github/workflows/df25-verify.yml"
+  pull_request:
+    paths:
+      - "df25-*.html"
+      - "assets/df25.css"
+      - "data/df25_*.csv"
+      - "research/df25-*.md"
+      - "scripts/build_df25.py"
+      - "scripts/verify_df25.py"
+      - ".github/workflows/df25-verify.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: df25 — sources, ladder recomputation, page parity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: The committed files are what the generator produces
+        run: python3 scripts/build_df25.py --check
+
+      - name: Re-derive every ladder cell and check every row is sourced
+        run: python3 scripts/verify_df25.py
