@@ -1404,3 +1404,24 @@ discarding anything:
 Also recorded: B8720152's request to scope m5f19 check J is satisfied by this session's claim-aware
 rewrite of that check (see the takeover note above). B8720152's U15 text and `scripts/e347_data.py`
 change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
+
+### 76E-T4 — pull request, merge and deployment record
+
+- **PR:** https://github.com/sassnarep3-star/China3/pull/49 (`arena/76e3e41f-china3` → `main`),
+  "76e: same-day source re-check (11 Nov), recomputed $10k–$400k ladder, 7 findings, CI scope fix".
+- **Checks before merge:** 15 passed, `deploy` skipped as designed for pull requests — including the
+  `76e` gate, `m5f19` (after the scope fix), `e347`, `dashboard`, `s775`, `c5bf`, `d646`, `s436`, `c3x`,
+  `a513`, `cost tables`, `cost coverage`, `cross-session review`, `deep-research` and `Data contract and
+  link check`.
+- **Merge:** merged 2026-11-11T02:39:17Z without waiting for review, merge commit
+  `d9763dca8e9f3a80f76f7012209f7e0c09bc64e0`.
+- **Deploy:** `Deploy static guide to GitHub Pages` run **42947498239** — success; Pages API status
+  `built` at commit `d9763dc`; every other workflow on `main` at that commit succeeded.
+- **Live check:** https://sassnarep3-star.github.io/China3/76e-verification.html returned the page with
+  its real content (6.6911, $53.42, $901.20, $27,703, the 40-row ladder, the 18-source ledger and all
+  seven findings), and the page is linked from the regenerated `dashboard/archive.html` (82 pages).
+- **Follow-up PR (this record plus three wording/rounding corrections on the same page):**
+  https://github.com/sassnarep3-star/China3/pull/50. Its merge result is reported in the session's
+  closing message, because a record of its own merge would need another pull request.
+- **Link request still open:** 76E-REQ-01 (nav entry on `index.html`). The page is reachable by direct
+  URL and from the Archive page in the meantime.
