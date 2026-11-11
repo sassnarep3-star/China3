@@ -1,0 +1,32 @@
+name: c348 verified edition
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild the edition and fail if the committed pages are stale
+        run: |
+          python3 scripts/c348_engine.py
+          python3 scripts/build_c348.py
+          if ! git diff --quiet -- data/c348_costs.csv data/c348_tax.csv data/c348_penalty_ladder.csv c348-*.html assets/c348.css; then
+            echo "::error::the c348 pages or data are out of date - run scripts/c348_engine.py and scripts/build_c348.py"
+            git diff --stat
+            exit 1
+          fi
+      - name: Independent verification (recomputes every cell, checks every link)
+        run: python3 scripts/verify_c348.py
+      - name: Conflict markers
+        run: python3 scripts/check_conflict_markers.py

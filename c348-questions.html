@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Questions · China money (c348)</title>
+<meta name="description" content="What must be answered before deciding, and how">
+<link rel="stylesheet" href="assets/c348.css">
+</head><body>
+<header>
+  <div class="t">China money · verified CNY→USD edition (c348)</div>
+  <div class="s">Every figure recomputed from an official page read on 2026-11-11 · BOC board 20:50:05 Beijing</div>
+</header>
+<nav><a class="" href="c348-dashboard.html">Dashboard</a><a class="" href="c348-summary.html">Summary</a><a class="" href="c348-methods.html">Methods</a><a class="" href="c348-costs.html">Costs $10k–400k</a><a class="" href="c348-steps.html">Step by step</a><a class="" href="c348-tax.html">Tax</a><a class="" href="c348-penalties.html">Penalties</a><a class="on" href="c348-questions.html">Questions</a><a class="" href="c348-audit.html">Reconciliation &amp; audit</a><a class="" href="c348-flagged.html">Flagged</a><a class="" href="c348-sources.html">Sources</a></nav>
+<main>
+
+<h1 id="top-questions">What must be answered before any decision</h1>
+<p class="lede">Fifteen questions, ordered by how much they change the answer. For each: why it decides
+something, what is already known, what is missing, and exactly how to obtain it. Nothing here can be
+answered from the repository; these are facts about your account and your history.</p>
+<div class="box acc">
+<p><strong>If only three can be answered today, answer these:</strong>
+<a href="#Q01">Q01</a> — is the balance RMB or USD (it decides whether you pay a spread at all);
+<a href="#Q02">Q02</a> — can the source be documented (it decides whether a lawful route exists);
+<a href="#Q07">Q07</a> — is the FBAR history clean (it decides whether the penalties dwarf the cost).</p>
+</div>
+<div class="box" id="Q01">
+<h2 style="margin-top:0">Q01. Is the balance RMB or already foreign currency? <span class="chip bad">priority 1</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>If it is USD sitting in a PRC FX account, method M02 applies and the conversion spread is zero: USD 61.31 on USD 400,000 in total. If it is RMB, M01 or another conversion route applies and the spread is unavoidable: about USD 898.74 on USD 400,000.</td></tr>
+<tr><th>What is already known</th><td>Nothing in the brief or repository records the currency of the balance.</td></tr>
+<tr><th>What is missing</th><td>The currency of the account and of the balance</td></tr>
+<tr><th>How to obtain it</th><td>Read the account statement the bank issues; the currency is printed per line. Ask the bank for a balance certificate if statements are not available.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q02">
+<h2 style="margin-top:0">Q02. How did the money get into the account, and is there a document for it? <span class="chip bad">priority 1</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>A US citizen on a passport does not get the USD 50,000 annual convenience amount; SAFE Art. 59 requires ID plus source-of-funds documents including tax evidence (C03). If the money is salary the route is M01; if it is property, M07; if inherited, M06; if from before emigration, M05. If it cannot be documented, no verified lawful route exists in this edition.</td></tr>
+<tr><th>What is already known</th><td>The routes and the documents each requires are published (data/c348_methods.csv).</td></tr>
+<tr><th>What is missing</th><td>The actual source of this balance and whether documents exist</td></tr>
+<tr><th>How to obtain it</th><td>List every deposit into the account with its date and amount. For each, find the payroll slip, the contract, the sale contract, the inheritance document or the tax receipt. Ask the bank for the account-opening file and the deposit vouchers.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q03">
+<h2 style="margin-top:0">Q03. Was the PRC tax on the income behind the balance paid, and is there a certificate? <span class="chip bad">priority 1</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>The bank reviews tax evidence before an FX purchase (C03), and a single outbound payment above USD 50,000 requires a tax filing that the tax office can refuse to clear if tax is unpaid (C08). Unpaid PRC tax is therefore a gate, not a cost line.</td></tr>
+<tr><th>What is already known</th><td>The tax filing rule and its USD 50,000 threshold (C08).</td></tr>
+<tr><th>What is missing</th><td>Whether the tax was withheld or paid, and whether a certificate exists</td></tr>
+<tr><th>How to obtain it</th><td>Request the 个人所得税纳税记录 from the PRC tax authority (自然人电子税务局) or from the withholding employer. The certificate is issued per person per year.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q04">
+<h2 style="margin-top:0">Q04. Do you hold a PRC Foreign Permanent Resident ID card, and are you a Chinese tax resident? <span class="chip bad">priority 1</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>The USD 50,000 annual convenience amount is for domestic individuals and for holders of the Foreign Permanent Resident ID (C04, C05). Without the card the ID-only route is closed and every conversion needs documents. Separately, the U.S. character of the gain turns on whether the money is personal, business or investment money (C11), and residence feeds that.</td></tr>
+<tr><th>What is already known</th><td>The eligibility rule (C04, C05).</td></tr>
+<tr><th>What is missing</th><td>Whether the card is held; days of residence in China and the U.S. each year</td></tr>
+<tr><th>How to obtain it</th><td>Look at the card itself. Count days of presence from passport stamps and flight records.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q05">
+<h2 style="margin-top:0">Q05. When was each tranche of RMB acquired, and at what rate? <span class="chip bad">priority 1</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>The U.S. currency gain is dollars received minus the dollar basis, and the basis is set on the acquisition date (C11; 26 CFR 1.988-2(a)(2)). The difference between a 2021 and a 2024 acquisition on USD 400,000 is the difference between a USD 14,575 loss and a USD 27,926 gain - a swing of USD 42,501 of taxable amount.</td></tr>
+<tr><th>What is already known</th><td>The gain for every acquisition year 2021-2025 at every amount from USD 10,000 to USD 400,000 (data/c348_tax.csv).</td></tr>
+<tr><th>What is missing</th><td>The actual acquisition dates and rates for this balance</td></tr>
+<tr><th>How to obtain it</th><td>Use the deposit dates and the IRS yearly average rates for those years (C15), or the actual rates on the deposit dates if known. 26 CFR 1.988-2(a)(2)(iii)(B) permits any reasonable, consistently applied basis method (FIFO, LIFO, pro rata) but not highest-basis-first.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q06">
+<h2 style="margin-top:0">Q06. Is the money personal, or is it business or investment money? <span class="chip bad">priority 1</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>Under 988(a)(1)(A) a section 988 gain is ordinary income. 988(e)(1) removes an individual&#x27;s personal transaction from the ordinary rule, and IRS Publication 525 says a personal gain above USD 200 is a capital gain (C12). The gap at USD 400,000 acquired in 2024 is USD 4,189 of tax at 15% against USD 10,333 at 37% (F07).</td></tr>
+<tr><th>What is already known</th><td>Both texts, quoted in data/c348_sources.csv C11 and C12.</td></tr>
+<tr><th>What is missing</th><td>The facts that classify the money, and a professional opinion</td></tr>
+<tr><th>How to obtain it</th><td>Write the facts down and take a written opinion from a U.S. CPA or tax attorney. 988(e)(3) turns on whether the expenses allocable to the transaction would meet section 162 or 212.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q07">
+<h2 style="margin-top:0">Q07. What is the U.S. filing history - has an FBAR or Form 8938 ever been filed for this account? <span class="chip bad">priority 1</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>The FBAR is due when aggregate foreign accounts exceed USD 10,000 at any time in the year (C16). The civil penalty for a non-willful failure is up to USD 16,536 per violation and for a willful one the greater of USD 165,353 or 50% of the balance (C17). On a USD 400,000 balance the willful figure is USD 200,000 - roughly 222 times the cost of a lawful transfer. A clean filing history means the conversion cost is the whole cost; a broken one means penalties dwarf it.</td></tr>
+<tr><th>What is already known</th><td>The thresholds and the adjusted penalty figures (C16, C17).</td></tr>
+<tr><th>What is missing</th><td>Whether the forms were filed for each year the account existed</td></tr>
+<tr><th>How to obtain it</th><td>Check the FinCEN BSA E-Filing account for FBAR acknowledgements and the filed returns for Form 8938. Where nothing was filed, ask a tax adviser about the IRS streamlined filing procedures before moving money.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q08">
+<h2 style="margin-top:0">Q08. Will the money be moved in one wire or in tranches over years? <span class="chip warn">priority 2</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>One wire of USD 400,000 costs about USD 898.74. Eight wires of USD 50,000 cost about USD 1,327.93 - USD 429.19 more - because the cable fee and the minimum wire fee are paid eight times. Any tranche route also adds eight years of exchange-rate exposure.</td></tr>
+<tr><th>What is already known</th><td>Both figures are computed for every amount in data/c348_costs.csv.</td></tr>
+<tr><th>What is missing</th><td>Whether the route chosen requires tranches (only M04 does) and the owner&#x27;s time horizon</td></tr>
+<tr><th>How to obtain it</th><td>Decide the route first (Q01-Q04); tranching is then forced or not.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q09">
+<h2 style="margin-top:0">Q09. Which U.S. bank will receive the wire, and what does it charge for an incoming international wire? <span class="chip warn">priority 2</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>The receiving fee is blank in every row of this edition (F03). A USD 15 or USD 25 charge on a USD 10,000 transfer is 0.15-0.25%, which is comparable to the entire Chinese-side cost.</td></tr>
+<tr><th>What is already known</th><td>That the fee is unpublished per account and must be asked for in writing.</td></tr>
+<tr><th>What is missing</th><td>The receiving bank and its published incoming-wire tariff</td></tr>
+<tr><th>How to obtain it</th><td>Ask the receiving bank in writing (secure message or branch letter). Then send one USD 100 test wire and compare sent against landed.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q10">
+<h2 style="margin-top:0">Q10. Is the account a simple savings account, or are there time deposits, wealth-management products or a joint holder? <span class="chip warn">priority 2</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>26 CFR 1.988-2(a)(1)(iii) treats a transfer between the taxpayer&#x27;s own RMB deposits as not a taxable event, but breaking a time deposit early has its own penalty, and a joint holder changes who is the taxpayer and whether a gift has occurred.</td></tr>
+<tr><th>What is already known</th><td>The regulation&#x27;s treatment of transfers between own accounts (C11 context; 26 CFR 1.988-2(a)(1)).</td></tr>
+<tr><th>What is missing</th><td>The account type, any early-withdrawal penalty, and the holder(s)</td></tr>
+<tr><th>How to obtain it</th><td>Read the account agreement and the deposit confirmations; ask the bank for the early-withdrawal terms.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q11">
+<h2 style="margin-top:0">Q11. Would moving the money now trigger a U.S. gift, estate or information return? <span class="chip warn">priority 2</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>Form 3520 is due for gifts or bequests above USD 100,000 from a foreign person, with a penalty of 5% per month up to 25%. A transfer between spouses or to a U.S. entity can create a gift even when no tax is due.</td></tr>
+<tr><th>What is already known</th><td>The Form 3520 penalty and threshold are recorded in the inherited register.</td></tr>
+<tr><th>What is missing</th><td>The intended recipient of the money and the relationship</td></tr>
+<tr><th>How to obtain it</th><td>State who will own the dollars after the transfer. If it is not the same person as the account holder, get advice before wiring.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">unverified-inherited</span></td></tr>
+</tbody></table></div><div class="box" id="Q12">
+<h2 style="margin-top:0">Q12. How much does the rate matter - is waiting cheaper than converting? <span class="chip warn">priority 2</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>Intraday, the board moved the cost by about USD 2 on USD 10,000 between 15:30 and 20:50 (F10). Over a year the exchange rate can move far more than the 0.53% cost of converting. Waiting is a currency bet, not a saving.</td></tr>
+<tr><th>What is already known</th><td>The cost of converting is bounded and computed here; the future rate is not knowable.</td></tr>
+<tr><th>What is missing</th><td>Nothing that can be obtained - this is a decision, not a fact</td></tr>
+<tr><th>How to obtain it</th><td>Compare the cost of converting (a known number) with the volatility of the rate (historic). Do not treat a favourable rate as a cost saving.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div><div class="box" id="Q13">
+<h2 style="margin-top:0">Q13. Are there other lawful routes the bank offers that are not priced here - for example a cross-border RMB product? <span class="chip ">priority 3</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>Method M03 is blank because no official price was found (F02). If the bank offers it, it may beat M01 or may be worse; today it cannot be ranked.</td></tr>
+<tr><th>What is already known</th><td>That the route exists and is lawful in principle under Art. 5 (C06).</td></tr>
+<tr><th>What is missing</th><td>The bank&#x27;s product terms and price</td></tr>
+<tr><th>How to obtain it</th><td>Ask the bank for the product sheet and a written all-in quote for USD 100,000.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">unverified</span></td></tr>
+</tbody></table></div><div class="box" id="Q14">
+<h2 style="margin-top:0">Q14. Does the balance exceed what one bank will handle in one instruction, and does the branch have discretion? <span class="chip ">priority 3</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>The regulation sets documentation duties, not a per-transaction ceiling, but branches apply internal limits and a large first-time instruction may be referred upward. This affects time, not cost.</td></tr>
+<tr><th>What is already known</th><td>No official per-transaction ceiling read in this pass; C22 sets the daily documentation threshold at USD 50,000.</td></tr>
+<tr><th>What is missing</th><td>The branch&#x27;s own limit and escalation path</td></tr>
+<tr><th>How to obtain it</th><td>Ask the branch manager in writing what the largest single instruction is that the branch can process, and what documents it will require above USD 50,000.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">unverified</span></td></tr>
+</tbody></table></div><div class="box" id="Q15">
+<h2 style="margin-top:0">Q15. Is any part of the balance held in cash rather than in the account? <span class="chip ">priority 3</span></h2>
+<table style="min-width:0">
+<tbody>
+<tr><th style="width:26%">Why it decides</th><td>Cash is a different regime: carrying it out is capped (F05) and remitting foreign cash has a USD 10,000 per day documentation threshold (C22). Cash on hand cannot be wired at all.</td></tr>
+<tr><th>What is already known</th><td>The cash rules (C22, C06 Art. 42, C18).</td></tr>
+<tr><th>What is missing</th><td>Whether any of the money is physical</td></tr>
+<tr><th>How to obtain it</th><td>Count it. If it is significant, deposit it and expect the bank to ask for the source.</td></tr>
+<tr><th>Status</th><td><span class="chip warn">open</span></td></tr>
+</tbody></table></div>
+<div class="foot">
+<p><strong>What this edition is.</strong> An additive, independently verified edition built in its own
+file namespace so it collides with no other session's work. It does not edit the canonical dashboard.
+Figures are recomputed by <code>scripts/c348_engine.py</code> and re-derived from scratch by
+<code>scripts/verify_c348.py</code> (which shares no code with the builder).</p>
+<p><strong>What it is not.</strong> Not tax, legal or investment advice. Every blank cell is a cell no
+official page read in this pass fills; blanks are named in the tables and listed on
+<a href="c348-flagged.html">Flagged for review</a>. Rates move: the board timestamp is printed beside
+each figure.</p>
+</div>
+</main></body></html>
