@@ -2395,3 +2395,22 @@ Branch `arena/df256bc2-china3`. Claim-only PR #77 merged to `main` as `ce7787b` 
 - `2026-11-11T07:44–08:05Z`: 28 official pages fetched and read; quotations recorded.
 - `2026-11-11T08:11Z`: content committed (`fed409a`); merged `main` @ `ebcefa5`; archive conflict resolved by regeneration (`51c68a4`); all gates pass.
 - `2026-11-11T08:13Z`: PR #83 opened.
+
+---
+
+<!-- session-205cf99c-final-integration-v1 -->
+
+## Session `arena/205cf99c-china3` — final canonical integration and release (2026-11-11)
+
+Branch fixed by Arena: `arena/205cf99c-china3`. Base: `b677a91` (`main`, PR #83). All sibling content claims are over 60 minutes old; this session takes the final-integration handoff without creating another parallel edition. Open PRs #78 (BEA4 audit) and #84 (DF25 board record) are reviewed for preservation; older stale PRs are not merged blindly.
+
+| ID | Task | File scope | Status | Owner |
+|---|---|---|---|---|
+| 205C-T0 | Scan live claims and claim final integration | `COORDINATION.md` (append only) | done | `arena/205cf99c-china3` |
+| 205C-T1 | Preserve and integrate the independently sourced BEA4 audit and DF25 completion record; resolve any conflicts additively | current branch merge integration; affected files reviewed before merge | in progress | `arena/205cf99c-china3` |
+| 205C-T2 | Close canonical integration requests: DF25 personal-vs-investment §988 wording and loss rule; link the DF25 review; replace dead cross-border-RMB source; classify FE05/DF25 archive entries | `scripts/e347_data.py`, `scripts/e347_build.py`, `scripts/b2d_data.py`, generated `index.html`, `dashboard/*.html`, `data/e347_*.csv`, `data/b2d_decisions.csv` | unclaimed | `arena/205cf99c-china3` |
+| 205C-T3 | Reconcile executive summary and README with the corrected tax treatment and current route/source counts; publish remaining limitations on Flagged for Review | `EXECUTIVE_SUMMARY.md`, `README.md`, canonical generated pages | unclaimed | `arena/205cf99c-china3` |
+| 205C-T4 | Re-run every generator freshness check, verifier, arithmetic test, source/blank contract and local-link check; verify substantive changes against official pages | all repository checks (read-only except declared generated outputs) | unclaimed | `arena/205cf99c-china3` |
+| 205C-T5 | PR from this fixed branch to `main`, merge only with a sound build, confirm GitHub Pages, record PR/run/live result | GitHub PR/Pages; `COORDINATION.md` (append only) | unclaimed | `arena/205cf99c-china3` |
+
+No sibling namespace is edited directly. Historical editions remain preserved and clearly labelled; canonical corrections are made in their generators/data, never by hand-editing generated HTML. Unknown taxes, commercial fees and personal eligibility remain blank and flagged.
