@@ -33,6 +33,14 @@ SOURCES = [
     ("CS05", "State Council Gazette 2005 No. 22 — same measure (independent official copy)",
      "https://www.gov.cn/gongbao/content/2005/content_64294.htm",
      "yes", "Used to cross-check arts. 6 and 10 of CS04; wording agrees."),
+    ("CS06", "SAFE — 汇发〔2014〕2号 国家外汇管理局关于进一步改进和调整资本项目外汇管理政策的通知 (as amended)",
+     "https://www.safe.gov.cn/tianjin/2024/0903/2594.html",
+     "yes", "Read in full on 2026-11-11. §6 simplifies personal property transfers: §6(1) cancels the "
+            "requirement to report a transfer above the equivalent of RMB 500,000 to SAFE head office; "
+            "§6(2) 取消移民财产转移分次汇出的要求 — cancels the requirement to remit an emigrant property transfer "
+            "in instalments, so 银行可在核准件审批额度内一次或分次汇出相关资金. In force 2014-02-10 and, per its "
+            "closing sentence, it governs where an earlier rule conflicts. This is what supersedes art. 6 "
+            "and art. 10 of CS04 above."),
     ("S01", "SAFE Ningxia — 2022 外汇业务政策释疑（八）", "https://www.safe.gov.cn/ningxia/2022/0929/1997.html",
      "yes", "USD 50,000 convenience amount is not a ceiling and not a tax; arts. 54–57 of the 2020 current-account guidelines."),
     ("S03", "SAFE Tianjin — 2024 经常项目外汇政策问答案例（九）", "https://www.safe.gov.cn/tianjin/2024/0621/2529.html",
@@ -250,20 +258,26 @@ A("""<!doctype html>
 </header>
 <main id="main">""")
 
-# ---------------- correction banner (added by the 2026-11-10 integration session) ---
+# ---------------- correction banner (rewritten by session f5a5499c, 2026-11-11) ------
+# The earlier banner said M03 "has been left as published rather than silently recomputed".
+# That was honest but wrong to leave: it published a cancelled rule as the current cost and a
+# reader could still plan around a two-year wait. The engine now prices the operative 2014 rule,
+# so the banner states the rule instead of apologising for the old number.
 A("""
 <div class="wrap">
-  <div style="margin:18px 0;padding:16px 18px;border:1px solid #e0c39a;border-left:5px solid #b45309;border-radius:12px;background:#fff8ef;color:#5a3a12">
-    <strong>Correction (10 Nov 2026): route M03 is no longer remitted in stages.</strong>
-    PBC Order [2004] No. 16 art. 6 stages an emigrant property transfer — half, half the remainder after one
-    year, the rest after two — and art. 10 sends applications above RMB 500,000 to SAFE head office. SAFE
-    circular 汇发〔2014〕2号 §6 expressly cancels both requirements: one approval, then
-    <q>可一次或分次汇出</q> ("once or in instalments"). The M03 ladder on this page, and the tranche steps in its
-    step-by-step list, price the 2004 text; they have been left as published rather than silently recomputed.
-    On the current text M03 costs the same as a single documented wire — about $901 on $400,000 at the
-    2026-11-10 board, against the $1,025.39 shown below.
-    Sources: <a href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html">汇发〔2014〕2号</a> ·
-    <a href="http://m.safe.gov.cn/safe/2004/1116/5461.html">PBC [2004] No. 16</a> ·
+  <div style="margin:18px 0;padding:16px 18px;border:1px solid #9ac0e0;border-left:5px solid #1d4ed8;border-radius:12px;background:#f3f8ff;color:#12325a">
+    <strong>Route M03 is not staged any more — and this table now prices it the way it lawfully works.</strong>
+    PBC Order [2004] No. 16 art. 6 made an emigrant property transfer a staged payout (half, half the
+    remainder after a year, the rest after two), and art. 10 sent anything above RMB 500,000 to SAFE head
+    office. SAFE circular <a href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" rel="noopener">汇发〔2014〕2号</a>
+    §6 cancels both: <q>取消移民财产转移分次汇出的要求</q> and <q>银行可在核准件审批额度内一次或分次汇出相关资金</q>
+    (&ldquo;the requirement to remit an emigrant property transfer in instalments is cancelled&rdquo;;
+    &ldquo;within the approved amount the bank may remit once or in instalments&rdquo;). So M03 now costs the
+    same as one documented wire, and the two-year wait is gone. The 2004 figures are kept on the
+    <a href="#inputs">input register</a> marked <span class="pill superseded">superseded</span> so the change
+    is visible rather than silent. Sources:
+    <a href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" rel="noopener">CS06 汇发〔2014〕2号</a> ·
+    <a href="http://m.safe.gov.cn/safe/2004/1116/5461.html" rel="noopener">CS04 PBC [2004] No. 16</a> ·
     <a href="verify-2026.html">verification register</a>.
   </div>
 </div>""")
@@ -533,11 +547,14 @@ FLAGS = [
      "total on this page is therefore a China-side figure; the last leg is excluded rather than estimated. Read "
      "your own bank's fee schedule and add it.",
      "S46", "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html"),
-    ("IR-029", "Route M03 did not exist in the earlier cost model",
-     "PBC [2004] No. 16 art. 6 stages the payout over two years and art. 8 requires a cancelled hukou plus "
-     "consular certification. Earlier pages described the emigrant transfer as a single transfer; the ladder "
-     "here prices three purchases instead. That is a correction, not a reinterpretation.",
-     "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
+    ("IR-029", "Route M03 was priced on a rule that had already been cancelled (fixed 2026-11-11)",
+     "This page used to price the emigrant property transfer as three purchases over two years, because PBC "
+     "[2004] No. 16 art. 6 said so. 汇发〔2014〕2号 §6(2) cancelled the staging on 2014-02-10 and §6(1) cancelled "
+     "the over-RMB-500,000 head-office filing, so the page was publishing a retired rule as the current cost and "
+     "a reader could have planned around a two-year wait that no longer exists. The ladder now prices one "
+     "purchase and one wire, which is the cheapest lawful execution; the 2004 figures are kept on the input "
+     "register marked 'superseded' with the cancelling circular named.",
+     "CS06", "https://www.safe.gov.cn/tianjin/2024/0903/2594.html"),
     ("IR-030", "A parallel session published a second cost page",
      "A separate session merged costs.html and cost-review.html (PR #11, PR #12) to the same brief while this "
      "pass was running. Its 1,400-row grid leaves every exact all-in cost blank; this page prices 20 routes "

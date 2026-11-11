@@ -273,18 +273,21 @@ INPUTS = [
              "translated) documents but no authority publishes a price. Left blank; obtain a quote.",
     ),
     dict(
-        id="CI29", name="Emigrant transfer — amount that may be paid in one go", value="200,000",
-        unit="CNY equivalent", as_of="2004-12-01", source_id="CS04",
-        url="http://m.safe.gov.cn/safe/2004/1116/5461.html", status="verified",
-        note="PBC [2004] No.16 art. 6. Above this the payout is staged: at most half first, half the "
-             "remainder after one year, the rest after two years.",
+        id="CI29", name="Emigrant transfer — one-off payout ceiling in the 2004 text (SUPERSEDED)", value="200,000",
+        unit="CNY equivalent", as_of="2004-12-01, cancelled 2014-02-10", source_id="CS04",
+        url="http://m.safe.gov.cn/safe/2004/1116/5461.html", status="superseded",
+        note="PBC [2004] No.16 art. 6 allowed a single payment only up to RMB 200,000 and staged anything "
+             "above it. 汇发〔2014〕2号 §6(2) cancelled the staging (CS06), so this figure no longer bounds a "
+             "payout. It is kept so the superseded rule can be shown rather than silently dropped, and it is "
+             "no longer used by any calculation on this page.",
     ),
     dict(
-        id="CI30", name="Emigrant / inheritance transfer — approval-level split", value="500,000",
-        unit="CNY equivalent", as_of="2004-12-01", source_id="CS04",
-        url="http://m.safe.gov.cn/safe/2004/1116/5461.html", status="verified",
-        note="Art. 10: at or below RMB 500,000 the local SAFE branch decides; above it, local review "
-             "then SAFE head office approval. The decision-maker changes with size, not the fee.",
+        id="CI30", name="Emigrant / inheritance transfer — head-office filing threshold in the 2004 text (SUPERSEDED)",
+        value="500,000", unit="CNY equivalent", as_of="2004-12-01, cancelled 2014-02-10", source_id="CS04",
+        url="http://m.safe.gov.cn/safe/2004/1116/5461.html", status="superseded",
+        note="Art. 10 sent applications above RMB 500,000 to SAFE head office. 汇发〔2014〕2号 §6(1) cancelled "
+             "the filing and the approval is now given by the SAFE branch where the applicant's hukou was "
+             "registered (CS06). Shown for the record only; no calculation uses it.",
     ),
     dict(
         id="CI31", name="Documents an emigrant-transfer applicant must file",
@@ -351,20 +354,25 @@ METHODS = [
         id="M03", rank=3, family="Lawful — capital account with approval",
         name="Emigrant property transfer (whole estate, one application)",
         name_zh="移民财产转移",
-        legs="One SAFE application for the whole balance, then FX purchase and wire in up to three tranches over two years",
-        fee_model="emigrant_staged",
-        ceiling="No statutory ceiling; up to RMB 500,000 decided locally, above that by SAFE head office",
-        years_basis="2 if above RMB 200,000, else 0", verdict="No amount ceiling, but staged over two years and it needs a cancelled hukou",
+        legs="One SAFE application for the whole balance, then FX purchase and wire — in one transfer or in instalments, at the applicant's choice (2014 rule)",
+        fee_model="emigrant_one_or_installments",
+        ceiling="No statutory ceiling, and since 2014 no head-office filing above RMB 500,000; within the approved amount the bank may remit once or in instalments",
+        years_basis="0 with one wire; +0.5 for a second and +1 for a third transfer the applicant chooses to split into",
+        verdict="No amount ceiling and no forced wait since 2014, but it needs a cancelled mainland hukou and a settled tax position",
         legality="lawful", moves_money=True,
-        source_ids="CS04,S18,S46,CS01", url="http://m.safe.gov.cn/safe/2004/1116/5461.html",
+        # CS04 is the 2004 text, S18 the 2004 press Q&A, CS06 the 2014 circular that cancels
+        # both the staging and the RMB 500,000 head-office filing (verified 2026-11-11).
+        source_ids="CS04,S18,CS06,S46,CS01", url="http://m.safe.gov.cn/safe/2004/1116/5461.html",
         us_side="No US tax on moving your own principal; the source income was already taxable.",
         why="Written for exactly this fact pattern: a natural person who moved from the mainland to a "
             "foreign country, moving lawful property owned before acquiring that emigrant status.",
         caveat="Art. 2 confines it to property owned before you acquired emigrant status; art. 8 requires "
                "the police-issued 户籍注销证明 plus Chinese consular certification of your settlement abroad. "
-               "Art. 6 forces one application and staged payout: at most half first, half the remainder after "
-               "a year, the rest after two years (at or below RMB 200,000 may go in one payment). Art. 11 bars "
-               "paying cash in China. Document costs are unverified (CI28).",
+               "Art. 6 is the article that used to force a staged payout over two years; 汇发〔2014〕2号 §6(2) "
+               "cancelled that, and the bank may now remit once or in instalments within the approved amount "
+               "(CS06). §6(1) also cancelled the RMB 500,000 head-office filing, so art. 10 no longer routes "
+               "large estates to SAFE headquarters. Art. 11 still bars paying cash in China. Document and "
+               "notarisation costs are unverified (CI28).",
     ),
     dict(
         id="M04", rank=4, family="Lawful — capital account with approval",
@@ -635,11 +643,10 @@ STEPS = {
     "M03": [
         ("Confirm you qualify under art. 2", "You must have moved from the mainland to a foreign country, and the property must have been owned before you acquired that emigrant status. Property acquired afterwards is outside this rule.", "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
         ("Assemble the art. 8 file", "Written application, the 移民财产对外转移申请人情况表, the 个人财产对外转移外汇业务申请表, the police-issued 户籍注销证明 plus Chinese consular certification of your settlement abroad, proof of the property, and the tax authority's 税收证明 or 完税凭证.", "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
-        ("File one application for the whole amount", "Art. 6: one application covering all of it, not one per transfer. At or below RMB 500,000 the local SAFE branch decides; above that it goes to SAFE head office (art. 10).", "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
+        ("File one application for the whole amount at the SAFE branch for your former hukou", "Art. 6 requires one application covering all of it, not one per transfer. The approval is given by the SAFE branch where your hukou was registered: 汇发〔2014〕2号 §6(1) cancelled the requirement to report a transfer above RMB 500,000 to SAFE head office, so size alone no longer changes who decides.", "CS06", "https://www.safe.gov.cn/tianjin/2024/0903/2594.html"),
         ("Collect the 核准件", "The approval letter and 核准件 are what let the bank sell the FX; the branch cannot process the amount without them.", "S18", "http://m.safe.gov.cn/safe/2004/1116/4134.html"),
-        ("Take tranche 1 — up to half", "Art. 6 caps the first payment at half the approved amount. Anything at or below RMB 200,000 may be paid in a single go.", "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
-        ("Take tranche 2 — up to half the remainder, after 1 year", "A second purchase and wire, so a second set of the 1‰ fee and cable charge. Art. 8 requires the previous 核准件 each time.", "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
-        ("Take tranche 3 — the balance, after 2 years", "A third purchase and wire, and the same tariff again. Total elapsed time from first payment: two years.", "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
+        ("Buy the FX and wire — one transfer or several, your choice", "汇发〔2014〕2号 §6(2): 银行可在核准件审批额度内一次或分次汇出相关资金 — within the approved amount the bank may remit once or in instalments. The 2004 rule that forced at most half first, half of the remainder after a year and the rest after two years was cancelled on 2014-02-10, so nothing makes you wait. One transfer is the cheapest: each extra transfer pays the 1‰ fee again, capped at RMB 260, plus the RMB 150 cable charge.", "CS06", "https://www.safe.gov.cn/tianjin/2024/0903/2594.html"),
+        ("Re-present the earlier 核准件 if you do split it", "If you choose instalments, art. 8 still requires the previous approval and 核准件 each time, so the second and third transfers are slower than the first but no longer compulsory.", "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
         ("Receive into your own account", "Art. 11: the bank must remit straight to your own account in your country of residence, and may not hand you cash inside China.", "CS04", "http://m.safe.gov.cn/safe/2004/1116/5461.html"),
         ("File the US side", "No income arises from moving your own principal. Report the account while you still hold it.", "U02", "https://www.irs.gov/publications/p54"),
     ],
@@ -792,22 +799,21 @@ def cost_row(method: dict, amount: float) -> dict:
                    units=1, units_label="conversion",
                    basis="HKMA-measured 1.94% stress basis; offshore fees blank")
 
-    elif model == "emigrant_staged":
-        # PBC [2004] No.16 art. 6: at most half, then half the remainder after 1 year,
-        # then the rest after 2 years; anything <= RMB 200,000 may go in one payment.
-        if amount * BOC_ASK <= 200_000:
-            tranches, years = [1.0], 0
-        else:
-            tranches, years = [0.50, 0.25, 0.25], 2
-        fee_usd = 0.0
-        for share in tranches:
-            fee_usd += wire_total_cny(amount * share) / BOC_ASK
+    elif model == "emigrant_one_or_installments":
+        # PBC [2004] No.16 art. 6 staged the payout (half, half of the rest after a year,
+        # remainder after two years) and art. 10 sent anything above RMB 500,000 to SAFE
+        # head office. 汇发〔2014〕2号 §6 cancelled BOTH on 2014-02-10:
+        #   §6(1) 取消财产转移总金额超过等值人民币50万元报国家外汇管理局备案的要求
+        #   §6(2) 取消移民财产转移分次汇出的要求 … 银行可在核准件审批额度内一次或分次汇出相关资金
+        # So the cheapest lawful execution is one purchase and one wire; splitting is now the
+        # applicant's own choice and costs a further 1‰ fee + cable charge per extra transfer.
+        one = wire_total_cny(amount) / BOC_ASK
         sp = amount * (BOC_ASK / BOC_MID - 1)
-        row.update(cny_needed=amount * BOC_ASK, spread_usd=sp, bank_fee_usd=fee_usd,
-                   total_usd=sp + fee_usd, units=len(tranches),
-                   units_label="payments over 2 years" if years else "single payment",
-                   basis="art. 6 staging: %d purchase(s), each paying the 1‰ fee and cable charge"
-                         % len(tranches))
+        split = sum(wire_total_cny(amount * s) for s in (0.5, 0.25, 0.25)) / BOC_ASK
+        row.update(cny_needed=amount * BOC_ASK, spread_usd=sp, bank_fee_usd=one,
+                   total_usd=sp + one, units=1, units_label="one transfer (instalments optional)",
+                   basis="one approval, one wire at the 1‰ + cable tariff; splitting into three "
+                         "transfers would cost %s in fees instead" % f"{split:,.2f}")
         row["cost_pct"] = row["total_usd"] / amount * 100
         row["net_usd"] = amount - row["total_usd"]
 

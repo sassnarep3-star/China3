@@ -28,6 +28,7 @@ The excerpt column is verbatim from the linked page.
 | S19 | U.S. Customs and Border Protection (CBP) | Money and other monetary instruments - report currency exceeding $10,000 | 2025-11-24 | Anyone who brings, sends, or receives currency or monetary instruments totaling more than $10,000 at one time, either into or out of the United States, must report it. | https://www.cbp.gov/travel/international-visitors/money-monetary-instruments |
 | S20 | Bank of China (BOC) | BOC personal e-banking transfer and remittance tariff schedule (effective 2014-11-01) | 2014-11-01 | 跨境汇款（电汇） \| 每笔汇款金额的1‰，最低收取50元/笔，最高收取260元/笔；另收电讯费,港澳台地区人民币80元/笔,非港澳台地区人民币150元/笔 | https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html |
 | S21 | Bank of China (BOC) | BOC foreign-exchange rate board (USD against CNY) | 2026-11-10 07:32:39 | USD \| 666.22 \| 666.22 \| 669.03 \| 669.03 \| 671.88 \| 2026/11/10 07:32:39 | https://www.boc.cn/sourcedb/whpj/enindex_1619.html |
+| S22 | SAFE | SAFE circular 汇发〔2014〕2号 - further improving and adjusting capital-account FX policy (as amended) | 2014-01-10, in force 2014-02-10 | 六、简化个人财产转移售付汇管理（一）…取消财产转移总金额超过等值人民币50万元报国家外汇管理局备案的要求。（二）取消移民财产转移分次汇出的要求。申请人向原户籍所在地外汇局办理移民财产转移核准手续后，银行可在核准件审批额度内一次或分次汇出相关资金。 | https://www.safe.gov.cn/tianjin/2024/0903/2594.html |
 
 ## Arithmetic re-derived
 

@@ -84,6 +84,9 @@ SOURCES = {
     "S54": ("SAFE, Tianjin", "2025 个人外汇（18）— 指引 第61条 委托近亲属/他人代办", "https://www.safe.gov.cn/tianjin/2025/1223/2957.html", "official Q&A verified"),
     "S55": ("People's Bank of China, Hangzhou", "浙江跨境支付通累计结算金额破亿元 (2025)", "https://hangzhou.pbc.gov.cn/hangzhou/125264/5778339/index.html", "official PBOC branch article verified"),
     "S56": ("China Securities Regulatory Commission, Shanxi", "八部门联合发布新规，明确此类业务“境内严禁，境外严管” (2026)", "https://www.csrc.gov.cn/shanxi/c106408/c7616553/content.shtml", "official CSRC article verified"),
+    # Added by session f5a5499c on 2026-11-11: the circular that cancels two of the 2004 rules
+    # this page used to state as current. Read in full at source that day.
+    "S57": ("SAFE", "汇发〔2014〕2号 关于进一步改进和调整资本项目外汇管理政策的通知 (已修改) — §6 简化个人财产转移售付汇管理", "https://www.safe.gov.cn/tianjin/2024/0903/2594.html", "full text fetched 2026-11-11"),
     # --- US: tax, reporting, treaty ---
     "U01": ("Internal Revenue Service", "Frequently asked questions about international individual tax matters", "https://www.irs.gov/individuals/international-taxpayers/frequently-asked-questions-about-international-individual-tax-matters", "official FAQ verified"),
     "U02": ("Internal Revenue Service", "Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad", "https://www.irs.gov/publications/p54", "official publication verified"),
@@ -162,8 +165,8 @@ CHINA_RULES = [
     ("C26", "Criminal thresholds for illegal FX trading", "'情节严重'：非法经营数额500万元以上或违法所得10万元以上；'情节特别严重'：非法经营数额2500万元以上或违法所得50万元以上", "法释〔2019〕1号 第3、4条；另设250万/1250万+加重情节的次级标准", "S32", "S33", "verified"),
     ("C27", "Criminal offence", "实施倒买倒卖外汇或者变相买卖外汇等非法买卖外汇行为，扰乱金融市场秩序、情节严重的，依刑法第225条第4项以非法经营罪定罪处罚", "法释〔2019〕1号 第2条", "S33", "", "verified"),
     ("C28", "Criminal sentence", "非法经营罪情节严重：5年以下有期徒刑或拘役，并处或单处违法所得1倍以上5倍以下罚金；情节特别严重：5年以上有期徒刑，并处违法所得1倍以上5倍以下罚金或没收财产", "《刑法》第225条（官方法院文本）", "S34", "", "verified"),
-    ("C29", "Personal property transfer — approval tiers", "个人财产对外转移分移民财产转移和继承财产转移；申请金额低于等值50万元人民币由外汇局省级分局审核；≥50万元人民币由省级分局初审后报国家外汇管理局批准", "中国人民银行公告〔2004〕第16号 配套答记者问", "S18", "S17", "verified"),
-    ("C30", "Personal property transfer — staged remittance", "超过等值20万元人民币（含）的移民财产转移采取'一次申请、分步汇出'：批准后先汇出一半，一年后可汇出剩余部分的一半，满两年后方可汇出全部余额", "中国人民银行 2004 答记者问", "S18", "S17", "verified"),
+    ("C29", "Personal property transfer — who approves it (2004 tiering cancelled in 2014)", "移民财产转移由移民原户籍所在地外汇局审批；继承财产转移由被继承人生前户籍所在地外汇局审批。汇发〔2014〕2号 §6(1)取消财产转移总金额超过等值人民币50万元报国家外汇管理局备案的要求，因此2004年答记者问所述'≥50万元报总局批准'的分级已不再适用", "汇发〔2014〕2号 §6(1)", "S57", "S18", "verified"),
+    ("C30", "Personal property transfer — no forced staging since 2014", "2004年办法第六条曾规定移民财产转移'分步汇出'：首次不超过一半，满一年后不超过剩余的一半，满两年后可汇出全部余额。汇发〔2014〕2号 §6(2)取消移民财产转移分次汇出的要求：办理核准手续后，银行可在核准件审批额度内一次或分次汇出相关资金", "汇发〔2014〕2号 §6(2)（2004年第六条已被取消）", "S57", "S18", "verified"),
     ("C31", "Inheritance transfer", "外国公民或港澳台居民将依法继承的境内遗产变现，可购汇汇出；从同一被继承人继承的全部财产须一次性申请，可一次或分次汇出", "《个人财产对外转移售付汇管理暂行办法》及 SAFE 业务指南", "S17", "", "verified"),
     ("C32", "Company profit / dividend repatriation", "境内机构真实合规的利润，按程序出具证明材料可直接在银行办理汇出，没有任何限制；等值5万美元（不含）以上利润汇出须审核董事会利润分配决议、税务备案表原件、经审计财务报表，并先依法弥补以前年度亏损", "汇发〔2017〕3号；属于经常项目", "S20", "S19", "verified"),
     ("C33", "Overseas ATM cash withdrawals", "个人持境内银行卡在境外提取现金，本人名下银行卡（含附属卡）合计每个自然年度不得超过等值10万元人民币；超过则本年及次年暂停境外提现；每卡每日等值1万元人民币", "SAFE 2017 通知，2018-01-01起实施", "S35", "", "verified"),

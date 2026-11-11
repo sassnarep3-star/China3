@@ -74,6 +74,7 @@ IR-006, IR-020, IR-021, IR-022, IR-023).
 | S54 | SAFE, Tianjin | 2025 个人外汇（18）— 指引 第61条 委托近亲属/他人代办 | https://www.safe.gov.cn/tianjin/2025/1223/2957.html | official Q&A verified |
 | S55 | People's Bank of China, Hangzhou | 浙江跨境支付通累计结算金额破亿元 (2025) | https://hangzhou.pbc.gov.cn/hangzhou/125264/5778339/index.html | official PBOC branch article verified |
 | S56 | China Securities Regulatory Commission, Shanxi | 八部门联合发布新规，明确此类业务“境内严禁，境外严管” (2026) | https://www.csrc.gov.cn/shanxi/c106408/c7616553/content.shtml | official CSRC article verified |
+| S57 | SAFE | 汇发〔2014〕2号 关于进一步改进和调整资本项目外汇管理政策的通知 (已修改) — §6 简化个人财产转移售付汇管理 | https://www.safe.gov.cn/tianjin/2024/0903/2594.html | full text fetched 2026-11-11 |
 | U01 | Internal Revenue Service | Frequently asked questions about international individual tax matters | https://www.irs.gov/individuals/international-taxpayers/frequently-asked-questions-about-international-individual-tax-matters | official FAQ verified |
 | U02 | Internal Revenue Service | Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad | https://www.irs.gov/publications/p54 | official publication verified |
 | U03 | Internal Revenue Service | Publication 519, U.S. Tax Guide for Aliens | https://www.irs.gov/publications/p519 | official publication verified |

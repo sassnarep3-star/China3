@@ -72,12 +72,17 @@ for iid, r in inputs.items():
         fail(f"{iid}: source {sid} not in cost_sources.csv")
     elif sources[sid]["url"] != r["source_url"]:
         fail(f"{iid}: source_url does not match the register entry for {sid}")
-    if r["status"] not in {"verified", "derived", "unverified"}:
+    if r["status"] not in {"verified", "derived", "unverified", "superseded"}:
         fail(f"{iid}: bad status {r['status']!r}")
     if r["status"] == "unverified" and r["value"].strip():
         fail(f"{iid}: marked unverified but carries a value ({r['value']!r}) — blank it or verify it")
     if r["status"] != "unverified" and not r["value"].strip():
         fail(f"{iid}: marked {r['status']} but the value is blank")
+    # A superseded input may carry the value it used to have, so the retired rule can be shown.
+    # What it may NOT do is quietly feed a calculation: every superseded figure must name the
+    # instrument that cancelled it, and that instrument must be in the register.
+    if r["status"] == "superseded" and "CS06" not in sources:
+        fail(f"{iid}: marked superseded but the cancelling circular CS06 is not in the register")
     if not official(r["source_url"]):
         fail(f"{iid}: source is not on an official domain: {r['source_url']}")
     if not r["source_url"].startswith("https://"):
@@ -92,7 +97,12 @@ WIRE_MIN = float(inputs["CI07"]["value"])
 WIRE_MAX = float(inputs["CI08"]["value"])
 CABLE = float(inputs["CI09"]["value"])
 CONVENIENCE = float(inputs["CI13"]["value"].replace(",", ""))
-ONE_PAYMENT_CNY = float(inputs["CI29"]["value"].replace(",", ""))
+# CI29 (the RMB 200,000 one-off ceiling) and CI30 (the RMB 500,000 head-office filing) are both
+# superseded by CS06 and are deliberately NOT read here: no calculation may depend on a retired rule.
+for _dead in ("CI29", "CI30"):
+    if inputs[_dead]["status"] != "superseded":
+        fail(f"{_dead}: the 2004 rule it records was cancelled by 汇发〔2014〕2号 §6 on 2014-02-10; "
+             f"status must be 'superseded', found {inputs[_dead]['status']!r}")
 WIRE_RATE = 0.001  # CI06, "1‰ of the amount"
 
 
@@ -116,13 +126,10 @@ def expected(mid_method: dict, amount: float):
             n += 1
         fee = total - spread
         return total, spread, fee, n
-    if model == "emigrant_staged":
-        if amount * ASK <= ONE_PAYMENT_CNY:
-            shares = [1.0]
-        else:
-            shares = [0.5, 0.25, 0.25]
-        fee = sum((fee_cny(amount * s) + CABLE) / ASK for s in shares)
-        return spread + fee, spread, fee, len(shares)
+    if model == "emigrant_one_or_installments":
+        # 汇发〔2014〕2号 §6(2): one transfer or several, within the approved amount. One is cheapest.
+        fee = (fee_cny(amount) + CABLE) / ASK
+        return spread + fee, spread, fee, 1
     if model == "wire_nofx":
         fee = (fee_cny(amount) + CABLE) / ASK
         return fee, 0.0, fee, 1
@@ -183,7 +190,7 @@ HAND = {
     ("M01", 400_000): 902.86,
     ("M07", 400_000): 61.27,
     ("M02", 400_000): 1331.73,
-    ("M03", 400_000): 1025.39,
+    ("M03", 400_000): 902.86,   # since 汇发〔2014〕2号 §6(2) it is one wire, not three
 }
 for (mid_, amt), want in HAND.items():
     hit = [r for r in ladder if r["method_id"] == mid_ and int(r["amount_usd"]) == amt]

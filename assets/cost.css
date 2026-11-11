@@ -93,6 +93,8 @@ table.cost.inner{font-size:13px}
 .pill.verified,.pill.lawful,.pill.yes{color:var(--good);border-color:color-mix(in srgb,var(--good) 40%,var(--line))}
 .pill.derived,.pill.conditional,.pill.partial{color:var(--mid);border-color:color-mix(in srgb,var(--mid) 40%,var(--line))}
 .pill.unverified,.pill.unlawful,.pill.criminal,.pill.no{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 40%,var(--line))}
+/* a rule that is still printed by its issuer but has been cancelled by a later instrument */
+.pill.superseded{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 40%,var(--line));text-decoration:line-through;text-decoration-thickness:1px}
 
 /* route cards */
 .route-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin:10px 0;

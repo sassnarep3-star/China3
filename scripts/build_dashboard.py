@@ -430,11 +430,13 @@ def correction_box() -> str:
     <q>取消移民财产转移分次汇出的要求 … 可一次或分次汇出</q> ({src('V07','2014 circular')}) — and §6(1) of the
     same circular cancels the over-RMB-500,000 head-office filing.
     </p>
-    <p>The cost model on <a href="cost-tables.html">cost-tables.html</a> prices route M03 as three separate FX
-    purchases, which is how it reaches $1,025.39 at $400,000. On the law as it now reads, that route costs the
-    same as any other single documented wire — <strong>{money(LADDER_BY_AMOUNT['400000']['total_usd'])}</strong>
-    at today's board on $400,000, before the optional ${OUR} OUR charge. The M03 row has been left as published
-    (it is a faithful price of the 2004 text) and is listed with this correction on
+    <p><strong>Update, 11 November 2026.</strong> The cost model on
+    <a href="cost-tables.html">cost-tables.html</a> used to price route M03 as three separate FX purchases over
+    two years, reaching $1,025.39 at $400,000. It no longer does: that page has been rebuilt to price the 2014
+    rule, so M03 now costs the same as any other single documented wire —
+    <strong>{money(LADDER_BY_AMOUNT['400000']['total_usd'])}</strong> at the board on this page, on $400,000,
+    before the optional ${OUR} OUR charge. The 2004 figures remain visible on that page's input register, marked
+    superseded, with the cancelling circular cited. Recorded on
     <a href="verify-2026.html#corrections">Verify 2026</a> and in <code>COORDINATION.md</code>.</p>
   </div>
 </section>"""
@@ -789,11 +791,11 @@ def build_verify() -> str:
             "Emigrant property transfer priced as three purchases",
             "PBC [2004] No.16 art. 6 stages a remittance (half, half the remainder, rest after two years). "
             "SAFE 汇发〔2014〕2号 §6(2) cancels that requirement; §6(1) cancels the over-RMB-500,000 head-office filing.",
-            "cost-tables.html M03 shows $1,025.39 at $400,000 on the staged reading. On the current text the same "
-            "transfer costs one wire.",
+            "cost-tables.html M03 used to show $1,025.39 at $400,000 on the staged reading. On the current text the "
+            "same transfer costs one wire.",
             "V07",
             "V08",
-            "M03 left as published, correction banner added to cost-tables.html",
+            "CLOSED 2026-11-11: repriced to one wire; banner rewritten",
         ),
         (
             "C2",
@@ -854,7 +856,7 @@ def build_verify() -> str:
         ("PRC tax base on a property sale", "The 20% rate is verified; the deductible-cost and valuation rules are transaction-specific.", "IR-025"),
         ("Eligibility of a specific balance", "Document set, province, residency history and source of funds are unknown to this research.", "I03"),
         ("CNH basis and card-network FX rates", "No official retail tariff exists; the 1.94% figure used in an earlier pass was withdrawn.", "IR-026"),
-        ("Whether a branch will insist on staged emigrant payouts", "Two in-force texts conflict on their face; the later circular cancels staging, but branch practice must be confirmed in writing.", "C1"),
+        ("Whether a branch will still ask for instalments", "The later circular cancels staging outright, so the law is not in doubt; whether a particular branch's paperwork still assumes it is, and must be confirmed in writing.", "C1"),
     ]
     unv_html = ['<div class="tw"><table class="tbl"><thead><tr>']
     unv_html.append("<th>Item left blank</th><th>Why no number is given</th><th>Flag</th></tr></thead><tbody>")

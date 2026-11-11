@@ -108,7 +108,7 @@ SOURCES = [
         title="PBOC Announcement [2004] No.16 - interim measures on the transfer abroad of individual property",
         url="http://m.safe.gov.cn/safe/2004/1116/5461.html", published="2004-11-16",
         quote="移民转移必须一次性申请拟转移出境的全部财产金额，分步汇出。首次可汇出金额不得超过全部申请转移财产的一半",
-        supports="Emigrant/inheritance property transfer: staged payouts, tax certificate required (Art.6, Art.8(6), Art.10).",
+        supports="The 2004 text only: staged payouts (Art.6), tax certificate required (Art.8(6)), and the Art.10 head-office threshold. BOTH the staging and the threshold are cancelled by S22; read the two together.",
     ),
     dict(
         id="S10", tier="China tax authority", issuer="State Taxation Administration (STA) / SAFE",
@@ -193,6 +193,15 @@ SOURCES = [
         url="https://www.boc.cn/sourcedb/whpj/enindex_1619.html", published="2026-11-10 07:32:39",
         quote="USD | 666.22 | 666.22 | 669.03 | 669.03 | 671.88 | 2026/11/10 07:32:39",
         supports="Buying rate 6.6622, selling rate 6.6903, middle rate 6.7188 CNY per USD, stamped 2026/11/10 07:32:39.",
+    ),
+    # Added by session f5a5499c on 2026-11-11. S09 above is the 2004 text; this circular cancels
+    # two of its requirements, and without it this page published a retired rule as current.
+    dict(
+        id="S22", tier="China central bank", issuer="SAFE",
+        title="SAFE circular 汇发〔2014〕2号 - further improving and adjusting capital-account FX policy (as amended)",
+        url="https://www.safe.gov.cn/tianjin/2024/0903/2594.html", published="2014-01-10, in force 2014-02-10",
+        quote="六、简化个人财产转移售付汇管理（一）…取消财产转移总金额超过等值人民币50万元报国家外汇管理局备案的要求。（二）取消移民财产转移分次汇出的要求。申请人向原户籍所在地外汇局办理移民财产转移核准手续后，银行可在核准件审批额度内一次或分次汇出相关资金。",
+        supports="Cancels both the RMB 500,000 head-office reporting threshold (S09 Art.10) and the forced staged payout over two years (S09 Art.6); the bank may now remit once or in instalments within the approved amount.",
     ),
 ]
 
@@ -362,25 +371,25 @@ METHODS = [
         src="S02|S03|S08|S10",
     ),
     dict(
-        id="M05", name="Emigrant property transfer (PBOC [2004] No.16)",
-        legality="Lawful, narrow eligibility", reaches_400k="Yes, but staged over 2+ years",
-        cap="Staged: first half, then half of remainder after 1 year, rest after 2 years",
-        cap_src="S09",
+        id="M05", name="Emigrant property transfer (PBOC [2004] No.16, as amended by 汇发〔2014〕2号)",
+        legality="Lawful, narrow eligibility", reaches_400k="Yes, in one transfer",
+        cap="One approval, then one transfer or instalments at the applicant's choice (2014 rule); no head-office threshold",
+        cap_src="S22",
         steps=[
             "Confirm you qualify: a mainland resident who has emigrated/settled abroad and cancelled hukou (S09 Art.2, Art.8).",
             "Apply once for the whole amount at the SAFE branch where your hukou was registered.",
             "Submit the identity, settlement and property-right documents, plus the tax certificate (S09 Art.8(6)).",
-            "Receive approval; below CNY 500,000 the local branch decides, above it goes to SAFE headquarters (S09 Art.10).",
+            "Receive approval from the SAFE branch for your former hukou. The 2004 rule that sent anything above CNY 500,000 to SAFE headquarters was cancelled by 汇发〔2014〕2号 §6(1) (S22).",
             "Bank sells FX and remits directly to your own overseas account; cash withdrawal is prohibited (S09 Art.11).",
-            "Second and third tranches at 1 and 2 years (S09 Art.6).",
+            "Remit in one transfer, or in instalments if you prefer one: 汇发〔2014〕2号 §6(2) cancelled the staged payout that art. 6 used to force (S22). One transfer is cheapest — each extra transfer repeats the tariff.",
         ],
         pros=["Explicit legal channel for moving a whole estate, not just USD 50,000",
-              "Predictable staged schedule"],
+              "No forced wait since 2014: the whole approved amount can go in one transfer"],
         cons=["Requires emigrating and cancelling Chinese hukou; a U.S. citizen who never held mainland hukou generally does not qualify",
               "Tax certificate mandatory - the tax position must be settled first",
-              "Staged payouts mean the FX rate is not locked",
-              "One application only, for the entire amount"],
-        src="S09|S11",
+              "One application only, for the entire amount",
+              "Notarisation/translation/courier cost is not published by any authority"],
+        src="S09|S11|S22",
     ),
     dict(
         id="M06", name="Inheritance property transfer (PBOC [2004] No.16)",
