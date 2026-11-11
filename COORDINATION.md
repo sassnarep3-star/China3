@@ -2475,3 +2475,10 @@ Branch `arena/3482441c-china3`, branched from `main` @ `b677a91` (PR #83 merge).
 
 **Explicitly not claimed:** integration/navigation (`index.html`, `dashboard/**`, `scripts/e347_*`) — held by `arena/b579901a-china3`; every other session's namespaced page. A link request from the archive will be logged here for the integrator rather than edited.
 
+
+### 3E2D merge and deployment record — 2026-11-11
+
+- PR: https://github.com/sassnarep3-star/China3/pull/87 — `arena/3e2dbf57-china3` → `main`; **merged** via merge commit `640592185d199715e3d226b1275be1ab8c10e989` on 2026-11-11. All PR checks passed (17/17, incl. 3E2D gate).
+- Merge note: first merge attempt failed (main had advanced via PR #86, c348 claim). Merged `origin/main` locally — `COORDINATION.md` auto-merged via union driver, no other conflict, nothing discarded. Re-ran 3E2D + e347 verifiers (PASS), pushed, then merged.
+- Pages: API status `built`; live fetch of `3e2d-dashboard.html` succeeded (20:50 board, $53.37/$898.75 KPIs). Live site: https://sassnarep3-star.github.io/China3/3e2d-dashboard.html
+- 3E2D-T7: done. Flagged items (F01–F12, IR-01..03) published on `3e2d-flagged.html`, non-blocking. 3E2D-REQ-01/REQ-02 remain open for the integration owner (b579 scope untouched).
