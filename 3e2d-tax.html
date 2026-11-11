@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tax - 3E2D China money dashboard</title><link rel="stylesheet" href="assets/3e2d.css"></head>
+<body><header class="top"><nav class="main"><a href="3e2d-dashboard.html" class="">Dashboard</a><a href="3e2d-summary.html" class="">Summary</a><a href="3e2d-questions.html" class="">Questions</a><a href="3e2d-methods.html" class="">Methods</a><a href="3e2d-costs.html" class="">Costs</a><a href="3e2d-steps.html" class="">Steps</a><a href="3e2d-penalties.html" class="">Penalties</a><a href="3e2d-tax.html" class="on">Tax</a><a href="3e2d-flagged.html" class="">Flagged</a><a href="3e2d-sources.html" class="">Sources</a><a href="3e2d-repo-review.html" class="">Repo review</a></nav></header><main class="wrap"><div class="hero"><h1>Tax &amp; reporting</h1><p>Chinese tax on the money's origin vs US tax on the conversion vs US reporting - kept separate.</p></div>
+<div class="card"><h2>China</h2><div class="tblwrap"><table><tr><th>Item</th><th>Rule</th><th>Source</th></tr>
+<tr><td>Dividends / property gains / rent / interest</td><td>Flat 20%</td><td><a class="src" href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">T25</a></td></tr>
+<tr><td>Property-transfer income base</td><td>Proceeds less original value + reasonable costs</td><td><a class="src" href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" target="_blank" rel="noopener">T25</a></td></tr>
+<tr><td>Dividends to eligible beneficial owner</td><td>Treaty cap 10% of gross</td><td><a class="src" href="https://www.irs.gov/pub/irs-trty/china.pdf" target="_blank" rel="noopener">T27</a></td></tr>
+<tr><td>Salary already taxed</td><td>Nothing further on remittance (documented route)</td><td><a class="src" href="https://www.safe.gov.cn/tianjin/2026/0713/3088.html" target="_blank" rel="noopener">T04</a></td></tr>
+<tr><td>Unpaid tax</td><td>Pursued by tax office; surcharge <span class='blank'>(blank)</span> - see Flagged F03</td><td><a class="src" href="https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html" target="_blank" rel="noopener">T16</a></td></tr>
+</table></div></div>
+<div class="card"><h2>United States - currency gain on the conversion itself</h2><ol>
+<li>Only the <b>gain</b> is taxed: USD received minus USD basis of RMB sold. Wiring USD you already hold recognises no gain. <a class="src" href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">T26</a></li>
+<li><b>Personal money:</b> gain &lt;=$200 ignored; gain &gt;$200 reported as <b>capital gain</b> (Pub. 525). Personal loss generally not deductible (26 U.S.C. 165(c) - see Flagged F05 for character of savings balances). <a class="src" href="https://www.irs.gov/publications/p525" target="_blank" rel="noopener">T31</a></li>
+<li><b>Investment/business money:</b> s.988 gain/loss is <b>ordinary</b> (26 U.S.C. 988(a)(1)(A)); s.988(e)(1) excludes personal transactions from s.988. The two statements cover different cases - do not apply ordinary to personal money. <a class="src" href="https://www.irs.gov/publications/p525" target="_blank" rel="noopener">T31</a></li>
+<li>Illustrative gains at IRS yearly averages are on the Costs page. <b>Tax = gain x your marginal rate</b> (capital vs ordinary) - rate blank until advised (Q07). <a class="src" href="https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates" target="_blank" rel="noopener">T26</a> <a class="src" href="https://www.irs.gov/publications/p525" target="_blank" rel="noopener">T31</a></li>
+</ol></div>
+<div class="card"><h2>United States - reporting (not tax)</h2><div class="tblwrap"><table><tr><th>Form</th><th>Threshold</th><th>Source</th></tr>
+<tr><td>FBAR (FinCEN 114)</td><td>Aggregate foreign accounts &gt; $10,000 at any time in year</td><td><a class="src" href="https://www.fincen.gov/report-foreign-bank-and-financial-accounts" target="_blank" rel="noopener">T33</a></td></tr>
+<tr><td>Form 8938 (US-resident single)</td><td>&gt; $50,000 year-end or &gt; $75,000 at any time (MFJ $100k/$150k; higher abroad)</td><td><a class="src" href="https://www.irs.gov/instructions/i8938" target="_blank" rel="noopener">T34</a></td></tr>
+<tr><td>FinCEN Form 105 (cash)</td><td>Carrying &gt; $10,000 currency/monetary instruments</td><td><a class="src" href="https://www.cbp.gov/travel/international-visitors/money-monetary-instruments" target="_blank" rel="noopener">T35</a></td></tr>
+</table></div><p class='small'>Form 3520 (foreign trusts/gifts) applicability not verified in this session - blank, see Q08. Fix reporting before wiring.</p></div>
+
+<footer>3E2D session arena/3e2dbf57-china3 - Board 2026/11/11 20:50:05 Beijing - Dated general research, not legal/tax/banking advice. Every row links an official/first-party source; blanks are flagged.</footer>
+</main><script src="assets/3e2d.js"></script></body></html>

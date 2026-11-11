@@ -1,0 +1,27 @@
+name: Verify 3E2D site
+
+on:
+  push:
+    branches: ["arena/3e2dbf57-china3"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: 3E2D - ladder, sources, blanks, links
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'arena/3e2dbf57-china3'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild (must be byte-identical)
+        run: |
+          python3 scripts/build_3e2d_site.py
+          git diff --exit-code -- 3e2d-dashboard.html 3e2d-summary.html 3e2d-questions.html 3e2d-methods.html 3e2d-costs.html 3e2d-steps.html 3e2d-penalties.html 3e2d-tax.html 3e2d-flagged.html 3e2d-sources.html 3e2d-repo-review.html data/3e2d_sources.csv data/3e2d_questions.csv data/3e2d_methods.csv data/3e2d_steps.csv data/3e2d_penalties.csv data/3e2d_flags.csv data/3e2d_ladder.csv data/3e2d_method_costs.csv
+      - name: Independent verification
+        run: python3 scripts/verify_3e2d_site.py

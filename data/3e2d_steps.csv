@@ -1,0 +1,47 @@
+method,step_no,action,document,sources
+M01,1,Bring passport (valid ID) to the bank,Passport,T04|T01|T02
+M01,2,"Present source-of-funds materials for the income (contract, salary slips)",Source materials,T04|T01|T02
+M01,3,Present tax vouchers (payment/exemption/filing),Tax vouchers,T04|T01|T02
+M01,4,Buy USD at the bank's execution rate; confirm amount,-,T04|T01|T02
+M01,5,Instruct one own-name international wire; pay wire fee,Wire instruction,T04|T01|T02
+M01,6,"Keep exchange slip, wire confirmation, tax vouchers for US reporting",All documents,T04|T01|T02
+M02,1,Bring passport + original exchange slip (within 24 months),Passport + slip,T09|T01|T02
+M02,2,Reconvert unused CNY to FX at bank,Original slip,T09|T01|T02
+M02,3,Wire FX to own overseas account,Wire instruction,T09|T01|T02
+M03,1,Bring passport to bank,Passport,T08|T02
+M03,2,Instruct own-name outward remittance of FX balance,Wire instruction,T08|T02
+M03,3,Pay wire fee; keep confirmation,Confirmation,T08|T02
+M04,1,Bring passport,Passport,T15|T01|T02
+M04,2,Present registered sale contract + title/registration docs,Sale/title docs,T15|T01|T02
+M04,3,Present tax voucher from tax office,Tax voucher,T15|T01|T02
+M04,4,Bank converts/remits up to price less taxes,-,T15|T01|T02
+M05,1,Prepare inheritance/property/tax documents,Inheritance docs,T12|T13|T01|T02
+M05,2,Apply to decedent's last-hukou SAFE office for approval,Approval,T12|T13|T01|T02
+M05,3,Bank buys FX and remits to own account abroad (no cash),Approval + wire,T12|T13|T01|T02
+M06,1,Prepare hukou cancellation/settlement/property/tax documents,Hukou/property docs,T12|T13|T01|T02
+M06,2,Apply to former-hukou SAFE office for approval,Approval,T12|T13|T01|T02
+M06,3,Bank remits once or in instalments to own account abroad,Approval + wire,T12|T13|T01|T02
+M07,1,Bring ID (green card / domestic ID as applicable),ID,T05|T06|T07
+M07,2,"Buy/remit up to USD 50,000 in the calendar year",-,T05|T06|T07
+M07,3,"Above USD 50,000: add transaction materials (do not split via others)",Materials,T05|T06|T07
+M08,1,Ask bank for written cross-border RMB offer,Bank offer,T24
+M08,2,Send CNY to own offshore account,-,T24
+M08,3,Convert offshore; obtain offshore quote,Quote,T24
+M09,1,Obtain profit-distribution resolution,Resolution,T25|T13
+M09,2,Complete tax filing; pay 20% (statutory scenario),Tax filing,T25|T13
+M09,3,Remit net proceeds,Wire,T25|T13
+M09T,1,"As M09, plus treaty eligibility evidence (residence/beneficial ownership)",Eligibility evidence,T27|T25
+M09T,2,Apply 10% treaty cap; pay 10%,Tax filing,T27|T25
+M09T,3,Remit net proceeds,Wire,T27|T25
+M10,1,Use mainland UnionPay card abroad,Card,T19|T03
+M10,2,"Withdraw within CNY 10,000/day and CNY 100,000/year",-,T19|T03
+M10,3,"Pay per-withdrawal fee (CNY 12 + 1%, max CNY 112)",Fee,T19|T03
+M11,1,Buy FX banknotes lawfully at bank,-,T20|T35
+M11,2,"Carry <=USD 5,000/trip (<=USD 10,000 with bank permit)",Permit if needed,T20|T35
+M11,3,"Declare >USD 10,000 entering US (FinCEN Form 105)",Declaration,T20|T35
+M12,1,Verify identity + tax records in Wise (tax paid within last 3 years),Tax records,T28
+M12,2,"Fund from China bank app (max CNY 300,000/transfer)",Bank app,T28
+M12,3,Receive in own account; check in-app fee/FX quote,Quote,T28
+M13,1,Go to WU partner bank with government ID,ID,T29
+M13,2,Fill transfer details; pay quoted fee,Fee,T29
+M13,3,Receiver picks up cash with MTCN,MTCN,T29
