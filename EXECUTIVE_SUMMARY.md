@@ -1,5 +1,12 @@
 # Executive summary
 
+> **Integration addendum (2026-11-11, session `arena/f9a30493-china3`).** The landing-page navigation now
+> links two independently verified editions that were merged to `main` earlier today and were reachable only
+> by direct URL: the [M5F19 re-verification & cost reconciliation](m5f19-dashboard.html) (10 Nov 2026, PR #47)
+> and the [source freshness re-check](76e-verification.html) (11 Nov 2026, PR #49). Both nav entries were
+> requested on the coordination board (M5F19-REQ-01, 76E-REQ-01) and are additive. No figure in this summary
+> changed; the 2026-11-11 board reading is recorded on the Flagged page (U15) and in the 76e ledger.
+
 Question: a U.S. citizen has money in a Chinese bank account and is told that turning it into dollars
 means "a considerable amount of taxes". What is the best lawful way out, and what does it really cost?
 

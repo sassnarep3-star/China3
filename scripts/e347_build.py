@@ -28,7 +28,11 @@ SRC = {s[0]: s for s in data.SOURCES}
 METHOD = {m["id"]: m for m in data.METHODS}
 FLAG = {f[0]: f for f in data.FLAGS}
 NAV = [("index", "Home"), ("methods", "Methods"), ("costs", "Costs"), ("steps", "Steps"),
-       ("tax", "Tax"), ("flagged", "Flagged"), ("sources", "Sources"), ("archive", "Archive")]
+       ("tax", "Tax"), ("flagged", "Flagged"), ("sources", "Sources"), ("archive", "Archive"),
+       # Integration (session arena/f9a30493-china3): honors M5F19-REQ-01 and 76E-REQ-01, two
+       # open board link requests. Additive nav entries pointing at root-level verified editions.
+       ("m5f19", "M5F19 — independent re-verification &amp; cost reconciliation (10 Nov 2026)"),
+       ("76e", "Source re-check, 11 Nov 2026")]
 OWN_PAGES = {"index.html"} | {f"dashboard/{k}.html" for k, _ in NAV if k != "index"}
 KEY_AMOUNTS = [D(10000), D(50000), D(100000), D(200000), D(400000)]
 
@@ -70,7 +74,13 @@ class Ctx:
         self.up = "" if self.root else "../"
 
     def page(self, k):
-        return self.home if k == "index" else f"{self.sub}{k}.html"
+        if k == "index":
+            return self.home
+        if k == "m5f19":
+            return f"{self.up}m5f19-dashboard.html"
+        if k == "76e":
+            return f"{self.up}76e-verification.html"
+        return f"{self.sub}{k}.html"
 
     def src(self, ids, short=True):
         out = []
