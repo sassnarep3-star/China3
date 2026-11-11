@@ -1815,6 +1815,120 @@ Five live sessions have claimed `index.html` / `scripts/e347_build.py`. This ses
 - **Pages:** API `status: built`, `build_type: legacy`, source `main:/`; latest build `built` for commit `596b63c` at 2026-11-11T02:59:07Z.
 - **Live check:** https://sassnarep3-star.github.io/China3/g8d8-summary.html — the first fetch, seconds after the merge, returned 404 (deployment not yet propagated); the second fetch with a new cache-busting query returned the page with the expected figures ($839.92 spread, $901.20 and $1,039.73 at $400,000, the eight closure rows). https://sassnarep3-star.github.io/China3/dashboard/archive.html serves the regenerated list (95 pages).
 - **Still open after this session:** G8D8-REQ-01 (landing-page nav entry), G8D8-REQ-02 (route L09 treaty cap and four flag citations in `scripts/e347_data.py`), G8D8-REQ-03 (`ARCHIVE_GROUPS` rows for `m5f19-`, `76e-`, `f52-`). The 18 flagged items stay published on `g8d8-flagged.html`.
+
+<!-- session-n676d2a67-v1 -->
+
+## Session `session-n676d2a67` (`arena/676d2a67-china3`) — 2026-11-11 decision-brief pass: same-day source re-read, questions register, re-priced $10k–$400k ladder, repo audit, clean dashboard
+
+Branch: `arena/676d2a67-china3` (Arena single-branch binding; this branch is also this session's integration branch).
+Base commit on `main`: `d9763dca8e9f3a80f76f7012209f7e0c09bc64e0` (PR #49 merged, 2026-11-11T02:37Z).
+Claim pushed before any content file was touched.
+
+### Concurrent-session scan
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*'` returned 54 remote branches. Open PRs at claim
+time: #50 (`arena/7881ea76-china3`), #34, #32, #25, #18, #15, #8, #6(draft). None of them claims the
+`n676-*` namespace. This session works **exclusively** inside `n676-*`, `data/n676_*`,
+`research/n676-*`, `scripts/n676_*.py`, `assets/n676.css`, `.github/workflows/n676-verify.yml`, and
+appends to `COORDINATION.md`. It does **not** edit `index.html`, `dashboard/**`, `legacy-index.html`,
+`README.md`, `EXECUTIVE_SUMMARY.md`, `scripts/e347_*` or any other owner's file. Integration requests are
+logged below instead.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| N676-T0 | Claim scope and push before any content work | `COORDINATION.md` (append only) | done | `arena/676d2a67-china3` | n/a | This block |
+| N676-T1 | Same-day (2026-11-11) re-read of every load-bearing official page: URL, HTTP status, verbatim quote, timestamp, still-matches verdict | `data/n676_sources.csv`, `research/n676-verification.md` | unclaimed | `arena/676d2a67-china3` | pending live fetches | No inherited figure copied without a today-fetch |
+| N676-T2 | Independent re-derivation of the USD 10,000→400,000 ladder in $10,000 steps (40 increments × every costed route), most-important-first matrix | `data/n676_ladder.csv`, `data/n676_matrix.csv`, `scripts/n676_engine.py` | unclaimed | `arena/676d2a67-china3` | pending | Own arithmetic only; convention stated on the page |
+| N676-T3 | Method catalogue: every way to turn CNY into USD, lawful and prohibited, with pros/cons/eligibility/caps + numbered step-by-step playbooks | `data/n676_methods.csv`, `data/n676_steps.csv` | unclaimed | `arena/676d2a67-china3` | pending | Every row an official link or blank+`UNVERIFIED` |
+| N676-T4 | **Questions register** — the questions that must be answered before a decision, what is already known, what is not, and exactly how to obtain each missing item | `data/n676_questions.csv` | unclaimed | `arena/676d2a67-china3` | pending | This is the deliverable no earlier session produced |
+| N676-T5 | Repo audit line by line: stale figures, conflicting layers, dead links, arithmetic; irregularities published, not silently fixed | `data/n676_flags.csv`, `research/n676-repo-audit.md` | unclaimed | `arena/676d2a67-china3` | official pages only | Never edits a sibling-owned file |
+| N676-T6 | Clean mobile-first dashboard: 8 category subpages (summary, questions, methods, costs, steps, tax, flagged, sources) | `n676-*.html`, `assets/n676.css` | unclaimed | `arena/676d2a67-china3` | every row a source link or flagged blank | Generated, never hand-edited |
+| N676-T7 | Independent verifier + CI gate for this session's outputs | `scripts/n676_build.py`, `scripts/n676_verify.py`, `.github/workflows/n676-verify.yml` | unclaimed | `arena/676d2a67-china3` | n/a | Re-derives the ladder, enforces official-domain links, blank⇒flag, link parity |
+| N676-T8 | PR (`arena/676d2a67-china3` → `main`), merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / `COORDINATION.md` | unclaimed | `arena/676d2a67-china3` | Actions + Pages API | Do not merge a broken site |
+
+**Log**
+- `2026-11-11T02:45Z`: fetched all remote branches and the open-PR list; confirmed no session claims the `n676` namespace; wrote and pushed this claim before touching any content file. Baseline on `d9763dc` is green: `e347_verify` PASS (440 cost rows), `verify_m5f19_site` PASS (10 checks), `verify_76e` PASS, `verify_dashboard` PASS, `verify_final_integration` PASS, `verify_cost_tables` PASS, `validate_data` OK, `check_links` OK.
+
+### N676 — completion record (2026-11-11)
+
+**Status: N676-T1 … N676-T7 done. N676-T8 (PR + merge + Pages) in progress.**
+
+**Delivered, entirely inside the `n676` namespace.**
+`data/n676_{sources,questions,methods,steps,flags,ladder}.csv` (22 / 18 / 12 / 22 / 16 / 160 rows),
+`scripts/n676_{engine,data,build,verify}.py`, eight pages
+`n676-{summary,questions,methods,costs,steps,tax,flagged,sources}.html`, `assets/n676.css`,
+`.github/workflows/n676-verify.yml`, `research/n676-verification.md`, `research/n676-repo-audit.md`.
+`dashboard/archive.html` was **regenerated by `scripts/e347_build.py`**, not hand-edited — the
+generator discovers root pages, so the eight new pages are listed and the count goes 82 → 90. That
+is the only base-tracked file this session changed besides the append-only board.
+
+**Sources re-read today (11 Nov 2026), each quoted verbatim in `data/n676_sources.csv`.**
+BOC exchange-rate board (USD 666.30 / 669.11 / "Middle Rate" 671.91, stamp 2026-11-11 10:25:02);
+BOC personal e-banking transfer tariff (1‰, RMB 50–260, telegraph RMB 150 / RMB 80, plus the
+domestic FX-transfer line at 1‰ capped RMB 200); SAFE Tianjin 2024-06-21 and 2026-07-13 (art. 59,
+境外个人 + tax certificates; convenience amount only for 外国人永久居留身份证 holders); SAFE
+Ningxia 2022-09-29 (no amount limit; USD 50,000 is not a cap); State Council Decree 532 arts. 5,
+15, 39, 40, 42, 45, 48, 52(2); PBOC Announcement [2004] No. 16 arts. 2, 5, 6, 10, 11, 12, 13;
+汇发〔2014〕2号 §5(1) and §6(1)(2)(4); PRC Individual Income Tax Law arts. 1, 3, 10, 13, 15, 16;
+IRS yearly average rates (CNY 7.129 / 7.189 / 7.075); 26 U.S.C. § 988(a)(1)(A), (c)(1)(C),
+(e)(1)-(3); 31 CFR 1010.821 penalty table (Title 31 up to date as of 11/09/2026); IRS FEIE
+($132,900 for 2026, $130,000 for 2025, housing $39,870 / $39,000); IRS gifts from a foreign person
+($100,000; $20,116 for 2025 and $20,573 for 2026; IRC 6039F(c)).
+
+**Not re-opened this pass — recorded with `fetched_today = no`, left blank on the pages, no claim
+rests on them:** the 汇发〔2020〕14号 guidelines PDF (its arts. 54-59 are quoted verbatim inside
+the official SAFE branch answers N03/N04/N05), 财税〔2008〕132号 (bank-deposit interest), and the
+CBP cash-declaration page.
+
+**Verification performed (all local, on this tree).** `scripts/n676_verify.py` PASS — 12 checks:
+the ladder's 160 rows re-derived from the board and tariff alone by arithmetic written out
+independently of the engine; 800 rendered money cells matched to the CSV verbatim; 361 data-table
+body rows across 8 pages, every one carrying an official-source link or an explicit
+blank/UNVERIFIED marker (19 deliberately blank); no blank-marked cell containing a number; all 22
+source URLs on official domains with 19 verbatim today-quotes; every referenced source and flag id
+resolving; all internal links and anchors resolving and every external link present in the
+register; byte-identical rebuild of 15 files; and the sibling 76e headline figures ($53.42 at
+$10,000, $901.20 at $400,000, $27,703 gain) reproducing to the cent, with the same convention on
+the 2026-11-10 17:39:58 board reproducing the previously published $53.38 and $899.01.
+The eight pre-existing repo verifiers were re-run afterwards and all still pass:
+`e347_verify`, `verify_m5f19_site` (10 checks), `verify_76e`, `verify_dashboard`,
+`verify_final_integration`, `verify_cost_tables`, `validate_data`, `check_links`.
+
+**Irregularities found (all published on `n676-flagged.html`, status `needs review`, none blocks).**
+- **N676-F01 (high, substantive).** `data/cost_steps.csv` rows 20-22 (M03 steps 5-7) still instruct
+  'Take tranche 2 — up to half the remainder, after 1 year' and 'Take tranche 3 — the balance,
+  after 2 years', and `data/d646_methods.csv` row 6 (M05) states 'Staged: first half, then half of
+  remainder after 1 year, rest after 2 years'. Neither file contains the string `2014` or
+  `汇发〔2014〕2号` (grep count 0 in both). 汇发〔2014〕2号 §6(2) cancels the staged remittance and
+  §6(1) cancels the RMB 500,000 head-office filing, so a reader following those rows would wait two
+  years for money that can lawfully be remitted in one lump. Sibling-owned files: **not edited**;
+  correction request logged below.
+- **N676-F02 (high, presentation).** Nine different headline totals for the same two transfers are
+  live at once. Measured across the 98 published HTML files: the $10,000 wire appears as $53.38
+  (36 files), $53.42 (35), $53.45 (10), $53.47 (7), $50.93 (2); the $400,000 wire as $901.30 (17),
+  $901.20 (11), $901.81 (1), $901.09 (1). Each is correct for its own intraday board snapshot; no
+  page but the n676 ones carries the stamp it was priced from.
+- **N676-F03 (medium).** BOC's "Middle Rate" (6.7191) is not the mid-point of its own buying and
+  selling rates ((6.6630+6.6911)/2 = 6.67705). The n676 pages compute their own mid-point and say so.
+- **N676-F04 (medium).** 汇发〔2014〕2号 is published on a branch site marked （已修改）; the
+  amendment note (汇发〔2023〕28号 annex 4) changes only §3, but the page does not certify the list
+  is exhaustive.
+- **N676-F05 (medium).** The USD 50,000 figure is used for two unrelated rules across the tree —
+  the individual convenience amount (art. 55, card holders only) and the institutional
+  profit-remittance document threshold (汇发〔2014〕2号 §5(1)).
+- Plus 11 blank/unverified items (N676-U01 … N676-U11), each left blank on every page rather than
+  estimated, each with the route to close it.
+
+**Cross-scope requests logged, not actioned (shared files are reserved to the integration session).**
+1. **N676-REQ-01 — nav entry.** One link on the shared landing page to `n676-summary.html`,
+   labelled *"Decision brief, 11 Nov 2026"*. This session did not edit `index.html`; the pages are
+   reachable by direct URL and appear on the regenerated `dashboard/archive.html`.
+2. **N676-REQ-02 — superseded rows.** Owners of `data/cost_steps.csv` (M03 steps 5-7) and
+   `data/d646_methods.csv` (M05): please correct or mark superseded against 汇发〔2014〕2号 §6.
+3. **N676-REQ-03 — CI hygiene.** Add a repo-wide conflict-marker gate over `*.md`
+   (`grep -E '^(<<<<<<<|=======$|>>>>>>>)'`). `main` carried literal markers for about an hour in an
+   earlier session and no validator caught it; `scripts/n676_verify.py` check L covers the n676
+   files and `COORDINATION.md` only.
 <!-- session-1e361b54-final-integration-v1 -->
 
 ## Session `arena/1e361b54-china3` (`session-1e361b54`) — 2026-11-11 FINAL INTEGRATION: fresh official-source re-verification, archive/discoverability fix, landing-page nav for parallel editions & audits, sibling-PR disposition, Pages deploy
