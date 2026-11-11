@@ -260,7 +260,7 @@ FINDINGS = [
      "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821",
      "Refresh the as-of string; no figure needs to change."),
     ("F06", "low", "Published layers: index.html, dashboard/costs.html, legacy-index.html, d646-costs.html, final-verification.html, m5f19-costs.html",
-     "Six live pages publish six different headline totals for the same single-wire route: 53.38, 53.42, 53.47, 899.01, 901.30, 1,332.05 (the last is an eight-wire staging scenario). Each is internally explainable by its own board snapshot or spread convention, but only the Archive page says which layer is current.",
+     "Live pages publish three different totals at USD 10,000 (53.38 on index.html and dashboard/costs.html, 53.42 on legacy-index.html and final-verification.html, 53.47 on d646-costs.html) and four at USD 400,000 (899.01, 901.30, 1,332.05 and 1,328.33 — the last two are multi-wire staging scenarios). Each is internally explainable by its own board snapshot or spread convention, but only the Archive page says which layer is current.",
      "Enumerated by grep across every published HTML page; the differences are explained in data/m5f19_reconciliation.csv and in this page's table.",
      "needs review",
      "S01|S02",
@@ -392,8 +392,9 @@ value had to be left blank.</p>
 80 published L01 and L03 cells of <code>data/e347_costs.csv</code> to the cent, so the published figures are not in doubt — they are one trading day old.</li>
 <li><b>One fee schedule took effect today.</b> Bank of China's ATM notice is dated 11 August 2026 but applies from
 11 November 2026. UnionPay terms are unchanged; the Great Wall International card's overseas ATM cap rises from USD 5 to USD 40 per withdrawal (finding F04).</li>
-<li><b>Two wording problems and three freshness problems</b> were found on published pages and are listed under
-<a href="#findings">Findings</a>. None of them changes the answer to the main question.</li>
+<li><b>Seven issues</b> were found on published pages — two wording problems, three freshness or presentation
+problems and two scope notes — and are listed under <a href="#findings">Findings</a>. None of them changes the
+answer to the main question.</li>
 </ol>
 
 <h2 id="ladder">Bank cost at every $10,000 step, on today's board</h2>
@@ -458,7 +459,8 @@ Regenerate with <code>python3 scripts/build_76e_site.py</code>; gate with <code>
     ask="{:.4f}".format(BOARD_TODAY["ask"]),
     t10=money(today10), p10=money(PUB[("L01", 10000)]), d10=money(today10 - PUB[("L01", 10000)]),
     t400=money(today400), p400=money(PUB[("L01", 400000)]), d400=money(today400 - PUB[("L01", 400000)]),
-    g400=money(gain400_today), gb400=money(gain400_base),
+    g400="{:,}".format(int(gain400_today.to_integral_value(rounding=ROUND_HALF_UP))),
+    gb400="{:,}".format(int(gain400_base.to_integral_value(rounding=ROUND_HALF_UP))),
     rate_pct=rate_delta_pct,
     rnotes=sum(1 for amt in AMOUNTS
                if q(spread_usd(amt, BOARD_TODAY)) + q(wire_usd(amt, BOARD_TODAY)) != q(l01(amt, BOARD_TODAY))),

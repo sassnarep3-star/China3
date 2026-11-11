@@ -1405,6 +1405,81 @@ Also recorded: B8720152's request to scope m5f19 check J is satisfied by this se
 rewrite of that check (see the takeover note above). B8720152's U15 text and `scripts/e347_data.py`
 change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
 
+### 76E-T4 — pull request, merge and deployment record
+
+- **PR:** https://github.com/sassnarep3-star/China3/pull/49 (`arena/76e3e41f-china3` → `main`),
+  "76e: same-day source re-check (11 Nov), recomputed $10k–$400k ladder, 7 findings, CI scope fix".
+- **Checks before merge:** 15 passed, `deploy` skipped as designed for pull requests — including the
+  `76e` gate, `m5f19` (after the scope fix), `e347`, `dashboard`, `s775`, `c5bf`, `d646`, `s436`, `c3x`,
+  `a513`, `cost tables`, `cost coverage`, `cross-session review`, `deep-research` and `Data contract and
+  link check`.
+- **Merge:** merged 2026-11-11T02:39:17Z without waiting for review, merge commit
+  `d9763dca8e9f3a80f76f7012209f7e0c09bc64e0`.
+- **Deploy:** `Deploy static guide to GitHub Pages` run **42947498239** — success; Pages API status
+  `built` at commit `d9763dc`; every other workflow on `main` at that commit succeeded.
+- **Live check:** https://sassnarep3-star.github.io/China3/76e-verification.html returned the page with
+  its real content (6.6911, $53.42, $901.20, $27,703, the 40-row ladder, the 18-source ledger and all
+  seven findings), and the page is linked from the regenerated `dashboard/archive.html` (82 pages).
+- **Follow-up PR (this record plus three wording/rounding corrections on the same page):**
+  https://github.com/sassnarep3-star/China3/pull/50. Its merge result is reported in the session's
+  closing message, because a record of its own merge would need another pull request.
+- **Link request still open:** 76E-REQ-01 (nav entry on `index.html`). The page is reachable by direct
+  URL and from the Archive page in the meantime.
+
+## Integration session `arena/78c46684-china3` — independent verification, Q&A, cost table, PR + merge
+
+Branch: `arena/78c46684-china3`, branched from `main` at `6750ddb` (PR #48 merge). Working tree clean at session start.
+
+### Claim and scope
+
+This session claims V1–V5 on its own board. Scopes: independent verification of official sources, Q&A document, cost-table verification, site build/Pages confirmation, PR + merge. No overlap with P1–P7, T1–T7, T8–T16 or the deep-research integration, all of which are already `done`.
+
+| Task | Status | File scope | Notes |
+|------|--------|------------|-------|
+| V1 | done | `data/*`, `*.md`, root HTML | Independent reachability + fact check of official sources: IRS yearly average rates (China Yuan 2024 = 7.189, 2025 = 7.129) at irs.gov [S28]; 31 CFR 1010.821 FBAR willful penalty $165,353 at ecfr.gov [S31]; SAFE FX Regulation State Council Order No. 532 (arts. 5, 39–45, 52) at safe.gov.cn [S17]; BOC exchange-rate board (USD selling 669.11 per 100, pub. 2026/11/11) at boc.cn [S01]; BOC personal transfer tariff (wire 1‰, min RMB 50, max RMB 260, cable RMB 150 non-HK/MO/TW) at boc.cn [S02]. All reachable and consistent with cited figures. |
+| V2 | done | `QNA.md` (new, root) | Questions, information and answers to address before any decision, grouped by the money itself, China rules, cost, U.S. tax/reporting, routes, and a decision checklist; every blank flagged with a suggestion to discover missing information. |
+| V3 | done | `data/e347_costs.csv`, `dashboard/costs.html` | Spot-checked cost math at $10,000/$100,000/$400,000 against the BOC tariff and board: $10,000 → spread $20.94 + fee $32.44 = $53.38; $100,000 → $209.42 + $61.33 = $270.75; $400,000 → $837.68 + $61.33 = $899.01. All match. Full ladder recomputed by e347_verify.py (440 rows exact). |
+| V4 | done | `.github/workflows/pages.yml`, root `index.html` | e347_build.py: 15 files, 0 changed. e347_verify.py: PASS (440 cost rows, 658 table rows sourced, 380 blanks flagged, 2138 links resolved). Live site serving at https://sassnarep3-star.github.io/China3/ (homepage fetched successfully). |
+| V5 | in progress | GitHub | PR from this branch to `main`; merge; record PR link and merge result here. |
+
+### Log
+
+- 2026-11-11: session `arena/78c46684-china3` resolved the committed merge conflict in `COORDINATION.md` (HEAD `session-5f1925df` block kept; empty `f6ae79e` side dropped) and claimed V1–V5; claim committed and pushed immediately.
+- 2026-11-11: Independent official-source checks completed (V1): IRS irs.gov yearly average rates; ecfr.gov 31 CFR 1010.821; safe.gov.cn SAFE FX Regulation No. 532; boc.cn rate board and personal tariff. All reachable and consistent.
+- 2026-11-11: QNA.md created and committed (V2).
+- 2026-11-11: Cost-table spot-check passed (V3); e347_build.py + e347_verify.py PASS; live site confirmed serving (V4).
+- 2026-11-11: Creating PR from `arena/78c46684-china3` to `main` (V5).
+---
+
+## Session `arena/1c55025d-china3` — Full Requirements Audit & Re-verification (2026-11-11)
+
+**Branch:** `arena/1c55025d-china3` (Arena fixed: single-branch rule).  
+**Base:** `6750ddb` (`main` after PR #48, B8720152 re-verified e347 dashboard).  
+**Live site:** https://sassnarep3-star.github.io/China3/  
+**Scope note:** This session does not introduce new primary sources; it re-verifies every table row, cost ladder, and flagged item against the 35 official sources already read on 2026-11-10/11, rebuilds the dashboard, and records the requirements trace for the original brief.
+
+### Claimed tasks (arena/1c55025d-china3)
+
+| ID | Task | File scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| R1 | Repo review line-by-line, verify from official trusted sources, provide links, flag irregularities | `REPO_AUDIT.md`, `research/1c55025d-audit.md`, `COORDINATION.md` | done | arena/1c55025d-china3 | 35 official (BOC, SAFE, PBOC, STA, IRS, FinCEN, eCFR, CBP, govinfo) + BOC tariff re-read 2026-11-11 | audit + re-audit table; see research/1c55025d-audit.md §§6-7 |
+| R2 | Executive summary (important details) | `EXECUTIVE_SUMMARY.md`, `index.html`, `dashboard/*` | done | arena/1c55025d-china3 | S01,S02,S04,S05,S08,S12,S17,S25,S27,S28,S30,S31,S34 | EXECUTIVE_SUMMARY.md 5-point answer + cost at a glance; audit §1 |
+| R3 | Questions / Informations / Answers needed before decision, plus discovery suggestions | `dashboard/flagged.html`, `research/1c55025d-audit.md` | done | arena/1c55025d-china3 | U01–U19 flags each with official link | Flagged page 19 items + audit §2 Q&A table; top-3 U01/U02/U07 |
+| R4 | Conversion methods CNY→USD: list all ways, pros/cons, tax-penalty breakdown | `dashboard/methods.html`, `data/e347_methods.csv`, `research/1c55025d-audit.md` | done | arena/1c55025d-china3 | S04,S05,S08,S09,S12,S15,S18,S19,S20,S21,S23 | 11 lawful + 6 prohibited, penalties State Council Decree 532 Arts.39-45; audit §3 |
+| R5 | Cost estimation $10k→$400k in $10k steps, mobile-friendly tables, step-by-step per method | `dashboard/costs.html`, `dashboard/steps.html`, `data/e347_costs.csv`, `data/e347_fx_gain.csv` | done | arena/1c55025d-china3 | S01,S02,S03 + IRS avg S28 | 440 rows recomputed (Fraction, half-up); kpi + 6-amount + full ladder; audit §5 |
+| R6 | Site creation: clean landing + subpages by category, dashboard UI, every row has source link or flagged blank | `index.html`, `dashboard/*.html`, `dashboard/site.css`, `scripts/e347_build.py` | done | arena/1c55025d-china3 | all 35 sources | index + 7 dashboard pages, table.stack mobile, Archive 82 pages; build 15 files 0 changed |
+| R7 | Verification: every table row must have source link; if unverified leave blank+flag; never infer | `scripts/e347_verify.py`, `dashboard/flagged.html` | done | arena/1c55025d-china3 | official-domain allowlist enforced | PASS: 658 rows sourced, 380 blanks flagged, 2139 links; audit §7 |
+| R8 | PR → merge → Pages deploy verification, record PR link & merge result | GitHub PR / Pages / `COORDINATION.md` | in progress | arena/1c55025d-china3 | Pages + verification workflows | Do not merge broken site |
+
+### Rules for this session
+- Shared files (`index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`) change additively only; generated pages via `scripts/e347_build.py`.
+- No sibling files (`c3x-*`, `d646-*`, `s775-*`, `m5f19-*`, `a513-*`, `s436-*`, `deep-*`, `s119-*`, `a058-*`, `a502-*`) are edited.
+- If a file outside scope must change, log a request here instead of editing.
+
+### Log — 2026-11-11
+- 2026-11-11T claim: read COORDINATION.md (1319 lines), inspected all remote branches (`git ls-remote`, `git branch -a`), confirmed `main` at 6750ddb, wrote non-overlapping claim and pushed before touching content files.
+- 2026-11-11T audit done: `research/1c55025d-audit.md` (431 lines, R0-R10 trace, §§1-12), `REPO_AUDIT.md` re-audit (16 verifiers PASS), `scripts/e347_build.py` 15 files 0 changed, `scripts/e347_verify.py` PASS; R1-R7 marked done, R8 PR pending.
+- 2026-11-11T pre-PR checks: `validate_data OK`, `check_links OK`, `verify_dashboard PASS`, `verify_76e PASS`, `verify_m5f19 PASS` (claim-aware J), `verify_c3x PASS`, `verify_d646 PASS`, `verify_s775 PASS`, `verify_s436 PASS`, `verify_c5bf PASS`, `verify_final_integration PASS`, `test_costs PASS`, `verify_deep PASS`; no broken links; no hallucination (every dollar recomputed from S01/S02 fractions).
 ---
 
 <!-- session-f9a30493-integration-v1 -->
