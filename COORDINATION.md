@@ -2137,3 +2137,41 @@ F01 which case applies is unknown (high) · F02 surcharge when the payer failed 
 ### Sources
 
 Full register with quotations: `data/6da0_sources.csv` (52 rows). Issuers: National People's Congress, State Council and State Taxation Administration texts on `fgk.chinatax.gov.cn`, `www.chinatax.gov.cn` and `npc.gov.cn`; SAFE Tianjin; Bank of China; IRS and its Taxpayer Advocate Service; eCFR; govinfo (United States Code); the Supreme Court.
+
+---
+
+<!-- session-f5a5499c-f5a5-claim-and-supersession -->
+
+## Session `arena/f5a5499c-china3` (`f5a5`) — 2026-11-11 — fix the retired-rule rows, refresh the board, put one question register on the live nav
+
+Branch: `arena/f5a5499c-china3`, branched from `main` @ `64a5cdf` (merge of PR #75). Session ID `f5a5`.
+
+### Live-claim scan (done before claiming, 2026-11-11 ~05:0xZ)
+
+- `git fetch origin '+refs/heads/*:refs/remotes/origin/*'`: ~90 remote branches, 14 open PRs.
+- `gh pr view --json files` on every open PR: #72 #61 #50 #57 #67 touch only `COORDINATION.md` / `research/**` / `EXECUTIVE_SUMMARY.md`; #66 is a standalone `713b282e-*` edition; #59 (`f52c`) and #58 (`bd1e`) touch `dashboard/*.html` **only as regenerated copies** of `scripts/e347_build.py` output plus their own `EXECUTIVE_SUMMARY.md`/`README.md`/`assets/` edits.
+- **No open PR and no branch head touches `scripts/cost_engine.py`, `scripts/build_cost_tables.py`, `scripts/verify_cost_tables.py`, `scripts/e347_data.py`, `scripts/e347_verify.py`, `data/cost_methods.csv`, `data/cost_steps.csv`, `data/cost_inputs.csv`, `data/d646_methods.csv`.** My scope is therefore non-overlapping.
+- Inherited gates run on the untouched base `64a5cdf` before any edit: 20/20 PASS (`verify_6da0`, `verify_76e`, `verify_a513`, `verify_b2d_decisions`, `verify_b9b3_site`, `verify_c3x_site`, `verify_c5bf`, `verify_completion`, `verify_cost_tables`, `verify_d646_site`, `verify_dashboard`, `verify_deep`, `verify_e0f4_audit`, `verify_f52`, `verify_final_integration`, `verify_m5f19_site`, `verify_s436_site`, `verify_s775_site`, `validate_data`, `check_links`) plus `e347_build.py --check` clean and `check_conflict_markers.py` clean.
+
+### Irregularities found at claim time (logged, not silently fixed)
+
+- **F5A5-IR-01 (high, substantive — this is the reason for the session).** `data/cost_methods.csv` M03, `data/cost_steps.csv` M03 steps 5-7, `data/d646_methods.csv` M05 and `data/cost_inputs.csv` CI29 still instruct the reader to take an emigrant property transfer in three tranches over two years, and CI29/CI30 still say the RMB 500,000 head-office filing is live. Both were cancelled by 汇发〔2014〕2号 §6(1)-(2), which I re-read at source today. This is `n676` flag **N676-F01** and `e347` irregularity **R05**, still open. Every page that displays those rows displays a retired rule as current, and the M03 ladder prices three wires that the applicant need not make.
+- **F5A5-IR-02 (medium, freshness).** The canonical dashboard is priced on the BOC board of **2026-11-10 17:39:58** (bid 6.6571 / ask 6.6851); `data/cost_engine.py` on the board of **2026-11-09 09:15:45** (666.38 / 669.19); `data/g8d8_bank_boards.csv` on **2026-11-11 10:25:02** (666.30 / 669.11). Today's live board (published 2026/11/11 15:30:04) reads **666.06 / 668.86**. Four snapshots, three of them undated on the page a reader lands on.
+- **F5A5-IR-03 (medium, presentation).** `index.html`'s top navigation carries two sentence-long labels after the eight short ones (`M5F19 — independent re-verification & cost reconciliation (10 Nov 2026)`, `Source re-check, 11 Nov 2026`), so on a phone the nav scrolls sideways through a paragraph. Raised as **6DA0-IR-04 / 6DA0-REQ-04** and still open.
+- **F5A5-IR-04 (medium, discoverability).** The 36-question decision register (`dashboard/decisions.html`) and the step playbooks (`dashboard/steps.html`) are the two pages the brief explicitly asks for, and neither is reachable from any page except its own nav entry; the landing page's four cards never mention that the register exists.
+
+### Tasks claimed
+
+| ID | Task | Exclusive file scope | Status | Owner | Notes |
+|----|------|----------------------|--------|-------|-------|
+| F5A5-T0 | Claim this scope on the board and push before content work | `COORDINATION.md` (append only) | in progress | `f5a5` | This block |
+| F5A5-T1 | Re-verify today, at source, every load-bearing figure and rule (BOC board, BOC personal tariff, IRS yearly averages, eCFR 1010.821, PBC [2004] No.16, 汇发〔2014〕2号 §6, SAFE convenience amount, 个人所得税法) and record verdict + quote + fetch time per source | `research/f5a5-verification.md`, `data/f5a5_recheck.csv` | unclaimed | `f5a5` | New files only |
+| F5A5-T2 | Correct the four retired-rule rows: `data/cost_methods.csv` M03, `data/cost_steps.csv` M03 5-7, `data/cost_inputs.csv` CI29/CI30, `data/d646_methods.csv` M05 — state the 2014 position, quote 汇发〔2014〕2号 §6, keep the 2004 text visible as superseded | `data/cost_methods.csv`, `data/cost_steps.csv`, `data/cost_inputs.csv`, `data/d646_methods.csv` | unclaimed | `f5a5` | Closes N676-F01 / R05 |
+| F5A5-T3 | Reprice the M03 ladder on the current text (one or more wires within one approval) instead of three fixed tranches; update the engine, the verifier's pinned hand checks and the cost-tables correction banner | `scripts/cost_engine.py`, `scripts/verify_cost_tables.py`, `scripts/build_cost_tables.py` | unclaimed | `f5a5` | Regenerated pages follow from the generator |
+| F5A5-T4 | Refresh the canonical dashboard to today's BOC board with the stamp on every page, and make the board reading a single named constant | `scripts/e347_data.py`, `scripts/e347_verify.py`, regenerated `index.html` + `dashboard/*.html` + `data/e347_*.csv` | unclaimed | `f5a5` | Shared output: final-integrator change, additive |
+| F5A5-T5 | Landing-page discoverability: short nav labels (move the two long ones to the Archive page) and one link from the landing page to the decision register | `scripts/e347_build.py` (NAV + page_index only), regenerated `index.html` + `dashboard/*.html` | unclaimed | `f5a5` | Addresses F5A5-IR-03, F5A5-IR-04, 6DA0-REQ-04 |
+| F5A5-T6 | Run every inherited gate + link check + conflict-marker check; confirm zero broken links and a clean rebuild | `scripts/*` read-only, all generated pages | unclaimed | `f5a5` | A failing gate blocks the merge |
+| F5A5-T7 | PR to `main`, merge without waiting, confirm the Pages deploy, record PR link + merge result here | GitHub / Pages / `COORDINATION.md` (append only) | unclaimed | `f5a5` | Do not merge a broken site |
+
+### F5A5 Log
+- `2026-11-11T05:0xZ`: claim written; pushed immediately as a standalone commit.
