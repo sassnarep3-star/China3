@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="n676-builder">
+<meta name="description" content="Irregularities found in the repository and values that could not be confirmed from an official source.">
+<title>Flagged for review · China money</title>
+<link rel="stylesheet" href="assets/n676.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="n676-summary.html">China money<small>RMB → USD · re-verified 2026-11-11</small></a>
+<nav class="nav" aria-label="Sections"><a href="n676-summary.html">Summary</a><a href="n676-questions.html">Questions</a><a href="n676-methods.html">Methods</a><a href="n676-costs.html">Costs</a><a href="n676-steps.html">Steps</a><a href="n676-tax.html">Tax &amp; penalties</a><a href="n676-flagged.html" aria-current="page">Flagged</a><a href="n676-sources.html">Sources</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<h1>Flagged for review</h1>
+<p class="lead">5 irregularities found in the repository and in the sources, and
+11 items left blank because they could not be confirmed from an official source. None of
+these blocks the merge; all of them are published here so they can be reviewed and corrected.</p>
+<div class="kpis">
+<div class="kpi"><b>5</b><span>irregularities</span></div>
+<div class="kpi"><b>11</b><span>blank / unverified</span></div>
+<div class="kpi"><b>4</b><span>high severity</span></div>
+</div>
+<h2>Irregularities</h2>
+<p>Found while re-reading the sources and auditing the repository line by line. Sibling-owned files
+were <b>not</b> edited; correction requests are logged in <code>COORDINATION.md</code>.</p>
+
+<article class="fl" id="N676-F01">
+<h2><span class="pri high">high</span> N676-F01 · Two data layers still instruct a reader to stage an emigrant transfer over two years, which 汇发〔2014〕2号 cancelled</h2>
+<dl>
+<dt>What was found</dt><dd>data/cost_steps.csv rows 20-22 (method M03, steps 5-7) read &#x27;Take tranche 1 — up to half&#x27;, &#x27;Take tranche 2 — up to half the remainder, after 1 year&#x27; and &#x27;Take tranche 3 — the balance, after 2 years … Total elapsed time from first payment: two years&#x27;. data/d646_methods.csv row 6 (M05) states &#x27;Staged: first half, then half of remainder after 1 year, rest after 2 years&#x27; and &#x27;Yes, but staged over 2+ years&#x27;. Neither file contains the string 2014 or 汇发〔2014〕2号 anywhere (grep count 0 in both).</dd>
+<dt>Why it is blank or wrong</dt><dd>汇发〔2014〕2号 §6(2) cancels the staged remittance: 银行可在核准件审批额度内一次或分次汇出相关资金. §6(1) also cancels the RMB 500,000 head-office filing. A reader following those rows would wait two years for money that can lawfully be remitted in one lump. (data/reference_inputs.csv R30, data/cost_inputs.csv CI29 and data/verify_2026.csv V08 record the same 2004 text, but those files do also carry the 2014 cancellation elsewhere, so they are lower risk.)</dd>
+<dt>How to close it</dt><dd>The owning sessions should correct or mark those rows superseded. This session did not edit their files; the request is logged in COORDINATION.md. The n676 pages state the 2014 position only, and quote both the 2004 text and the 2014 cancellation side by side in the source register so the supersession is visible.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" rel="noopener" title="（已修改）国家外汇管理局关于进一步改进和调整资本项目外汇管理政策的通知 (汇发〔2014〕2号)">N08 <span class="pub">SAFE (republished by Tianjin branch)</span></a> <a class="s" href="http://m.safe.gov.cn/safe/2004/1116/5461.html" rel="noopener" title="Same announcement — arts. 6 and 10 as originally enacted">N07b <span class="pub">People&#x27;s Bank of China</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-F02">
+<h2><span class="pri high">high</span> N676-F02 · Nine different headline totals for the same two transfers are live at once, with no superseded banner and no board stamp on most pages</h2>
+<dl>
+<dt>What was found</dt><dd>Counted across the 98 published HTML files on this tree: the $10,000 wire appears as $53.38 (36 files), $53.42 (35), $53.45 (10), $53.47 (7) and $50.93 (2); the $400,000 wire appears as $901.30 (17), $901.20 (11), $901.81 (1) and $901.09 (1).</dd>
+<dt>Why it is blank or wrong</dt><dd>Each figure is arithmetically correct for the intraday BOC board snapshot its layer was priced from. The defect is that a reader landing on any one page has no way to tell which snapshot it used or that a newer one exists. This is a presentation defect, not an arithmetic one.</dd>
+<dt>How to close it</dt><dd>Every cost page should carry the board stamp it was priced from in its heading, and older layers should carry a superseded banner. The n676 pages carry the stamp. A cross-layer banner is a shared-file change, so it is logged as a request in COORDINATION.md rather than made here.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.boc.cn/sourcedb/whpj/enindex_1619.html" rel="noopener" title="BOC Exchange Rate — USD row">N01 <span class="pub">Bank of China</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-F03">
+<h2><span class="pri medium">medium</span> N676-F03 · BOC&#x27;s &#x27;Middle Rate&#x27; column is not the mid-point of its own buying and selling rates</h2>
+<dl>
+<dt>What was found</dt><dd>On 2026-11-11 10:25:02 the board shows buying 6.6630, selling 6.6911 and &#x27;Middle Rate&#x27; 6.7191. (6.6630 + 6.6911) / 2 = 6.67705, not 6.7191.</dd>
+<dt>Why it is blank or wrong</dt><dd>Any page that calls the board&#x27;s middle column a &#x27;fair value&#x27; or uses it as a mid-point is mislabelling it. The n676 pages compute their own mid-point, state that they do, and record the board&#x27;s column separately.</dd>
+<dt>How to close it</dt><dd>Nothing to close — disclosed so a reader can reconcile the two numbers.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.boc.cn/sourcedb/whpj/enindex_1619.html" rel="noopener" title="BOC Exchange Rate — USD row">N01 <span class="pub">Bank of China</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-F04">
+<h2><span class="pri medium">medium</span> N676-F04 · 汇发〔2014〕2号 is published on a branch site marked （已修改）</h2>
+<dl>
+<dt>What was found</dt><dd>The page carries an amendment note: 汇发〔2023〕28号 annex 4 modifies items (一) and (二) of section 3.</dd>
+<dt>Why it is blank or wrong</dt><dd>Section 6 — the part this site relies on for emigrant and inheritance transfers — is not among the amended items, but the page does not certify that the list is exhaustive.</dd>
+<dt>How to close it</dt><dd>Confirm section 6 against the current consolidated text on the SAFE head-office site before filing. Logged as an open item.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" rel="noopener" title="（已修改）国家外汇管理局关于进一步改进和调整资本项目外汇管理政策的通知 (汇发〔2014〕2号)">N08 <span class="pub">SAFE (republished by Tianjin branch)</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-F05">
+<h2><span class="pri medium">medium</span> N676-F05 · The USD 50,000 figure is used for two unrelated rules across the tree</h2>
+<dl>
+<dt>What was found</dt><dd>One is the individual annual convenience amount (汇发〔2020〕14号 art. 55, ID-only purchases, card holders only). The other is the institutional profit-remittance document-review threshold in 汇发〔2014〕2号 §5(1), which applies to companies.</dd>
+<dt>Why it is blank or wrong</dt><dd>Conflating them leads to the belief that a U.S. individual may remit USD 50,000 a year on ID alone, which art. 59 does not permit without a Foreign Permanent Resident ID.</dd>
+<dt>How to close it</dt><dd>Keep the two labelled distinctly on every page. The n676 methods table separates them (M03 vs M09).</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" rel="noopener" title="2024年经常项目外汇政策问答案例（九）, 2024-06-21">N03 <span class="pub">SAFE Tianjin branch</span></a> <a class="s" href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" rel="noopener" title="Same notice — section 5(1), institutional profit remittance">N08b <span class="pub">SAFE (republished by Tianjin branch)</span></a></dd>
+</dl>
+</article>
+<h2>Blank and unverified</h2>
+<p>Left blank on every page rather than estimated or inferred.</p>
+
+<article class="fl" id="N676-U01">
+<h2><span class="pri high">high</span> N676-U01 · Where the money came from</h2>
+<dl>
+<dt>What was found</dt><dd>The brief does not say. Every route on this site is conditioned on it.</dd>
+<dt>Why it is blank or wrong</dt><dd>No document, statement or account history was supplied.</dd>
+<dt>How to close it</dt><dd>See question Q01.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" rel="noopener" title="2024年经常项目外汇政策问答案例（九）, 2024-06-21">N03 <span class="pub">SAFE Tianjin branch</span></a> <a class="s" href="https://www.safe.gov.cn/tianjin/2026/0713/3088.html" rel="noopener" title="2026年外汇管理互联网信息——个人外汇（08）, 2026-07-13">N05 <span class="pub">SAFE Tianjin branch</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U02">
+<h2><span class="pri high">high</span> N676-U02 · What the &#x27;considerable amount of taxes&#x27; actually are</h2>
+<dl>
+<dt>What was found</dt><dd>No tax name, rate, amount, assessment or office is given anywhere in the brief.</dd>
+<dt>Why it is blank or wrong</dt><dd>The phrase is user-reported and cannot be verified from any official source.</dd>
+<dt>How to close it</dt><dd>See question Q02.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" rel="noopener" title="中华人民共和国个人所得税法 (2018 amendment)">N09 <span class="pub">State Taxation Administration</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U03">
+<h2><span class="pri medium">medium</span> N676-U03 · Whether the reader holds a Chinese Foreign Permanent Resident ID</h2>
+<dl>
+<dt>What was found</dt><dd>Decides whether the USD 50,000 annual convenience amount is available at all.</dd>
+<dt>Why it is blank or wrong</dt><dd>Not stated in the brief.</dd>
+<dt>How to close it</dt><dd>See question Q06.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.safe.gov.cn/tianjin/2024/0621/2529.html" rel="noopener" title="2024年经常项目外汇政策问答案例（九）, 2024-06-21">N03 <span class="pub">SAFE Tianjin branch</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U04">
+<h2><span class="pri medium">medium</span> N676-U04 · Intermediary and receiving-bank charges, and the R2 currency-gain basis</h2>
+<dl>
+<dt>What was found</dt><dd>Left blank in every table on this site rather than estimated.</dd>
+<dt>Why it is blank or wrong</dt><dd>No bank publishes correspondent charges, and route R2 involves no conversion, so there is no basis rate to cite.</dd>
+<dt>How to close it</dt><dd>See questions Q08 and Q09.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 (personal e-banking transfer tariff)">N02 <span class="pub">Bank of China</span></a> <a class="s" href="https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm" rel="noopener" title="26 U.S.C. § 988 — Treatment of certain foreign currency transactions">N11 <span class="pub">U.S. Government Publishing Office</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U05">
+<h2><span class="pri medium">medium</span> N676-U05 · PRC individual income tax on bank-deposit interest</h2>
+<dl>
+<dt>What was found</dt><dd>Left blank. The suspension rests on 财税〔2008〕132号, which was not re-opened this pass.</dd>
+<dt>Why it is blank or wrong</dt><dd>Not fetched on 2026-11-11, so no verbatim quote exists for it in this register.</dd>
+<dt>How to close it</dt><dd>Fetch the notice and record it before relying on the exemption.</dd>
+<dt>Source</dt><dd><a class="s" href="https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203286/content.html" rel="noopener" title="财税〔2008〕132号 — savings-deposit interest exemption">N16 <span class="pub">State Taxation Administration</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U06">
+<h2><span class="pri medium">medium</span> N676-U06 · Cash-carrying limits on both sides of the border</h2>
+<dl>
+<dt>What was found</dt><dd>Left blank. Decree 532 art. 15 delegates the limits to SAFE without stating them, and the CBP declaration page was not re-opened this pass.</dd>
+<dt>Why it is blank or wrong</dt><dd>Neither the Chinese limit nor the U.S. threshold and form were verified today.</dd>
+<dt>How to close it</dt><dd>Fetch the SAFE cash-carrying rule and the CBP page before describing this route.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.safe.gov.cn/safe/2008/0806/5321.html" rel="noopener" title="Same regulation — arts. 15, 42, 48">N06b <span class="pub">State Council (via SAFE)</span></a> <a class="s" href="https://www.cbp.gov/travel/us-citizens/know-before-you-go/foreign-currency" rel="noopener" title="Foreign currency — FinCEN Form 105 declaration over USD 10,000">N17 <span class="pub">U.S. Customs and Border Protection</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U07">
+<h2><span class="pri medium">medium</span> N676-U07 · SAFE approval fees and service standards for emigrant and inheritance transfers</h2>
+<dl>
+<dt>What was found</dt><dd>Left blank on every page.</dd>
+<dt>Why it is blank or wrong</dt><dd>The 2014 notice sets the approval route but publishes neither a fee nor a service standard.</dd>
+<dt>How to close it</dt><dd>Ask the SAFE branch in writing for both.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" rel="noopener" title="（已修改）国家外汇管理局关于进一步改进和调整资本项目外汇管理政策的通知 (汇发〔2014〕2号)">N08 <span class="pub">SAFE (republished by Tianjin branch)</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U08">
+<h2><span class="pri medium">medium</span> N676-U08 · No verified remittance route for money received as a gift or with no documents</h2>
+<dl>
+<dt>What was found</dt><dd>Left blank. The methods table records &#x27;no verified route&#x27; rather than a cost.</dd>
+<dt>Why it is blank or wrong</dt><dd>Art. 59 requires source documents that a gift does not generate, and 2004 No. 16 art. 12 refuses applications for property whose lawful source cannot be proven.</dd>
+<dt>How to close it</dt><dd>Ask the branch in writing what it would accept. See question Q16.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.safe.gov.cn/tianjin/2026/0713/3088.html" rel="noopener" title="2026年外汇管理互联网信息——个人外汇（08）, 2026-07-13">N05 <span class="pub">SAFE Tianjin branch</span></a> <a class="s" href="http://m.safe.gov.cn/safe/2004/1116/5461.html" rel="noopener" title="中国人民银行公告[2004]第16号 — 《个人财产对外转移售付汇管理暂行办法》">N07 <span class="pub">People&#x27;s Bank of China</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U09">
+<h2><span class="pri low">low</span> N676-U09 · The &#x27;change unused RMB back&#x27; route (M06)</h2>
+<dl>
+<dt>What was found</dt><dd>Listed with its cap left blank.</dd>
+<dt>Why it is blank or wrong</dt><dd>The SAFE branch answer supporting it was not re-opened on 2026-11-11, so no verbatim quote is held for it in this register.</dd>
+<dt>How to close it</dt><dd>Re-fetch the answer and record it, or drop the row.</dd>
+<dt>Source</dt><dd><span class="blank">no official source</span></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U10">
+<h2><span class="pri low">low</span> N676-U10 · The onward leg of a Hong Kong, Macau or Taiwan routing (M07)</h2>
+<dl>
+<dt>What was found</dt><dd>Only the first leg is priced.</dd>
+<dt>Why it is blank or wrong</dt><dd>No source read here publishes the cost of the second leg or its reporting consequences.</dd>
+<dt>How to close it</dt><dd>Price the full route with the receiving bank.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" rel="noopener" title="中国银行电子银行个人服务转账汇款费率表 (personal e-banking transfer tariff)">N02 <span class="pub">Bank of China</span></a></dd>
+</dl>
+</article>
+<article class="fl" id="N676-U11">
+<h2><span class="pri low">low</span> N676-U11 · The corporate tax leg of a dividend remittance (M09)</h2>
+<dl>
+<dt>What was found</dt><dd>Left blank.</dd>
+<dt>Why it is blank or wrong</dt><dd>Only the 20% individual dividend rate and the institutional document rule were verified. The corporate income tax computation was not read this pass.</dd>
+<dt>How to close it</dt><dd>Needs a corporate adviser and the corporate tax return.</dd>
+<dt>Source</dt><dd><a class="s" href="https://www.safe.gov.cn/tianjin/2024/0903/2594.html" rel="noopener" title="Same notice — section 5(1), institutional profit remittance">N08b <span class="pub">SAFE (republished by Tianjin branch)</span></a> <a class="s" href="https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html" rel="noopener" title="中华人民共和国个人所得税法 (2018 amendment)">N09 <span class="pub">State Taxation Administration</span></a></dd>
+</dl>
+</article>
+
+<footer class="foot">
+<p>Priced from the Bank of China board, 2026-11-11 10:25:02 (Beijing) and Bank of China's published personal transfer tariff.
+Every figure links to the official page it was read from on 2026-11-11.
+Anything that could not be confirmed is left blank and listed under
+<a href="n676-flagged.html">Flagged</a>.</p>
+<p>Research from public official sources. Not legal, tax or banking advice.
+Earlier research passes by other sessions are listed on the
+<a href="dashboard/archive.html">Archive</a>.</p>
+</footer>
+</div></main>
+</body>
+</html>

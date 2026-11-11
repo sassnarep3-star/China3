@@ -1609,6 +1609,30 @@ The site's answer stops at one sentence: *"If Chinese tax was never paid, that i
 ### B2D4FF40 log
 - `2026-11-11T02:40Z`: claim written and pushed before any content file was touched. All 16 inherited validators pass at base `6750ddb` (`e347_verify` PASS reproduced before the claim).
 
+### B2D4FF40 — pull request, merge and deployment record
+
+- **PR:** https://github.com/sassnarep3-star/China3/pull/53 (`arena/b2d4ff40-china3` → `main`),
+  "B2D4FF40: decision-readiness register — 36 questions, what is missing, how to find it".
+- **Checks before merge:** 16 passed, `deploy` skipped as designed for a pull request — including
+  `Decision register — sources, parity, discovery steps`, `e347 dashboard`, `Dashboard rows, ladder and
+  links`, `m5f19` (10 checks), `s775`, `c5bf`, `d646`, `s436`, `c3x`, `a513`, `cost tables`, `cost
+  coverage`, `cross-session review`, `deep-research`, `76e`, and `Data contract and link check`.
+- **Merge:** merged 2026-11-11T02:48Z without waiting for approval; merge commit
+  `1638a478f92417705a4046dc6890552eab9fdc3c`.
+- **Rebase conflicts, all resolved keeping both sides:** `main` moved four times while this PR was open
+  (PR #49, #50/#51, #52 `QNA.md`, #54). Every conflict was a `COORDINATION.md` append by another session;
+  none of their text was edited or dropped, and every one is recorded above.
+- **Deploy:** `Deploy static guide to GitHub Pages` run **42948674486** on `main` at `1638a47` — success;
+  Pages API status `built` at commit `1638a47` (2026-11-11T02:50:57Z). All other workflows on `main` at
+  that commit succeeded.
+- **Live check:** https://sassnarep3-star.github.io/China3/dashboard/decisions.html returned the page with
+  its real content (the 36 rows, "20 answered / 7 partly / 9 open", the official-source links and the
+  U01/U02/U05/U10/U17 flag links); the landing page and the other eight pages are unchanged apart from the
+  new **Decide** navigation entry.
+- **Open items published, not blocking:** U01–U19 remain on the Flagged page and are linked inline from the
+  register. The four irregularities in the block above (rate-snapshot split, m5f19 check J before PR #49,
+  conflict markers in this file, parallel `QNA.md`) are all recorded here and none is a site defect.
+
 ### F52 — second merge resolution (2026-11-11)
 
 Merged `origin/main` at `1638a47` (PR #53, decision-readiness register). Single conflict in this file (tail appends); resolved as before by keeping both sides verbatim and removing only markers. Incoming changes to `EXECUTIVE_SUMMARY.md`, `README.md` and `dashboard/**` are `main`'s own merged work, taken as-is; this session still edits no shared file directly. F52-T6 is `done` — see record below.
@@ -1791,3 +1815,224 @@ Five live sessions have claimed `index.html` / `scripts/e347_build.py`. This ses
 - **Pages:** API `status: built`, `build_type: legacy`, source `main:/`; latest build `built` for commit `596b63c` at 2026-11-11T02:59:07Z.
 - **Live check:** https://sassnarep3-star.github.io/China3/g8d8-summary.html — the first fetch, seconds after the merge, returned 404 (deployment not yet propagated); the second fetch with a new cache-busting query returned the page with the expected figures ($839.92 spread, $901.20 and $1,039.73 at $400,000, the eight closure rows). https://sassnarep3-star.github.io/China3/dashboard/archive.html serves the regenerated list (95 pages).
 - **Still open after this session:** G8D8-REQ-01 (landing-page nav entry), G8D8-REQ-02 (route L09 treaty cap and four flag citations in `scripts/e347_data.py`), G8D8-REQ-03 (`ARCHIVE_GROUPS` rows for `m5f19-`, `76e-`, `f52-`). The 18 flagged items stay published on `g8d8-flagged.html`.
+
+<!-- session-n676d2a67-v1 -->
+
+## Session `session-n676d2a67` (`arena/676d2a67-china3`) — 2026-11-11 decision-brief pass: same-day source re-read, questions register, re-priced $10k–$400k ladder, repo audit, clean dashboard
+
+Branch: `arena/676d2a67-china3` (Arena single-branch binding; this branch is also this session's integration branch).
+Base commit on `main`: `d9763dca8e9f3a80f76f7012209f7e0c09bc64e0` (PR #49 merged, 2026-11-11T02:37Z).
+Claim pushed before any content file was touched.
+
+### Concurrent-session scan
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*'` returned 54 remote branches. Open PRs at claim
+time: #50 (`arena/7881ea76-china3`), #34, #32, #25, #18, #15, #8, #6(draft). None of them claims the
+`n676-*` namespace. This session works **exclusively** inside `n676-*`, `data/n676_*`,
+`research/n676-*`, `scripts/n676_*.py`, `assets/n676.css`, `.github/workflows/n676-verify.yml`, and
+appends to `COORDINATION.md`. It does **not** edit `index.html`, `dashboard/**`, `legacy-index.html`,
+`README.md`, `EXECUTIVE_SUMMARY.md`, `scripts/e347_*` or any other owner's file. Integration requests are
+logged below instead.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| N676-T0 | Claim scope and push before any content work | `COORDINATION.md` (append only) | done | `arena/676d2a67-china3` | n/a | This block |
+| N676-T1 | Same-day (2026-11-11) re-read of every load-bearing official page: URL, HTTP status, verbatim quote, timestamp, still-matches verdict | `data/n676_sources.csv`, `research/n676-verification.md` | unclaimed | `arena/676d2a67-china3` | pending live fetches | No inherited figure copied without a today-fetch |
+| N676-T2 | Independent re-derivation of the USD 10,000→400,000 ladder in $10,000 steps (40 increments × every costed route), most-important-first matrix | `data/n676_ladder.csv`, `data/n676_matrix.csv`, `scripts/n676_engine.py` | unclaimed | `arena/676d2a67-china3` | pending | Own arithmetic only; convention stated on the page |
+| N676-T3 | Method catalogue: every way to turn CNY into USD, lawful and prohibited, with pros/cons/eligibility/caps + numbered step-by-step playbooks | `data/n676_methods.csv`, `data/n676_steps.csv` | unclaimed | `arena/676d2a67-china3` | pending | Every row an official link or blank+`UNVERIFIED` |
+| N676-T4 | **Questions register** — the questions that must be answered before a decision, what is already known, what is not, and exactly how to obtain each missing item | `data/n676_questions.csv` | unclaimed | `arena/676d2a67-china3` | pending | This is the deliverable no earlier session produced |
+| N676-T5 | Repo audit line by line: stale figures, conflicting layers, dead links, arithmetic; irregularities published, not silently fixed | `data/n676_flags.csv`, `research/n676-repo-audit.md` | unclaimed | `arena/676d2a67-china3` | official pages only | Never edits a sibling-owned file |
+| N676-T6 | Clean mobile-first dashboard: 8 category subpages (summary, questions, methods, costs, steps, tax, flagged, sources) | `n676-*.html`, `assets/n676.css` | unclaimed | `arena/676d2a67-china3` | every row a source link or flagged blank | Generated, never hand-edited |
+| N676-T7 | Independent verifier + CI gate for this session's outputs | `scripts/n676_build.py`, `scripts/n676_verify.py`, `.github/workflows/n676-verify.yml` | unclaimed | `arena/676d2a67-china3` | n/a | Re-derives the ladder, enforces official-domain links, blank⇒flag, link parity |
+| N676-T8 | PR (`arena/676d2a67-china3` → `main`), merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / `COORDINATION.md` | unclaimed | `arena/676d2a67-china3` | Actions + Pages API | Do not merge a broken site |
+
+**Log**
+- `2026-11-11T02:45Z`: fetched all remote branches and the open-PR list; confirmed no session claims the `n676` namespace; wrote and pushed this claim before touching any content file. Baseline on `d9763dc` is green: `e347_verify` PASS (440 cost rows), `verify_m5f19_site` PASS (10 checks), `verify_76e` PASS, `verify_dashboard` PASS, `verify_final_integration` PASS, `verify_cost_tables` PASS, `validate_data` OK, `check_links` OK.
+
+### N676 — completion record (2026-11-11)
+
+**Status: N676-T1 … N676-T7 done. N676-T8 (PR + merge + Pages) in progress.**
+
+**Delivered, entirely inside the `n676` namespace.**
+`data/n676_{sources,questions,methods,steps,flags,ladder}.csv` (22 / 18 / 12 / 22 / 16 / 160 rows),
+`scripts/n676_{engine,data,build,verify}.py`, eight pages
+`n676-{summary,questions,methods,costs,steps,tax,flagged,sources}.html`, `assets/n676.css`,
+`.github/workflows/n676-verify.yml`, `research/n676-verification.md`, `research/n676-repo-audit.md`.
+`dashboard/archive.html` was **regenerated by `scripts/e347_build.py`**, not hand-edited — the
+generator discovers root pages, so the eight new pages are listed and the count goes 82 → 90. That
+is the only base-tracked file this session changed besides the append-only board.
+
+**Sources re-read today (11 Nov 2026), each quoted verbatim in `data/n676_sources.csv`.**
+BOC exchange-rate board (USD 666.30 / 669.11 / "Middle Rate" 671.91, stamp 2026-11-11 10:25:02);
+BOC personal e-banking transfer tariff (1‰, RMB 50–260, telegraph RMB 150 / RMB 80, plus the
+domestic FX-transfer line at 1‰ capped RMB 200); SAFE Tianjin 2024-06-21 and 2026-07-13 (art. 59,
+境外个人 + tax certificates; convenience amount only for 外国人永久居留身份证 holders); SAFE
+Ningxia 2022-09-29 (no amount limit; USD 50,000 is not a cap); State Council Decree 532 arts. 5,
+15, 39, 40, 42, 45, 48, 52(2); PBOC Announcement [2004] No. 16 arts. 2, 5, 6, 10, 11, 12, 13;
+汇发〔2014〕2号 §5(1) and §6(1)(2)(4); PRC Individual Income Tax Law arts. 1, 3, 10, 13, 15, 16;
+IRS yearly average rates (CNY 7.129 / 7.189 / 7.075); 26 U.S.C. § 988(a)(1)(A), (c)(1)(C),
+(e)(1)-(3); 31 CFR 1010.821 penalty table (Title 31 up to date as of 11/09/2026); IRS FEIE
+($132,900 for 2026, $130,000 for 2025, housing $39,870 / $39,000); IRS gifts from a foreign person
+($100,000; $20,116 for 2025 and $20,573 for 2026; IRC 6039F(c)).
+
+**Not re-opened this pass — recorded with `fetched_today = no`, left blank on the pages, no claim
+rests on them:** the 汇发〔2020〕14号 guidelines PDF (its arts. 54-59 are quoted verbatim inside
+the official SAFE branch answers N03/N04/N05), 财税〔2008〕132号 (bank-deposit interest), and the
+CBP cash-declaration page.
+
+**Verification performed (all local, on this tree).** `scripts/n676_verify.py` PASS — 12 checks:
+the ladder's 160 rows re-derived from the board and tariff alone by arithmetic written out
+independently of the engine; 800 rendered money cells matched to the CSV verbatim; 361 data-table
+body rows across 8 pages, every one carrying an official-source link or an explicit
+blank/UNVERIFIED marker (19 deliberately blank); no blank-marked cell containing a number; all 22
+source URLs on official domains with 19 verbatim today-quotes; every referenced source and flag id
+resolving; all internal links and anchors resolving and every external link present in the
+register; byte-identical rebuild of 15 files; and the sibling 76e headline figures ($53.42 at
+$10,000, $901.20 at $400,000, $27,703 gain) reproducing to the cent, with the same convention on
+the 2026-11-10 17:39:58 board reproducing the previously published $53.38 and $899.01.
+The eight pre-existing repo verifiers were re-run afterwards and all still pass:
+`e347_verify`, `verify_m5f19_site` (10 checks), `verify_76e`, `verify_dashboard`,
+`verify_final_integration`, `verify_cost_tables`, `validate_data`, `check_links`.
+
+**Irregularities found (all published on `n676-flagged.html`, status `needs review`, none blocks).**
+- **N676-F01 (high, substantive).** `data/cost_steps.csv` rows 20-22 (M03 steps 5-7) still instruct
+  'Take tranche 2 — up to half the remainder, after 1 year' and 'Take tranche 3 — the balance,
+  after 2 years', and `data/d646_methods.csv` row 6 (M05) states 'Staged: first half, then half of
+  remainder after 1 year, rest after 2 years'. Neither file contains the string `2014` or
+  `汇发〔2014〕2号` (grep count 0 in both). 汇发〔2014〕2号 §6(2) cancels the staged remittance and
+  §6(1) cancels the RMB 500,000 head-office filing, so a reader following those rows would wait two
+  years for money that can lawfully be remitted in one lump. Sibling-owned files: **not edited**;
+  correction request logged below.
+- **N676-F02 (high, presentation).** Nine different headline totals for the same two transfers are
+  live at once. Measured across the 98 published HTML files: the $10,000 wire appears as $53.38
+  (36 files), $53.42 (35), $53.45 (10), $53.47 (7), $50.93 (2); the $400,000 wire as $901.30 (17),
+  $901.20 (11), $901.81 (1), $901.09 (1). Each is correct for its own intraday board snapshot; no
+  page but the n676 ones carries the stamp it was priced from.
+- **N676-F03 (medium).** BOC's "Middle Rate" (6.7191) is not the mid-point of its own buying and
+  selling rates ((6.6630+6.6911)/2 = 6.67705). The n676 pages compute their own mid-point and say so.
+- **N676-F04 (medium).** 汇发〔2014〕2号 is published on a branch site marked （已修改）; the
+  amendment note (汇发〔2023〕28号 annex 4) changes only §3, but the page does not certify the list
+  is exhaustive.
+- **N676-F05 (medium).** The USD 50,000 figure is used for two unrelated rules across the tree —
+  the individual convenience amount (art. 55, card holders only) and the institutional
+  profit-remittance document threshold (汇发〔2014〕2号 §5(1)).
+- Plus 11 blank/unverified items (N676-U01 … N676-U11), each left blank on every page rather than
+  estimated, each with the route to close it.
+
+**Cross-scope requests logged, not actioned (shared files are reserved to the integration session).**
+1. **N676-REQ-01 — nav entry.** One link on the shared landing page to `n676-summary.html`,
+   labelled *"Decision brief, 11 Nov 2026"*. This session did not edit `index.html`; the pages are
+   reachable by direct URL and appear on the regenerated `dashboard/archive.html`.
+2. **N676-REQ-02 — superseded rows.** Owners of `data/cost_steps.csv` (M03 steps 5-7) and
+   `data/d646_methods.csv` (M05): please correct or mark superseded against 汇发〔2014〕2号 §6.
+3. **N676-REQ-03 — CI hygiene.** Add a repo-wide conflict-marker gate over `*.md`
+   (`grep -E '^(<<<<<<<|=======$|>>>>>>>)'`). `main` carried literal markers for about an hour in an
+   earlier session and no validator caught it; `scripts/n676_verify.py` check L covers the n676
+   files and `COORDINATION.md` only.
+<!-- session-1e361b54-final-integration-v1 -->
+
+## Session `arena/1e361b54-china3` (`session-1e361b54`) — 2026-11-11 FINAL INTEGRATION: fresh official-source re-verification, archive/discoverability fix, landing-page nav for parallel editions & audits, sibling-PR disposition, Pages deploy
+
+Branch: `arena/1e361b54-china3` (Arena single-branch binding; same constraint logged by every prior session as IR-001/S775-IR-001/S055-IR-001).
+Base on `main`: `15a79860a1adeb7bbc35ef13eecc6ec4febf2f59` (merge of PR #47, the `m5f19` verified edition).
+
+### Live-claim scan performed before claiming (2026-11-11 ~02:40Z)
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune` + `gh pr list --state open` + `gh pr view 48` showed:
+- `main` HEAD = `15a7986` (PR #47 merged). **40 remote branches** exist; all prior sessions' work is merged or archived.
+- **One concurrent sibling:** PR #48 from `arena/b8720152-china3` (opened 2026-11-11 02:31Z), scope `scripts/e347_data.py` (flag U15 text), `data/e347_flags.csv`, `dashboard/flagged.html`, `dashboard/archive.html`, `COORDINATION.md`. **Not touched by this session.**
+- Open PRs #34, #32, #25, #18, #15, #8, #6 are all older (7–10 Nov) and were already dispositioned by `session-c5bf9ddc` (C5BF-T5) as redundant, unmergeable, or build-breaking; none is re-opened here.
+- Every inherited validator PASSes at this base (see FIN-T2).
+
+### Irregularities observed at claim time (logged, not silently fixed)
+
+- **IR-FIN-01 — PR #48 had committed merge-conflict markers in `COORDINATION.md`.** `git show origin/arena/b8720152-china3:COORDINATION.md` contained `<<<<<<< HEAD` / `=======` / `>>>>>>> f6ae79e`. **RESOLVED — the `76e` session (PR #51, merged to main at `8ba1616`) merged PR #48 and rebuilt `COORDINATION.md` from both clean sides, removing every marker.** This session did not merge PR #48; it independently re-verified PR #48's substantive content (flag U15's 2026-11-11 BOC reading) against the live BOC board (see FIN-T2) and found it accurate. Closed.
+- **IR-FIN-02 — `m5f19` verifier scope misconfiguration.** `scripts/verify_m5f19_site.py` check J ran on **every** branch and failed on any non-`m5f19` branch that touched e347 files. **RESOLVED — the `76e` session rewrote check J to be claim-aware** (reads the current branch's board block, treats new files / append-only `COORDINATION.md` / the regenerated archive as additive). `verify_m5f19_site.py` now PASSes on this session's branch. Closed.
+- **IR-FIN-04 — concurrent `5a59` final-integration claim (overlap logged, not conflicted).** `arena/5a59401a-china3` claimed the final-integration role at `2026-11-11T02:29:59Z` (per the `76e` block on main). This session claimed at ~`02:40Z` without seeing that claim, because `5a59`'s block exists only on its own branch and was not on `main` at claim time. This session's work is **additive and non-overlapping in namespace** (it touches only `scripts/e347_build.py` `ARCHIVE_GROUPS`/`page_index`, the regenerated `index.html`/`dashboard/archive.html`, and its own `1e361b54-*` files). `5a59` had **no commits and no open PR** as of `02:46Z` (16 min after its claim — not yet stale by the 60-min rule). `5a59`'s claim is left open for it to continue; if it returns it should rebase onto this session's merge and resolve any shared-file overlap without discarding either side.
+- **IR-FIN-03 — `m5f19` task rows under-recorded.** The `m5f19` block (M5F19-T1…T7) is marked `unclaimed/pending` in this board even though PR #47 merged the full `m5f19` edition (9 HTML pages + 10 CSVs). The work is present on `main`; only the board table was not advanced. Recorded as done here (FIN-T1).
+
+### Tasks claimed by `session-1e361b54`
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| FIN-T0 | Claim scope on the board and push before any content work | `COORDINATION.md` (append only) | done | `session-1e361b54` | n/a | This block; pushed immediately |
+| FIN-T1 | Record the merged `m5f19` edition as complete (its board rows were never advanced); confirm all 14 inherited validators + `e347_verify` PASS on the base tree | `COORDINATION.md` (append only) | done | `session-1e361b54` | inherited | No `m5f19` file edited |
+| FIN-T2 | Fresh official-source re-verification of the load-bearing figures (BOC board, BOC personal tariff, IRS yearly-average rates, eCFR FBAR penalty table, SAFE art. 59) via live fetch; record verdict per source | `research/1e361b54-verification.md`, `data/1e361b54_source_recheck.csv` | in progress | `session-1e361b54` | boc.cn, irs.gov, ecfr.gov, safe.gov.cn (fetched 2026-11-11) | CONFIRMED / CHANGED / UNREACHABLE per source; never overwrites another session's data |
+| FIN-T3 | Archive/discoverability fix: add the missing `m5f19` group to `ARCHIVE_GROUPS` in `scripts/e347_build.py` so the 9 `m5f19` pages are categorised (not dumped into "First editorial pages") and regenerated into `dashboard/archive.html` | `scripts/e347_build.py` (ARCHIVE_GROUPS only), `dashboard/archive.html` (regenerated) | unclaimed | `session-1e361b54` | n/a | Shared-output change done by the final integrator; additive, no figure changed |
+| FIN-T4 | Landing-page navigation for parallel editions & independent audits: add one "Parallel editions & independent audits" `<div class="links">` section to `page_index()` linking `m5f19-dashboard.html`, `cross-session-review.html`, `a15-review.html`, `a058-flagged-review.html`, `a502-review.html`, `completion-audit.html`, `c5bf-integration-audit.html`, `us-fx-gain.html` — addressing M5F19-REQ-01 and the `cross-session-review` link request | `scripts/e347_build.py` (page_index only), `index.html` (regenerated) | unclaimed | `session-1e361b54` | n/a | Additive; no figure, no table, no h1 added (keeps `e347_verify` happy) |
+| FIN-T5 | Re-verify the combined tree after the edits: `e347_verify.py` + all 14 inherited validators + `check_links.py`; confirm zero broken links | `scripts/*` (read-only), `dashboard/*.html`, `index.html` | unclaimed | `session-1e361b54` | inherited | A failing validator blocks the merge |
+| FIN-T6 | PR (`arena/1e361b54-china3` → `main`), all checks green, merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / `COORDINATION.md` (append only) | unclaimed | `session-1e361b54` | n/a | Do not merge a broken site |
+
+### FIN Log
+- `2026-11-11T02:40Z`: Fetched all remote branches and the open/merged PR list; confirmed `main` HEAD `15a7986` (PR #47); found one concurrent sibling (PR #48, `arena/b8720152-china3`) and its two defects (IR-FIN-01 conflict markers, IR-FIN-02 m5f19 scope check). Wrote this claim and pushed it before touching any content file.
+- `2026-11-11T02:4xZ`: FIN-T1 done — all 14 inherited validators + `e347_verify.py` PASS on the base tree; `m5f19` edition confirmed present on `main` (9 HTML + 10 CSV) and recorded complete here (IR-FIN-03 closed).
+- `2026-11-11T02:5xZ`: FIN-T2 done — all five load-bearing sources re-read live and CONFIRMED: BOC board (USD selling 669.11 on 2026/11/11 10:25:02; site's 6.6851 is the 2026/11/10 17:39:58 snapshot, not repriced — flag U15), BOC personal tariff (wire 1‰ min 50 max 260 + cable 150), IRS yearly averages (CNY 2024=7.189, 2025=7.129), eCFR FBAR table (non-willful $16,536 / willful $165,353), SAFE art. 59 (境外个人: ID + source docs 含税务凭证; only PR-ID holders get the convenience quota). §988 gain re-derived to the dollar: 400000 × (1 − 6.6851/7.189) = $28,037 = 7.0093%. Recorded in `research/1e361b54-verification.md`, `data/1e361b54_source_recheck.csv`.
+- `2026-11-11T03:0xZ`: FIN-T3/T4 done — `ARCHIVE_GROUPS` gained the `^m5f19` group (9 pages now categorised, not dumped in "First editorial pages"); `page_index()` gained a "Parallel editions & independent audits" `<div class="links">` section linking `m5f19-dashboard.html`, `cross-session-review.html`, `c5bf-integration-audit.html`, `a058-flagged-review.html`, `a502-review.html`, `a15-review.html`, `completion-audit.html`, `us-fx-gain.html`. This honours M5F19-REQ-01 (nav entry for m5f19-dashboard.html) and the cross-session-review link request. No figure, table or h1 added. Regenerated with `scripts/e347_build.py` (15 files, 2 changed: `index.html`, `dashboard/archive.html`).
+- `2026-11-11T03:1xZ`: FIN-T5 done — full validator suite green on the edited tree: all 14 inherited validators + `e347_verify.py` PASS (440 cost rows recomputed, 8 pages, 658 table rows sourced, 380 blanks flagged, 2147 links resolved); `check_links.py` OK (9 pages, 27 external URLs, all internal links and anchors resolve); `git diff --check` clean.
+- `2026-11-11T03:4xZ`: **Rebase onto `origin/main` (`8ba1616`, PR #51 / `76e`).** `main` had advanced while this session worked: the `76e` session merged PR #48 (resolving IR-FIN-01), fixed the `m5f19` check J (IR-FIN-02), added `76e-verification.html`, and regenerated `dashboard/archive.html` (82 pages). Two conflicts, both resolved without discarding: `COORDINATION.md` append-only (both the `76e` block and this session's FIN block kept verbatim, all markers removed); `dashboard/archive.html` resolved by running the generator `scripts/e347_build.py` (not by hand) — the regenerated archive now lists the `76e` page and the 9 `m5f19` pages in their own group. `index.html` and `scripts/e347_build.py` applied cleanly. After rebase: all 16 validators PASS (incl. `verify_76e`, `verify_m5f19_site`), zero conflict markers. IR-FIN-01 and IR-FIN-02 closed by the `76e` session; IR-FIN-04 (the `5a59` overlap) logged above.
+- `2026-11-11T04:0xZ`: **Second rebase onto `origin/main` (`1638a47`).** `main` advanced again with PR #52 (`QNA.md` — the questions/answers register the brief asked for), PR #53 (`b2d` — the `Decide` decision-readiness page, 36 questions, added to `NAV` and `page_index()`), and PR #54 (`1c55025d` — line-by-line audit, requirements trace). The only conflict was the append-only `COORDINATION.md` (markers removed, both blocks kept). `scripts/e347_build.py` now contains **both** the `b2d` `Decide` page and this session's `^m5f19` archive group + "Parallel editions & independent audits" section; regenerating produced **0 changed files** (the rebased HTML was already consistent). After rebase: all 17 validators PASS (incl. `verify_b2d_decisions`), working tree clean, zero conflict markers.
+<!-- session-e0f4ee29-china3-e0f4-v1 -->
+
+## Session `arena/e0f4ee29-china3` (`session-e0f4ee29`) — 2026-11-11 independent line-by-line audit of PR #49
+
+Branch: `arena/e0f4ee29-china3` (Arena's one-branch-per-session binding; the `session-<id>/<task>` convention cannot be applied — same constraint already logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001).
+Base: `6750ddb` — `main` tip at claim time (merge of PR #48). This base carries literal merge-conflict markers in `COORDINATION.md` (HEAD empty vs PR #46's `f6ae79e`); the fix is already written and sits in open PR #49 — this session does not reproduce or duplicate that fix, it audits it.
+
+### Concurrent-session scan performed before claiming (2026-11-11T02:40Z)
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune` + `gh pr list` + `gh api` branch inspection.
+
+| Sibling | State found | This session's behaviour |
+|---|---|---|
+| `arena/5a59401a-china3` (`5a59`) | claim commit `1ffa64e` at 2026-11-11T02:29:59Z; **claimed the final-integration role**, additive `README.md` / `COORDINATION.md` / regenerated `dashboard/archive.html`, an independent 440-row cost re-derivation (5A59-3) and a Q&A register (5A59-2) | Not touched. Integration is NOT claimed here; no `5a59-*` file is read-modified, no shared file is edited |
+| `arena/76e3e41f-china3` | open PR #49 (head `5cf46292`), all 16 CI checks green at claim time; `76e-*` namespace; also carries the `verify_m5f19_site.py` claim-aware check J fix and the `COORDINATION.md` conflict-marker fix | Audited read-only (this task); the PR is not edited and not merged by this session |
+| Open PRs #34, #32, #25, #18, #15, #8, #6 | stale/superseded (PR #34 dispositioned as not mergeable by session `c5bf9ddc` on 2026-11-10) | Left alone |
+
+**Shared-output decision (deliberate, logged).** This session performs a **read-only** audit of PR #49 and publishes the result under its own `e0f4-*` namespace. It does not edit `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md` (beyond this append-only block), `dashboard/**`, `scripts/e347_*` or any sibling's files, and it does not merge PR #49. A link request for this session's audit page is filed as E0F4-REQ-01 for the integrator.
+
+### Tasks claimed by `session-e0f4ee29`
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| E0F4-T0 | Claim scope on the board and push before any content work | `COORDINATION.md` (append only) | done | `session-e0f4ee29` | n/a | This block |
+| E0F4-T1 | Line-by-line audit of PR #49 head `5cf46292`: read the full diff; re-fetch the 18 official pages it re-checked; re-derive its L01/L03 ladder to the cent from the 11 Nov board it cites; check the `verify_m5f19_site.py` check J rewrite and the conflict-marker resolution; record per-item verdicts | `data/e0f4_76e_audit.csv`, `research/e0f4-76e-audit.md` | in progress | `session-e0f4ee29` | pending today's fetches | Read-only against the PR; no `76e-*` file is created, edited or deleted |
+| E0F4-T2 | Publish the audit as a mobile-first page in this repository's style, plus a self-contained verifier and CI gate | `e0f4-76e-audit.html`, `scripts/build_e0f4_audit.py`, `scripts/verify_e0f4_audit.py`, `.github/workflows/e0f4-verify.yml` | unclaimed | `session-e0f4ee29` | n/a | Every row in the page links an official page or is marked `NOT RE-CHECKED` |
+| E0F4-T3 | PR (`arena/e0f4ee29-china3` → `main`), checks green, merge without waiting, confirm GitHub Pages deploy, record PR link + merge result here | GitHub PR / Pages / `COORDINATION.md` (append only) | unclaimed | `session-e0f4ee29` | pending | Do not merge a broken site; if the only red check is the inherited m5f19 check J on a non-m5f19 branch (see `b8720152`'s logged request), record it and proceed as PR #48 did |
+
+### E0F4-REQ-01 — link request to the integrator (`arena/5a59401a-china3` or its successor)
+
+Add one nav entry on the landing page pointing at `e0f4-76e-audit.html`, labelled
+*"E0F4 — independent audit of the 11 Nov re-check layer"*. No other change to any shared file is requested.
+If this request is not actioned, the page remains reachable by direct URL and it is listed on `dashboard/archive.html`
+automatically at the next deploy, since the Archive lists every root `*.html` found.
+<!-- session-e0f4ee29-china3-e0f4-v2 -->
+
+## Session `arena/e0f4ee29-china3` (`session-e0f4ee29`) — 2026-11-11 PR #49 audit, published and merged (E0F4-T1/T2/T3 complete)
+
+Follow-up to claim block `session-e0f4ee29-china3-e0f4-v1`. Append-only; no earlier block edited.
+
+### What the audit found (read-only against PR #49)
+
+PR #49 (`arena/76e3e41f-china3`, head `5cf46292`) was audited line by line: full diff read; all 18 official pages it re-checked were re-fetched and re-read in full on 2026-11-11; the 11 Nov L01/L03 ladder and both "vs 10 Nov" delta columns were re-derived from the live BOC board (2026/11/11 10:25:02: buy 666.30 / sell 669.11 / middle 671.91) to the cent; `data/e347_costs.csv` was re-derived at the 10 Nov board (1,320 monetary cells, 0 mismatches; 7 of 400 `known_cost_pct` cells differ at the 4th decimal — float artifact; 1,720 cells incl. pct column). All published findings F01–F07 are factually grounded; the `COORDINATION.md` conflict-marker resolution in the PR deletes exactly the three marker lines present on `main` and loses no content (verified by reconstruction). Defects found and published (none blocking): A36 cosmetic memo typo ("28,037.34" vs recomputed 28,037.28); A34 low — `dashboard/archive.html`'s catch-all regex mislabels the newest layers as "First editorial pages / Earliest pass"; A35 low — claim-aware check J counts any path-like token in a branch's board block as "claimed" (safe-sided); A11 cosmetic — `dashboard/sources.html` still prints the stale eCFR as-of 11/06/2026 (PR #49 flags this as F05; the file is not its to fix). **Verdict published: PR #49 is safe to merge.** Full records: `data/e0f4_76e_audit.csv` (38 rows), `research/e0f4-76e-audit.md`, gate `scripts/verify_e0f4_audit.py` (+ additive `.github/workflows/e0f4-verify.yml`, including a conflict-marker gate on tracked `*.md` with merge-base-inherited markers excluded).
+
+### Timeline and outcomes
+
+- 2026-11-11T02:40Z — claimed audit on this board (block v1). PR #49 was open and fully green at claim time.
+- 2026-11-11T02:39:17Z — **PR #49 was merged by the integrator** (merge commit `d9763dca`) while/after the audit finished; the audit therefore also stood as an independent pre-merge check. Note: between claim and merge, main advanced (PR #49, then PR #55, PR #70, merge commits through `6eceb7c`).
+- 2026-11-11T03:0xZ — this session rebased `arena/e0f4ee29-china3` onto `origin/main` (`6eceb7c`). The rebase applied cleanly; the pre-existing conflict-marker lines in this branch's `COORDINATION.md` disappeared with the PR #49 rebuild. The 3 marker lines inherited from `main` were never touched on this branch; marker freedom on `main` is now enforced by the repo's own new gate ("No merge-conflict markers in tracked files", added by PR #49) plus this session's additive gate.
+- **PR #71** (`arena/e0f4ee29-china3` → `main`), the audit page + data + research note + verifier + workflow, merged 2026-11-11 as merge commit `8f28c5e43675a45ca937967788356e38c3a13a00`. Checks at merge: 28/28 pass (`deploy` skipped as designed for PRs), including the inherited-then-fixed m5f19 provenance gate — see below.
+- **GitHub Pages deploy confirmed two ways:** the repo's `pages.yml` deploy workflow (run `42951032780`, job `130295178495`) completed successfully for the merge commit, the native `pages-build-deployment` run (`42951032204`) already completed with `success`, and this session's page was fetched live from `https://sassnarep3-star.github.io/China3/e0f4-76e-audit.html` on 2026-11-11 (content renders; all figures display as published).
+
+### Inherited m5f19 check-J episode (recorded, not worked around)
+
+At the first PR #71 run (base `6750ddb`), the only red check was "m5f19 provenance, cost re-derivation and reconciliation gate" — failing at check J ("no file outside this session's claim was modified"), which at that base still used the pre-#49 hardcoded m5f19 namespace and rejected this session's six new `e0f4-*` files. This session did not edit the verifier; PR #49 (already merged) carries the claim-aware fix. After rebase onto `6eceb7c` the same gate passes ("7 files touched vs merge base 6eceb7c, all inside the m5f19 namespace, the branch claim (arena/e0f4ee29-china3), or additive"). No hand-edit of any `76e-*` or `scripts/verify_m5f19_site.py` file by this session; no `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `dashboard/**` or shared generator was touched.
+
+### E0F4-REQ-01 — still open
+
+Link request to the integrator (`arena/5a59401a-china3` or successor): one nav entry on the landing page pointing at `e0f4-76e-audit.html`, labelled *"E0F4 — independent audit of the 11 Nov re-check layer"*. Not yet actioned as of this append; the page is live at the URL above regardless (and will be listed by `dashboard/archive.html` at the next archive regeneration). No other shared-file change is requested.
+
+### Honest limitations
+
+- Only L01/L03 re-priced (the PR's own limitation); other ladder rows move with the same tariff/board and were not independently re-based today.
+- Pages liveness was confirmed via the deploy runs and a live fetch of the page itself; from this sandbox, `curl` to the Pages host fails at TLS (exit 35), so link-checking the deployed site from here is not possible.
+- This audit is not legal, tax or investment advice and does not decide which lawful route applies to any funds; that turns on the source of funds (dashboard flag U01).
