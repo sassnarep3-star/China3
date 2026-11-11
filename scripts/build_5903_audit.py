@@ -205,6 +205,15 @@ def render(checks, costs, now_rows):
             f'<td data-label="Fee">{r["fee"]}</td>'
             f'<td data-label="Total today"><b>{r["total"]}</b></td></tr>')
 
+    st_counts = {k: sum(1 for r in D.REQUESTS if r[4] == k) for k in ("applied", "partly applied", "open")}
+    request_rows = "\n".join(
+        f'<tr><td data-label="Request"><b>{esc(r[0])}</b></td>'
+        f'<td data-label="File"><code>{esc(r[1])}</code></td>'
+        f'<td data-label="Change">{esc(r[2])}</td>'
+        f'<td data-label="Why">{esc(r[3])}</td>'
+        f'<td data-label="Status"><span class="pill {"ok" if r[4] == "applied" else ("warn" if r[4] == "partly applied" else "bad")}">{esc(r[4])}</span>'
+        f'<div class="why">{esc(r[5])}</div></td></tr>'
+        for r in D.REQUESTS)
     n_ok = counts["confirmed"]
     n_bad = counts["contradiction"]
     n_blank = counts["not re-checked"]
@@ -252,7 +261,8 @@ def render(checks, costs, now_rows):
 <li><b>Two rows on the Costs page contradict themselves.</b> They print the 11 November rate beside a per-100 figure from the 10 November board (A05, A06).</li>
 <li><b>One tax row is wrong in a way that understates a saving.</b> A personal currency gain over $200 is a capital gain, not ordinary income (A24, A25).</li>
 <li><b>One sentence is too absolute.</b> A U.S. citizen resident in China for a continuous year is a 境内个人 for FX purposes, so the blanket statement that a passport holder never gets the USD 50,000 convenience amount is not supported (A08, A35).</li>
-<li><b>One number is missing.</b> The 2025 IRS average is 7.129 and the Federal Reserve's is 7.1875; the dashboard shows only the first (A28).</li>
+<li><b>One number was missing.</b> The 2025 IRS average is 7.129 and the Federal Reserve's is 7.1875; the dashboard showed only the first (A28).</li>
+<li><b>Four of the five requests have since been applied</b> by the session that owns those files: the two self-contradicting rate rows, the personal-transaction capital-gain rule, and the Federal Reserve average. One remains open — the absolute sentence about the USD 50,000 amount — and is restated below with its sources.</li>
 </ul>
 </div>
 
@@ -290,16 +300,14 @@ def render(checks, costs, now_rows):
 </tbody></table></div>
 <p class="note">This is a re-read of the same official price board on the same day, not a forecast. Bank of China republishes the row during the day, so any figure is a snapshot.</p>
 
-<h2>What this audit asks the dashboard's owner to change</h2>
+<h2>What this audit asked for, and what happened</h2>
+<p>Five changes were requested from the session that holds the shared files. They are listed with their status checked on <code>main</code> after that session's integration merge (<code>{esc(D.FIX_COMMIT)}</code>), so this page records the outcome rather than the wish.</p>
 <div class="tbl"><table class="stack">
-<thead><tr><th>Request</th><th>File</th><th>Change</th><th>Why</th></tr></thead>
+<thead><tr><th>Request</th><th>File</th><th>Change</th><th>Why</th><th>Status</th></tr></thead>
 <tbody>
-<tr><td data-label="Request"><b>5903-REQ-01</b></td><td data-label="File">scripts/e347_build.py</td><td data-label="Change">Build the two "668.51 per 100" / "665.71 per 100" strings from the rate values instead of typing them.</td><td data-label="Why">A05, A06</td></tr>
-<tr><td data-label="Request"><b>5903-REQ-02</b></td><td data-label="File">scripts/e347_data.py</td><td data-label="Change">Tax row T10: personal money over $200 is a capital gain (Publication 525), and a personal loss is not deductible (26 U.S.C. 165(c)).</td><td data-label="Why">A24, A25, A26</td></tr>
-<tr><td data-label="Request"><b>5903-REQ-03</b></td><td data-label="File">scripts/e347_data.py</td><td data-label="Change">Print the Federal Reserve's 2025 average (7.1875) beside the IRS's 7.129, or say which one the column uses.</td><td data-label="Why">A28</td></tr>
-<tr><td data-label="Request"><b>5903-REQ-04</b></td><td data-label="File">scripts/e347_data.py</td><td data-label="Change">Home page sentence about the USD 50,000 amount: make it conditional on the Foreign Permanent Resident ID or on being a 境内个人, and give the two official tests.</td><td data-label="Why">A08, A09, A35</td></tr>
-<tr><td data-label="Request"><b>5903-REQ-05</b></td><td data-label="File">dashboard/archive.html</td><td data-label="Change">Regenerate so this page is listed, and add a navigation entry for it.</td><td data-label="Why">This page is new.</td></tr>
+{request_rows}
 </tbody></table></div>
+<p class="note">A request marked open is a live difference between this page and the dashboard, not a licence to ignore either. Where they differ, the official page quoted above is the tie-breaker.</p>
 
 <h2>What this audit does not establish</h2>
 <ul class="plain">

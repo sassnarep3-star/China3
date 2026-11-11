@@ -107,13 +107,13 @@ the property-transfer and inheritance document lists, which this pass did not re
 The shared files belong to `arena/b579901a-china3` under a claim made before this session started,
 so nothing below was edited here. Each is in `COORDINATION.md` and on the audit page:
 
-| Request | File | Change |
-|---|---|---|
-| 5903-REQ-01 | `scripts/e347_build.py` | build the two per-100 strings from the rate values |
-| 5903-REQ-02 | `scripts/e347_data.py` | T10: personal gain over $200 is a capital gain; personal loss not deductible |
-| 5903-REQ-03 | `scripts/e347_data.py` | show the Federal Reserve's 2025 average beside the IRS's |
-| 5903-REQ-04 | `scripts/e347_data.py` | make the USD 50,000 sentence conditional, and give both definitions |
-| 5903-REQ-05 | `dashboard/archive.html` | regenerate so this page is listed, and add a nav entry |
+| Request | File | Change | Status on main after `7702e43` |
+|---|---|---|---|
+| 5903-REQ-01 | `scripts/e347_build.py` | build the two per-100 strings from the rate values | **applied** — Costs page now reads 668.86 / 666.06 per 100 |
+| 5903-REQ-02 | `scripts/e347_data.py` | T10: personal gain over $200 is a capital gain; personal loss not deductible | **applied** — T10 now cites § 988(e)(1), (e)(2) and Publication 525 |
+| 5903-REQ-03 | `scripts/e347_data.py` | show the Federal Reserve's 2025 average beside the IRS's | **applied** — 7.1875 now on the Tax page and in the source register |
+| 5903-REQ-04 | `scripts/e347_data.py` | make the USD 50,000 sentence conditional, and give both definitions | **open** — the absolute sentence is still on `index.html` |
+| 5903-REQ-05 | `dashboard/archive.html` | regenerate so this page is listed, and add a nav entry | **partly applied** — listed on the Archive under "Independent reviews"; the top navigation was cut back to ten core sections instead |
 
 ## Verification performed
 
