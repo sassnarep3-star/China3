@@ -311,9 +311,9 @@ rate_delta_pct = ((BOARD_TODAY["ask"] - BOARD_BASE["ask"]) / BOARD_BASE["ask"] *
 rows = []
 for amt in AMOUNTS:
     t1 = q(l01(amt, BOARD_TODAY))
-    p1 = PUB[("L01", amt)]
+    p1 = q(l01(amt, BOARD_BASE))
     t3 = q(l03(amt, BOARD_TODAY))
-    p3 = PUB[("L03", amt)]
+    p3 = q(l03(amt, BOARD_BASE))
     rows.append(
         '<tr><td data-label="Amount (USD)"><span class="id">{a}</span></td>'
         '<td data-label="Bank purchase + wire (L01)">{t1}</td>'
@@ -464,8 +464,8 @@ Regenerate with <code>python3 scripts/build_76e_site.py</code>; gate with <code>
 </html>
 """.format(
     ask="{:.4f}".format(BOARD_TODAY["ask"]),
-    t10=money(today10), p10=money(PUB[("L01", 10000)]), d10=money(today10 - PUB[("L01", 10000)]),
-    t400=money(today400), p400=money(PUB[("L01", 400000)]), d400=money(today400 - PUB[("L01", 400000)]),
+    t10=money(today10), p10=money(q(l01(10000, BOARD_BASE))), d10=money(today10 - q(l01(10000, BOARD_BASE))),
+    t400=money(today400), p400=money(q(l01(400000, BOARD_BASE))), d400=money(today400 - q(l01(400000, BOARD_BASE))),
     g400="{:,}".format(int(gain400_today.to_integral_value(rounding=ROUND_HALF_UP))),
     gb400="{:,}".format(int(gain400_base.to_integral_value(rounding=ROUND_HALF_UP))),
     rate_pct=rate_delta_pct,
