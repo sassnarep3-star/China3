@@ -193,8 +193,8 @@ def check_pages():
                  "restore it with python3 scripts/e347_build.py; the legacy landing page is legacy-index.html")
         if page.h1 != 1:
             fail(f"{rel}: expected one h1, found {page.h1}")
-        if len(page.nav) != 9:
-            fail(f"{rel}: navigation has {len(page.nav)} entries, expected 9")
+        if len(page.nav) != 11:
+            fail(f"{rel}: navigation has {len(page.nav)} entries, expected 11")
         for t in page.tables:
             if t["kind"] not in ("data", "repo", "nav"):
                 fail(f"{rel}: table without data-kind")

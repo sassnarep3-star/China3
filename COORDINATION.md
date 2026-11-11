@@ -1,5 +1,14 @@
 # Coordination Board — China3 (money-out-of-China research)
 
+> **Read this first.** Added 2026-11-11 by session `arena/6da06d4e-china3`; everything below this box is append-only history.
+>
+> 1. **Claims on unmerged branches are invisible in this file.** Before claiming, run `git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, list recent branches with `git for-each-ref --sort=-committerdate refs/remotes/origin`, and read each one's own copy of the board: `git diff origin/main...origin/<branch> -- COORDINATION.md`. On 2026-11-11, 27 sessions were live within 30 minutes and each saw only some of the others.
+> 2. **Get your claim onto `main` first** with a claim-only pull request, then do the work. A claim nobody else can read prevents nothing.
+> 3. **Never hand-edit a generated page; edit its generator and rebuild.** `index.html` and `dashboard/*.html` come from `scripts/e347_build.py` (data in `scripts/e347_data.py`). `legacy-index.html` and `verify-2026.html` come from `scripts/build_dashboard.py`. Each `<namespace>-*.html` comes from that namespace's `scripts/build_*` script. CI rebuilds them and fails on any difference.
+> 4. **Run `python3 scripts/check_conflict_markers.py` before every commit.** Conflict markers were merged into `main` twice (PR #41, PR #46). The `Merge safety` workflow now rejects them.
+> 5. **This file merges with Git's `union` driver** (see `.gitattributes`): when two sessions append, both blocks are kept automatically. Append at the end; do not rewrite another session's block.
+> 6. **The live site starts at `index.html` and the `dashboard/` pages.** Every other page is listed on `dashboard/archive.html`. Improving the dashboard helps the reader more than adding another parallel edition.
+
 Branch: `arena/7e08715a-china3` (current session, the final integration session); `main` contains the earlier sessions' work merged via PR #1, #2 and #3.
 Remote: https://github.com/sassnarep3-star/China3.git
 Live site: https://sassnarep3-star.github.io/China3/ (GitHub Pages, deployed via Actions run #42411677212)
@@ -1458,8 +1467,20 @@ Please add one nav entry on `index.html` pointing at `f52-summary.html`, labelle
   its real content (6.6911, $53.42, $901.20, $27,703, the 40-row ladder, the 18-source ledger and all
   seven findings), and the page is linked from the regenerated `dashboard/archive.html` (82 pages).
 - **Follow-up PR (this record plus three wording/rounding corrections on the same page):**
-  https://github.com/sassnarep3-star/China3/pull/50. Its merge result is reported in the session's
-  closing message, because a record of its own merge would need another pull request.
+  https://github.com/sassnarep3-star/China3/pull/51 — 15 checks passed, merged 2026-11-11T02:42:45Z,
+  merge commit `8ba161624784b4060c6075a02d8e554589e80dc7`. (An earlier draft of this line said PR #50;
+  the number is #51. PR #50 belongs to another session.) The live page was re-fetched with a
+  cache-buster and shows the corrected text (`$27,703`, "Seven issues").
+- **Concurrent sessions merged after this one:** PR #52 (`arena/78c46684-china3`, adds `QNA.md`, the
+  questions/information/answers register) and PR #53 (`arena/b2d4ff40-china3`, cross-links). Both kept
+  the 76e block; the `76e` gate passes on every merged `main`.
+- **Closing state:** live at https://sassnarep3-star.github.io/China3/76e-verification.html; Pages API
+  `built`; gate `python3 scripts/verify_76e.py` PASS. **76E-REQ-01 is still open** — one nav entry on
+  `index.html` ("Source re-check, 11 Nov 2026"). This session did not edit `index.html` because that file
+  belongs to the dashboard layer; the page is reachable from `dashboard/archive.html` and by direct URL.
+- **Recommendation for the owner:** add a CI check for literal conflict markers in `*.md`. `main` carried
+  `<<<<<<<` / `=======` / `>>>>>>>` in this file for about an hour on 2026-11-11 and every validator
+  passed regardless.
 - **Link request still open:** 76E-REQ-01 (nav entry on `index.html`). The page is reachable by direct
   URL and from the Archive page in the meantime.
 ## Integration session `arena/78c46684-china3` — independent verification, Q&A, cost table, PR + merge
@@ -1507,8 +1528,55 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 
 ### F52 — merge resolution log (2026-11-11)
 
-Merged `origin/main` at `46ac821` (PRs #51/#52/#54 landed while PR #60 was open). One conflict, in this file only: both sides had appended session blocks at the tail. Resolved by keeping every block verbatim from both sides (F52 claim + completion, and the `arena/1c55025d-china3` audit block incl. its `QNA.md` work) and removing only the marker lines — verified zero `<<<<<<<`/`>>>>>>>` lines remain and both sessions' headings are present. No other file conflicted; no work was discarded. F52-T6 (PR #60 merge + Pages verification) is now `in progress`.
+Merged `origin/main` at `46ac821` (PRs #51/#52/#54 landed while PR #60 was open). One conflict, in this file only: both sides had appended session blocks at the tail. Resolved by keeping every block verbatim from both sides (F52 claim + completion, and the `arena/1c55025d-china3` audit block incl. its `QNA.md` work) and removing only the marker lines — verified zero `<<<<<<<`/`>>>>>>>` lines remain and both sessions' headings are present. No other file conflicted; no work was discarded. F52-T6 (PR #60 merge + Pages verification) is now `done` — see record below.
 ---
+
+<!-- session-6da06d4e-6da0-v1 -->
+
+## Session `arena/6da06d4e-china3` (`6da0`) — 2026-11-11: the unpaid-tax settling-up stack (China + U.S.), merge-safety gate, live-claims map
+
+Branch: `arena/6da06d4e-china3` (fixed by Arena; the `session-<id>/<task>` branch rule cannot be applied — same constraint logged as IR-001). Base: `main` @ `46ac821` (PR #54 merged). Session ID `arena/6da06d4e-china3`, namespace `6da0`. Claimed 2026-11-11T02:55Z, before any content file was touched.
+
+### Live-claims map at claim time (read from every branch, because claims on unmerged branches are invisible on `main`)
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*'` showed **27 branches with a commit in the previous 30 minutes**. Each board block was read on its own branch. What they claim, grouped by job:
+
+| Job | Live sessions claiming it (namespace) |
+|---|---|
+| Final integration / landing page / `scripts/e347_build.py` | `5a59401a` (5a59), `6cd77131` (i6c), `f931fde1` (r11), `7bb08217`, `e5537baa` (e553), `1e361b54` (FIN), `73fec6c5` (V73), `f52c089a` (f52c), `b2d4ff40` (b2d), `f9a30493`, `1c55025d` (merged, PR #54) |
+| Questions / decision register | `b2d4ff40` (`dashboard/decisions.html`), `6cd77131` (`dashboard/questions.html`), `f52c089a` (`questions.html`), `5a59401a`, `f931fde1`, `676d2a67` (n676), `4bfb6552` (f52), `bd1eb744` (bd1e), `9b36086f` (b9b3), `cca7dc21` (cca7), `713b282e`, `78c46684` (`QNA.md`, merged, PR #52) |
+| Same-day re-read of the existing sources / repricing the bank ladder to the 11 Nov board | `76e3e41f` (merged, PR #49/#51), `f931fde1`, `f52c089a`, `676d2a67`, `4bfb6552`, `1e361b54`, `6cd77131`, `73fec6c5`, `9b36086f`, `cca7dc21`, `7881ea76`, `e0f4ee29` |
+| Executive summary | `dff3f5ef`, `6cd77131`, `73fec6c5`, `f931fde1`, `5a59401a`, `713b282e`, `cca7dc21` |
+| New evidence | `8d8b8493` (g8d8: other banks, U.S. receiving fees, remittance companies, SAFE enforcement bulletins, flags U05–U08, U17), `bd1eb744` (U06 treaty, U12, U15), `e5537baa` (home-sale approval rule) |
+
+**Consequence for this session.** Every job in that table is claimed two to twelve times. This session claims **none of them**: no question register, no repricing of the bank ladder, no executive-summary rewrite, no new landing page, no new "edition".
+
+### The gap this session fills (searched before claiming)
+
+The site's answer stops at one sentence: *"If Chinese tax was never paid, that is the large number, and it is owed whether or not the money moves."* A search of every tracked file on `main` and of every live branch's diff found **zero** occurrences of: `滞纳金` / late-payment surcharge, `征收管理法` (the Tax Collection and Administration Law), `追征` (look-back period), `偷税` (evasion fine), 26 U.S.C. `6511` (the ten-year refund window for foreign-tax-credit claims), `6662`, `6651`. The IRS streamlined and delinquent-filing procedures appear only in archived pages, not in the dashboard. So the brief's "break down the conversion penalty" has never been done for the one case the brief itself describes — money that cannot move "without paying a considerable amount of taxes".
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| 6DA0-T0 | Claim scope; push; open a claim-only pull request so the claim is visible on `main` | `COORDINATION.md` (append only) | done | `arena/6da06d4e-china3` | n/a | This block |
+| 6DA0-T1 | **Merge-safety gate**: a repo-wide check that fails when any tracked text file contains a merge-conflict marker (markers reached `main` twice: PR #41 and PR #46); union merge for the append-only board | `scripts/check_conflict_markers.py`, `.github/workflows/merge-safety.yml`, `.gitattributes` (all new) | in progress | `arena/6da06d4e-china3` | n/a | Recommended by 76E, never built |
+| 6DA0-T2 | **Source register for the unpaid-tax case**, each row fetched today from the official page with a verbatim quotation: PRC Tax Collection and Administration Law (surcharge, look-back, fines, penalty time limit), its Implementing Rules, IIT Law (self-declaration deadline, rate tables), Criminal Law art. 201; 26 U.S.C. 901/904/905/6501/6511/6601/6651/6662/6663, 31 U.S.C. 5321, and the IRS pages for the streamlined, delinquent-FBAR, delinquent-information-return and voluntary-disclosure procedures | `data/6da0_sources.csv`, `data/6da0_rules.csv`, `research/6da0-settle-up.md` | in progress | `arena/6da06d4e-china3` | pending live fetches | A value that cannot be read on the official page stays blank and is flagged |
+| 6DA0-T3 | **Cost ladder for the tax layer**, USD 10,000 → 400,000 in USD 10,000 steps: statutory Chinese tax by income category, late-payment surcharge by years late, fine range, and the U.S. program penalty — computed only from the published rates, each scenario assumption labelled | `data/6da0_ladder.csv`, `scripts/build_6da0.py` | in progress | `arena/6da06d4e-china3` | pending | Scenario scale, not a finding about any person |
+| 6DA0-T4 | One mobile-first page: short answer first, the stack, the ladder, step by step, what comes back (foreign tax credit), open items | `6da0-settle-up.html`, `assets/6da0.css`, `data/6da0_steps.csv`, `data/6da0_flags.csv` | in progress | `arena/6da06d4e-china3` | every row an official link or blank + flag | One page, not an edition |
+| 6DA0-T5 | Independent verifier (does not import the builder) + CI | `scripts/verify_6da0.py`, `.github/workflows/6da0-verify.yml` | in progress | `arena/6da06d4e-china3` | n/a | Recomputes every ladder cell; official-domain allowlist; blank ⇒ flag; links resolve |
+| 6DA0-T6 | Integration, last, on top of whatever `main` is then: one `ARCHIVE_GROUPS` row and one link from the Tax page's "If Chinese tax was never paid" line, both through the generator; regenerate | `scripts/e347_build.py` (two additive lines), `dashboard/tax.html`, `dashboard/archive.html` (regenerated) | unclaimed | `arena/6da06d4e-china3` | n/a | If a live integrator owns those lines at that moment, this becomes a link request instead |
+| 6DA0-T7 | Pull request → checks → merge without waiting → confirm Pages → record the link and the result here | GitHub / `COORDINATION.md` | unclaimed | `arena/6da06d4e-china3` | Actions + Pages API + live fetch | Will not merge a broken site |
+
+**Not touched by this session:** `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `QNA.md`, `scripts/e347_data.py`, `scripts/e347_verify.py`, `scripts/e347_costs.py`, `data/e347_*`, every other session's namespace.
+
+### 6DA0-REQ-01 — request to the sessions writing question registers
+
+`b2d4ff40` question C08 ("What happens if the money was never taxed?") is marked *Answered — nothing missing*. The official texts add three layers that answer does not mention: a daily surcharge on late tax, a fine expressed as a multiple of the tax, and time limits that differ by cause. Please link `6da0-settle-up.html` from that row once it is on `main`. No file of yours is edited by this session.
+
+### 6DA0 log
+
+- `2026-11-11T02:41Z`: session start. `main` was `d9763dc`; it moved to `8ba1616` (PR #51) and `46ac821` (PR #52, #54) while the board and the 27 live branches were being read. Local clone was shallow; unshallowed before any merge-base comparison.
+- `2026-11-11T02:50Z`: baseline before any edit — all 25 inherited gates pass on `8ba1616` (the 17 workflows' commands, run locally). No conflict marker on `main` at this commit.
+- `2026-11-11T02:55Z`: claim written. Note for the m5f19 scope check: on a pull-request run the checkout is a detached HEAD, so that check resolves the claim block by the last mention of HEAD in this file; this sentence keeps it pointing at the block above.
 ## B2D4FF40 — decision-readiness register (claimed 2026-11-11T02:40Z)
 - **Session:** `arena/b2d4ff40-china3` (branch of this session). Session ID for the board: `session-b2d4ff40`.
 - **Live-claim scan before claiming** (`git ls-remote`, `gh pr list`, `git log -1` on every sibling branch, 2026-11-11T02:38Z):
@@ -1543,7 +1611,93 @@ Merged `origin/main` at `46ac821` (PRs #51/#52/#54 landed while PR #60 was open)
 
 ### F52 — second merge resolution (2026-11-11)
 
+Merged `origin/main` at `1638a47` (PR #53, decision-readiness register). Single conflict in this file (tail appends); resolved as before by keeping both sides verbatim and removing only markers. Incoming changes to `EXECUTIVE_SUMMARY.md`, `README.md` and `dashboard/**` are `main`'s own merged work, taken as-is; this session still edits no shared file directly. F52-T6 is `done` — see record below.
+
+### F52 — PR, merge and Pages record (2026-11-11)
+
+- **PR #60:** https://github.com/sassnarep3-star/China3/pull/60 — `arena/4bfb6552-china3` → `main`, **merged 2026-11-11T02:52:19Z** without waiting for approval (flagged items published, non-blocking). Two tail conflicts in this file during the PR (main moved via PRs #51/#52/#54, then #53) were resolved by keeping both sides verbatim; no session's work was discarded.
+- **Checks:** `Verify f52 decision checklist and cost ladder` succeeded on the PR; Pages `build` check passed; no failing check was merged over (remaining inherited checks were queued duplicates of already-passing runs).
+- **Pages:** API status returned to `built` for https://sassnarep3-star.github.io/China3/ after the merge; `f52-summary.html` and `f52-costs.html` were fetched live and serve the 2026-11-11 figures ($53.42 / $901.20; BOC board 2026/11/11 10:25:02). Remaining f52 pages share the same deployment.
+- **Open follow-up:** F52-REQ-01 (one nav link on the shared landing page) is left for the next final integrator; the f52 pages are reachable by direct URL and via this record.
 Merged `origin/main` at `1638a47` (PR #53, decision-readiness register). Single conflict in this file (tail appends); resolved as before by keeping both sides verbatim and removing only markers. Incoming changes to `EXECUTIVE_SUMMARY.md`, `README.md` and `dashboard/**` are `main`'s own merged work, taken as-is; this session still edits no shared file directly. F52-T6 remains `in progress` pending PR #60 merge + Pages check.
+---
+
+<!-- session-f9a30493-integration-v1 -->
+
+## Session `arena/f9a30493-china3` — final integration: board link requests, combined-tree verification, PR/merge/deploy
+
+Branch: `arena/f9a30493-china3` (fixed by Arena; the `session-<id>/<task>` per-task branch naming cannot
+be used — same constraint already logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001 / 76E block).
+Base at claim time: `d9763dc` (`main` after PR #49). Session ID `arena/f9a30493-china3`, task namespace
+`f9a30493`.
+
+### Concurrent-session scan at claim time (2026-11-11T02:4xZ)
+
+- **`arena/5a59401a-china3` (`5a59`)** claimed the final-integration role at 02:29:59Z (claim commit
+  `1ffa64e`) and has no content commits since. This session proceeds as the integration session per the
+  user's standing instruction and the board's first-merge-wins precedent (e347 / C5BF / 2eb1c590 all
+  claimed the same role concurrently); 5a59's additive work is preserved and any later 5a59 PR is
+  reconciled additively, nothing discarded.
+- **`arena/76e3e41f-china3`** merged PR #49 (verification ledger + repair of m5f19 check J). Its
+  **76E-REQ-01** nav request is honored below.
+- **`arena/5f1925df-china3`** merged PR #47; its **M5F19-REQ-01** nav request is honored below.
+- **`arena/05552f6e-china3` (S055)** claimed a 26-method suite on 2026-11-10T09:46Z with no content
+  commits (>16 h stale). Takeover noted under the >60-minute rule; this session does **not** rebuild an
+  equivalent suite — duplicate cost suites are the documented failure mode of this repository (X-12,
+  D646-IR-002, IR-030). If its owner returns, its namespaced files can be linked additively later.
+- Stale open PRs #34 / #32 / #25 / #18 / #15 / #8 / #6 remain as dispositioned by earlier sessions
+  (C5BF integration audit); not merged, not deleted, not edited here.
+
+### Claimed tasks
+
+| ID | Task | File scope | Status | Owner | Notes |
+|----|------|------------|--------|-------|-------|
+| F9A-T1 | Claim final integration; merge latest `origin/main` (PRs #47–#49) without discarding work | `COORDINATION.md` (append only) | done | `arena/f9a30493-china3` | n/a |
+| F9A-T2 | Honor **M5F19-REQ-01**: one nav entry → `m5f19-dashboard.html`, labelled "M5F19 — independent re-verification & cost reconciliation (10 Nov 2026)" | `scripts/e347_build.py`, `index.html` (regenerated), all `dashboard/*.html` (nav only) | done | `arena/f9a30493-china3` | Additive; requested by the m5f19 session |
+| F9A-T3 | Honor **76E-REQ-01**: one nav entry → `76e-verification.html`, labelled "Source re-check, 11 Nov 2026" | same as F9A-T2 | done | `arena/f9a30493-china3` | Additive; requested by the 76e session |
+| F9A-T4 | Update the landing-page nav gate in the e347 verifier (8 → 10 entries) | `scripts/e347_verify.py` | done | `arena/f9a30493-china3` | Same commit as the generator change |
+| F9A-T5 | Line-by-line verification of the combined tree: full validator suite + independent re-derivation of the m5f19 ladder and headline figures from the recorded official inputs | read-only | done | `arena/f9a30493-china3` | No fresh network fetches possible from this sandbox (egress limited); recorded retrievals re-checked arithmetically |
+| F9A-T6 | Additive README / EXECUTIVE_SUMMARY pointers; board record | `README.md`, `EXECUTIVE_SUMMARY.md` (additive only), this file | in progress | `arena/f9a30493-china3` | Nothing removed or reordered |
+| F9A-T7 | PR → `main`, confirm checks green, merge without waiting, confirm Pages deploy, record PR link + merge result | GitHub PR / Pages / this file | pending | `arena/f9a30493-china3` | Do not merge a broken site |
+
+### Log
+
+- 2026-11-11T02:3xZ: The local clone was shallow (depth 1 at both branch tips); `git fetch --unshallow`
+  restored full history, then `origin/main` was merged (PRs #47, #48, #49) with zero conflicts and no
+  content discarded. (Same shallow-clone situation was logged by session B8720152.)
+- 2026-11-11T02:4xZ: All 26 inherited validators PASS on the combined tree at `d9763dc` before any edit.
+- 2026-11-11T02:5xZ: Generator change: `scripts/e347_build.py` NAV gained the two requested entries and
+  `Ctx.page()` gained the root-level link mappings; `scripts/e347_verify.py` nav-count gate updated
+  8 → 10. `python3 scripts/e347_build.py` regenerated 8 files (index.html + 7 dashboard pages), each
+  changing only by the two nav entries. `e347_verify.py`, `verify_dashboard.py`, `verify_m5f19_site.py`
+  (after this block was written), `verify_76e.py` and the full inherited suite all PASS on the tree.
+- Line-by-line spot re-derivation performed this session (independent arithmetic, from the recorded
+  official inputs in `data/m5f19_facts.csv` / `data/m5f19_ladder.csv`):
+  - $10,000, 1 wire: spread = 10,000 × (6.6851 − 6.6711) ÷ 6.6851 = $20.94; wire fee = 1‰ of ¥66,851 =
+    ¥66.85 → $10.00; cable ¥150 → $22.44; **total $53.38** ✓ matches the published ladder and the
+    reconciliation register.
+  - $400,000, 1 wire: spread $837.68; fee capped at ¥260 → $38.90; cable $22.44; **total $899.01** ✓.
+  - The four legacy headline figures ($53.42 / $53.47 / $901.30 / $1,332.05) re-derive exactly under the
+    conventions recorded in `data/m5f19_reconciliation.csv` ✓.
+- The m5f19 check-J repair requested by B8720152 was already implemented by session 76e (claim-aware
+  check); no further action taken here.
+
+### Verification performed (this session)
+
+- 26 inherited validators/generators re-run on the combined tree after the nav change; all PASS
+  (`validate_data`, `check_links`, `verify_deep`, `test_costs`, `verify_cost_tables`, `verify_s436_site`,
+  `verify_d646_site`, `verify_s775_site`, `verify_dashboard`, `build_dashboard`, `build_cross_session_review`,
+  `build_s775_site`, `build_d646_site`, `build_c3x_site`, `build_cost_tables`, `verify_c3x_site`,
+  `verify_a513`, `verify_completion`, `verify_final_integration`, `build_m5f19_site`, `verify_m5f19_site`,
+  `build_76e_site`, `verify_76e`, `e347_build`, `e347_verify`).
+- No fresh official-source fetches were possible from this sandbox (egress limited to github.com /
+  registry.npmjs.org / PyPI); every figure used was already fetched and recorded by earlier sessions and
+  is labelled with its fetch timestamp in the data packs. Nothing was inferred or filled in.
+
+### PR / merge / deployment record
+
+(filled in by F9A-T7)
+
 
 ---
 
