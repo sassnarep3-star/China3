@@ -34,8 +34,15 @@ NAV = [("index", "Home"), ("decisions", "Decide"), ("methods", "Methods"), ("cos
        # Integration (session arena/f9a30493-china3): honors M5F19-REQ-01 and 76E-REQ-01, two
        # open board link requests. Additive nav entries pointing at root-level verified editions.
        ("m5f19", "M5F19 — independent re-verification &amp; cost reconciliation (10 Nov 2026)"),
-       ("76e", "Source re-check, 11 Nov 2026")]
-OWN_PAGES = {"index.html"} | {f"dashboard/{k}.html" for k, _ in NAV if k != "index"}
+       ("76e", "Source re-check, 11 Nov 2026"),
+       # Final integration (session arena/bea42a88-china3): honors BEA4-REQ-01, the board link
+       # request from the 11 Nov re-verification pass. Additive; both targets are root-level pages
+       # owned by that session and are not generated here.
+       ("bea4audit", "BEA4 — re-verification, 11 Nov 2026"),
+       ("bea4penalty", "BEA4 — penalty breakdown")]
+EXTERNAL_PAGE_KEYS = {"m5f19", "76e", "bea4audit", "bea4penalty"}
+OWN_PAGES = {"index.html"} | {f"dashboard/{k}.html" for k, _ in NAV
+                             if k != "index" and k not in EXTERNAL_PAGE_KEYS}
 KEY_AMOUNTS = [D(10000), D(50000), D(100000), D(200000), D(400000)]
 
 
@@ -82,6 +89,10 @@ class Ctx:
             return f"{self.up}m5f19-dashboard.html"
         if k == "76e":
             return f"{self.up}76e-verification.html"
+        if k == "bea4audit":
+            return f"{self.up}bea4-audit.html"
+        if k == "bea4penalty":
+            return f"{self.up}bea4-penalty.html"
         return f"{self.sub}{k}.html"
 
     def src(self, ids, short=True):
@@ -467,6 +478,8 @@ ARCHIVE_GROUPS = [
     (r"^deep-", "Deep research", "Known problem: R05 on the Flagged page (2004 staging rule)."),
     (r"^cost|^cross-session|^us-fx-gain", "Cost model and cross-session review", "Uses the 9 November rates (6.6919 / 6.6924)."),
     (r"^g8d8-", "G8D8 new evidence, 11 November 2026 (session 8d8b8493)", "Other banks, U.S. receiving fees, Wise and Western Union, SAFE fines; read on 11 November 2026 at the 10:25:02 board."),
+    (r"^bea4-", "BEA4 re-verification, 11 November 2026 (session bea42a88)",
+     "24 official sources re-read, 1,720 cost cells re-derived, repricing at the 11 November board; defects published for review."),
     (r"review|audit", "Independent reviews", "Other sessions' findings, kept as published."),
     (r"^docs/", "First docs site", "Earliest pass; not updated since."),
     (r".", "First editorial pages", "Earliest pass; partly corrected later."),

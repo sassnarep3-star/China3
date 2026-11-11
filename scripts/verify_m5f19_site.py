@@ -449,11 +449,23 @@ def branch_claim_paths():
     back to: new files and generated shared files are additive and allowed; editing
     a file that already existed at the merge base and belongs to another layer is not.
     """
-    try:
-        branch = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=ROOT,
-                                capture_output=True, text=True, check=True).stdout.strip()
-    except subprocess.CalledProcessError:
-        return set(), ""
+    # A pull-request run checks out the synthetic merge commit, so HEAD is detached and
+    # `rev-parse --abbrev-ref HEAD` returns the literal string "HEAD". Every branch's claim
+    # then looked empty and check J went red on honest, board-declared regenerations
+    # (index.html and the dashboard pages in the 11 Nov integration). GitHub exports the
+    # source branch for pull_request events; use it before falling back to git.
+    branch = ""
+    for env_name in ("GITHUB_HEAD_REF", "GITHUB_REF_NAME"):
+        candidate = os.environ.get(env_name, "").strip()
+        if candidate and candidate != "HEAD":
+            branch = candidate
+            break
+    if not branch:
+        try:
+            branch = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=ROOT,
+                                    capture_output=True, text=True, check=True).stdout.strip()
+        except subprocess.CalledProcessError:
+            return set(), ""
     board_path = os.path.join(ROOT, "COORDINATION.md")
     if not os.path.exists(board_path) or not branch:
         return set(), branch
