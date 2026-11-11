@@ -1404,3 +1404,33 @@ discarding anything:
 Also recorded: B8720152's request to scope m5f19 check J is satisfied by this session's claim-aware
 rewrite of that check (see the takeover note above). B8720152's U15 text and `scripts/e347_data.py`
 change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
+
+<!-- session-arena/bd1eb744-china3-bd1e-v1 -->
+
+## Session `arena/bd1eb744-china3` — decision-readiness page and open-item closure (prefix `bd1e`)
+
+Branch: `arena/bd1eb744-china3` (Arena single-branch binding; the `session-<id>/<task>` branch rule cannot be
+applied — same constraint logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001).
+Base: `d9763dc` (`main` after PR #49). Session ID `arena/bd1eb744-china3`, task namespace `bd1e`.
+
+### Concurrent-session scan at claim time (2026-11-11T02:4xZ)
+
+- PR #50 (`arena/7881ea76-china3`) is **open**; its files are `COORDINATION.md` and
+  `research/7881-publication-audit.md`. Workflow runs exist for `arena/1e361b54-china3` (task `FIN-T0`,
+  final-integration claim on its own branch, not merged). 76E (`arena/76e3e41f-china3`, PR #49) is merged.
+- **This session does not claim the final-integration role**, does not edit `index.html`, `README.md`,
+  `EXECUTIVE_SUMMARY.md`, `dashboard/**`, `scripts/e347_*`, `scripts/verify_m5f19_site.py`, or any
+  `76e-*` / `5a59-*` / `7881-*` file. Everything is namespaced `bd1e`. Link request filed below.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| BD1E-T0 | Claim scope and push before any content work | `COORDINATION.md` (append only) | done | `arena/bd1eb744-china3` | n/a | This block |
+| BD1E-T1 | Close repo open items with live official reads today: U06 (U.S.–China treaty dividend cap + relief procedure), U12 (31 U.S.C. 5321 willful ceiling), U15 (BOC board drift, both snapshots shown) | `data/bd1e_*.csv`, `research/bd1e-*.md` | in progress | `arena/bd1eb744-china3` | irs.gov treaty PDF, govinfo 31 U.S.C. 5321, fgk.chinatax.gov.cn 2019 No. 35, chinatax.gov.cn IIT Law, boc.cn board + tariff, safe.gov.cn Tianjin/Ningxia | No inherited quote reused without a today-fetch |
+| BD1E-T2 | Decision-readiness page: ordered questions, what is known vs missing, exactly how to obtain each missing fact, which route each answer unlocks; plus the closed items and today's repriced comparison | `bd1e-decision.html`, `assets/bd1e.css`, `scripts/build_bd1e_site.py` | in progress | `arena/bd1eb744-china3` | every row an official URL | Mobile-first; blanks stay blank |
+| BD1E-T3 | Independent verifier + CI: recompute every figure on the page from the published inputs, assert every row cites an allow-listed official domain, assert no broken local links | `scripts/verify_bd1e.py`, `.github/workflows/bd1e-verify.yml` | in progress | `arena/bd1eb744-china3` | n/a | Must pass locally before PR |
+| BD1E-T4 | PR → `main`, merge without waiting, confirm Pages deploy, record PR link and merge result here | GitHub PR / Pages / this file | in progress | `arena/bd1eb744-china3` | Actions + Pages API | Flagged items do not block |
+
+### BD1E-REQ-01 — link request to whoever lands `index.html`
+
+Please add one nav/landing link to `bd1e-decision.html`, labelled *"Before you decide: questions and open items (11 Nov 2026)"*.
+No other change to shared files is requested. This session will not edit `index.html`.
