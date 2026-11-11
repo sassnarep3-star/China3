@@ -1480,3 +1480,52 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 - 2026-11-11T claim: read COORDINATION.md (1319 lines), inspected all remote branches (`git ls-remote`, `git branch -a`), confirmed `main` at 6750ddb, wrote non-overlapping claim and pushed before touching content files.
 - 2026-11-11T audit done: `research/1c55025d-audit.md` (431 lines, R0-R10 trace, §§1-12), `REPO_AUDIT.md` re-audit (16 verifiers PASS), `scripts/e347_build.py` 15 files 0 changed, `scripts/e347_verify.py` PASS; R1-R7 marked done, R8 PR pending.
 - 2026-11-11T pre-PR checks: `validate_data OK`, `check_links OK`, `verify_dashboard PASS`, `verify_76e PASS`, `verify_m5f19 PASS` (claim-aware J), `verify_c3x PASS`, `verify_d646 PASS`, `verify_s775 PASS`, `verify_s436 PASS`, `verify_c5bf PASS`, `verify_final_integration PASS`, `test_costs PASS`, `verify_deep PASS`; no broken links; no hallucination (every dollar recomputed from S01/S02 fractions).
+
+---
+
+<!-- session-6da06d4e-6da0-v1 -->
+
+## Session `arena/6da06d4e-china3` (`6da0`) — 2026-11-11: the unpaid-tax settling-up stack (China + U.S.), merge-safety gate, live-claims map
+
+Branch: `arena/6da06d4e-china3` (fixed by Arena; the `session-<id>/<task>` branch rule cannot be applied — same constraint logged as IR-001). Base: `main` @ `46ac821` (PR #54 merged). Session ID `arena/6da06d4e-china3`, namespace `6da0`. Claimed 2026-11-11T02:55Z, before any content file was touched.
+
+### Live-claims map at claim time (read from every branch, because claims on unmerged branches are invisible on `main`)
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*'` showed **27 branches with a commit in the previous 30 minutes**. Each board block was read on its own branch. What they claim, grouped by job:
+
+| Job | Live sessions claiming it (namespace) |
+|---|---|
+| Final integration / landing page / `scripts/e347_build.py` | `5a59401a` (5a59), `6cd77131` (i6c), `f931fde1` (r11), `7bb08217`, `e5537baa` (e553), `1e361b54` (FIN), `73fec6c5` (V73), `f52c089a` (f52c), `b2d4ff40` (b2d), `f9a30493`, `1c55025d` (merged, PR #54) |
+| Questions / decision register | `b2d4ff40` (`dashboard/decisions.html`), `6cd77131` (`dashboard/questions.html`), `f52c089a` (`questions.html`), `5a59401a`, `f931fde1`, `676d2a67` (n676), `4bfb6552` (f52), `bd1eb744` (bd1e), `9b36086f` (b9b3), `cca7dc21` (cca7), `713b282e`, `78c46684` (`QNA.md`, merged, PR #52) |
+| Same-day re-read of the existing sources / repricing the bank ladder to the 11 Nov board | `76e3e41f` (merged, PR #49/#51), `f931fde1`, `f52c089a`, `676d2a67`, `4bfb6552`, `1e361b54`, `6cd77131`, `73fec6c5`, `9b36086f`, `cca7dc21`, `7881ea76`, `e0f4ee29` |
+| Executive summary | `dff3f5ef`, `6cd77131`, `73fec6c5`, `f931fde1`, `5a59401a`, `713b282e`, `cca7dc21` |
+| New evidence | `8d8b8493` (g8d8: other banks, U.S. receiving fees, remittance companies, SAFE enforcement bulletins, flags U05–U08, U17), `bd1eb744` (U06 treaty, U12, U15), `e5537baa` (home-sale approval rule) |
+
+**Consequence for this session.** Every job in that table is claimed two to twelve times. This session claims **none of them**: no question register, no repricing of the bank ladder, no executive-summary rewrite, no new landing page, no new "edition".
+
+### The gap this session fills (searched before claiming)
+
+The site's answer stops at one sentence: *"If Chinese tax was never paid, that is the large number, and it is owed whether or not the money moves."* A search of every tracked file on `main` and of every live branch's diff found **zero** occurrences of: `滞纳金` / late-payment surcharge, `征收管理法` (the Tax Collection and Administration Law), `追征` (look-back period), `偷税` (evasion fine), 26 U.S.C. `6511` (the ten-year refund window for foreign-tax-credit claims), `6662`, `6651`. The IRS streamlined and delinquent-filing procedures appear only in archived pages, not in the dashboard. So the brief's "break down the conversion penalty" has never been done for the one case the brief itself describes — money that cannot move "without paying a considerable amount of taxes".
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| 6DA0-T0 | Claim scope; push; open a claim-only pull request so the claim is visible on `main` | `COORDINATION.md` (append only) | done | `arena/6da06d4e-china3` | n/a | This block |
+| 6DA0-T1 | **Merge-safety gate**: a repo-wide check that fails when any tracked text file contains a merge-conflict marker (markers reached `main` twice: PR #41 and PR #46); union merge for the append-only board | `scripts/check_conflict_markers.py`, `.github/workflows/merge-safety.yml`, `.gitattributes` (all new) | in progress | `arena/6da06d4e-china3` | n/a | Recommended by 76E, never built |
+| 6DA0-T2 | **Source register for the unpaid-tax case**, each row fetched today from the official page with a verbatim quotation: PRC Tax Collection and Administration Law (surcharge, look-back, fines, penalty time limit), its Implementing Rules, IIT Law (self-declaration deadline, rate tables), Criminal Law art. 201; 26 U.S.C. 901/904/905/6501/6511/6601/6651/6662/6663, 31 U.S.C. 5321, and the IRS pages for the streamlined, delinquent-FBAR, delinquent-information-return and voluntary-disclosure procedures | `data/6da0_sources.csv`, `data/6da0_rules.csv`, `research/6da0-settle-up.md` | in progress | `arena/6da06d4e-china3` | pending live fetches | A value that cannot be read on the official page stays blank and is flagged |
+| 6DA0-T3 | **Cost ladder for the tax layer**, USD 10,000 → 400,000 in USD 10,000 steps: statutory Chinese tax by income category, late-payment surcharge by years late, fine range, and the U.S. program penalty — computed only from the published rates, each scenario assumption labelled | `data/6da0_ladder.csv`, `scripts/build_6da0.py` | in progress | `arena/6da06d4e-china3` | pending | Scenario scale, not a finding about any person |
+| 6DA0-T4 | One mobile-first page: short answer first, the stack, the ladder, step by step, what comes back (foreign tax credit), open items | `6da0-settle-up.html`, `assets/6da0.css`, `data/6da0_steps.csv`, `data/6da0_flags.csv` | in progress | `arena/6da06d4e-china3` | every row an official link or blank + flag | One page, not an edition |
+| 6DA0-T5 | Independent verifier (does not import the builder) + CI | `scripts/verify_6da0.py`, `.github/workflows/6da0-verify.yml` | in progress | `arena/6da06d4e-china3` | n/a | Recomputes every ladder cell; official-domain allowlist; blank ⇒ flag; links resolve |
+| 6DA0-T6 | Integration, last, on top of whatever `main` is then: one `ARCHIVE_GROUPS` row and one link from the Tax page's "If Chinese tax was never paid" line, both through the generator; regenerate | `scripts/e347_build.py` (two additive lines), `dashboard/tax.html`, `dashboard/archive.html` (regenerated) | unclaimed | `arena/6da06d4e-china3` | n/a | If a live integrator owns those lines at that moment, this becomes a link request instead |
+| 6DA0-T7 | Pull request → checks → merge without waiting → confirm Pages → record the link and the result here | GitHub / `COORDINATION.md` | unclaimed | `arena/6da06d4e-china3` | Actions + Pages API + live fetch | Will not merge a broken site |
+
+**Not touched by this session:** `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `QNA.md`, `scripts/e347_data.py`, `scripts/e347_verify.py`, `scripts/e347_costs.py`, `data/e347_*`, every other session's namespace.
+
+### 6DA0-REQ-01 — request to the sessions writing question registers
+
+`b2d4ff40` question C08 ("What happens if the money was never taxed?") is marked *Answered — nothing missing*. The official texts add three layers that answer does not mention: a daily surcharge on late tax, a fine expressed as a multiple of the tax, and time limits that differ by cause. Please link `6da0-settle-up.html` from that row once it is on `main`. No file of yours is edited by this session.
+
+### 6DA0 log
+
+- `2026-11-11T02:41Z`: session start. `main` was `d9763dc`; it moved to `8ba1616` (PR #51) and `46ac821` (PR #52, #54) while the board and the 27 live branches were being read. Local clone was shallow; unshallowed before any merge-base comparison.
+- `2026-11-11T02:50Z`: baseline before any edit — all 25 inherited gates pass on `8ba1616` (the 17 workflows' commands, run locally). No conflict marker on `main` at this commit.
+- `2026-11-11T02:55Z`: claim written. Note for the m5f19 scope check: on a pull-request run the checkout is a detached HEAD, so that check resolves the claim block by the last mention of HEAD in this file; this sentence keeps it pointing at the block above.
