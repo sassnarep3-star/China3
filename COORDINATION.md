@@ -2487,6 +2487,61 @@ Declared file scope for check J (complete list; supersedes the amendment above):
 - **R18 (low, changed).** Sixteen top-bar links pushed the four core sections off a phone screen. Now nine; all seven root-level editions remain one click away on the Archive page.
 - **R19 (low, open).** The Board of China board moved during the day. Pinned on the site: 2026/11/11 15:30:04, buying 666.06 and selling 668.86 per 100. Re-read today at 20:50:05: buying 665.91, selling 668.71. Recomputing the $400,000 documented-wire route on the newer board gives $898.75 against $898.54, a change of $0.20, because both rates moved together and the spread barely changed. Every figure remains priced at the pinned board, which the page states and flag U15 explains.
 - **R20 (low, open).** Seventeen pull requests from earlier sessions remain open (#84, #78, #72, #67, #66, #61, #59, #58, #57, #50, #34, #32, #25, #18, #15, #8, #6) although `main` carries later merged work. They are parallel editions; this session neither merges nor closes them, because closing another session's PR could discard content its owner has not published elsewhere.
+<!-- session-7025dfb9-7025-v1-claim -->
+
+## Session `arena/7025dfb9-china3` (`7025`) — claim, 2026-11-11: the whole bill — what waiting costs, what the Chinese tax costs a U.S. citizen after the U.S. credit, and the IRS rule for income that cannot be converted
+
+Branch `arena/7025dfb9-china3` (fixed by Arena; the `session-<id>/<task>` branch rule cannot be applied — same constraint logged as IR-001). Base `main` @ `b677a91` (PR #83). Session ID `arena/7025dfb9-china3`, namespace `7025`. Claimed 2026-11-11T13:05Z, before any content file was touched.
+
+### State found on arrival (measured, not assumed)
+
+- Working tree clean. All 27 gate scripts pass on `b677a91` (`scripts/verify*.py`, `check_links.py`, `validate_data.py`, `test_costs.py`, `n676_verify.py`, `e347_verify.py`, `g8d8_verify.py`, `check_conflict_markers.py`) and `e347_build.py --check` reports the dashboard up to date.
+- Pages API: `status: built`, source `main` `/`, `https://sassnarep3-star.github.io/China3/`.
+- `git fetch origin '+refs/heads/*:refs/remotes/origin/*'` at 12:52Z: two branches with a commit in the previous 60 minutes, each read on its own branch.
+
+| Job | Live session holding it | What this session does about it |
+|---|---|---|
+| Canonical dashboard: `scripts/e347_build.py`, `scripts/e347_data.py`, `index.html`, `dashboard/*.html` (DF25-REQ-01/02/03, navigation) | `arena/b579901a-china3` (12:51Z) | Does not touch those files. Requests are logged below. |
+| A further full edition `3e2d-*` (sources, summary, questions, methods, penalties, steps, bank ladder at the 20:50 board, repository review, dashboard) | `arena/3e2dbf57-china3` (12:51Z) | Does not write an edition, does not re-price the bank ladder, does not write a general question register or a general repository review. |
+
+Every other branch's last commit is older than 60 minutes (newest: `df256bc2`, 08:16Z). Seventeen pull requests are open (#6, #8, #15, #18, #25, #32, #34, #50, #57, #58, #59, #61, #66, #67, #72, #78, #84); this session does not merge or close them.
+
+### The gap this session fills (searched before claiming)
+
+The dashboard prices the bank at 0.2% to 0.5% and lists Chinese and U.S. tax separately. Three things that decide "the least amount of tax" for a U.S. citizen are in no tracked file on `main` and in no remote branch (`git grep -i` over all 76 remote branches, `COORDINATION.md` excluded):
+
+| Subject | Search terms | Files on `main` |
+|---|---|---|
+| The IRS rule for income that cannot be converted into dollars (deferral of blocked income) | `blocked income`, `74-351`, `deferrable` | 0 |
+| The two taxes combined after the U.S. foreign tax credit (which one is actually an extra cost) | `net of credit`, `after the credit`, `qualified dividend`, `passive category`, `general category`, `effective rate` | 0 |
+| What the years spent on a capped route cost in interest | `deposit rate`, `rate differential`, `time value`, `LPR` | 0 |
+
+Earlier passes name the time cost in words and then exclude it (`data/f52_penalty.csv` row 8: "Not a fee"; `scripts/build_fe05_site.py`: "No tax … or time cost is included"). The foreign tax credit is mentioned in 92 files, always as a sentence, never as a figure.
+
+### Tasks claimed
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| 7025-T0 | Claim; push; claim-only pull request so the claim is readable on `main` | `COORDINATION.md` (append only) | in progress | `arena/7025dfb9-china3` | n/a | This block |
+| 7025-T1 | Source register, every row fetched today from the official page with a verbatim quotation: IRS Publication 54 (blocked income), IRS Publication 514 (credit limit, categories, carryback and carryover, taxes that cannot be credited), the IRS page on the net investment income tax, the 2026 U.S. rate tables, the U.S.–China treaty articles on dividends and on relief from double taxation, the Individual Income Tax Law rate articles, Bank of China's published deposit rates, the U.S. Treasury's published yields, the Bank of China board and tariff, and the SAFE rules that set each yearly cap | `data/7025_sources.csv`, `data/7025_rules.csv`, `research/7025-whole-bill.md` | unclaimed | `arena/7025dfb9-china3` | pending | A value that cannot be read on the official page stays blank and is flagged |
+| 7025-T2 | Time ladder, USD 10,000 → 400,000 in USD 10,000 steps: interest given up while the balance waits on each capped route, from the two official rate tables; cost of each month of delay on a single-wire route | `data/7025_inputs.csv`, `data/7025_time_ladder.csv`, `scripts/build_7025.py` | unclaimed | `arena/7025dfb9-china3` | pending | A scale at today's published rates, not a forecast |
+| 7025-T3 | After-credit ladder, same 40 amounts: Chinese tax, U.S. tax on the same income, the credit, what is left, for each kind of income and each U.S. rate | `data/7025_credit_ladder.csv` | unclaimed | `arena/7025dfb9-china3` | pending | A scale for stated assumptions, not a finding about any person |
+| 7025-T4 | Whole-bill table per route: bank cost + time + tax, most important figure first | `data/7025_whole_bill.csv` | unclaimed | `arena/7025dfb9-china3` | pending | Bank cost computed from the board read today with the dashboard's own formula, cross-checked against `data/e347_costs.csv` |
+| 7025-T5 | One mobile-first page: answer first, the three ladders, step by step, open items (its own Flagged for Review section), the questions this adds to the decision | `7025-whole-bill-review.html`, `assets/7025.css`, `data/7025_steps.csv`, `data/7025_flags.csv`, `data/7025_questions.csv` | unclaimed | `arena/7025dfb9-china3` | pending | One page, not an edition |
+| 7025-T6 | Independent verifier (does not import the builder) + CI | `scripts/verify_7025.py`, `.github/workflows/7025-verify.yml` | unclaimed | `arena/7025dfb9-china3` | n/a | Recomputes every ladder cell; official-domain allowlist; blank ⇒ flag; links resolve |
+| 7025-T7 | Repository review limited to these three subjects: how each existing page states the time on capped routes, the credit and the convertibility rule; every inconsistency with file and line | `data/7025_repo_review.csv` (published on the page) | unclaimed | `arena/7025dfb9-china3` | n/a | No file of another session is edited |
+| 7025-T8 | Pull request → checks → merge without waiting → confirm Pages → record the link and the result here | GitHub / `COORDINATION.md` (append only), `dashboard/archive.html` (regenerated by its generator only, never hand-edited) | unclaimed | `arena/7025dfb9-china3` | Actions + Pages API + live fetch | Will not merge a broken site |
+
+**Not touched by this session:** `index.html`, `dashboard/*.html` other than the generator-refreshed archive list, `README.md`, `EXECUTIVE_SUMMARY.md`, `QNA.md`, `scripts/e347_*`, `scripts/b2d_data.py`, `data/e347_*`, every other session's namespace, every open pull request.
+
+### 7025-REQ-01 — request to the integrator holding `scripts/e347_build.py` (`arena/b579901a-china3`)
+
+Once `7025-whole-bill-review.html` is on `main`: one `ARCHIVE_GROUPS` row `(r"^7025-", "The whole bill: time, both taxes after the credit, blocked income (session 7025dfb9)", "What waiting on a capped route costs in interest, what the Chinese tax adds for a U.S. citizen after the foreign tax credit, and the IRS deferral for income that cannot be converted; read on 11 November 2026.")`, and one link to that page from the Costs page note under "Cost at a glance". No file of yours is edited by this session. If that claim is released (merged, or more than 60 minutes without a commit) by the time 7025-T8 is done, this session will make this one additive change through the generator itself and will say so here first.
+
+### 7025 log
+
+- `2026-11-11T12:51Z`: session start on `b677a91`. Read this board; fetched every remote branch; read the two live blocks on their own branches; ran every gate.
+- `2026-11-11T13:05Z`: claim written and pushed before any content file.
 <!-- session-3e2dbf57-claim -->
 
 ## Session `arena/3e2dbf57-china3` (`3e2d`) — claim, 2026-11-11
