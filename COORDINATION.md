@@ -1507,7 +1507,7 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 
 ### F52 — merge resolution log (2026-11-11)
 
-Merged `origin/main` at `46ac821` (PRs #51/#52/#54 landed while PR #60 was open). One conflict, in this file only: both sides had appended session blocks at the tail. Resolved by keeping every block verbatim from both sides (F52 claim + completion, and the `arena/1c55025d-china3` audit block incl. its `QNA.md` work) and removing only the marker lines — verified zero `<<<<<<<`/`>>>>>>>` lines remain and both sessions' headings are present. No other file conflicted; no work was discarded. F52-T6 (PR #60 merge + Pages verification) is now `in progress`.
+Merged `origin/main` at `46ac821` (PRs #51/#52/#54 landed while PR #60 was open). One conflict, in this file only: both sides had appended session blocks at the tail. Resolved by keeping every block verbatim from both sides (F52 claim + completion, and the `arena/1c55025d-china3` audit block incl. its `QNA.md` work) and removing only the marker lines — verified zero `<<<<<<<`/`>>>>>>>` lines remain and both sessions' headings are present. No other file conflicted; no work was discarded. F52-T6 (PR #60 merge + Pages verification) is now `done` — see record below.
 ---
 ## B2D4FF40 — decision-readiness register (claimed 2026-11-11T02:40Z)
 - **Session:** `arena/b2d4ff40-china3` (branch of this session). Session ID for the board: `session-b2d4ff40`.
@@ -1543,6 +1543,14 @@ Merged `origin/main` at `46ac821` (PRs #51/#52/#54 landed while PR #60 was open)
 
 ### F52 — second merge resolution (2026-11-11)
 
+Merged `origin/main` at `1638a47` (PR #53, decision-readiness register). Single conflict in this file (tail appends); resolved as before by keeping both sides verbatim and removing only markers. Incoming changes to `EXECUTIVE_SUMMARY.md`, `README.md` and `dashboard/**` are `main`'s own merged work, taken as-is; this session still edits no shared file directly. F52-T6 is `done` — see record below.
+
+### F52 — PR, merge and Pages record (2026-11-11)
+
+- **PR #60:** https://github.com/sassnarep3-star/China3/pull/60 — `arena/4bfb6552-china3` → `main`, **merged 2026-11-11T02:52:19Z** without waiting for approval (flagged items published, non-blocking). Two tail conflicts in this file during the PR (main moved via PRs #51/#52/#54, then #53) were resolved by keeping both sides verbatim; no session's work was discarded.
+- **Checks:** `Verify f52 decision checklist and cost ladder` succeeded on the PR; Pages `build` check passed; no failing check was merged over (remaining inherited checks were queued duplicates of already-passing runs).
+- **Pages:** API status returned to `built` for https://sassnarep3-star.github.io/China3/ after the merge; `f52-summary.html` and `f52-costs.html` were fetched live and serve the 2026-11-11 figures ($53.42 / $901.20; BOC board 2026/11/11 10:25:02). Remaining f52 pages share the same deployment.
+- **Open follow-up:** F52-REQ-01 (one nav link on the shared landing page) is left for the next final integrator; the f52 pages are reachable by direct URL and via this record.
 Merged `origin/main` at `1638a47` (PR #53, decision-readiness register). Single conflict in this file (tail appends); resolved as before by keeping both sides verbatim and removing only markers. Incoming changes to `EXECUTIVE_SUMMARY.md`, `README.md` and `dashboard/**` are `main`'s own merged work, taken as-is; this session still edits no shared file directly. F52-T6 remains `in progress` pending PR #60 merge + Pages check.
 ---
 
