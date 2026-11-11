@@ -2288,3 +2288,9 @@ Ran `git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune`, `git for-e
 
 - Added a standalone, source-linked FE05 supplement with decision questions, 15 route categories, steps, risks, flags and 40 gross-USD increments per route. The BOC illustration is not a landed-cost estimate: unknown taxes and intermediary/receiving fees remain blank. Source observations and methodology are in `research/fe05-verification-log.md`; selected audit findings and its explicit coverage limitations are in `research/fe05-repo-audit.md`.
 - FE05-T1–T6: partial deliverables generated and local FE05 verifier passed; the requested exhaustive line-by-line repository audit and exhaustive method verification are **not complete**. This limitation is published, not presented as a completed audit. Shared files remain untouched; FE05-REQ-01 remains pending with the integrators.
+
+### FE05 merge and deployment record
+
+- Research supplement PR: https://github.com/sassnarep3-star/China3/pull/81 — merged to main at `769a42052749e124bc4df88e645a367c53c735f0` on 2026-11-11.
+- PR checks passed (some path-filtered checks skipped). GitHub Pages workflow run `42982838216` passed both build and deploy for the merge commit. Live overview, cost and flagged pages were fetched successfully. FE05 local verification checked internal links and source links per data row; it does not certify external link availability site-wide.
+- Remaining limitations: complete line-by-line repository review, exhaustive method verification and individualized all-in costs/taxes remain uncompleted or unverified; see `research/fe05-repo-audit.md` and `fe05-flagged.html`. FE05-REQ-01 remains an integration request to the owners of shared navigation.
