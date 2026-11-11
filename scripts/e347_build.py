@@ -486,6 +486,10 @@ ARCHIVE_GROUPS = [
     (r"^deep-", "Deep research", "Known problem: R05 on the Flagged page (2004 staging rule)."),
     (r"^cost|^cross-session|^us-fx-gain", "Cost model and cross-session review", "Uses the 9 November rates (6.6919 / 6.6924)."),
     (r"^g8d8-", "G8D8 new evidence, 11 November 2026 (session 8d8b8493)", "Other banks, U.S. receiving fees, Wise and Western Union, SAFE fines; read on 11 November 2026 at the 10:25:02 board."),
+    # Session arena/3482441c-china3 (c348) works in its own namespace and asked the integrator to file
+    # its pages rather than edit this generator itself. The group is declared here so that its pages
+    # are listed as soon as they land; with no c348-*.html present it renders nothing.
+    (r"^c348-", "Reconciliation of the fifteen editions (session 3482441c)", "Independent re-quote of the load-bearing official pages and a reconciliation of every headline figure published by the earlier editions."),
     # Must precede the unanchored "review|audit" rule: the df25 file name contains "review".
     (r"^df25-", "U.S. tax on the conversion itself (session df256bc2)", "Character of the currency gain, basis rules, loss rule and a $10,000-$400,000 tax ladder; read on 11 November 2026. Source of the corrected T10 wording on the Tax page."),
     (r"review|audit", "Independent reviews", "Other sessions' findings, kept as published."),
