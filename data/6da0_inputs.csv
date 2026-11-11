@@ -1,0 +1,19 @@
+id,value,unit,what,source_id,token_in_quote,source_url
+surcharge_daily,0.0005,share of unpaid tax per day,Chinese late-payment surcharge,C01.32,万分之五,https://fgk.chinatax.gov.cn/zcfgk/c100009/c5195081/content.html
+fine_min_multiple,0.5,times the unpaid tax,Lowest fine for not filing,C01.64,百分之五十,https://fgk.chinatax.gov.cn/zcfgk/c100009/c5195081/content.html
+fine_max_multiple,5,times the unpaid tax,Highest fine for not filing,C01.64,五倍,https://fgk.chinatax.gov.cn/zcfgk/c100009/c5195081/content.html
+flat_rate,0.20,share of taxable income,"Flat rate for interest, dividends, rent, property gains, incidental income",C04.3,百分之二十,https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html
+standard_deduction,60000,RMB per tax year,Deduction from a resident's yearly wages and fees,C04.6,六万元,https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html
+bracket_1,36000|3,RMB upper limit | percent,"Rate Table 1, level 1",C05,不超过36000元的 · 3,http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-09/05/content_2060671.htm
+bracket_2,144000|10,RMB upper limit | percent,"Rate Table 1, level 2",C05,超过36000元至144000元的部分 · 10,http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-09/05/content_2060671.htm
+bracket_3,300000|20,RMB upper limit | percent,"Rate Table 1, level 3",C05,超过144000元至300000元的部分 · 20,http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-09/05/content_2060671.htm
+bracket_4,420000|25,RMB upper limit | percent,"Rate Table 1, level 4",C05,超过300000元至420000元的部分 · 25,http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-09/05/content_2060671.htm
+bracket_5,660000|30,RMB upper limit | percent,"Rate Table 1, level 5",C05,超过420000元至660000元的部分 · 30,http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-09/05/content_2060671.htm
+bracket_6,960000|35,RMB upper limit | percent,"Rate Table 1, level 6",C05,超过660000元至960000元的部分 · 35,http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-09/05/content_2060671.htm
+bracket_7,|45,no upper limit | percent,"Rate Table 1, level 7",C05,超过960000元的部分 · 45,http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-09/05/content_2060671.htm
+boc_usd_sell_per_100,669.1,RMB per 100 USD,"Bank of China selling rate, used only to turn the dollar ladder into RMB for the wage brackets",C12,669.1,https://www.boc.cn/sourcedb/whpj/enindex_1619.html
+sfop_penalty_rate,0,share of balance,Streamlined Foreign Offshore penalty,U02,will not be subject to failure-to-file and failure-to-pay penalties,https://www.irs.gov/individuals/international-taxpayers/us-taxpayers-residing-outside-the-united-states
+sdop_penalty_rate,0.05,share of highest year-end balance,Streamlined Domestic Offshore penalty,U03,5 percent of the highest aggregate balance/value,https://www.irs.gov/individuals/international-taxpayers/us-taxpayers-residing-in-the-united-states
+fbar_nonwillful_cap,16536,USD per annual report,FBAR non-willful ceiling,U08,"16,536",https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821
+fbar_willful_floor,165353,USD per violation,FBAR willful fixed-dollar ceiling,U08,"165,353",https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821
+fbar_willful_share,0.5,share of balance at the time of the violation,FBAR willful ceiling as a share of the balance,U09,50 percent,https://www.govinfo.gov/content/pkg/USCODE-2023-title31/html/USCODE-2023-title31-subtitleIV-chap53-subchapII-sec5321.htm
