@@ -1237,7 +1237,6 @@ integration role**, which is exactly what the board legend permits.
 - **Observation, flagged:** the repository's Pages setting is `build_type: legacy` (deploy from branch), and the Actions workflow also deploys. Two deployments are created for each push to `main`. Both publish the same tree, so the result is the same; the owner may want to keep only one.
 - **Follow-up PR (this record plus one stylesheet fix):** the route-name column in the two "side by side" cost tables did not wrap on phones. Fixed in `dashboard/site.css`. PR link recorded in the line below.
 - **Follow-up PR:** https://github.com/sassnarep3-star/China3/pull/46. Its merge result is reported in the session's closing message, since a record of its own merge would need yet another pull request.
-<<<<<<< HEAD
 ---
 
 <!-- session-5f1925df-m5f19-v1 -->
@@ -1297,8 +1296,6 @@ reachable by direct URL and this request stays open on the board.
   this branch; confirmed all ten inherited validators PASS at that base (`validate_data`, `check_links`, `verify_deep`,
   `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`,
   `verify_final_integration`). Wrote this claim and pushed it before touching any content file.
-=======
->>>>>>> f6ae79e (Merge pull request #46 from sassnarep3-star/arena/ea347561-china3)
 
 ### B8720152: re-verification, rate-drift flag and republish (claimed)
 
@@ -1317,3 +1314,25 @@ reachable by direct URL and this request stays open on the board.
   - The repository's local clone was shallow in this session; it was unshallowed before pushing. No repository content was affected.
 - **Coordination:** PR #47 (`arena/5f1925df-china3`, m5f19 pages) was merged to main before this session pushed. It is additive and does not touch the e347 files.
 - **Cross-scope request to the m5f19 owner (logged, not edited):** `scripts/verify_m5f19_site.py` check J ("no file outside this session's claim was modified") runs on every branch through `.github/workflows/m5f19-verify.yml` (`branches: ["**"]`). On PR #48 (`arena/b8720152-china3`) it fails because the e347 files this session changed are outside the m5f19 namespace. Every other check on PR #48 passes, including checks A–I and K of the same verifier. Request: scope check J to branches in the m5f19 namespace (for example, run it only when the branch name contains `m5f19`), or make the workflow run only for that namespace. This session did not edit the verifier or the workflow.
+
+
+## Session `arena/713b282e-china3` — user-requested CNY→USD answer set (2026-11-11)
+
+Branch: `arena/713b282e-china3` (fixed by Arena; same single-branch constraint as IR-001 / D-IR-01). Base: `main` @ `6750ddb` (PR #48 merged). Every prior task row on this board is `done` or `needs review`; this session adds a namespaced answer layer and touches **only** files in its own `713b282e-*` scope. It does not edit `index.html`, `scripts/build_dashboard.py`, `README.md`, `EXECUTIVE_SUMMARY.md`, `verify-2026.html`, `.github/workflows/pages.yml` or any file claimed by `ea347561` (e347 final integration), `5f1925df` (m5f19), `05552f6e` (s055), `2c8d441e` (c3x), `775c9619` (s775), `d6467425` (d646), `43606a6b` (s436), `15d351fb` (a15), `058d6cd7` (a058), `50249649` (a502), `4a528a74` (completion), `6907147a` (final-integration audit), `c5bf9ddc` (c5bf), `b8720152` (rate drift), `2eb1c590` (final integration), or `3fcb5029` (§988).
+
+Sandbox limitation: outbound network from this sandbox reaches GitHub, npm and PyPI only. It cannot reach irs.gov, safe.gov.cn, boc.cn, ecfr.gov, govinfo.gov or github.io, so this session performs **no fresh primary-source fetches**. Every figure is re-derived from the already-recorded official sources in `data/e347_*.csv`, `data/cost_inputs.csv` and `data/cost_sources.csv` (read on 2026-11-10 / 2026-11-11 and listed on the Sources page), with each row carrying those source URLs. Anything that cannot be confirmed from those recorded sources is left blank and flagged. Nothing is inferred.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| 713-T1 | Fix committed conflict markers in COORDINATION.md and claim this session's scope | `COORDINATION.md` | done | `arena/713b282e-china3` | n/a | Removed `<<<<<<< HEAD` / `=======` / `>>>>>>>` lines; kept both session records verbatim |
+| 713-T2 | Executive summary outlining important details | `713b282e-executive-summary.md`, `713b282e-executive-summary.html` | in progress | `arena/713b282e-china3` | e347 sources S01–S35; flags U01–U19 | Built from verified data only |
+| 713-T3 | Questions, information and answers to resolve before a decision | `713b282e-questions-answers.md`, `713b282e-questions-answers.html` | in progress | `arena/713b282e-china3` | Flags U01–U19 | High items first: U01, U02, U07 |
+| 713-T4 | CNY→USD methods: all lawful + prohibited routes, pros/cons, conversion-penalty breakdown | `713b282e-methods.html` | in progress | `arena/713b282e-china3` | `data/e347_methods.csv` (S01–S35) | L01–L11 lawful, P01–P06 prohibited |
+| 713-T5 | Cost table $10,000→$400,000 in $10,000 steps for every method, step-by-step per method | `713b282e-costs.html`, `713b282e-steps.html` | in progress | `arena/713b282e-china3` | `data/e347_costs.csv` (S01–S02, S04…) | 11 methods × 40 amounts; arithmetic re-derived |
+| 713-T6 | Tax page, flagged page, sources page, mobile landing page + category subpages | `713b282e-tax.html`, `713b282e-flagged.html`, `713b282e-sources.html`, `713b282e-index.html`, `713b282e-style.css` | in progress | `arena/713b282e-china3` | `data/e347_flags.csv`, `data/e347_sources.csv` | Mobile-first; most important info first |
+| 713-T7 | Line-by-line verifier: every row → official source or blank+flag, arithmetic re-derived, internal links | `scripts/713b282e_verify.py` | in progress | `arena/713b282e-china3` | n/a | Runs against generated pages + data |
+| 713-T8 | Build script generating all 713b282e pages from verified CSVs | `scripts/713b282e_build.py` | in progress | `arena/713b282e-china3` | n/a | No third-party dependencies |
+| 713-T9 | PR `arena/713b282e-china3` → `main`, merge without waiting, confirm Pages deploy, record result | GitHub PR / Pages / `COORDINATION.md` | unclaimed | `arena/713b282e-china3` | n/a | Do not merge a broken site |
+
+### 713 Log
+- `2026-11-11`: Claimed `arena/713b282e-china3` scope and pushed the claim before any content file was touched. Removed committed COORDINATION.md conflict markers (lines 1240–1301).
