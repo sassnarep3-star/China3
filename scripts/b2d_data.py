@@ -372,3 +372,17 @@ QUESTIONS_TO_ASK = [
     "Will you remit this as cross-border RMB instead of buying USD here, and at what cost?",
     "Which charge option will you use on the wire (shared or sender pays)?",
 ]
+
+# Other documents in this repository that answer all or part of the same brief.
+# Listed for the reader; none is re-verified here and none is edited by this session.
+RELATED_DOCS = [
+    ("QNA.md", "Q&A register (session 78c46684, merged in PR #52)",
+     "A markdown register on the same brief, written by a parallel session. It overlaps sections A-D of this page and uses the same official pages. Not re-verified here; it is left exactly as its session wrote it.",
+     "https://github.com/sassnarep3-star/China3/blob/main/QNA.md"),
+    ("76e-verification.html", "Same-day re-check of every load-bearing page (session 76e)",
+     "Reads 18 official pages again on 11 November 2026 and reprices the ladder at that day's board. Its findings F01-F07 are on the Flagged page.",
+     "https://github.com/sassnarep3-star/China3/blob/main/76e-verification.html"),
+    ("dashboard/sources.html", "Source register (35 official pages)",
+     "Every source ID cited on this page, with what each document establishes and how it was read.",
+     "https://github.com/sassnarep3-star/China3/blob/main/dashboard/sources.html"),
+]

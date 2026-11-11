@@ -532,6 +532,13 @@ def page_decisions():
 <li><b>Fix the U.S. reporting position</b> (D04-D07). The penalties for a missed report are larger than the bank's fee by orders of magnitude, and they do not depend on which Chinese route you use.</li>
 <li><b>Then choose the route</b> (B01-B08) and price it (E01-E06). Route choice changes the bank cost by tenths of a percent; it does not change the Chinese income tax or the U.S. reports.</li>
 </ol>
+<h2 id="related">Other documents in this repository</h2>
+<p>Listed so nothing is lost, not as corroboration: none of these is re-verified by this page. Where they disagree with it, the register above states the date of the reading it relies on.</p>
+{table(["Document", "What it is", "Status here", "Link"],
+       [(None, [f'<b>{esc(title)}</b><br><span class="note">{esc(what)}</span>', esc(note),
+                '<span class="pill">not re-verified</span>',
+                f'<a href="{esc(url)}" rel="noopener">open</a>'])
+        for title, what, note, url in decide.RELATED_DOCS], kind="repo")}
 <p class="note">Anything still open after these steps belongs on the <a href="{ctx.page("flagged")}">Flagged page</a>, not in a decision.</p>
 """)
     return render(ctx, "Decide",
