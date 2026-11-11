@@ -1,0 +1,441 @@
+penalty_id,side,instrument,amount_usd,exposure_usd,exposure_pct,basis,source_ids
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),10000.00,3000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),20000.00,6000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),30000.00,9000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),40000.00,12000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),50000.00,15000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),60000.00,18000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),70000.00,21000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),80000.00,24000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),90000.00,27000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),100000.00,30000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),110000.00,33000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),120000.00,36000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),130000.00,39000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),140000.00,42000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),150000.00,45000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),160000.00,48000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),170000.00,51000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),180000.00,54000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),190000.00,57000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),200000.00,60000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),210000.00,63000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),220000.00,66000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),230000.00,69000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),240000.00,72000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),250000.00,75000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),260000.00,78000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),270000.00,81000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),280000.00,84000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),290000.00,87000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),300000.00,90000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),310000.00,93000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),320000.00,96000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),330000.00,99000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),340000.00,102000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),350000.00,105000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),360000.00,108000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),370000.00,111000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),380000.00,114000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),390000.00,117000.00,30.00,amount x 0.3,C06
+P01,PRC,中华人民共和国外汇管理条例 Art. 39 - evasion of FX control (逃汇),400000.00,120000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),10000.00,3000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),20000.00,6000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),30000.00,9000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),40000.00,12000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),50000.00,15000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),60000.00,18000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),70000.00,21000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),80000.00,24000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),90000.00,27000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),100000.00,30000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),110000.00,33000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),120000.00,36000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),130000.00,39000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),140000.00,42000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),150000.00,45000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),160000.00,48000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),170000.00,51000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),180000.00,54000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),190000.00,57000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),200000.00,60000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),210000.00,63000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),220000.00,66000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),230000.00,69000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),240000.00,72000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),250000.00,75000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),260000.00,78000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),270000.00,81000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),280000.00,84000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),290000.00,87000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),300000.00,90000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),310000.00,93000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),320000.00,96000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),330000.00,99000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),340000.00,102000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),350000.00,105000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),360000.00,108000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),370000.00,111000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),380000.00,114000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),390000.00,117000.00,30.00,amount x 0.3,C06
+P02,PRC,Art. 40 - illegal purchase of FX with false or invalid documents (非法套汇),400000.00,120000.00,30.00,amount x 0.3,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,10000.00,2000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,20000.00,4000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,30000.00,6000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,40000.00,8000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,50000.00,10000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,60000.00,12000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,70000.00,14000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,80000.00,16000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,90000.00,18000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,100000.00,20000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,110000.00,22000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,120000.00,24000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,130000.00,26000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,140000.00,28000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,150000.00,30000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,160000.00,32000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,170000.00,34000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,180000.00,36000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,190000.00,38000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,200000.00,40000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,210000.00,42000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,220000.00,44000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,230000.00,46000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,240000.00,48000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,250000.00,50000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,260000.00,52000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,270000.00,54000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,280000.00,56000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,290000.00,58000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,300000.00,60000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,310000.00,62000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,320000.00,64000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,330000.00,66000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,340000.00,68000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,350000.00,70000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,360000.00,72000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,370000.00,74000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,380000.00,76000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,390000.00,78000.00,20.00,amount x 0.2,C06
+P03,PRC,Art. 42 - carrying FX across the border in breach of the rules,400000.00,80000.00,20.00,amount x 0.2,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",10000.00,3000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",20000.00,6000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",30000.00,9000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",40000.00,12000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",50000.00,15000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",60000.00,18000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",70000.00,21000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",80000.00,24000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",90000.00,27000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",100000.00,30000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",110000.00,33000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",120000.00,36000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",130000.00,39000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",140000.00,42000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",150000.00,45000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",160000.00,48000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",170000.00,51000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",180000.00,54000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",190000.00,57000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",200000.00,60000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",210000.00,63000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",220000.00,66000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",230000.00,69000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",240000.00,72000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",250000.00,75000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",260000.00,78000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",270000.00,81000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",280000.00,84000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",290000.00,87000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",300000.00,90000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",310000.00,93000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",320000.00,96000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",330000.00,99000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",340000.00,102000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",350000.00,105000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",360000.00,108000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",370000.00,111000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",380000.00,114000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",390000.00,117000.00,30.00,amount x 0.3,C06
+P04,PRC,"Art. 45 - private dealing in FX, money changers, underground banks",400000.00,120000.00,30.00,amount x 0.3,C06
+P05,PRC,No penalty found for a lawful documented conversion,10000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,20000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,30000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,40000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,50000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,60000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,70000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,80000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,90000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,100000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,110000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,120000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,130000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,140000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,150000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,160000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,170000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,180000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,190000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,200000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,210000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,220000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,230000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,240000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,250000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,260000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,270000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,280000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,290000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,300000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,310000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,320000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,330000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,340000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,350000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,360000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,370000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,380000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,390000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P05,PRC,No penalty found for a lawful documented conversion,400000.00,0.00,0.00,no penalty found for this conduct,C06|C03|C02
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),10000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),20000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),30000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),40000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),50000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),60000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),70000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),80000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),90000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),100000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),110000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),120000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),130000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),140000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),150000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),160000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),170000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),180000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),190000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),200000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),210000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),220000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),230000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),240000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),250000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),260000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),270000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),280000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),290000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),300000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),310000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),320000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),330000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),340000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),350000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),360000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),370000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),380000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),390000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P06,PRC,Individual income tax on the income behind the balance (if unpaid),400000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C06
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,10000.00,104.72,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,20000.00,209.44,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,30000.00,314.17,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,40000.00,418.89,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,50000.00,523.61,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,60000.00,628.33,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,70000.00,733.06,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,80000.00,837.78,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,90000.00,942.50,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,100000.00,1047.22,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,110000.00,1151.95,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,120000.00,1256.67,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,130000.00,1361.39,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,140000.00,1466.11,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,150000.00,1570.84,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,160000.00,1675.56,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,170000.00,1780.28,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,180000.00,1885.00,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,190000.00,1989.73,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,200000.00,2094.45,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,210000.00,2199.17,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,220000.00,2303.89,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,230000.00,2408.62,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,240000.00,2513.34,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,250000.00,2618.06,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,260000.00,2722.78,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,270000.00,2827.51,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,280000.00,2932.23,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,290000.00,3036.95,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,300000.00,3141.67,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,310000.00,3246.40,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,320000.00,3351.12,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,330000.00,3455.84,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,340000.00,3560.56,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,350000.00,3665.29,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,360000.00,3770.01,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,370000.00,3874.73,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,380000.00,3979.45,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,390000.00,4084.18,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P07,U.S.,26 U.S.C. 988 + IRS Pub. 525 - tax on the currency gain itself,400000.00,4188.90,1.05,"gain if acquired in 2024 x 15%, from data/c348_tax.csv - the character is disputed (F07)",C11|C12|C13|C14
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,10000.00,16536.00,165.36,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,20000.00,16536.00,82.68,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,30000.00,16536.00,55.12,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,40000.00,16536.00,41.34,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,50000.00,16536.00,33.07,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,60000.00,16536.00,27.56,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,70000.00,16536.00,23.62,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,80000.00,16536.00,20.67,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,90000.00,16536.00,18.37,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,100000.00,16536.00,16.54,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,110000.00,16536.00,15.03,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,120000.00,16536.00,13.78,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,130000.00,16536.00,12.72,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,140000.00,16536.00,11.81,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,150000.00,16536.00,11.02,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,160000.00,16536.00,10.34,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,170000.00,16536.00,9.73,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,180000.00,16536.00,9.19,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,190000.00,16536.00,8.70,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,200000.00,16536.00,8.27,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,210000.00,16536.00,7.87,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,220000.00,16536.00,7.52,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,230000.00,16536.00,7.19,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,240000.00,16536.00,6.89,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,250000.00,16536.00,6.61,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,260000.00,16536.00,6.36,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,270000.00,16536.00,6.12,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,280000.00,16536.00,5.91,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,290000.00,16536.00,5.70,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,300000.00,16536.00,5.51,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,310000.00,16536.00,5.33,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,320000.00,16536.00,5.17,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,330000.00,16536.00,5.01,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,340000.00,16536.00,4.86,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,350000.00,16536.00,4.72,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,360000.00,16536.00,4.59,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,370000.00,16536.00,4.47,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,380000.00,16536.00,4.35,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,390000.00,16536.00,4.24,"fixed figure, independent of the amount",C17
+P08,U.S.,31 U.S.C. 5321(a)(5)(B)(i) - non-willful FBAR violation,400000.00,16536.00,4.13,"fixed figure, independent of the amount",C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,10000.00,165353.00,1653.53,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,20000.00,165353.00,826.77,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,30000.00,165353.00,551.18,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,40000.00,165353.00,413.38,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,50000.00,165353.00,330.71,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,60000.00,165353.00,275.59,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,70000.00,165353.00,236.22,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,80000.00,165353.00,206.69,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,90000.00,165353.00,183.73,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,100000.00,165353.00,165.35,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,110000.00,165353.00,150.32,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,120000.00,165353.00,137.79,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,130000.00,165353.00,127.19,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,140000.00,165353.00,118.11,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,150000.00,165353.00,110.24,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,160000.00,165353.00,103.35,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,170000.00,165353.00,97.27,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,180000.00,165353.00,91.86,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,190000.00,165353.00,87.03,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,200000.00,165353.00,82.68,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,210000.00,165353.00,78.74,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,220000.00,165353.00,75.16,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,230000.00,165353.00,71.89,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,240000.00,165353.00,68.90,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,250000.00,165353.00,66.14,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,260000.00,165353.00,63.60,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,270000.00,165353.00,61.24,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,280000.00,165353.00,59.05,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,290000.00,165353.00,57.02,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,300000.00,165353.00,55.12,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,310000.00,165353.00,53.34,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,320000.00,165353.00,51.67,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,330000.00,165353.00,50.11,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,340000.00,170000.00,50.00,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,350000.00,175000.00,50.00,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,360000.00,180000.00,50.00,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,370000.00,185000.00,50.00,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,380000.00,190000.00,50.00,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,390000.00,195000.00,50.00,greater of USD 165353 or 50% of the balance,C17
+P09,U.S.,31 U.S.C. 5321(a)(5)(C)(i)(I) - willful FBAR violation,400000.00,200000.00,50.00,greater of USD 165353 or 50% of the balance,C17
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",10000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",20000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",30000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",40000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",50000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",60000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",70000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",80000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",90000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",100000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",110000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",120000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",130000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",140000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",150000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",160000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",170000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",180000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",190000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",200000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",210000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",220000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",230000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",240000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",250000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",260000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",270000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",280000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",290000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",300000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",310000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",320000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",330000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",340000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",350000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",360000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",370000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",380000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",390000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P10,U.S.,"CBP / 31 U.S.C. 5316 - unreported cash over USD 10,000",400000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C18
+P11,China,银发〔2026〕42号 - virtual-currency route,10000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,20000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,30000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,40000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,50000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,60000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,70000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,80000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,90000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,100000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,110000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,120000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,130000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,140000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,150000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,160000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,170000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,180000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,190000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,200000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,210000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,220000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,230000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,240000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,250000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,260000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,270000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,280000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,290000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,300000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,310000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,320000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,330000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,340000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,350000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,360000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,370000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,380000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,390000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10
+P11,China,银发〔2026〕42号 - virtual-currency route,400000.00,,,exposure depends on facts not in evidence in this pass - left BLANK,C10

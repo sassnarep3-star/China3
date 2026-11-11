@@ -1,0 +1,681 @@
+method_id,model,amount_usd,units,units_label,calendar_years,spread_usd,wire_fee_usd,receiving_fee_usd,usage_fee_usd,prc_tax_usd,known_cost_usd,known_cost_pct,cny_debited,blank_components,formula,flag_ids,source_ids
+M01,one_wire,10000.00,1,wire,1,20.94,32.43,,,,53.37,0.53,67087.87,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,20000.00,1,wire,1,41.87,42.43,,,,84.30,0.42,134025.74,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,30000.00,1,wire,1,62.81,52.43,,,,115.24,0.38,200963.61,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,40000.00,1,wire,1,83.74,61.31,,,,145.05,0.36,267894.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,50000.00,1,wire,1,104.68,61.31,,,,165.99,0.33,334765.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,60000.00,1,wire,1,125.61,61.31,,,,186.92,0.31,401636.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,70000.00,1,wire,1,146.55,61.31,,,,207.86,0.30,468507.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,80000.00,1,wire,1,167.49,61.31,,,,228.80,0.29,535378.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,90000.00,1,wire,1,188.42,61.31,,,,249.73,0.28,602249.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,100000.00,1,wire,1,209.36,61.31,,,,270.67,0.27,669120.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,110000.00,1,wire,1,230.29,61.31,,,,291.60,0.27,735991.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,120000.00,1,wire,1,251.23,61.31,,,,312.54,0.26,802862.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,130000.00,1,wire,1,272.17,61.31,,,,333.48,0.26,869733.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,140000.00,1,wire,1,293.10,61.31,,,,354.41,0.25,936604.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,150000.00,1,wire,1,314.04,61.31,,,,375.35,0.25,1003475.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,160000.00,1,wire,1,334.97,61.31,,,,396.28,0.25,1070346.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,170000.00,1,wire,1,355.91,61.31,,,,417.22,0.25,1137217.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,180000.00,1,wire,1,376.84,61.31,,,,438.15,0.24,1204088.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,190000.00,1,wire,1,397.78,61.31,,,,459.09,0.24,1270959.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,200000.00,1,wire,1,418.72,61.31,,,,480.03,0.24,1337830.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,210000.00,1,wire,1,439.65,61.31,,,,500.96,0.24,1404701.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,220000.00,1,wire,1,460.59,61.31,,,,521.90,0.24,1471572.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,230000.00,1,wire,1,481.52,61.31,,,,542.83,0.24,1538443.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,240000.00,1,wire,1,502.46,61.31,,,,563.77,0.23,1605314.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,250000.00,1,wire,1,523.40,61.31,,,,584.71,0.23,1672185.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,260000.00,1,wire,1,544.33,61.31,,,,605.64,0.23,1739056.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,270000.00,1,wire,1,565.27,61.31,,,,626.58,0.23,1805927.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,280000.00,1,wire,1,586.20,61.31,,,,647.51,0.23,1872798.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,290000.00,1,wire,1,607.14,61.31,,,,668.45,0.23,1939669.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,300000.00,1,wire,1,628.07,61.31,,,,689.38,0.23,2006540.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,310000.00,1,wire,1,649.01,61.31,,,,710.32,0.23,2073411.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,320000.00,1,wire,1,669.95,61.31,,,,731.26,0.23,2140282.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,330000.00,1,wire,1,690.88,61.31,,,,752.19,0.23,2207153.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,340000.00,1,wire,1,711.82,61.31,,,,773.13,0.23,2274024.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,350000.00,1,wire,1,732.75,61.31,,,,794.06,0.23,2340895.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,360000.00,1,wire,1,753.69,61.31,,,,815.00,0.23,2407766.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,370000.00,1,wire,1,774.63,61.31,,,,835.94,0.23,2474637.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,380000.00,1,wire,1,795.56,61.31,,,,856.87,0.23,2541508.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,390000.00,1,wire,1,816.50,61.31,,,,877.81,0.23,2608379.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M01,one_wire,400000.00,1,wire,1,837.43,61.31,,,,898.74,0.22,2675250.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C03|C06|C01|C02
+M02,wire_only,10000.00,1,wire,1,0.00,32.43,,,,32.43,0.32,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,20000.00,1,wire,1,0.00,42.43,,,,42.43,0.21,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,30000.00,1,wire,1,0.00,52.43,,,,52.43,0.17,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,40000.00,1,wire,1,0.00,61.31,,,,61.31,0.15,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,50000.00,1,wire,1,0.00,61.31,,,,61.31,0.12,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,60000.00,1,wire,1,0.00,61.31,,,,61.31,0.10,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,70000.00,1,wire,1,0.00,61.31,,,,61.31,0.09,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,80000.00,1,wire,1,0.00,61.31,,,,61.31,0.08,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,90000.00,1,wire,1,0.00,61.31,,,,61.31,0.07,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,100000.00,1,wire,1,0.00,61.31,,,,61.31,0.06,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,110000.00,1,wire,1,0.00,61.31,,,,61.31,0.06,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,120000.00,1,wire,1,0.00,61.31,,,,61.31,0.05,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,130000.00,1,wire,1,0.00,61.31,,,,61.31,0.05,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,140000.00,1,wire,1,0.00,61.31,,,,61.31,0.04,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,150000.00,1,wire,1,0.00,61.31,,,,61.31,0.04,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,160000.00,1,wire,1,0.00,61.31,,,,61.31,0.04,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,170000.00,1,wire,1,0.00,61.31,,,,61.31,0.04,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,180000.00,1,wire,1,0.00,61.31,,,,61.31,0.03,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,190000.00,1,wire,1,0.00,61.31,,,,61.31,0.03,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,200000.00,1,wire,1,0.00,61.31,,,,61.31,0.03,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,210000.00,1,wire,1,0.00,61.31,,,,61.31,0.03,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,220000.00,1,wire,1,0.00,61.31,,,,61.31,0.03,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,230000.00,1,wire,1,0.00,61.31,,,,61.31,0.03,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,240000.00,1,wire,1,0.00,61.31,,,,61.31,0.03,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,250000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,260000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,270000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,280000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,290000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,300000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,310000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,320000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,330000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,340000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,350000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,360000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,370000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,380000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,390000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M02,wire_only,400000.00,1,wire,1,0.00,61.31,,,,61.31,0.02,,receiving-bank fee,"no conversion: the balance is already USD, so the spread is zero; wire = BOC tariff C02",F03,C22|C02|C01
+M03,rmb_out,10000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,20000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,30000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,40000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,50000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,60000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,70000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,80000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,90000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,100000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,110000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,120000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,130000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,140000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,150000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,160000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,170000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,180000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,190000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,200000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,210000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,220000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,230000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,240000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,250000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,260000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,270000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,280000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,290000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,300000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,310000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,320000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,330000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,340000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,350000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,360000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,370000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,380000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,390000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M03,rmb_out,400000.00,1,remittance,1,,,,,,,,,spread; wire tariff; receiving-bank fee,"the offshore CNY-to-USD price and the remittance tariff were not verified in this pass, so every cost cell is blank",F02|F03,C06|C02|C01
+M04,quota_split,10000.00,1,"wires, at most one a calendar year",1,20.94,32.43,,,,53.37,0.53,67087.87,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 1 calendar years,F03,C04|C05|C06
+M04,quota_split,20000.00,1,"wires, at most one a calendar year",1,41.87,42.43,,,,84.30,0.42,134025.74,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 1 calendar years,F03,C04|C05|C06
+M04,quota_split,30000.00,1,"wires, at most one a calendar year",1,62.81,52.43,,,,115.24,0.38,200963.61,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 1 calendar years,F03,C04|C05|C06
+M04,quota_split,40000.00,1,"wires, at most one a calendar year",1,83.74,61.31,,,,145.05,0.36,267894.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 1 calendar years,F03,C04|C05|C06
+M04,quota_split,50000.00,1,"wires, at most one a calendar year",1,104.68,61.31,,,,165.99,0.33,334765.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 1 calendar years,F03,C04|C05|C06
+M04,quota_split,60000.00,2,"wires, at most one a calendar year",2,125.61,93.74,,,,219.35,0.37,401852.87,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 2 calendar years,F03,C04|C05|C06
+M04,quota_split,70000.00,2,"wires, at most one a calendar year",2,146.55,103.74,,,,250.29,0.36,468790.74,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 2 calendar years,F03,C04|C05|C06
+M04,quota_split,80000.00,2,"wires, at most one a calendar year",2,167.49,113.74,,,,281.23,0.35,535728.61,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 2 calendar years,F03,C04|C05|C06
+M04,quota_split,90000.00,2,"wires, at most one a calendar year",2,188.42,122.62,,,,311.04,0.35,602659.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 2 calendar years,F03,C04|C05|C06
+M04,quota_split,100000.00,2,"wires, at most one a calendar year",2,209.36,122.62,,,,331.98,0.33,669530.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 2 calendar years,F03,C04|C05|C06
+M04,quota_split,110000.00,3,"wires, at most one a calendar year",3,230.29,155.06,,,,385.35,0.35,736617.87,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 3 calendar years,F03,C04|C05|C06
+M04,quota_split,120000.00,3,"wires, at most one a calendar year",3,251.23,165.06,,,,416.29,0.35,803555.74,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 3 calendar years,F03,C04|C05|C06
+M04,quota_split,130000.00,3,"wires, at most one a calendar year",3,272.17,175.06,,,,447.23,0.34,870493.61,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 3 calendar years,F03,C04|C05|C06
+M04,quota_split,140000.00,3,"wires, at most one a calendar year",3,293.10,183.94,,,,477.04,0.34,937424.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 3 calendar years,F03,C04|C05|C06
+M04,quota_split,150000.00,3,"wires, at most one a calendar year",3,314.04,183.94,,,,497.98,0.33,1004295.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 3 calendar years,F03,C04|C05|C06
+M04,quota_split,160000.00,4,"wires, at most one a calendar year",4,334.97,216.37,,,,551.34,0.34,1071382.87,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 4 calendar years,F03,C04|C05|C06
+M04,quota_split,170000.00,4,"wires, at most one a calendar year",4,355.91,226.37,,,,582.28,0.34,1138320.74,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 4 calendar years,F03,C04|C05|C06
+M04,quota_split,180000.00,4,"wires, at most one a calendar year",4,376.84,236.37,,,,613.21,0.34,1205258.61,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 4 calendar years,F03,C04|C05|C06
+M04,quota_split,190000.00,4,"wires, at most one a calendar year",4,397.78,245.25,,,,643.03,0.34,1272189.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 4 calendar years,F03,C04|C05|C06
+M04,quota_split,200000.00,4,"wires, at most one a calendar year",4,418.72,245.25,,,,663.97,0.33,1339060.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 4 calendar years,F03,C04|C05|C06
+M04,quota_split,210000.00,5,"wires, at most one a calendar year",5,439.65,277.68,,,,717.33,0.34,1406147.87,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 5 calendar years,F03,C04|C05|C06
+M04,quota_split,220000.00,5,"wires, at most one a calendar year",5,460.59,287.68,,,,748.27,0.34,1473085.74,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 5 calendar years,F03,C04|C05|C06
+M04,quota_split,230000.00,5,"wires, at most one a calendar year",5,481.52,297.68,,,,779.20,0.34,1540023.61,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 5 calendar years,F03,C04|C05|C06
+M04,quota_split,240000.00,5,"wires, at most one a calendar year",5,502.46,306.56,,,,809.02,0.34,1606954.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 5 calendar years,F03,C04|C05|C06
+M04,quota_split,250000.00,5,"wires, at most one a calendar year",5,523.40,306.56,,,,829.96,0.33,1673825.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 5 calendar years,F03,C04|C05|C06
+M04,quota_split,260000.00,6,"wires, at most one a calendar year",6,544.33,338.99,,,,883.32,0.34,1740912.87,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 6 calendar years,F03,C04|C05|C06
+M04,quota_split,270000.00,6,"wires, at most one a calendar year",6,565.27,348.99,,,,914.26,0.34,1807850.74,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 6 calendar years,F03,C04|C05|C06
+M04,quota_split,280000.00,6,"wires, at most one a calendar year",6,586.20,358.99,,,,945.19,0.34,1874788.61,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 6 calendar years,F03,C04|C05|C06
+M04,quota_split,290000.00,6,"wires, at most one a calendar year",6,607.14,367.87,,,,975.01,0.34,1941719.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 6 calendar years,F03,C04|C05|C06
+M04,quota_split,300000.00,6,"wires, at most one a calendar year",6,628.07,367.87,,,,995.94,0.33,2008590.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 6 calendar years,F03,C04|C05|C06
+M04,quota_split,310000.00,7,"wires, at most one a calendar year",7,649.01,400.30,,,,1049.31,0.34,2075677.87,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 7 calendar years,F03,C04|C05|C06
+M04,quota_split,320000.00,7,"wires, at most one a calendar year",7,669.95,410.30,,,,1080.25,0.34,2142615.74,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 7 calendar years,F03,C04|C05|C06
+M04,quota_split,330000.00,7,"wires, at most one a calendar year",7,690.88,420.30,,,,1111.18,0.34,2209553.61,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 7 calendar years,F03,C04|C05|C06
+M04,quota_split,340000.00,7,"wires, at most one a calendar year",7,711.82,429.18,,,,1141.00,0.34,2276484.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 7 calendar years,F03,C04|C05|C06
+M04,quota_split,350000.00,7,"wires, at most one a calendar year",7,732.75,429.18,,,,1161.93,0.33,2343355.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 7 calendar years,F03,C04|C05|C06
+M04,quota_split,360000.00,8,"wires, at most one a calendar year",8,753.69,461.62,,,,1215.31,0.34,2410442.87,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 8 calendar years,F03,C04|C05|C06
+M04,quota_split,370000.00,8,"wires, at most one a calendar year",8,774.63,471.62,,,,1246.25,0.34,2477380.74,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 8 calendar years,F03,C04|C05|C06
+M04,quota_split,380000.00,8,"wires, at most one a calendar year",8,795.56,481.62,,,,1277.18,0.34,2544318.61,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 8 calendar years,F03,C04|C05|C06
+M04,quota_split,390000.00,8,"wires, at most one a calendar year",8,816.50,490.50,,,,1307.00,0.34,2611249.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 8 calendar years,F03,C04|C05|C06
+M04,quota_split,400000.00,8,"wires, at most one a calendar year",8,837.43,490.50,,,,1327.93,0.33,2678120.00,receiving-bank fee,spread on the whole amount; wire tariff charged once per USD 50000 tranche; needs 8 calendar years,F03,C04|C05|C06
+M05,approval_wire,10000.00,1,approved transfer,,20.94,32.43,,,,53.37,0.53,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,20000.00,1,approved transfer,,41.87,42.43,,,,84.30,0.42,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,30000.00,1,approved transfer,,62.81,52.43,,,,115.24,0.38,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,40000.00,1,approved transfer,,83.74,61.31,,,,145.05,0.36,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,50000.00,1,approved transfer,,104.68,61.31,,,,165.99,0.33,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,60000.00,1,approved transfer,,125.61,61.31,,,,186.92,0.31,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,70000.00,1,approved transfer,,146.55,61.31,,,,207.86,0.30,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,80000.00,1,approved transfer,,167.49,61.31,,,,228.80,0.29,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,90000.00,1,approved transfer,,188.42,61.31,,,,249.73,0.28,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,100000.00,1,approved transfer,,209.36,61.31,,,,270.67,0.27,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,110000.00,1,approved transfer,,230.29,61.31,,,,291.60,0.27,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,120000.00,1,approved transfer,,251.23,61.31,,,,312.54,0.26,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,130000.00,1,approved transfer,,272.17,61.31,,,,333.48,0.26,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,140000.00,1,approved transfer,,293.10,61.31,,,,354.41,0.25,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,150000.00,1,approved transfer,,314.04,61.31,,,,375.35,0.25,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,160000.00,1,approved transfer,,334.97,61.31,,,,396.28,0.25,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,170000.00,1,approved transfer,,355.91,61.31,,,,417.22,0.25,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,180000.00,1,approved transfer,,376.84,61.31,,,,438.15,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,190000.00,1,approved transfer,,397.78,61.31,,,,459.09,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,200000.00,1,approved transfer,,418.72,61.31,,,,480.03,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,210000.00,1,approved transfer,,439.65,61.31,,,,500.96,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,220000.00,1,approved transfer,,460.59,61.31,,,,521.90,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,230000.00,1,approved transfer,,481.52,61.31,,,,542.83,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,240000.00,1,approved transfer,,502.46,61.31,,,,563.77,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,250000.00,1,approved transfer,,523.40,61.31,,,,584.71,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,260000.00,1,approved transfer,,544.33,61.31,,,,605.64,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,270000.00,1,approved transfer,,565.27,61.31,,,,626.58,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,280000.00,1,approved transfer,,586.20,61.31,,,,647.51,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,290000.00,1,approved transfer,,607.14,61.31,,,,668.45,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,300000.00,1,approved transfer,,628.07,61.31,,,,689.38,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,310000.00,1,approved transfer,,649.01,61.31,,,,710.32,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,320000.00,1,approved transfer,,669.95,61.31,,,,731.26,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,330000.00,1,approved transfer,,690.88,61.31,,,,752.19,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,340000.00,1,approved transfer,,711.82,61.31,,,,773.13,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,350000.00,1,approved transfer,,732.75,61.31,,,,794.06,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,360000.00,1,approved transfer,,753.69,61.31,,,,815.00,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,370000.00,1,approved transfer,,774.63,61.31,,,,835.94,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,380000.00,1,approved transfer,,795.56,61.31,,,,856.87,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,390000.00,1,approved transfer,,816.50,61.31,,,,877.81,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M05,approval_wire,400000.00,1,approved transfer,,837.43,61.31,,,,898.74,0.22,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,10000.00,1,approved transfer,,20.94,32.43,,,,53.37,0.53,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,20000.00,1,approved transfer,,41.87,42.43,,,,84.30,0.42,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,30000.00,1,approved transfer,,62.81,52.43,,,,115.24,0.38,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,40000.00,1,approved transfer,,83.74,61.31,,,,145.05,0.36,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,50000.00,1,approved transfer,,104.68,61.31,,,,165.99,0.33,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,60000.00,1,approved transfer,,125.61,61.31,,,,186.92,0.31,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,70000.00,1,approved transfer,,146.55,61.31,,,,207.86,0.30,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,80000.00,1,approved transfer,,167.49,61.31,,,,228.80,0.29,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,90000.00,1,approved transfer,,188.42,61.31,,,,249.73,0.28,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,100000.00,1,approved transfer,,209.36,61.31,,,,270.67,0.27,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,110000.00,1,approved transfer,,230.29,61.31,,,,291.60,0.27,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,120000.00,1,approved transfer,,251.23,61.31,,,,312.54,0.26,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,130000.00,1,approved transfer,,272.17,61.31,,,,333.48,0.26,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,140000.00,1,approved transfer,,293.10,61.31,,,,354.41,0.25,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,150000.00,1,approved transfer,,314.04,61.31,,,,375.35,0.25,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,160000.00,1,approved transfer,,334.97,61.31,,,,396.28,0.25,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,170000.00,1,approved transfer,,355.91,61.31,,,,417.22,0.25,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,180000.00,1,approved transfer,,376.84,61.31,,,,438.15,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,190000.00,1,approved transfer,,397.78,61.31,,,,459.09,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,200000.00,1,approved transfer,,418.72,61.31,,,,480.03,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,210000.00,1,approved transfer,,439.65,61.31,,,,500.96,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,220000.00,1,approved transfer,,460.59,61.31,,,,521.90,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,230000.00,1,approved transfer,,481.52,61.31,,,,542.83,0.24,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,240000.00,1,approved transfer,,502.46,61.31,,,,563.77,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,250000.00,1,approved transfer,,523.40,61.31,,,,584.71,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,260000.00,1,approved transfer,,544.33,61.31,,,,605.64,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,270000.00,1,approved transfer,,565.27,61.31,,,,626.58,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,280000.00,1,approved transfer,,586.20,61.31,,,,647.51,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,290000.00,1,approved transfer,,607.14,61.31,,,,668.45,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,300000.00,1,approved transfer,,628.07,61.31,,,,689.38,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,310000.00,1,approved transfer,,649.01,61.31,,,,710.32,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,320000.00,1,approved transfer,,669.95,61.31,,,,731.26,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,330000.00,1,approved transfer,,690.88,61.31,,,,752.19,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,340000.00,1,approved transfer,,711.82,61.31,,,,773.13,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,350000.00,1,approved transfer,,732.75,61.31,,,,794.06,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,360000.00,1,approved transfer,,753.69,61.31,,,,815.00,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,370000.00,1,approved transfer,,774.63,61.31,,,,835.94,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,380000.00,1,approved transfer,,795.56,61.31,,,,856.87,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,390000.00,1,approved transfer,,816.50,61.31,,,,877.81,0.23,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M06,approval_wire,400000.00,1,approved transfer,,837.43,61.31,,,,898.74,0.22,,receiving-bank fee,the SAFE approval route has no published fee; only the ordinary spread and wire tariff are costed,F03|F06,C09|C06|C02
+M07,one_wire,10000.00,1,wire,1,20.94,32.43,,,,53.37,0.53,67087.87,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,20000.00,1,wire,1,41.87,42.43,,,,84.30,0.42,134025.74,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,30000.00,1,wire,1,62.81,52.43,,,,115.24,0.38,200963.61,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,40000.00,1,wire,1,83.74,61.31,,,,145.05,0.36,267894.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,50000.00,1,wire,1,104.68,61.31,,,,165.99,0.33,334765.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,60000.00,1,wire,1,125.61,61.31,,,,186.92,0.31,401636.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,70000.00,1,wire,1,146.55,61.31,,,,207.86,0.30,468507.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,80000.00,1,wire,1,167.49,61.31,,,,228.80,0.29,535378.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,90000.00,1,wire,1,188.42,61.31,,,,249.73,0.28,602249.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,100000.00,1,wire,1,209.36,61.31,,,,270.67,0.27,669120.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,110000.00,1,wire,1,230.29,61.31,,,,291.60,0.27,735991.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,120000.00,1,wire,1,251.23,61.31,,,,312.54,0.26,802862.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,130000.00,1,wire,1,272.17,61.31,,,,333.48,0.26,869733.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,140000.00,1,wire,1,293.10,61.31,,,,354.41,0.25,936604.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,150000.00,1,wire,1,314.04,61.31,,,,375.35,0.25,1003475.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,160000.00,1,wire,1,334.97,61.31,,,,396.28,0.25,1070346.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,170000.00,1,wire,1,355.91,61.31,,,,417.22,0.25,1137217.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,180000.00,1,wire,1,376.84,61.31,,,,438.15,0.24,1204088.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,190000.00,1,wire,1,397.78,61.31,,,,459.09,0.24,1270959.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,200000.00,1,wire,1,418.72,61.31,,,,480.03,0.24,1337830.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,210000.00,1,wire,1,439.65,61.31,,,,500.96,0.24,1404701.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,220000.00,1,wire,1,460.59,61.31,,,,521.90,0.24,1471572.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,230000.00,1,wire,1,481.52,61.31,,,,542.83,0.24,1538443.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,240000.00,1,wire,1,502.46,61.31,,,,563.77,0.23,1605314.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,250000.00,1,wire,1,523.40,61.31,,,,584.71,0.23,1672185.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,260000.00,1,wire,1,544.33,61.31,,,,605.64,0.23,1739056.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,270000.00,1,wire,1,565.27,61.31,,,,626.58,0.23,1805927.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,280000.00,1,wire,1,586.20,61.31,,,,647.51,0.23,1872798.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,290000.00,1,wire,1,607.14,61.31,,,,668.45,0.23,1939669.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,300000.00,1,wire,1,628.07,61.31,,,,689.38,0.23,2006540.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,310000.00,1,wire,1,649.01,61.31,,,,710.32,0.23,2073411.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,320000.00,1,wire,1,669.95,61.31,,,,731.26,0.23,2140282.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,330000.00,1,wire,1,690.88,61.31,,,,752.19,0.23,2207153.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,340000.00,1,wire,1,711.82,61.31,,,,773.13,0.23,2274024.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,350000.00,1,wire,1,732.75,61.31,,,,794.06,0.23,2340895.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,360000.00,1,wire,1,753.69,61.31,,,,815.00,0.23,2407766.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,370000.00,1,wire,1,774.63,61.31,,,,835.94,0.23,2474637.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,380000.00,1,wire,1,795.56,61.31,,,,856.87,0.23,2541508.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,390000.00,1,wire,1,816.50,61.31,,,,877.81,0.23,2608379.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M07,one_wire,400000.00,1,wire,1,837.43,61.31,,,,898.74,0.22,2675250.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M08,one_wire,10000.00,1,wire,1,20.94,32.43,,,,53.37,0.53,67087.87,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,20000.00,1,wire,1,41.87,42.43,,,,84.30,0.42,134025.74,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,30000.00,1,wire,1,62.81,52.43,,,,115.24,0.38,200963.61,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,40000.00,1,wire,1,83.74,61.31,,,,145.05,0.36,267894.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,50000.00,1,wire,1,104.68,61.31,,,,165.99,0.33,334765.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,60000.00,1,wire,1,125.61,61.31,,,,186.92,0.31,401636.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,70000.00,1,wire,1,146.55,61.31,,,,207.86,0.30,468507.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,80000.00,1,wire,1,167.49,61.31,,,,228.80,0.29,535378.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,90000.00,1,wire,1,188.42,61.31,,,,249.73,0.28,602249.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,100000.00,1,wire,1,209.36,61.31,,,,270.67,0.27,669120.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,110000.00,1,wire,1,230.29,61.31,,,,291.60,0.27,735991.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,120000.00,1,wire,1,251.23,61.31,,,,312.54,0.26,802862.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,130000.00,1,wire,1,272.17,61.31,,,,333.48,0.26,869733.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,140000.00,1,wire,1,293.10,61.31,,,,354.41,0.25,936604.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,150000.00,1,wire,1,314.04,61.31,,,,375.35,0.25,1003475.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,160000.00,1,wire,1,334.97,61.31,,,,396.28,0.25,1070346.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,170000.00,1,wire,1,355.91,61.31,,,,417.22,0.25,1137217.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,180000.00,1,wire,1,376.84,61.31,,,,438.15,0.24,1204088.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,190000.00,1,wire,1,397.78,61.31,,,,459.09,0.24,1270959.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,200000.00,1,wire,1,418.72,61.31,,,,480.03,0.24,1337830.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,210000.00,1,wire,1,439.65,61.31,,,,500.96,0.24,1404701.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,220000.00,1,wire,1,460.59,61.31,,,,521.90,0.24,1471572.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,230000.00,1,wire,1,481.52,61.31,,,,542.83,0.24,1538443.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,240000.00,1,wire,1,502.46,61.31,,,,563.77,0.23,1605314.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,250000.00,1,wire,1,523.40,61.31,,,,584.71,0.23,1672185.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,260000.00,1,wire,1,544.33,61.31,,,,605.64,0.23,1739056.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,270000.00,1,wire,1,565.27,61.31,,,,626.58,0.23,1805927.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,280000.00,1,wire,1,586.20,61.31,,,,647.51,0.23,1872798.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,290000.00,1,wire,1,607.14,61.31,,,,668.45,0.23,1939669.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,300000.00,1,wire,1,628.07,61.31,,,,689.38,0.23,2006540.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,310000.00,1,wire,1,649.01,61.31,,,,710.32,0.23,2073411.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,320000.00,1,wire,1,669.95,61.31,,,,731.26,0.23,2140282.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,330000.00,1,wire,1,690.88,61.31,,,,752.19,0.23,2207153.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,340000.00,1,wire,1,711.82,61.31,,,,773.13,0.23,2274024.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,350000.00,1,wire,1,732.75,61.31,,,,794.06,0.23,2340895.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,360000.00,1,wire,1,753.69,61.31,,,,815.00,0.23,2407766.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,370000.00,1,wire,1,774.63,61.31,,,,835.94,0.23,2474637.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,380000.00,1,wire,1,795.56,61.31,,,,856.87,0.23,2541508.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,390000.00,1,wire,1,816.50,61.31,,,,877.81,0.23,2608379.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M08,one_wire,400000.00,1,wire,1,837.43,61.31,,,,898.74,0.22,2675250.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C08|C01|C02
+M09,one_wire,10000.00,1,wire,1,20.94,32.43,,,,53.37,0.53,67087.87,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,20000.00,1,wire,1,41.87,42.43,,,,84.30,0.42,134025.74,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,30000.00,1,wire,1,62.81,52.43,,,,115.24,0.38,200963.61,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,40000.00,1,wire,1,83.74,61.31,,,,145.05,0.36,267894.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,50000.00,1,wire,1,104.68,61.31,,,,165.99,0.33,334765.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,60000.00,1,wire,1,125.61,61.31,,,,186.92,0.31,401636.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,70000.00,1,wire,1,146.55,61.31,,,,207.86,0.30,468507.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,80000.00,1,wire,1,167.49,61.31,,,,228.80,0.29,535378.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,90000.00,1,wire,1,188.42,61.31,,,,249.73,0.28,602249.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,100000.00,1,wire,1,209.36,61.31,,,,270.67,0.27,669120.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,110000.00,1,wire,1,230.29,61.31,,,,291.60,0.27,735991.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,120000.00,1,wire,1,251.23,61.31,,,,312.54,0.26,802862.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,130000.00,1,wire,1,272.17,61.31,,,,333.48,0.26,869733.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,140000.00,1,wire,1,293.10,61.31,,,,354.41,0.25,936604.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,150000.00,1,wire,1,314.04,61.31,,,,375.35,0.25,1003475.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,160000.00,1,wire,1,334.97,61.31,,,,396.28,0.25,1070346.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,170000.00,1,wire,1,355.91,61.31,,,,417.22,0.25,1137217.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,180000.00,1,wire,1,376.84,61.31,,,,438.15,0.24,1204088.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,190000.00,1,wire,1,397.78,61.31,,,,459.09,0.24,1270959.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,200000.00,1,wire,1,418.72,61.31,,,,480.03,0.24,1337830.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,210000.00,1,wire,1,439.65,61.31,,,,500.96,0.24,1404701.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,220000.00,1,wire,1,460.59,61.31,,,,521.90,0.24,1471572.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,230000.00,1,wire,1,481.52,61.31,,,,542.83,0.24,1538443.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,240000.00,1,wire,1,502.46,61.31,,,,563.77,0.23,1605314.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,250000.00,1,wire,1,523.40,61.31,,,,584.71,0.23,1672185.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,260000.00,1,wire,1,544.33,61.31,,,,605.64,0.23,1739056.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,270000.00,1,wire,1,565.27,61.31,,,,626.58,0.23,1805927.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,280000.00,1,wire,1,586.20,61.31,,,,647.51,0.23,1872798.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,290000.00,1,wire,1,607.14,61.31,,,,668.45,0.23,1939669.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,300000.00,1,wire,1,628.07,61.31,,,,689.38,0.23,2006540.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,310000.00,1,wire,1,649.01,61.31,,,,710.32,0.23,2073411.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,320000.00,1,wire,1,669.95,61.31,,,,731.26,0.23,2140282.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,330000.00,1,wire,1,690.88,61.31,,,,752.19,0.23,2207153.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,340000.00,1,wire,1,711.82,61.31,,,,773.13,0.23,2274024.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,350000.00,1,wire,1,732.75,61.31,,,,794.06,0.23,2340895.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,360000.00,1,wire,1,753.69,61.31,,,,815.00,0.23,2407766.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,370000.00,1,wire,1,774.63,61.31,,,,835.94,0.23,2474637.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,380000.00,1,wire,1,795.56,61.31,,,,856.87,0.23,2541508.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,390000.00,1,wire,1,816.50,61.31,,,,877.81,0.23,2608379.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M09,one_wire,400000.00,1,wire,1,837.43,61.31,,,,898.74,0.22,2675250.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C08|C06|C01|C02
+M10,atm,10000.00,7,"withdrawals of CNY 10,000 equivalent",1,20.94,0.00,,,,20.94,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,20000.00,14,"withdrawals of CNY 10,000 equivalent",2,41.87,0.00,,,,41.87,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,30000.00,21,"withdrawals of CNY 10,000 equivalent",3,62.81,0.00,,,,62.81,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,40000.00,27,"withdrawals of CNY 10,000 equivalent",3,83.74,0.00,,,,83.74,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,50000.00,34,"withdrawals of CNY 10,000 equivalent",4,104.68,0.00,,,,104.68,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,60000.00,41,"withdrawals of CNY 10,000 equivalent",5,125.61,0.00,,,,125.61,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,70000.00,47,"withdrawals of CNY 10,000 equivalent",5,146.55,0.00,,,,146.55,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,80000.00,54,"withdrawals of CNY 10,000 equivalent",6,167.49,0.00,,,,167.49,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,90000.00,61,"withdrawals of CNY 10,000 equivalent",7,188.42,0.00,,,,188.42,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,100000.00,67,"withdrawals of CNY 10,000 equivalent",7,209.36,0.00,,,,209.36,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,110000.00,74,"withdrawals of CNY 10,000 equivalent",8,230.29,0.00,,,,230.29,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,120000.00,81,"withdrawals of CNY 10,000 equivalent",9,251.23,0.00,,,,251.23,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,130000.00,87,"withdrawals of CNY 10,000 equivalent",9,272.17,0.00,,,,272.17,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,140000.00,94,"withdrawals of CNY 10,000 equivalent",10,293.10,0.00,,,,293.10,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,150000.00,101,"withdrawals of CNY 10,000 equivalent",11,314.04,0.00,,,,314.04,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,160000.00,107,"withdrawals of CNY 10,000 equivalent",11,334.97,0.00,,,,334.97,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,170000.00,114,"withdrawals of CNY 10,000 equivalent",12,355.91,0.00,,,,355.91,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,180000.00,121,"withdrawals of CNY 10,000 equivalent",13,376.84,0.00,,,,376.84,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,190000.00,128,"withdrawals of CNY 10,000 equivalent",13,397.78,0.00,,,,397.78,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,200000.00,134,"withdrawals of CNY 10,000 equivalent",14,418.72,0.00,,,,418.72,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,210000.00,141,"withdrawals of CNY 10,000 equivalent",15,439.65,0.00,,,,439.65,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,220000.00,148,"withdrawals of CNY 10,000 equivalent",15,460.59,0.00,,,,460.59,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,230000.00,154,"withdrawals of CNY 10,000 equivalent",16,481.52,0.00,,,,481.52,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,240000.00,161,"withdrawals of CNY 10,000 equivalent",17,502.46,0.00,,,,502.46,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,250000.00,168,"withdrawals of CNY 10,000 equivalent",17,523.40,0.00,,,,523.40,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,260000.00,174,"withdrawals of CNY 10,000 equivalent",18,544.33,0.00,,,,544.33,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,270000.00,181,"withdrawals of CNY 10,000 equivalent",19,565.27,0.00,,,,565.27,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,280000.00,188,"withdrawals of CNY 10,000 equivalent",19,586.20,0.00,,,,586.20,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,290000.00,194,"withdrawals of CNY 10,000 equivalent",20,607.14,0.00,,,,607.14,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,300000.00,201,"withdrawals of CNY 10,000 equivalent",21,628.07,0.00,,,,628.07,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,310000.00,208,"withdrawals of CNY 10,000 equivalent",21,649.01,0.00,,,,649.01,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,320000.00,214,"withdrawals of CNY 10,000 equivalent",22,669.95,0.00,,,,669.95,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,330000.00,221,"withdrawals of CNY 10,000 equivalent",23,690.88,0.00,,,,690.88,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,340000.00,228,"withdrawals of CNY 10,000 equivalent",23,711.82,0.00,,,,711.82,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,350000.00,235,"withdrawals of CNY 10,000 equivalent",24,732.75,0.00,,,,732.75,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,360000.00,241,"withdrawals of CNY 10,000 equivalent",25,753.69,0.00,,,,753.69,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,370000.00,248,"withdrawals of CNY 10,000 equivalent",25,774.63,0.00,,,,774.63,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,380000.00,255,"withdrawals of CNY 10,000 equivalent",26,795.56,0.00,,,,795.56,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,390000.00,261,"withdrawals of CNY 10,000 equivalent",27,816.50,0.00,,,,816.50,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M10,atm,400000.00,268,"withdrawals of CNY 10,000 equivalent",27,837.43,0.00,,,,837.43,0.21,,card/ATM tariff; receiving-bank fee,"the card/ATM tariff C19 was NOT re-read this pass, so the fee is blank; the annual ceiling C07 is CNY 100,000",F03|F04,C07|C19
+M11,cash,10000.00,2,"trips at USD 5,000",2,20.94,0.00,,,,20.94,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 2 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,20000.00,4,"trips at USD 5,000",4,41.87,0.00,,,,41.87,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 4 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,30000.00,6,"trips at USD 5,000",6,62.81,0.00,,,,62.81,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 6 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,40000.00,8,"trips at USD 5,000",8,83.74,0.00,,,,83.74,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 8 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,50000.00,10,"trips at USD 5,000",10,104.68,0.00,,,,104.68,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 10 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,60000.00,12,"trips at USD 5,000",12,125.61,0.00,,,,125.61,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 12 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,70000.00,14,"trips at USD 5,000",14,146.55,0.00,,,,146.55,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 14 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,80000.00,16,"trips at USD 5,000",16,167.49,0.00,,,,167.49,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 16 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,90000.00,18,"trips at USD 5,000",18,188.42,0.00,,,,188.42,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 18 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,100000.00,20,"trips at USD 5,000",20,209.36,0.00,,,,209.36,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 20 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,110000.00,22,"trips at USD 5,000",22,230.29,0.00,,,,230.29,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 22 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,120000.00,24,"trips at USD 5,000",24,251.23,0.00,,,,251.23,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 24 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,130000.00,26,"trips at USD 5,000",26,272.17,0.00,,,,272.17,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 26 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,140000.00,28,"trips at USD 5,000",28,293.10,0.00,,,,293.10,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 28 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,150000.00,30,"trips at USD 5,000",30,314.04,0.00,,,,314.04,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 30 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,160000.00,32,"trips at USD 5,000",32,334.97,0.00,,,,334.97,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 32 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,170000.00,34,"trips at USD 5,000",34,355.91,0.00,,,,355.91,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 34 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,180000.00,36,"trips at USD 5,000",36,376.84,0.00,,,,376.84,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 36 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,190000.00,38,"trips at USD 5,000",38,397.78,0.00,,,,397.78,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 38 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,200000.00,40,"trips at USD 5,000",40,418.72,0.00,,,,418.72,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 40 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,210000.00,42,"trips at USD 5,000",42,439.65,0.00,,,,439.65,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 42 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,220000.00,44,"trips at USD 5,000",44,460.59,0.00,,,,460.59,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 44 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,230000.00,46,"trips at USD 5,000",46,481.52,0.00,,,,481.52,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 46 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,240000.00,48,"trips at USD 5,000",48,502.46,0.00,,,,502.46,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 48 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,250000.00,50,"trips at USD 5,000",50,523.40,0.00,,,,523.40,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 50 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,260000.00,52,"trips at USD 5,000",52,544.33,0.00,,,,544.33,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 52 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,270000.00,54,"trips at USD 5,000",54,565.27,0.00,,,,565.27,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 54 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,280000.00,56,"trips at USD 5,000",56,586.20,0.00,,,,586.20,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 56 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,290000.00,58,"trips at USD 5,000",58,607.14,0.00,,,,607.14,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 58 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,300000.00,60,"trips at USD 5,000",60,628.07,0.00,,,,628.07,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 60 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,310000.00,62,"trips at USD 5,000",62,649.01,0.00,,,,649.01,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 62 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,320000.00,64,"trips at USD 5,000",64,669.95,0.00,,,,669.95,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 64 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,330000.00,66,"trips at USD 5,000",66,690.88,0.00,,,,690.88,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 66 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,340000.00,68,"trips at USD 5,000",68,711.82,0.00,,,,711.82,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 68 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,350000.00,70,"trips at USD 5,000",70,732.75,0.00,,,,732.75,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 70 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,360000.00,72,"trips at USD 5,000",72,753.69,0.00,,,,753.69,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 72 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,370000.00,74,"trips at USD 5,000",74,774.63,0.00,,,,774.63,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 74 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,380000.00,76,"trips at USD 5,000",76,795.56,0.00,,,,795.56,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 76 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,390000.00,78,"trips at USD 5,000",78,816.50,0.00,,,,816.50,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 78 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M11,cash,400000.00,80,"trips at USD 5,000",80,837.43,0.00,,,,837.43,0.21,,,"the banknote rate equals the spot rate on today's board (6.6871); 80 permitted trips of USD 5,000 because the inherited R15 says USD 5,000 without a permit",F05,C06|C18
+M12,one_wire,10000.00,1,wire,1,20.94,32.43,,,,53.37,0.53,67087.87,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,20000.00,1,wire,1,41.87,42.43,,,,84.30,0.42,134025.74,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,30000.00,1,wire,1,62.81,52.43,,,,115.24,0.38,200963.61,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,40000.00,1,wire,1,83.74,61.31,,,,145.05,0.36,267894.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,50000.00,1,wire,1,104.68,61.31,,,,165.99,0.33,334765.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,60000.00,1,wire,1,125.61,61.31,,,,186.92,0.31,401636.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,70000.00,1,wire,1,146.55,61.31,,,,207.86,0.30,468507.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,80000.00,1,wire,1,167.49,61.31,,,,228.80,0.29,535378.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,90000.00,1,wire,1,188.42,61.31,,,,249.73,0.28,602249.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,100000.00,1,wire,1,209.36,61.31,,,,270.67,0.27,669120.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,110000.00,1,wire,1,230.29,61.31,,,,291.60,0.27,735991.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,120000.00,1,wire,1,251.23,61.31,,,,312.54,0.26,802862.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,130000.00,1,wire,1,272.17,61.31,,,,333.48,0.26,869733.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,140000.00,1,wire,1,293.10,61.31,,,,354.41,0.25,936604.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,150000.00,1,wire,1,314.04,61.31,,,,375.35,0.25,1003475.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,160000.00,1,wire,1,334.97,61.31,,,,396.28,0.25,1070346.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,170000.00,1,wire,1,355.91,61.31,,,,417.22,0.25,1137217.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,180000.00,1,wire,1,376.84,61.31,,,,438.15,0.24,1204088.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,190000.00,1,wire,1,397.78,61.31,,,,459.09,0.24,1270959.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,200000.00,1,wire,1,418.72,61.31,,,,480.03,0.24,1337830.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,210000.00,1,wire,1,439.65,61.31,,,,500.96,0.24,1404701.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,220000.00,1,wire,1,460.59,61.31,,,,521.90,0.24,1471572.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,230000.00,1,wire,1,481.52,61.31,,,,542.83,0.24,1538443.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,240000.00,1,wire,1,502.46,61.31,,,,563.77,0.23,1605314.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,250000.00,1,wire,1,523.40,61.31,,,,584.71,0.23,1672185.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,260000.00,1,wire,1,544.33,61.31,,,,605.64,0.23,1739056.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,270000.00,1,wire,1,565.27,61.31,,,,626.58,0.23,1805927.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,280000.00,1,wire,1,586.20,61.31,,,,647.51,0.23,1872798.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,290000.00,1,wire,1,607.14,61.31,,,,668.45,0.23,1939669.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,300000.00,1,wire,1,628.07,61.31,,,,689.38,0.23,2006540.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,310000.00,1,wire,1,649.01,61.31,,,,710.32,0.23,2073411.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,320000.00,1,wire,1,669.95,61.31,,,,731.26,0.23,2140282.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,330000.00,1,wire,1,690.88,61.31,,,,752.19,0.23,2207153.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,340000.00,1,wire,1,711.82,61.31,,,,773.13,0.23,2274024.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,350000.00,1,wire,1,732.75,61.31,,,,794.06,0.23,2340895.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,360000.00,1,wire,1,753.69,61.31,,,,815.00,0.23,2407766.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,370000.00,1,wire,1,774.63,61.31,,,,835.94,0.23,2474637.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,380000.00,1,wire,1,795.56,61.31,,,,856.87,0.23,2541508.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,390000.00,1,wire,1,816.50,61.31,,,,877.81,0.23,2608379.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M12,one_wire,400000.00,1,wire,1,837.43,61.31,,,,898.74,0.22,2675250.00,receiving-bank fee,"spread = amount x (ask 6.6871 - mid 6.6731) / ask; wire = min(260, max(50, amount x ask x 0.001)) + 150 CNY, converted at ask",F03,C06|C01|C02
+M13,none,10000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,20000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,30000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,40000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,50000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,60000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,70000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,80000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,90000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,100000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,110000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,120000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,130000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,140000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,150000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,160000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,170000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,180000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,190000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,200000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,210000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,220000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,230000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,240000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,250000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,260000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,270000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,280000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,290000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,300000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,310000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,320000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,330000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,340000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,350000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,360000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,370000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,380000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,390000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M13,none,400000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C16
+M14,none,10000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,20000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,30000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,40000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,50000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,60000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,70000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,80000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,90000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,100000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,110000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,120000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,130000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,140000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,150000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,160000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,170000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,180000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,190000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,200000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,210000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,220000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,230000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,240000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,250000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,260000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,270000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,280000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,290000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,300000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,310000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,320000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,330000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,340000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,350000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,360000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,370000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,380000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,390000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M14,none,400000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,10000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,20000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,30000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,40000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,50000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,60000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,70000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,80000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,90000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,100000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,110000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,120000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,130000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,140000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,150000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,160000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,170000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,180000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,190000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,200000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,210000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,220000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,230000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,240000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,250000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,260000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,270000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,280000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,290000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,300000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,310000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,320000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,330000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,340000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,350000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,360000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,370000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,380000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,390000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M15,none,400000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06
+M16,none,10000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,20000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,30000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,40000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,50000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,60000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,70000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,80000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,90000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,100000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,110000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,120000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,130000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,140000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,150000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,160000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,170000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,180000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,190000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,200000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,210000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,220000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,230000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,240000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,250000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,260000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,270000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,280000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,290000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,300000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,310000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,320000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,330000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,340000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,350000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,360000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,370000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,380000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,390000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M16,none,400000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C10
+M17,none,10000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,20000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,30000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,40000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,50000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,60000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,70000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,80000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,90000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,100000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,110000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,120000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,130000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,140000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,150000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,160000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,170000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,180000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,190000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,200000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,210000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,220000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,230000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,240000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,250000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,260000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,270000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,280000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,290000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,300000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,310000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,320000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,330000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,340000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,350000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,360000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,370000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,380000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,390000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18
+M17,none,400000.00,0,no transfer,0,0.00,0.00,,,,0.00,0.00,,,"no conversion takes place, so no conversion cost arises",,C06|C18

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flagged · China money (c348)</title>
+<meta name="description" content="Open items, unverified cells and irregularities">
+<link rel="stylesheet" href="assets/c348.css">
+</head><body>
+<header>
+  <div class="t">China money · verified CNY→USD edition (c348)</div>
+  <div class="s">Every figure recomputed from an official page read on 2026-11-11 · BOC board 20:50:05 Beijing</div>
+</header>
+<nav><a class="" href="c348-dashboard.html">Dashboard</a><a class="" href="c348-summary.html">Summary</a><a class="" href="c348-methods.html">Methods</a><a class="" href="c348-costs.html">Costs $10k–400k</a><a class="" href="c348-steps.html">Step by step</a><a class="" href="c348-tax.html">Tax</a><a class="" href="c348-penalties.html">Penalties</a><a class="" href="c348-questions.html">Questions</a><a class="" href="c348-audit.html">Reconciliation &amp; audit</a><a class="on" href="c348-flagged.html">Flagged</a><a class="" href="c348-sources.html">Sources</a></nav>
+<main>
+
+<h1 id="top-flagged">Flagged for review</h1>
+<p class="lede">Everything this edition could not confirm, plus the irregularities it found in the
+repository. Nothing here blocks publication; everything here should be read before acting. Each item
+names where it appears and the official source that bears on it.</p>
+<div class="box bad" id="F01">
+<h2 style="margin-top:0">F01 — Several editions charge the full bid-ask spread on a one-sided conversion <span class="chip bad">high</span> <span class="chip">open</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>Multiple pages derive the FX cost as amount x (ask - bid) / ask - both halves of the spread - when a customer buying USD pays only the selling side. On today&#x27;s board that is 0.4186% instead of 0.2093%, i.e. about USD 20.94 extra per USD 10,000 and USD 837.43 extra per USD 400,000.</td></tr>
+<tr><th>Where</th><td><code>The full-spread convention appears on c5bf-rates.html (labelled sensitivity and delta columns), m5f19-costs.html (sensitivity column) and the 76e-verification table. The one-sided convention is used on index.html, d646, a513, b9b3, n676 and this edition.</code></td></tr>
+<tr><th>Official source bearing on it</th><td>C01 (the board prints Buying 665.91 and Selling 668.71; the customer buys at the Selling rate only); C02 (the tariff is on top of the rate) <span class="src"><a href="https://www.boc.cn/sourcedb/whpj/enindex_1619.html" title="BOC Exchange Rate board (USD row), page 1 of 5">C01</a> <a href="https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html" title="中国银行电子银行个人服务转账汇款费率表 (personal e-banking transfer tariff)">C02</a></span></td></tr>
+<tr><th>What it changes</th><td>Up to USD 20.94 per USD 10,000 and USD 837.43 per USD 400,000 of the published headline</td></tr>
+<tr><th>How to close it</th><td>Decide one convention repo-wide and re-label every sensitivity column as &quot;not the answer&quot;. This edition prices the one-sided cost and shows the full-spread column side by side in the reconciliation table so the gap is never invisible.</td></tr>
+</tbody></table></div><div class="box bad" id="F02">
+<h2 style="margin-top:0">F02 — No verified cost for remitting CNY and converting offshore <span class="chip bad">high</span> <span class="chip">unverified</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>One lawful-looking route is to remit RMB and let an offshore bank or platform convert it. This session verified no official price for the offshore conversion or for the mainland remittance tariff of that product.</td></tr>
+<tr><th>Where</th><td><code>Method M03 in data/c348_methods.csv; every cost cell for M03 is BLANK.</code></td></tr>
+<tr><th>Official source bearing on it</th><td>C06 (Art. 5 and Art. 12 set the principle); no official fee schedule was found and read <span class="src"><a href="https://www.safe.gov.cn/safe/2008/0806/5321.html" title="中华人民共和国外汇管理条例 (国务院令第532号) 2008-08-05">C06</a></span></td></tr>
+<tr><th>What it changes</th><td>Cannot be ranked against M01 until priced</td></tr>
+<tr><th>How to close it</th><td>Ask two banks in writing for the mainland CNY remittance tariff, and two receiving institutions for their CNY/USD price. A test transfer of USD 100 reconciles the two.</td></tr>
+</tbody></table></div><div class="box bad" id="F03">
+<h2 style="margin-top:0">F03 — The U.S. receiving-bank and intermediary fees are not published <span class="chip bad">high</span> <span class="chip">unverified</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>Every route leaves the receiving and intermediary fees blank. The repository carries a Bank of China corporate tariff (USD 15 or 25 per wire) but its applicability to personal wires was not verified, and no U.S. bank publishes a single incoming-wire price that applies to all accounts.</td></tr>
+<tr><th>Where</th><td><code>All cost rows; component &quot;receiving-bank fee&quot;</code></td></tr>
+<tr><th>Official source bearing on it</th><td>C20 (inherited, not re-read); no equivalent official U.S. figure read in this pass <span class="src"><a href="https://www.boc.cn/cbservice/bi2/201711/t20171109_10646775.html" title="BOC corporate trade-finance tariff - &#x27;full amount received&#x27; USD surcharge">C20</a></span></td></tr>
+<tr><th>What it changes</th><td>Typically the largest single unknown in a small transfer</td></tr>
+<tr><th>How to close it</th><td>Ask the receiving U.S. bank for its incoming international wire fee in writing, and send one test wire to measure the landed amount against the sent amount.</td></tr>
+</tbody></table></div><div class="box bad" id="F07">
+<h2 style="margin-top:0">F07 — What a personal currency gain is taxed as is the single most consequential open question <span class="chip bad">high</span> <span class="chip">open</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>26 U.S.C. 988(a)(1)(A) makes foreign currency gain ordinary. 988(e)(1) removes a personal transaction from the ordinary rule, and IRS Publication 525 (C12) says a personal gain above USD 200 is reported as a capital gain. The statutes and the IRS publication therefore point to different characters, and the difference on USD 400,000 is real: at a 37% ordinary rate the tax on USD 27,926 of gain is USD 10,333; at 15% it is USD 4,189.</td></tr>
+<tr><th>Where</th><td><code>This edition prices the capital-gain reading and states the ordinary alternative in the tax page and in every tax row</code></td></tr>
+<tr><th>Official source bearing on it</th><td>C11 (988(a)(1)(A), 988(e)(1)-(3)); C12 (Publication 525); C13 (rates) <span class="src"><a href="https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm" title="26 U.S.C. § 988 - Treatment of certain foreign currency transactions (2023 edition)">C11</a> <a href="https://www.irs.gov/publications/p525" title="Publication 525 (2025) Taxable and Nontaxable Income - Foreign currency transactions">C12</a> <a href="https://www.irs.gov/taxtopics/tc409" title="Topic no. 409 - Capital gains and losses">C13</a></span></td></tr>
+<tr><th>What it changes</th><td>Up to about USD 6,144 on a USD 400,000 balance acquired in 2024</td></tr>
+<tr><th>How to close it</th><td>A written opinion from a U.S. tax adviser on the specific facts, or an IRS private letter ruling. Until then, plan for the capital treatment and reserve the difference.</td></tr>
+</tbody></table></div><div class="box bad" id="F08">
+<h2 style="margin-top:0">F08 — One page in the repository states the USD 50,000 convenience amount backwards <span class="chip bad">high</span> <span class="chip">open</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>methods.html says &quot;Legal $50,000 USD-equivalent per person per year (individual purchase quota)&quot; and lists &quot;$50,000 cap (non-salary funds)&quot; as a drawback. SAFE states the opposite: the amount is a convenience threshold, and there is no amount limit for genuine current-account business; above the threshold the transaction simply needs documents (C05). The page also presents the quota as available to a generic individual, whereas the annual convenience amount is for domestic individuals and for holders of the PRC Foreign Permanent Resident ID (C04, C05).</td></tr>
+<tr><th>Where</th><td><code>methods.html, route table, row &quot;1 Bank FX purchase (CNY→USD) + international wire&quot;</code></td></tr>
+<tr><th>Official source bearing on it</th><td>C04; C05; C03 (Art. 59 is the route for a foreign individual) <span class="src"><a href="https://www.safe.gov.cn/tianjin/2026/0706/3085.html" title="2026年外汇管理互联网信息——个人外汇（07） 2026-07-06">C04</a> <a href="https://www.safe.gov.cn/ningxia/2022/0929/1997.html" title="2022年外汇业务政策释疑（八） 2022-09-29">C05</a> <a href="https://www.safe.gov.cn/tianjin/2026/0713/3088.html" title="2026年外汇管理互联网信息——个人外汇（08） 2026-07-13">C03</a></span></td></tr>
+<tr><th>What it changes</th><td>A reader who believes it cannot plan at all - it would wrongly cap the move at USD 50,000 a year</td></tr>
+<tr><th>How to close it</th><td>The owner of methods.html should replace the quote with the C05 wording. This session does not edit another edition&#x27;s page; the correction is requested in COORDINATION.md.</td></tr>
+</tbody></table></div><div class="box warn" id="F04">
+<h2 style="margin-top:0">F04 — ATM tariff not re-read in this pass <span class="chip warn">medium</span> <span class="chip">unverified</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>The overseas ATM fee schedule (UnionPay CNY 12 + 1%, capped at CNY 112) is inherited from the earlier edition. This session did not re-read the Bank of China notice C19.</td></tr>
+<tr><th>Where</th><td><code>Method M10; data/c348_sources.csv row C19 marked NOT read this session</code></td></tr>
+<tr><th>Official source bearing on it</th><td>C19 - not read; C07 for the CNY 100,000 annual ceiling, which WAS read <span class="src"><a href="https://www.boc.cn/pbservice/bi2/202608/t20260811_25684907.html" title="关于调整部分个人服务收费内容的公告 (personal service fees from 2026-11-11)">C19</a> <a href="https://www.safe.gov.cn/hubei/2019/0305/851.html" title="汇发〔2017〕29号 关于规范银行卡境外大额提取现金交易的通知">C07</a></span></td></tr>
+<tr><th>What it changes</th><td>The ATM row understates its own fee by the whole ATM charge</td></tr>
+<tr><th>How to close it</th><td>Re-read C19 and record the quotation and timestamp in data/c348_sources.csv.</td></tr>
+</tbody></table></div><div class="box warn" id="F05">
+<h2 style="margin-top:0">F05 — The carrying threshold above USD 5,000 is inherited, not re-read <span class="chip warn">medium</span> <span class="chip">unverified</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>The statement that up to USD 5,000 may be carried out without a permit, and up to USD 10,000 with a bank permit, comes from an inherited SAFE Hebei Q&amp;A (register row R15). It was not re-read this session.</td></tr>
+<tr><th>Where</th><td><code>Method M11; the trip count of 80 at USD 400,000</code></td></tr>
+<tr><th>Official source bearing on it</th><td>C06 Art. 15 delegates the limit to SAFE but states no figure; C18 covers the U.S. side <span class="src"><a href="https://www.safe.gov.cn/safe/2008/0806/5321.html" title="中华人民共和国外汇管理条例 (国务院令第532号) 2008-08-05">C06</a> <a href="https://www.cbp.gov/travel/international-visitors/money-monetary-instruments" title="Money and Other Monetary Instruments">C18</a></span></td></tr>
+<tr><th>What it changes</th><td>The trip count, but not the conclusion - banknotes cannot move USD 400,000</td></tr>
+<tr><th>How to close it</th><td>Fetch the SAFE Hebei Q&amp;A and the current 携带外汇出境 permit rules and record them.</td></tr>
+</tbody></table></div><div class="box warn" id="F06">
+<h2 style="margin-top:0">F06 — SAFE approval timelines and any government fee are unpublished <span class="chip warn">medium</span> <span class="chip">unverified</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>The emigrant and inheritance property-transfer routes require SAFE approval. No official source read in this pass states a processing time or a government fee.</td></tr>
+<tr><th>Where</th><td><code>Methods M05 and M06</code></td></tr>
+<tr><th>Official source bearing on it</th><td>C09 (states which branch approves, not how long it takes) <span class="src"><a href="https://www.safe.gov.cn/tianjin/2026/0319/3018.html" title="个人财产转移购付汇业务问答（七） 2026-03-19">C09</a></span></td></tr>
+<tr><th>What it changes</th><td>The &quot;time to complete&quot; column, which is otherwise blank for these routes</td></tr>
+<tr><th>How to close it</th><td>Ask the competent SAFE branch for its published service standard (办理时限) and record it.</td></tr>
+</tbody></table></div><div class="box warn" id="F09">
+<h2 style="margin-top:0">F09 — Fifteen parallel editions with no single &quot;read this first&quot; <span class="chip warn">medium</span> <span class="chip">open</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>Fifteen root-level editions publish overlapping cost tables with different boards and conventions, and the archive page does not say which one is current.</td></tr>
+<tr><th>Where</th><td><code>dashboard/archive.html; every &lt;namespace&gt;-*.html page</code></td></tr>
+<tr><th>Official source bearing on it</th><td>not applicable - internal <span class="src"><a href="https://www.boc.cn/sourcedb/whpj/enindex_1619.html" title="BOC Exchange Rate board (USD row), page 1 of 5">C01</a></span></td></tr>
+<tr><th>What it changes</th><td>Reader trust, not arithmetic</td></tr>
+<tr><th>How to close it</th><td>The final integration session should mark one edition canonical and banner the rest as superseded. This edition is additive and does not claim to be canonical.</td></tr>
+</tbody></table></div><div class="box warn" id="F10">
+<h2 style="margin-top:0">F10 — The board moves during the day and each edition froze a different snapshot <span class="chip warn">medium</span> <span class="chip">open</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>The BOC board republishes intraday. This session read 665.91 / 668.71 at 20:50:05 Beijing; other editions froze 6.6606 / 6.6886 at 15:30:04, 6.6571 / 6.6851 at 10:25:02, and 6.6622 / 6.6903 on the previous day. All published costs therefore differ by a few dollars for no reason other than timing.</td></tr>
+<tr><th>Where</th><td><code>data/c348_inputs.csv I01-I02; data/c348_reconciliation.csv</code></td></tr>
+<tr><th>Official source bearing on it</th><td>C01 (Pub Time is printed on the board itself) <span class="src"><a href="https://www.boc.cn/sourcedb/whpj/enindex_1619.html" title="BOC Exchange Rate board (USD row), page 1 of 5">C01</a></span></td></tr>
+<tr><th>What it changes</th><td>Up to about USD 2 per USD 10,000 and USD 20 per USD 400,000</td></tr>
+<tr><th>How to close it</th><td>Quote the board timestamp beside every cost, which this edition does.</td></tr>
+</tbody></table></div><div class="box warn" id="F11">
+<h2 style="margin-top:0">F11 — Two root pages are not generated by any script <span class="chip warn">medium</span> <span class="chip">open</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>A scan of the repository shows root pages that no builder script produces, so they can drift from the data without any check failing. This session did not edit any of them.</td></tr>
+<tr><th>Where</th><td><code>Repository root, e.g. methods.html, guide.html, cost-tables.html</code></td></tr>
+<tr><th>Official source bearing on it</th><td>not applicable - internal <span class="src"></span></td></tr>
+<tr><th>What it changes</th><td>The integrity of the archive, not this edition</td></tr>
+<tr><th>How to close it</th><td>Either generate them or banner them as superseded.</td></tr>
+</tbody></table></div><div class="box " id="F12">
+<h2 style="margin-top:0">F12 — This edition is additive and is not the canonical site <span class="chip warn">low</span> <span class="chip">noted</span></h2>
+<table style="min-width:0"><tbody>
+<tr><th style="width:26%">What was found</th><td>The repository&#x27;s canonical dashboard (index.html plus dashboard/*.html) is owned by the final integration session active at the same time. This edition publishes its own namespace so that no claim collides and no generated file is hand-edited.</td></tr>
+<tr><th>Where</th><td><code>c348-*.html; data/c348_*.csv; scripts/c348_engine.py, scripts/verify_c348.py</code></td></tr>
+<tr><th>Official source bearing on it</th><td>COORDINATION.md <span class="src"></span></td></tr>
+<tr><th>What it changes</th><td>Discoverability only</td></tr>
+<tr><th>How to close it</th><td>The integrator may link or absorb it; until then it is reachable directly.</td></tr>
+</tbody></table></div>
+<h2>Cells left blank on purpose</h2>
+<p>Every blank on this site is one of these. None of them is zero.</p>
+<div class="scroll"><table>
+<thead><tr><th>Blank</th><th>Where it appears</th><th>Why it is blank</th><th>Flag</th></tr></thead>
+<tbody>
+<tr><td>U.S. receiving-bank and intermediary fees</td><td>Every cost row</td><td>Not published for a personal wire; must be obtained from the receiving bank</td><td><a href="#F03">F03</a></td></tr>
+<tr><td>Cross-border RMB conversion price</td><td>Method M03, every amount</td><td>No official offshore CNY-to-USD price was found or read</td><td><a href="#F02">F02</a></td></tr>
+<tr><td>Overseas ATM tariff</td><td>Method M10</td><td>The Bank of China notice was not re-read in this pass</td><td><a href="#F04">F04</a></td></tr>
+<tr><td>Banknote carrying threshold above USD 5,000</td><td>Method M11</td><td>Inherited from an earlier register row of the repository</td><td><a href="#F05">F05</a></td></tr>
+<tr><td>SAFE approval timeline and any government fee</td><td>Methods M05, M06</td><td>No official service standard was found or read</td><td><a href="#F06">F06</a></td></tr>
+<tr><td>PRC property and income tax on the underlying money</td><td>Methods M07, M08</td><td>The rates were not re-read in this pass, so no figure is used</td><td><a href="#F06">F06</a></td></tr>
+<tr><td>Penalty exposure for unremitted PRC income tax</td><td>Penalties P06</td><td>Depends on facts not in evidence</td><td><a href="#F07">F07</a></td></tr>
+<tr><td>Seizure value and virtual-currency exposure</td><td>Penalties P10, P11</td><td>Not a fixed percentage of any amount</td><td>—</td></tr>
+</tbody></table></div>
+
+<div class="foot">
+<p><strong>What this edition is.</strong> An additive, independently verified edition built in its own
+file namespace so it collides with no other session's work. It does not edit the canonical dashboard.
+Figures are recomputed by <code>scripts/c348_engine.py</code> and re-derived from scratch by
+<code>scripts/verify_c348.py</code> (which shares no code with the builder).</p>
+<p><strong>What it is not.</strong> Not tax, legal or investment advice. Every blank cell is a cell no
+official page read in this pass fills; blanks are named in the tables and listed on
+<a href="c348-flagged.html">Flagged for review</a>. Rates move: the board timestamp is printed beside
+each figure.</p>
+</div>
+</main></body></html>

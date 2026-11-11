@@ -1,0 +1,37 @@
+id,input,value,unit,as_of,source_id,note
+I01,BOC USD spot buying rate (现汇买入价 - the bank buys USD),6.6591,CNY per USD,2026-11-11 20:50:05 Beijing (board page 1),C01,Board prints 665.91 per 100
+I02,BOC USD spot selling rate (现汇卖出价 - the rate at which you buy USD),6.6871,CNY per USD,2026-11-11 20:50:05 Beijing (board page 1),C01,Board prints 668.71 per 100
+I03,BOC USD cash selling rate (现钞卖出价),6.6871,CNY per USD,2026-11-11 20:50:05 Beijing (board page 1),C01,Equal to I02 on this board; banknote handling is priced separately by the ATM/cash tariff C19
+I04,Midpoint of the BOC buying and selling rates,6.6731,CNY per USD,2026-11-11 20:50:05 Beijing (derived),C01,"Arithmetic mean of I01 and I02 - a calculation on two published numbers, not a published rate"
+I05,Wire fee percentage,0.001,fraction of the CNY amount,C02 - standard from 2014-11-01,C02,1 per mille
+I06,Wire fee minimum,50,CNY per transaction,C02 - standard from 2014-11-01,C02,
+I07,Wire fee maximum,260,CNY per transaction,C02 - standard from 2014-11-01,C02,This cap is what makes one large wire cheaper per dollar than several small ones
+I08,"Cable fee - destination outside Hong Kong, Macau and Taiwan",150,CNY per transaction,C02 - standard from 2014-11-01,C02,"CNY 80 applies only to Hong Kong, Macau and Taiwan"
+I09,Annual FX convenience amount,50000,USD per person per year,C04 (2026-07-06),C04,"A convenience threshold, NOT a cap: C05 states there is no amount limit for genuine current-account business"
+I10,Daily documentation threshold for an outward remittance from an FX account,50000,USD per person per day,C22 (2024-02-29),C22,Above this the bank requires transaction documents
+I11,Tax-filing threshold for a single outbound payment,50000,USD per payment,"C08 (2013, as amended 2021)",C08,Filing at the tax office before the bank pays; no fee stated
+I12,"Overseas ATM withdrawal annual limit, all mainland cards of one person together",100000,CNY equivalent per calendar year,C07 (effective 2018-01-01),C07,
+I13,Overseas ATM withdrawal daily limit per card,10000,CNY equivalent per card per day,C07 (effective 2018-01-01),C07,
+I14,"PRC IIT rate on interest, dividends, rent, property gains and incidental income",0.20,fraction,inherited register row; not re-read this session,C06,Used only to illustrate a PRC withholding scenario; the IIT statute was NOT re-read by this session
+I15,FBAR non-willful maximum civil penalty (inflation adjusted),16536,USD per violation,C17 table (90 FR 5630),C17,
+I16,FBAR willful maximum civil penalty - statutory figure,165353,"USD, or 50% of the balance if larger",C17 table (90 FR 5630),C17,The statute takes the greater of this figure or 50% of the account balance
+I17,FBAR filing threshold - aggregate foreign accounts at any time in the year,10000,USD,C16,C16,
+I18,"Form 8938 threshold - single filer living in the United States, year end",50000,USD,C16,C16,"USD 75,000 at any time during the year also triggers"
+I19,USD 200 personal-transaction exclusion,200,USD of gain per transaction,26 U.S.C. 988(e)(2),C11,
+I20,Long-term capital gain rate - middle bracket (2025),0.15,fraction of the gain,IRS Topic 409,C13,"Applies to taxable income above USD 48,350 and up to USD 533,400 for a single filer"
+I21,Long-term capital gain rate - top bracket (2025),0.20,fraction of the gain,IRS Topic 409,C13,"Applies only to the part of taxable income above USD 533,400"
+I22,"Ordinary rate - top of the 24% bracket (2025, single)",197300,USD of taxable income,IRS 2025 brackets,C14,
+I23,"Ordinary rate - top of the 32% bracket (2025, single)",250525,USD of taxable income,IRS 2025 brackets,C14,
+I24,"Ordinary rate - top of the 35% bracket (2025, single)",626350,USD of taxable income,IRS 2025 brackets,C14,
+I25,"Ordinary rate - top bracket (2025, single)",0.37,"fraction of taxable income above USD 626,350",IRS 2025 brackets,C14,
+I26,IRS yearly average CNY per USD 2021,6.452,CNY per USD,C15,C15,
+I27,IRS yearly average CNY per USD 2022,6.730,CNY per USD,C15,C15,
+I28,IRS yearly average CNY per USD 2023,7.075,CNY per USD,C15,C15,
+I29,IRS yearly average CNY per USD 2024,7.189,CNY per USD,C15,C15,
+I30,IRS yearly average CNY per USD 2025,7.129,CNY per USD,C15,C15,
+I31,"PRC fine ceiling for evasion of FX control, ordinary case",0.30,fraction of the amount,国务院令第532号 Art. 39,C06,
+I32,"PRC fine ceiling for evasion of FX control, serious case",1.00,fraction of the amount,国务院令第532号 Art. 39,C06,The text reads 30%以上等值以下 - from 30% up to the equivalent amount
+I33,PRC fine ceiling for carrying currency across the border in breach of the rules,0.20,fraction of the amount,国务院令第532号 Art. 42,C06,
+I34,"PRC fine ceiling for private dealing in foreign exchange, ordinary case",0.30,fraction of the amount,国务院令第532号 Art. 45,C06,Plus confiscation of the gains
+I35,Bank of China full-amount-received USD surcharge when the beneficiary bank has a BOC New York account,15,USD per wire,C20 - NOT re-read by this session,C20,Corporate tariff; personal applicability UNVERIFIED - used only in a labelled sensitivity row
+I36,Bank of China full-amount-received USD surcharge otherwise,25,USD per wire,C20 - NOT re-read by this session,C20,Corporate tariff; personal applicability UNVERIFIED - used only in a labelled sensitivity row
