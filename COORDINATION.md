@@ -1404,8 +1404,46 @@ discarding anything:
 Also recorded: B8720152's request to scope m5f19 check J is satisfied by this session's claim-aware
 rewrite of that check (see the takeover note above). B8720152's U15 text and `scripts/e347_data.py`
 change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
+
+<!-- session-arena/4bfb6552-china3-f52-v1 -->
 ### 76E-T4 — pull request, merge and deployment record
 
+## Session `arena/4bfb6552-china3` — decision checklist + fresh-priced $10k–$400k ladder ("f52")
+
+Branch: `arena/4bfb6552-china3` (Arena single-branch binding; the `session-<id>/<task>` branch rule cannot be applied — same constraint already logged as IR-001). Base: `d9763dc` (main tip at claim time, PR #49 merged). Session ID `arena/4bfb6552-china3`, task namespace `f52`.
+
+### Concurrent-session scan at claim time (2026-11-11)
+
+- Open PRs checked with `gh pr list`: #50 (`arena/7881ea76-china3`, updated 2026-11-11T02:40Z, scope `research/7881-*` + append-only board) is live and does **not** overlap the `f52` namespace. PRs #34, #32, #25, #18, #15, #8, #6 were last updated 2026-11-10 or earlier (>60 min, stale); they are left alone and none is merged by this session.
+- **This session does not edit** `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `dashboard/**`, `docs/**`, `scripts/e347_*`, or any other session's namespaced files. All new deliverables stay inside the unclaimed `f52` namespace. One link request is filed below as F52-REQ-01 for whoever next owns the landing page as final integrator.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| F52-T0 | Claim scope and push before any content work | `COORDINATION.md` (append only) | done | `arena/4bfb6552-china3` | n/a | This block |
+| F52-T1 | Fresh official-source verification today (2026-11-11): SAFE/PBOC/BOC/STA/IRS/FinCEN/eCFR propositions re-read; BOC board re-read and ladder repriced to today's snapshot | `data/f52_sources.csv`, `research/f52-verification.md` | done | `arena/4bfb6552-china3` | 20 official pages fetched today (F-S01–F-S20) | No inherited quote copied without a today-fetch |
+| F52-T2 | Decision checklist: questions / information needed / answer known today / status / how to discover each missing item | `data/f52_decisions.csv`, `research/f52-decision-checklist.md` | done | `arena/4bfb6552-china3` | SAFE/IRS/FinCEN official pages | Answers only where an official source settles them; otherwise blank + discovery step |
+| F52-T3 | Methods pros/cons refresh + conversion-penalty decomposition (spread, fees, underlying tax, U.S. §988, reporting penalties, prohibited-route fines kept separate) | `data/f52_methods.csv`, `data/f52_penalty.csv`, `research/f52-methods-penalties.md` | done | `arena/4bfb6552-china3` | F-S01–F-S20 | Every row one official link or blank+flag |
+| F52-T4 | Cost ladder: every priced method at every $10,000 step $10,000–$400,000, formula-disclosed, step-by-step playbooks | `data/f52_ladder.csv`, `data/f52_steps.csv`, `research/f52-cost-methodology.md` | done | `arena/4bfb6552-china3` | BOC board + tariff dated today | Intermediary/receiving fees and personal tax stay blank, never zero |
+| F52-T5 | Mobile-first site pages (summary, decisions, methods, costs, flagged/sources) + builder + verifier + CI | `f52-*.html`, `assets/f52.css`, `scripts/build_f52_site.py`, `scripts/verify_f52.py`, `.github/workflows/f52-verify.yml` | done | `arena/4bfb6552-china3` | every row a live official URL | Namespaced; no shared file touched |
+| F52-T6 | PR (`arena/4bfb6552-china3` → `main`), merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / this file | unclaimed | `arena/4bfb6552-china3` | Actions + Pages API | Flagged items published, do not block |
+
+### F52-REQ-01 — link request to the next final integrator
+
+Please add one nav entry on `index.html` pointing at `f52-summary.html`, labelled *"Decision checklist & fresh costs, 11 Nov 2026"*. This session will not edit `index.html` itself; the pages stay reachable by direct URL and via the Archive listing once regenerated.
+
+**Log**
+- `2026-11-11`: read this board in full; confirmed base `d9763dc` equals `main`; scanned open PRs; wrote this claim before touching any content file.
+
+### F52 — completion record (2026-11-11)
+
+**Delivered.** `f52-summary.html` (executive summary), `f52-decisions.html` (17-question decision checklist: 6 settled from official sources, 11 blank with exact discovery steps), `f52-methods.html` (11 lawful + 6 prohibited routes, step-by-step for every route, 8-layer penalty decomposition), `f52-costs.html` (480-row ladder: 12 priced/blank series × every $10,000 step $10,000–$400,000, mobile-first, plus §988 gain illustration), `f52-flagged.html` (15 unverified flags + 4 irregularities + 20-source register). Data: `data/f52_*.csv` (8 files). Research: `research/f52-verification.md`, `research/f52-decision-checklist.md`, `research/f52-methods-penalties.md`, `research/f52-cost-methodology.md`. Gate: `scripts/verify_f52.py` + `.github/workflows/f52-verify.yml`. No shared file was edited; link request F52-REQ-01 stands.
+
+**Verification performed.** 20 official pages fetched today (2026-11-11); BOC board re-read at 2026/11/11 10:25:02 (selling 6.6911) and the ladder repriced to it: F01 known bank cost **$53.42 at $10,000 / $901.20 at $400,000** (independently confirming the prior session's drift finding vs yesterday's $53.38/$899.01). `scripts/verify_f52.py` PASS — all 480 ladder cells recomputed to the cent (fx_wire, wire_only, quota, ATM, cash, both dividend models), F08 blank in all 40 rows, every HTML data row carries an official link, all internal links resolve, no conflict markers. Local HTTP smoke test: all 5 pages + CSS returned 200. `git diff --check` clean.
+
+**Headline answers.** No official source taxes the conversion/wire itself; the only large lawful cost is unpaid Chinese IIT on the underlying income (3%–45% / 20%). A U.S. passport alone does not qualify for the $50,000 ID-only purchase amount (Art. 59; PR-ID holders only), and $50,000 is a convenience threshold, not a cap. Least-penalty lawful path is conditional on Q06/Q07/Q12 (source of funds, Chinese tax proof, U.S. filing history) — see `f52-decisions.html`.
+
+**Flagged (needs review, non-blocking).** F52-U01–U15 and F52-IR01–IR04 on `f52-flagged.html`, each with its official source link. Highest impact: U01 (source of funds/tax paid), U02 (unitemised "considerable taxes" quote), U07 (no verified route for gifted/undocumented RMB).
+### 76E-T4 — pull request, merge and deployment record
 - **PR:** https://github.com/sassnarep3-star/China3/pull/49 (`arena/76e3e41f-china3` → `main`),
   "76e: same-day source re-check (11 Nov), recomputed $10k–$400k ladder, 7 findings, CI scope fix".
 - **Checks before merge:** 15 passed, `deploy` skipped as designed for pull requests — including the
@@ -1425,13 +1463,9 @@ change are kept as-is; finding F03 now credits that update and states only what 
 - **Link request still open:** 76E-REQ-01 (nav entry on `index.html`). The page is reachable by direct
   URL and from the Archive page in the meantime.
 ## Integration session `arena/78c46684-china3` — independent verification, Q&A, cost table, PR + merge
-
 Branch: `arena/78c46684-china3`, branched from `main` at `6750ddb` (PR #48 merge). Working tree clean at session start.
-
 ### Claim and scope
-
 This session claims V1–V5 on its own board. Scopes: independent verification of official sources, Q&A document, cost-table verification, site build/Pages confirmation, PR + merge. No overlap with P1–P7, T1–T7, T8–T16 or the deep-research integration, all of which are already `done`.
-
 | Task | Status | File scope | Notes |
 |------|--------|------------|-------|
 | V1 | done | `data/*`, `*.md`, root HTML | Independent reachability + fact check of official sources: IRS yearly average rates (China Yuan 2024 = 7.189, 2025 = 7.129) at irs.gov [S28]; 31 CFR 1010.821 FBAR willful penalty $165,353 at ecfr.gov [S31]; SAFE FX Regulation State Council Order No. 532 (arts. 5, 39–45, 52) at safe.gov.cn [S17]; BOC exchange-rate board (USD selling 669.11 per 100, pub. 2026/11/11) at boc.cn [S01]; BOC personal transfer tariff (wire 1‰, min RMB 50, max RMB 260, cable RMB 150 non-HK/MO/TW) at boc.cn [S02]. All reachable and consistent with cited figures. |
@@ -1439,25 +1473,19 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 | V3 | done | `data/e347_costs.csv`, `dashboard/costs.html` | Spot-checked cost math at $10,000/$100,000/$400,000 against the BOC tariff and board: $10,000 → spread $20.94 + fee $32.44 = $53.38; $100,000 → $209.42 + $61.33 = $270.75; $400,000 → $837.68 + $61.33 = $899.01. All match. Full ladder recomputed by e347_verify.py (440 rows exact). |
 | V4 | done | `.github/workflows/pages.yml`, root `index.html` | e347_build.py: 15 files, 0 changed. e347_verify.py: PASS (440 cost rows, 658 table rows sourced, 380 blanks flagged, 2138 links resolved). Live site serving at https://sassnarep3-star.github.io/China3/ (homepage fetched successfully). |
 | V5 | in progress | GitHub | PR from this branch to `main`; merge; record PR link and merge result here. |
-
 ### Log
-
 - 2026-11-11: session `arena/78c46684-china3` resolved the committed merge conflict in `COORDINATION.md` (HEAD `session-5f1925df` block kept; empty `f6ae79e` side dropped) and claimed V1–V5; claim committed and pushed immediately.
 - 2026-11-11: Independent official-source checks completed (V1): IRS irs.gov yearly average rates; ecfr.gov 31 CFR 1010.821; safe.gov.cn SAFE FX Regulation No. 532; boc.cn rate board and personal tariff. All reachable and consistent.
 - 2026-11-11: QNA.md created and committed (V2).
 - 2026-11-11: Cost-table spot-check passed (V3); e347_build.py + e347_verify.py PASS; live site confirmed serving (V4).
 - 2026-11-11: Creating PR from `arena/78c46684-china3` to `main` (V5).
 ---
-
 ## Session `arena/1c55025d-china3` — Full Requirements Audit & Re-verification (2026-11-11)
-
 **Branch:** `arena/1c55025d-china3` (Arena fixed: single-branch rule).  
 **Base:** `6750ddb` (`main` after PR #48, B8720152 re-verified e347 dashboard).  
 **Live site:** https://sassnarep3-star.github.io/China3/  
 **Scope note:** This session does not introduce new primary sources; it re-verifies every table row, cost ladder, and flagged item against the 35 official sources already read on 2026-11-10/11, rebuilds the dashboard, and records the requirements trace for the original brief.
-
 ### Claimed tasks (arena/1c55025d-china3)
-
 | ID | Task | File scope | Status | Owner | Sources verified | Notes |
 |---|---|---|---|---|---|---|
 | R1 | Repo review line-by-line, verify from official trusted sources, provide links, flag irregularities | `REPO_AUDIT.md`, `research/1c55025d-audit.md`, `COORDINATION.md` | done | arena/1c55025d-china3 | 35 official (BOC, SAFE, PBOC, STA, IRS, FinCEN, eCFR, CBP, govinfo) + BOC tariff re-read 2026-11-11 | audit + re-audit table; see research/1c55025d-audit.md §§6-7 |
@@ -1468,21 +1496,20 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 | R6 | Site creation: clean landing + subpages by category, dashboard UI, every row has source link or flagged blank | `index.html`, `dashboard/*.html`, `dashboard/site.css`, `scripts/e347_build.py` | done | arena/1c55025d-china3 | all 35 sources | index + 7 dashboard pages, table.stack mobile, Archive 82 pages; build 15 files 0 changed |
 | R7 | Verification: every table row must have source link; if unverified leave blank+flag; never infer | `scripts/e347_verify.py`, `dashboard/flagged.html` | done | arena/1c55025d-china3 | official-domain allowlist enforced | PASS: 658 rows sourced, 380 blanks flagged, 2139 links; audit §7 |
 | R8 | PR → merge → Pages deploy verification, record PR link & merge result | GitHub PR / Pages / `COORDINATION.md` | in progress | arena/1c55025d-china3 | Pages + verification workflows | Do not merge broken site |
-
 ### Rules for this session
 - Shared files (`index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`) change additively only; generated pages via `scripts/e347_build.py`.
 - No sibling files (`c3x-*`, `d646-*`, `s775-*`, `m5f19-*`, `a513-*`, `s436-*`, `deep-*`, `s119-*`, `a058-*`, `a502-*`) are edited.
 - If a file outside scope must change, log a request here instead of editing.
-
 ### Log — 2026-11-11
 - 2026-11-11T claim: read COORDINATION.md (1319 lines), inspected all remote branches (`git ls-remote`, `git branch -a`), confirmed `main` at 6750ddb, wrote non-overlapping claim and pushed before touching content files.
 - 2026-11-11T audit done: `research/1c55025d-audit.md` (431 lines, R0-R10 trace, §§1-12), `REPO_AUDIT.md` re-audit (16 verifiers PASS), `scripts/e347_build.py` 15 files 0 changed, `scripts/e347_verify.py` PASS; R1-R7 marked done, R8 PR pending.
 - 2026-11-11T pre-PR checks: `validate_data OK`, `check_links OK`, `verify_dashboard PASS`, `verify_76e PASS`, `verify_m5f19 PASS` (claim-aware J), `verify_c3x PASS`, `verify_d646 PASS`, `verify_s775 PASS`, `verify_s436 PASS`, `verify_c5bf PASS`, `verify_final_integration PASS`, `test_costs PASS`, `verify_deep PASS`; no broken links; no hallucination (every dollar recomputed from S01/S02 fractions).
 
+### F52 — merge resolution log (2026-11-11)
+
+Merged `origin/main` at `46ac821` (PRs #51/#52/#54 landed while PR #60 was open). One conflict, in this file only: both sides had appended session blocks at the tail. Resolved by keeping every block verbatim from both sides (F52 claim + completion, and the `arena/1c55025d-china3` audit block incl. its `QNA.md` work) and removing only the marker lines — verified zero `<<<<<<<`/`>>>>>>>` lines remain and both sessions' headings are present. No other file conflicted; no work was discarded. F52-T6 (PR #60 merge + Pages verification) is now `in progress`.
 ---
-
 ## B2D4FF40 — decision-readiness register (claimed 2026-11-11T02:40Z)
-
 - **Session:** `arena/b2d4ff40-china3` (branch of this session). Session ID for the board: `session-b2d4ff40`.
 - **Live-claim scan before claiming** (`git ls-remote`, `gh pr list`, `git log -1` on every sibling branch, 2026-11-11T02:38Z):
   - `arena/76e3e41f-china3` — **active** (last commit 02:36:59Z, PR #49 open). Claims `76e-*`, `data/76e_*`, `research/76e-*`, `assets/76e.css`, `scripts/build_76e_site.py`, `scripts/verify_76e.py`, `.github/workflows/76e-verify.yml`, `scripts/verify_m5f19_site.py` (check-J scope fix), `COORDINATION.md` (conflict-marker repair), regenerated `dashboard/archive.html`. It is doing the same-day (11 Nov) re-verification of every load-bearing page. **This session does not duplicate that work and does not edit those files.**
@@ -1511,10 +1538,12 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
   - An earlier draft of this block listed a separate `scripts/build_b2d_decisions.py`; the register was in fact built inside `scripts/e347_build.py` so that all nine pages share one generator and one navigation. The table above is the corrected record.
   - The rebase onto `main` three times produced a conflict in this file with other sessions' appended blocks (76e twice, 78c46684 once). Each was resolved keeping **both** sides verbatim; no other session's text was edited or dropped.
   - **Overlapping work, disclosed:** session `78c46684` added `QNA.md` (PR #52) with a question/answer register on the same subject. That document and this page answer the same brief; this page is the rendered, navigable, machine-checked version. Neither was copied into the other. The decisions page now links `QNA.md` explicitly, and `QNA.md` is left exactly as its session wrote it.
-
 ### B2D4FF40 log
-
 - `2026-11-11T02:40Z`: claim written and pushed before any content file was touched. All 16 inherited validators pass at base `6750ddb` (`e347_verify` PASS reproduced before the claim).
+
+### F52 — second merge resolution (2026-11-11)
+
+Merged `origin/main` at `1638a47` (PR #53, decision-readiness register). Single conflict in this file (tail appends); resolved as before by keeping both sides verbatim and removing only markers. Incoming changes to `EXECUTIVE_SUMMARY.md`, `README.md` and `dashboard/**` are `main`'s own merged work, taken as-is; this session still edits no shared file directly. F52-T6 remains `in progress` pending PR #60 merge + Pages check.
 ---
 
 <!-- session-f9a30493-integration-v1 -->

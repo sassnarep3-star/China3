@@ -1,0 +1,47 @@
+method_id,step,action,source_ids
+F01,1,"Ask the holding branch to confirm, in writing, which personal category (境外个人/境内个人) and ID your account is recorded under (Q08).",F-S05|F-S08
+F01,2,"Assemble source materials with transaction amounts for the income: contract, payslips/payment records (Q06).",F-S04
+F01,3,"Obtain tax evidence: tax-payment certificate, exemption certificate, or tax-filing form; settle any unpaid IIT first (Q07).",F-S04|F-S07
+F01,4,Present ID + source materials + tax evidence at the bank and buy USD at the bank's selling rate of the day (today's BOC illustration: 6.6911).,F-S04|F-S01
+F01,5,Wire to your own U.S. account; BOC published fee 1‰ (CNY 50–260) + CNY 150 cable. Ask for the charge option and keep the quote (Q11).,F-S02
+F01,6,"In the U.S.: confirm FBAR/Form 8938 history (Q12), record the §988 gain with your acquisition basis (Q14), keep every document.",F-S12|F-S18
+F02,1,Locate the original exchange slip (兑换水单); check it is within 24 months of the exchange date and note the unused amount.,F-S09
+F02,2,Present passport/ID + the slip at the bank; buy back up to the unused RMB amount (USD 500/day on ID alone if the slip is lost).,F-S09
+F02,3,"Buy USD at the selling rate of the day, then wire as in F01 step 5 (or hold as FX and use F03 later).",F-S01|F-S02
+F02,4,Record the §988 position (your original acquisition rate is on the slip history) and keep the paperwork.,F-S18
+F03,1,Confirm with the bank how much of the balance is already foreign currency in an FX account in your name (Q09).,F-S01
+F03,2,"Instruct the remittance to your own U.S. account with your ID; no conversion occurs, so no spread is charged.",F-S02
+F03,3,"Pay the published wire fee (1‰, CNY 50–260, + CNY 150 cable at BOC) and obtain the intermediary/receiving-fee disclosure (Q11).",F-S02
+F03,4,Complete the U.S. reporting check (FBAR/Form 8938) for the account's history.,F-S12
+F04,1,Complete the sale: registered transfer contract + registration proof from the real-estate authority (operating-guide text read earlier — confirm the branch's list in writing).,F-S07
+F04,2,Pay the sale taxes and obtain the tax certificate; the remittable amount is capped at price minus those taxes.,F-S07
+F04,3,Present ID + contract + registration proof + tax certificate; buy USD and wire in one remittance (bank cost as F01).,F-S01|F-S02
+F04,4,Keep the gain computation (proceeds minus original value and reasonable costs at 20%) for both tax files.,F-S07
+F05,1,Confirm eligibility and the competent SAFE office (decedent's last hukou location) with the bank/SAFE in writing (Q08).,F-S16
+F05,2,"Gather inheritance proof, property documents and the estate tax certificate (full PBOC list read in an earlier pass — get the branch's current list).",F-S07
+F05,3,"Apply for SAFE approval; after approval, buy USD and wire to your own account in your country of residence (bank cost as F01; approval timing blank).",F-S01|F-S02
+F05,4,"U.S. side: Form 3520 Part IV if the bequest exceeds USD 100,000 in the tax year; FBAR/8938 check.",F-S16|F-S12
+F06,1,Confirm you held mainland residence and cancelled hukou on emigration; identify the former-hukou SAFE office (Q08).,F-S07
+F06,2,Gather property/income documents and tax certificates for each asset (branch's current list in writing).,F-S07
+F06,3,"Apply for SAFE emigrant-transfer approval; after approval, buy USD and wire to your own account abroad (bank cost as F01; timing blank).",F-S01|F-S02
+F06,4,U.S. side: FBAR/8938 history and §988 basis records (Q12/Q14).,F-S12|F-S18
+F07,1,"Confirm eligibility: Chinese ID, or Foreign Permanent Resident ID — a U.S. passport alone does not qualify for purchases (Q02).",F-S05
+F07,2,"Each calendar year, present ID at the bank and buy up to USD 50,000 equivalent; no source documents inside the amount.",F-S06
+F07,3,Wire that year's purchase (wire fee repeats yearly) or hold as FX and consolidate under F03 — ask the bank which it allows.,F-S02
+F07,4,"Repeat for the number of years on the Costs page (8 years at USD 400,000). Never borrow another person's amount (X01).",F-S20|F-S08
+F08,1,"Ask your bank, in writing: does it offer personal cross-border RMB remittance for your income type, with what documents and what fee? (All blank today.)",F-S04
+F08,2,"Ask the receiving U.S. bank, in writing: will it accept an RMB remittance, at what conversion rate and fee? (Blank today.)",F-S02
+F08,3,Only proceed with both written quotes in hand; convert offshore and record the achieved rate against today's BOC board.,F-S01
+F08,4,Complete the same U.S. reporting/§988 record-keeping as F01.,F-S12|F-S18
+F09,1,Confirm genuine distributable profit: audited company accounts and a profit-distribution resolution (Q17).,F-S07
+F09,2,"Confirm the applicable rate with the tax office: statutory 20%, or the 10% treaty ceiling with U.S.-residency/beneficial-ownership proof (procedure unverified).",F-S07|F-S13
+F09,3,"Complete the outbound-payment tax filing, pay the tax, and obtain the tax evidence the bank requires.",F-S07
+F09,4,Buy USD with the after-tax amount and wire (spread + wire on the net — exactly how the Costs page prices F09).,F-S01|F-S02
+F09,5,"U.S. side: report the dividend, and ask your adviser about foreign-tax-credit treatment of the Chinese tax (Q15).",F-S18
+F10,1,"Check your per-person yearly overseas-withdrawal usage across all cards (cap CNY 100,000 equivalent; CNY 10,000 per card per day).",F-S10
+F10,2,"Abroad, withdraw on the UnionPay card; BOC charges CNY 12 + 1% (max CNY 112) per withdrawal from 2026-11-11. The conversion rate applied and any ATM-owner fee are unpublished — record what you actually got.",F-S03|F-S01
+F10,3,"Deposit the cash in the U.S. promptly; declare over USD 10,000 on entry (FinCEN Form 105). Repeat within caps only — never borrow cards (X06).",F-S10
+F11,1,"First buy the USD lawfully under F01, F02 or F07 — carrying cash never replaces the purchase documents.",F-S04|F-S09|F-S06
+F11,2,"Per trip, carry at most USD 5,000 equivalent without a permit (USD 5,000–10,000: obtain the bank carrying permit first; over USD 10,000: do not attempt).",F-S11
+F11,3,"Declare amounts over USD 10,000 when entering the U.S. (FinCEN Form 105; family/group combined).",F-S11
+F11,4,Deposit on arrival and keep purchase + permit + declaration records together.,F-S12
