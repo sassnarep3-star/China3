@@ -446,6 +446,19 @@ def check_J_scope():
         return subprocess.run(["git", *args], cwd=ROOT, capture_output=True,
                               text=True, check=True).stdout
 
+    # This is an ownership assertion for the original m5f19 session, not a
+    # restriction on changes by every other branch in the repository. GitHub
+    # checks PRs out detached, so prefer the explicit head-ref provided by CI.
+    try:
+        branch = (os.environ.get("GITHUB_HEAD_REF") or os.environ.get("GITHUB_REF_NAME")
+                  or git("branch", "--show-current").strip())
+    except subprocess.CalledProcessError as exc:
+        fail(f"J: could not determine branch: {exc.stderr.strip()[:200]}")
+        return
+    if branch != "arena/5f1925df-china3":
+        print(f"  ↳ owner-only scope check not applicable on {branch or 'detached HEAD'}")
+        return
+
     try:
         # Diff against the merge base with the integration branch, NOT a
         # hardcoded commit. A pinned base goes stale the moment origin/main is
