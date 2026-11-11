@@ -1,0 +1,47 @@
+name: 5903 audit
+
+# The 5903 layer: an independent audit of the figures the dashboard publishes. Path-filtered
+# so it runs only when its own files change; it makes no claim about other sessions' files.
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "5903-audit.html"
+      - "assets/5903.css"
+      - "data/5903_*.csv"
+      - "research/5903-*.md"
+      - "scripts/5903_data.py"
+      - "scripts/build_5903_audit.py"
+      - "scripts/verify_5903_audit.py"
+      - ".github/workflows/5903-verify.yml"
+  pull_request:
+    paths:
+      - "5903-audit.html"
+      - "assets/5903.css"
+      - "data/5903_*.csv"
+      - "research/5903-*.md"
+      - "scripts/5903_data.py"
+      - "scripts/build_5903_audit.py"
+      - "scripts/verify_5903_audit.py"
+      - ".github/workflows/5903-verify.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: 5903 — official links, Decimal recomputation, page parity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: The committed files are what the generator produces
+        run: python3 scripts/build_5903_audit.py --check
+
+      - name: Every row on an official source, every cost recomputed, every link resolves
+        run: python3 scripts/verify_5903_audit.py

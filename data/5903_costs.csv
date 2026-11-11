@@ -1,0 +1,31 @@
+route_id,route,amount_usd,model,published_spread_usd,published_fee_usd,published_tax_usd,published_total_usd,recomputed_spread_usd,recomputed_fee_usd,recomputed_tax_usd,recomputed_total_usd,difference_usd,board
+L01,Documented income earned in China,10000,fx_wire,20.93,32.43,,53.36,20.93,32.43,,53.36,0.00,2026/11/11 15:30:04
+L01,Documented income earned in China,50000,fx_wire,104.66,61.30,,165.95,104.66,61.30,,165.95,0.00,2026/11/11 15:30:04
+L01,Documented income earned in China,100000,fx_wire,209.31,61.30,,270.61,209.31,61.30,,270.61,0.00,2026/11/11 15:30:04
+L01,Documented income earned in China,200000,fx_wire,418.62,61.30,,479.92,418.62,61.30,,479.92,0.00,2026/11/11 15:30:04
+L01,Documented income earned in China,400000,fx_wire,837.25,61.30,,898.54,837.25,61.30,,898.54,0.00,2026/11/11 15:30:04
+L03,Foreign currency already in the account,10000,wire_only,,32.43,,32.43,,32.43,,32.43,0.00,2026/11/11 15:30:04
+L03,Foreign currency already in the account,50000,wire_only,,61.30,,61.30,,61.30,,61.30,0.00,2026/11/11 15:30:04
+L03,Foreign currency already in the account,100000,wire_only,,61.30,,61.30,,61.30,,61.30,0.00,2026/11/11 15:30:04
+L03,Foreign currency already in the account,200000,wire_only,,61.30,,61.30,,61.30,,61.30,0.00,2026/11/11 15:30:04
+L03,Foreign currency already in the account,400000,wire_only,,61.30,,61.30,,61.30,,61.30,0.00,2026/11/11 15:30:04
+L07,"USD 50,000 annual convenience amount",10000,quota,20.93,32.43,,53.36,20.93,32.43,,53.36,0.00,2026/11/11 15:30:04
+L07,"USD 50,000 annual convenience amount",50000,quota,104.66,61.30,,165.95,104.66,61.30,,165.95,0.00,2026/11/11 15:30:04
+L07,"USD 50,000 annual convenience amount",100000,quota,209.31,122.60,,331.91,209.31,122.60,,331.91,0.00,2026/11/11 15:30:04
+L07,"USD 50,000 annual convenience amount",200000,quota,418.62,245.19,,663.82,418.62,245.19,,663.82,0.00,2026/11/11 15:30:04
+L07,"USD 50,000 annual convenience amount",400000,quota,837.25,490.39,,1327.63,837.25,490.39,,"1,327.63",0.00,2026/11/11 15:30:04
+L09,Dividend from your own Chinese company (20%),10000,dividend,16.74,30.43,2000.00,2047.17,16.74,30.43,"2,000.00","2,047.17",0.00,2026/11/11 15:30:04
+L09,Dividend from your own Chinese company (20%),50000,dividend,83.72,61.30,10000.00,10145.02,83.72,61.30,"10,000.00","10,145.02",0.00,2026/11/11 15:30:04
+L09,Dividend from your own Chinese company (20%),100000,dividend,167.45,61.30,20000.00,20228.75,167.45,61.30,"20,000.00","20,228.75",0.00,2026/11/11 15:30:04
+L09,Dividend from your own Chinese company (20%),200000,dividend,334.90,61.30,40000.00,40396.20,334.90,61.30,"40,000.00","40,396.20",0.00,2026/11/11 15:30:04
+L09,Dividend from your own Chinese company (20%),400000,dividend,669.80,61.30,80000.00,80731.09,669.80,61.30,"80,000.00","80,731.09",0.00,2026/11/11 15:30:04
+L10,Cash withdrawals abroad on a UnionPay debit card,10000,atm,,112.56,,112.56,,112.56,,112.56,0.00,2026/11/11 15:30:04
+L10,Cash withdrawals abroad on a UnionPay debit card,50000,atm,,561.00,,561.00,,561.00,,561.00,0.00,2026/11/11 15:30:04
+L10,Cash withdrawals abroad on a UnionPay debit card,100000,atm,,1120.20,,1120.20,,"1,120.20",,"1,120.20",0.00,2026/11/11 15:30:04
+L10,Cash withdrawals abroad on a UnionPay debit card,200000,atm,,2240.41,,2240.41,,"2,240.41",,"2,240.41",0.00,2026/11/11 15:30:04
+L10,Cash withdrawals abroad on a UnionPay debit card,400000,atm,,4480.82,,4480.82,,"4,480.82",,"4,480.82",0.00,2026/11/11 15:30:04
+L11,Carry foreign-currency cash out in person,10000,cash,20.93,,,20.93,20.93,,,20.93,0.00,2026/11/11 15:30:04
+L11,Carry foreign-currency cash out in person,50000,cash,104.66,,,104.66,104.66,,,104.66,0.00,2026/11/11 15:30:04
+L11,Carry foreign-currency cash out in person,100000,cash,209.31,,,209.31,209.31,,,209.31,0.00,2026/11/11 15:30:04
+L11,Carry foreign-currency cash out in person,200000,cash,418.62,,,418.62,418.62,,,418.62,0.00,2026/11/11 15:30:04
+L11,Carry foreign-currency cash out in person,400000,cash,837.25,,,837.25,837.25,,,837.25,0.00,2026/11/11 15:30:04
