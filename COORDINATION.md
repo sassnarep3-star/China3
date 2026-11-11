@@ -1404,3 +1404,21 @@ discarding anything:
 Also recorded: B8720152's request to scope m5f19 check J is satisfied by this session's claim-aware
 rewrite of that check (see the takeover note above). B8720152's U15 text and `scripts/e347_data.py`
 change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
+
+### V73 rebase conflict resolution (2026-11-11)
+
+While pushing the V73 claim, `origin/main` advanced from `6750ddb` to `d9763dc` (PR #49). The required
+`git pull --rebase origin main` stopped on an append-only conflict in this file. Resolution retains the
+entire 76E merge/cleanup record from `main` and appends the complete V73 claim below it; no content was
+discarded. The claim is pushed only after the rebase is complete.
+
+---
+
+## Session `arena/73fec6c5-china3` — final canonical-site integration (2026-11-11)
+
+**Branch:** Arena-fixed `arena/73fec6c5-china3`; per-task branch names are unavailable under the session binding, so this session will not switch or create branches. The work below is limited to this branch and non-overlapping canonical files.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources / verification | Notes |
+|---|---|---|---|---|---|---|
+| V73-T0 | Read the board, inspect open work and claim this final-integration scope before content changes | `COORDINATION.md` (append-only) | done | `arena/73fec6c5-china3` | Board read at base `6750ddb`; open PR #49 inspected. | Claim commit created before content work; rebase/push is being completed after preserving the concurrent PR #49 integration. |
+| V73-T1 | After the 11 Nov primary-source re-check (PR #49) is integrated, refresh the canonical executive summary and landing/cost views to the source-dated 11 Nov rate; link the re-check and its review findings; retain blank cells for unverified costs; run local verification and site-build/link checks | `scripts/e347_data.py`, `EXECUTIVE_SUMMARY.md`, `index.html`, generated canonical `dashboard/{costs,flagged,methods,sources,steps,tax}.html`, `data/e347_costs.csv`, `research/73fec6c5-integration-review.md`, `COORDINATION.md` (append-only) | in progress | `arena/73fec6c5-china3` | Pending integration against `data/76e_recheck.csv` and `data/76e_costs.csv` from PR #49; no fresh external-source fetch claimed in this session. | Does not edit PR #49's files (`76e-*`, `dashboard/archive.html`, `scripts/verify_m5f19_site.py`) or older archived editions. Reprice only inputs supported by the dated official board record; leave all other route amounts blank where unsupported. |
