@@ -36,27 +36,15 @@ jobs:
       - name: Independent B9B3 verification gate
         run: python3 scripts/verify_b9b3_site.py
 
-      - name: Dashboard and inherited data gates
+      - name: Dashboard and every inherited verification gate
         run: |
           python3 scripts/e347_build.py --check
           python3 scripts/e347_verify.py
-          python3 scripts/verify_b2d_decisions.py
-          python3 scripts/check_links.py
-          python3 scripts/validate_data.py
-          python3 scripts/verify_dashboard.py
-          python3 scripts/verify_76e.py
-          python3 scripts/verify_m5f19_site.py
-          python3 scripts/verify_c3x_site.py
-          python3 scripts/verify_d646_site.py
-          python3 scripts/verify_s775_site.py
-          python3 scripts/verify_s436_site.py
-          python3 scripts/verify_c5bf.py
-          python3 scripts/verify_a513.py
-          python3 scripts/verify_final_integration.py
-          python3 scripts/verify_cost_tables.py
-          python3 scripts/verify_completion.py
-          python3 scripts/verify_deep.py
-          python3 scripts/test_costs.py
+          for s in scripts/verify*.py scripts/check_links.py scripts/validate_data.py scripts/test_costs.py; do
+            case "$s" in scripts/verify_b9b3_site.py) continue;; esac
+            echo "--- $s ---"
+            python3 "$s"
+          done
 
       - name: Whitespace and conflict-marker sanity
         run: |
