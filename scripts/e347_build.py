@@ -29,7 +29,7 @@ METHOD = {m["id"]: m for m in data.METHODS}
 FLAG = {f[0]: f for f in data.FLAGS}
 NAV = [("index", "Home"), ("methods", "Methods"), ("costs", "Costs"), ("steps", "Steps"),
        ("tax", "Tax"), ("flagged", "Flagged"), ("sources", "Sources"), ("archive", "Archive")]
-OWN_PAGES = {"index.html"} | {f"dashboard/{k}.html" for k, _ in NAV if k != "index"}
+OWN_PAGES = {"index.html", "questions.html"} | {f"dashboard/{k}.html" for k, _ in NAV if k != "index"}
 KEY_AMOUNTS = [D(10000), D(50000), D(100000), D(200000), D(400000)]
 
 
@@ -95,6 +95,9 @@ class Ctx:
 def render(ctx, title, description, body):
     cur = ' aria-current="page"'
     nav = "".join(f'<a href="{ctx.page(k)}"{cur if k == ctx.key else ""}>{label}</a>' for k, label in NAV)
+    # f52c (this session): the decision register lives at the repository root, outside this
+    # generator's own page set, so it is linked rather than generated. One line, logged on the board.
+    nav += f'<a href="{ctx.up}questions.html">Questions</a>'
     return f"""<!doctype html>
 <html lang="en">
 <head>

@@ -1,0 +1,32 @@
+name: f52c questions
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Data files regenerate byte-for-byte
+        run: |
+          python3 scripts/f52c_data.py
+          python3 scripts/f52c_engine.py
+          git diff --exit-code -- data/f52c_ladder.csv data/f52c_method_costs.csv
+      - name: Page is up to date
+        run: python3 scripts/f52c_build.py --check
+      - name: Arithmetic, sourcing, anchors and page/data parity
+        run: python3 scripts/f52c_verify.py
+      - name: The dashboard that links to this page still passes
+        run: |
+          python3 scripts/e347_build.py --check
+          python3 scripts/e347_verify.py

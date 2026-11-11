@@ -7,6 +7,7 @@ One clean dashboard, built from official sources read on 2026-11-10:
 | Page | What it holds |
 |---|---|
 | [Home](https://sassnarep3-star.github.io/China3/) | The answer in four points, a "start with where the money came from" table, cost at a glance |
+| [Questions](https://sassnarep3-star.github.io/China3/questions.html) | **Start here.** The 45 questions that must be settled before money moves: what is answered from an official page, what only you can answer, what has no answer, and how to obtain each missing fact. Repriced 11 November 2026. |
 | [Methods](https://sassnarep3-star.github.io/China3/dashboard/methods.html) | 11 lawful routes and 6 prohibited ones, with limits, pros, cons |
 | [Costs](https://sassnarep3-star.github.io/China3/dashboard/costs.html) | Bank cost per route from $10,000 to $400,000 in $10,000 steps |
 | [Steps](https://sassnarep3-star.github.io/China3/dashboard/steps.html) | What to do, in order, for each route |
@@ -15,7 +16,13 @@ One clean dashboard, built from official sources read on 2026-11-10:
 | [Sources](https://sassnarep3-star.github.io/China3/dashboard/sources.html) | 35 official pages and what each one establishes |
 | [Archive](https://sassnarep3-star.github.io/China3/dashboard/archive.html) | Every page written by earlier and parallel sessions |
 
-Short version: [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). Repository review: [`research/e347-repo-review.md`](research/e347-repo-review.md).
+Short version: [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). Decision register and its method:
+[`research/f52c-questions.md`](research/f52c-questions.md). Repository review: [`research/e347-repo-review.md`](research/e347-repo-review.md).
+
+The dashboard figures are priced at the 10 November 2026 board. `questions.html` reprices the same
+convention at the 11 November 2026 board (selling 669.11 instead of 668.51), which moves the headline from
+$53.38 / $899.01 to $53.42 / $901.20 for $10,000 / $400,000. Both dates are printed on the pages; neither is
+silently substituted for the other.
 
 ## Rules the dashboard follows
 
@@ -28,6 +35,10 @@ Short version: [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). Repository review
 ```bash
 python3 scripts/e347_build.py          # index.html, dashboard/*.html, data/e347_*.csv
 python3 scripts/e347_verify.py         # sources on every row, blanks flagged, arithmetic recomputed, links
+python3 scripts/f52c_data.py           # data/f52c_*.csv (sources, questions, flags)
+python3 scripts/f52c_engine.py         # data/f52c_ladder.csv, data/f52c_method_costs.csv
+python3 scripts/f52c_build.py          # questions.html
+python3 scripts/f52c_verify.py         # re-derives all 480 cost cells with exact fractions
 python3 scripts/e347_repo_review.py    # repository scan (needs git and gh); writes research/e347-repo-review.md
 ```
 

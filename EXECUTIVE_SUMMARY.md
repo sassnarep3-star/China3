@@ -6,6 +6,21 @@ means "a considerable amount of taxes". What is the best lawful way out, and wha
 All figures were read from official pages on 2026-11-10. Bank figures use the Bank of China board
 published 2026/11/10 17:39:58 (Beijing). Live site: https://sassnarep3-star.github.io/China3/
 
+## Read this with the decision register
+
+A second pass on **11 November 2026** re-read 23 official pages and asked a different question: not "what
+does it cost" but "what must be settled before any decision is reasonable". It is on
+[`questions.html`](questions.html) (method in [`research/f52c-questions.md`](research/f52c-questions.md)).
+
+- 45 questions: 27 have a sourced answer from a page read that day, 15 depend on facts only the account
+  holder has, 3 have no official answer at all.
+- Six facts decide everything: where the money came from, which currency it is, how much, when it was
+  acquired, Chinese residence status, U.S. reporting history.
+- Repriced at the 11 November board (selling 669.11): **$53.42** on $10,000 and **$901.20** on $400,000 on
+  the convert-and-wire route, against $53.38 / $899.01 at the 10 November board used below.
+- Newly flagged: the landing page attributes the 30 % fine to four pages that contain no fine (the fine is
+  in Regulation arts 39, 40, 45); nine legacy pages cite the crypto notice repealed on 2026-02-06.
+
 ## The answer in five points
 
 1. **Converting and wiring is not taxed.** No official source read here puts a tax on the conversion or the

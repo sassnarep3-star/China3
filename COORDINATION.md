@@ -1480,3 +1480,38 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 - 2026-11-11T claim: read COORDINATION.md (1319 lines), inspected all remote branches (`git ls-remote`, `git branch -a`), confirmed `main` at 6750ddb, wrote non-overlapping claim and pushed before touching content files.
 - 2026-11-11T audit done: `research/1c55025d-audit.md` (431 lines, R0-R10 trace, §§1-12), `REPO_AUDIT.md` re-audit (16 verifiers PASS), `scripts/e347_build.py` 15 files 0 changed, `scripts/e347_verify.py` PASS; R1-R7 marked done, R8 PR pending.
 - 2026-11-11T pre-PR checks: `validate_data OK`, `check_links OK`, `verify_dashboard PASS`, `verify_76e PASS`, `verify_m5f19 PASS` (claim-aware J), `verify_c3x PASS`, `verify_d646 PASS`, `verify_s775 PASS`, `verify_s436 PASS`, `verify_c5bf PASS`, `verify_final_integration PASS`, `test_costs PASS`, `verify_deep PASS`; no broken links; no hallucination (every dollar recomputed from S01/S02 fractions).
+
+---
+
+---
+---
+
+## Session `arena/f52c089a-china3` (`f52c`) — decision-question register, fresh 11 Nov verification, integration
+
+Branch `arena/f52c089a-china3`, base `main` @ `d9763dc` (PR #49 merged). Claimed 2026-11-11 (UTC).
+
+**Live-claim scan before claiming** (`git fetch --prune` + `gh pr list`): open PRs at claim time were #50
+(`arena/7881ea76-china3`: `COORDINATION.md`, `research/7881-publication-audit.md`) and #34 / #32 / #25 / #18 /
+#15 / #8 / #6 (older, unmerged editions). None claims a question register, a `questions.html` page, or the
+`f52c_*` namespace. PR #50's m5f19 gate is red; its two files are not in this session's scope and are not touched.
+
+### The gap this session fills
+
+The site answers "what does the bank charge" and "what rules apply" in depth. It does **not** answer the
+question the brief puts first: *what must be settled before any decision can reasonably be made, and how do
+I find each missing fact?* `index.html` lists three open items; the Flagged page lists 19 flags; neither
+turns them into a decision checklist with an owner, an evidence artefact and a way to obtain it. `grep` over
+all 60+ pages found no such page. That is the deliverable here — plus an independent, same-day (11 Nov 2026)
+re-read of every official page the answers rest on.
+
+| ID | Task | Exclusive file scope | Status | Owner | Notes |
+|---|---|---|---|---|---|
+| F52C-T0 | Claim scope; push before content work | `COORDINATION.md` (append) | done | `arena/f52c089a-china3` | this block |
+| F52C-T1 | Independent same-day re-read of the load-bearing official pages; record verbatim value + verdict | `data/f52c_recheck.csv`, `research/f52c-questions.md` | in progress | `arena/f52c089a-china3` | nothing inherited is copied as verified; each row is a fetch of 2026-11-11 or blank+flagged |
+| F52C-T2 | Decision-question register: every question that must be answered before acting, the answer we do and do not have, the evidence artefact, and how to obtain it | `data/f52c_questions.csv` | in progress | `arena/f52c089a-china3` | every row links an official page, or is `UNVERIFIED` with a flag id |
+| F52C-T3 | Publish it as a page on the live site | `questions.html`, `assets/f52c.css`, `scripts/f52c_build.py` | unclaimed | `arena/f52c089a-china3` | mobile-first, same conventions as the dashboard |
+| F52C-T4 | Verifier: re-derive every printed number independently, enforce official-domain links, blank⇒flag, page/data parity, resolve every link | `scripts/f52c_verify.py`, `.github/workflows/f52c-verify.yml` | unclaimed | `arena/f52c089a-china3` | must not import the page builder |
+| F52C-T5 | Integration (shared outputs): one nav entry + one card pointing at the new page, exactly one line in `scripts/e347_build.py`, regenerated pages, README/EXECUTIVE_SUMMARY pointer | `scripts/e347_build.py` (one line), `index.html`, `dashboard/*.html`, `README.md`, `EXECUTIVE_SUMMARY.md` | unclaimed | `arena/f52c089a-china3` | claimed here only because no other live session names these files |
+| F52C-T6 | PR → `main`, all checks green, merge without waiting, confirm Pages, record result | GitHub / `COORDINATION.md` | unclaimed | `arena/f52c089a-china3` | will not merge a broken site |
+
+- 2026-11-11: claim written; pushed before any content file was created.
