@@ -19,6 +19,16 @@ from pathlib import Path
 from urllib.parse import urlparse, unquote
 
 ROOT = Path(__file__).resolve().parent.parent
+# The navigation length is read from the generator instead of hardcoded: every additive
+# integration (s775, m5f19, 76e, decisions, bd1e, …) changes it, and a hardcoded count made
+# the honest change look like a failure on each later branch. Same repair pattern as the
+# 76e session applied to check J of verify_m5f19_site.py.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    import e347_build as _builder
+    EXPECTED_NAV = len(_builder.NAV)
+except Exception:  # pragma: no cover — fall back to the count shipped with this file
+    EXPECTED_NAV = 12
 PAGES = [ROOT / "index.html"] + [ROOT / "dashboard" / f"{n}.html" for n in
                                  ("decisions", "methods", "costs", "steps", "tax", "flagged", "sources", "archive")]
 OFFICIAL = ("boc.cn", "safe.gov.cn", "chinatax.gov.cn", "pbc.gov.cn", "irs.gov", "govinfo.gov",
@@ -193,8 +203,8 @@ def check_pages():
                  "restore it with python3 scripts/e347_build.py; the legacy landing page is legacy-index.html")
         if page.h1 != 1:
             fail(f"{rel}: expected one h1, found {page.h1}")
-        if len(page.nav) != 9:
-            fail(f"{rel}: navigation has {len(page.nav)} entries, expected 9")
+        if len(page.nav) != EXPECTED_NAV:
+            fail(f"{rel}: navigation has {len(page.nav)} entries, expected {EXPECTED_NAV}")
         for t in page.tables:
             if t["kind"] not in ("data", "repo", "nav"):
                 fail(f"{rel}: table without data-kind")

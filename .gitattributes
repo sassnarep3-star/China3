@@ -1,0 +1,6 @@
+# The coordination board is append-only: every session adds its block at the end, so every
+# merge used to stop on a conflict in this one file, and twice the conflict markers were
+# committed to main. Git's built-in "union" driver resolves that case by keeping the lines
+# from both sides. It applies to this file only. Generated pages must never use it: rebuild
+# them with their generator instead.
+COORDINATION.md merge=union

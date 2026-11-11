@@ -15,6 +15,8 @@ One clean dashboard, built from official sources read on 2026-11-10:
 | [Flagged for review](https://sassnarep3-star.github.io/China3/dashboard/flagged.html) | Everything unverified, plus problems found in this repository |
 | [Sources](https://sassnarep3-star.github.io/China3/dashboard/sources.html) | 35 official pages and what each one establishes |
 | [Archive](https://sassnarep3-star.github.io/China3/dashboard/archive.html) | Every page written by earlier and parallel sessions |
+| [M5F19 verified edition](https://sassnarep3-star.github.io/China3/m5f19-dashboard.html) | Independent re-verification & cost reconciliation (10 Nov 2026); linked from the landing-page nav |
+| [Source re-check](https://sassnarep3-star.github.io/China3/76e-verification.html) | Freshness re-verification of the load-bearing official sources (11 Nov 2026); linked from the landing-page nav |
 
 Short version: [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). Repository review: [`research/e347-repo-review.md`](research/e347-repo-review.md).
 
