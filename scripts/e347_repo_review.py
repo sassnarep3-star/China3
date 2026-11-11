@@ -180,6 +180,29 @@ def checks(files, scan_rows, nonofficial):
     wf = [f for f in files if f.startswith(".github/workflows/")]
     out["workflow_overlap"] = (f"{len(wf)} workflow files; validate_data.py is invoked by {sum('validate_data.py' in read(f) for f in wf)} of them.",
                                "open; pages.yml now also link-checks the dashboard")
+    # Added 2026-11-11 (session arena/b579901a-china3, final integration).
+    costs_html = read("dashboard/costs.html")
+    printed = re.findall(r"(Selling Rate|Buying Rate) ([0-9.]+) per 100", costs_html)
+    out["board_strings_as_printed"] = (
+        "costs.html prints " + (", ".join(f"{k} {v}" for k, v in printed) if printed else "no per-100 figures")
+        + f"; the arithmetic uses {float(data.RATE['ask']) * 100:.2f} and {float(data.RATE['bid']) * 100:.2f} per 100.",
+        "fixed in this session: both strings are derived from the rates, and scripts/e347_verify.py now fails if they drift")
+    tax_html = read("dashboard/tax.html")
+    out["sec988_personal_wording"] = (
+        f"T10 on the Tax page mentions a capital gain: {'capital gain' in tax_html}; "
+        f"cites IRS Publication 525: {'Pub. 525' in tax_html}; "
+        f"cites 988(e)(1): {'988(e)(1)' in tax_html}.",
+        "fixed in this session: T10 and flag U05 rewritten against 26 U.S.C. 988(e) and Publication 525, which are now S27 and S43")
+    nav_html = read("index.html")
+    m = re.search(r'<nav class="nav"[^>]*>(.*?)</nav>', nav_html, re.S)
+    n_nav = len(re.findall(r"<a ", m.group(1))) if m else 0
+    arch = read("dashboard/archive.html")
+    editions = [f for f in ("m5f19-dashboard.html", "76e-verification.html", "f52-summary.html", "b9b3-dashboard.html",
+                            "g8d8-summary.html", "e0f4-76e-audit.html", "n676-summary.html") if f in arch]
+    out["nav_entries"] = (
+        f"{n_nav} entries in the top bar of index.html; {len(editions)} of 7 root-level editions are linked from the Archive page.",
+        "changed in this session: core sections only, every edition still one click away on Archive; no page was removed")
+
     out["no_license"] = ("LICENSE file " + ("exists." if any(f.upper().startswith("LICENSE") for f in files) else "does not exist."), "open; owner's decision")
     out["branch_naming"] = (f"Current branch: {sh('git', 'rev-parse', '--abbrev-ref', 'HEAD')}.", "cannot be changed by a session")
     return out
@@ -193,7 +216,7 @@ def main():
         w.writerows(scan_rows)
     ev = checks(files, scan_rows, nonofficial)
     rows = []
-    for rid, sev, where, finding, check, path, src in data.IRREGULARITIES:
+    for rid, sev, where, finding, check, path, src in sorted(data.IRREGULARITIES, key=lambda r: r[0]):
         evidence, status = ev[check]
         rows.append(dict(id=rid, severity=sev, where=where, finding=finding, evidence=evidence, status=status,
                          evidence_path=path, official_source_id=src,

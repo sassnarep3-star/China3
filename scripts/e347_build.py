@@ -415,7 +415,7 @@ def page_flagged():
     rows = [(fid, [f'<span class="id">{fid}</span>{esc(item)}<br><span class="pill {sev[s]}">{s}</span>',
                    esc(why), esc(close), ctx.src(src)]) for fid, s, item, why, close, src in data.FLAGS]
     irr = []
-    for r in read_irregularities():
+    for r in sorted(read_irregularities(), key=lambda r: r["id"]):
         links = f'<a href="{REPO}/blob/main/{esc(r["evidence_path"])}" rel="noopener">repository file</a>' if r["evidence_path"] else f'<a href="{REPO}/pulls" rel="noopener">repository</a>'
         if r["official_source_id"]:
             links += " " + ctx.src([r["official_source_id"]])
