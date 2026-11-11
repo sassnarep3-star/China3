@@ -2,7 +2,7 @@
 
 **Live site:** https://sassnarep3-star.github.io/China3/
 
-One clean dashboard, built from official sources read on 2026-11-10:
+One clean dashboard. The canonical evidence was read on 2026-11-10; the current integration re-read the FX board and new evidence on 2026-11-11. The live cost model uses the BOC board published 2026/11/11 15:30:04 Beijing and now includes 13 lawful routes plus a conditional dividend-treaty scenario. Unknown provider and personal costs remain blank and flagged.
 
 | Page | What it holds |
 |---|---|
@@ -17,6 +17,8 @@ One clean dashboard, built from official sources read on 2026-11-10:
 | [Archive](https://sassnarep3-star.github.io/China3/dashboard/archive.html) | Every page written by earlier and parallel sessions |
 | [M5F19 verified edition](https://sassnarep3-star.github.io/China3/m5f19-dashboard.html) | Independent re-verification & cost reconciliation (10 Nov 2026); linked from the landing-page nav |
 | [Source re-check](https://sassnarep3-star.github.io/China3/76e-verification.html) | Freshness re-verification of the load-bearing official sources (11 Nov 2026); linked from the landing-page nav |
+| [Banks, providers & enforcement](https://sassnarep3-star.github.io/China3/g8d8-summary.html) | Other bank tariffs, U.S. receiving fees, Wise/Western Union terms and 40 SAFE enforcement cases |
+| [Unpaid Chinese tax](https://sassnarep3-star.github.io/China3/6da0-settle-up.html) | Late-payment surcharge, fines, look-back periods and U.S. compliance procedures |
 
 Short version: [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). Repository review: [`research/e347-repo-review.md`](research/e347-repo-review.md).
 

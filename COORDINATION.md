@@ -2140,6 +2140,41 @@ Full register with quotations: `data/6da0_sources.csv` (52 rows). Issuers: Natio
 
 ---
 
+<!-- session-d2a045b3-final-integration-v1 -->
+
+## Session `arena/d2a045b3-china3` — final canonical integration (2026-11-11)
+
+Branch fixed by Arena: `arena/d2a045b3-china3`. Base `64a5cdf` (`main`, PR #75). The latest sibling commits/claims are stale under the board's >60-minute rule or already merged; this session takes the final-integration role and does not create a parallel edition.
+
+| ID | Task | Exclusive file scope | Status | Owner |
+|---|---|---|---|---|
+| D2A-1 | Integrate already-published, officially sourced G8D8 evidence into the canonical dashboard: dated FX refresh, additional channels/fees, dividend treaty cap, inheritance/FBAR source closures; preserve conditional and unverified values | `scripts/e347_data.py`, `scripts/e347_costs.py`, `scripts/e347_build.py`, `scripts/e347_verify.py`, generated `index.html`, `dashboard/*.html`, `data/e347_*.csv` | in progress | `arena/d2a045b3-china3` |
+| D2A-2 | Reconcile executive summary/README and navigation; add G8D8 and unpaid-tax research links; remove absolute wording not supported by the evidence | `EXECUTIVE_SUMMARY.md`, `README.md` (narrow corrections/additive links) | in progress | `arena/d2a045b3-china3` |
+| D2A-3 | Re-run all generators/verifiers, conflict-marker and whitespace checks; no broken links; PR → main, merge without approval, verify Pages and record outcome | `COORDINATION.md` (append only), GitHub PR/Pages | in progress | `arena/d2a045b3-china3` |
+
+Every numeric change will be tied to an official URL already read and quoted in `data/g8d8_sources.csv` / `data/76e_recheck.csv`, or re-opened through an official-source tool. Unknown commercial fees and personal tax values remain blank and flagged. No sibling namespace or stale open PR is edited or merged.
+
+### D2A scope amendment — stale verifier takeover
+
+The full regression run found two failures caused only by hard-coded assumptions that the canonical CSV remained at the 10 November board with 11 priced routes: `scripts/verify_76e.py` and `scripts/verify_e0f4_audit.py`. Both owning sessions' last content commits are >60 minutes old and their work is merged. Under the board takeover rule, D2A narrowly updates those two gates to separate their archived 10/11 November comparisons from the canonical 11 November 15:30:04 model. No historical page, dataset or finding is changed.
+
+### D2A scope amendment — N676 ownership-gate takeover
+
+The expanded suite also ran `scripts/n676_verify.py`, whose check K rejects every later integration for modifying non-N676 files (the same defect class as M5F19 check J; previously logged 6DA0-IR-03). N676 is merged and stale >60 minutes. D2A narrowly scopes check K to the N676 branch using `GITHUB_HEAD_REF` or the local branch name; checks A–J and L still run everywhere. No N676 content changes.
+
+### D2A verification and integration record
+
+**D2A-1 and D2A-2 done.** Canonical dashboard refreshed to BOC 2026/11/11 15:30:04 (buy 6.6606 / sell 6.6886). L01 now $53.36 at $10,000 and $898.54 at $400,000. Fourteen lawful routes/scenarios × 40 increments = 560 rows; six prohibited routes retained. Added conditional L09T treaty 10% dividend scenario (20% statutory L09 retained), Wise L12 and Western Union L13 with blank prices, exact provider steps, a sourced possible $15 Bank of America incoming fee, the willful-FBAR 50% prong, and the dated 2017 inheritance-tax statement. Executive summary and README reconciled; G8D8 and 6DA0 evidence linked.
+
+**Official/first-party sources directly re-read 2026-11-11:** BOC board and personal tariff; IRS U.S.–China treaty Art. 9; 31 U.S.C. 5321; Ministry of Finance 财税函〔2017〕197号; Wise outbound-CNY terms; Western Union China terms; Bank of America incoming-wire page; Agricultural Bank tariff. Register S01/S02/S36–S42. Older canonical sources retain their 2026-11-10 read date.
+
+**Verification:** all 25 repository verifier/test/data/link/marker commands pass, plus `e347_build.py --check` and `git diff --check`. Canonical gate: 560 cost rows independently recomputed; 879 sourced HTML table rows; 554 blank values all flag-linked; 2,850 links resolved; 172 data rows with official/first-party URLs. External HTTP checks in the legacy `check_links.py` remain skipped; direct source reads above are the substantive evidence. No browser visual audit is claimed. Provider prices, intermediary deductions, personal tax and eligibility remain blank/conditional, not inferred.
+
+**Irregularities handled:** two stale hard-coded-board gates and one namespace-only ownership gate were taken over under the >60-minute rule and narrowly repaired without changing historical content. No open sibling PR merged. D2A-3 PR/deploy pending.
+
+### D2A scope amendment — 76e generator freshness
+
+CI exposed one additional stale assumption in `scripts/build_76e_site.py --check`: it used the current canonical CSV as if it were still the archived 10 November baseline. Under the same stale-claim takeover, D2A updates that generator to compute its archived baseline from the archived board and reconcile the current canonical CSV against the current 15:30:04 board. This preserves the historical 76e page/data byte-for-byte while allowing its freshness gate to run after the canonical refresh.
 <!-- session-arena-54e4bfc5-china3-54e4-v1 -->
 
 ## Session `arena/54e4bfc5-china3` (`54e4`) — final dashboard integration, freshness audit, and release check (2026-11-11)

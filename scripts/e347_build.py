@@ -126,7 +126,7 @@ def render(ctx, title, description, body):
 {body}
 </div></main>
 <footer><div class="wrap">
-<p>Rates and fees: Bank of China board published {esc(data.RATE["board_time"])} and its public personal tariff. Sources were read on {data.SNAPSHOT_DATE}.</p>
+<p>Rates and fees: Bank of China board published {esc(data.RATE["board_time"])} and its public personal tariff. Canonical sources were read on {data.SNAPSHOT_DATE}; integration sources and the FX board on {data.INTEGRATION_DATE}.</p>
 <p>General research from public official pages. It is not legal, tax or banking advice and makes no finding about any person's case.</p>
 <p><a href="{ctx.page("sources")}">All sources</a> · <a href="{ctx.page("flagged")}">Open items</a> · <a href="{REPO}">Repository</a> · built by <code>scripts/e347_build.py</code></p>
 </div></footer>
@@ -165,9 +165,9 @@ def cost_sources(m):
     model = m["model"]
     base = {"fx_wire": ["S01", "S02"], "property": ["S01", "S02"], "wire_only": ["S02", "S01"],
             "quota": ["S01", "S02", "S06"], "atm": ["S03", "S19", "S01"], "cash": ["S01", "S20"],
-            "dividend": ["S25", "S01", "S02"], "blank": ["S24"]}[model]
+            "dividend": ["S25", "S01", "S02"], "dividend_treaty": ["S36", "S01", "S02"], "blank": []}[model]
     rule = [s for s in m["src"] if s not in base][:1] if model in ("fx_wire", "property", "wire_only") else []
-    return base + rule
+    return (base + rule) if base else list(dict.fromkeys(m["src"]))
 
 
 def cost_table(ctx, m, amounts=None, extra_src=()):
@@ -198,13 +198,14 @@ def cost_table(ctx, m, amounts=None, extra_src=()):
         elif model == "cash":
             head = ["Amount", "Trips at $5,000", "Trips at $10,000 with bank permit", "Exchange spread", "% of amount", "Banknote and travel cost", "Source"]
             cells = [amt, str(r["units"]), str(r["extra"]), usd(r["known_cost_usd"]), pct(r["known_cost_pct"]), ctx.blank("U14"), s]
-        elif model == "dividend":
-            head = ["Dividend before tax", "Chinese tax (20%)", "Bank cost", "Total known cost", "% of dividend", "You receive", "Source"]
+        elif model in ("dividend", "dividend_treaty"):
+            rate = "20%" if model == "dividend" else "10% treaty cap"
+            head = ["Dividend before tax", f"Chinese tax ({rate})", "Bank cost", "Total known cost", "% of dividend", "You receive", "Source"]
             cells = [amt, usd(r["tax_usd"]), usd(r["spread_usd"] + r["fee_usd"]), usd(r["known_cost_usd"]), pct(r["known_cost_pct"]),
                      usd(r["extra"]), s]
         else:  # blank
-            head = ["Amount", "Outbound RMB wire fee", "Offshore conversion cost", "Source"]
-            cells = [amt, ctx.blank("U09"), ctx.blank("U09"), s]
+            head = ["Amount", "Published provider fee / outbound fee", "Published execution FX cost", "Source"]
+            cells = [amt, ctx.blank("U21" if m["id"] in ("L12", "L13") else "U09"), ctx.blank("U21" if m["id"] in ("L12", "L13") else "U09"), s]
         cells[1] = cells[1] if model in ("quota", "atm", "cash", "blank") else f"<b>{cells[1]}</b>"
         rows.append((None, cells))
     return table(head, rows, cls="num")
@@ -217,7 +218,8 @@ COST_NOTES = {
     "quota": "USD 50,000 is converted and wired each calendar year. Later years are priced at today's rate, so this is a scenario, not a forecast.",
     "atm": "Withdrawals of RMB 10,000 each, the daily cap per card. Counts of withdrawals and years use Bank of China's selling rate as a stand-in for the card network's rate, which was not verified.",
     "cash": "Banknotes bought at the board's cash selling rate, which equals the wire selling rate on this board. The cash must first be bought lawfully under another route.",
-    "dividend": "The first column is the dividend declared. Chinese tax of 20% is withheld, and the rest is converted and wired once.",
+    "dividend": "Statutory scenario: 20% Chinese tax, then one conversion and wire.",
+    "dividend_treaty": "Conditional Article 9 scenario: 10% Chinese tax cap, then one conversion and wire. Treaty residence and beneficial ownership are not established here.",
     "blank": "No official page publishes either cost. The cells stay blank.",
 }
 
@@ -237,7 +239,7 @@ def page_costs():
         ("Overseas ATM limits", "¥10,000 a day per card; ¥100,000 a year per person", "汇发〔2017〕29号", ["S19"]),
         ("Annual convenience amount", "USD 50,000 a year", "For Chinese citizens and Foreign Permanent Resident ID holders", ["S06", "S05"]),
         ("Cash carried out", "USD 5,000 free; up to USD 10,000 with bank permit", "Per trip", ["S20"]),
-        ("Chinese tax on dividends", "20%", "Individual Income Tax Law Art. 3", ["S25"]),
+        ("Chinese tax on dividends", "20% statutory / 10% conditional treaty cap", "Individual Income Tax Law Art. 3; U.S.–China treaty Art. 9(2)", ["S25", "S36"]),
     ]
     in_rows = [(None, [esc(a), f"<b>{esc(b)}</b>", esc(c), ctx.src(d)]) for a, b, c, d in inputs]
 
@@ -272,7 +274,7 @@ def page_costs():
 <h2>All routes side by side</h2>
 <p>The bank routes that convert and wire once (L01, L02, L04, L05, L06) cost the same at the bank; what differs is the paperwork. The yearly-quota, ATM and cash routes cost more because the fee repeats, and they take years or dozens of trips.</p>
 {table(["Route", "$10,000", "$50,000", "$100,000", "$200,000", "$400,000", "Time for $400,000", "Source"], comp, cls="num routes")}
-<p class="note">The dividend row includes the 20% Chinese tax, which is why it is far larger. ATM and cash rows cover only the part that is published (see each table).</p>
+<p class="note">Dividend rows show separate 20% statutory and conditional 10% treaty scenarios. ATM, cash and provider rows cover only published components; blanks are not zero.</p>
 <h2>What the numbers are built from</h2>
 {table(["Input", "Value", "What it is", "Source"], in_rows)}
 <p>Formula for a convert-and-wire route: <code>amount × (selling rate − midpoint) ÷ selling rate</code> for the spread, plus <code>(0.1% of the RMB amount, kept between ¥50 and ¥260, + ¥150) ÷ selling rate</code> for the wire. The percentage part of the wire fee stops growing at about ${q(r["wire_max"] / r["wire_rate"] / r["ask"], D(1)):,}.</p>
@@ -316,7 +318,7 @@ def page_methods():
                     f'<span class="blank">not re-read in this pass</span> <a href="flagged.html#U19">U19</a> · <a href="../{page}">earlier write-up</a>',
                     f'<a href="{esc(url)}" rel="noopener">official page cited earlier</a>']) for i, label, url, page in data.LEGACY_ROUTES]
     body = f"""<h1>Every lawful route, and the ones to avoid</h1>
-<p class="lead">Eleven lawful routes and six prohibited ones, each tied to the rule that creates it. Which lawful route is open to you depends on where the money came from and which ID your account is held under.</p>
+<p class="lead">Fourteen lawful routes or conditional scenarios and six prohibited ones, each tied to its official or first-party source. Which lawful route is open to you depends on where the money came from and which ID your account is held under.</p>
 <div class="banner">A foreign passport holder is a 境外个人 under the SAFE rules. The USD 50,000-a-year amount that Chinese citizens use on ID alone does not apply to buying foreign currency on a passport; only holders of the Foreign Permanent Resident ID get it. A foreigner who has lived in China for a year may be classed differently by the bank: see <a href="flagged.html#U10">U10</a>.</div>
 <h2>Lawful routes</h2>
 {table(["Route", "Use it when", "Limit", "Advantages", "Drawbacks", "Tax", "Bank cost at $100,000", "Source"], rows)}
@@ -441,8 +443,8 @@ def page_sources():
             for sid, issuer, title, url, h, says in data.SOURCES]
     n_direct = sum(1 for s in data.SOURCES if s[4] == "direct")
     body = f"""<h1>Sources</h1>
-<p class="lead">{len(data.SOURCES)} official pages, all read on {data.SNAPSHOT_DATE}. {n_direct} were opened and read in full. {len(data.SOURCES) - n_direct} were confirmed from the page's own text as returned by a search of that address, and are marked so you can open them yourself.</p>
-<p>Only government, regulator, central-bank and Bank of China pages are used. No law-firm articles, forums or news sites.</p>
+<p class="lead">{len(data.SOURCES)} official or first-party pages. The canonical register was read on {data.SNAPSHOT_DATE}; the D2A integration sources and FX board were re-read on {data.INTEGRATION_DATE}. {n_direct} were opened and read in full. {len(data.SOURCES) - n_direct} were confirmed from the page's own text as returned by a search of that address, and are marked so you can open them yourself.</p>
+<p>Government, regulator, bank and first-party provider pages are used for their own rules, terms and prices. No law-firm articles, forums or news sites. Provider statements do not establish a legal conclusion.</p>
 {table(["Issuer", "How it was read", "What it establishes", "Document"], rows)}
 """
     return render(ctx, "Sources", "The official pages every figure on this site was read from.", body)
@@ -587,15 +589,15 @@ def page_index():
     high = [f for f in data.FLAGS if f[1] == "high"]
     hrows = [(None, [f'<a href="{ctx.page("flagged")}#{f[0]}">{f[0]}</a> {esc(f[2])}', esc(f[3]), ctx.src(f[5])]) for f in high]
     body = f"""<h1>Getting money out of a Chinese bank account and into US dollars</h1>
-<p class="lead">For a U.S. citizen. Every figure links to the official page it was read from on 10 November 2026. Anything that could not be confirmed is left blank and listed under <a href="{ctx.page("flagged")}">Flagged</a>.</p>
+<p class="lead">For a U.S. citizen. Every figure links to its official or first-party source. The current FX board and new integration evidence were read on 11 November 2026. Anything that could not be confirmed is left blank and listed under <a href="{ctx.page("flagged")}">Flagged</a>.</p>
 
 <div class="grid">
 <div class="card"><h3>1. The conversion itself is not what gets taxed</h3>
 <p>No official source read here taxes converting RMB or wiring it out. What the bank asks for is proof that Chinese tax on the money was already dealt with. If it was not, that income tax is the large number: 3% to 45% on wages, 20% on dividends, rent and property gains. Bank-deposit interest is exempt.</p>
 <p class="src">{ctx.src(["S17", "S04", "S25", "S26"])} · <a href="{ctx.page("tax")}">Tax page</a></p></div>
 <div class="card"><h3>2. The bank's own cost is about half a percent or less</h3>
-<p>{usd(c10["known_cost_usd"])} on $10,000 ({pct(c10["known_cost_pct"])}) and {usd(c400["known_cost_usd"])} on $400,000 ({pct(c400["known_cost_pct"])}) at Bank of China's published rate and fee. Fees taken by other banks along the way are not published and are left blank.</p>
-<p class="src">{ctx.src(["S01", "S02"])} · <a href="{ctx.page("costs")}">Cost tables</a></p></div>
+<p>{usd(c10["known_cost_usd"])} on $10,000 ({pct(c10["known_cost_pct"])}) and {usd(c400["known_cost_usd"])} on $400,000 ({pct(c400["known_cost_pct"])}) at Bank of China's published rate and fee. Actual intermediary deductions and the receiving account's fee are not included; Bank of America says its incoming wire may cost $15.</p>
+<p class="src">{ctx.src(["S01", "S02", "S41"])} · <a href="{ctx.page("costs")}">Cost tables</a></p></div>
 <div class="card"><h3>3. The U.S. side can cost more than the bank</h3>
 <p>Selling RMB is a currency sale under U.S. tax law. RMB acquired at the 2024 average rate would show a gain of about {pct(g24p, 1)} today, or {usd(g24, False)} on $400,000, taxed at your ordinary rate unless the personal-transaction rule applies. Each missed report has its own penalty: up to $16,536 for an FBAR, $10,000 for Form 8938, and 5% of a gift per month for Form 3520.</p>
 <p class="src">{ctx.src(["S27", "S28", "S31", "S29", "S33"])} · <a href="{ctx.page("tax")}#T10">Currency gain</a></p></div>
@@ -617,7 +619,7 @@ def page_index():
 
 <h2>Cost at a glance</h2>
 {table(["Route", "$10,000", "$100,000", "$400,000", "Time for $400,000", "Source"], glance, cls="num routes")}
-<p class="note">The dividend row includes 20% Chinese tax. ATM and cash rows cover only the published part of the cost. <a href="{ctx.page("costs")}">Every $10,000 step for every route</a>.</p>
+<p class="note">Dividend rows separate the 20% statutory and conditional 10% treaty scenarios. ATM, cash and provider rows include only published costs. <a href="{ctx.page("costs")}">Every $10,000 step for every route</a>.</p>
 
 <h2>What is still open</h2>
 <p>These three decide the answer and cannot be settled from public sources. The full register - every question, whether an official page answers it, what is missing and how to obtain it - is on the <a href="{ctx.page("decisions")}">Decide page</a>.</p>
@@ -626,7 +628,7 @@ def page_index():
 <h2>Sections</h2>
 <div class="links">
 <a href="{ctx.page("decisions")}"><b>Decide</b><span>{len(decide.DECISIONS)} questions to settle first, and how to close each one</span></a>
-<a href="{ctx.page("methods")}"><b>Methods</b><span>11 lawful routes and 6 to avoid, with pros, cons and limits</span></a>
+<a href="{ctx.page("methods")}"><b>Methods</b><span>14 lawful routes or conditional scenarios and 6 to avoid, with pros, cons and limits</span></a>
 <a href="{ctx.page("costs")}"><b>Costs</b><span>$10,000 to $400,000 in $10,000 steps, per route</span></a>
 <a href="{ctx.page("steps")}"><b>Steps</b><span>What to do, in order, for each route</span></a>
 <a href="{ctx.page("tax")}"><b>Tax</b><span>Chinese tax, U.S. tax, reporting forms, penalties</span></a>
@@ -644,6 +646,8 @@ def page_index():
 <a href="a15-review.html"><b>A15 safety review</b><span>Independent integration safety review</span></a>
 <a href="completion-audit.html"><b>Completion audit</b><span>Fresh official-source spot-check and executive conclusions</span></a>
 <a href="us-fx-gain.html"><b>U.S. §988 currency gain</b><span>The conversion tax on appreciated RMB, $10k–$400k</span></a>
+<a href="g8d8-summary.html"><b>Banks, providers &amp; enforcement</b><span>Other bank tariffs, U.S. receiving fees, provider terms and actual SAFE cases</span></a>
+<a href="6da0-settle-up.html"><b>If Chinese tax was never paid</b><span>Late-payment surcharge, fines, look-back periods and U.S. procedures</span></a>
 </div>
 <p class="note">Earlier research passes are kept in the <a href="{ctx.page("archive")}">Archive</a>.</p>
 """
@@ -667,7 +671,7 @@ def data_files():
     f = {}
     f["e347_sources.csv"] = csv_text(
         ["id", "issuer", "title", "url", "read_on", "how_read", "what_it_establishes"],
-        [[s[0], s[1], s[2], s[3], data.SNAPSHOT_DATE, s[4], s[5]] for s in data.SOURCES])
+        [[s[0], s[1], s[2], s[3], data.INTEGRATION_DATE if s[0] in ("S01", "S02") or int(s[0][1:]) >= 36 else data.SNAPSHOT_DATE, s[4], s[5]] for s in data.SOURCES])
     f["e347_methods.csv"] = csv_text(
         ["id", "status", "route", "use_it_when", "limit", "advantages", "drawbacks", "tax", "cost_model", "source_ids", "source_urls", "flags"],
         [[m["id"], m["status"], m["name"], m["fits"], m["limit"], m["pros"], m["cons"], m["tax"], m["model"],
@@ -688,7 +692,7 @@ def data_files():
         [[x[0], x[1], x[2], x[3], x[4], "|".join(x[5]), urls(x[5])] for x in data.FLAGS])
     rows = []
     blank_flag = {"fx_wire": "U04", "property": "U01|U04", "wire_only": "U04", "quota": "U04|U15", "atm": "U13|U15",
-                  "cash": "U14", "dividend": "U04|U06", "blank": "U09"}
+                  "cash": "U14", "dividend": "U04|U20", "dividend_treaty": "U04|U20", "blank": "U09"}
     fmt = lambda v: "" if v is None else str(q(v))
     for r in costs.grid():
         m = METHOD[r["method_id"]]
@@ -696,7 +700,7 @@ def data_files():
                      r["calendar_years"] if r["calendar_years"] is not None else "", fmt(r["spread_usd"]), fmt(r["fee_usd"]),
                      fmt(r["tax_usd"]), fmt(r["known_cost_usd"]),
                      "" if r["known_cost_pct"] is None else str(q(r["known_cost_pct"], D("0.0001"))),
-                     fmt(r["rmb_debited"]), blank_flag[r["model"]], "|".join(cost_sources(m)), urls(cost_sources(m))])
+                     fmt(r["rmb_debited"]), "U21" if r["method_id"] in ("L12", "L13") else blank_flag[r["model"]], "|".join(cost_sources(m)), urls(cost_sources(m))])
     f["e347_costs.csv"] = csv_text(
         ["method_id", "amount_usd", "model", "units", "units_label", "calendar_years", "spread_usd", "fee_usd", "tax_usd",
          "known_cost_usd", "known_cost_pct", "rmb_debited", "not_included_flags", "source_ids", "source_urls"], rows)

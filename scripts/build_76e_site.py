@@ -29,6 +29,14 @@ BOARD_TODAY = {
     "cash_ask": D("6.6911"),
     "boc_middle": D("6.7191"),  # "Middle Rate" 671.91 per 100 (reference only)
 }
+BOARD_CURRENT = {
+    "date": "2026-11-11",
+    "pub": "2026/11/11 15:30:04",
+    "bid": D("6.6606"),
+    "ask": D("6.6886"),
+    "cash_ask": D("6.6886"),
+    "boc_middle": D("6.7191"),
+}
 BOARD_BASE = {
     "date": "2026-11-10",
     "pub": "2026/11/10 17:39:58",
@@ -92,12 +100,11 @@ def published():
 
 PUB = published()
 
-# The same convention applied to the 10 November board must reproduce the
-# published file exactly. If it does not, stop: the published figure is not
-# explained by the convention and must not be re-published.
+# Reconcile the current canonical file against its own current board. The archived
+# 10 November comparison below is computed independently from BOARD_BASE.
 for amt in AMOUNTS:
     for mid_id, fn in (("L01", l01), ("L03", l03)):
-        got = q(fn(amt, BOARD_BASE))
+        got = q(fn(amt, BOARD_CURRENT))
         if got != PUB[(mid_id, amt)]:
             raise SystemExit(
                 "reconciliation failed: %s %d published %s, recomputed %s"
@@ -117,9 +124,9 @@ with open(os.path.join(ROOT, "data", "76e_costs.csv"), "w", newline="") as fh:
         sp = q(spread_usd(amt, BOARD_TODAY))
         fee = q(wire_usd(amt, BOARD_TODAY))
         t1 = q(l01(amt, BOARD_TODAY))
-        p1 = PUB[("L01", amt)]
+        p1 = q(l01(amt, BOARD_BASE))
         t3 = q(l03(amt, BOARD_TODAY))
-        p3 = PUB[("L03", amt)]
+        p3 = q(l03(amt, BOARD_BASE))
         w.writerow([amt, sp, fee, t1, p1, q(t1 - p1), (t1 / D(amt) * 100).quantize(D("0.0001")),
                     t3, p3, q(t3 - p3),
                     q(fx_gain(amt, BOARD_TODAY, "2024")), q(fx_gain(amt, BOARD_BASE, "2024"))])
@@ -304,9 +311,9 @@ rate_delta_pct = ((BOARD_TODAY["ask"] - BOARD_BASE["ask"]) / BOARD_BASE["ask"] *
 rows = []
 for amt in AMOUNTS:
     t1 = q(l01(amt, BOARD_TODAY))
-    p1 = PUB[("L01", amt)]
+    p1 = q(l01(amt, BOARD_BASE))
     t3 = q(l03(amt, BOARD_TODAY))
-    p3 = PUB[("L03", amt)]
+    p3 = q(l03(amt, BOARD_BASE))
     rows.append(
         '<tr><td data-label="Amount (USD)"><span class="id">{a}</span></td>'
         '<td data-label="Bank purchase + wire (L01)">{t1}</td>'
@@ -457,8 +464,8 @@ Regenerate with <code>python3 scripts/build_76e_site.py</code>; gate with <code>
 </html>
 """.format(
     ask="{:.4f}".format(BOARD_TODAY["ask"]),
-    t10=money(today10), p10=money(PUB[("L01", 10000)]), d10=money(today10 - PUB[("L01", 10000)]),
-    t400=money(today400), p400=money(PUB[("L01", 400000)]), d400=money(today400 - PUB[("L01", 400000)]),
+    t10=money(today10), p10=money(q(l01(10000, BOARD_BASE))), d10=money(today10 - q(l01(10000, BOARD_BASE))),
+    t400=money(today400), p400=money(q(l01(400000, BOARD_BASE))), d400=money(today400 - q(l01(400000, BOARD_BASE))),
     g400="{:,}".format(int(gain400_today.to_integral_value(rounding=ROUND_HALF_UP))),
     gb400="{:,}".format(int(gain400_base.to_integral_value(rounding=ROUND_HALF_UP))),
     rate_pct=rate_delta_pct,
