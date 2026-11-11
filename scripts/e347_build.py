@@ -30,14 +30,12 @@ METHOD = {m["id"]: m for m in data.METHODS}
 FLAG = {f[0]: f for f in data.FLAGS}
 NAV = [("index", "Home"), ("decisions", "Decide"), ("methods", "Methods"), ("costs", "Costs"),
        ("steps", "Steps"), ("tax", "Tax"), ("flagged", "Flagged"), ("sources", "Sources"),
-       ("archive", "Archive"),
-       # Integration (session arena/f9a30493-china3): honors M5F19-REQ-01 and 76E-REQ-01.
-       # Integration (session arena/495be42b-china3): honors F52-REQ-01, B9B3-REQ-01, G8D8-REQ-01,
-       # E0F4-REQ-01, N676-REQ-01; shortens the two long labels per 6DA0-REQ-04. Additive nav
-       # entries pointing at root-level verified editions and audits.
-       ("m5f19", "M5F19"), ("76e", "76e re-check"), ("f52", "f52 checklist"),
-       ("b9b3", "b9b3 brief"), ("g8d8", "g8d8 evidence"), ("e0f4", "e0f4 audit"),
-       ("n676", "n676 brief")]
+       ("archive", "Archive")]
+# Integration (session arena/b579901a-china3, final integration): the seven root-level editions that
+# earlier integrations put in the top bar (m5f19, 76e, f52, b9b3, g8d8, e0f4, n676) are no longer
+# navigation items. Sixteen links did not fit a phone screen and buried the four pages a reader needs.
+# Every one of those pages is still published and is listed, with its session and its known problems,
+# on the Archive page. Nothing was deleted or changed; only the link in the top bar moved.
 OWN_PAGES = {"index.html"} | {f"dashboard/{k}.html" for k, _ in NAV if k != "index"}
 KEY_AMOUNTS = [D(10000), D(50000), D(100000), D(200000), D(400000)]
 
@@ -242,8 +240,10 @@ def page_costs():
     r = data.RATE
     mid = costs.mid()
     inputs = [
-        ("Bank sells you USD at", f'{r["ask"]} RMB per dollar', "Selling Rate 668.51 per 100, published " + r["board_time"], ["S01"]),
-        ("Bank buys USD at", f'{r["bid"]} RMB per dollar', "Buying Rate 665.71 per 100, same board", ["S01"]),
+        # Derived, not typed: the "per 100" strings were hardcoded from an older board and
+        # contradicted the rates used in every calculation (session arena/b579901a-china3).
+        ("Bank sells you USD at", f'{r["ask"]} RMB per dollar', f"Selling Rate {r['ask'] * 100:.2f} per 100, published " + r["board_time"], ["S01"]),
+        ("Bank buys USD at", f'{r["bid"]} RMB per dollar', f"Buying Rate {r['bid'] * 100:.2f} per 100, same board", ["S01"]),
         ("Midpoint used as the fair value", f"{mid} RMB per dollar", "Halfway between the two rates above. The spread you pay is the selling rate minus this.", ["S01"]),
         ("Exchange spread", pct((r["ask"] - mid) / r["ask"] * 100, 4), "Share of the amount lost to the spread on a one-way conversion", ["S01"]),
         ("Wire fee", "0.1%, min ¥50, max ¥260", "Bank of China personal e-banking cross-border wire", ["S02"]),
@@ -386,9 +386,10 @@ def page_tax():
         gain_rows.append((None, [usd(a, False)] + [usd(costs.fx_gain(a, y), False) for y in years] + [ctx.src(["S28", "S27", "S01"], short=False)]))
     g24 = costs.fx_gain(D(400000), "2024")
     parts.append(f"""<h2>U.S. currency gain by the year the RMB was acquired</h2>
-<p>If you sell RMB for more dollars than it cost you in dollars, the difference is a gain. The table shows that gain for each amount, taking the IRS yearly average rate as the cost. Your real cost is the rate on the day you received each RMB amount, so treat this as a scale, not your figure. The tax is your own rate times the gain; a negative number is a loss, and whether a loss is usable was not verified.</p>
+<p>If you sell RMB for more dollars than it cost you in dollars, the difference is a gain. The table shows that gain for each amount, taking the IRS yearly average rate as the cost. Your real cost is the rate on the day you received each RMB amount, so treat this as a scale, not your figure. The tax is your own rate times the gain, of the character described in row T10. The table does not say whether a loss is usable in your case; that is left open.</p>
 {table(["Dollars received today"] + [f"Acquired {y} (avg {data.RATE['irs_avg'][y]})" for y in years] + ["Source"], gain_rows, cls="num")}
-<p class="note">Example: RMB acquired at the 2024 average and sold today for $400,000 shows a gain of {usd(g24, False)}. Whether the personal-transaction rule (no gain recognised up to $200) applies is a legal judgement: <a href="flagged.html#U05">U05</a>.</p>
+<p class="note">Example: RMB acquired at the 2024 average and sold today for $400,000 shows a gain of {usd(g24, False)}. Whether the personal-transaction rule applies is a legal judgement: <a href="flagged.html#U05">U05</a>.</p>
+<p class="note">Two official averages disagree and both are shown for what they are. For 2025 the IRS page gives {data.RATE['irs_avg']['2025']} yuan per dollar and the Federal Reserve G.5A release gives 7.1875; for 2024 the figures are {data.RATE['irs_avg']['2024']} and 7.1957. The table uses the IRS figures because the IRS page is the one that speaks to reporting, and the IRS says it has no official rate and accepts any posted rate used consistently. On $400,000 the 2025 difference moves the illustrated gain by {usd(D(400000) * data.RATE['ask'] * (D(1) / data.RATE['irs_avg']['2025'] - D(1) / D('7.1875')), False)}: the Federal Reserve rate gives the smaller gain. {ctx.src(["S44", "S28"])} · the full tax working is on <a href="../df25-conversion-tax-review.html">the conversion-tax review</a>.</p>
 <h2>How to read this</h2>
 <ul class="plain">
 <li><b>If the tax was paid when the money was earned</b>, the remaining cost of the transfer is the bank's: about a quarter to half of one percent.</li>
@@ -414,7 +415,7 @@ def page_flagged():
     rows = [(fid, [f'<span class="id">{fid}</span>{esc(item)}<br><span class="pill {sev[s]}">{s}</span>',
                    esc(why), esc(close), ctx.src(src)]) for fid, s, item, why, close, src in data.FLAGS]
     irr = []
-    for r in read_irregularities():
+    for r in sorted(read_irregularities(), key=lambda r: r["id"]):
         links = f'<a href="{REPO}/blob/main/{esc(r["evidence_path"])}" rel="noopener">repository file</a>' if r["evidence_path"] else f'<a href="{REPO}/pulls" rel="noopener">repository</a>'
         if r["official_source_id"]:
             links += " " + ctx.src([r["official_source_id"]])
@@ -485,6 +486,15 @@ ARCHIVE_GROUPS = [
     (r"^deep-", "Deep research", "Known problem: R05 on the Flagged page (2004 staging rule)."),
     (r"^cost|^cross-session|^us-fx-gain", "Cost model and cross-session review", "Uses the 9 November rates (6.6919 / 6.6924)."),
     (r"^g8d8-", "G8D8 new evidence, 11 November 2026 (session 8d8b8493)", "Other banks, U.S. receiving fees, Wise and Western Union, SAFE fines; read on 11 November 2026 at the 10:25:02 board."),
+    # Requested by 3E2D-REQ-01 (session 3e2dbf57) and by the 5903 audit (session 5903db91).
+    (r"^3e2d-", "3E2D verified decision dashboard (session 3e2dbf57)", "Executive summary, pre-decision questions and discovery register, methods, a $10,000-$400,000 cost matrix at the 11 Nov 2026 20:50 board, step-by-step playbooks, penalties and a Flagged for Review page."),
+    (r"^5903-", "5903 independent audit of the published figures (session 5903db91)", "Claim-by-claim audit of the live pages with official links. It independently confirmed the two defects corrected here as R16 and R17."),
+    # Session arena/3482441c-china3 (c348) works in its own namespace and asked the integrator to file
+    # its pages rather than edit this generator itself. The group is declared here so that its pages
+    # are listed as soon as they land; with no c348-*.html present it renders nothing.
+    (r"^c348-", "Reconciliation of the fifteen editions (session 3482441c)", "Independent re-quote of the load-bearing official pages and a reconciliation of every headline figure published by the earlier editions."),
+    # Must precede the unanchored "review|audit" rule: the df25 file name contains "review".
+    (r"^df25-", "U.S. tax on the conversion itself (session df256bc2)", "Character of the currency gain, basis rules, loss rule and a $10,000-$400,000 tax ladder; read on 11 November 2026. Source of the corrected T10 wording on the Tax page."),
     (r"review|audit", "Independent reviews", "Other sessions' findings, kept as published."),
     (r"^docs/", "First docs site", "Earliest pass; not updated since."),
     (r".", "First editorial pages", "Earliest pass; partly corrected later."),
@@ -617,8 +627,8 @@ def page_index():
 <p>{usd(c10["known_cost_usd"])} on $10,000 ({pct(c10["known_cost_pct"])}) and {usd(c400["known_cost_usd"])} on $400,000 ({pct(c400["known_cost_pct"])}) at Bank of China's published rate and fee. Actual intermediary deductions and the receiving account's fee are not included; Bank of America says its incoming wire may cost $15.</p>
 <p class="src">{ctx.src(["S01", "S02", "S41"])} · <a href="{ctx.page("costs")}">Cost tables</a></p></div>
 <div class="card"><h3>3. The U.S. side can cost more than the bank</h3>
-<p>Selling RMB is a currency sale under U.S. tax law. RMB acquired at the 2024 average rate would show a gain of about {pct(g24p, 1)} today, or {usd(g24, False)} on $400,000, taxed at your ordinary rate unless the personal-transaction rule applies. Each missed report has its own penalty: up to $16,536 for an FBAR, $10,000 for Form 8938, and 5% of a gift per month for Form 3520.</p>
-<p class="src">{ctx.src(["S27", "S28", "S31", "S29", "S33"])} · <a href="{ctx.page("tax")}#T10">Currency gain</a></p></div>
+<p>Selling RMB is a currency sale under U.S. tax law. RMB acquired at the 2024 average rate would show a gain of about {pct(g24p, 1)} today, or {usd(g24, False)} on $400,000. The gain is ordinary income if the money is investment or business money; if it is a personal transaction, § 988(e) leaves it out of income up to $200 and the IRS says to report a larger personal gain as a capital gain. Each missed report has its own penalty: up to $16,536 for an FBAR, $10,000 for Form 8938, and 5% of a gift per month for Form 3520.</p>
+<p class="src">{ctx.src(["S27", "S28", "S43", "S31", "S29", "S33"])} · <a href="{ctx.page("tax")}#T10">Currency gain</a></p></div>
 <div class="card"><h3>4. The route depends on where the money came from</h3>
 <p>A U.S. passport holder does not get the $50,000 a year that Chinese citizens convert on ID alone. Each lawful route is tied to a kind of money: income earned in China, a home sale, an inheritance, or money you brought in yourself. Borrowing relatives' quotas, private swaps and crypto are prohibited, with fines of up to 30% of the amount and more in serious cases.</p>
 <p class="src">{ctx.src(["S05", "S06", "S10", "S21"])} · <a href="{ctx.page("methods")}">All routes</a></p></div>
