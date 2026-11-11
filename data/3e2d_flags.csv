@@ -1,0 +1,13 @@
+id,item,value,why,suggestion,sources
+F01,Account classification (jingwai vs jingnei geren),(blank),Two instruments define categories differently; bank's written classification not in repo.,Ask bank for written classification + ID on file.,T18|T04|T07
+F02,The quoted 'considerable tax' + reconversion slip,(blank),No tax name/basis/rate/base in repo; slip not in repo.,Ask bank to itemise quote in writing; locate original exchange slip.,T04|T09
+F03,Chinese tax arrears / late surcharge rate / look-back,(blank),Unpaid tax pursued (T16) but surcharge rate/period not verified in this session.,Ask tax office for arrears + surcharge calculation in writing.,T16|T25
+F04,Convenience-amount eligibility (US passport alone),(blank),US passport alone insufficient (T05); green-card/domestic status unknown.,Confirm citizenship/green-card/hukou/residence in writing.,T05|T07
+F05,Cross-border RMB price (M08) + s.988 character of savings balance,(blank),No published fee/FX for M08; whether savings balance is personal vs investment money not settled.,Ask bank for written M08 offer; obtain tax advice on character.,T24|T31
+F06,Dividend treaty eligibility (10% vs 20%) + US marginal rate,(blank),Beneficial ownership/residence and personal US rate unknown; no rate assumed.,Confirm treaty eligibility + marginal rate with adviser.,T27|T25
+F07,Intermediary / receiving deductions + ATM FX rate,(blank),Intermediary deductions not in BOC tariff; UnionPay ATM FX rate not published.,Get dated quotes; confirm intermediary chain.,T02|T03
+F08,Wise fee / FX rate (M12),(blank),Fee/FX shown only in-app; not published on help page.,Check in-app quote for exact amount/date.,T28
+F09,Western Union fee / FX rate (M13),(blank),Fee/FX not published on send-money page.,Get partner-bank quote before sending.,T29
+F10,Gift / undocumented origin route (M14),(blank),No verified lawful route in this research.,Obtain bank's written determination; do not invent purpose.,T04|T17
+F11,"Excerpt-level sources (T08, T10, T11, T14-T16, T18, T21-T24, T31, T33, T34)",(see Sources page),"Official page text via search excerpt or contents read, not opened in full in this session.",Open each URL in full before acting; upgrade to direct.,T08|T10|T11|T14|T15|T16|T18|T21|T22|T23|T24|T31|T33|T34
+F12,Execution-day FX rate + sending-bank discounts,(blank),Board is a dated snapshot; tariff notes allow agreements/discounts/local differences.,Re-price on execution day; get bank's written quote.,T01|T02

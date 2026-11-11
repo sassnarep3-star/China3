@@ -1,0 +1,16 @@
+id,regime,violation,ceiling,sources,flag
+P01,China (Order 532 Art. 39),Flight of FX (transferring FX abroad in breach / deceitful capital transfer),Fine up to 30%; serious 30%-100%; criminal liability,T17,
+P02,China (Order 532 Art. 40),False/invalid documents to buy FX (illegal FX arbitrage),Fine up to 30%; serious 30%-100%; criminal liability,T17,
+P03,China (Order 532 Art. 42),Carrying FX across border in breach of rules,Warning; fine up to 20%,T17,
+P04,China (Order 532 Art. 45),Private buying/selling of FX,"Warning, confiscation, fine up to 30%; serious 30%-100%; criminal liability",T17,
+P05,China (Order 532 Art. 48),Untrue documents / reporting breaches (individuals),"Warning; fine up to CNY 50,000",T17,
+P06,China (SAFE Art. 62),Borrowing others' convenience amount / evading authenticity rules,Watchlist: that year + 2 years,T10,F11
+P07,US FBAR (31 U.S.C. 5321),Willful failure to file FBAR,"Greater of USD 165,353 (adjusted) or 50% of balance",T32,
+P08,US FBAR (FinCEN),Filing duty,"File if aggregate foreign accounts > USD 10,000 at any time in year",T33,F11
+P09,US Form 8938 (IRS),Filing duty (US-resident single),"File if > USD 50,000 year-end or > USD 75,000 at any time",T34,F11
+P10,US s.988 / Pub. 525,Currency gain on conversion,Personal gain <=USD 200 ignored; >USD 200 capital gain. Investment/business: ordinary (see Tax page),T31,F05
+P11,PRC IIT (Art. 3),Dividends / property gains / rent / interest,Flat 20%,T25,
+P12,PRC IIT (Treaty Art. 9),Dividends to eligible beneficial owner,Cap 10% of gross,T27,F06
+P13,US CBP / FinCEN 105,"Carrying >USD 10,000 without reporting",Seizure/forfeiture; civil/criminal penalties,T35,
+P14,China (PBOC 2026 No. 42),Fiat/virtual-currency exchange in China,Strictly prohibited; banned,T23,F11
+P15,China (SAFE),Private swaps / underground banks,Unlawful channel (see P04 ceilings),T21,F11
