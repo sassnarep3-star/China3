@@ -1,0 +1,16 @@
+method_id,name,model,cost_10k,cost_50k,cost_100k,cost_200k,cost_400k,units_400k,years_400k,sources,flag
+M01,Documented current-account income (salary/fees) — buy USD + one wire,fx_wire,53.37,165.99,270.67,480.03,898.75,1,1,T01|T02|T04,
+M02,Reconvert unused CNY from own FX exchange (24 months) + wire,fx_wire,53.37,165.99,270.67,480.03,898.75,1,1,T01|T02|T09,F02
+M03,"Already foreign currency — wire only, no conversion",wire_only,32.43,61.31,61.31,61.31,61.31,1,1,T02|T08,
+M04,Chinese home-sale proceeds — conversion + wire,fx_wire,53.37,165.99,270.67,480.03,898.75,1,1,T01|T02|T15,F03
+M05,Inheritance transfer — conversion + wire,fx_wire,53.37,165.99,270.67,480.03,898.75,1,1,T01|T02|T12,
+M06,Emigrant property transfer — conversion + wire,fx_wire,53.37,165.99,270.67,480.03,898.75,1,1,T01|T02|T12,
+M07,"Annual convenience quota ($50k/yr, ID only) — split wires",quota,53.37,165.99,331.98,663.96,1327.93,8,8,T01|T02|T05|T06,F04
+M08,"Cross-border RMB to own offshore account, convert there",blank,,,,,,,,T24,F05
+M09,Dividend from own Chinese company — 20% statutory scenario,dividend,2047.18,10145.06,20228.80,40396.29,80731.26,1,1,T01|T02|T25|T27,F06
+M09T,Dividend — 10% treaty-cap scenario (beneficial owner),dividend_treaty,1050.27,5155.52,10249.73,20438.16,40815.00,1,1,T01|T02|T27,F06
+M10,Overseas ATM withdrawals (UnionPay card),atm,112.56,561.01,1120.23,2240.46,4480.93,268,27,T03|T19,F07
+M11,Carry lawfully purchased FX banknotes abroad,cash,20.94,104.68,209.36,418.72,837.43,80,,T01|T20,
+M12,Wise from-CNY (own account only),blank,,,,,,,,T28,F08
+M13,Western Union China (cash pickup only),blank,,,,,,,,T29,F09
+M14,Gift / undocumented origin — no verified route,none,,,,,,,,,,,,,,,,T04,F10
