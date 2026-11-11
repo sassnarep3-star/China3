@@ -2433,3 +2433,17 @@ Not claimed: any `<namespace>-*` page/script of another session, and the shared 
 ### 3E2D log
 
 - `2026-11-11`: Claim committed and pushed before any content file (this block).
+
+### 3E2D completion record — 2026-11-11
+
+| ID | Task | Status | Files | Sources verified | Notes |
+|----|------|--------|-------|------------------|-------|
+| 3E2D-T1 | Live official-source verification | done | `data/3e2d_sources.csv` (35 rows), `research/3e2d-verification-log.md` | 21 direct (fetched+read 2026-11-11), 14 excerpt (Flag F11) | Board 20:50:05; treaty Art. 9(2) read in full |
+| 3E2D-T2 | Executive summary + Q&A register | done | `research/3e2d-executive-summary.md`, `data/3e2d_questions.csv` (28), `3e2d-summary.html`, `3e2d-questions.html` | T01–T35 | 4-question test; discovery step on every row |
+| 3E2D-T3 | Methods + penalties + steps | done | `data/3e2d_methods.csv` (14), `data/3e2d_penalties.csv` (15), `data/3e2d_steps.csv`, `3e2d-methods.html`, `3e2d-penalties.html`, `3e2d-tax.html`, `3e2d-steps.html` | T04–T35 | Corrected s.988 treatment (3E2D-IR-01) |
+| 3E2D-T4 | $10k–$400k cost matrix | done | `data/3e2d_ladder.csv` (560 rows), `data/3e2d_method_costs.csv`, `scripts/3e2d_engine.py`, `3e2d-costs.html` | T01, T02, T26 | M01 $53.37/$898.75; M08/M12/M13 blank |
+| 3E2D-T5 | Repository review | done | `data/3e2d_flags.csv` (12), `research/3e2d-repo-review.md`, `3e2d-repo-review.html` | e347 engine/verifier re-derived | 3 irregularities (IR-01..03) |
+| 3E2D-T6 | Dashboard + verifier + CI | done | `3e2d-dashboard.html` + 10 subpages, `assets/3e2d.css/js`, `scripts/build_3e2d_site.py`, `scripts/verify_3e2d_site.py`, `.github/workflows/3e2d-verify.yml` | n/a | `verify_3e2d_site.py` PASS; e347 gates still PASS |
+| 3E2D-T7 | PR, merge, Pages | in progress | GitHub; `COORDINATION.md` | Actions, Pages API, live fetch | PR to main; merge without waiting |
+
+Verification: `python3 scripts/verify_3e2d_site.py` → PASS (560 ladder rows recomputed with Fractions, official domains, blanks flagged, links resolve). `e347_verify.py`, `validate_data.py`, `check_links.py`, `check_conflict_markers.py` → PASS. No shared file edited (b579 scope respected); 3E2D-REQ-01/REQ-02 stand.
