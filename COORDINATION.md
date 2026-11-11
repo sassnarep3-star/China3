@@ -1449,3 +1449,34 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 - 2026-11-11: QNA.md created and committed (V2).
 - 2026-11-11: Cost-table spot-check passed (V3); e347_build.py + e347_verify.py PASS; live site confirmed serving (V4).
 - 2026-11-11: Creating PR from `arena/78c46684-china3` to `main` (V5).
+---
+
+## Session `arena/1c55025d-china3` — Full Requirements Audit & Re-verification (2026-11-11)
+
+**Branch:** `arena/1c55025d-china3` (Arena fixed: single-branch rule).  
+**Base:** `6750ddb` (`main` after PR #48, B8720152 re-verified e347 dashboard).  
+**Live site:** https://sassnarep3-star.github.io/China3/  
+**Scope note:** This session does not introduce new primary sources; it re-verifies every table row, cost ladder, and flagged item against the 35 official sources already read on 2026-11-10/11, rebuilds the dashboard, and records the requirements trace for the original brief.
+
+### Claimed tasks (arena/1c55025d-china3)
+
+| ID | Task | File scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| R1 | Repo review line-by-line, verify from official trusted sources, provide links, flag irregularities | `REPO_AUDIT.md`, `research/1c55025d-audit.md`, `COORDINATION.md` | done | arena/1c55025d-china3 | 35 official (BOC, SAFE, PBOC, STA, IRS, FinCEN, eCFR, CBP, govinfo) + BOC tariff re-read 2026-11-11 | audit + re-audit table; see research/1c55025d-audit.md §§6-7 |
+| R2 | Executive summary (important details) | `EXECUTIVE_SUMMARY.md`, `index.html`, `dashboard/*` | done | arena/1c55025d-china3 | S01,S02,S04,S05,S08,S12,S17,S25,S27,S28,S30,S31,S34 | EXECUTIVE_SUMMARY.md 5-point answer + cost at a glance; audit §1 |
+| R3 | Questions / Informations / Answers needed before decision, plus discovery suggestions | `dashboard/flagged.html`, `research/1c55025d-audit.md` | done | arena/1c55025d-china3 | U01–U19 flags each with official link | Flagged page 19 items + audit §2 Q&A table; top-3 U01/U02/U07 |
+| R4 | Conversion methods CNY→USD: list all ways, pros/cons, tax-penalty breakdown | `dashboard/methods.html`, `data/e347_methods.csv`, `research/1c55025d-audit.md` | done | arena/1c55025d-china3 | S04,S05,S08,S09,S12,S15,S18,S19,S20,S21,S23 | 11 lawful + 6 prohibited, penalties State Council Decree 532 Arts.39-45; audit §3 |
+| R5 | Cost estimation $10k→$400k in $10k steps, mobile-friendly tables, step-by-step per method | `dashboard/costs.html`, `dashboard/steps.html`, `data/e347_costs.csv`, `data/e347_fx_gain.csv` | done | arena/1c55025d-china3 | S01,S02,S03 + IRS avg S28 | 440 rows recomputed (Fraction, half-up); kpi + 6-amount + full ladder; audit §5 |
+| R6 | Site creation: clean landing + subpages by category, dashboard UI, every row has source link or flagged blank | `index.html`, `dashboard/*.html`, `dashboard/site.css`, `scripts/e347_build.py` | done | arena/1c55025d-china3 | all 35 sources | index + 7 dashboard pages, table.stack mobile, Archive 82 pages; build 15 files 0 changed |
+| R7 | Verification: every table row must have source link; if unverified leave blank+flag; never infer | `scripts/e347_verify.py`, `dashboard/flagged.html` | done | arena/1c55025d-china3 | official-domain allowlist enforced | PASS: 658 rows sourced, 380 blanks flagged, 2139 links; audit §7 |
+| R8 | PR → merge → Pages deploy verification, record PR link & merge result | GitHub PR / Pages / `COORDINATION.md` | in progress | arena/1c55025d-china3 | Pages + verification workflows | Do not merge broken site |
+
+### Rules for this session
+- Shared files (`index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`) change additively only; generated pages via `scripts/e347_build.py`.
+- No sibling files (`c3x-*`, `d646-*`, `s775-*`, `m5f19-*`, `a513-*`, `s436-*`, `deep-*`, `s119-*`, `a058-*`, `a502-*`) are edited.
+- If a file outside scope must change, log a request here instead of editing.
+
+### Log — 2026-11-11
+- 2026-11-11T claim: read COORDINATION.md (1319 lines), inspected all remote branches (`git ls-remote`, `git branch -a`), confirmed `main` at 6750ddb, wrote non-overlapping claim and pushed before touching content files.
+- 2026-11-11T audit done: `research/1c55025d-audit.md` (431 lines, R0-R10 trace, §§1-12), `REPO_AUDIT.md` re-audit (16 verifiers PASS), `scripts/e347_build.py` 15 files 0 changed, `scripts/e347_verify.py` PASS; R1-R7 marked done, R8 PR pending.
+- 2026-11-11T pre-PR checks: `validate_data OK`, `check_links OK`, `verify_dashboard PASS`, `verify_76e PASS`, `verify_m5f19 PASS` (claim-aware J), `verify_c3x PASS`, `verify_d646 PASS`, `verify_s775 PASS`, `verify_s436 PASS`, `verify_c5bf PASS`, `verify_final_integration PASS`, `test_costs PASS`, `verify_deep PASS`; no broken links; no hallucination (every dollar recomputed from S01/S02 fractions).
