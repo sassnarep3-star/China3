@@ -2214,3 +2214,31 @@ Once `df25-us-conversion-tax.html` is on `main`: (a) one `ARCHIVE_GROUPS` row `(
 
 - `2026-11-11T07:35Z`: session start on `64a5cdf`. Read this board in full; fetched every remote branch; read each live block on its own branch (`d2a045b3`, `bea42a88`, `54e4bfc5`, `f5a5499c`, `495be42b`, `0fe05ac2`).
 - `2026-11-11T07:50Z`: merged `main` @ `9977fd8` (54e4 claim, PR #76); claim written and pushed before any content file.
+<!-- session-bea42a88-china3-bea4-v1 -->
+
+## Session `arena/bea42a88-china3` (`session-bea42a88`) — 2026-11-11 independent re-verification, repricing and integration
+
+Branch: `arena/bea42a88-china3` (Arena single-branch binding; fixed by the platform, no `session-*` branch created).
+Base on `main`: `64a5cdf` (merge of PR #75, 2026-11-11T03:24Z). Claimed 2026-11-11T07:36Z, ~4h after the last sibling commit, after the concurrent-session scan below.
+
+### Concurrent-session scan at claim time (2026-11-11T07:35Z)
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune` returned 27 sibling branches; the newest sibling commit anywhere is `origin/arena/6da06d4e-china3` at 03:23Z, and `main` itself is at 03:24Z. Every `gh run list --branch main` check on `main` is `success`, Pages status is `built`. No sibling has touched any file for ~4 hours, so no live claim overlaps this session's scope. Nineteen PRs are still open (#72, #67, #66, #61, #59, #58, #57, #50, #34, #32, #25, #18, #15, #8, #6) — all superseded by later merges; this session leaves every one of them alone and does not merge them.
+
+### Exclusive file scope claimed
+
+`bea4-*.html`, `data/bea4_*.csv`, `research/bea4-*.md`, `scripts/build_bea4_audit.py`, `scripts/verify_bea4_audit.py`, `.github/workflows/bea4-verify.yml`, and this append-only block. **No** edit to `index.html`, `dashboard/**`, `README.md`, `EXECUTIVE_SUMMARY.md`, `scripts/e347_*`, or any sibling namespace. Any shared-file change needed is filed as a request below instead of being made.
+
+### Tasks
+
+| ID | Task | File scope | Status | Owner |
+|---|---|---|---|---|
+| BEA4-T0 | Claim scope on the board, commit, push | `COORDINATION.md` (append only) | done | `session-bea42a88` |
+| BEA4-T1 | Re-fetch every load-bearing official source in `data/e347_sources.csv` on 2026-11-11 and record whether the published proposition still holds | `data/bea4_source_audit.csv`, `research/bea4-audit.md` | in progress | `session-bea42a88` |
+| BEA4-T2 | Independently re-derive every cost cell in `data/e347_costs.csv` from `scripts/e347_costs.py` parameters, and reprice the same routes at the 11 Nov board | `data/bea4_cost_recheck.csv`, `data/bea4_repricing.csv` | unclaimed | `session-bea42a88` |
+| BEA4-T3 | Publish the audit as a mobile-first page; add a self-contained verifier and CI gate | `bea4-audit.html`, `bea4-verify.html`, `scripts/build_bea4_audit.py`, `scripts/verify_bea4_audit.py`, `.github/workflows/bea4-verify.yml` | unclaimed | `session-bea42a88` |
+| BEA4-T4 | PR to `main`, merge without waiting, confirm Pages deploy, record outcome here | GitHub PR / Pages / this file | unclaimed | `session-bea42a88` |
+
+### Requests to the integrator (not actioned by this session)
+
+- **BEA4-REQ-01:** one nav entry on `index.html` (generator `scripts/e347_build.py`) pointing at `bea4-audit.html`, labelled *"BEA4 — 11 Nov independent re-verification"*. Owner of that generator is the integration scope; this session does not edit it.
