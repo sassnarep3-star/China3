@@ -1971,3 +1971,43 @@ Base on `main`: `15a79860a1adeb7bbc35ef13eecc6ec4febf2f59` (merge of PR #47, the
 - `2026-11-11T03:1xZ`: FIN-T5 done — full validator suite green on the edited tree: all 14 inherited validators + `e347_verify.py` PASS (440 cost rows recomputed, 8 pages, 658 table rows sourced, 380 blanks flagged, 2147 links resolved); `check_links.py` OK (9 pages, 27 external URLs, all internal links and anchors resolve); `git diff --check` clean.
 - `2026-11-11T03:4xZ`: **Rebase onto `origin/main` (`8ba1616`, PR #51 / `76e`).** `main` had advanced while this session worked: the `76e` session merged PR #48 (resolving IR-FIN-01), fixed the `m5f19` check J (IR-FIN-02), added `76e-verification.html`, and regenerated `dashboard/archive.html` (82 pages). Two conflicts, both resolved without discarding: `COORDINATION.md` append-only (both the `76e` block and this session's FIN block kept verbatim, all markers removed); `dashboard/archive.html` resolved by running the generator `scripts/e347_build.py` (not by hand) — the regenerated archive now lists the `76e` page and the 9 `m5f19` pages in their own group. `index.html` and `scripts/e347_build.py` applied cleanly. After rebase: all 16 validators PASS (incl. `verify_76e`, `verify_m5f19_site`), zero conflict markers. IR-FIN-01 and IR-FIN-02 closed by the `76e` session; IR-FIN-04 (the `5a59` overlap) logged above.
 - `2026-11-11T04:0xZ`: **Second rebase onto `origin/main` (`1638a47`).** `main` advanced again with PR #52 (`QNA.md` — the questions/answers register the brief asked for), PR #53 (`b2d` — the `Decide` decision-readiness page, 36 questions, added to `NAV` and `page_index()`), and PR #54 (`1c55025d` — line-by-line audit, requirements trace). The only conflict was the append-only `COORDINATION.md` (markers removed, both blocks kept). `scripts/e347_build.py` now contains **both** the `b2d` `Decide` page and this session's `^m5f19` archive group + "Parallel editions & independent audits" section; regenerating produced **0 changed files** (the rebased HTML was already consistent). After rebase: all 17 validators PASS (incl. `verify_b2d_decisions`), working tree clean, zero conflict markers.
+
+### N676 — PR, merge and Pages record (2026-11-11)
+
+**N676-T8: done.**
+
+- **PR:** <https://github.com/sassnarep3-star/China3/pull/70> — `arena/676d2a67-china3` → `main`.
+- **Merged:** `2026-11-11T03:06:06Z`, merge commit `6eceb7ceca`, merged by `sassnarep3-star`.
+  `gh pr view 70` → `state=MERGED`.
+- **Pages:** `pages-build-deployment` run `42950472206` **success** and
+  `Deploy static guide to GitHub Pages` run `42950472798` **success**; Pages API
+  `status=built`, `source=main:/`, <https://sassnarep3-star.github.io/China3/>.
+  (`/pages/deployments` 404s on this repository because `build_type` is `legacy`, which is
+  expected and matches the note recorded by earlier sessions.)
+- **Live fetch verified:** `n676-summary.html` and `n676-costs.html` both fetched from the
+  published URL and returned the full content, the correct KPI figures ($53.42 / $901.20 / $61.28 /
+  $27,703) and a source link on every table row.
+- **Entry point:** <https://sassnarep3-star.github.io/China3/n676-summary.html>
+
+**Two merge conflicts, both resolved without discarding either side:**
+
+1. `COORDINATION.md` — `main` had advanced to `b10679d` (PR #69, session `4bfb6552`) while this
+   branch was open, and both sides had appended at the tail. Resolved by keeping **both** blocks
+   verbatim: the 377-line block already published on `main` first, then this session's 113-line
+   block. No content dropped, no marker left (the repository's `No merge-conflict markers in
+   tracked files` check passes).
+2. `dashboard/archive.html` — resolved by taking `main`'s version and then **running the generator**
+   (`scripts/e347_build.py`), never by hand-editing. The archive now lists 103 pages including the
+   eight `n676-*` pages.
+
+**Merge retries.** `main` moved three times while PR #70 was open (PRs #69, #55, and one more),
+so `gh pr merge` was refused twice with *"not mergeable"*. Each time `origin/main` was fetched and
+merged into the branch, conflicts resolved as above, all nine verifiers re-run on the merged tree
+(all PASS), and the push retried. The third attempt merged. Nothing was force-pushed and no
+sibling's work was reverted.
+
+**Verification on the final merged tree, immediately before the merge:** `e347_verify` PASS (440
+cost rows, 719 sourced table rows), `verify_m5f19_site` PASS (10 checks), `verify_76e` PASS,
+`verify_dashboard` PASS, `verify_final_integration` PASS, `verify_cost_tables` PASS,
+`validate_data` OK, `check_links` OK, `n676_verify` PASS (12 checks). All 14 branch workflows green,
+including `No merge-conflict markers in tracked files` and `Merge safety`.
