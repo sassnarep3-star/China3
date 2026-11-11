@@ -377,7 +377,7 @@ def page_tax():
 <h2>How to read this</h2>
 <ul class="plain">
 <li><b>If the tax was paid when the money was earned</b>, the remaining cost of the transfer is the bank's: about a quarter to half of one percent.</li>
-<li><b>If Chinese tax was never paid</b>, that is the large number, and it is owed whether or not the money moves. The bank will not accept the transfer without tax evidence.</li>
+<li><b>If Chinese tax was never paid</b>, that is the large number, and it is owed whether or not the money moves. The bank will not accept the transfer without tax evidence. Late tax also carries a daily surcharge and a possible fine: see <a href="../6da0-settle-up.html">what settling up costs</a>.</li>
 <li><b>On the U.S. side</b>, income belongs on the return for the year it was earned, with credit for Chinese tax paid. The transfer adds a possible currency gain and the reporting forms.</li>
 <li><b>The prohibited routes</b> cost far more than any tax here: fines start at up to 30% of the amount.</li>
 </ul>""")
@@ -451,6 +451,8 @@ def page_sources():
 # ------------------------------------------------------------------------- archive
 ARCHIVE_GROUPS = [
     (r"^legacy-index\.html$|^verify-2026\.html$", "Previous landing page", "Long single page; superseded by this dashboard."),
+    # Session arena/6da06d4e-china3: one page, linked from the Tax page ("If Chinese tax was never paid").
+    (r"^6da0-", "Unpaid tax: what settling up costs (session 6da06d4e)", "Surcharge, fines, look-back periods, what the U.S. credits back and the U.S. penalty by procedure; read on 11 November 2026."),
     (r"^c3x-", "C3X edition (session 2c8d441e)", "Independent pass on the same 17:39:58 board; its bank-cost figures match this dashboard."),
     (r"^a513", "A513 answer page (session 5130fbc0)", "Independent pass on the same board; figures match."),
     (r"^e8b7-", "E8B7 edition (session e8b70ef3)", ""),
