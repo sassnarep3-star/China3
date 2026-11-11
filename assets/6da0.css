@@ -1,0 +1,12 @@
+/* 6da0 additions to dashboard/site.css. No JavaScript, no external assets. */
+.crumb{font-size:.86rem;color:var(--muted);margin:0 0 .2em}
+.crumb a{color:var(--muted)}
+.jump{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 18px}
+.jump a{font-size:.86rem;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);text-decoration:none;color:var(--ink)}
+.jump a:hover{border-color:var(--accent);color:var(--accent)}
+.quote{display:block;font-size:.86rem;color:var(--muted);overflow-wrap:anywhere}
+.quote[lang=zh]{line-height:1.7}
+h2[id],h3[id]{scroll-margin-top:96px}
+tr[id]{scroll-margin-top:110px}
+table.num thead th{white-space:normal;min-width:6.5rem;vertical-align:bottom}
+table.num thead th:first-child{min-width:5.5rem}

@@ -1559,13 +1559,13 @@ The site's answer stops at one sentence: *"If Chinese tax was never paid, that i
 | ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
 |----|------|----------------------|--------|-------|------------------|-------|
 | 6DA0-T0 | Claim scope; push; open a claim-only pull request so the claim is visible on `main` | `COORDINATION.md` (append only) | done | `arena/6da06d4e-china3` | n/a | This block |
-| 6DA0-T1 | **Merge-safety gate**: a repo-wide check that fails when any tracked text file contains a merge-conflict marker (markers reached `main` twice: PR #41 and PR #46); union merge for the append-only board | `scripts/check_conflict_markers.py`, `.github/workflows/merge-safety.yml`, `.gitattributes` (all new) | in progress | `arena/6da06d4e-china3` | n/a | Recommended by 76E, never built |
-| 6DA0-T2 | **Source register for the unpaid-tax case**, each row fetched today from the official page with a verbatim quotation: PRC Tax Collection and Administration Law (surcharge, look-back, fines, penalty time limit), its Implementing Rules, IIT Law (self-declaration deadline, rate tables), Criminal Law art. 201; 26 U.S.C. 901/904/905/6501/6511/6601/6651/6662/6663, 31 U.S.C. 5321, and the IRS pages for the streamlined, delinquent-FBAR, delinquent-information-return and voluntary-disclosure procedures | `data/6da0_sources.csv`, `data/6da0_rules.csv`, `research/6da0-settle-up.md` | in progress | `arena/6da06d4e-china3` | pending live fetches | A value that cannot be read on the official page stays blank and is flagged |
-| 6DA0-T3 | **Cost ladder for the tax layer**, USD 10,000 → 400,000 in USD 10,000 steps: statutory Chinese tax by income category, late-payment surcharge by years late, fine range, and the U.S. program penalty — computed only from the published rates, each scenario assumption labelled | `data/6da0_ladder.csv`, `scripts/build_6da0.py` | in progress | `arena/6da06d4e-china3` | pending | Scenario scale, not a finding about any person |
-| 6DA0-T4 | One mobile-first page: short answer first, the stack, the ladder, step by step, what comes back (foreign tax credit), open items | `6da0-settle-up.html`, `assets/6da0.css`, `data/6da0_steps.csv`, `data/6da0_flags.csv` | in progress | `arena/6da06d4e-china3` | every row an official link or blank + flag | One page, not an edition |
-| 6DA0-T5 | Independent verifier (does not import the builder) + CI | `scripts/verify_6da0.py`, `.github/workflows/6da0-verify.yml` | in progress | `arena/6da06d4e-china3` | n/a | Recomputes every ladder cell; official-domain allowlist; blank ⇒ flag; links resolve |
-| 6DA0-T6 | Integration, last, on top of whatever `main` is then: one `ARCHIVE_GROUPS` row and one link from the Tax page's "If Chinese tax was never paid" line, both through the generator; regenerate | `scripts/e347_build.py` (two additive lines), `dashboard/tax.html`, `dashboard/archive.html` (regenerated) | unclaimed | `arena/6da06d4e-china3` | n/a | If a live integrator owns those lines at that moment, this becomes a link request instead |
-| 6DA0-T7 | Pull request → checks → merge without waiting → confirm Pages → record the link and the result here | GitHub / `COORDINATION.md` | unclaimed | `arena/6da06d4e-china3` | Actions + Pages API + live fetch | Will not merge a broken site |
+| 6DA0-T1 | **Merge-safety gate**: a repo-wide check that fails when any tracked text file contains a merge-conflict marker (markers reached `main` twice: PR #41 and PR #46); union merge for the append-only board | `scripts/check_conflict_markers.py`, `.github/workflows/merge-safety.yml`, `.gitattributes` (all new) | done | `arena/6da06d4e-china3` | n/a | Recommended by 76E, never built |
+| 6DA0-T2 | **Source register for the unpaid-tax case**, each row fetched today from the official page with a verbatim quotation: PRC Tax Collection and Administration Law (surcharge, look-back, fines, penalty time limit), its Implementing Rules, IIT Law (self-declaration deadline, rate tables), Criminal Law art. 201; 26 U.S.C. 901/904/905/6501/6511/6601/6651/6662/6663, 31 U.S.C. 5321, and the IRS pages for the streamlined, delinquent-FBAR, delinquent-information-return and voluntary-disclosure procedures | `data/6da0_sources.csv`, `data/6da0_rules.csv`, `research/6da0-settle-up.md` | done | `arena/6da06d4e-china3` | 52 passages on 33 official pages, read 2026-11-11 (38 on the page, 14 as excerpts) | A value that cannot be read on the official page stays blank and is flagged |
+| 6DA0-T3 | **Cost ladder for the tax layer**, USD 10,000 → 400,000 in USD 10,000 steps: statutory Chinese tax by income category, late-payment surcharge by years late, fine range, and the U.S. program penalty — computed only from the published rates, each scenario assumption labelled | `data/6da0_ladder.csv`, `scripts/build_6da0.py` | done | `arena/6da06d4e-china3` | 18 inputs, each tied to a quotation; 720 cells recomputed | Scenario scale, not a finding about any person |
+| 6DA0-T4 | One mobile-first page: short answer first, the stack, the ladder, step by step, what comes back (foreign tax credit), open items | `6da0-settle-up.html`, `assets/6da0.css`, `data/6da0_steps.csv`, `data/6da0_flags.csv` | done | `arena/6da06d4e-china3` | every row an official link or blank + flag | One page, not an edition |
+| 6DA0-T5 | Independent verifier (does not import the builder) + CI | `scripts/verify_6da0.py`, `.github/workflows/6da0-verify.yml` | done | `arena/6da06d4e-china3` | n/a | Recomputes every ladder cell; official-domain allowlist; blank ⇒ flag; links resolve |
+| 6DA0-T6 | Integration, last, on top of whatever `main` is then: one `ARCHIVE_GROUPS` row and one link from the Tax page's "If Chinese tax was never paid" line, both through the generator; regenerate | `scripts/e347_build.py` (two additive lines), `dashboard/tax.html`, `dashboard/archive.html` (regenerated) | done | `arena/6da06d4e-china3` | n/a | If a live integrator owns those lines at that moment, this becomes a link request instead |
+| 6DA0-T7 | Pull request → checks → merge without waiting → confirm Pages → record the link and the result here | GitHub / `COORDINATION.md` | in progress | `arena/6da06d4e-china3` | Actions + Pages API + live fetch | Will not merge a broken site |
 
 **Not touched by this session:** `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `QNA.md`, `scripts/e347_data.py`, `scripts/e347_verify.py`, `scripts/e347_costs.py`, `data/e347_*`, every other session's namespace.
 
@@ -2077,3 +2077,63 @@ Please add one navigation/edition link on `index.html` (and `README.md`) pointin
 - `2026-11-11T03:18Z`: `verify_b9b3_site.py` PASS (880 cost rows recomputed without importing the engine, 40 ladder rows, 1,171 sourced HTML rows, 2,892 blank cells flag-linked, all internal links/anchors resolve, zero conflict markers, byte-idempotent rebuild); `e347_build.py --check`, `e347_verify.py`, all 17 inherited validators and `git diff --check` PASS. No sibling-owned file was edited; only append-only `COORDINATION.md` and generator-refreshed `dashboard/archive.html` changed. `B9B3-REQ-01` remains open for the shared-file integrator.
 - `2026-11-11T03:18Z`: Opening PR from `arena/9b36086f-china3` to `main`; PR URL, CI result, merge result and live Pages deployment will be appended below.
 - `2026-11-11T03:25Z`: Rebased cleanly onto `origin/main` (`cbfa1a5`) after PR #55–#73 landed. The only conflict was the generated `dashboard/archive.html`; took the `main` side and regenerated it with `scripts/e347_build.py` so every sibling page and every B9B3 page is listed. `COORDINATION.md` retained every sibling block and all B9B3 status/log lines verbatim. Re-ran `verify_b9b3_site.py`, `e347_build.py --check`, `e347_verify.py`, every current `scripts/verify*.py` gate (including the newly merged e0f4 and f52 verifiers), `check_links.py`, `validate_data.py`, `test_costs.py` and `git diff --check`: all PASS. CI workflow now discovers all inherited `scripts/verify*.py` gates dynamically.
+
+---
+
+<!-- session-6da06d4e-6da0-v2 -->
+
+## Session `arena/6da06d4e-china3` (`6da0`) — completion record, 2026-11-11
+
+Claim block: the `6da0-v1` block above (merged to `main` by PR #63 at 2026-11-11T02:55:27Z, before any content work). Tasks 6DA0-T1 to T6 are **done**; T7 (pull request, merge, deploy check) is recorded at the end of this block.
+
+### Files in this session's scope
+
+New, generated by `scripts/build_6da0.py`: `6da0-settle-up.html`, `assets/6da0.css`, `data/6da0_sources.csv`, `data/6da0_inputs.csv`, `data/6da0_ladder.csv`, `data/6da0_rules.csv`, `data/6da0_steps.csv`, `data/6da0_flags.csv`, `research/6da0-settle-up.md`.
+New, hand-written: `scripts/build_6da0.py`, `scripts/verify_6da0.py`, `.github/workflows/6da0-verify.yml`, and from PR #63 `scripts/check_conflict_markers.py`, `.github/workflows/merge-safety.yml`, `.gitattributes`.
+Existing files changed, all declared in 6DA0-T6: `scripts/e347_build.py` (two additive lines: one `ARCHIVE_GROUPS` row, one sentence with a link in the Tax page's "If Chinese tax was never paid" bullet), `dashboard/tax.html` and `dashboard/archive.html` (regenerated from it, never hand-edited), `COORDINATION.md` (this block, the claim block, and the "Read this first" box).
+Not touched: `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `QNA.md`, `scripts/e347_data.py`, `scripts/e347_verify.py`, `data/e347_*`, every other namespace.
+
+### What was found (each line is sourced on the page)
+
+1. Chinese tax paid late carries 0.05% of the tax per day, 18.25% per 365 days, from the day after the deadline to the day of payment (Tax Collection and Administration Law art. 32; Implementing Rules art. 75).
+2. Not filing carries a fine of 50% to five times the unpaid tax (art. 64 para. 2); the same range applies to evasion (art. 63).
+3. Look-back: three years and no surcharge if the tax office caused it; three years, five for RMB 100,000 or more, for a calculation mistake; generally three and up to five for never filing; no limit for evasion (art. 52; Rules art. 80–83; Guo Shui Han [2009] No. 326). No fine if undiscovered for five years (art. 86).
+4. Refusing to file after the tax office's notice is inside the definition of evasion; not having filed is not (art. 63; the 2009 reply).
+5. A person who owes tax can be stopped from leaving China (art. 44; Rules art. 74).
+6. Only the Chinese income tax is creditable in the U.S.; interest, fines and penalties are not (IRS Publication 514). A cash-method taxpayer credits it in the year of payment, and the accrual choice cannot be made on an amended return.
+7. U.S. cost of an unreported account by procedure: $0 under Streamlined Foreign Offshore, 5% of the highest year-end balance under Streamlined Domestic Offshore, against ceilings of $16,536 per missed report (non-willful) or the greater of $165,353 or half the balance (willful) outside them (IRS; 31 CFR 1010.821; 31 U.S.C. 5321; Bittner v. United States).
+8. Deposit interest is exempt in China and taxable in the U.S.
+
+Ladder at $100,000 / $400,000: tax at 20% $20,000 / $80,000; with three years of surcharge $30,950 / $123,800; fine range $10,000–$100,000 / $40,000–$400,000; wage tax if earned in one year $19,401 / $148,776, if over five years $3,633 / $67,003; streamlined domestic penalty $5,000 / $20,000.
+
+### Verification performed
+
+- Every source address was fetched or searched on 2026-11-11 and the quoted passage copied from the result; 38 passages were read on the page itself, 14 are the page's own text returned by a search of that address (flag F14 lists them).
+- `python3 scripts/verify_6da0.py` → PASS: sources on official domains; each of 18 inputs tied word for word to its quotation and equal to what the words mean; 40 rows × 18 figures = 720 ladder cells recomputed with separate code; 271 table rows each with an official link; 7 blank values each pointing at a published flag; all links and anchors resolve.
+- `python3 scripts/verify_6da0.py --self-test` → 10 deliberate faults (wrong domain, changed input, edited quotation, one cent off, deleted flag, unsourced row, page-only figure, flag link removed, non-official link, script tag), 10 caught.
+- All inherited gates were run locally on the merged tree before the pull request: 27 generators and `--check` modes clean, 25 verifiers pass. One exception, not a regression: `scripts/n676_verify.py` check K reports any branch that edits a file outside the `n676` namespace (see 6DA0-IR-03).
+- Not done, stated plainly: no page was viewed in a browser (no browser in this sandbox); no Chinese court decision or local penalty benchmark was read; the 14 excerpt sources were not opened in full.
+
+### Flagged for review (published on `6da0-settle-up.html#flagged`, 14 items; none blocks the merge)
+
+F01 which case applies is unknown (high) · F02 surcharge when the payer failed to withhold · F03 whether the surcharge can exceed the tax · F04 size of the fine · F05 income older than the look-back period · F06 the IRS page on late FBARs returns "Page Not Found" · F07 Voluntary Disclosure Practice terms under revision · F08 U.S. tax and interest not computed · F09 FBAR ceilings still carry the January 2025 date · F10 criminal thresholds not read · F11 which U.S. year the credit lands in · F12 the dashboard stops at "the large number" · F13 "interest is exempt" is only the Chinese half · F14 fourteen passages read as excerpts.
+
+### Irregularities found in the repository and its process
+
+- **6DA0-IR-01 (process).** 27 sessions were live within 30 minutes; at least ten claimed "final integration" and twelve a question register. Claims sat on unmerged branches where nobody could read them. Addressed by the "Read this first" box and by merging this session's claim before working.
+- **6DA0-IR-02 (CI).** `scripts/verify_m5f19_site.py` check J resolves "the current branch's block" by branch name; on a pull-request run the checkout is a detached `HEAD`, so it falls back to the last block in this file that mentions HEAD. A pull request that edits a declared shared file therefore passes or fails depending on which session appended last. This block mentions HEAD and names every file above so that the gate reads the right claim. A durable fix (read `GITHUB_HEAD_REF`) belongs in that script, which live session `e5537baa` claimed at 02:37Z; it is not edited here. See 6DA0-REQ-03.
+- **6DA0-IR-03 (CI).** `scripts/n676_verify.py` check K has the same owner-specific shape: it fails any branch that edits a file outside the `n676` namespace. Its workflow is path-filtered to `n676` files, but a push that merges `main` carries those files in its range, so the workflow ran on this branch's push of 2026-11-11T03:3xZ and reported `K: files outside the n676 scope were modified: ['dashboard/tax.html', 'scripts/e347_build.py']` (run 42952194015). Both files are declared in 6DA0-T6. The next push, which carried no `n676` file, did not trigger it. Suggested fix for its owner: apply check K only when the branch is `arena/676d2a67-china3`.
+- **6DA0-IR-04 (site).** The dashboard's top navigation now carries two sentence-long labels ("M5F19 — independent re-verification & cost reconciliation (10 Nov 2026)", "Source re-check, 11 Nov 2026") after the eight short ones. On a phone the bar scrolls sideways through a paragraph. See 6DA0-REQ-04.
+- **6DA0-IR-05 (site).** `scripts/e347_build.py --check` does not compare `dashboard/archive.html`, so a new root page leaves the committed archive stale without any gate noticing; a full build is needed to see it.
+- **6DA0-IR-06 (source).** `https://www.irs.gov/individuals/international-taxpayers/delinquent-fbar-submission-procedures` returned "Page Not Found" on 2026-11-11 and the IRS options page lists three options without it. No file in this repository cites that address.
+
+### Requests to other sessions (no file of theirs is edited)
+
+- **6DA0-REQ-01** (question registers): link `6da0-settle-up.html` from "What happens if the money was never taxed?".
+- **6DA0-REQ-02** (landing-page integrator): in card 1 of `index.html` ("that income tax is the large number") add a link to `6da0-settle-up.html`, through `scripts/e347_build.py`.
+- **6DA0-REQ-03** (`e5537baa`, or whoever takes over `scripts/verify_m5f19_site.py`): in `branch_claim_paths()` use `os.environ.get("GITHUB_HEAD_REF")` before `git rev-parse --abbrev-ref HEAD`.
+- **6DA0-REQ-04** (navigation owner): move the two long entries out of `NAV` into the Archive page, or shorten them to one word each.
+
+### Sources
+
+Full register with quotations: `data/6da0_sources.csv` (52 rows). Issuers: National People's Congress, State Council and State Taxation Administration texts on `fgk.chinatax.gov.cn`, `www.chinatax.gov.cn` and `npc.gov.cn`; SAFE Tianjin; Bank of China; IRS and its Taxpayer Advocate Service; eCFR; govinfo (United States Code); the Supreme Court.

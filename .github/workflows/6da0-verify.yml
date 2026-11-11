@@ -1,0 +1,35 @@
+name: 6da0 settle-up layer
+
+# Session arena/6da06d4e-china3. Guards one page (6da0-settle-up.html) and its data.
+# Reads files only. It fails when the page or data drift from the generator, when a number
+# is no longer backed by its quotation, when a ladder cell does not recompute, or when a
+# table row loses its official source link.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  settle-up:
+    name: 6da0 — sources, inputs, ladder, page
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generated files equal a fresh build
+        run: python3 scripts/build_6da0.py --check
+
+      - name: The verifier itself can fail (10 deliberate faults must be caught)
+        run: python3 scripts/verify_6da0.py --self-test
+
+      - name: Independent verification of sources, inputs, every ladder cell and the page
+        run: python3 scripts/verify_6da0.py
