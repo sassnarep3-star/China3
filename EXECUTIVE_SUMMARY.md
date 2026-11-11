@@ -65,3 +65,22 @@ The [Decide register](dashboard/decisions.html) contains 36 questions, answers, 
 Relatives' quotas, private swaps/underground banks, false invoices or purposes, crypto conversion in mainland China, excessive cash, and borrowed cards. Official rules provide fines up to 30% and 30%–100% in serious cases for several violations ([State Council Order 532](https://www.safe.gov.cn/safe/2008/0806/5321.html)). The [G8D8 enforcement register](g8d8-enforcement.html) adds 40 actual SAFE cases rather than hypothetical penalty estimates.
 
 This is dated general research from public official and first-party sources, not legal, tax or banking advice. Earlier summaries and parallel research layers remain in the [Archive](dashboard/archive.html); they use older FX snapshots.
+
+---
+
+## Earlier integration addenda (kept for the record)
+
+> **Integration addendum (2026-11-11, session `arena/f9a30493-china3`).** The landing-page navigation now
+> links two independently verified editions that were merged to `main` earlier today and were reachable only
+> by direct URL: the [M5F19 re-verification & cost reconciliation](m5f19-dashboard.html) (10 Nov 2026, PR #47)
+> and the [source freshness re-check](76e-verification.html) (11 Nov 2026, PR #49). Both nav entries were
+> requested on the coordination board (M5F19-REQ-01, 76E-REQ-01) and are additive. No figure in this summary
+> changed; the 2026-11-11 board reading is recorded on the Flagged page (U15) and in the 76e ledger.
+
+> **Integration addendum (2026-11-11, session `arena/495be42b-china3`).** The landing-page navigation now
+> also links five more verified editions and audits merged to `main` today, each the target of one open
+> board link request: [F52 decision checklist & fresh costs](f52-summary.html) (11 Nov 2026, PR #60),
+> [B9B3 verified decision brief](b9b3-dashboard.html) (PR #74), [G8D8 new evidence](g8d8-summary.html)
+> (PR #68), [E0F4 audit of PR #49](e0f4-76e-audit.html) (PR #71) and [N676 decision brief](n676-summary.html)
+> (PR #70). Card 1 now links [what settling up unpaid tax costs](6da0-settle-up.html) (PR #75). All entries
+> are additive; no figure in this summary changed.

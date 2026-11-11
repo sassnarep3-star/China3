@@ -1,0 +1,5 @@
+# Repository review — 11 November 2026
+
+Scope: read the executive summary, audit and selected data, source registers and generated pages; searched repository data, research and pages for high-risk old legal rules, current/historical rates, ATM caps and informal-source patterns. Details and source links appear in `data/fe05_flags.csv` and `fe05-flagged.html`. The review identified old emigrant staging, overly broad individual FX quota language, ATM cap mischaracterization, superseded crypto references, possible overbroad tax-recordal wording, and historical quotes presented across layers. Some are already flagged by previous reviews. Historical snapshots are not errors merely because they differ. We did not alter concurrent sessions' files.
+
+**Coverage limitation:** this is not a completed line-by-line audit of every repository file, every table row, every external link, or all historical versions. Pattern scans are triage, not verification. Any unreviewed claim remains unverified; no complete-audit certification is implied. Recheck legal currency, local bank practice and source availability before decisions.

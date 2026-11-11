@@ -31,10 +31,13 @@ FLAG = {f[0]: f for f in data.FLAGS}
 NAV = [("index", "Home"), ("decisions", "Decide"), ("methods", "Methods"), ("costs", "Costs"),
        ("steps", "Steps"), ("tax", "Tax"), ("flagged", "Flagged"), ("sources", "Sources"),
        ("archive", "Archive"),
-       # Integration (session arena/f9a30493-china3): honors M5F19-REQ-01 and 76E-REQ-01, two
-       # open board link requests. Additive nav entries pointing at root-level verified editions.
-       ("m5f19", "M5F19 — independent re-verification &amp; cost reconciliation (10 Nov 2026)"),
-       ("76e", "Source re-check, 11 Nov 2026")]
+       # Integration (session arena/f9a30493-china3): honors M5F19-REQ-01 and 76E-REQ-01.
+       # Integration (session arena/495be42b-china3): honors F52-REQ-01, B9B3-REQ-01, G8D8-REQ-01,
+       # E0F4-REQ-01, N676-REQ-01; shortens the two long labels per 6DA0-REQ-04. Additive nav
+       # entries pointing at root-level verified editions and audits.
+       ("m5f19", "M5F19"), ("76e", "76e re-check"), ("f52", "f52 checklist"),
+       ("b9b3", "b9b3 brief"), ("g8d8", "g8d8 evidence"), ("e0f4", "e0f4 audit"),
+       ("n676", "n676 brief")]
 OWN_PAGES = {"index.html"} | {f"dashboard/{k}.html" for k, _ in NAV if k != "index"}
 KEY_AMOUNTS = [D(10000), D(50000), D(100000), D(200000), D(400000)]
 
@@ -82,6 +85,16 @@ class Ctx:
             return f"{self.up}m5f19-dashboard.html"
         if k == "76e":
             return f"{self.up}76e-verification.html"
+        if k == "f52":
+            return f"{self.up}f52-summary.html"
+        if k == "b9b3":
+            return f"{self.up}b9b3-dashboard.html"
+        if k == "g8d8":
+            return f"{self.up}g8d8-summary.html"
+        if k == "e0f4":
+            return f"{self.up}e0f4-76e-audit.html"
+        if k == "n676":
+            return f"{self.up}n676-summary.html"
         return f"{self.sub}{k}.html"
 
     def src(self, ids, short=True):
@@ -460,6 +473,11 @@ ARCHIVE_GROUPS = [
     (r"^e8b7-", "E8B7 edition (session e8b70ef3)", ""),
     (r"^s055-", "S055 edition (session 05552f6e)", ""),
     (r"^m5f19", "M5F19 verified edition (session 5f1925df)", "Independent re-verification; reconciles four conflicting headline figures under one stated convention."),
+    (r"^76e-", "76e source re-check (session 76e3e41f)", "Same-day re-read of every load-bearing page on 11 Nov 2026; re-priced ladder, seven drift findings."),
+    (r"^f52-", "F52 decision checklist (session 4bfb6552)", "17-question decision checklist, 480-row ladder at the 11 Nov board, per-route playbooks."),
+    (r"^b9b3-", "B9B3 verified decision brief (session 9b36086f)", "50-source register, 30-question register, 880-row cost matrix, 29 flags."),
+    (r"^e0f4-", "E0F4 audit of PR #49 (session e0f4ee29)", "Independent line-by-line audit of the 11 Nov re-check layer."),
+    (r"^n676-", "N676 decision brief (session 676d2a67)", "19 sources re-read on 11 Nov 2026, questions register, 160-row ladder, 5 irregularities flagged."),
     (r"^c5bf-", "C5BF integration audit (session c5bf9ddc)", "Corrections to the S775 layer and a fresh-board ladder."),
     (r"^s775-", "S775 audit", "Known problems: R01, R04, R10 on the Flagged page. Uses the earlier 6.6903 rate."),
     (r"^d646-", "D646 verification refresh", "Uses the earlier 6.6903 rate and prices $400,000 as eight wires."),
@@ -594,7 +612,7 @@ def page_index():
 <div class="grid">
 <div class="card"><h3>1. The conversion itself is not what gets taxed</h3>
 <p>No official source read here taxes converting RMB or wiring it out. What the bank asks for is proof that Chinese tax on the money was already dealt with. If it was not, that income tax is the large number: 3% to 45% on wages, 20% on dividends, rent and property gains. Bank-deposit interest is exempt.</p>
-<p class="src">{ctx.src(["S17", "S04", "S25", "S26"])} · <a href="{ctx.page("tax")}">Tax page</a></p></div>
+<p class="src">{ctx.src(["S17", "S04", "S25", "S26"])} · <a href="{ctx.page("tax")}">Tax page</a> · <a href="6da0-settle-up.html">what settling up unpaid tax costs</a></p></div>
 <div class="card"><h3>2. The bank's own cost is about half a percent or less</h3>
 <p>{usd(c10["known_cost_usd"])} on $10,000 ({pct(c10["known_cost_pct"])}) and {usd(c400["known_cost_usd"])} on $400,000 ({pct(c400["known_cost_pct"])}) at Bank of China's published rate and fee. Actual intermediary deductions and the receiving account's fee are not included; Bank of America says its incoming wire may cost $15.</p>
 <p class="src">{ctx.src(["S01", "S02", "S41"])} · <a href="{ctx.page("costs")}">Cost tables</a></p></div>
@@ -639,6 +657,12 @@ def page_index():
 <p class="note">Independent passes written by parallel sessions, kept as published. Where they disagree with this dashboard, the dashboard is the later reading. Each is reachable directly and listed on the <a href="{ctx.page("archive")}">Archive</a>.</p>
 <div class="links">
 <a href="m5f19-dashboard.html"><b>M5F19 verified edition</b><span>Independent re-verification and cost reconciliation (10 Nov 2026)</span></a>
+<a href="76e-verification.html"><b>76e source re-check</b><span>Every load-bearing page re-read on 11 Nov 2026; re-priced ladder and drift findings</span></a>
+<a href="f52-summary.html"><b>F52 decision checklist &amp; fresh costs</b><span>17-question checklist, 480-row ladder priced at the 11 Nov board, step-by-step playbooks</span></a>
+<a href="b9b3-dashboard.html"><b>B9B3 verified decision brief</b><span>50-source register, 30-question register, 880-row cost matrix, 29 flags</span></a>
+<a href="g8d8-summary.html"><b>G8D8 new evidence</b><span>Other banks compared, U.S. receiving fees, Wise and Western Union, 40 SAFE enforcement cases</span></a>
+<a href="e0f4-76e-audit.html"><b>E0F4 audit of PR #49</b><span>Independent line-by-line audit of the 11 Nov re-check layer</span></a>
+<a href="n676-summary.html"><b>N676 decision brief</b><span>19 sources re-read today, questions register, 160-row ladder, 5 irregularities flagged</span></a>
 <a href="cross-session-review.html"><b>Cross-session review</b><span>Every concurrent session's published numbers checked against one board</span></a>
 <a href="c5bf-integration-audit.html"><b>C5BF integration audit</b><span>Line-by-line audit of the merged repo and the live site</span></a>
 <a href="a058-flagged-review.html"><b>A058 publication audit</b><span>Publication state, cost presentation, primary-source support</span></a>
