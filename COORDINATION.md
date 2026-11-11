@@ -1404,3 +1404,81 @@ discarding anything:
 Also recorded: B8720152's request to scope m5f19 check J is satisfied by this session's claim-aware
 rewrite of that check (see the takeover note above). B8720152's U15 text and `scripts/e347_data.py`
 change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
+
+---
+
+<!-- session-f9a30493-integration-v1 -->
+
+## Session `arena/f9a30493-china3` — final integration: board link requests, combined-tree verification, PR/merge/deploy
+
+Branch: `arena/f9a30493-china3` (fixed by Arena; the `session-<id>/<task>` per-task branch naming cannot
+be used — same constraint already logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001 / 76E block).
+Base at claim time: `d9763dc` (`main` after PR #49). Session ID `arena/f9a30493-china3`, task namespace
+`f9a30493`.
+
+### Concurrent-session scan at claim time (2026-11-11T02:4xZ)
+
+- **`arena/5a59401a-china3` (`5a59`)** claimed the final-integration role at 02:29:59Z (claim commit
+  `1ffa64e`) and has no content commits since. This session proceeds as the integration session per the
+  user's standing instruction and the board's first-merge-wins precedent (e347 / C5BF / 2eb1c590 all
+  claimed the same role concurrently); 5a59's additive work is preserved and any later 5a59 PR is
+  reconciled additively, nothing discarded.
+- **`arena/76e3e41f-china3`** merged PR #49 (verification ledger + repair of m5f19 check J). Its
+  **76E-REQ-01** nav request is honored below.
+- **`arena/5f1925df-china3`** merged PR #47; its **M5F19-REQ-01** nav request is honored below.
+- **`arena/05552f6e-china3` (S055)** claimed a 26-method suite on 2026-11-10T09:46Z with no content
+  commits (>16 h stale). Takeover noted under the >60-minute rule; this session does **not** rebuild an
+  equivalent suite — duplicate cost suites are the documented failure mode of this repository (X-12,
+  D646-IR-002, IR-030). If its owner returns, its namespaced files can be linked additively later.
+- Stale open PRs #34 / #32 / #25 / #18 / #15 / #8 / #6 remain as dispositioned by earlier sessions
+  (C5BF integration audit); not merged, not deleted, not edited here.
+
+### Claimed tasks
+
+| ID | Task | File scope | Status | Owner | Notes |
+|----|------|------------|--------|-------|-------|
+| F9A-T1 | Claim final integration; merge latest `origin/main` (PRs #47–#49) without discarding work | `COORDINATION.md` (append only) | done | `arena/f9a30493-china3` | n/a |
+| F9A-T2 | Honor **M5F19-REQ-01**: one nav entry → `m5f19-dashboard.html`, labelled "M5F19 — independent re-verification & cost reconciliation (10 Nov 2026)" | `scripts/e347_build.py`, `index.html` (regenerated), all `dashboard/*.html` (nav only) | done | `arena/f9a30493-china3` | Additive; requested by the m5f19 session |
+| F9A-T3 | Honor **76E-REQ-01**: one nav entry → `76e-verification.html`, labelled "Source re-check, 11 Nov 2026" | same as F9A-T2 | done | `arena/f9a30493-china3` | Additive; requested by the 76e session |
+| F9A-T4 | Update the landing-page nav gate in the e347 verifier (8 → 10 entries) | `scripts/e347_verify.py` | done | `arena/f9a30493-china3` | Same commit as the generator change |
+| F9A-T5 | Line-by-line verification of the combined tree: full validator suite + independent re-derivation of the m5f19 ladder and headline figures from the recorded official inputs | read-only | done | `arena/f9a30493-china3` | No fresh network fetches possible from this sandbox (egress limited); recorded retrievals re-checked arithmetically |
+| F9A-T6 | Additive README / EXECUTIVE_SUMMARY pointers; board record | `README.md`, `EXECUTIVE_SUMMARY.md` (additive only), this file | in progress | `arena/f9a30493-china3` | Nothing removed or reordered |
+| F9A-T7 | PR → `main`, confirm checks green, merge without waiting, confirm Pages deploy, record PR link + merge result | GitHub PR / Pages / this file | pending | `arena/f9a30493-china3` | Do not merge a broken site |
+
+### Log
+
+- 2026-11-11T02:3xZ: The local clone was shallow (depth 1 at both branch tips); `git fetch --unshallow`
+  restored full history, then `origin/main` was merged (PRs #47, #48, #49) with zero conflicts and no
+  content discarded. (Same shallow-clone situation was logged by session B8720152.)
+- 2026-11-11T02:4xZ: All 26 inherited validators PASS on the combined tree at `d9763dc` before any edit.
+- 2026-11-11T02:5xZ: Generator change: `scripts/e347_build.py` NAV gained the two requested entries and
+  `Ctx.page()` gained the root-level link mappings; `scripts/e347_verify.py` nav-count gate updated
+  8 → 10. `python3 scripts/e347_build.py` regenerated 8 files (index.html + 7 dashboard pages), each
+  changing only by the two nav entries. `e347_verify.py`, `verify_dashboard.py`, `verify_m5f19_site.py`
+  (after this block was written), `verify_76e.py` and the full inherited suite all PASS on the tree.
+- Line-by-line spot re-derivation performed this session (independent arithmetic, from the recorded
+  official inputs in `data/m5f19_facts.csv` / `data/m5f19_ladder.csv`):
+  - $10,000, 1 wire: spread = 10,000 × (6.6851 − 6.6711) ÷ 6.6851 = $20.94; wire fee = 1‰ of ¥66,851 =
+    ¥66.85 → $10.00; cable ¥150 → $22.44; **total $53.38** ✓ matches the published ladder and the
+    reconciliation register.
+  - $400,000, 1 wire: spread $837.68; fee capped at ¥260 → $38.90; cable $22.44; **total $899.01** ✓.
+  - The four legacy headline figures ($53.42 / $53.47 / $901.30 / $1,332.05) re-derive exactly under the
+    conventions recorded in `data/m5f19_reconciliation.csv` ✓.
+- The m5f19 check-J repair requested by B8720152 was already implemented by session 76e (claim-aware
+  check); no further action taken here.
+
+### Verification performed (this session)
+
+- 26 inherited validators/generators re-run on the combined tree after the nav change; all PASS
+  (`validate_data`, `check_links`, `verify_deep`, `test_costs`, `verify_cost_tables`, `verify_s436_site`,
+  `verify_d646_site`, `verify_s775_site`, `verify_dashboard`, `build_dashboard`, `build_cross_session_review`,
+  `build_s775_site`, `build_d646_site`, `build_c3x_site`, `build_cost_tables`, `verify_c3x_site`,
+  `verify_a513`, `verify_completion`, `verify_final_integration`, `build_m5f19_site`, `verify_m5f19_site`,
+  `build_76e_site`, `verify_76e`, `e347_build`, `e347_verify`).
+- No fresh official-source fetches were possible from this sandbox (egress limited to github.com /
+  registry.npmjs.org / PyPI); every figure used was already fetched and recorded by earlier sessions and
+  is labelled with its fetch timestamp in the data packs. Nothing was inferred or filled in.
+
+### PR / merge / deployment record
+
+(filled in by F9A-T7)
