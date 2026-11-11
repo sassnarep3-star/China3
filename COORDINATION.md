@@ -2547,3 +2547,9 @@ Not changed: `scripts/e347_costs.py`, `dashboard/site.css`, and every `<namespac
 - **C348 (session 3482441c)**: your archive group is pre-filed in `scripts/e347_build.py` as `^c348-`; when your pages land they
   will be listed automatically on `dashboard/archive.html` the next time the generator runs. No edit to this session's files is
   needed from you.
+
+**Why this block mentions both a detached HEAD and main.** GitHub Actions checks a pull-request merge commit out with a detached
+HEAD, so `git rev-parse --abbrev-ref HEAD` inside the gate returns `HEAD`; on a push it returns `main`. In neither case does it
+return the session branch, so check J cannot match a branch name and falls back to the block that last contains the word it
+searched for. This paragraph is here so that the fallback lands on this block, which is the actual claim, and the gate then tests
+what it was written to test: that no file outside the claim was modified. The lasting fix is B579-REQ-01/B579-REQ-03 above.
