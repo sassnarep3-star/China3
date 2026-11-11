@@ -1,0 +1,29 @@
+id,url,accessed,type
+safe,https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html,2026-11-11,government / regulator
+foreign,https://www.safe.gov.cn/tianjin/2026/0713/3088.html,2026-11-11,government / regulator
+property,https://www.safe.gov.cn/tianjin/2024/0903/2594.html,2026-11-11,government / regulator
+home,https://www.safe.gov.cn/anhui/file/file/20250925/43f09589bb2046c2a01a58d3a80c2b5f.pdf,2026-11-11,government / regulator
+boc,https://www.boc.cn/sourcedb/whpj/,2026-11-11,provider first-party
+fee,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,2026-11-11,provider first-party
+atm,https://www.safe.gov.cn/hubei/2019/0305/851.html,2026-11-11,government / regulator
+cash,https://www.safe.gov.cn/hebei/2019/0521/1366.html,2026-11-11,government / regulator
+private,https://www.safe.gov.cn/guangdong/2020/0304/1668.html,2026-11-11,government / regulator
+crypto,https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html,2026-11-11,government / regulator
+fxlaw,https://www.safe.gov.cn/safe/2008/0806/5321.html,2026-11-11,government / regulator
+iit,https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html,2026-11-11,government / regulator
+late,https://fgk.chinatax.gov.cn/zcfgk/c100009/c5195081/content.html,2026-11-11,government / regulator
+interest,https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203286/content.html,2026-11-11,government / regulator
+vat,https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zzs/202601/t478899.html,2026-11-11,government / regulator
+irs,https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements,2026-11-11,government / regulator
+988,https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm,2026-11-11,government / regulator
+credit,https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit,2026-11-11,government / regulator
+fbpen,https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821,2026-11-11,government / regulator
+gift,https://www.irs.gov/businesses/gifts-from-foreign-person,2026-11-11,government / regulator
+stream,https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures,2026-11-11,government / regulator
+cbp,https://www.cbp.gov/travel/international-visitors/money-monetary-instruments,2026-11-11,government / regulator
+fxirs,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates,2026-11-11,government / regulator
+bank,https://info.bankofamerica.com/en/digital-banking/wire-transfers,2026-11-11,provider first-party
+filing,https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html,2026-11-11,government / regulator
+taxrecord,https://tianjin.chinatax.gov.cn/11200000000/0300/030004/03000418/20190121142506605.shtml,2026-11-11,government / regulator
+wise,https://wise.com/help/articles/2955298/guide-to-cny-transfers,2026-11-11,provider first-party
+wu,https://www.westernunion.com/cn/en/send-money.html,2026-11-11,provider first-party

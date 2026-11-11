@@ -1,0 +1,15 @@
+name: FE05 research supplement
+on:
+  push:
+    paths: ['fe05-*.html', 'assets/fe05.*', 'data/fe05_*.csv', 'scripts/*fe05*.py', '.github/workflows/fe05-verify.yml']
+  pull_request:
+    paths: ['fe05-*.html', 'assets/fe05.*', 'data/fe05_*.csv', 'scripts/*fe05*.py', '.github/workflows/fe05-verify.yml']
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/verify_fe05_site.py

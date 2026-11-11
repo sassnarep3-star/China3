@@ -2249,3 +2249,42 @@ Once `df25-us-conversion-tax.html` is on `main`: (a) one `ARCHIVE_GROUPS` row `(
 
 - `2026-11-11T07:35Z`: session start on `64a5cdf`. Read this board in full; fetched every remote branch; read each live block on its own branch (`d2a045b3`, `bea42a88`, `54e4bfc5`, `f5a5499c`, `495be42b`, `0fe05ac2`).
 - `2026-11-11T07:50Z`: merged `main` @ `9977fd8` (54e4 claim, PR #76); claim written and pushed before any content file.
+<!-- session-0fe05ac2-china3-fe05-v1 -->
+
+## Session `arena/0fe05ac2-china3` (`session-0fe05ac2` / `fe05`) — 2026-11-11 Live Official-Source Verification, Pre-Decision Questions & Discovery Register, Exhaustive CNY→USD Methods & Penalty Breakdown, $10k–$400k Cost Matrix, Repo Audit & Dashboard
+
+Branch: `arena/0fe05ac2-china3` (Arena single-branch binding; fixed by platform tracking, `HEAD` tracks this branch).
+Base on `main`: `64a5cdfcf78e0303c57329e99f7fa93f51df054b` (merge of PR #75).
+Claim appended, checked with `scripts/check_conflict_markers.py`, committed, and pushed immediately before creating or editing any content file.
+
+### Concurrent-session scan before claiming (2026-11-11T07:38Z)
+
+Ran `git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune`, `git for-each-ref --sort=-committerdate refs/remotes/origin`, and `gh pr list --state open`:
+- Active live sibling claims (<60 min old):
+  1. `origin/arena/bea42a88-china3` (07:35:53Z) — claimed `bea4-*` namespace (`bea4-*.html`, `data/bea4_*.csv`, `research/bea4-*.md`, `scripts/*bea4*.py`, `.github/workflows/bea4-verify.yml`).
+  2. `origin/arena/d2a045b3-china3` (07:36:20Z) — claimed canonical integration scope (`scripts/e347_*`, `index.html`, `dashboard/*.html`, `data/e347_*.csv`, `EXECUTIVE_SUMMARY.md`, `README.md`).
+  3. `origin/arena/f5a5499c-china3` (07:37:57Z) — claimed `f5a5` scope + `scripts/cost_engine.py`, `scripts/build_cost_tables.py`, `scripts/verify_cost_tables.py`, `data/cost_*.csv`, `data/d646_methods.csv`, `scripts/e347_*`, `index.html`, `dashboard/*.html`.
+- No session claims the `fe05` namespace. To strictly obey the non-overlapping scope rule while `d2a045b3` and `f5a5499c` hold active claims on `index.html`, `dashboard/*.html`, `scripts/e347_*`, `EXECUTIVE_SUMMARY.md`, `README.md`, and `data/cost_*.csv`, this session works **exclusively** inside its non-overlapping `fe05` scope plus append-only `COORDINATION.md`, and logs cross-scope integration requests below (`FE05-REQ-01`, `FE05-REQ-02`).
+
+### Tasks claimed (`session-0fe05ac2` / `arena/0fe05ac2-china3`)
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| FE05-T0 | Read `COORDINATION.md`, scan all remote branches & open PRs, claim strictly non-overlapping `fe05` scope, commit & push immediately | `COORDINATION.md` (append only) | done | `arena/0fe05ac2-china3` | n/a | Pushed before any content file |
+| FE05-T1 | Live 2026-11-11 official-source verification: fetch & read primary PRC and U.S. official regulatory, tax, and bank pages line by line; record verbatim quotes, timestamps, and reachability | `data/fe05_sources.csv`, `research/fe05-verification-log.md` | in progress | `arena/0fe05ac2-china3` | pending live 2026-11-11 fetches | Zero hallucinations; unverified values left blank & flagged |
+| FE05-T2 | Executive summary + Pre-Decision Questions, Known Info, Missing Info, Answers & Concrete Discovery Suggestions register | `research/fe05-executive-summary.md`, `research/fe05-questions-and-discovery.md`, `data/fe05_questions.csv` | unclaimed | `arena/0fe05ac2-china3` | pending | Covers legal, tax, bank, residency, source-of-funds & compliance gates |
+| FE05-T3 | Exhaustive CNY→USD conversion methods catalogue (pros/cons, legal basis, caps, eligibility) + deep conversion/tax penalty breakdown + exact step-by-step execution playbooks | `data/fe05_methods.csv`, `data/fe05_penalties.csv`, `data/fe05_steps.csv`, `research/fe05-methods-and-penalties.md` | unclaimed | `arena/0fe05ac2-china3` | pending | Every row linked to an official source or left blank + flagged |
+| FE05-T4 | Mobile-friendly $10,000 → $400,000 USD cost estimation matrix in $10,000 increments (40 steps × every method), most important info first, exact rational arithmetic | `data/fe05_ladder.csv`, `data/fe05_method_costs.csv`, `scripts/fe05_engine.py` | unclaimed | `arena/0fe05ac2-china3` | pending | Live 2026-11-11 bank FX board + official fee tariffs; unverified fees blank + flagged |
+| FE05-T5 | Line-by-line repository review: audit existing repo data, formulas, source links, and cross-session discrepancies; log irregularities without overwriting sibling-owned files | `data/fe05_flags.csv`, `research/fe05-repo-audit.md` | unclaimed | `arena/0fe05ac2-china3` | pending | Published on `fe05-flagged.html` (`needs review`) |
+| FE05-T6 | Clean mobile-first GitHub Pages dashboard (`fe05-dashboard.html` landing page + 7 category subpages incl. `Flagged for Review`) + line-by-line verifier + CI workflow | `fe05-dashboard.html`, `fe05-questions.html`, `fe05-methods.html`, `fe05-costs.html`, `fe05-steps.html`, `fe05-penalties.html`, `fe05-flagged.html`, `fe05-sources.html`, `assets/fe05.css`, `assets/fe05.js`, `scripts/build_fe05_site.py`, `scripts/verify_fe05_site.py`, `.github/workflows/fe05-verify.yml` | unclaimed | `arena/0fe05ac2-china3` | pending | Every table row carries an official source link; zero broken links |
+| FE05-T7 | Open PR (`arena/0fe05ac2-china3` → `main`), pass all CI checks, merge without waiting for approval, confirm GitHub Pages live deployment, record PR link & merge result here | GitHub PR / Pages / `COORDINATION.md` (append only) | unclaimed | `arena/0fe05ac2-china3` | pending | Do not merge a broken site |
+
+### Cross-scope requests logged for active integrators (`arena/d2a045b3-china3` / `arena/f5a5499c-china3`)
+
+- **FE05-REQ-01:** When regenerating shared navigation (`scripts/e347_build.py` → `index.html`, `dashboard/archive.html`), please add an `ARCHIVE_GROUPS` entry `(r"^fe05-", "FE05 verified decision dashboard (session 0fe05ac2)", "Executive summary, pre-decision questions & discovery register, exhaustive CNY→USD methods, $10k–$400k cost matrix, step-by-step playbooks, penalty breakdown, repo audit & Flagged for Review (11 Nov 2026).")` and a link to `fe05-dashboard.html`. While sibling claims on `scripts/e347_build.py` / `index.html` / `dashboard/*.html` are active (<60 min), this session will not touch those files.
+
+
+### FE05 progress update — 2026-11-11
+
+- Added a standalone, source-linked FE05 supplement with decision questions, 15 route categories, steps, risks, flags and 40 gross-USD increments per route. The BOC illustration is not a landed-cost estimate: unknown taxes and intermediary/receiving fees remain blank. Source observations and methodology are in `research/fe05-verification-log.md`; selected audit findings and its explicit coverage limitations are in `research/fe05-repo-audit.md`.
+- FE05-T1–T6: partial deliverables generated and local FE05 verifier passed; the requested exhaustive line-by-line repository audit and exhaustive method verification are **not complete**. This limitation is published, not presented as a completed audit. Shared files remain untouched; FE05-REQ-01 remains pending with the integrators.
