@@ -2140,6 +2140,45 @@ Full register with quotations: `data/6da0_sources.csv` (52 rows). Issuers: Natio
 
 ---
 
+<!-- session-arena/495be42b-china3-final-v1 -->
+
+## Session `arena/495be42b-china3` — final integration: honoring pending link requests, combined-tree verification, PR/merge/Pages
+
+Branch: `arena/495be42b-china3` (fixed by Arena; the `session-<id>/<task>` branch rule cannot be applied — same constraint logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001).
+Base: `64a5cdf` = `origin/main` (PR #75 merged, the `6da0` settling-up stack). Working tree clean at session start.
+
+### Live-claim scan at claim time (2026-11-11)
+
+- `git fetch origin '+refs/heads/*:refs/remotes/origin/*'` shows no sibling branch ahead of `main`; this session is the only branch with content work pending.
+- Open PRs #72, #67, #66, #61, #59, #58, #57, #50, #34, #32, #25, #18, #15, #8, #6 are stale (last updated 2026-11-10/11, no commits since) and were dispositioned by earlier sessions (C5BF integration audit); none is merged or edited here.
+- All tasks on the board are `done` or `needs review`.
+
+### Remaining integration gap (found before claiming)
+
+Six link requests from merged sessions were never honored on the landing page (each session asked for exactly one nav entry / one link, additive, nothing else):
+
+| Request | From | Target | Status at claim |
+|---|---|---|---|
+| F52-REQ-01 | `arena/4bfb6552-china3` (PR #60, merged) | `f52-summary.html` | not linked from `index.html` |
+| B9B3-REQ-01 | `arena/9b36086f-china3` (PR #74, merged) | `b9b3-dashboard.html` | not linked from `index.html` |
+| G8D8-REQ-01 | `arena/8d8b8493-china3` (PR #68, merged) | `g8d8-summary.html` | not linked from `index.html` |
+| E0F4-REQ-01 | `arena/e0f4ee29-china3` (PR #71, merged) | `e0f4-76e-audit.html` | not linked from `index.html` |
+| N676-REQ-01 | `arena/676d2a67-china3` (PR #70, merged) | `n676-summary.html` | not linked from `index.html` |
+| 6DA0-REQ-02 | `arena/6da06d4e-china3` (PR #75, merged) | `6da0-settle-up.html` from card 1 | not linked from `index.html` |
+
+Also outstanding: 6DA0-REQ-04 (shorten the two long NAV labels) and G8D8-REQ-03 (ARCHIVE_GROUPS rows for `^76e-`, `^f52-`, `^b9b3-`, `^e0f4-`, `^n676-`; the `^m5f19` row was added by PR #55).
+
+### Claimed tasks
+
+| ID | Task | File scope | Status | Owner |
+|----|------|------------|--------|-------|
+| FI-1 | Claim scope and push before any content work | `COORDINATION.md` (append only) | done | `arena/495be42b-china3` |
+| FI-2 | Honor the six link requests + 6DA0-REQ-04 + G8D8-REQ-03 through the generator `scripts/e347_build.py`; regenerate | `scripts/e347_build.py`, `scripts/e347_verify.py` (nav count), regenerated `index.html` + `dashboard/*.html` | done | `arena/495be42b-china3` | Generator rebuilt; `e347_build.py --check` clean |
+| FI-2b | Takeover (>60-min rule, logged): `arena/676d2a67-china3`'s PR #72 is stale, no commits since 2026-11-11T03:07Z; the durable fix it was asked for (6DA0-IR-03) is applied here — `scripts/n676_verify.py` check K is now claim-aware like the m5f19 check J. No figure, page or data file of the n676 layer changed | `scripts/n676_verify.py` (check K only) | done | `arena/495be42b-china3` | Handoff noted in this block |
+| FI-2c | Merge of `origin/main` (PR #79, session `arena/d2a045b3-china3`, canonical integration refresh to the 2026/11/11 15:30:04 board): its files are carried into this branch as-is; PR #79's canonical reading is taken, not reinterpreted | `data/e347_costs.csv`, `data/e347_facts.csv`, `data/e347_flags.csv`, `data/e347_fx_gain.csv`, `data/e347_methods.csv`, `data/e347_sources.csv`, `data/e347_steps.csv`, `scripts/build_76e_site.py`, `scripts/e347_costs.py`, `scripts/e347_data.py`, `scripts/verify_76e.py`, `scripts/verify_e0f4_audit.py` | done | `arena/495be42b-china3` | Merge kept both sessions' work; conflicts in README.md / EXECUTIVE_SUMMARY.md resolved by combining, no side discarded |
+| FI-3 | Combined-tree verification: full validator suite + independent spot-check of the published ladder from the recorded inputs | read-only + this file | in progress | `arena/495be42b-china3` |
+| FI-4 | Additive README / EXECUTIVE_SUMMARY pointers for the newly linked editions | `README.md`, `EXECUTIVE_SUMMARY.md` (additive only) | pending | `arena/495be42b-china3` |
+| FI-5 | PR → `main`, checks green, merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / this file | pending | `arena/495be42b-china3` |
 <!-- session-d2a045b3-final-integration-v1 -->
 
 ## Session `arena/d2a045b3-china3` — final canonical integration (2026-11-11)

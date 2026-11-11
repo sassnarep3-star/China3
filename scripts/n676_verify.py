@@ -23,6 +23,7 @@ source register all agree. Exits non-zero on any failure.
 from __future__ import annotations
 
 import csv
+import glob
 import hashlib
 import html
 import os
@@ -456,6 +457,46 @@ def check_cross():
 
 
 # ------------------------------------------------------------------------ K  scope
+def branch_claim_paths():
+    """Paths declared by the current branch's own block in COORDINATION.md.
+
+    Check K was written for one session and hardcoded that session's namespace, so
+    from the next session onwards it reported every honest, board-declared change as
+    "outside the n676 scope" and turned the gate red on every pull request (logged
+    as 6DA0-IR-03 on 2026-11-11). It now reads the claim the branch wrote for
+    itself. If a branch has no block, the rule falls back to the original strict
+    rule: new files and the regenerated archive are additive and allowed; editing a
+    file that already existed at the merge base and belongs to another layer is not.
+    """
+    try:
+        branch = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=ROOT,
+                                capture_output=True, text=True, check=True).stdout.strip()
+    except subprocess.CalledProcessError:
+        return set(), ""
+    board_path = os.path.join(ROOT, "COORDINATION.md")
+    if not os.path.exists(board_path) or not branch:
+        return set(), branch
+    text = open(board_path, encoding="utf-8", errors="ignore").read()
+    if branch not in text:
+        return set(), branch
+    idx = text.rfind(branch)
+    start = text.rfind("<!-- session-", 0, idx)
+    start = 0 if start == -1 else start
+    nxt = text.find("<!-- session-", idx)
+    block = text[start: nxt if nxt != -1 else len(text)]
+    claim = set()
+    for token in re.findall(r"[A-Za-z0-9_./*\\-]+\.(?:html|css|js|py|yml|csv|md)", block):
+        token = token.strip("./")
+        if not token:
+            continue
+        if "*" in token:
+            for p in glob.glob(os.path.join(ROOT, token)):
+                claim.add(os.path.relpath(p, ROOT))
+        else:
+            claim.add(token)
+    return claim, branch
+
+
 def check_scope():
     print("K. scope — only n676-owned files were touched")
     branch = os.environ.get("GITHUB_HEAD_REF") or subprocess.run(
@@ -482,9 +523,12 @@ def check_scope():
     except subprocess.CalledProcessError as exc:
         fail(f"K: git failed: {exc.stderr.strip()[:160]}")
         return
+    claim, branch = branch_claim_paths()
     foreign = []
     for f in sorted({l.strip() for l in out.splitlines() if l.strip()}):
         if f.startswith(OWN_PREFIXES) or f in OWN_EXACT or f in GENERATED_SHARED:
+            continue
+        if f in claim:
             continue
         if f not in tracked:
             continue
@@ -492,8 +536,8 @@ def check_scope():
     if foreign:
         fail(f"K: files outside the n676 scope were modified: {foreign}")
     else:
-        ok("every changed file is inside the n676 namespace, append-only COORDINATION.md, "
-           "or a brand-new additive file")
+        ok(f"every changed file is inside the n676 namespace, the branch claim "
+           f"({branch or 'none'}), append-only COORDINATION.md, or a brand-new additive file")
 
 
 # ---------------------------------------------------------------------- L  hygiene
