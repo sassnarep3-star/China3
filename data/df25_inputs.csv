@@ -1,0 +1,145 @@
+key,value,unit,what_it_is,source_id,source_url
+boc_usd_selling_rate_per_100,668.86,RMB per 100 USD,"Bank of China board, Pub Time 2026/11/11 15:30:04",DS01,https://www.boc.cn/sourcedb/whpj/enindex_1619.html
+fed_annual_average_1994,8.6397,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_1995,8.3700,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_1996,8.3389,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_1997,8.3193,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_1998,8.3008,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_1999,8.2783,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2000,8.2784,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2001,8.2770,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2002,8.2771,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2003,8.2772,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2004,8.2768,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2005,8.1936,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2006,7.9723,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2007,7.6058,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2008,6.9477,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2009,6.8307,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2010,6.7696,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2011,6.4630,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2012,6.3093,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2013,6.1478,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2014,6.1620,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2015,6.2827,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2016,6.6400,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2017,6.7569,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2018,6.6090,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2019,6.9081,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2020,6.9042,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2021,6.4508,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2022,6.7290,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2023,7.0809,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2024,7.1957,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_annual_average_2025,7.1875,RMB per USD,Federal Reserve annual average,DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+fed_monthly_average_2024-01,7.1707,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-02,7.1935,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-03,7.2015,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-04,7.2374,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-05,7.2327,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-06,7.2547,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-07,7.2609,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-08,7.1475,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-09,7.0760,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-10,7.0881,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-11,7.2063,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2024-12,7.2807,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-01,7.2957,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-02,7.2734,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-03,7.2493,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-04,7.2968,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-05,7.2166,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-06,7.1804,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-07,7.1741,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-08,7.1727,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-09,7.1235,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-10,7.1200,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-11,7.1069,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2025-12,7.0432,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-01,6.9692,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-02,6.9064,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-03,6.8921,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-04,6.8371,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-05,6.7996,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-06,6.7758,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-07,6.7757,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-08,6.7361,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-09,6.7084,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+fed_monthly_average_2026-10,6.6844,RMB per USD,Federal Reserve monthly average,DS27,https://fred.stlouisfed.org/data/EXCHUS.txt
+irs_yearly_average_2021,6.452,RMB per USD,"IRS yearly average, shown for comparison",DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+irs_yearly_average_2022,6.730,RMB per USD,"IRS yearly average, shown for comparison",DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+irs_yearly_average_2023,7.075,RMB per USD,"IRS yearly average, shown for comparison",DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+irs_yearly_average_2024,7.189,RMB per USD,"IRS yearly average, shown for comparison",DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+irs_yearly_average_2025,7.129,RMB per USD,"IRS yearly average, shown for comparison",DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+fed_daily_2026-11-02,6.6480,RMB per USD,"Federal Reserve H.10 daily rate, shown as the daily source",DS25,https://www.federalreserve.gov/releases/h10/current/
+fed_daily_2026-11-03,6.6701,RMB per USD,"Federal Reserve H.10 daily rate, shown as the daily source",DS25,https://www.federalreserve.gov/releases/h10/current/
+fed_daily_2026-11-04,6.6731,RMB per USD,"Federal Reserve H.10 daily rate, shown as the daily source",DS25,https://www.federalreserve.gov/releases/h10/current/
+fed_daily_2026-11-05,6.6680,RMB per USD,"Federal Reserve H.10 daily rate, shown as the daily source",DS25,https://www.federalreserve.gov/releases/h10/current/
+fed_daily_2026-11-06,6.6760,RMB per USD,"Federal Reserve H.10 daily rate, shown as the daily source",DS25,https://www.federalreserve.gov/releases/h10/current/
+ordinary_rate_10,10,percent,Rev. Proc. 2025-32 section 2.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+ordinary_rate_12,12,percent,Rev. Proc. 2025-32 section 2.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+ordinary_rate_22,22,percent,Rev. Proc. 2025-32 section 2.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+ordinary_rate_24,24,percent,Rev. Proc. 2025-32 section 2.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+ordinary_rate_32,32,percent,Rev. Proc. 2025-32 section 2.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+ordinary_rate_35,35,percent,Rev. Proc. 2025-32 section 2.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+ordinary_rate_37,37,percent,Rev. Proc. 2025-32 section 2.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+long_term_capital_rate_0,0,percent,IRS Topic no. 409,DS20,https://www.irs.gov/taxtopics/tc409
+long_term_capital_rate_15,15,percent,IRS Topic no. 409,DS20,https://www.irs.gov/taxtopics/tc409
+long_term_capital_rate_20,20,percent,IRS Topic no. 409,DS20,https://www.irs.gov/taxtopics/tc409
+net_investment_income_rate,3.8,percent,26 U.S.C. 1411(a)(1),DS11,https://www.govinfo.gov/content/pkg/USCODE-2024-title26/html/USCODE-2024-title26-subtitleA-chap2A-sec1411.htm
+2026_ordinary_10pct_starts_above_single,0,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_12pct_starts_above_single,12400,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_22pct_starts_above_single,50400,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_24pct_starts_above_single,105700,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_32pct_starts_above_single,201775,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_35pct_starts_above_single,256225,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_37pct_starts_above_single,640600,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_capital_zero_rate_max_single,49450,USD of taxable income,Rev. Proc. 2025-32 section 4.03,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_capital_15pct_rate_max_single,545500,USD of taxable income,Rev. Proc. 2025-32 section 4.03,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+niit_threshold_single,200000,USD of modified adjusted gross income,26 U.S.C. 1411(b),DS11,https://www.govinfo.gov/content/pkg/USCODE-2024-title26/html/USCODE-2024-title26-subtitleA-chap2A-sec1411.htm
+2026_ordinary_10pct_starts_above_married_filing_jointly,0,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_12pct_starts_above_married_filing_jointly,24800,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_22pct_starts_above_married_filing_jointly,100800,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_24pct_starts_above_married_filing_jointly,211400,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_32pct_starts_above_married_filing_jointly,403550,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_35pct_starts_above_married_filing_jointly,512450,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_37pct_starts_above_married_filing_jointly,768700,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_capital_zero_rate_max_married_filing_jointly,98900,USD of taxable income,Rev. Proc. 2025-32 section 4.03,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_capital_15pct_rate_max_married_filing_jointly,613700,USD of taxable income,Rev. Proc. 2025-32 section 4.03,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+niit_threshold_married_filing_jointly,250000,USD of modified adjusted gross income,26 U.S.C. 1411(b),DS11,https://www.govinfo.gov/content/pkg/USCODE-2024-title26/html/USCODE-2024-title26-subtitleA-chap2A-sec1411.htm
+2026_ordinary_10pct_starts_above_head_of_household,0,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_12pct_starts_above_head_of_household,17700,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_22pct_starts_above_head_of_household,67450,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_24pct_starts_above_head_of_household,105700,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_32pct_starts_above_head_of_household,201750,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_35pct_starts_above_head_of_household,256200,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_37pct_starts_above_head_of_household,640600,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_capital_zero_rate_max_head_of_household,66200,USD of taxable income,Rev. Proc. 2025-32 section 4.03,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_capital_15pct_rate_max_head_of_household,579600,USD of taxable income,Rev. Proc. 2025-32 section 4.03,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+niit_threshold_head_of_household,200000,USD of modified adjusted gross income,26 U.S.C. 1411(b),DS11,https://www.govinfo.gov/content/pkg/USCODE-2024-title26/html/USCODE-2024-title26-subtitleA-chap2A-sec1411.htm
+2026_ordinary_10pct_starts_above_married_filing_separately,0,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_12pct_starts_above_married_filing_separately,12400,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_22pct_starts_above_married_filing_separately,50400,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_24pct_starts_above_married_filing_separately,105700,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_32pct_starts_above_married_filing_separately,201775,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_35pct_starts_above_married_filing_separately,256225,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_ordinary_37pct_starts_above_married_filing_separately,384350,USD of taxable income,Rev. Proc. 2025-32 section 4.01,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_capital_zero_rate_max_married_filing_separately,49450,USD of taxable income,Rev. Proc. 2025-32 section 4.03,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+2026_capital_15pct_rate_max_married_filing_separately,306850,USD of taxable income,Rev. Proc. 2025-32 section 4.03,DS22,https://www.irs.gov/pub/irs-drop/rp-25-32.pdf
+niit_threshold_married_filing_separately,125000,USD of modified adjusted gross income,26 U.S.C. 1411(b),DS11,https://www.govinfo.gov/content/pkg/USCODE-2024-title26/html/USCODE-2024-title26-subtitleA-chap2A-sec1411.htm
+personal_transaction_gain_limit,200,USD,26 U.S.C. 988(e)(2),DS02,https://www.govinfo.gov/content/pkg/USCODE-2024-title26/html/USCODE-2024-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm
+section_988_loss_disclosure_threshold,50000,USD in one tax year,26 CFR 1.6011-4(b)(5)(i)(E),DS15,https://www.ecfr.gov/current/title-26/part-1/section-1.6011-4
+example_lot_A_rmb,700000,RMB,"illustration only: an invented deposit, priced at the 2021 annual average",DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+example_lot_B_rmb,700000,RMB,"illustration only: an invented deposit, priced at the 2023 annual average",DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+example_lot_C_rmb,700000,RMB,"illustration only: an invented deposit, priced at the 2025 annual average",DS26,https://fred.stlouisfed.org/data/AEXCHUS.txt
+example_rmb_sold_per_conversion,1050000,RMB,illustration only: an invented conversion,DS14,https://www.ecfr.gov/current/title-26/part-1/section-1.988-2
+dashboard_gain_10000_acquired_2021,-366.71,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+dashboard_gain_10000_acquired_2022,61.52,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+dashboard_gain_10000_acquired_2023,546.15,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+dashboard_gain_10000_acquired_2024,696.06,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+dashboard_gain_10000_acquired_2025,617.76,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+dashboard_gain_400000_acquired_2021,-14668.32,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+dashboard_gain_400000_acquired_2022,2460.62,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+dashboard_gain_400000_acquired_2023,21845.94,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+dashboard_gain_400000_acquired_2024,27842.54,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
+dashboard_gain_400000_acquired_2025,24710.34,USD,data/e347_fx_gain.csv as read at commit ea594da; reproduced from the IRS average and the board,DS18,https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates
