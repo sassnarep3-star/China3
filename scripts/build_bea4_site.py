@@ -431,7 +431,9 @@ def penalty_page():
     body = f"""
 <h1>The conversion penalty, broken down</h1>
 <p class="lead">Converting and remitting your own money is not, on the sources read here, a taxable
-event. What actually costs money is four separate things — and only one of them is small.</p>
+event. Four separate things do cost money: the bank (a published percentage), Chinese tax on the
+underlying income if it is still unpaid, Chinese FX-law fines if the wrong route is used, and U.S.
+filing penalties if the account was never reported. Only the first is small.</p>
 
 {kpis([
     (usd(at100["lawful_cost_l01"]), "lawful bank cost to send USD 100,000", source_link(BOARD_URL, "S01 + S02")),
@@ -440,7 +442,7 @@ event. What actually costs money is four separate things — and only one of the
     (usd(at100["us_fbar_willful_greater_of"], 0), "U.S. willful FBAR maximum, or 50% of the balance", source_link("https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821", "S31")),
 ])}
 
-<h2 id="stack">1. What is not a penalty</h2>
+<h2 id="stack">1. What is not a penalty — and the one cost that is just a fee</h2>
 <ul class="plain">
 <li><b>Currency conversion.</b> No source read imposes a tax on exchanging RMB for USD. China's
 Order 532 says the state does not restrict current-account international payments and transfers
