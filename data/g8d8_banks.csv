@@ -1,0 +1,7 @@
+bank,name,fee_rate_per_mille,min_cny,max_cny,cable_cny,note,source_url,flags
+BOC,Bank of China,1.0,50,260,150,"Cable is RMB 80 to Hong Kong, Macau and Taiwan. The tariff says local differences and promotions may apply.",https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html,
+ABC,Agricultural Bank of China,1.0,20,200,80,Counter and online banking. The page shows no date.,https://www.abchina.com/cn/PersonalServices/Forex/,F05
+CCB,China Construction Bank,1.0,20,300,80,From a Hebei branch page dated 22 August 2016. Fees are converted to foreign currency and taken from the remitting account.,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+CMB,China Merchants Bank,1.0,100,1000,150,Fees are debited from the RMB account under the shared (SHA) option. The page shows no date.,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm,F04
+ICBC,Industrial and Commercial Bank of China,,,,,Official price list is published as images; nothing could be read.,https://www.icbc.com.cn/column/1438058326864052304.html,F01|F05
+BOCOM,Bank of Communications,,,,,Official fee directory is an image viewer; nothing could be read.,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05

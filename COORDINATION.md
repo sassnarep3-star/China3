@@ -1697,3 +1697,88 @@ Base at claim time: `d9763dc` (`main` after PR #49). Session ID `arena/f9a30493-
 ### PR / merge / deployment record
 
 (filled in by F9A-T7)
+
+
+---
+
+<!-- session-8d8b8493-g8d8-claim-v1 -->
+
+## Session `session-8d8b8493` (`arena/8d8b8493-china3`) — 2026-11-11 new-evidence gap-fill (`g8d8`): bank-by-bank comparison, U.S. receiving side, non-bank channels, SAFE enforcement record, open-flag closures
+
+Branch: `arena/8d8b8493-china3` (fixed by Arena; the `session-<id>/<task>` branch convention cannot be used — same constraint as IR-001). Base: `main` @ `6750ddb` (PR #48 merged). Session ID `session-8d8b8493`, namespace `g8d8`.
+
+### Scan before claiming (2026-11-11T02:40Z)
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*'` + `gh pr list` show **seven sibling sessions that started within the same ten minutes**, read in full before writing this claim:
+
+| Sibling | What it claimed (summary of its own board entry) |
+|---|---|
+| `arena/5a59401a-china3` (`5a59`) | final integration; Q&A register; re-derivation of the e347 440-row ladder; executive-summary refresh; repo audit; `5a59-*` pages; additive `README.md`; regenerated `dashboard/archive.html` |
+| `arena/76e3e41f-china3` (`76e`) | source-freshness re-verification; repo audit; `76e-verification.html` |
+| `arena/6cd77131-china3` (`i6c`) | final integration; repo review; re-derivation of `dashboard/costs.html`; source recheck; `dashboard/questions.html`; `EXECUTIVE_SUMMARY.md`; `scripts/e347_build.py` (NAV), `scripts/e347_data.py` (flag rows), `README.md` |
+| `arena/f931fde1-china3` (`r11`) | final integration; live re-verification; ladder at the 2026-11-11 board; repo review; `r11-*` pages; `index.html`, `EXECUTIVE_SUMMARY.md`, `README.md` |
+| `arena/b8720152-china3` | re-verified the e347 dashboard; flag U15 text (merged as PR #48) |
+| `arena/7bb08217-china3` | final integration; validator re-run; `m5f19` reachability through `scripts/e347_build.py`; `index.html`, `dashboard/archive.html`, `README.md` |
+| `arena/e5537baa-china3` (`e553`) | final integration; independent audit; `index.html`, `dashboard/e553-*`, `scripts/e347_build.py` (root page and root nav) |
+
+**Consequence.** Re-verification of the existing figures, the repo review, the question register, the executive-summary refresh and the final-integration role are each claimed by two to five live sessions. This session claims **none of them** and edits **none of the shared outputs** (`index.html`, `scripts/e347_*.py`, `dashboard/**`, `README.md`, `EXECUTIVE_SUMMARY.md`). It takes only work that no session, past or present, has done. A repo-wide search before claiming found zero occurrences of: any Chinese bank other than Bank of China as a priced source (`工商银行`, `建设银行`, `农业银行`, `交通银行`, `招商银行`, `icbc.com`, `ccb.com`, `abchina`, `bankcomm`, `cmbchina`); any U.S. bank fee schedule (`chase.com`, `bankofamerica`, `wellsfargo`, `Schwab`); any licensed remittance company's official page (`westernunion`, `wise.com`, `MoneyGram`); any SAFE enforcement bulletin (`通报`); `遗产税`; `1.988` (the Treasury regulation); `NIIT`.
+
+### Claimed tasks (`session-8d8b8493`) — namespace `g8d8`, new files only
+
+| ID | Task | Exclusive file scope | Status | Owner |
+|---|---|---|---|---|
+| G8D8-T0 | Claim scope on the board and push before any content work | `COORDINATION.md` (append only) | done | `session-8d8b8493` |
+| G8D8-T1 | **Bank-by-bank comparison.** Official outward-remittance tariff and same-day published FX board of each major mainland bank, each fetched today; cost of converting and wiring USD 10,000 → 400,000 in USD 10,000 steps per bank; values that a bank does not publish stay blank and flagged | `data/g8d8_banks.csv`, `data/g8d8_bank_boards.csv`, `data/g8d8_bank_ladder.csv` | done | `session-8d8b8493` |
+| G8D8-T2 | **U.S. receiving side.** Published incoming-international-wire fee of major U.S. banks and brokerages from each institution's own fee schedule; intermediary fees stay blank unless an official page prices them | `data/g8d8_us_receiving.csv` | done | `session-8d8b8493` |
+| G8D8-T3 | **Channels not yet catalogued.** Licensed remittance companies, e-wallet remittance, cross-border RMB with offshore conversion, and any other route with an official page: whether a U.S. passport holder can use it from the mainland, limits, published price, pros and cons, step by step | `data/g8d8_channels.csv`, `data/g8d8_channel_steps.csv` | done | `session-8d8b8493` |
+| G8D8-T4 | **Enforcement record.** SAFE's published violation bulletins: cases against individuals, amount, fine, fine as a percentage of the amount — the measured penalty on the prohibited routes | `data/g8d8_enforcement.csv` | done | `session-8d8b8493` |
+| G8D8-T5 | **Open-flag closure attempts** with primary texts: U.S.–China treaty rates (e347 flag U06), Chinese tax on inheritance and gifts (U08), taxes on a home sale (U17), the Treasury regulation and IRS publication behind the currency-gain treatment (U05), the gift/undocumented-money case (U07). Each item is either closed with an official link and quotation or stays blank and flagged; no sibling file is edited — results are published as requests | `data/g8d8_flag_closures.csv` | done | `session-8d8b8493` |
+| G8D8-T6 | Source register (URL, issuer, verbatim quotation, fetch time), research notes, pages, generator, independent verifier, CI | `data/g8d8_sources.csv`, `data/g8d8_flags.csv`, `research/g8d8-*.md`, `g8d8-*.html`, `assets/g8d8.css`, `scripts/g8d8_*.py`, `.github/workflows/g8d8-verify.yml` | done | `session-8d8b8493` |
+| G8D8-T7 | PR (`arena/8d8b8493-china3` → `main`), checks, merge without waiting, confirm Pages deploy, record PR link and result here | GitHub PR / Pages / `COORDINATION.md` (append only) | in progress | `session-8d8b8493` |
+
+### G8D8-REQ-01 — link request to whichever final integrator lands the landing page
+
+Five live sessions have claimed `index.html` / `scripts/e347_build.py`. This session will not be a sixth. Request: when the landing page is integrated, add one nav entry pointing at `g8d8-summary.html`, labelled *"Banks compared, U.S. receiving fees, other channels, enforcement record (11 Nov 2026)"*, and one `ARCHIVE_GROUPS` row `(r"^g8d8-", "G8D8 gap-fill (session 8d8b8493)", "New evidence: other banks, U.S. receiving side, other channels, SAFE cases.")`. If every integration session has finished (all its rows `done`) by the time G8D8-T7 runs and the entry is still missing, this session will add those two lines through the generator as the last active session and log it here; otherwise the pages stay reachable by direct URL and from the regenerated Archive page.
+
+### G8D8 log
+
+- `2026-11-11T02:40Z`: claim written and pushed before any content file was touched. Non-goals: no re-pricing of the existing Bank of China ladder, no edit to any sibling page, data file, generator or stylesheet, no new landing page.
+- `2026-11-11T02:55Z`: **Scope amendment (logged takeover, narrow).** New pages are orphaned on the live site unless the Archive list is regenerated, and the catch-all Archive group would label them "First editorial pages". The e347 owner has had no commits since 2026-11-10 (well past 60 minutes) and its tasks are done, so this session took over exactly two things under the e347 convention for adding pages: **one additive `ARCHIVE_GROUPS` row** in `scripts/e347_build.py` (`^g8d8-`), and the mechanical regeneration of `dashboard/archive.html` by that generator (which also picked up five pages other sessions had merged without regenerating). No other line of the generator, the landing page, the navigation or any `dashboard/` page was changed; `e347_build.py --check` and `e347_verify.py` pass. The landing-page nav entry in G8D8-REQ-01 is still requested of the integrators, not taken.
+- `2026-11-11T02:56Z`: merged `origin/main` at `21a15ce` (PRs #49–#60). `COORDINATION.md` conflicted at the tail; resolved by keeping `main`'s text verbatim and appending this block after it (checked programmatically: `main`'s file is an exact prefix, this block is intact). A first resolution attempt aborted on an assertion and the unresolved file was committed locally with conflict markers; `scripts/verify_f52.py` caught it, the commit was amended before anything was pushed, and no marker reached the remote.
+
+### G8D8 results (`session-8d8b8493`, 2026-11-11)
+
+**Pages:** `g8d8-summary.html` (start here), `g8d8-banks.html`, `g8d8-receiving.html`, `g8d8-channels.html`, `g8d8-enforcement.html`, `g8d8-closures.html`, `g8d8-flagged.html` (Flagged for Review), `g8d8-sources.html`. **Data:** `data/g8d8_*.csv` (10 files). **Notes:** `research/g8d8-executive-summary.md`, `research/g8d8-evidence-log.md` (verbatim readings). **Code:** `scripts/g8d8_data.py`, `scripts/g8d8_build.py`, `scripts/g8d8_verify.py`, `assets/g8d8.css`, `.github/workflows/g8d8-verify.yml` (path-filtered to this namespace so it cannot fail another session's branch).
+
+**Findings (each links to its official page on the site):**
+
+| # | Finding | Official source read 2026-11-11 |
+|---|---|---|
+| 1 | Bank of China board 2026/11/11 10:25:02: sells USD at 669.11, buys at 666.30 per 100. Convert and wire once: $53.42 at $10,000, $271.26 at $100,000, $901.20 at $400,000 (0.23%) | https://www.boc.cn/sourcedb/whpj/ · https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html |
+| 2 | Three more official tariffs: Agricultural Bank 1‰ min ¥20 max ¥200 cable ¥80; Construction Bank 0.1% min ¥20 max ¥300 cable ¥80 (2016 branch page); China Merchants Bank 0.1% min ¥100 max ¥1,000 cable ¥150. Wire fee on $400,000 in one wire: $41.85 / $56.79 / $61.28 (BOC) / $171.87 | https://www.abchina.com/cn/PersonalServices/Forex/ · https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml · http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm |
+| 3 | China Merchants Bank board as displayed: sells 669.209, buys 666.305; full cost $1,039.73 at $400,000 (0.26%) | https://fx.cmbchina.com/Hq/ |
+| 4 | U.S. receiving fee: $15 at Bank of America and at Chase. China Merchants Bank pre-charges USD 25 or more under the OUR option | https://info.bankofamerica.com/en/digital-banking/wire-transfers · https://www.chase.com/personal/fees/total-checking |
+| 5 | Wise publishes a from-CNY service for non-mainland nationals with Chinese tax records: 300,000 CNY per transfer, own-name recipient only, overall limit about after-tax salary | https://wise.com/help/articles/2955298/guide-to-cny-transfers |
+| 6 | Western Union sends from China through partner banks on a passport, cash pickup abroad; the page shows bank-account delivery as temporarily unavailable | https://www.westernunion.com/cn/en/send-money.html |
+| 7 | 40 SAFE enforcement cases in four bulletins. 24 individuals who used underground banks: fine ¥0.404–¥0.991 per dollar moved, median ¥0.824 (about 12.3% at 6.6911). 3 individuals who split across other people's quotas: ¥0.340–¥0.351 (about 5.3%) | https://www.safe.gov.cn/safe/2022/0114/20473.html · https://www.safe.gov.cn/safe/2023/0629/22866.html · https://www.safe.gov.cn/safe/2022/0610/21070.html · https://www.safe.gov.cn/beijing/2021/1029/1695.html |
+| 8 | Treaty Art. 9(2): tax in the paying company's country "shall not exceed 10 percent of the gross amount of the dividends" for a beneficial owner resident in the other country | https://www.irs.gov/pub/irs-trty/china.pdf |
+| 9 | Ministry of Finance, 财税函〔2017〕197号: "我国目前并未开征遗产税，也从未发布遗产税相关条例或条例草案" | http://szs.mof.gov.cn/jytafwgk_8391/2017jytafwgk/2017zxwytafwgk/201710/t20171017_2726094.htm |
+| 10 | 31 U.S.C. 5321(a)(5)(C): willful FBAR maximum is the greater of $100,000 or 50 percent of the account balance at the time of the violation | https://www.govinfo.gov/content/pkg/USCODE-2023-title31/html/USCODE-2023-title31-subtitleIV-chap53-subchapII-sec5321.htm |
+| 11 | 财政部 税务总局公告2025年第17号: home bought less than 2 years before sale, 3% VAT on the full price; 2 years or more, exempt; from 2026-01-01 | https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zzs/202601/t478899.html |
+
+**Verification performed.** 30 source pages opened on the issuers' own sites today (16 read in full, 7 as excerpts of the official page, 7 opened without yielding the value; the read mode is printed per source). `scripts/g8d8_verify.py`: 29 checks pass — 240 ladder rows recomputed with exact fractions from the published tariff and board CSVs; 40 enforcement ratios recomputed; 284 table rows each end in a link to an official host; every blank cell links to its flag; 643 external links are all on official hosts; 233 internal links and anchors resolve; generated files match the generator; scope check. All 26 validator commands pass on the merged tree: the 24 inherited ones (including `e347_verify`, `verify_m5f19_site`, `verify_76e`, `verify_f52`, `verify_b2d_decisions`) and the 2 of this layer.
+
+**Flagged / unverified (published on `g8d8-flagged.html`, 18 items; none blocks the merge):** F01 ICBC tariff unreadable (image) · F02 Bank of Communications tariff unreadable (image viewer) · F03 CCB tariff is from a 2016 branch page · F04 CMB board date label reads 10 November · F05 spread unknown at ABC, CCB, ICBC, BoCom · F06 fees-only comparison uses one yardstick rate · F07 Wise price and partner licence not read · F08 Western Union fee and limits not on the page · F09 Wells Fargo, Schwab, Fidelity receiving fees not read; Chase read as excerpt · F10 intermediary deductions unpublished · F11 (high) treaty rate depends on treaty residence, Article 4 not read · F12 inheritance statement dated 2017 · F13 VAT notice read as excerpts; deed tax and LAT blank · F14 26 CFR 1.988-1(a)(9) not read · F15 fine percentages use today's rate as yardstick · F16–F18 irregularities below.
+
+**Irregularities found.**
+1. `dashboard/` route L09 prices the dividend route at the statutory 20% while the treaty text caps it at 10% for a qualifying U.S. resident (e347 flag U06 said the treaty was not read). Not edited; published as F16 and requested below.
+2. ICBC and Bank of Communications publish their statutory price lists only as images; no session can verify those tariffs from text. Third-party sites quote ICBC figures; none was used.
+3. Pages fetched on 11 November (UTC) print "2026-11-10" in their headers (reader-local date). The CMB board therefore carries an unconfirmed date label (F04).
+4. `dashboard/archive.html` on `main` was missing five merged pages until regenerated here; `ARCHIVE_GROUPS` still has no rows for `m5f19-`, `76e-`, `f52-`, so those pages are listed under "First editorial pages".
+5. At least fifteen sessions ran concurrently on 2026-11-11 and at least five claimed the final-integration role; `main` moved eleven PRs in twenty minutes. PR #58 (`bd1e`, open at the time of writing) independently reports the treaty 10% cap and the FBAR 50% prong; the readings agree.
+
+**Requests to other owners (nothing edited).**
+- G8D8-REQ-01 (integrators): landing-page nav entry to `g8d8-summary.html`.
+- G8D8-REQ-02 (owner of `scripts/e347_data.py`): route L09 — show the 10% treaty cap next to 20% with the residence condition; flag U08 — cite 财税函〔2017〕197号; flag U12 — cite 31 U.S.C. 5321(a)(5)(C); flags U03, U04, U17, U18 — link `g8d8-banks.html`, `g8d8-receiving.html`, `g8d8-channels.html`.
+- G8D8-REQ-03 (integrators): add `ARCHIVE_GROUPS` rows for `m5f19-`, `76e-`, `f52-`.
+
