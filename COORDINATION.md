@@ -1237,7 +1237,6 @@ integration role**, which is exactly what the board legend permits.
 - **Observation, flagged:** the repository's Pages setting is `build_type: legacy` (deploy from branch), and the Actions workflow also deploys. Two deployments are created for each push to `main`. Both publish the same tree, so the result is the same; the owner may want to keep only one.
 - **Follow-up PR (this record plus one stylesheet fix):** the route-name column in the two "side by side" cost tables did not wrap on phones. Fixed in `dashboard/site.css`. PR link recorded in the line below.
 - **Follow-up PR:** https://github.com/sassnarep3-star/China3/pull/46. Its merge result is reported in the session's closing message, since a record of its own merge would need yet another pull request.
-<<<<<<< HEAD
 ---
 
 <!-- session-5f1925df-m5f19-v1 -->
@@ -1297,8 +1296,6 @@ reachable by direct URL and this request stays open on the board.
   this branch; confirmed all ten inherited validators PASS at that base (`validate_data`, `check_links`, `verify_deep`,
   `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`,
   `verify_final_integration`). Wrote this claim and pushed it before touching any content file.
-=======
->>>>>>> f6ae79e (Merge pull request #46 from sassnarep3-star/arena/ea347561-china3)
 
 ### B8720152: re-verification, rate-drift flag and republish (claimed)
 
@@ -1317,3 +1314,20 @@ reachable by direct URL and this request stays open on the board.
   - The repository's local clone was shallow in this session; it was unshallowed before pushing. No repository content was affected.
 - **Coordination:** PR #47 (`arena/5f1925df-china3`, m5f19 pages) was merged to main before this session pushed. It is additive and does not touch the e347 files.
 - **Cross-scope request to the m5f19 owner (logged, not edited):** `scripts/verify_m5f19_site.py` check J ("no file outside this session's claim was modified") runs on every branch through `.github/workflows/m5f19-verify.yml` (`branches: ["**"]`). On PR #48 (`arena/b8720152-china3`) it fails because the e347 files this session changed are outside the m5f19 namespace. Every other check on PR #48 passes, including checks A–I and K of the same verifier. Request: scope check J to branches in the m5f19 namespace (for example, run it only when the branch name contains `m5f19`), or make the workflow run only for that namespace. This session did not edit the verifier or the workflow.
+
+---
+
+## Session `session-e5537baa` — independent source audit and final integration (2026-11-11 UTC)
+
+Branch: `arena/e5537baa-china3` (fixed by Arena; per-task branch names are not available in this session). Base: main at `15a79860a1adeb7bbc35ef13eecc6ec4febf2f59` (PR #47). Existing outputs and sibling session scopes are preserved.
+
+**Coordination scan:** GitHub showed no open PR updated after 2026-11-10 09:45 UTC and no new `main` commit since PR #47 at session start. Older board entries that still say “in progress” have had no commits for more than the 60-minute handoff window; this session will not alter their exclusive research or generated files. Previously completed shared landing-page ownership (E347, PR #45/#46) is taken over solely for a final integration if a source-checked correction is necessary. Unmerged stale PRs are not assumed merged and will not be discarded or closed. This append is the claim; it is committed and pushed before content work.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources and notes |
+|---|---|---|---|---|---|
+| E553-1 | Review the actual combined repository and independently check high-impact facts, arithmetic, source reachability, incomplete questions and unverified items | `research/e553-audit.md`, `data/e553_*` | in progress | `session-e5537baa` | Primary official sources checked individually; report limitations honestly. |
+| E553-2 | Final integration: address confirmed issues without discarding existing work; clear mobile-first navigation, source-linked findings/costs and review flags if needed | `index.html`, `dashboard/e553-*`, `assets/e553*`, `scripts/e553_*` | in progress | `session-e5537baa` | Shared `index.html` only in final-integration role after the stale-owner handoff; no sibling-owned generators modified. |
+| E553-3 | Run independent and existing build/link/row checks; PR, checks, merge and Pages verification; append outcomes | `scripts/e553_*`, `.github/workflows/e553-verify.yml`, `COORDINATION.md` (append), GitHub PR/Pages | in progress | `session-e5537baa` | Do not claim unperformed line-by-line verification. Do not merge a broken site. |
+
+### E553 log
+- Claim made 2026-11-11 UTC before content work. Old “in progress” statuses are stale, not evidence that their work was merged; open legacy PRs remain untouched. Final integration will preserve prior content and log any unresolved discrepancies.
