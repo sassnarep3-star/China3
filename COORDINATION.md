@@ -1404,3 +1404,36 @@ discarding anything:
 Also recorded: B8720152's request to scope m5f19 check J is satisfied by this session's claim-aware
 rewrite of that check (see the takeover note above). B8720152's U15 text and `scripts/e347_data.py`
 change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
+
+<!-- session-n676d2a67-v1 -->
+
+## Session `session-n676d2a67` (`arena/676d2a67-china3`) — 2026-11-11 decision-brief pass: same-day source re-read, questions register, re-priced $10k–$400k ladder, repo audit, clean dashboard
+
+Branch: `arena/676d2a67-china3` (Arena single-branch binding; this branch is also this session's integration branch).
+Base commit on `main`: `d9763dca8e9f3a80f76f7012209f7e0c09bc64e0` (PR #49 merged, 2026-11-11T02:37Z).
+Claim pushed before any content file was touched.
+
+### Concurrent-session scan
+
+`git fetch origin '+refs/heads/*:refs/remotes/origin/*'` returned 54 remote branches. Open PRs at claim
+time: #50 (`arena/7881ea76-china3`), #34, #32, #25, #18, #15, #8, #6(draft). None of them claims the
+`n676-*` namespace. This session works **exclusively** inside `n676-*`, `data/n676_*`,
+`research/n676-*`, `scripts/n676_*.py`, `assets/n676.css`, `.github/workflows/n676-verify.yml`, and
+appends to `COORDINATION.md`. It does **not** edit `index.html`, `dashboard/**`, `legacy-index.html`,
+`README.md`, `EXECUTIVE_SUMMARY.md`, `scripts/e347_*` or any other owner's file. Integration requests are
+logged below instead.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| N676-T0 | Claim scope and push before any content work | `COORDINATION.md` (append only) | done | `arena/676d2a67-china3` | n/a | This block |
+| N676-T1 | Same-day (2026-11-11) re-read of every load-bearing official page: URL, HTTP status, verbatim quote, timestamp, still-matches verdict | `data/n676_sources.csv`, `research/n676-verification.md` | unclaimed | `arena/676d2a67-china3` | pending live fetches | No inherited figure copied without a today-fetch |
+| N676-T2 | Independent re-derivation of the USD 10,000→400,000 ladder in $10,000 steps (40 increments × every costed route), most-important-first matrix | `data/n676_ladder.csv`, `data/n676_matrix.csv`, `scripts/n676_engine.py` | unclaimed | `arena/676d2a67-china3` | pending | Own arithmetic only; convention stated on the page |
+| N676-T3 | Method catalogue: every way to turn CNY into USD, lawful and prohibited, with pros/cons/eligibility/caps + numbered step-by-step playbooks | `data/n676_methods.csv`, `data/n676_steps.csv` | unclaimed | `arena/676d2a67-china3` | pending | Every row an official link or blank+`UNVERIFIED` |
+| N676-T4 | **Questions register** — the questions that must be answered before a decision, what is already known, what is not, and exactly how to obtain each missing item | `data/n676_questions.csv` | unclaimed | `arena/676d2a67-china3` | pending | This is the deliverable no earlier session produced |
+| N676-T5 | Repo audit line by line: stale figures, conflicting layers, dead links, arithmetic; irregularities published, not silently fixed | `data/n676_flags.csv`, `research/n676-repo-audit.md` | unclaimed | `arena/676d2a67-china3` | official pages only | Never edits a sibling-owned file |
+| N676-T6 | Clean mobile-first dashboard: 8 category subpages (summary, questions, methods, costs, steps, tax, flagged, sources) | `n676-*.html`, `assets/n676.css` | unclaimed | `arena/676d2a67-china3` | every row a source link or flagged blank | Generated, never hand-edited |
+| N676-T7 | Independent verifier + CI gate for this session's outputs | `scripts/n676_build.py`, `scripts/n676_verify.py`, `.github/workflows/n676-verify.yml` | unclaimed | `arena/676d2a67-china3` | n/a | Re-derives the ladder, enforces official-domain links, blank⇒flag, link parity |
+| N676-T8 | PR (`arena/676d2a67-china3` → `main`), merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / `COORDINATION.md` | unclaimed | `arena/676d2a67-china3` | Actions + Pages API | Do not merge a broken site |
+
+**Log**
+- `2026-11-11T02:45Z`: fetched all remote branches and the open-PR list; confirmed no session claims the `n676` namespace; wrote and pushed this claim before touching any content file. Baseline on `d9763dc` is green: `e347_verify` PASS (440 cost rows), `verify_m5f19_site` PASS (10 checks), `verify_76e` PASS, `verify_dashboard` PASS, `verify_final_integration` PASS, `verify_cost_tables` PASS, `validate_data` OK, `check_links` OK.
