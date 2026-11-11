@@ -2168,3 +2168,12 @@ Branch: `arena/54e4bfc5-china3` (fixed by Arena; no branch switch). Base: `64a5c
 - Bank of China exchange-rate board: https://www.boc.cn/sourcedb/whpj/enindex_1619.html — fetched in this session; the page reported the USD row at `2026/11/11 15:30:04` (Beijing): buying 666.06, selling 668.86, middle 671.91 per 100 USD.
 - Bank of China personal e-banking transfer tariff: https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html — fetched in this session; it states 1‰, minimum RMB 50, maximum RMB 260, plus RMB 150 telecom fee for non-HK/Macao/Taiwan destinations, and notes agreement/promotional/local differences.
 - The B9B3 source register records its full-method cost matrix at the earlier 2026-11-11 10:40:02 board. The new reading differs, so the published matrix stays a time-stamped estimate and is not represented as a current branch quote. Intermediary, receiving-bank, tax, and account-specific amounts are not filled in.
+
+---
+
+<!-- session-arena-54e4bfc5-china3-54e4-claim-outcome -->
+
+### 54E4-T0 claim-only PR outcome
+
+- Claim-only PR #76: https://github.com/sassnarep3-star/China3/pull/76 — merged to `main` as `9977fd8` after its checks completed (18 pass, 3 skip: the two path/branch-filtered edition checks and PR-only Pages deploy). No content files were changed in that PR. The claim is now visible on `main` before integration work.
+- Pages deploy is intentionally not asserted for this claim-only PR; the content integration PR will be built, merged, and checked separately.
