@@ -1,0 +1,7 @@
+/* f52c: small additions on top of dashboard/site.css. No layout redefinition. */
+table.stack td.quote{font-size:.86rem;color:var(--muted);max-width:52ch}
+table.stack td.quote::before{color:var(--muted)}
+@media (min-width:720px){
+  table.stack td.quote{min-width:24rem}
+}
+h3 .note{font-weight:400}
