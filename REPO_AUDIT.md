@@ -58,3 +58,37 @@ VERIFICATION.md
 REPO_AUDIT.md
 README.md
 ```
+
+---
+
+## Re-audit — session `arena/1c55025d-china3` (2026-11-11, commit `d9763dc` base)
+
+**What was reviewed:** every tracked file at `d9763dc` — root HTML (index + all c3x/d646/s775/m5f19/a513/s436/deep/etc.), `dashboard/*`, `data/*` (440 e347 cost rows + 1,400-layer costs + 85 deep sources), `scripts/*` (e347_build + e347_verify + 15 other verifiers), `.github/workflows/*` (16 workflows), `research/*` markdown packs, `EXECUTIVE_SUMMARY.md` + `COORDINATION.md`.
+
+**How:** ran every verifier independently of its data producer (see §7 in `research/1c55025d-audit.md`); each checks: recompute costs from board fractions, every table row Source on official allowlist, every blank links to a `Uxx` on `dashboard/flagged.html`, no empty cells, local links/anchors resolve, generated files byte-identical. Full log: `research/1c55025d-audit.md` §§6–7.
+
+**Result:**
+
+| Check | Result |
+|---|---|
+| `scripts/e347_build.py` | 15 files, 0 changed |
+| `scripts/e347_verify.py` | PASS — 440 rows recomputed exactly; 8 pages, 659 table rows sourced, 380 blanks flagged, 2139 links resolved, 146 data rows with official URLs |
+| `scripts/verify_76e.py` | PASS — 40 rows + 18 re-check rows + 7 findings sourced |
+| `scripts/verify_m5f19_site.py` | PASS — 10 checks, claim-aware (J scoped to merge-base) |
+| `scripts/verify_c3x_site.py` | PASS — 16 sources, 40 ladder rows, 560 method rows |
+| `scripts/verify_d646_site.py` | PASS — every row sourced, arithmetic re-derived |
+| `scripts/verify_s775_site.py` | PASS — 52 sources, 24 methods, 40 ladder rows |
+| `scripts/verify_s436_site.py` | PASS — 36 sources, 640 rows |
+| `scripts/verify_c5bf.py` | PASS — 2 boards, 40 rows |
+| `scripts/verify_final_integration.py` | PASS — 640 rows, 2572 links |
+| `scripts/verify_cost_tables.py` | PASS |
+| `scripts/test_costs.py` | PASS |
+| `scripts/verify_deep.py` | PASS — 85 sources, 278 rows |
+| `scripts/validate_data.py` | OK — 27 sources, 22 channels, 25 taxes, 15 penalties, 19 flags, 0 warnings |
+| `scripts/check_links.py` | OK — 9 pages, all anchors resolve |
+
+**Irregularities carried forward (non-blocking, published on `dashboard/flagged.html`):** U01–U19 (see audit §2). New note this pass: board snapshot U15 is one day old (2026/11/10 vs 2026/11/11) — documented, not repriced; Middle column ≠ midpoint — documented; 9 excerpt sources flagged U11; intermediary fees U04 blank. No hallucination: every number traces to S01/S02/board fractions; no value inferred.
+
+**Site:** `index.html` is `e347_build.py` output (generator meta `e347-dashboard`), 8-link nav consistent, `prefers-color-scheme` friendly, `table.stack` mobile cards at 375px, `dashboard/site.css` handles all. Pages deploy from root via `pages.yml`; verify with `dashboard/archive.html` (82 pages discovered).
+
+Full trace: `research/1c55025d-audit.md` (431 lines, every brief requirement mapped, every flag with official URL, every cost recomputed, step-by-step playbooks).
