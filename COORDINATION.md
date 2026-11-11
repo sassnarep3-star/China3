@@ -2171,3 +2171,7 @@ The expanded suite also ran `scripts/n676_verify.py`, whose check K rejects ever
 **Verification:** all 25 repository verifier/test/data/link/marker commands pass, plus `e347_build.py --check` and `git diff --check`. Canonical gate: 560 cost rows independently recomputed; 879 sourced HTML table rows; 554 blank values all flag-linked; 2,850 links resolved; 172 data rows with official/first-party URLs. External HTTP checks in the legacy `check_links.py` remain skipped; direct source reads above are the substantive evidence. No browser visual audit is claimed. Provider prices, intermediary deductions, personal tax and eligibility remain blank/conditional, not inferred.
 
 **Irregularities handled:** two stale hard-coded-board gates and one namespace-only ownership gate were taken over under the >60-minute rule and narrowly repaired without changing historical content. No open sibling PR merged. D2A-3 PR/deploy pending.
+
+### D2A scope amendment — 76e generator freshness
+
+CI exposed one additional stale assumption in `scripts/build_76e_site.py --check`: it used the current canonical CSV as if it were still the archived 10 November baseline. Under the same stale-claim takeover, D2A updates that generator to compute its archived baseline from the archived board and reconcile the current canonical CSV against the current 15:30:04 board. This preserves the historical 76e page/data byte-for-byte while allowing its freshness gate to run after the canonical refresh.
