@@ -1480,3 +1480,33 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 - 2026-11-11T claim: read COORDINATION.md (1319 lines), inspected all remote branches (`git ls-remote`, `git branch -a`), confirmed `main` at 6750ddb, wrote non-overlapping claim and pushed before touching content files.
 - 2026-11-11T audit done: `research/1c55025d-audit.md` (431 lines, R0-R10 trace, §§1-12), `REPO_AUDIT.md` re-audit (16 verifiers PASS), `scripts/e347_build.py` 15 files 0 changed, `scripts/e347_verify.py` PASS; R1-R7 marked done, R8 PR pending.
 - 2026-11-11T pre-PR checks: `validate_data OK`, `check_links OK`, `verify_dashboard PASS`, `verify_76e PASS`, `verify_m5f19 PASS` (claim-aware J), `verify_c3x PASS`, `verify_d646 PASS`, `verify_s775 PASS`, `verify_s436 PASS`, `verify_c5bf PASS`, `verify_final_integration PASS`, `test_costs PASS`, `verify_deep PASS`; no broken links; no hallucination (every dollar recomputed from S01/S02 fractions).
+
+---
+
+<!-- session-arena/cca7dc21-china3 -->
+
+## Session `arena/cca7dc21-china3` — Independent Live Verification, Pre-Decision Readiness Register, 22-Method Deep Cost & Tax Breakdown (`cca7` edition, 2026-11-11)
+
+- **Branch:** `arena/cca7dc21-china3` (Arena single-branch binding; fixed session branch).
+- **Base at claim:** `46ac821` (`origin/main`).
+- **Concurrent-session discipline:** Multiple live sibling sessions (`arena/5a59401a-china3`, `arena/1c55025d-china3`, `arena/b2d4ff40-china3`, `arena/73fec6c5-china3`, `arena/1e361b54-china3`, `arena/f52c089a-china3`, `arena/dff3f5ef-china3`, `arena/8d8b8493-china3`, `arena/7881ea76-china3`) have claimed `index.html`, `EXECUTIVE_SUMMARY.md`, `README.md`, `REPO_AUDIT.md`, `QNA.md`, and `scripts/e347_*.py`. Under the board rule (*"never start a task another session has claimed; keep scopes non-overlapping; if a task requires changing a file owned by another session, log the request in COORDINATION.md instead of editing it"*), this session claims a **100% strictly non-overlapping `cca7` namespace** (`cca7-*.html`, `assets/cca7.css`, `assets/cca7.js`, `data/cca7_*.csv`, `research/cca7-*.md`, `scripts/build_cca7_site.py`, `scripts/verify_cca7_site.py`, `.github/workflows/cca7-verify.yml`), plus append-only `COORDINATION.md` and generator-rebuilt `dashboard/archive.html`.
+
+### Claimed tasks (`arena/cca7dc21-china3`)
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| CCA7-T0 | Claim strictly non-overlapping `cca7` scope and push immediately | `COORDINATION.md` (append only) | done | `arena/cca7dc21-china3` | n/a | Claim pushed before touching any content file |
+| CCA7-T1 | Live 2026-11-11 primary-source verification & line-by-line repo review; flag all irregularities and unverified values | `data/cca7_sources.csv`, `data/cca7_repo_audit.csv`, `data/cca7_flags.csv`, `research/cca7-repo-audit.md` | in progress | `arena/cca7dc21-china3` | pending today's live official fetches | Official domains only; zero inferred values |
+| CCA7-T2 | Executive summary + Pre-Decision Questions, Known vs Missing Info, Answers & Discovery Suggestions register | `research/cca7-executive-summary.md`, `data/cca7_questions.csv`, `cca7-summary.html`, `cca7-questions.html` | in progress | `arena/cca7dc21-china3` | pending live fetches | Covers every decision gate before action |
+| CCA7-T3 | Exhaustive CNY→USD conversion methods catalogue (lawful, conditional, offshore, prohibited) + deep conversion-penalty & tax minimization breakdown | `data/cca7_methods.csv`, `data/cca7_penalties.csv`, `cca7-methods.html`, `cca7-penalties.html` | in progress | `arena/cca7dc21-china3` | pending live fetches | Pros, cons, caps, PRC & U.S. tax/penalties |
+| CCA7-T4 | Exact $10,000 → $400,000 cost estimation ($10k increments × all methods, today's 2026-11-11 BOC board + tariff) + step-by-step execution playbooks | `data/cca7_ladder.csv`, `data/cca7_method_costs.csv`, `data/cca7_steps.csv`, `cca7-costs.html`, `cca7-steps.html` | in progress | `arena/cca7dc21-china3` | pending live fetches | Mobile-friendly tables, most important info first; unconfirmed fees left blank + flagged |
+| CCA7-T5 | Clean dashboard landing page & category subpages (`Flagged for Review`, `Audit`, `Sources`) + deterministic builder + independent verifier + CI gate | `cca7-index.html`, `cca7-flagged.html`, `cca7-audit.html`, `cca7-sources.html`, `assets/cca7.css`, `assets/cca7.js`, `scripts/build_cca7_site.py`, `scripts/verify_cca7_site.py`, `.github/workflows/cca7-verify.yml`, `dashboard/archive.html` | in progress | `arena/cca7dc21-china3` | pending | Every table row links an official source or is blank+flagged |
+| CCA7-T6 | Open PR (`arena/cca7dc21-china3` → `main`), confirm all checks green, merge without waiting, verify GitHub Pages deploy, record PR & merge result | GitHub PR / Pages / `COORDINATION.md` (append only) | in progress | `arena/cca7dc21-china3` | GitHub Actions + Pages API | Do not merge a broken site |
+
+### CCA7-REQ-01 — Link request to active shared-landing-page integrator
+
+Please add one link on `index.html` pointing to `cca7-index.html` labelled *"CCA7 Complete 2026-11-11 Decision, 22-Method & $10k–$400k Cost Dashboard"*. Per board rules, `arena/cca7dc21-china3` will not edit `index.html` directly while sibling integrators own it; `cca7-*.html` pages are live at root URLs and indexed via regenerated `dashboard/archive.html`.
+
+### CCA7 Log
+- `2026-11-11`: Read `COORDINATION.md` in full, scanned all active remote branches and open PRs, rebased onto `origin/main` (`46ac821`), wrote strictly non-overlapping `cca7` claim, and pushed immediately before starting content work.
+
