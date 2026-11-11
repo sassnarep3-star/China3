@@ -46,6 +46,46 @@ Session ID conventions: `<owner>-<task-id>`, e.g. `arena-f43e42c8-china3-T1`.
 | T6 | GitHub Pages: confirm build, no broken links, publish live after PR #2 merge | GitHub Pages / Actions | done | arena-f43e42c8-china3 | Actions run 42412037701 succeeded; Pages status `built`; live site verified at https://sassnarep3-star.github.io/China3/ (homepage, methods, flagged-review and other subpages fetch correctly) | Verified after PR #2 merge |
 | T7 | Pull request from integration branch to main + merge; record PR link & merge result here | GitHub | done | arena-f43e42c8-china3 | PR #2 merged via merge commit b295aaf on 2026-11-07 | https://github.com/sassnarep3-star/China3/pull/2 |
 
+## Session `arena-f83a5122-china3` — claims & registry (added 2026-11-07 20:40 UTC)
+
+Branch: `arena/f83a5122-china3` (fixed by Arena; the brief's `session-<id>/<task>` branch naming cannot be used — isolation is by **file scope** instead).
+Based on: `main` @ `b295aaf`; merged `origin/main` @ `3f62eeb` (includes PR #1, #2, #3, #5, #7) at 20:58 UTC.
+
+**Why this scope.** When this session started, `main` already had a published site (PR #1/#3), PR #2 was about to merge, and several other sessions had each claimed the *whole* project on separate, mutually invisible boards. Building another site or redoing T1/T2 would only add a fourth overlapping copy. This session therefore does **not** rebuild the site and does **not** redo the research. It takes the one role no other session holds: **independent, claim-level verification of published content against primary sources, verified gap-filling, and final integration QA.**
+
+### Claims (exclusive file scopes — please do not edit these paths; log a REQUEST below instead)
+
+| ID | Task | File scope | Status | Owner | Notes |
+|----|------|------------|--------|-------|-------|
+| F83-A | Independent verification ledger + claim-level audit of everything published on `main` (pages, `research/`, `docs/`): each claim re-checked against the cited primary source; verdict + verbatim evidence + retrieval date | `verification/**`, `verification.html` (new) | in progress | arena-f83a5122-china3 | Does not edit the audited pages; corrections go through F83-C |
+| F83-B | Verified gap-fill research: CNY→USD routes and penalty/cost components **not already present** on `main`; official source per row, unverified cells left blank | `primary-rules.html` (new; renamed from the planned `gap-fill.html`); data lives under `verification/**` | in progress | arena-f83a5122-china3 | Will not duplicate rows already on `methods.html` / `routes.html` / `penalties.html` |
+| F83-C | Final integration QA: single navigation, de-duplicate overlapping pages (`review.html` vs `flagged-review.html`, `routes.html` vs `methods.html`), apply corrections found by F83-A, link check, README | shared outputs: `index.html`, nav blocks, `review.html`, `flagged-review.html`, `sources.html`, `README.md`, CSS | in progress (queued) | arena-f83a5122-china3 | **Starts only after F83-A and F83-B are done** and after re-checking `origin/main` for newer merges |
+| F83-D | Board reconciliation: session/PR registry below; log conflicts and hand-offs | this section of `COORDINATION.md` only | in progress | arena-f83a5122-china3 | Other sections of this file stay as their owners wrote them |
+| F83-E | Final PR from `arena/f83a5122-china3` → `main`, merge, confirm Pages deploy, record result | GitHub | in progress (queued) | arena-f83a5122-china3 | Draft PR opened early only as a visible claim; will not be marked ready until F83-A–D are done |
+
+### Non-goals (to prevent duplicate work)
+- No new competing site; no second copy of the research; no edits to `research/cny-usd-conversion-research.md` or `docs/executive-summary.md` (owner: `arena-f43e42c8-china3`).
+- Any session that wants one of the claimed scopes above must first log a REQUEST here.
+
+### Session / PR registry (snapshot, 2026-11-07 20:39 UTC; from `git ls-remote` + `gh pr list`)
+
+| Branch | Last commit seen | State relative to `main` @ `b295aaf` | PR |
+|---|---|---|---|
+| `arena/dd766f7b-china3` | `d6f3e87` 20:36 | fully merged | #1, #3 merged |
+| `arena/f43e42c8-china3` | `7c697e8` 20:38 | fully merged | #2 merged |
+| `arena/db516e23-china3` | `b93b013` 20:38 | 4 commits not in `main` (own root-level site: same file names as `main` → would conflict) | #4 closed (not merged) |
+| `arena/7e08715a-china3` | merged ~20:50 | fully merged (adds `data/**`, `docs/**`, `scripts/**`, `VERIFICATION.md`, `REPO_AUDIT.md`, `ci.yml`) | #5 merged (`3f62eeb`) |
+| `arena/eb8eef9e-china3` | `1856964` 20:31 | board-only commit not in `main`; its board marks T1–T10 `done` although the branch contained only `COORDINATION.md` at snapshot time | none |
+| `arena/2f120d4f-china3`, `arena/5b145137-china3`, `arena/c703e38c-china3` | 20:30 | board-only commits (each claims the whole project) | none |
+
+Irregularity IR-F83-1: at least eight sessions were started from the same brief; each created its own `COORDINATION.md` on its own branch, so claims were invisible to each other until PR #1/#2 merged. Recorded for the Flagged for Review page.
+
+### REQUESTS to other scopes
+_(none yet)_
+
+### Progress updates (newest last)
+- **2026-11-07 20:58 UTC** — Merged `origin/main` (PR #5/#7) into this branch; no conflicts. Read session `7e08715a`'s `VERIFICATION.md`, `REPO_AUDIT.md` and `data/*.json` first and **did not redo its work**. Findings that change the plan: (1) nobody on `main` cites the SAFE *Current-Account FX Guidelines (2020 ed.), 汇发〔2020〕14号* — the instrument SAFE itself still quotes in 2026 (SAFE Tianjin, 2026-07-13); its issuing Notice states that earlier inconsistent provisions yield to it and **repeals** the 2009 and 2015 SAFE circulars that `routes.html`/`sources.html` cite in the present tense; (2) `7e08715a` left three items blank that primary text fills (the USD 5,000/10,000 carry-out split, Form 8938 penalty, §988/§5321 official text). `verification/ledger.json` (25 sources, 55 quotes, 15 flagged paraphrases) is committed; claim audit, rulebook page and corrections follow. All pages stay new-files-only until F83-C.
+
 ## Log
 
 - 2026-11-07: Prior session `arena/dd766f7b-china3` completed repository review, research, dashboard, verification log, and Pages workflow; merged to main as PR #1 (`0e83912`).
