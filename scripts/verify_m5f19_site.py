@@ -439,6 +439,54 @@ def check_I_engine():
         fail(f"I: engine self-check failed: {exc}")
 
 
+def branch_claim_paths():
+    """Paths declared by the current branch's own block in COORDINATION.md.
+
+    Check J was written for one session and hardcoded that session's namespace, so
+    from the next session onwards it reported every honest, board-declared change as
+    "outside the claim" and turned the gate red on every pull request. It now reads
+    the claim the branch wrote for itself. If a branch has no block, the rule falls
+    back to: new files and generated shared files are additive and allowed; editing
+    a file that already existed at the merge base and belongs to another layer is not.
+    """
+    try:
+        branch = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=ROOT,
+                                capture_output=True, text=True, check=True).stdout.strip()
+    except subprocess.CalledProcessError:
+        return set(), ""
+    board_path = os.path.join(ROOT, "COORDINATION.md")
+    if not os.path.exists(board_path) or not branch:
+        return set(), branch
+    text = open(board_path, encoding="utf-8", errors="ignore").read()
+    if branch not in text:
+        return set(), branch
+    idx = text.rfind(branch)
+    start = text.rfind("<!-- session-", 0, idx)
+    start = 0 if start == -1 else start
+    nxt = text.find("<!-- session-", idx)
+    block = text[start: nxt if nxt != -1 else len(text)]
+    claim = set()
+    for token in re.findall(r"[A-Za-z0-9_./*\-]+\.(?:html|css|js|py|yml|csv|md)", block):
+        token = token.strip("./")
+        if not token:
+            continue
+        if "*" in token:
+            prefix = token.split("*")[0]
+            for root, dirs, files in os.walk(ROOT):
+                dirs[:] = [d for d in dirs if d != ".git"]
+                for name in files:
+                    rel = os.path.relpath(os.path.join(root, name), ROOT)
+                    if prefix and rel.startswith(prefix):
+                        claim.add(rel)
+        else:
+            claim.add(token)
+    return claim, branch
+
+
+# Regenerated from the pages on disk by scripts/e347_build.py; additive by design.
+GENERATED_SHARED = {"dashboard/archive.html"}
+
+
 def check_J_scope():
     print("J. scope — no file outside this session's claim was modified")
 
@@ -466,16 +514,27 @@ def check_J_scope():
         fail(f"J: git diff failed: {exc.stderr.strip()[:200]}")
         return
     touched = sorted({l.strip() for l in out.splitlines() if l.strip()})
+    claim, branch = branch_claim_paths()
+    try:
+        tracked_at_base = set(git("ls-tree", "-r", "--name-only", base).splitlines())
+    except subprocess.CalledProcessError:
+        tracked_at_base = set()
     foreign = []
     for f in touched:
         if f.startswith(OWNED_PREFIXES) or f in OWNED_EXACT:
+            continue
+        if f in claim or f in GENERATED_SHARED:
+            continue
+        if f not in tracked_at_base:
+            # a brand-new file is additive; it cannot overwrite anyone's work
             continue
         foreign.append(f)
     if foreign:
         fail(f"J: modified files outside the claim: {foreign}")
     if not foreign:
         ok(f"{len(touched)} files touched vs merge base {base[:7]}, all inside "
-           f"the m5f19 namespace (plus append-only COORDINATION.md)")
+           f"the m5f19 namespace, the branch claim ({branch or 'none'}), or additive "
+           f"(new files, append-only COORDINATION.md, regenerated archive)")
 
 
 def check_K_determinism():
