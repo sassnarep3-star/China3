@@ -1425,3 +1425,24 @@ change are kept as-is; finding F03 now credits that update and states only what 
   closing message, because a record of its own merge would need another pull request.
 - **Link request still open:** 76E-REQ-01 (nav entry on `index.html`). The page is reachable by direct
   URL and from the Archive page in the meantime.
+
+## Integration session `arena/78c46684-china3` — independent verification, Q&A, cost table, PR + merge
+
+Branch: `arena/78c46684-china3`, branched from `main` at `6750ddb` (PR #48 merge). Working tree clean at session start.
+
+### Claim and scope
+
+This session claims V1–V5 on its own board. Scopes: independent verification of official sources, Q&A document, cost-table verification, site build/Pages confirmation, PR + merge. No overlap with P1–P7, T1–T7, T8–T16 or the deep-research integration, all of which are already `done`.
+
+| Task | Status | File scope | Notes |
+|------|--------|------------|-------|
+| V1 | in progress | `data/*`, `*.md`, root HTML | Independent reachability + fact check of every official source cited on the cost/methods/flagged pages |
+| V2 | unclaimed | `docs/QNA.md` (new) | Questions, information and answers that must be addressed before a decision; with suggestions to discover missing information |
+| V3 | unclaimed | `data/e347_costs.csv`, `dashboard/costs.html` | Spot-check cost math at $10k/$100k/$400k against the BOC tariff and board |
+| V4 | unclaimed | `.github/workflows/pages.yml`, root `index.html` | Confirm Pages build + deploy; no broken local links |
+| V5 | unclaimed | GitHub | PR from this branch to `main`; merge; record PR link and merge result here |
+
+### Log
+
+- 2026-11-11: session `arena/78c46684-china3` resolved the committed merge conflict in `COORDINATION.md` (HEAD `session-5f1925df` block kept; empty `f6ae79e` side dropped) and claimed V1–V5; claim committed and pushed immediately.
+- Independent official-source checks completed: IRS yearly average rates (China Yuan 2024 = 7.189, 2025 = 7.129) at irs.gov; 31 CFR 1010.821 FBAR willful penalty $165,353 at ecfr.gov; SAFE FX Regulation State Council Order No. 532 (arts. 5, 39–45, 52) at safe.gov.cn. All three reachable and consistent with the cited figures.
