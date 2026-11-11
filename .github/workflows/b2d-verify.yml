@@ -1,0 +1,39 @@
+name: Verify decision register
+
+# Session b2d4ff40. Checks only the files that session owns plus the shared
+# navigation, so a red result here always points at the decision register.
+
+on:
+  push:
+    branches: ["arena/b2d4ff40-china3"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  b2d:
+    name: Decision register — sources, parity, discovery steps
+    # Only this session's branch and its pull request. Other sessions'
+    # branches must not be failed by a gate on files they do not own.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'arena/b2d4ff40-china3'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild the dashboard (must be idempotent for the register)
+        run: |
+          python3 scripts/e347_build.py
+          git diff --exit-code -- data/b2d_decisions.csv dashboard/decisions.html \
+            || (echo "::error::generated register files were stale"; exit 1)
+
+      - name: Independent gate on the register
+        run: python3 scripts/verify_b2d_decisions.py
+
+      - name: Dashboard gate (navigation, every row sourced, blanks flagged)
+        run: python3 scripts/e347_verify.py

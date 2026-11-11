@@ -1,0 +1,241 @@
+amount_usd,bank,yardstick_cny_per_usd,fee_cny_at_yardstick,fee_usd_at_yardstick,own_sell_rate,own_midpoint,fee_cny_own_rate,fee_usd_own_rate,spread_usd,total_usd,total_pct,source_urls,flags
+10000,BOC,6.6911,216.91,32.42,6.6911,6.67705,216.91,32.42,21.00,53.42,0.5342,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+20000,BOC,6.6911,283.82,42.42,6.6911,6.67705,283.82,42.42,42.00,84.42,0.4221,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+30000,BOC,6.6911,350.73,52.42,6.6911,6.67705,350.73,52.42,62.99,115.41,0.3847,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+40000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,83.99,145.27,0.3632,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+50000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,104.99,166.27,0.3325,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+60000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,125.99,187.27,0.3121,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+70000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,146.99,208.27,0.2975,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+80000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,167.98,229.26,0.2866,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+90000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,188.98,250.26,0.2781,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+100000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,209.98,271.26,0.2713,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+110000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,230.98,292.26,0.2657,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+120000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,251.98,313.26,0.2611,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+130000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,272.97,334.25,0.2571,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+140000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,293.97,355.25,0.2538,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+150000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,314.97,376.25,0.2508,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+160000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,335.97,397.25,0.2483,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+170000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,356.97,418.25,0.2460,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+180000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,377.96,439.24,0.2440,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+190000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,398.96,460.24,0.2422,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+200000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,419.96,481.24,0.2406,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+210000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,440.96,502.24,0.2392,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+220000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,461.96,523.24,0.2378,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+230000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,482.95,544.23,0.2366,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+240000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,503.95,565.23,0.2355,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+250000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,524.95,586.23,0.2345,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+260000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,545.95,607.23,0.2336,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+270000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,566.95,628.23,0.2327,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+280000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,587.95,649.23,0.2319,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+290000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,608.94,670.22,0.2311,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+300000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,629.94,691.22,0.2304,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+310000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,650.94,712.22,0.2297,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+320000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,671.94,733.22,0.2291,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+330000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,692.94,754.22,0.2286,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+340000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,713.93,775.21,0.2280,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+350000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,734.93,796.21,0.2275,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+360000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,755.93,817.21,0.2270,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+370000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,776.93,838.21,0.2265,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+380000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,797.93,859.21,0.2261,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+390000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,818.92,880.20,0.2257,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+400000,BOC,6.6911,410.00,61.28,6.6911,6.67705,410.00,61.28,839.92,901.20,0.2253,https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html https://www.boc.cn/sourcedb/whpj/,
+10000,ABC,6.6911,146.91,21.96,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+20000,ABC,6.6911,213.82,31.96,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+30000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+40000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+50000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+60000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+70000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+80000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+90000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+100000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+110000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+120000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+130000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+140000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+150000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+160000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+170000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+180000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+190000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+200000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+210000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+220000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+230000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+240000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+250000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+260000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+270000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+280000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+290000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+300000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+310000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+320000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+330000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+340000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+350000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+360000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+370000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+380000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+390000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+400000,ABC,6.6911,280.00,41.85,,,,,,,,https://www.abchina.com/cn/PersonalServices/Forex/ https://ewealth.abchina.com.cn/ForeignExchange/,F05
+10000,CCB,6.6911,146.91,21.96,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+20000,CCB,6.6911,213.82,31.96,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+30000,CCB,6.6911,280.73,41.96,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+40000,CCB,6.6911,347.64,51.96,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+50000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+60000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+70000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+80000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+90000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+100000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+110000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+120000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+130000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+140000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+150000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+160000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+170000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+180000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+190000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+200000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+210000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+220000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+230000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+240000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+250000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+260000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+270000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+280000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+290000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+300000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+310000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+320000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+330000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+340000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+350000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+360000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+370000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+380000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+390000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+400000,CCB,6.6911,380.00,56.79,,,,,,,,https://www3.ccb.com/chn/2016-08/22/article_2021122215120781239.shtml,F03|F05
+10000,CMB,6.6911,250.00,37.36,6.69209,6.67757,250.00,37.36,21.70,59.06,0.5906,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+20000,CMB,6.6911,283.82,42.42,6.69209,6.67757,283.84,42.41,43.39,85.80,0.4290,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+30000,CMB,6.6911,350.73,52.42,6.69209,6.67757,350.76,52.41,65.09,117.50,0.3917,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+40000,CMB,6.6911,417.64,62.42,6.69209,6.67757,417.68,62.41,86.79,149.20,0.3730,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+50000,CMB,6.6911,484.56,72.42,6.69209,6.67757,484.60,72.41,108.49,180.90,0.3618,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+60000,CMB,6.6911,551.47,82.42,6.69209,6.67757,551.53,82.41,130.18,212.59,0.3543,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+70000,CMB,6.6911,618.38,92.42,6.69209,6.67757,618.45,92.41,151.88,244.29,0.3490,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+80000,CMB,6.6911,685.29,102.42,6.69209,6.67757,685.37,102.41,173.58,275.99,0.3450,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+90000,CMB,6.6911,752.20,112.42,6.69209,6.67757,752.29,112.41,195.28,307.69,0.3419,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+100000,CMB,6.6911,819.11,122.42,6.69209,6.67757,819.21,122.41,216.97,339.38,0.3394,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+110000,CMB,6.6911,886.02,132.42,6.69209,6.67757,886.13,132.41,238.67,371.08,0.3373,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+120000,CMB,6.6911,952.93,142.42,6.69209,6.67757,953.05,142.41,260.37,402.78,0.3357,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+130000,CMB,6.6911,1019.84,152.42,6.69209,6.67757,1019.97,152.41,282.06,434.47,0.3342,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+140000,CMB,6.6911,1086.75,162.42,6.69209,6.67757,1086.89,162.41,303.76,466.17,0.3330,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+150000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,325.46,497.30,0.3315,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+160000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,347.16,519.00,0.3244,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+170000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,368.85,540.69,0.3181,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+180000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,390.55,562.39,0.3124,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+190000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,412.25,584.09,0.3074,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+200000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,433.95,605.79,0.3029,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+210000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,455.64,627.48,0.2988,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+220000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,477.34,649.18,0.2951,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+230000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,499.04,670.88,0.2917,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+240000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,520.73,692.57,0.2886,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+250000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,542.43,714.27,0.2857,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+260000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,564.13,735.97,0.2831,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+270000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,585.83,757.67,0.2806,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+280000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,607.52,779.36,0.2783,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+290000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,629.22,801.06,0.2762,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+300000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,650.92,822.76,0.2743,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+310000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,672.61,844.45,0.2724,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+320000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,694.31,866.15,0.2707,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+330000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,716.01,887.85,0.2690,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+340000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,737.71,909.55,0.2675,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+350000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,759.40,931.24,0.2661,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+360000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,781.10,952.94,0.2647,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+370000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,802.80,974.64,0.2634,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+380000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,824.50,996.34,0.2622,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+390000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,846.19,1018.03,0.2610,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+400000,CMB,6.6911,1150.00,171.87,6.69209,6.67757,1150.00,171.84,867.89,1039.73,0.2599,http://www.cmbchina.com/PersonalBank/GB/Page/standfee.htm https://fx.cmbchina.com/Hq/,F04
+10000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+20000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+30000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+40000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+50000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+60000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+70000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+80000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+90000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+100000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+110000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+120000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+130000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+140000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+150000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+160000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+170000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+180000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+190000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+200000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+210000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+220000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+230000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+240000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+250000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+260000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+270000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+280000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+290000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+300000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+310000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+320000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+330000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+340000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+350000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+360000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+370000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+380000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+390000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+400000,ICBC,6.6911,,,,,,,,,,https://www.icbc.com.cn/column/1438058326864052304.html https://www.icbc.com.cn/column/1438058341489590354.html,F01|F05
+10000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+20000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+30000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+40000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+50000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+60000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+70000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+80000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+90000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+100000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+110000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+120000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+130000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+140000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+150000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+160000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+170000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+180000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+190000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+200000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+210000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+220000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+230000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+240000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+250000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+260000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+270000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+280000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+290000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+300000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+310000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+320000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+330000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+340000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+350000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+360000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+370000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+380000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+390000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05
+400000,BOCOM,6.6911,,,,,,,,,,https://www.bankcomm.com/BankCommSite/shtml/jyjr/cn/7924/2600718/2615550.shtml?channelId=7924,F02|F05

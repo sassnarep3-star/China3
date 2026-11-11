@@ -1,5 +1,12 @@
 # Executive summary
 
+> **Integration addendum (2026-11-11, session `arena/f9a30493-china3`).** The landing-page navigation now
+> links two independently verified editions that were merged to `main` earlier today and were reachable only
+> by direct URL: the [M5F19 re-verification & cost reconciliation](m5f19-dashboard.html) (10 Nov 2026, PR #47)
+> and the [source freshness re-check](76e-verification.html) (11 Nov 2026, PR #49). Both nav entries were
+> requested on the coordination board (M5F19-REQ-01, 76E-REQ-01) and are additive. No figure in this summary
+> changed; the 2026-11-11 board reading is recorded on the Flagged page (U15) and in the 76e ledger.
+
 Question: a U.S. citizen has money in a Chinese bank account and is told that turning it into dollars
 means "a considerable amount of taxes". What is the best lawful way out, and what does it really cost?
 
@@ -67,6 +74,27 @@ of the amount, 30% to 100% in serious cases, with criminal liability possible ([
 - **U01** where the money came from;
 - **U02** what the "considerable taxes" actually are (no tax, rate or office is named in the brief);
 - **U07** no verified route exists for money received as a gift or without documents.
+
+## Questions that must be settled before a decision
+
+36 questions, each marked with whether an official page answers it: 20 are answered by a source, 7 need a
+document only the account holder can produce, and 9 cannot be settled from any public source. The full
+register, with what is missing and how to obtain it for every row, is
+https://sassnarep3-star.github.io/China3/dashboard/decisions.html (data: `data/b2d_decisions.csv`,
+gate: `python3 scripts/verify_b2d_decisions.py`).
+
+The ones that change the answer:
+
+| # | Question | Status | Source |
+|---|---|---|---|
+| A01 | Where did the RMB come from, and was Chinese tax paid on it? | Open | [S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
+| A02 | Is the account recorded as a foreign individual's (境外个人) account? | Open | [S18](http://m.safe.gov.cn/safe/2006/1225/5319.html), [S17](https://www.safe.gov.cn/safe/2008/0806/5321.html) |
+| A04 | When and at what rate was the RMB acquired? (decides the U.S. currency gain) | Open | [S27](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm), [S28](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) |
+| B01 | Does a U.S. passport alone get the USD 50,000-a-year amount? | Answered: no | [S05](https://www.safe.gov.cn/tianjin/2024/0621/2529.html) |
+| C01 | Is there a Chinese tax on the conversion itself? | Answered: none found | [S17](https://www.safe.gov.cn/safe/2008/0806/5321.html), [S04](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) |
+| C05 | Is an inheritance taxed in China? | Open | [S25](https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html) |
+| D03 | Does the personal-transaction rule remove the currency gain? | Open (legal judgement) | [S27](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm) |
+| E03 | What do intermediary and receiving banks charge? | Open | [S02](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) |
 
 This is research from public official sources. It is not legal, tax or banking advice.
 

@@ -1,0 +1,38 @@
+name: g8d8 verify
+
+# Runs only when this layer's own files change, so it never fails another session's branch.
+on:
+  push:
+    paths:
+      - "g8d8-*.html"
+      - "data/g8d8_*"
+      - "scripts/g8d8_*"
+      - "assets/g8d8.css"
+      - "research/g8d8-*"
+      - ".github/workflows/g8d8-verify.yml"
+  pull_request:
+    paths:
+      - "g8d8-*.html"
+      - "data/g8d8_*"
+      - "scripts/g8d8_*"
+      - "assets/g8d8.css"
+      - "research/g8d8-*"
+      - ".github/workflows/g8d8-verify.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generated files are current
+        run: python3 scripts/g8d8_build.py --check
+      - name: Independent verification
+        run: python3 scripts/g8d8_verify.py
