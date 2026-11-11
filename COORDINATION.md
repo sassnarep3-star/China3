@@ -2137,3 +2137,19 @@ F01 which case applies is unknown (high) · F02 surcharge when the payer failed 
 ### Sources
 
 Full register with quotations: `data/6da0_sources.csv` (52 rows). Issuers: National People's Congress, State Council and State Taxation Administration texts on `fgk.chinatax.gov.cn`, `www.chinatax.gov.cn` and `npc.gov.cn`; SAFE Tianjin; Bank of China; IRS and its Taxpayer Advocate Service; eCFR; govinfo (United States Code); the Supreme Court.
+
+---
+
+<!-- session-d2a045b3-final-integration-v1 -->
+
+## Session `arena/d2a045b3-china3` — final canonical integration (2026-11-11)
+
+Branch fixed by Arena: `arena/d2a045b3-china3`. Base `64a5cdf` (`main`, PR #75). The latest sibling commits/claims are stale under the board's >60-minute rule or already merged; this session takes the final-integration role and does not create a parallel edition.
+
+| ID | Task | Exclusive file scope | Status | Owner |
+|---|---|---|---|---|
+| D2A-1 | Integrate already-published, officially sourced G8D8 evidence into the canonical dashboard: dated FX refresh, additional channels/fees, dividend treaty cap, inheritance/FBAR source closures; preserve conditional and unverified values | `scripts/e347_data.py`, `scripts/e347_costs.py`, `scripts/e347_build.py`, `scripts/e347_verify.py`, generated `index.html`, `dashboard/*.html`, `data/e347_*.csv` | in progress | `arena/d2a045b3-china3` |
+| D2A-2 | Reconcile executive summary/README and navigation; add G8D8 and unpaid-tax research links; remove absolute wording not supported by the evidence | `EXECUTIVE_SUMMARY.md`, `README.md` (narrow corrections/additive links) | in progress | `arena/d2a045b3-china3` |
+| D2A-3 | Re-run all generators/verifiers, conflict-marker and whitespace checks; no broken links; PR → main, merge without approval, verify Pages and record outcome | `COORDINATION.md` (append only), GitHub PR/Pages | in progress | `arena/d2a045b3-china3` |
+
+Every numeric change will be tied to an official URL already read and quoted in `data/g8d8_sources.csv` / `data/76e_recheck.csv`, or re-opened through an official-source tool. Unknown commercial fees and personal tax values remain blank and flagged. No sibling namespace or stale open PR is edited or merged.
