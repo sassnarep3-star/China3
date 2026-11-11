@@ -1500,6 +1500,7 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 - 2026-11-11: QNA.md created and committed (V2).
 - 2026-11-11: Cost-table spot-check passed (V3); e347_build.py + e347_verify.py PASS; live site confirmed serving (V4).
 - 2026-11-11: Creating PR from `arena/78c46684-china3` to `main` (V5).
+
 ---
 ## Session `arena/1c55025d-china3` — Full Requirements Audit & Re-verification (2026-11-11)
 **Branch:** `arena/1c55025d-china3` (Arena fixed: single-branch rule).  
@@ -2036,3 +2037,43 @@ Link request to the integrator (`arena/5a59401a-china3` or successor): one nav e
 - Only L01/L03 re-priced (the PR's own limitation); other ladder rows move with the same tariff/board and were not independently re-based today.
 - Pages liveness was confirmed via the deploy runs and a live fetch of the page itself; from this sandbox, `curl` to the Pages host fails at TLS (exit 35), so link-checking the deployed site from here is not possible.
 - This audit is not legal, tax or investment advice and does not decide which lawful route applies to any funds; that turns on the source of funds (dashboard flag U01).
+---
+
+<!-- session-arena/9b36086f-china3-b9b3-v1 -->
+
+## Session `arena/9b36086f-china3` (`b9b3`) — 2026-11-11 Live Official-Source Re-Verification, Pre-Decision Questions Register, Full $10k–$400k Multi-Method Cost Matrix & Dashboard
+
+Branch: `arena/9b36086f-china3` (Arena single-branch binding; branch name is fixed by platform tracking).
+Base on `main`: `ce35f73` (2026-11-11T02:44Z); rebased onto `1638a47` before content work, preserving every sibling block verbatim.
+Claim written, committed, and pushed immediately before creating or editing any content file. Arena platform binding keeps all work on this fixed branch; no `session-<id>` branch was created.
+
+### Concurrent-session scan before claiming (2026-11-11T02:44Z)
+
+Ran `git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune` and `gh pr list --state open`. Multiple live sibling sessions (`arena/5a59401a-china3`, `arena/6cd77131-china3`, `arena/1e361b54-china3`, `arena/73fec6c5-china3`, `arena/1c55025d-china3`, `arena/f52c089a-china3`, `arena/dff3f5ef-china3`, `arena/b2d4ff40-china3`, `arena/676d2a67-china3`, `arena/8d8b8493-china3`, `arena/f931fde1-china3`, `arena/7881ea76-china3`) currently hold active claims on shared files (`index.html`, `EXECUTIVE_SUMMARY.md`, `README.md`, `dashboard/{costs,flagged,methods,sources,steps,tax}.html`, `scripts/e347_*`, `questions.html`) or their own namespaces. None claims the `b9b3` namespace.
+
+Per the board rules (*"never start a task another session has claimed. Keep scopes non-overlapping ... edits only the files in its claimed scope. If a task requires changing a file owned by another session, log the request in COORDINATION.md instead of editing it"*), this session works **exclusively** inside its non-overlapping `b9b3` scope (`b9b3-*.html`, `data/b9b3_*.csv`, `research/b9b3-*.md`, `assets/b9b3.css`, `assets/b9b3.js`, `scripts/*b9b3*.py`, `.github/workflows/b9b3-verify.yml`), plus append-only `COORDINATION.md` and generator-refreshed `dashboard/archive.html` (which `scripts/e347_build.py` regenerates automatically so all `b9b3-*.html` pages are linked from the live Archive navigation). Integration link request logged as **B9B3-REQ-01** below.
+
+### Tasks claimed (`arena/9b36086f-china3`)
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| B9B3-T0 | Read `COORDINATION.md`, scan live sibling branches/PRs, claim non-overlapping `b9b3` scope, commit & push immediately | `COORDINATION.md` (append only) | done | `arena/9b36086f-china3` | n/a | Pushed before any content file |
+| B9B3-T1 | Live 2026-11-11 official-source verification: fetch & read primary PRC and U.S. government/regulator/bank sources line by line; record verbatim figures, timestamps, and reachability | `data/b9b3_sources.csv`, `research/b9b3-verification-log.md` | done | `arena/9b36086f-china3` | 50 live 2026-11-11 official URLs | Zero hallucinations; dead/moved URLs flagged with live replacements |
+| B9B3-T2 | Executive summary & pre-decision Questions / Known Info / Missing Info / Answers / Discovery Suggestions register | `research/b9b3-executive-summary.md`, `research/b9b3-decision-questions.md`, `data/b9b3_questions.csv` | done | `arena/9b36086f-china3` | 30 questions; 50 official URLs | Every open/partial row has a concrete discovery step and official source |
+| B9B3-T3 | Exhaustive CNY→USD conversion methods catalogue (pros/cons, caps, eligibility) + conversion penalty & tax breakdown + step-by-step playbooks | `data/b9b3_methods.csv`, `data/b9b3_penalties.csv`, `data/b9b3_steps.csv`, `research/b9b3-methods-and-penalties.md` | done | `arena/9b36086f-china3` | 22 methods + 30 tax/penalty rules + 106 source-linked steps | Every row linked to official source or blank + flagged |
+| B9B3-T4 | Cost estimation from $10,000 to $400,000 USD in $10,000 increments (40 steps × every method) from fresh 2026-11-11 official rates & tariffs | `data/b9b3_ladder.csv`, `data/b9b3_method_costs.csv`, `scripts/b9b3_engine.py` | done | `arena/9b36086f-china3` | BOC 2026/11/11 10:40:02 board + tariffs | 880 exact-Fraction cost rows + 40 ladder rows; unverified commercial fees blank + flagged |
+| B9B3-T5 | Line-by-line repository review: audit existing repo layers, formulas, source links, and cross-session discrepancies; publish irregularities | `data/b9b3_flags.csv`, `research/b9b3-repo-audit.md` | done | `arena/9b36086f-china3` | 29 flags + 13 audit findings | Never edits sibling-owned files; logs requests here |
+| B9B3-T6 | Clean mobile-first GitHub Pages dashboard (`b9b3-dashboard.html` + 7 category subpages incl. `Flagged for Review`) + independent verifier + CI gate | `b9b3-dashboard.html`, `b9b3-questions.html`, `b9b3-methods.html`, `b9b3-costs.html`, `b9b3-steps.html`, `b9b3-penalties.html`, `b9b3-flagged.html`, `b9b3-sources.html`, `assets/b9b3.css`, `assets/b9b3.js`, `scripts/build_b9b3_site.py`, `scripts/verify_b9b3_site.py`, `.github/workflows/b9b3-verify.yml`, `dashboard/archive.html` | done | `arena/9b36086f-china3` | All 50 official URLs | 1,171 table rows sourced; 2,892 blank cells flag-linked; all local links/anchors resolve |
+| B9B3-T7 | Open PR (`arena/9b36086f-china3` → `main`), pass all checks, merge without waiting, confirm GitHub Pages deployment, record PR link & merge result | GitHub PR / Pages / `COORDINATION.md` (append only) | in progress | `arena/9b36086f-china3` | CI + Pages | Do not merge a broken site |
+
+### B9B3-REQ-01 — Additive link request to the active shared-file integrator
+
+Please add one navigation/edition link on `index.html` (and `README.md`) pointing to `b9b3-dashboard.html`, labelled *"B9B3 — 11 Nov 2026 Verified Decision Brief, Questions Register & $10k–$400k Multi-Method Dashboard"*. This session will not modify `index.html`, `EXECUTIVE_SUMMARY.md`, or `README.md` directly while sibling claims on those files are active; all `b9b3-*.html` pages are immediately discoverable via `dashboard/archive.html` and direct GitHub Pages URLs.
+
+### B9B3 Log
+- `2026-11-11T02:45Z`: Read `COORDINATION.md`, scanned all remote branches and open PRs, confirmed all 17 inherited validators pass at base, appended this non-overlapping `b9b3` claim, committed, and pushed immediately before starting content work.
+- `2026-11-11T03:05Z`: Completed 40+ live `fetch_page` primary-source reads across BOC, SAFE, PBOC, MOFCOM, STA, IRS, FinCEN, eCFR, CBP, and `govinfo.gov` (`B9B3-T1` done); rebased cleanly onto `origin/main` (`1638a47`) preserving `1c55025d` and `b2d4ff40` blocks verbatim.
+- `2026-11-11T03:18Z`: Published all `b9b3` deliverables: 50-source register, 30-question decision register, 22-method/30-rule/106-step catalogue, 880 exact-Fraction cost rows (40 amounts × 22 methods), 40-row ladder, 29 flags, five Markdown reports, eight mobile-first HTML pages, CSS/JS, independent verifier, CI workflow and regenerated `dashboard/archive.html`. Correct exact BOC 10:40:02 benchmark: $10,000 = $53.42 (0.5342%), $400,000 = $901.18 (0.2253%); the total is rounded once from unrounded Fractions, not from rounded components.
+- `2026-11-11T03:18Z`: `verify_b9b3_site.py` PASS (880 cost rows recomputed without importing the engine, 40 ladder rows, 1,171 sourced HTML rows, 2,892 blank cells flag-linked, all internal links/anchors resolve, zero conflict markers, byte-idempotent rebuild); `e347_build.py --check`, `e347_verify.py`, all 17 inherited validators and `git diff --check` PASS. No sibling-owned file was edited; only append-only `COORDINATION.md` and generator-refreshed `dashboard/archive.html` changed. `B9B3-REQ-01` remains open for the shared-file integrator.
+- `2026-11-11T03:18Z`: Opening PR from `arena/9b36086f-china3` to `main`; PR URL, CI result, merge result and live Pages deployment will be appended below.
+- `2026-11-11T03:25Z`: Rebased cleanly onto `origin/main` (`cbfa1a5`) after PR #55–#73 landed. The only conflict was the generated `dashboard/archive.html`; took the `main` side and regenerated it with `scripts/e347_build.py` so every sibling page and every B9B3 page is listed. `COORDINATION.md` retained every sibling block and all B9B3 status/log lines verbatim. Re-ran `verify_b9b3_site.py`, `e347_build.py --check`, `e347_verify.py`, every current `scripts/verify*.py` gate (including the newly merged e0f4 and f52 verifiers), `check_links.py`, `validate_data.py`, `test_costs.py` and `git diff --check`: all PASS. CI workflow now discovers all inherited `scripts/verify*.py` gates dynamically.

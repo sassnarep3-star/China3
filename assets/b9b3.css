@@ -1,0 +1,50 @@
+/* B9B3 mobile-first dashboard */
+:root{--ink:#10233b;--muted:#53657a;--bg:#f4f7fb;--card:#fff;--line:#d9e3ee;--blue:#075ea4;--blue2:#eaf3fc;--amber:#a45a00;--red:#9b1c1c;--green:#176b45;--radius:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:18px}
+.masthead{background:linear-gradient(135deg,#082b4d,#0b5a91);color:#fff;padding:26px 0 18px}
+.masthead a{color:#d8ecff}
+.masthead h1{font-size:clamp(1.7rem,4.2vw,2.8rem);line-height:1.12;margin:.15em 0 .3em}
+.eyebrow{font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;opacity:.85;margin:0}
+.lead{font-size:1.05rem;max-width:80ch;margin:0 0 16px;color:#e7f2ff}
+.b9b3-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.b9b3-nav a{display:inline-block;padding:7px 10px;border:1px solid rgba(255,255,255,.38);border-radius:999px;background:rgba(255,255,255,.08);font-size:.9rem}
+.b9b3-nav a.active{background:#fff;color:#082b4d;border-color:#fff;font-weight:700}
+main section,footer p{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin:16px 0;box-shadow:0 1px 2px rgba(16,35,59,.04)}
+footer{background:transparent}footer p{font-size:.9rem;color:var(--muted)}
+h2{font-size:1.3rem;line-height:1.25;margin:0 0 10px}h3{margin-top:18px}
+.banner{border-left:6px solid var(--blue);background:var(--blue2)}
+.note{color:var(--muted);font-size:.9rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0}
+.kpi{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.kpi b{font-size:1.55rem;color:var(--blue)}.kpi span{font-size:.86rem;color:var(--muted)}
+.pill{display:inline-block;border-radius:999px;padding:2px 9px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.pill.ok{background:#e4f6ec;color:var(--green)}.pill.warn{background:#fff1d6;color:var(--amber)}.pill.bad{background:#fde5e5;color:var(--red)}
+.blank{display:inline-block;background:#fff1d6;color:var(--amber);border-radius:6px;padding:1px 7px;font-weight:700;font-size:.84rem}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:720px}
+th,td{padding:10px 11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:#eef4fa;position:sticky;top:0;z-index:1;font-size:.82rem;text-transform:uppercase;letter-spacing:.02em}
+tbody tr:nth-child(even){background:#fbfdff}tbody tr:hover{background:#f0f7ff}
+td a{white-space:nowrap}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:12px 0}
+.filters label{display:flex;flex-direction:column;font-size:.82rem;color:var(--muted);gap:4px}
+.filters select,.filters input{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);max-width:100%}
+ol.plain{padding-left:1.3rem}ol.plain li{margin:8px 0}
+details{margin-top:12px;background:#f8fbff;border:1px solid var(--line);border-radius:10px;padding:10px}
+summary{cursor:pointer;font-weight:700}
+code{background:#eef3f8;padding:1px 5px;border-radius:4px}
+@media(max-width:760px){
+  .wrap{padding:12px}.masthead{padding:18px 0 14px}
+  main section{padding:14px;margin:12px 0}
+  table{min-width:0;display:block}thead{display:none}tbody,tr,td{display:block;width:100%}
+  tbody tr{border:1px solid var(--line);border-radius:10px;margin:10px 0;padding:6px;background:#fff}
+  td{border:0;border-bottom:1px dashed var(--line);padding:8px 8px 8px 42%;position:relative;min-height:34px}
+  td:last-child{border-bottom:0}
+  td[data-label]::before{content:attr(data-label);position:absolute;left:8px;top:8px;width:36%;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:var(--muted);white-space:normal}
+  .filters{flex-direction:column;align-items:stretch}.filters label{width:100%}
+}
