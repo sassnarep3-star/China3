@@ -23,7 +23,16 @@ PAGES = [ROOT / "index.html"] + [ROOT / "dashboard" / f"{n}.html" for n in
                                  ("decisions", "methods", "costs", "steps", "tax", "flagged", "sources", "archive")]
 OFFICIAL = ("boc.cn", "safe.gov.cn", "chinatax.gov.cn", "pbc.gov.cn", "irs.gov", "govinfo.gov",
             "fincen.gov", "ecfr.gov", "cbp.gov", "gd.gov.cn", "mof.gov.cn", "wise.com",
-            "westernunion.com", "bankofamerica.com", "abchina.com")
+            "westernunion.com", "bankofamerica.com", "abchina.com",
+            # Added 2026-11-11 (session arena/b579901a-china3): the Board of Governors of the
+            # Federal Reserve System publishes the G.5A annual averages cited as S44.
+            "federalreserve.gov")
+# The one navigation the canonical dashboard is allowed to have, in order, as destinations
+# relative to the repository root. Written out here rather than imported from the builder, so
+# that a change to the builder cannot quietly redefine what this check accepts.
+EXPECT_NAV = ["index.html", "dashboard/decisions.html", "dashboard/methods.html", "dashboard/costs.html",
+              "dashboard/steps.html", "dashboard/tax.html", "dashboard/flagged.html",
+              "dashboard/sources.html", "dashboard/archive.html"]
 REPO_HOST = "github.com"
 errors = []
 
@@ -194,8 +203,14 @@ def check_pages():
                  "restore it with python3 scripts/e347_build.py; the legacy landing page is legacy-index.html")
         if page.h1 != 1:
             fail(f"{rel}: expected one h1, found {page.h1}")
-        if len(page.nav) != 16:
-            fail(f"{rel}: navigation has {len(page.nav)} entries, expected 16")
+        nav_dest = []
+        for href in page.nav:
+            if href.startswith(("http", "mailto:", "#")):
+                nav_dest.append(href)
+            else:
+                nav_dest.append((p.parent / unquote(href.partition("#")[0])).resolve().relative_to(ROOT).as_posix())
+        if nav_dest != EXPECT_NAV:
+            fail(f"{rel}: navigation is {nav_dest}, expected {EXPECT_NAV}")
         for t in page.tables:
             if t["kind"] not in ("data", "repo", "nav"):
                 fail(f"{rel}: table without data-kind")
@@ -243,6 +258,26 @@ def check_pages():
     return len(parsed), n_rows, n_links, n_blank
 
 
+# --------------------------------------------------- 8. the board figures as printed
+def check_board_strings():
+    """The Costs page states the board in RMB per 100 USD. Those two strings must be the same
+    rates every calculation uses, not a copy typed from an older board.
+
+    Added 2026-11-11 (session arena/b579901a-china3) after finding 'Selling Rate 668.51 per 100'
+    and 'Buying Rate 665.71 per 100' beside an ask of 6.6886 and a bid of 6.6606.
+    """
+    text = (ROOT / "dashboard" / "costs.html").read_text(encoding="utf-8")
+    want = {"Selling Rate": ASK * 100, "Buying Rate": BID * 100}
+    found = re.findall(r"(Selling Rate|Buying Rate) ([0-9.]+) per 100", text)
+    seen = {k: v for k, v in found}
+    for k, v in want.items():
+        if k not in seen:
+            fail(f"costs.html: no '{k} ... per 100' figure")
+        elif abs(F(seen[k]) - v) > F(1, 100):
+            fail(f"costs.html: '{k} {seen[k]} per 100' disagrees with the rate used in the arithmetic ({float(v):.2f})")
+    return len(found)
+
+
 # ------------------------------------------------------------------ 7. data files
 def check_data():
     src = rows("e347_sources.csv")
@@ -277,12 +312,13 @@ def main():
     n_cost, n_methods = check_costs()
     n_pages, n_rows, n_links, n_blank = check_pages()
     n_data = check_data()
+    n_board = check_board_strings()
     if errors:
         print(f"FAIL — {len(errors)} problem(s)")
         for e in errors[:60]:
             print("  -", e)
         return 1
-    print(f"PASS — e347: {n_cost} cost rows over {n_methods} routes recomputed exactly; {n_pages} pages, {n_rows} table rows "
+    print(f"PASS — e347: {n_cost} cost rows over {n_methods} routes recomputed exactly; {n_board} board figures as printed; {n_pages} pages, {n_rows} table rows "
           f"sourced, {n_blank} blank values all flagged, {n_links} links resolved, {n_data} data rows with official URLs.")
     return 0
 
