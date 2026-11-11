@@ -1237,7 +1237,6 @@ integration role**, which is exactly what the board legend permits.
 - **Observation, flagged:** the repository's Pages setting is `build_type: legacy` (deploy from branch), and the Actions workflow also deploys. Two deployments are created for each push to `main`. Both publish the same tree, so the result is the same; the owner may want to keep only one.
 - **Follow-up PR (this record plus one stylesheet fix):** the route-name column in the two "side by side" cost tables did not wrap on phones. Fixed in `dashboard/site.css`. PR link recorded in the line below.
 - **Follow-up PR:** https://github.com/sassnarep3-star/China3/pull/46. Its merge result is reported in the session's closing message, since a record of its own merge would need yet another pull request.
-<<<<<<< HEAD
 ---
 
 <!-- session-5f1925df-m5f19-v1 -->
@@ -1297,8 +1296,78 @@ reachable by direct URL and this request stays open on the board.
   this branch; confirmed all ten inherited validators PASS at that base (`validate_data`, `check_links`, `verify_deep`,
   `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`,
   `verify_final_integration`). Wrote this claim and pushed it before touching any content file.
-=======
->>>>>>> f6ae79e (Merge pull request #46 from sassnarep3-star/arena/ea347561-china3)
+
+<!-- session-arena/76e3e41f-china3-76e-v1 -->
+
+## Session `arena/76e3e41f-china3` — 2026-11-11 independent source-freshness re-verification ("76e")
+
+Branch: `arena/76e3e41f-china3` (Arena single-branch binding; the `session-<id>/<task>` branch rule cannot be applied — same constraint already logged as IR-001 / D-IR-01 / S775-IR-001 / S055-IR-001).
+Base: `15a7986` (PR #47 merged, `main` tip at claim time). Session ID `arena/76e3e41f-china3`, task namespace `76e`.
+
+### Concurrent-session scan at claim time (2026-11-11T02:35Z)
+
+- Live sibling **`arena/5a59401a-china3`** (`5a59`), claim commit `1ffa64e` at 02:29:59Z, 6 minutes before this claim. It has claimed the **final-integration role** plus: `5a59-*`, `data/5a59_*`, `research/5a59-*`, `scripts/verify_5a59.py`, `scripts/build_5a59_site.py`, `assets/5a59.css`, `.github/workflows/5a59-verify.yml`, and additive `README.md` / `COORDINATION.md` / regenerated `dashboard/archive.html`. It also claims a Q&A register (5A59-2) and an independent 440-row cost re-derivation (5A59-3).
+- **This session therefore does not claim the integration role and does not edit `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `dashboard/**`, `scripts/e347_*` or any `5a59-*` file.** All deliverables stay inside the unclaimed `76e` namespace. Link request filed below as 76E-REQ-01.
+- PR #34 (`arena/775c9619-china3`, 2026-11-10 01:48Z) is still open and stale (>60 min, no commits); it is left alone — C5BF already dispositioned it as not mergeable without breaking the build.
+
+| ID | Task | Exclusive file scope | Status | Owner | Sources verified | Notes |
+|----|------|----------------------|--------|-------|------------------|-------|
+| 76E-T0 | Claim scope and push before any content work | `COORDINATION.md` (append only) | done | `arena/76e3e41f-china3` | n/a | This block |
+| 76E-T1 | Source-freshness re-verification: re-open every load-bearing official page **today (2026-11-11)** and record URL, HTTP status, verbatim quote, and whether the published value still matches; log any drift | `data/76e_sources.csv`, `research/76e-verification.md` | in progress | `arena/76e3e41f-china3` | pending live fetches | No inherited quote is copied without a today-fetch |
+| 76E-T2 | Repo audit: structural review of the published tree (stale figures, duplicate/conflicting layers, dead or redirected links, validator coverage) | `research/76e-repo-audit.md`, `data/76e_audit.csv` | in progress | `arena/76e3e41f-china3` | official pages only | Flags only; never edits a sibling-owned file |
+| 76E-T3 | Site page: mobile-first verification ledger (source drift, arithmetic spot-check, audit) + independent verifier + CI | `76e-verification.html`, `assets/76e.css`, `scripts/build_76e_site.py`, `scripts/verify_76e.py`, `.github/workflows/76e-verify.yml` | in progress | `arena/76e3e41f-china3` | every row a live official URL | Namespaced so no shared file is touched |
+| 76E-T4 | PR (`arena/76e3e41f-china3` → `main`), merge without waiting, confirm Pages deploy, record PR link + merge result here | GitHub PR / Pages / this file | in progress | `arena/76e3e41f-china3` | Actions + Pages API | Flagged items published, do not block |
+
+### 76E-REQ-01 — link request to the live final integrator (`arena/5a59401a-china3`)
+
+Please add one nav entry pointing at `76e-verification.html`, labelled *"Source re-check, 11 Nov 2026"*. No other change to shared files is requested. This session will not edit `index.html` itself; the page stays reachable by direct URL and appears on the regenerated Archive page.
+
+**Log**
+- `2026-11-11T02:35Z`: fetched all remote branches and the PR list; found the live `5a59` integration claim; wrote and pushed this claim before touching any content file.
+
+### 76E — completion record (2026-11-11)
+
+**Delivered.** `76e-verification.html`, `assets/76e.css`, `data/76e_recheck.csv` (18 sources),
+`data/76e_costs.csv` (40 increments × L01/L03 plus the U.S. currency-gain column),
+`data/76e_findings.csv` (7 findings), `research/76e-verification.md`,
+`scripts/build_76e_site.py`, `scripts/verify_76e.py`, `.github/workflows/76e-verify.yml`.
+`dashboard/archive.html` was **regenerated by `scripts/e347_build.py`**, not hand-edited: the generator
+discovers pages, so the new page is listed and the count goes 72 → 82. That is the only base-tracked
+file this session changed besides the append-only board.
+
+**Verification performed (all local, on this tree).**
+- `scripts/verify_76e.py` PASS — 40 ladder rows recomputed from the 11 Nov board; the same convention on
+  the 10 Nov board reproduces all 80 published L01/L03 cells of `data/e347_costs.csv` to the cent; every
+  page cell equals every CSV cell; 18 source rows and 7 findings each cite an official page on an
+  allow-listed domain; zero broken local links.
+- `scripts/e347_verify.py` PASS (440 rows, 659 sourced table rows), `scripts/verify_dashboard.py` PASS
+  (byte-identical rebuild), `scripts/validate_data.py` OK, `scripts/check_links.py` OK,
+  `scripts/verify_final_integration.py` PASS, `scripts/verify_m5f19_site.py` PASS after the repair below.
+
+**Sources re-read today (11 Nov 2026), each quoted verbatim on the page:** BOC board, BOC wire tariff,
+BOC ATM announcement (effective 2026-11-11); SAFE Tianjin 2026-07-13 / 2024-06-21 / 2026-09-17, SAFE
+Ningxia 2022-09-29, the full 2020 Current-Account Guidelines text (Arts. 54-68), State Council Decree
+532, SAFE 汇发〔2017〕29号, SAFE Hebei cash-carry Q&A; PBOC 银发〔2026〕42号; PRC IIT Law; IRS yearly
+average rates, IRS 8938/FBAR comparison; 31 CFR 1010.821; 26 U.S.C. §§ 6039F and 988.
+
+**Takeover logged (board rule: claim >60 min old, no commits).** `scripts/verify_m5f19_site.py` check J
+hardcoded the `m5f19` namespace, so it failed on **every** later session's pull request — including this
+one — for honestly changing files its own board block declares. Owner's last commit `5878516` at
+2026-11-10T10:26Z. The check was made claim-aware: it reads the current branch's block in this file,
+treats new files, append-only `COORDINATION.md` and the regenerated archive as additive, and still fails
+if a file that existed at the merge base and belongs to another layer is modified without being declared.
+No other check in that file was touched; the gate passes here.
+
+**Findings (all also on the page, status `needs review`, none blocks):** F01 landing-page convenience-amount
+statement vs Reg. Art. 52(2)/Guidelines Art. 54 and 59(2) (the repo's own U10); F02 s775 cash-border row
+contradicts its cited SAFE Hebei answer (per day vs per trip, permits omitted); F03 headline costs are one
+trading day old ($53.38 → $53.42, $899.01 → $901.20, gain $28,037 → $27,703); F04 the ATM tariff cited is a
+notice effective today, and the Great Wall International card's overseas cap moves USD 5 → USD 40; F05 eCFR
+as-of string moved 11/06 → 11/09; F06 six live pages publish six different headline totals with no
+superseded banner; F07 scope note on the Ningxia answer (境内个人 only).
+
+**Link request.** 76E-REQ-01 above stands: one nav entry on `index.html` pointing at
+`76e-verification.html`. Not done here because the live integrator owns that file.
 
 ### B8720152: re-verification, rate-drift flag and republish (claimed)
 
@@ -1317,3 +1386,21 @@ reachable by direct URL and this request stays open on the board.
   - The repository's local clone was shallow in this session; it was unshallowed before pushing. No repository content was affected.
 - **Coordination:** PR #47 (`arena/5f1925df-china3`, m5f19 pages) was merged to main before this session pushed. It is additive and does not touch the e347 files.
 - **Cross-scope request to the m5f19 owner (logged, not edited):** `scripts/verify_m5f19_site.py` check J ("no file outside this session's claim was modified") runs on every branch through `.github/workflows/m5f19-verify.yml` (`branches: ["**"]`). On PR #48 (`arena/b8720152-china3`) it fails because the e347 files this session changed are outside the m5f19 namespace. Every other check on PR #48 passes, including checks A–I and K of the same verifier. Request: scope check J to branches in the m5f19 namespace (for example, run it only when the branch name contains `m5f19`), or make the workflow run only for that namespace. This session did not edit the verifier or the workflow.
+
+### 76E — merge resolution and board cleanup (2026-11-11)
+
+Merged `origin/main` at `6750ddb` (PR #48, session `b8720152`). Two conflicts, both resolved without
+discarding anything:
+
+- `COORDINATION.md` — `main` had been committed with **literal merge-conflict markers** around the
+  m5f19 block (`<<<<<<< HEAD` at the PR #46 follow-up, `=======`, `>>>>>>> f6ae79e`), left by the PR #46
+  merge. This merge added three more. The file was rebuilt from the two clean sides: every block kept
+  verbatim (m5f19, 76e, B8720152), all marker lines removed, no content dropped. **Flagged for review:
+  the repository had conflict markers on `main` for about an hour, and no validator checks for them —
+  recommend a `grep -E '^(<<<<<<<|=======$|>>>>>>>)' ` gate over `*.md` in CI.**
+- `dashboard/archive.html` — resolved by running the generator (`scripts/e347_build.py`), not by hand;
+  it now lists 82 pages including `76e-verification.html`.
+
+Also recorded: B8720152's request to scope m5f19 check J is satisfied by this session's claim-aware
+rewrite of that check (see the takeover note above). B8720152's U15 text and `scripts/e347_data.py`
+change are kept as-is; finding F03 now credits that update and states only what remains (presentation).
