@@ -1,0 +1,11 @@
+model,session,board_ask,board_bid,wires,spread_denominator,amount_usd,published_usd,reproduced_usd,delta_usd,reproduced_exactly,appears_in
+"1 wire, spread / ask",fbbd3b22 (merged PR #24 / #27),6.6903,6.6622,1,ask,10000,53.42,53.42,0.00,yes,index.html hero and short-answer list; verify-2026.html
+"1 wire, spread / ask",fbbd3b22 (merged PR #24 / #27),6.6903,6.6622,1,ask,400000,901.30,901.30,0.00,yes,index.html hero and short-answer list; verify-2026.html
+"1 wire, spread / mid",d6467425 (merged PR #26),6.6903,6.6622,1,mid,10000,53.47,53.47,0.00,yes,d646-summary.html; d646-costs.html
+"8 wires, spread / mid",d6467425 (merged PR #26),6.6903,6.6622,8,mid,400000,1332.05,1332.05,0.00,yes,d646-summary.html; d646-costs.html
+"1 wire, spread / ask",775c9619 (merged PR #33),6.6903,6.6622,1,ask,10000,53.42,53.42,0.00,yes,s775-cost-10k-400k.html; s775-dashboard.html
+"1 wire, spread / ask",5f1925df (this session),6.6851,6.6571,1,ask,10000,53.38,53.38,0.00,yes,m5f19-dashboard.html; m5f19-costs.html (primary)
+"1 wire, spread / ask",5f1925df (this session),6.6851,6.6571,1,ask,400000,899.01,899.01,0.00,yes,m5f19-dashboard.html; m5f19-costs.html (primary)
+"1 wire, spread / mid",5f1925df (this session),6.6851,6.6571,1,mid,10000,53.42,53.42,0.00,yes,m5f19-costs.html (sensitivity column)
+"1 wire, spread / mid",5f1925df (this session),6.6851,6.6571,1,mid,400000,900.77,900.77,0.00,yes,m5f19-costs.html (sensitivity column)
+"8 wires, spread / ask",5f1925df (this session),6.6851,6.6571,8,ask,400000,1328.33,1328.33,0.00,yes,m5f19-costs.html (conditional staging scenario)
