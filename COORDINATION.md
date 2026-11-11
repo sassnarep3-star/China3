@@ -1436,13 +1436,16 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 
 | Task | Status | File scope | Notes |
 |------|--------|------------|-------|
-| V1 | in progress | `data/*`, `*.md`, root HTML | Independent reachability + fact check of every official source cited on the cost/methods/flagged pages |
-| V2 | unclaimed | `docs/QNA.md` (new) | Questions, information and answers that must be addressed before a decision; with suggestions to discover missing information |
-| V3 | unclaimed | `data/e347_costs.csv`, `dashboard/costs.html` | Spot-check cost math at $10k/$100k/$400k against the BOC tariff and board |
-| V4 | unclaimed | `.github/workflows/pages.yml`, root `index.html` | Confirm Pages build + deploy; no broken local links |
-| V5 | unclaimed | GitHub | PR from this branch to `main`; merge; record PR link and merge result here |
+| V1 | done | `data/*`, `*.md`, root HTML | Independent reachability + fact check of official sources: IRS yearly average rates (China Yuan 2024 = 7.189, 2025 = 7.129) at irs.gov [S28]; 31 CFR 1010.821 FBAR willful penalty $165,353 at ecfr.gov [S31]; SAFE FX Regulation State Council Order No. 532 (arts. 5, 39–45, 52) at safe.gov.cn [S17]; BOC exchange-rate board (USD selling 669.11 per 100, pub. 2026/11/11) at boc.cn [S01]; BOC personal transfer tariff (wire 1‰, min RMB 50, max RMB 260, cable RMB 150 non-HK/MO/TW) at boc.cn [S02]. All reachable and consistent with cited figures. |
+| V2 | done | `QNA.md` (new, root) | Questions, information and answers to address before any decision, grouped by the money itself, China rules, cost, U.S. tax/reporting, routes, and a decision checklist; every blank flagged with a suggestion to discover missing information. |
+| V3 | done | `data/e347_costs.csv`, `dashboard/costs.html` | Spot-checked cost math at $10,000/$100,000/$400,000 against the BOC tariff and board: $10,000 → spread $20.94 + fee $32.44 = $53.38; $100,000 → $209.42 + $61.33 = $270.75; $400,000 → $837.68 + $61.33 = $899.01. All match. Full ladder recomputed by e347_verify.py (440 rows exact). |
+| V4 | done | `.github/workflows/pages.yml`, root `index.html` | e347_build.py: 15 files, 0 changed. e347_verify.py: PASS (440 cost rows, 658 table rows sourced, 380 blanks flagged, 2138 links resolved). Live site serving at https://sassnarep3-star.github.io/China3/ (homepage fetched successfully). |
+| V5 | in progress | GitHub | PR from this branch to `main`; merge; record PR link and merge result here. |
 
 ### Log
 
 - 2026-11-11: session `arena/78c46684-china3` resolved the committed merge conflict in `COORDINATION.md` (HEAD `session-5f1925df` block kept; empty `f6ae79e` side dropped) and claimed V1–V5; claim committed and pushed immediately.
-- Independent official-source checks completed: IRS yearly average rates (China Yuan 2024 = 7.189, 2025 = 7.129) at irs.gov; 31 CFR 1010.821 FBAR willful penalty $165,353 at ecfr.gov; SAFE FX Regulation State Council Order No. 532 (arts. 5, 39–45, 52) at safe.gov.cn. All three reachable and consistent with the cited figures.
+- 2026-11-11: Independent official-source checks completed (V1): IRS irs.gov yearly average rates; ecfr.gov 31 CFR 1010.821; safe.gov.cn SAFE FX Regulation No. 532; boc.cn rate board and personal tariff. All reachable and consistent.
+- 2026-11-11: QNA.md created and committed (V2).
+- 2026-11-11: Cost-table spot-check passed (V3); e347_build.py + e347_verify.py PASS; live site confirmed serving (V4).
+- 2026-11-11: Creating PR from `arena/78c46684-china3` to `main` (V5).
