@@ -1,0 +1,4 @@
+scenario,board_time,bid,ask,spread_10k_usd,cost_10k_usd,spread_400k_usd,cost_400k_usd,is_current,note
+A,2026-11-11 10:25:02,6.6630,6.6911,21.00,53.42,839.92,901.20,yes,"This release. Bank of China board, read live."
+B,2026-11-10 17:39:58,6.6571,6.6851,20.94,53.38,837.68,899.01,no,"Previous release's reading (e347 layer). Same BOC board page, earlier snapshot."
+C,2026-11-10 (earlier),6.6622,6.6903,21.00,53.42,840.02,901.30,no,"Reading published by the fbbd3b22 / s775 layers. Same page, earlier snapshot."

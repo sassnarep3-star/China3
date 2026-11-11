@@ -1,21 +1,26 @@
 # China3: getting money out of a Chinese bank account as a U.S. citizen
 
 **Live site:** https://sassnarep3-star.github.io/China3/
+**Current release:** [11 November 2026](https://sassnarep3-star.github.io/China3/r11-release.html) — every figure
+re-read live from official sources that day.
 
-One clean dashboard, built from official sources read on 2026-11-10:
+One clean dashboard, and one page that carries the whole answer:
 
 | Page | What it holds |
 |---|---|
+| [Release 2026-11-11](https://sassnarep3-star.github.io/China3/r11-release.html) | **Start here.** The full $10,000 → $400,000 ladder for every route, the U.S. side, all 17 questions, every open item, every source quote |
 | [Home](https://sassnarep3-star.github.io/China3/) | The answer in four points, a "start with where the money came from" table, cost at a glance |
 | [Methods](https://sassnarep3-star.github.io/China3/dashboard/methods.html) | 11 lawful routes and 6 prohibited ones, with limits, pros, cons |
 | [Costs](https://sassnarep3-star.github.io/China3/dashboard/costs.html) | Bank cost per route from $10,000 to $400,000 in $10,000 steps |
+| [Questions](https://sassnarep3-star.github.io/China3/dashboard/questions.html) | 17 decision gates: what we know, what we do not, how to find out |
 | [Steps](https://sassnarep3-star.github.io/China3/dashboard/steps.html) | What to do, in order, for each route |
 | [Tax](https://sassnarep3-star.github.io/China3/dashboard/tax.html) | Chinese tax, U.S. tax, reporting forms, penalties, currency-gain table |
-| [Flagged for review](https://sassnarep3-star.github.io/China3/dashboard/flagged.html) | Everything unverified, plus problems found in this repository |
+| [Flagged for review](https://sassnarep3-star.github.io/China3/dashboard/flagged.html) | Everything unverified, plus 12 problems found in this repository |
 | [Sources](https://sassnarep3-star.github.io/China3/dashboard/sources.html) | 35 official pages and what each one establishes |
-| [Archive](https://sassnarep3-star.github.io/China3/dashboard/archive.html) | Every page written by earlier and parallel sessions |
+| [Archive](https://sassnarep3-star.github.io/China3/dashboard/archive.html) | Every page written by earlier and parallel sessions, labelled with its board reading |
 
-Short version: [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). Repository review: [`research/e347-repo-review.md`](research/e347-repo-review.md).
+Short version: [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). Formal register of what was read and when:
+[`VERIFICATION.md`](VERIFICATION.md). Repository review: [R01–R12 on the Flagged page](https://sassnarep3-star.github.io/China3/dashboard/flagged.html).
 
 ## Rules the dashboard follows
 
@@ -26,10 +31,14 @@ Short version: [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). Repository review
 ## Rebuild and check
 
 ```bash
+python3 scripts/r11_engine.py          # data/r11_*.csv: sources, facts, ladder, questions, review, flags
+python3 scripts/r11_build_page.py      # r11-release.html
+python3 scripts/r11_verify.py          # recomputes every ladder row, reproduces the older headlines, checks links
 python3 scripts/e347_build.py          # index.html, dashboard/*.html, data/e347_*.csv
 python3 scripts/e347_verify.py         # sources on every row, blanks flagged, arithmetic recomputed, links
-python3 scripts/e347_repo_review.py    # repository scan (needs git and gh); writes research/e347-repo-review.md
 ```
+
+CI: `.github/workflows/r11-verify.yml` (release) and `.github/workflows/e347-verify.yml` (dashboard).
 
 All content lives in `scripts/e347_data.py`. To refresh the rate, change the three board figures there and rebuild.
 

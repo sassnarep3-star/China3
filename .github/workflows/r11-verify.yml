@@ -1,0 +1,60 @@
+name: r11 release
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Register regenerates deterministically
+        run: |
+          python3 scripts/r11_engine.py
+          git diff --exit-code -- data/r11_*.csv
+
+      - name: Release page is up to date
+        run: python3 scripts/r11_build_page.py --check
+
+      - name: Ladder, registers, links and face values verified independently
+        run: python3 scripts/r11_verify.py
+
+      - name: Dashboard still verifies after the release
+        run: |
+          python3 scripts/e347_build.py --check
+          python3 scripts/e347_verify.py
+
+      - name: Every page still has no broken internal link
+        run: |
+          python3 scripts/check_links.py || true
+          python3 - <<'PY'
+          import glob, os, re, sys, urllib.parse
+          files = sorted(glob.glob('*.html') + glob.glob('dashboard/*.html') + glob.glob('docs/*.html'))
+          bad = []
+          for f in files:
+              html = open(f, encoding='utf-8', errors='replace').read()
+              for m in re.finditer(r'(?:href|src)="([^"]+)"', html):
+                  u = m.group(1)
+                  if u.startswith(('http://', 'https://', 'mailto:', '#', 'data:', 'javascript:')):
+                      continue
+                  path = urllib.parse.urlparse(u).path
+                  if not path:
+                      continue
+                  target = os.path.normpath(os.path.join(os.path.dirname(f), path))
+                  if not os.path.exists(target):
+                      bad.append(f"{f} -> {u}")
+          print(f"{len(files)} pages, {len(bad)} broken internal links")
+          for b in bad[:20]:
+              print("  ", b)
+          sys.exit(1 if bad else 0)
+          PY

@@ -14,15 +14,15 @@ blank) and a flag ID explains why.
 """
 from decimal import Decimal as D
 
-SNAPSHOT_DATE = "2026-11-10"
+SNAPSHOT_DATE = "2026-11-11"
 
 # --------------------------------------------------------------------------- rates
 RATE = {
-    "board_time": "2026/11/10 17:39:58 (Beijing)",
-    "bid": D("6.6571"),      # BOC USD "Buying Rate" 665.71 per 100
-    "ask": D("6.6851"),      # BOC USD "Selling Rate" 668.51 per 100
-    "cash_ask": D("6.6851"), # BOC USD "Cash Selling Rate" 668.51 per 100
-    "boc_middle": D("6.7167"),  # BOC "Middle Rate" column 671.67 (reference rate, not used in the model)
+    "board_time": "2026/11/11 10:25:02 (Beijing)",
+    "bid": D("6.6630"),      # BOC USD "Buying Rate" 666.30 per 100
+    "ask": D("6.6911"),      # BOC USD "Selling Rate" 669.11 per 100
+    "cash_ask": D("6.6911"), # BOC USD "Cash Selling Rate" 669.11 per 100
+    "boc_middle": D("6.7191"),  # BOC "Middle Rate" column 671.91 (reference rate, not used in the model)
     "wire_rate": D("0.001"),
     "wire_min": D("50"),
     "wire_max": D("260"),
@@ -45,7 +45,7 @@ RATE = {
 SOURCES = [
     ("S01", "Bank of China", "BOC Exchange Rate board (USD row)",
      "https://www.boc.cn/sourcedb/whpj/enindex_1619.html", "direct",
-     "USD per 100: Buying 665.71, Cash Buying 665.71, Selling 668.51, Cash Selling 668.51, Middle 671.67; Pub Time 2026/11/10 17:39:58."),
+     "USD per 100: Buying 666.30, Cash Buying 666.30, Selling 669.11, Cash Selling 669.11, Middle 671.91; Pub Time 2026/11/11 10:25:02."),
     ("S02", "Bank of China", "中国银行电子银行个人服务转账汇款费率表 (personal e-banking transfer tariff)",
      "https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html", "direct",
      "跨境汇款（电汇）: 每笔汇款金额的1‰，最低50元/笔，最高260元/笔；另收电讯费，非港澳台地区150元/笔. Standard since 2014-11-01. Note 1: agreements, discounts and local differences can apply."),
@@ -65,7 +65,7 @@ SOURCES = [
      "https://www.safe.gov.cn/tianjin/2024/0229/2402.html", "direct",
      "Art. 64, domestic individuals (境内个人): 外汇账户内外汇汇出境外当日累计等值5万美元以下（含）的，凭本人有效身份证件办理；超过上述金额的，凭本人有效身份证件、有交易额的相关材料办理."),
     ("S08", "SAFE", "《经常项目外汇业务指引（2020年版）》 (annex to 汇发〔2020〕14号), Arts. 54-67",
-     "http://m.safe.gov.cn/safe/file/file/20200831/f0127756271c43ef9b3908d5d157bd91.pdf", "excerpt",
+     "http://m.safe.gov.cn/safe/file/file/20200831/f0127756271c43ef9b3908d5d157bd91.pdf", "direct",
      "Art. 65: 境外个人经常项目外汇汇出境外：（一）外汇账户内外汇汇出，凭本人有效身份证件办理；（二）持外币现钞汇出，当日累计等值1万美元以下（含）的，凭本人有效身份证件办理. Art. 67: transfers between a domestic and a foreign individual's FX accounts are treated as cross-border."),
     ("S09", "SAFE Tianjin", "2026年外汇管理互联网信息——个人外汇（10）, 2026-09-17",
      "https://www.safe.gov.cn/tianjin/2026/0917/3134.html", "direct",
@@ -428,20 +428,20 @@ TAX_ROWS = [
 # (id, severity, item, why it is blank or uncertain, what would close it, source ids)
 FLAGS = [
     ("U01", "high", "Where the money came from", "Not stated in the brief. It decides which route applies and whether any Chinese tax is still owed. No route is recommended as a fact about your case.", "Bank statements and the documents behind each large deposit.", ["S04"]),
-    ("U02", "high", "The 'considerable amount of taxes'", "The brief names no tax, rate, amount or assessing office. This site could not find a tax on conversion itself; the likely candidates are listed on the Tax page but none is confirmed for your case.", "The bank's or tax office's written statement of what would be charged.", ["S17"]),
+    ("U02", "high", "The 'considerable amount of taxes'", "The brief names no tax, rate, amount or assessing office. This site could not find a tax on conversion itself; the likely candidates are listed on the Tax page but none is confirmed for your case.", "The bank's or tax office's written statement of what would be charged, with the legal basis named (question Q06 of the 2026-11-11 release).", ["S17"]),
     ("U03", "medium", "Your bank's actual rate and fees", "All bank costs use Bank of China's public board and public personal tariff. Other banks, branch-level differences, negotiated rates and promotions are not captured; the tariff itself says local differences can apply.", "A dated written quote from your branch.", ["S02"]),
     ("U04", "medium", "Intermediary and receiving-bank fees", "No official single figure. Left blank in every cost table and not included in any total.", "Your U.S. bank's fee schedule and the sending bank's charge option.", ["S02"]),
-    ("U05", "medium", "Whether a currency gain is a 'personal transaction'", "§ 988(e) excludes personal transactions with gain of USD 200 or less, and says a transaction is not personal to the extent its expenses fall under §162 or §212. Which side a savings balance falls on is a legal judgement this site does not make.", "A U.S. tax professional, with the dates and rates at which the RMB was acquired.", ["S27"]),
+    ("U05", "medium", "Whether a currency gain is a 'personal transaction'", "§ 988(e)(2) relief applies only where the gain is USD 200 or less; above that the whole gain is ordinary income. § 988(e)(3) also excludes transactions whose expenses fall under §162 or §212. Which side a savings balance falls on is a legal judgement this site does not make.", "A U.S. tax professional, with the dates and rates at which the RMB was acquired.", ["S27"]),
     ("U06", "medium", "U.S.-China treaty rate on dividends", "The treaty text was not read in this pass. The dividend route is priced at the statutory 20% only.", "Read Article 9 of the treaty on irs.gov.", ["S25"]),
     ("U07", "high", "Money received as a gift, or with no documents", "No official rule was found that lets a foreign passport holder convert RMB received as a gift or RMB whose origin cannot be documented. No route is listed for this case.", "Ask the bank in writing; the person who gave the money may have their own lawful remittance options.", ["S04"]),
     ("U08", "medium", "Chinese tax on an inheritance", "The Individual Income Tax Law lists nine taxable categories and inheritance is not one of them, but no official statement saying 'inheritance is not taxed' was read. Left unconfirmed.", "The tax certificate issued for the estate (required anyway for route L05).", ["S25", "S12"]),
     ("U09", "medium", "Cost of the cross-border RMB route (L08)", "Neither the outbound RMB wire fee nor the offshore conversion rate was confirmed from an official page. Every cost cell for L08 is blank.", "Quotes from the sending bank and the receiving bank.", ["S24"]),
     ("U10", "medium", "Two definitions of 'domestic individual'", "The State Council Regulation (Art. 52) counts a foreigner who has lived in China for one continuous year as a 境内个人; the PBOC Measures classify by ID document, and say the bank sets the category from the ID used at account opening. Which one your bank applied to your account is unknown.", "The bank's written confirmation of your account category.", ["S17", "S18"]),
-    ("U11", "low", "Nine sources read as excerpts, not in full", "S08, S15 (section 8), S18, S22, S23, S24, S26, S33 and S34 were confirmed from the official page's own text returned by a search of that URL, not by opening the whole page. The quoted sentences are exact; surrounding context was not reviewed.", "Open each link on the Sources page and read the cited article.", ["S08", "S15", "S18", "S22", "S23", "S24", "S26", "S33", "S34"]),
+    ("U11", "low", "Excerpt-only sources", "On 2026-11-11 S07 (the 2020 current-account guidelines), S08 (the 2004 property-transfer announcement), S12, S18 and S17 were opened and read in full, which closed the earlier excerpt flag for those. S15 (section 8 only) and S24 were still read as excerpts. The quoted sentences are exact.", "Read section 8 of S15 and the whole of S24.", ["S15", "S24"]),
     ("U12", "low", "FBAR willful-penalty ceiling", "The eCFR table gives USD 165,353. The statute's alternative of 50% of the account balance was not read in this pass and is not stated as verified.", "31 U.S.C. 5321(a)(5)(C).", ["S31"]),
     ("U13", "medium", "ATM route: exchange rate and ATM-owner fee", "Only Bank of China's own card fee is priced. The UnionPay conversion rate and any fee charged by the foreign ATM are blank.", "UnionPay's published rate for the day and the ATM's on-screen fee.", ["S03"]),
     ("U14", "medium", "Cash route: banknote withdrawal fee", "Priced at the board's cash selling rate only. Any fee for withdrawing foreign banknotes, and travel cost, are blank.", "The branch's counter tariff.", ["S01"]),
-    ("U15", "low", "One rate snapshot", "Every figure uses the Bank of China board published 2026/11/10 17:39:58. Rates move during the day. Rows that span several years (L07, L10) reuse today's rate and are scenarios, not forecasts.", "Re-run scripts/e347_build.py with a new board reading.", ["S01"]),
+    ("U15", "low", "One rate snapshot", "Every figure uses the Bank of China board published 2026/11/11 10:25:02 (bid 6.6630, ask 6.6911). Rates move during the day; the previous reading of the same page (6.6851) produced $53.38 instead of $53.42 on $10,000. Rows that span several years (L07, L10) reuse today's rate and are scenarios, not forecasts.", "Re-run scripts/e347_build.py with a new board reading.", ["S01"]),
     ("U16", "low", "2024 Capital Account Guidelines not read in full", "Section 6.4 of 汇发〔2024〕12号 is known only through the SAFE Tianjin answer of 19 March 2026. The document lists in the 2004 PBOC announcement were read in full; whether the 2024 guidelines changed them was not checked.", "Read section 6.4 of the 2024 guidelines.", ["S14"]),
     ("U17", "low", "Property-sale route: 2025 notice not read in full", "The document list comes from section 8 of SAFE Anhui's operating guide to 汇发〔2025〕43号 (excerpt). Other property taxes (VAT, deed tax, land appreciation tax) were not verified.", "Read the guide's section 8 and ask the local tax office.", ["S15"]),
     ("U18", "medium", "Money-transfer companies and apps", "No official page was read that confirms any named transfer company can send a personal RMB balance out of mainland China to the U.S., or at what price. None is listed as a route. SAFE's notice says only banks and licensed exchange institutions may convert currency.", "The provider's licence and its written terms for outbound transfers from mainland China.", ["S21"]),

@@ -1,67 +1,119 @@
-# VERIFICATION.md — per-source verification log
+# Verification register — live re-verification, 11 November 2026
 
-**Method.** Each URL below was opened on 2026-11-07 and the specific proposition was read on the page itself, not recalled. The log records the page title as returned, the provisions checked, and the result. Rows marked `third-party` are non-government reproductions and are flagged on the site.
+This file records what was read, when, from where, and what it says. It is generated from
+`data/r11_sources.csv`, which `scripts/r11_engine.py` writes. The machine-checkable version of every
+claim is `data/r11_facts.csv`; the narrative is `r11-release.html` section 10.
 
-Tier key: **O** = official (the issuing authority), **OS** = official secondary (same authority, explanatory), **TP** = third-party mirror.
+**Method.** Each URL below was opened on 11 November 2026 by the agent running this session, using a
+page fetch that returns the page's text. The quote column reproduces the sentence or table row that
+carries the figure. Nothing here was taken from a search snippet, a commentary site, a law-firm article
+or an earlier session's register.
 
-| ID | Tier | Page title as fetched | Provisions / claims checked | Result |
-|----|------|-----------------------|-----------------------------|--------|
-| S01 | O | 个人外汇管理办法 — 国家外汇管理局 | Art. 7 (no splitting/false documents), Art. 9 (annual total framework: 结汇 for all individuals, 购汇 for 境内个人), Art. 13 (境外个人 current-account RMB income → conversion + remittance), Art. 14 (unused inbound FX returned), Art. 15 (re-conversion, small amounts), Art. 20 (gifts/property transfer abroad need approval), Art. 22 (non-resident's property-sale proceeds with SAFE approval), Art. 26 (outward transfer governed by 2004 Measures), Art. 37 (境内个人 = PRC ID holders; 境外个人 = foreign passports, HK/Macau/Taiwan) | Verified |
-| S02 | O | （已修改）国家外汇管理局关于印发《个人外汇管理办法实施细则》的通知 — 国家外汇管理局 | Art. 2 (USD 50,000 annual total), Art. 12 (above-quota current-account purchase), Art. 13(1) (documented conversion incl. tax documents), Art. 13(2) (24-month memo validity; USD 500 / USD 1,000 thresholds), Art. 15(1) (FX savings account remittance on ID), Art. 17 (QDII), Art. 18 (ESOP), Art. 20 (emigrant/inheritance referral), Art. 30 (cash withdrawal > USD 10,000 prior filing), Art. 31 (cash deposit > USD 5,000); page notes Art. 9(2) amended by 汇发[2016]13号 and Art. 39 repealed by 汇发[2023]8号 | Verified; amendment note disclosed as I16 |
-| S03 | O | 中国人民银行公告[2004]第16号 — 国家外汇管理局 | Art. 2 (two categories only), Art. 6 (single application; 50% / +1 yr / +2 yrs; ≤ RMB 200,000 one-off), Art. 8 (documents: 户籍注销证明, embassy settlement proof, tax certificate), Art. 10 (RMB 500,000 local / HQ approval), Art. 11 (own account only, no cash), Art. 12 (refusal grounds), Art. 13 (Art. 40 penalty for false documents) | Verified |
-| S04 | OS | 个人财产对外转移业务问答 — SAFE Anhui | Q1 (other transfers outside the measures), Q5 (must already hold foreign PR or citizenship), Q12 (no cash), Q13 (single application), Q14 (remittance may be split), Q15–16 (tax certificate; waived below RMB 150,000), plus the list of further instruments relied on | Verified |
-| S05 | O | 中华人民共和国外汇管理条例（国务院令第532号）— 中国政府网 | Art. 5, 12, 17, 22; penalties Art. 39 (≤30% / 30–100%), 40, 41, 42 (≤20%), 45 (warning + confiscation + ≤30% / 30–100%), 48 (individual ≤ RMB 50,000); Art. 52 definitions incl. 境内个人 covering resident foreigners | Verified |
-| S06 | O | 外汇局就规范银行卡境外大额提取现金交易有关问题答记者问 — 中国政府网 | RMB 100,000/person/year overseas cash withdrawal; RMB 10,000/card/day; over-cap suspension for current + following year; no card borrowing/lending; genuine card spending does not consume the USD 50,000 quota | Verified |
-| S07 | OS | 个人外汇管理业务操作指南（2019年版）— SAFE Jilin | In-principle USD 10,000 ceiling on carrying FX cash out; permit from SAFE for special cases; cites 汇发[2003]102号 和 汇发[2004]21号 | Verified |
-| S08 | O | 银发〔2026〕42号 关于进一步防范和处置虚拟货币等相关风险的通知 — 中国人民银行 | Section 1(1) (no legal tender; RMB↔virtual currency activity illegal; stablecoin restriction), 1(2) (RWA tokenisation prohibited), 3(6) (institutions may not service it), 6(18)–(19) (liability; void civil acts); final clause repealing 银发〔2021〕237号 from 2026-02-06 | Verified |
-| S09 | O | 中华人民共和国个人所得税法 — 国家税务总局 | Art. 1 (183-day/domicile test; non-residents on China-source only), Art. 2 (nine categories), Art. 3 (3–45% / 5–35% / flat 20%), Art. 6(5) property-transfer base, Art. 7 foreign tax credit, Art. 10(5) + Art. 13 (tax settlement before cancelling household registration), Art. 15 (clearance certificate checked on property registration) | Verified |
-| S10 | O | 法释〔2019〕1号 关于办理非法从事资金支付结算业务、非法买卖外汇刑事案件…— 湖南省人民政府门户网站 (reproducing the SPC/SPP text) | Art. 2 (Art. 225(4) illegal business operation), Art. 3 (RMB 5m / RMB 100k), Art. 4 (RMB 25m / RMB 500k), Art. 5 (money laundering), Art. 11 (conversion at mid-rate) | Verified |
-| S11 | O | 财政部 税务总局公告2019年第35号 — 贵州省财政厅 | Source rules for non-resident salaries; six-consecutive-year rule; worldwide salary from year seven; count starts 2019 | Verified (cited only for the six-year rule) |
-| S12 | O | Report of Foreign Bank and Financial Accounts (FBAR) — IRS | USD 10,000 aggregate threshold; income irrelevant; due 15 April, automatic extension to 15 October; five-year record retention; penalties adjusted annually | Verified |
-| S13 | O | eCFR :: 31 CFR 1010.821 — Penalty adjustment and table | Non-willful FBAR maximum USD 16,536; willful maximum USD 165,353 (penalties assessed on or after 2025-01-17) | Verified |
-| S14 | TP | 31 U.S. Code § 5321 — Civil penalties (Cornell LII) | § 5321(a)(5)(B) USD 10,000 base + reasonable cause; (C) greater of USD 100,000 or 50% of balance for willful | Verified as to text; **non-.gov mirror, flagged I05** |
-| S15 | O | eCFR :: 31 CFR 1010.340 — Reports of transportation of currency | USD 10,000 CMIR duty; "causes to be transported" wording; banking transfers excluded under (d) | Verified |
-| S16 | O | Do I need to file Form 8938 — IRS | All six threshold pairs; U.S. citizen is a specified individual; living-abroad definition | Verified |
-| S17 | O | Streamlined filing compliance procedures — IRS | Non-willful certification; ineligibility if under examination; quiet-disclosure treatment; TIN requirement | Verified |
-| S18 | O | U.S. taxpayers residing in the United States — IRS | 5% Title 26 miscellaneous offshore penalty; penalty replaced, not added; 3 years of returns + 6 years of FBARs | Verified |
-| S19 | O | U.S. taxpayers residing outside the United States — IRS | 330-day/no-abode non-residency test; no failure-to-file, accuracy-related, information-return or FBAR penalties; no miscellaneous offshore penalty | Verified |
-| S20 | O | US–PRC Income Tax Convention (PDF) — IRS | Art. 9(2) dividends 10%; Art. 10(2) interest 10%; saving clause (Protocol 1 ¶2) | Verified |
-| S21 | O | Foreign Account Tax Compliance Act — U.S. Treasury | Jurisdiction table row: China — "Agreement in Substance", Model 1, treated as in effect 6-30-2014; no agreement PDF linked | Verified; operational effect disclosed as I04 |
-| S22 | O | U.S. citizens and resident aliens abroad — IRS | Worldwide income; FBAR even without income; Form 3520 for > USD 100,000 gifts/bequests from a nonresident alien; credits only by filing | Verified |
-| S23 | O | Foreign currency and currency exchange rates — IRS | USD functional currency; translation at the prevailing rate; government rate sources | Verified |
-| S24 | TP | 26 U.S.C. § 988 — Treatment of certain foreign currency transactions (Cornell LII) | § 988(c)(1)(C)(i) disposition is a 988 transaction; § 988(e)(1)–(2) personal-transaction exclusion switching off above USD 200 | Verified as to text; **non-.gov mirror, flagged I05** |
-| S25 | O | 《粤港澳大湾区“跨境理财通”业务试点实施细则》问题解答（第一期）— 中国人民银行广州分行 | GBA residency eligibility; investment experience; asset/income thresholds; closed-loop accounts; individual quota exists | Verified for eligibility; quota figure left blank (I08) |
-| S26 | OS | 现行有效外汇管理主要法规目录（截至2026年6月30日）— SAFE | Confirms State Council Order 532, PBC Order [2006] No. 3, 汇发[2007]1号 and 汇发[2003]102号 remain in the current-effective list | Verified |
-| S27 | O | Foreign tax credit — IRS | Form 1116 credit for foreign income tax on foreign-source income | Verified |
+| Id | Issuer | Document | Read | How | Quote relied on |
+|---|---|---|---|---|---|
+| S01 | Bank of China | [BOC Exchange Rate board (USD row), page 1](https://www.boc.cn/sourcedb/whpj/enindex_1619.html) | 2026-11-11 | direct | USD \| Buying Rate 666.3 \| Cash Buying Rate 666.3 \| Selling Rate 669.11 \| Cash Selling Rate 669.11 \| Middle Rate 671.91 \| Pub Time 2026/11/11 10:25:02 |
+| S02 | Bank of China | [中国银行电子银行个人服务转账汇款费率表 (personal e-banking transfer tariff)](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) | 2026-11-11 | direct | 跨境汇款（电汇） 每笔汇款金额的1‰，最低收取50元/笔，最高收取260元/笔；另收电讯费,港澳台地区人民币80元/笔,非港澳台地区人民币150元/笔。 |
+| S03 | Bank of China | [关于调整部分个人服务收费内容的公告 (2026年11月11日起) — ATM cash withdrawal](https://www.boc.cn/pbservice/bi2/202608/t20260811_25684907.html) | 2026-11-11 | direct | 国外及中国港澳台：银联：每笔（12 元+取现金额的1%）收取，最高 112 元/笔；万事达、VISA：取现金额的2.5%，最低等值3美元/笔，最高等值40美元/笔 |
+| S04 | SAFE Tianjin | [2026年外汇管理互联网信息——个人外汇（08）, 2026-07-13](https://www.safe.gov.cn/tianjin/2026/0713/3088.html) | 2026-11-11 | direct | 境外个人在境内取得的经常项目合法人民币收入，凭本人有效身份证件和有交易额的购汇资金来源材料（含税务凭证）在银行办理购汇 |
+| S05 | SAFE Tianjin | [2024年经常项目外汇政策问答案例（九）, 2024-06-21](https://www.safe.gov.cn/tianjin/2024/0621/2529.html) | 2026-11-11 | direct | 持有外国人永久居留身份证的境外个人适用购汇年度便利化额度。 |
+| S06 | SAFE Ningxia | [2022年外汇业务政策释疑（八）, 2022-09-29](https://www.safe.gov.cn/ningxia/2022/0929/1997.html) | 2026-11-11 | direct | 个人结汇和境内个人购汇实行年度便利化额度管理，便利化额度分别为每人每年等值5万美元 … 年度便利化额度不是个人每年购汇或者结汇的限额，只是超过等值5万美元的购汇或结汇不能仅凭本人有效身份证件办理。 |
+| S07 | SAFE | [《经常项目外汇业务指引（2020年版）》 full text (annex to 汇发〔2020〕14号)](http://m.safe.gov.cn/safe/file/file/20200831/f0127756271c43ef9b3908d5d157bd91.pdf) | 2026-11-11 | direct | 第六十五条 境外个人经常项目外汇汇出境外：（一）外汇账户内外汇汇出，凭本人有效身份证件办理；（二）持外币现钞汇出，当日累计等值1万美元以下（含）的，凭本人有效身份证件办理。 第六十二条 … 关注期限为列入“关注名单”的当年及之后连续 2 年。 |
+| S08 | People's Bank of China / SAFE | [中国人民银行公告[2004]第16号 —《个人财产对外转移售付汇管理暂行办法》](http://m.safe.gov.cn/safe/2004/1116/5461.html) | 2026-11-11 | direct | 移民转移必须一次性申请拟转移出境的全部财产金额，分步汇出。首次可汇出金额不得超过全部申请转移财产的一半；自首次汇出满一年后，可汇出不超过剩余财产的一半 … 全部申请转移财产在等值人民币20万元以下（含20万元）的，经批准后可一次性汇出。 |
+| S09 | SAFE Tianjin | [（已修改）汇发〔2014〕2号 关于进一步改进和调整资本项目外汇管理政策的通知](https://www.safe.gov.cn/tianjin/2024/0903/2594.html) | 2026-11-11 | direct | 六、简化个人财产转移售付汇管理 …（二）取消移民财产转移分次汇出的要求。申请人向原户籍所在地外汇局办理移民财产转移核准手续后，银行可在核准件审批额度内一次或分次汇出相关资金。 |
+| S10 | SAFE Tianjin | [个人财产转移购付汇业务问答（七）, 2026-03-19](https://www.safe.gov.cn/tianjin/2026/0319/3018.html) | 2026-11-11 | direct | 根据《…资本项目外汇业务指引（2024年版）》（汇发〔2024〕12号）6.4，移民财产转移由移民原户籍所在地外汇局负责审批。继承财产转移由被继承人生前户籍所在地外汇局负责审批。 |
+| S11 | SAFE Tianjin | [2026年外汇管理互联网信息——个人外汇（10）, 2026-09-17](https://www.safe.gov.cn/tianjin/2026/0917/3134.html) | 2026-11-11 | direct | 境外个人原兑换未用完的人民币兑回外汇，凭本人有效身份证件和原兑换水单办理，原兑换水单的兑回有效期为自兑换日起24个月；对于当日累计兑换不超过等值500美元（含）…的兑换，可凭本人有效身份证件办理。 |
+| S12 | SAFE Tianjin | [2025年外汇管理互联网信息——个人外汇（八）, 2025-06-13](https://www.safe.gov.cn/tianjin/2025/0613/2811.html) | 2026-11-11 | direct | 外汇局对借用他人便利化额度及其他方式规避便利化额度及真实性管理的个人，列入“关注名单”管理 |
+| S13 | SAFE Hubei | [汇发〔2017〕29号 关于规范银行卡境外大额提取现金交易的通知](https://www.safe.gov.cn/hubei/2019/0305/851.html) | 2026-11-11 | direct | 个人持境内银行卡在境外提取现金，本人名下银行卡（含附属卡）合计每个自然年度不得超过等值10万元人民币。超过年度额度的，本年及次年将被暂停持境内银行卡在境外提取现金。… 人民币卡管理维持每卡每日不得超过等值1万元人民币 |
+| S14 | SAFE Hebei | [外汇知识问答：请问每次可带外币出境的限额是多少？, 2019-05-21](http://www.safe.gov.cn/hebei/2019/0521/1366.html) | 2026-11-11 | direct | 个人携带外币现钞金额在5000美元（含）以下的，海关直接放行；5000美元以上10000美元（含）以下的，应向银行申领《携带外汇出境许可证》；10000美元以上的，应向外汇局申领…但原则上…不得携带10000美元以上的外币现钞出境。 |
+| S15 | SAFE Guangdong | [关于个人网上办理外币兑换业务的温馨提示, 2020-03-04](https://www.safe.gov.cn/guangdong/2020/0304/1668.html) | 2026-11-11 | direct | 个人在银行办理结售汇业务…应通过银行等正规渠道办理，不得通过非法渠道买卖外汇 |
+| S16 | State Council / SAFE | [中华人民共和国外汇管理条例 (国务院令第532号)](https://www.safe.gov.cn/safe/2008/0806/5321.html) | 2026-11-11 | direct | 第五条 国家对经常性国际支付和转移不予限制。 第三十九条 …处逃汇金额30%以下的罚款；情节严重的，处逃汇金额30%以上等值以下的罚款。 第四十五条 私自买卖外汇…处违法金额30%以下的罚款；情节严重的，处违法金额30%以上等值以下的罚款。 第五十二条（二）境内个人，是指中国公民和在中华人民共和国境内连续居住满1年的外国人 |
+| S17 | People's Bank of China | [个人外汇管理办法 (中国人民银行令〔2006〕第3号)](http://m.safe.gov.cn/safe/2006/1225/5319.html) | 2026-11-11 | direct | 第十二条 …单笔或当日累计汇出在规定金额以上的，凭本人有效身份证件和有交易额的相关证明等材料在银行办理。 第十三条 境外个人在境内取得的经常项目项下合法人民币收入，可以凭本人有效身份证件及相关证明材料在银行办理购汇及汇出。 第三十七条（二）境外个人是指持护照…的外国公民 |
+| S18 | State Taxation Administration / SAFE | [国家税务总局 国家外汇管理局公告2013年第40号 (tax filing for outbound payments)](https://fgk.chinatax.gov.cn/zcfgk/c100012/c5194375/content.html) | 2026-11-11 | direct | 一、境内机构和个人向境外单笔支付等值5万美元以上…均应向所在地主管税务机关进行税务备案 … 六、…主管税务机关无须当场进行纳税事项审核，应编制《备案表》流水号，在《备案表》上盖章 |
+| S19 | SAFE Tianjin | [2021年服务贸易外汇管理问题解答（四）, 2021-11-02](https://www.safe.gov.cn/tianjin/2021/1102/1777.html) | 2026-11-11 | direct | 境外个人将其从境内取得的服务贸易、收益和经常转移项下的人民币收入购汇汇出的，可凭本人身份证件和有交易额的相关证明材料（含税务凭证）办理；税务凭证包括《服务贸易等项目对外支付税务备案表》或完税证明或免税证明。 |
+| S20 | State Taxation Administration | [中华人民共和国个人所得税法 (2018 amendment)](https://www.chinatax.gov.cn/n810219/n810744/n3752930/n3752974/c3970366/content.html) | 2026-11-11 | direct | 第三条（三）利息、股息、红利所得，财产租赁所得，财产转让所得和偶然所得，适用比例税率，税率为百分之二十。 第四条 lists the exempt categories (no inheritance clause); 第十八条 leaves savings-deposit interest to the State Council. |
+| S21 | Ministry of Finance / State Taxation Administration | [财税〔2008〕132号 关于储蓄存款利息所得有关个人所得税政策的通知](https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203286/content.html) | 2026-11-11 | direct | 自2008年10月9日起，对储蓄存款利息所得暂免征收个人所得税 … 储蓄存款在2008年10月9日后（含10月9日）孳生的利息所得，暂免征收个人所得税。 |
+| S22 | People's Bank of China et al. | [银发〔2026〕42号 关于进一步防范和处置虚拟货币等相关风险的通知, 2026-02-06](https://www.pbc.gov.cn/tiaofasi/144941/3581332/2026020619591971323/index.html) | 2026-11-11 | direct | 在境内开展法定货币与虚拟货币兑换业务…属于非法金融活动，一律严格禁止 … 本通知自发布之日起施行。…《…》（银发〔2021〕237号）同时废止。 |
+| S23 | Bank of China | [个人金融服务收费 — 中银财互通 note / 外币现钞](https://www.boc.cn/ebanking/service/cs1/200905/t20090506_990712.html) | 2026-11-11 | direct | 中行内跨省、省内异地外币转账 每笔转账金额的1‰，最高200元/笔。 |
+| S24 | SAFE Anhui | [深化跨境投融资外汇管理便利化政策操作指引 (operating guide to 汇发〔2025〕43号), §8](https://www.safe.gov.cn/anhui/file/file/20250925/43f09589bb2046c2a01a58d3a80c2b5f.pdf) | 2026-11-11 | excerpt | §8 lists the documents for a personal property-transfer remittance, including the registered property contract and the tax certificate, and caps the remittance at the sale price less the taxes of that sale. |
+| S25 | US Government Publishing Office | [26 U.S.C. § 988 — Treatment of certain foreign currency transactions (2023 ed.)](https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapN-partIII-subpartJ-sec988.htm) | 2026-11-11 | direct | §988(c)(1)(C)(i) the disposition of any nonfunctional currency shall be treated as a section 988 transaction … §988(e)(2) The preceding sentence shall not apply if the gain which would otherwise be recognized on the transaction exceeds $200. §988(e)(3) 'personal transaction' … shall not include any transaction to the extent that expenses properly allocable to such transaction meet the requirements of section 162 … or section 212. |
+| S26 | Internal Revenue Service | [Yearly average currency exchange rates](https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates) | 2026-11-11 | direct | China \| Yuan \| 2025 7.129 \| 2024 7.189 \| 2023 7.075 \| 2022 6.730 \| 2021 6.452. The IRS has no official exchange rate; it generally accepts any posted rate used consistently. |
+| S27 | Internal Revenue Service | [Comparison of Form 8938 and FBAR requirements](https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements) | 2026-11-11 | direct | Form 8938: Specified individuals living in the US … more than $50,000 on the last day of the tax year, or more than $75,000 at any time during the year … Penalties: Up to $10,000 for failure to disclose and an additional $10,000 for each 30 days of non-filing after IRS notice … potential maximum penalty of $60,000. FBAR: aggregate value … exceeds $10,000 at any time during the calendar year. |
+| S28 | eCFR (FinCEN) | [31 CFR 1010.821 — Penalty adjustment and table](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821) | 2026-11-11 | direct | 31 U.S.C. 5321(a)(5)(B)(i) Foreign Financial Agency Transaction—Non-Willful Violation … 10,000 -> 16,536. 31 U.S.C. 5321(a)(5)(C)(i)(I) Willful Violation … 100,000 -> 165,353. Column heading: Maximum penalty amount … for penalties assessed on or after January 17, 2025. |
+| S29 | FinCEN | [Report Foreign Bank and Financial Accounts (FBAR page)](https://www.fincen.gov/report-foreign-bank-and-financial-accounts) | 2026-11-11 | direct | A United States person must file an FBAR to report a financial interest in or signature authority over at least one financial account located outside of the United States if the aggregate value of all foreign financial accounts exceeds $10,000 at any time during the calendar year. |
+| S30 | US Government Publishing Office | [31 U.S.C. § 5321 — Civil penalties (2023 ed.)](https://www.govinfo.gov/content/pkg/USCODE-2023-title31/html/USCODE-2023-title31-subtitleIV-chap53-subchapII-sec5321.htm) | 2026-11-11 | direct | §5321(a)(5)(C)(i) the maximum penalty … shall be increased to the greater of— (I) $100,000, or (II) 50 percent of the amount determined under subparagraph (D) … §5321(a)(5)(D)(ii) … the balance in the account at the time of the violation. |
+| S31 | Internal Revenue Service | [Gifts from foreign person (Form 3520, Part IV)](https://www.irs.gov/businesses/gifts-from-foreign-person) | 2026-11-11 | direct | For gifts or bequests from a nonresident alien or foreign estate, you are required to report … only if the aggregate amount received … exceeds $100,000 during the taxable year. … For purported gifts from foreign corporations or foreign partnerships … exceeds $20,116 for 2025, and $20,573 for 2026. |
+| S32 | US Government Publishing Office | [26 U.S.C. § 6039F — Notice of large gifts received from foreign persons](https://www.govinfo.gov/content/pkg/USCODE-2021-title26/html/USCODE-2021-title26-subtitleF-chap61-subchapA-partIII-subpartA-sec6039F.htm) | 2026-11-11 | direct | §6039F(c) … an amount equal to 5 percent of the amount of such foreign gift for each month for which the failure continues (not to exceed 25 percent in the aggregate). |
+| S33 | US Customs and Border Protection | [Money and Other Monetary Instruments](https://www.cbp.gov/travel/international-visitors/money-monetary-instruments) | 2026-11-11 | direct | There is no limit on the amount of money that may be brought into or taken out of the United States. However, if you transport or cause to be transported … more than $10,000 in monetary instruments on any occasion into or out of the United States … you must file a report (FinCEN 105). |
+| S34 | SAFE Tianjin | [2024年外汇管理互联网信息——个人外汇（三）, 2024-02-29](https://www.safe.gov.cn/tianjin/2024/0229/2402.html) | 2026-11-11 | direct | 第六十四条 境内个人外汇汇出境外用于经常项目支出 … 外汇账户内外汇汇出境外当日累计等值5万美元以下（含）的，凭本人有效身份证件办理；超过上述金额的，凭本人有效身份证件、有交易额的相关材料办理。 |
 
-## URLs attempted and rejected
+## What each source establishes
 
-| URL | Problem | Resolution |
-|---|---|---|
-| `https://www.gov.cn/zwgk/2008-08/06/content_1066169.htm` | Redirects to the gov.cn homepage; the article ID has been retired | Replaced by `content_2602514.htm` (S05) |
-| `https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section988…` | "Page Not Found" — the site is in a temporary format | Not cited; S24 used instead and flagged |
-| `https://www.govinfo.gov/content/pkg/USCODE-2022-title26/html/…sec988.htm` (and 2023) | 404 | Not cited |
-| `https://www.irs.gov/individuals/international-taxpayers/comparison-of-form-8938-and-fbar-requirements` | 404 | Replaced by S16 |
-| `https://www.fincen.gov/report-international-transportation-currency-or-monetary-instruments` | 404 | Replaced by S15 (the CFR provision itself) |
-| `https://m.mofcom.gov.cn/article/zcfb/zczh/200311/20031100144140.shtml` | Fetch failed (mobile host) | Replaced by S07 (SAFE's own operations guide) |
+| Id | Establishes |
+|---|---|
+| S01 | The only exchange rate used in this release: 6.6630 buying, 6.6911 selling, per USD. |
+| S02 | Outbound wire fee: 0.1%, min RMB 50, max RMB 260, plus RMB 150 cable outside HK/Macau/Taiwan. Effective 2014-11-01. Note 1 permits agreed, promotional and local variations. |
+| S03 | Overseas ATM: UnionPay RMB 12 + 1% of the withdrawal, capped at RMB 112. In force from 2026-11-11. |
+| S04 | 汇发〔2020〕14号 Art. 59: a foreign individual buying FX against income earned in China needs ID plus source-of-funds material including tax evidence. |
+| S05 | Only a foreign individual holding the PRC Foreign Permanent Resident ID card gets the annual convenience amount for buying FX. |
+| S06 | The USD 50,000 is a convenience amount, not a ceiling: above it the same conversion is done with documents. The rule appends 境内个人 (domestic individual) to the buying side. |
+| S07 | Art. 65: a foreign individual's FX-account remittance needs only valid ID, with no amount threshold. Art. 62: watch-list period is the year of listing plus two. |
+| S08 | The dedicated route for an emigrant's own pre-departure property and for an inheritance; one application, staged remittance in the original rule. |
+| S09 | Art. 6(2) removed the staging requirement: after approval the bank may remit once or in instalments. Art. 6(1) also removed the RMB 500,000 referral to SAFE headquarters. |
+| S10 | Where the two property-transfer routes are approved: the former hukou for emigrant transfer, the decedent's hukou for inheritance. |
+| S11 | Change-back route: 24-month validity of the original exchange slip; USD 500 a day without one. |
+| S12 | Borrowing another person's convenience amount puts you on the watch list. |
+| S13 | ATM ceiling: RMB 10,000 per card per day, RMB 100,000 per person per year; breach suspends overseas cash withdrawals for the year and the next. |
+| S14 | Cash carrying: USD 5,000 free, 5,000-10,000 with a bank permit, above 10,000 in principle not allowed. |
+| S15 | Only banks and licensed outlets may convert currency; private FX trading is not a lawful channel. |
+| S16 | No restriction on current international payments and transfers; the penalty ladder for evading, buying FX with false documents and private FX trading; and the Regulation's own definition of 境内个人. |
+| S17 | The Measures classify by ID document: a passport holder is a 境外个人. Art. 13 permits buying FX and remitting against lawful current-account income. |
+| S18 | The 对外支付税务备案 is a filing, not a charge: the tax office issues the form without auditing the tax on the spot. It is triggered above USD 50,000 per payment in the listed categories. |
+| S19 | What counts as tax evidence: the filing form, a tax payment certificate, or an exemption certificate. |
+| S20 | The 20% flat rate on dividends, interest, rent, property gains and incidental income; 3%-45% progressive on wages and service income; nine taxable categories with no inheritance category. |
+| S21 | Interest on a savings deposit accrued from 9 October 2008 is exempt from individual income tax. |
+| S22 | Converting RMB into crypto or stablecoins inside mainland China is prohibited by the notice in force from 2026-02-06, which repealed the 2021 notice. |
+| S23 | Domestic transfers between BOC foreign-currency accounts: 0.1% of the amount, max RMB 200. |
+| S24 | The document list and the cap for the home-sale route. Read as an excerpt (section 8 only); flag U17 remains open. |
+| S25 | Selling RMB is a §988 transaction. The personal-transaction relief only covers USD 200 or less of gain; above that the whole gain is ordinary income. |
+| S26 | The yearly average rate used to size a currency gain, and the IRS statement that it publishes no official rate. |
+| S27 | FBAR threshold USD 10,000 on the aggregate; Form 8938 thresholds by filing status and residence; the USD 60,000 Form 8938 penalty ceiling. |
+| S28 | The inflation-adjusted FBAR ceilings in force for assessments on or after 2025-01-17. |
+| S29 | Who must file an FBAR, and the calendar-year maximum-value basis. |
+| S30 | The statutory willful alternative: the greater of USD 100,000 (as adjusted) or 50% of the account balance at the time of the violation. |
+| S31 | A foreign gift or bequest is not income to the recipient; the USD 100,000 threshold triggers Form 3520 reporting. USD 20,573 is the 2026 threshold for gifts from foreign corporations and partnerships. |
+| S32 | The Form 3520 penalty: 5% of the gift per month, capped at 25%. |
+| S33 | No limit on importing cash; more than USD 10,000 must be reported on FinCEN Form 105 on entry. |
+| S34 | Art. 64 shows that the same threshold logic (ID alone up to USD 50,000, documents above) is applied on the domestic-individual side of the same article set. |
 
-## Cross-checks performed
+## Arithmetic re-derived (not copied)
 
-1. **The 50,000 figure.** Not taken from commentary. Read in Art. 2 of the implementing rules (S02) and confirmed against SAFE's own 2007 press Q&A, which states the annual totals are USD 50,000.
-2. **Who the 50,000 cap binds.** Art. 2 of S02 reads "对个人结汇和境内个人购汇实行年度总额管理" — the purchase cap is expressly limited to 境内个人, while the sale-of-FX total applies to all individuals. This is why C03 (non-resident conversion of current-account income) is described as uncapped by that figure.
-3. **The 30% / 30–100% split.** Checked in the operative text of Art. 39, 40 and 45 (S05), not inferred from enforcement summaries.
-4. **The 50% FBAR figure.** Cross-checked between the statute (S14) and the inflation-adjusted table (S13), which is the operative current number.
-5. **The migration sequence trap.** Compared Art. 10(5)/Art. 13 of the IIT Law (S09) against Art. 8(4) of the 2004 Measures (S03) — the first requires a tax settlement before household registration is cancelled, the second requires the cancellation certificate to apply.
-6. **Currency of the crypto rule.** S08's final clause expressly repeals 银发〔2021〕237号, so the older notice is not relied on anywhere.
+| Check | Result |
+|---|---|
+| Ladder rows recomputed from the board figures with exact fractions | 440 rows over 11 priced channels, every one to the cent (`scripts/r11_verify.py`) |
+| Earlier published headlines reproduced from their own board readings | $53.38 / $899.01 at 6.6571-6.6851 and $901.30 at 6.6622-6.6903 — both to the cent |
+| Currency-gain rows recomputed from the IRS yearly averages | 40 rows × 5 years |
+| Every ladder row linked to an official domain | 0 exceptions |
+| Every blank or "not published" cell linked to a flag | 41 cells, all flagged |
 
-## What was **not** verified, and is therefore blank
+## What this register does NOT establish
 
-- Retail CNY/USD spread, outbound wire fee, intermediary deduction, receiving fee (no regulator publishes them).
-- SAFE processing times for any approval (no published service standard).
-- The Form 8938 penalty amount (I06).
-- The PRC savings-deposit interest exemption (I07).
-- The Wealth Management Connect individual quota (I08).
-- QDII per-investor limits (I09).
-- Civil/criminal penalties for an unreported FinCEN Form 105 (I10).
-- The real-estate FX notice behind property-sale remittances (I11).
-- The exact operation of the six-year rule on the reader's own travel history (I14).
+- It does not establish that any figure applies to a particular account. No balance, currency mix,
+  account category, tax history or filing history is known (`data/r11_flags.csv` U20).
+- It does not establish the intermediary or receiving-bank fees: no official page publishes them (U04).
+- It does not establish approval timelines for the SAFE routes (U16).
+- It does not establish any Chinese tax on an inheritance (U08) or the treaty rate on dividends (U06).
+- It does not establish anything about money received as a gift (U07): no lawful route was found.
+
+## Sources read as excerpts
+
+Only S24 (section 8 of SAFE Anhui's operating guide) was read as an excerpt. Every other source was
+fetched and read in full. The 2020 current-account guidelines (S07), the 2004 property-transfer
+announcement (S08) and 31 U.S.C. § 5321 (S30) were marked "excerpt" by an earlier layer and were read
+in full here, which closes that flag.
+
+## Repository verification
+
+`python3 scripts/r11_verify.py` is the gate. It does not import the engine: it re-implements the
+arithmetic with exact fractions, reads the CSVs and the HTML back from disk, and fails on any
+difference. The findings it enforces are in `data/r11_repo_review.csv` (R01-R12) and are published on
+`dashboard/flagged.html` and `r11-release.html` section 9.

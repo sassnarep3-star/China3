@@ -27,8 +27,9 @@ REPO = "https://github.com/sassnarep3-star/China3"
 SRC = {s[0]: s for s in data.SOURCES}
 METHOD = {m["id"]: m for m in data.METHODS}
 FLAG = {f[0]: f for f in data.FLAGS}
-NAV = [("index", "Home"), ("methods", "Methods"), ("costs", "Costs"), ("steps", "Steps"),
-       ("tax", "Tax"), ("flagged", "Flagged"), ("sources", "Sources"), ("archive", "Archive")]
+NAV = [("index", "Home"), ("methods", "Methods"), ("costs", "Costs"), ("questions", "Questions"),
+       ("steps", "Steps"), ("tax", "Tax"), ("flagged", "Flagged"), ("sources", "Sources"),
+       ("archive", "Archive")]
 OWN_PAGES = {"index.html"} | {f"dashboard/{k}.html" for k, _ in NAV if k != "index"}
 KEY_AMOUNTS = [D(10000), D(50000), D(100000), D(200000), D(400000)]
 
@@ -374,11 +375,20 @@ def page_tax():
 
 # ------------------------------------------------------------------------- flagged
 def read_irregularities():
-    path = ROOT / "data" / "e347_irregularities.csv"
+    """The repository review register is data/r11_repo_review.csv (2026-11-11).
+
+    The earlier data/e347_irregularities.csv is kept on disk for the archive but is
+    superseded: R01-R15 of that file and R01-R12 of the register are different lists
+    with colliding ids, so only one of them may be rendered as "R".
+    """
+    path = ROOT / "data" / "r11_repo_review.csv"
     if not path.exists():
         return []
     with path.open(encoding="utf-8", newline="") as fh:
-        return list(csv.DictReader(fh))
+        return [dict(id=r["id"], severity=r["severity"], where=r["where"],
+                     finding=r["finding"], evidence=r["evidence"], status=r["action"],
+                     evidence_path="", official_source_id="")
+                for r in csv.DictReader(fh)]
 
 
 def page_flagged():
@@ -418,6 +428,70 @@ def page_flagged():
 {table(["Page", "Note"], orow, kind="nav")}
 """
     return render(ctx, "Flagged for review", "Unverified values, assumptions and repository problems, each with a source link.", body)
+
+
+# ----------------------------------------------------------------------- questions
+def read_questions():
+    path = ROOT / "data" / "r11_questions.csv"
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8", newline="") as fh:
+        return list(csv.DictReader(fh))
+
+
+def page_questions():
+    ctx = Ctx("questions")
+    rows = read_questions()
+    prio = {"high": "bad", "medium": "warn", "low": ""}
+    gates, order = {}, []
+    for r in rows:
+        if r["gate"] not in gates:
+            gates[r["gate"]] = []
+            order.append(r["gate"])
+        gates[r["gate"]].append(r)
+    blocks = []
+    for g in order:
+        body_rows = [(r["id"], [f'<span class="id">{r["id"]}</span>{esc(r["question"])}<br><span class="pill {prio[r["priority"]]}">{r["priority"]}</span>',
+                                esc(r["known"]), esc(r["how_to_discover"]), ctx.src(r["source_ids"].split("|"))])
+                     for r in gates[g]]
+        blocks.append(f"<h2>{esc(g)}</h2>" + table(["Question", "What we know (sourced)", "How to find out", "Source"], body_rows))
+    n_high = sum(1 for r in rows if r["priority"] == "high")
+    unlock = [
+        (None, ["The account is recorded under your foreign passport",
+                'The 境外个人 rules: Art. 59 documents for income, Art. 65 on ID alone for foreign currency already in the account. '
+                f'<a href="{ctx.page("methods")}#L03">L03</a> and <a href="{ctx.page("methods")}#L01">L01</a> both open.',
+                ctx.src(["S04", "S07"])]),
+        (None, ["You have the hukou cancellation certificate",
+                f'The emigrant property transfer, the only route with no annual amount ceiling: <a href="{ctx.page("methods")}#L06">L06</a>.',
+                ctx.src(["S08", "S09"])]),
+        (None, ["You hold the PRC Foreign Permanent Resident ID card",
+                f'The USD 50,000 a year convenience amount without documents: <a href="{ctx.page("methods")}#L07">L07</a>.',
+                ctx.src(["S05"])]),
+        (None, ["Chinese tax on the income was withheld and you hold the certificate",
+                f'The bank tax-evidence step becomes a formality and <a href="{ctx.page("methods")}#L01">L01</a> is a single wire.',
+                ctx.src(["S19"])]),
+        (None, ["No Chinese tax was ever paid on the money",
+                "The tax is owed whether or not the money moves. No route removes it; the transfer is a separate, much smaller cost.",
+                ctx.src(["S20"])]),
+        (None, ["The money is a gift, or has no documents",
+                f'No verified route. Stop and get the branch answer in writing before doing anything (<a href="{ctx.page("flagged")}#U07">U07</a>).',
+                ctx.src(["S04"])]),
+    ]
+    body = f"""<h1>Questions to answer before any decision</h1>
+<p class="lead">Nothing on this site can pick a route for you until these are answered. Each one is stated with what is already known from an official page, what is not known, and the cheapest way to discover it. No answer is assumed.</p>
+<div class="kpis">
+<div class="kpi"><b>{len(rows)}</b><span>questions, in the order they block a decision</span></div>
+<div class="kpi"><b>{n_high}</b><span>of them high priority</span></div>
+<div class="kpi"><b>{len(order)}</b><span>gates: a later answer cannot fix an earlier one</span></div>
+<div class="kpi"><b>{len(data.FLAGS)}</b><span>open items on the <a href="{ctx.page("flagged")}">Flagged page</a></span></div>
+</div>
+<div class="banner">Why gates rather than a checklist: what the money legally is (gate 2) decides which document list the bank applies, and the account's identity category (gate 1) decides which half of the rule book applies. Getting gate 4 (the U.S. side) right will not help if gate 2 is wrong.</div>
+<p>Every question here is about facts only you, your bank and your tax adviser hold. The <a href="{ctx.page("methods")}">Methods</a> page shows what each answer unlocks, and the <a href="{ctx.page("costs")}">Costs</a> page prices each route at a published rate.</p>
+{''.join(blocks)}
+<h2>What the answers would change</h2>
+{table(["Answer", "What it unlocks", "Source"], unlock)}
+"""
+    return render(ctx, "Questions to answer", "The decision gates: every fact that has to be established before a route can be chosen, and how to establish it.", body)
 
 
 # ------------------------------------------------------------------------- sources
@@ -506,7 +580,11 @@ def page_index():
     high = [f for f in data.FLAGS if f[1] == "high"]
     hrows = [(None, [f'<a href="{ctx.page("flagged")}#{f[0]}">{f[0]}</a> {esc(f[2])}', esc(f[3]), ctx.src(f[5])]) for f in high]
     body = f"""<h1>Getting money out of a Chinese bank account and into US dollars</h1>
-<p class="lead">For a U.S. citizen. Every figure links to the official page it was read from on 10 November 2026. Anything that could not be confirmed is left blank and listed under <a href="{ctx.page("flagged")}">Flagged</a>.</p>
+<p class="lead">For a U.S. citizen. Every figure links to the official page it was read from on {data.SNAPSHOT_DATE}. Anything that could not be confirmed is left blank and listed under <a href="{ctx.page("flagged")}">Flagged</a>.</p>
+<div class="banner"><strong>Current release: 11 November 2026.</strong> The full $10,000 to $400,000 ladder for every route,
+the U.S. side of the bill, the 17 questions to answer first and every open item are on one page:
+<a href="r11-release.html">Release 2026-11-11</a>. It was re-read live from official sources and it is the figure to quote.
+Pages in the <a href="{ctx.page("archive")}">Archive</a> use older board readings.</div>
 
 <div class="grid">
 <div class="card"><h3>1. The conversion itself is not what gets taxed</h3>
@@ -516,7 +594,7 @@ def page_index():
 <p>{usd(c10["known_cost_usd"])} on $10,000 ({pct(c10["known_cost_pct"])}) and {usd(c400["known_cost_usd"])} on $400,000 ({pct(c400["known_cost_pct"])}) at Bank of China's published rate and fee. Fees taken by other banks along the way are not published and are left blank.</p>
 <p class="src">{ctx.src(["S01", "S02"])} · <a href="{ctx.page("costs")}">Cost tables</a></p></div>
 <div class="card"><h3>3. The U.S. side can cost more than the bank</h3>
-<p>Selling RMB is a currency sale under U.S. tax law. RMB acquired at the 2024 average rate would show a gain of about {pct(g24p, 1)} today, or {usd(g24, False)} on $400,000, taxed at your ordinary rate unless the personal-transaction rule applies. Each missed report has its own penalty: up to $16,536 for an FBAR, $10,000 for Form 8938, and 5% of a gift per month for Form 3520.</p>
+<p>Selling RMB is a currency sale under U.S. tax law. RMB acquired at the 2024 average rate would show a gain of about {pct(g24p, 1)} today, or {usd(g24, False)} on $400,000, taxed at your ordinary rate. The personal-transaction relief in §988(e) only covers gain of $200 or less, so at these amounts it does not apply. Each missed report has its own penalty: up to $16,536 for an FBAR, $10,000 for Form 8938, and 5% of a gift per month for Form 3520.</p>
 <p class="src">{ctx.src(["S27", "S28", "S31", "S29", "S33"])} · <a href="{ctx.page("tax")}#T10">Currency gain</a></p></div>
 <div class="card"><h3>4. The route depends on where the money came from</h3>
 <p>A U.S. passport holder does not get the $50,000 a year that Chinese citizens convert on ID alone. Each lawful route is tied to a kind of money: income earned in China, a home sale, an inheritance, or money you brought in yourself. Borrowing relatives' quotas, private swaps and crypto are prohibited, with fines of up to 30% of the amount and more in serious cases.</p>
@@ -547,6 +625,8 @@ def page_index():
 <a href="{ctx.page("methods")}"><b>Methods</b><span>11 lawful routes and 6 to avoid, with pros, cons and limits</span></a>
 <a href="{ctx.page("costs")}"><b>Costs</b><span>$10,000 to $400,000 in $10,000 steps, per route</span></a>
 <a href="{ctx.page("steps")}"><b>Steps</b><span>What to do, in order, for each route</span></a>
+<a href="{ctx.page("questions")}"><b>Questions</b><span>{len(read_questions())} gates to clear before a route can be chosen</span></a>
+<a href="{ctx.up}r11-release.html"><b>Release 2026-11-11</b><span>The full ladder, the U.S. side and every gap, one page</span></a>
 <a href="{ctx.page("tax")}"><b>Tax</b><span>Chinese tax, U.S. tax, reporting forms, penalties</span></a>
 <a href="{ctx.page("flagged")}"><b>Flagged for review</b><span>Unverified values and repository problems</span></a>
 <a href="{ctx.page("sources")}"><b>Sources</b><span>{len(data.SOURCES)} official pages with what each one says</span></a>
@@ -610,8 +690,9 @@ def data_files():
 
 def outputs():
     out = {ROOT / "index.html": page_index()}
-    for key, fn in (("methods", page_methods), ("costs", page_costs), ("steps", page_steps), ("tax", page_tax),
-                    ("flagged", page_flagged), ("sources", page_sources), ("archive", page_archive)):
+    for key, fn in (("methods", page_methods), ("costs", page_costs), ("questions", page_questions),
+                    ("steps", page_steps), ("tax", page_tax), ("flagged", page_flagged),
+                    ("sources", page_sources), ("archive", page_archive)):
         out[OUT / f"{key}.html"] = fn()
     for name, text in data_files().items():
         out[ROOT / "data" / name] = text

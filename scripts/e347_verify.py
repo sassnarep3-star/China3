@@ -20,7 +20,7 @@ from urllib.parse import urlparse, unquote
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = [ROOT / "index.html"] + [ROOT / "dashboard" / f"{n}.html" for n in
-                                 ("methods", "costs", "steps", "tax", "flagged", "sources", "archive")]
+                                 ("methods", "costs", "questions", "steps", "tax", "flagged", "sources", "archive")]
 OFFICIAL = ("boc.cn", "safe.gov.cn", "chinatax.gov.cn", "pbc.gov.cn", "irs.gov", "govinfo.gov",
             "fincen.gov", "ecfr.gov", "cbp.gov", "gd.gov.cn")
 REPO_HOST = "github.com"
@@ -42,7 +42,7 @@ def rows(name):
 
 
 # ------------------------------------------------------------------ 1. arithmetic
-BID, ASK = F(66571, 10000), F(66851, 10000)   # BOC board 665.71 / 668.51 per 100 USD
+BID, ASK = F(66630, 10000), F(66911, 10000)   # BOC board 666.30 / 669.11 per 100 USD, read 2026-11-11
 MID = (BID + ASK) / 2
 IRS = {"2021": F(6452, 1000), "2022": F(6730, 1000), "2023": F(7075, 1000), "2024": F(7189, 1000), "2025": F(7129, 1000)}
 
@@ -193,8 +193,8 @@ def check_pages():
                  "restore it with python3 scripts/e347_build.py; the legacy landing page is legacy-index.html")
         if page.h1 != 1:
             fail(f"{rel}: expected one h1, found {page.h1}")
-        if len(page.nav) != 8:
-            fail(f"{rel}: navigation has {len(page.nav)} entries, expected 8")
+        if len(page.nav) != 9:
+            fail(f"{rel}: navigation has {len(page.nav)} entries, expected 9")
         for t in page.tables:
             if t["kind"] not in ("data", "repo", "nav"):
                 fail(f"{rel}: table without data-kind")

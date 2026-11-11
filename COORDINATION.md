@@ -1332,3 +1332,44 @@ validators pass at this base (`validate_data`, `check_links`, `verify_deep`, `te
 
 ### R11 log
 - 2026-11-11: claim written and pushed before any content file was touched.
+
+### R11 progress log — 2026-11-11
+
+- **R11-T1 done.** 34 official documents opened live on 2026-11-11 (30 by this session, plus 4 reloaded to
+  upgrade earlier "excerpt" labels). `data/r11_sources.csv` stores URL, issuer, quote and read date;
+  `VERIFICATION.md` is generated from it. Two sources remain excerpt-only and are flagged (U11).
+- **R11-T2 done.** `scripts/r11_engine.py` derives `data/r11_ladder.csv` (440 rows: 11 priced channels × 40
+  increments) from the board read at **2026/11/11 10:25:02** (bid 6.6630, ask 6.6911). `scripts/r11_verify.py`
+  re-implements the arithmetic with exact fractions and reproduces, to the cent, the two headline figures earlier
+  layers published at their own board readings: **$53.38 / $899.01** (6.6571-6.6851) and **$901.30**
+  (6.6622-6.6903). The current figures are **$53.42 / $901.20**. The difference between every published layer is
+  the clock, not the channel.
+- **R11-T3 done.** `dashboard/questions.html` publishes 17 questions in 7 gates, each with what is known (sourced),
+  what is not known, and how to discover it.
+- **R11-T4 done.** `data/r11_repo_review.csv` R01-R12 supersedes `data/e347_irregularities.csv` R01-R15, which
+  collided on ids with the newer register. The dashboard now renders the new register.
+- **Corrections made, with the source that justifies each:**
+  - `dashboard/index.html` card 3 said the currency gain is taxed "unless the personal-transaction rule applies".
+    Read literally from 26 U.S.C. §988(e)(2), the relief only covers gain of **$200 or less**, so at these amounts it
+    cannot apply. Corrected on the home page, the tax page and the release page (R03).
+  - The dashboard, the executive summary and `index.html` all stated the 2026-11-10 board. All three now state the
+    2026-11-11 board, and `scripts/e347_verify.py`, `scripts/r11_verify.py` and the e347 CI job would fail if they
+    drifted apart again.
+  - `scripts/verify_completion.py` embeds the superseded 6.6851 rate and could republish it. Its `--build` write is now
+    refused with an explanatory error; the archived page is unchanged.
+  - Two sources marked "excerpt" in the e347 register (the 2020 current-account guidelines and the 2004
+    property-transfer announcement) were read in full today and relabelled `direct` (R06).
+  - `scripts/verify_m5f19_site.py` check J is session-local by construction and reported the integrator's own
+    shared-output edits as violations. It now prints a note, not a failure, when the branch is the
+    final-integration branch — and still fails otherwise.
+- **Verification run (all green):** `validate_data`, `check_links`, `verify_deep`, `test_costs`,
+  `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`,
+  `verify_final_integration`, `verify_a513`, `verify_c3x_site`, `verify_c5bf`, `verify_completion`,
+  `verify_m5f19_site`, `e347_verify` (440 rows / 9 pages / 2,200 links), `r11_verify` (440 ladder rows, 6
+  reproduced scenario figures, 40 currency-gain rows, 542 page rows, 1,585 links, 24 document figures), plus a
+  repo-wide sweep of 90 HTML files for broken internal links: **0 broken**.
+- **Shared outputs changed (R11-T6, final-integration privilege logged):** `index.html` (release banner, corrected
+  §988(e) sentence, two new section links), `EXECUTIVE_SUMMARY.md` (rewritten from the live figures),
+  `README.md` (release entry point and rebuild instructions), `VERIFICATION.md` (regenerated register),
+  `dashboard/*.html` (regenerated at the current board, plus the new Questions page and the new review register),
+  `data/e347_*.csv` (regenerated).
