@@ -349,3 +349,29 @@ VERDICTS = {
     "contradiction": ("bad", "Contradiction", "The site's own words disagree with the official page, with each other, or are more absolute than the source."),
     "not re-checked": ("warn", "Not re-checked", "Blank on purpose. Not re-read in this pass, so not confirmed here."),
 }
+
+# ------------------------------------------------------------ request status
+# Checked on main at 31eb74b (which contains the integration merge 7702e43) at 13:10Z.
+FIX_COMMIT = "7702e43"
+REQUESTS = [
+    ("5903-REQ-01", "scripts/e347_build.py",
+     'Build the two "668.51 per 100" / "665.71 per 100" strings from the rate values instead of typing them.',
+     "A05, A06", "applied",
+     'dashboard/costs.html now reads "Selling Rate 668.86 per 100" and "Buying Rate 666.06 per 100", both matching the value column.'),
+    ("5903-REQ-02", "scripts/e347_data.py",
+     "Tax row T10: a personal-transaction gain over $200 is a capital gain (Publication 525), and a personal loss is not deductible (26 U.S.C. 165(c)).",
+     "A24, A25, A26", "applied",
+     'T10 now separates the investment/business case from the personal case, cites § 988(e)(1), (e)(2) and Publication 525, and carries a new source row (S43 IRS).'),
+    ("5903-REQ-03", "scripts/e347_data.py",
+     "Print the Federal Reserve's 2025 average (7.1875) beside the IRS's 7.129, or say which one the column uses.",
+     "A28", "applied",
+     "The Federal Reserve's 2025 average now appears on the Tax page and in the source register."),
+    ("5903-REQ-04", "scripts/e347_data.py",
+     "Home-page sentence about the USD 50,000 amount: make it conditional on the Foreign Permanent Resident ID or on being a 境内个人, and give the two official tests.",
+     "A08, A09, A35", "open",
+     'index.html still reads "A U.S. passport holder does not get the $50,000 a year that Chinese citizens convert on ID alone." No official page supports it as written; see A08 and A35.'),
+    ("5903-REQ-05", "dashboard/archive.html",
+     "Regenerate so this page is listed, and add a navigation entry for it.",
+     "this page is new", "partly applied",
+     'dashboard/archive.html now lists 5903-audit.html under "Independent reviews". The top navigation was cut back to the ten core sections instead of gaining a fourteenth entry, which is a defensible choice; the page is reachable from the Archive.'),
+]

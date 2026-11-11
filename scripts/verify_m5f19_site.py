@@ -449,22 +449,42 @@ def branch_claim_paths():
     back to: new files and generated shared files are additive and allowed; editing
     a file that already existed at the merge base and belongs to another layer is not.
     """
-    try:
-        branch = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=ROOT,
-                                capture_output=True, text=True, check=True).stdout.strip()
-    except subprocess.CalledProcessError:
-        return set(), ""
+    # A pull-request run checks out refs/pull/N/merge in a detached HEAD, so
+    # "rev-parse --abbrev-ref HEAD" returns the literal string "HEAD". That string
+    # occurs in this board's prose, so the old lookup matched someone else's block and
+    # failed honest pull requests (logged as 6DA0-IR-02 / 6DA0-REQ-03). GitHub exports
+    # the real branch name for pull requests; use it, and never treat "HEAD" as a name.
+    branch = (os.environ.get("GITHUB_HEAD_REF") or "").strip()
+    if not branch:
+        try:
+            branch = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=ROOT,
+                                    capture_output=True, text=True, check=True).stdout.strip()
+        except subprocess.CalledProcessError:
+            return set(), ""
+    if branch in ("", "HEAD"):
+        # Detached and no environment hint: fall back to the additive rule below.
+        return set(), branch
     board_path = os.path.join(ROOT, "COORDINATION.md")
     if not os.path.exists(board_path) or not branch:
         return set(), branch
     text = open(board_path, encoding="utf-8", errors="ignore").read()
     if branch not in text:
         return set(), branch
-    idx = text.rfind(branch)
-    start = text.rfind("<!-- session-", 0, idx)
-    start = 0 if start == -1 else start
-    nxt = text.find("<!-- session-", idx)
-    block = text[start: nxt if nxt != -1 else len(text)]
+    # Union every section whose own marker names this session, rather than "the last
+    # occurrence of the branch name". A later session that quotes this branch in its
+    # block used to steal the lookup and fail the honest PR (seen on PR #93). Sections
+    # are delimited by the <!-- session-... --> markers the board already uses.
+    session_id = branch.split("/", 1)[-1].split("-", 1)[0]
+    sections = re.split(r"(?=<!-- session-)", text)
+    mine = [sec for sec in sections if session_id and session_id in sec.split("\n", 1)[0]]
+    if mine:
+        block = "\n".join(mine)
+    else:  # no marker of its own: fall back to the old last-mention heuristic
+        idx = text.rfind(branch)
+        start = text.rfind("<!-- session-", 0, idx)
+        start = 0 if start == -1 else start
+        nxt = text.find("<!-- session-", idx)
+        block = text[start: nxt if nxt != -1 else len(text)]
     claim = set()
     for token in re.findall(r"[A-Za-z0-9_./*\-]+\.(?:html|css|js|py|yml|csv|md)", block):
         token = token.strip("./")
