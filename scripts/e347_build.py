@@ -19,6 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import e347_data as data  # noqa: E402
 import e347_costs as costs  # noqa: E402
+import b2d_data as decide  # noqa: E402  (decision-readiness register, session b2d4ff40)
 from e347_costs import q  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -27,8 +28,9 @@ REPO = "https://github.com/sassnarep3-star/China3"
 SRC = {s[0]: s for s in data.SOURCES}
 METHOD = {m["id"]: m for m in data.METHODS}
 FLAG = {f[0]: f for f in data.FLAGS}
-NAV = [("index", "Home"), ("methods", "Methods"), ("costs", "Costs"), ("steps", "Steps"),
-       ("tax", "Tax"), ("flagged", "Flagged"), ("sources", "Sources"), ("archive", "Archive")]
+NAV = [("index", "Home"), ("decisions", "Decide"), ("methods", "Methods"), ("costs", "Costs"),
+       ("steps", "Steps"), ("tax", "Tax"), ("flagged", "Flagged"), ("sources", "Sources"),
+       ("archive", "Archive")]
 OWN_PAGES = {"index.html"} | {f"dashboard/{k}.html" for k, _ in NAV if k != "index"}
 KEY_AMOUNTS = [D(10000), D(50000), D(100000), D(200000), D(400000)]
 
@@ -479,6 +481,71 @@ def page_archive():
     return render(ctx, "Archive", "Earlier research pages kept for reference.", body)
 
 
+# ---------------------------------------------------------------------- decisions
+DECISION_PILL = {"Answered": "ok", "Partly answered": "warn", "Open": "bad"}
+
+
+def page_decisions():
+    """Decision-readiness register: question, answer, what is missing, how to find it."""
+    ctx = Ctx("decisions")
+    n = len(decide.DECISIONS)
+    counts = {k: sum(1 for d in decide.DECISIONS if d["status"] == k) for k in DECISION_PILL}
+    parts = [f"""<h1>What has to be settled before you decide</h1>
+<p class="lead">{n} questions, each marked with whether an official page answers it. {counts["Answered"]} are settled by an official source. {counts["Partly answered"]} depend on a document only you can produce. {counts["Open"]} cannot be settled from any public source — for those, the last two columns say what is missing and how to obtain it.</p>
+<div class="banner">No row below states a fact about your account. The <b>What we know</b> column restates the text of the source it links. The <b>How to find out</b> column is procedural advice, not a sourced fact. Nothing here is a recommendation for your case; it is the list of things that decide which recommendation would be safe.</div>
+<div class="kpis">
+<div class="kpi"><b>{counts["Answered"]}</b><span>settled by an official page</span><span class="src"><a href="{ctx.page("sources")}">Sources</a></span></div>
+<div class="kpi"><b>{counts["Partly answered"]}</b><span>rule settled, application needs your documents</span></div>
+<div class="kpi"><b>{counts["Open"]}</b><span>cannot be answered from public sources</span><span class="src"><a href="{ctx.page("flagged")}">Flagged</a></span></div>
+<div class="kpi"><b>{len(decide.DISCOVERY_PLAN)}</b><span>documents or questions that close them</span></div>
+</div>"""]
+
+    for sid, stage, note in decide.STAGES:
+        rows = []
+        for d in decide.DECISIONS:
+            if d["stage"] != sid:
+                continue
+            fl = f' <span class="note">Open item {ctx.flags(d["flags"])}</span>' if d["flags"] else ""
+            rows.append((d["id"], [
+                f'<span class="id">{d["id"]}</span>{esc(d["question"])}',
+                f'<span class="pill {DECISION_PILL[d["status"]]}">{esc(d["status"])}</span>',
+                esc(d["known"]),
+                esc(d["missing"]) if d["missing"] else '<span class="note">Nothing - the official page settles it.</span>',
+                esc(d["find"]),
+                ctx.src(d["src"]) + fl]))
+        parts.append(f'<h2 id="stage-{sid}">{sid}. {esc(stage)}</h2>\n<p class="note">{esc(note)}</p>\n'
+                     + table(["Question", "Can it be answered?", "What we know", "What is missing", "How to find out", "Source"], rows))
+
+    plan = "".join(f"<li><b>{esc(step)}. {esc(item)}</b> — {esc(settles)} <span class=\"note\">Closes: {esc(rows)}</span></li>"
+                   for step, item, settles, rows in decide.DISCOVERY_PLAN)
+    asks = "".join(f"<li>{esc(q)}</li>" for q in decide.QUESTIONS_TO_ASK)
+    parts.append(f"""<h2 id="how-to-close">How to close the open items</h2>
+<p>In this order. Each document is useful on its own, and the first three decide whether the rest matters.</p>
+<ol class="plain">{plan}</ol>
+<h2 id="ask-the-bank">What to put to the bank in writing</h2>
+<p>Ask these at the branch that holds the account, and keep the written answer. A branch cannot bind another branch, and an answer that contradicts the rules above should be checked against the official page it cites.</p>
+<ul class="plain">{asks}</ul>
+<h2 id="order">The order that follows from the register</h2>
+<ol class="plain">
+<li><b>Classify the money</b> (A01-A05). Until the origin is known, every route is a guess.</li>
+<li><b>Fix the Chinese tax position</b> (C01-C08). The bank will not move money whose tax evidence is missing, and the tax is owed whether or not it moves.</li>
+<li><b>Fix the U.S. reporting position</b> (D04-D07). The penalties for a missed report are larger than the bank's fee by orders of magnitude, and they do not depend on which Chinese route you use.</li>
+<li><b>Then choose the route</b> (B01-B08) and price it (E01-E06). Route choice changes the bank cost by tenths of a percent; it does not change the Chinese income tax or the U.S. reports.</li>
+</ol>
+<h2 id="related">Other documents in this repository</h2>
+<p>Listed so nothing is lost, not as corroboration: none of these is re-verified by this page. Where they disagree with it, the register above states the date of the reading it relies on.</p>
+{table(["Document", "What it is", "Status here", "Link"],
+       [(None, [f'<b>{esc(title)}</b><br><span class="note">{esc(what)}</span>', esc(note),
+                '<span class="pill">not re-verified</span>',
+                f'<a href="{esc(url)}" rel="noopener">open</a>'])
+        for title, what, note, url in decide.RELATED_DOCS], kind="repo")}
+<p class="note">Anything still open after these steps belongs on the <a href="{ctx.page("flagged")}">Flagged page</a>, not in a decision.</p>
+""")
+    return render(ctx, "Decide",
+                  "The questions, answers and missing information that decide how RMB in a Chinese bank account can become USD, with how to find each missing item.",
+                  "\n".join(parts))
+
+
 # --------------------------------------------------------------------------- index
 def page_index():
     ctx = Ctx("index")
@@ -539,11 +606,12 @@ def page_index():
 <p class="note">The dividend row includes 20% Chinese tax. ATM and cash rows cover only the published part of the cost. <a href="{ctx.page("costs")}">Every $10,000 step for every route</a>.</p>
 
 <h2>What is still open</h2>
-<p>These three decide the answer and cannot be settled from public sources.</p>
+<p>These three decide the answer and cannot be settled from public sources. The full register - every question, whether an official page answers it, what is missing and how to obtain it - is on the <a href="{ctx.page("decisions")}">Decide page</a>.</p>
 {table(["Open item", "Why it matters", "Source"], hrows)}
 
 <h2>Sections</h2>
 <div class="links">
+<a href="{ctx.page("decisions")}"><b>Decide</b><span>{len(decide.DECISIONS)} questions to settle first, and how to close each one</span></a>
 <a href="{ctx.page("methods")}"><b>Methods</b><span>11 lawful routes and 6 to avoid, with pros, cons and limits</span></a>
 <a href="{ctx.page("costs")}"><b>Costs</b><span>$10,000 to $400,000 in $10,000 steps, per route</span></a>
 <a href="{ctx.page("steps")}"><b>Steps</b><span>What to do, in order, for each route</span></a>
@@ -584,6 +652,11 @@ def data_files():
     f["e347_facts.csv"] = csv_text(
         ["id", "group", "item", "rate_or_amount", "meaning", "source_ids", "source_urls", "flags"],
         [[t[0], t[1], t[2], t[4] or "", t[3], "|".join(t[5]), urls(t[5]), "|".join(t[6])] for t in data.TAX_ROWS])
+    f["b2d_decisions.csv"] = csv_text(
+        ["id", "stage", "question", "status", "what_we_know", "source_ids", "source_urls",
+         "what_is_missing", "how_to_find_out", "flags"],
+        [[d["id"], d["stage"], d["question"], d["status"], d["known"], "|".join(d["src"]), urls(d["src"]),
+          d["missing"], d["find"], "|".join(d["flags"])] for d in decide.DECISIONS])
     f["e347_flags.csv"] = csv_text(
         ["id", "severity", "item", "why", "what_would_settle_it", "source_ids", "source_urls"],
         [[x[0], x[1], x[2], x[3], x[4], "|".join(x[5]), urls(x[5])] for x in data.FLAGS])
@@ -610,8 +683,8 @@ def data_files():
 
 def outputs():
     out = {ROOT / "index.html": page_index()}
-    for key, fn in (("methods", page_methods), ("costs", page_costs), ("steps", page_steps), ("tax", page_tax),
-                    ("flagged", page_flagged), ("sources", page_sources), ("archive", page_archive)):
+    for key, fn in (("decisions", page_decisions), ("methods", page_methods), ("costs", page_costs), ("steps", page_steps),
+                    ("tax", page_tax), ("flagged", page_flagged), ("sources", page_sources), ("archive", page_archive)):
         out[OUT / f"{key}.html"] = fn()
     for name, text in data_files().items():
         out[ROOT / "data" / name] = text
