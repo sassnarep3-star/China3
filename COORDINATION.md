@@ -1449,3 +1449,32 @@ This session claims V1–V5 on its own board. Scopes: independent verification o
 - 2026-11-11: QNA.md created and committed (V2).
 - 2026-11-11: Cost-table spot-check passed (V3); e347_build.py + e347_verify.py PASS; live site confirmed serving (V4).
 - 2026-11-11: Creating PR from `arena/78c46684-china3` to `main` (V5).
+---
+
+## Session `arena/1c55025d-china3` — Full Requirements Audit & Re-verification (2026-11-11)
+
+**Branch:** `arena/1c55025d-china3` (Arena fixed: single-branch rule).  
+**Base:** `6750ddb` (`main` after PR #48, B8720152 re-verified e347 dashboard).  
+**Live site:** https://sassnarep3-star.github.io/China3/  
+**Scope note:** This session does not introduce new primary sources; it re-verifies every table row, cost ladder, and flagged item against the 35 official sources already read on 2026-11-10/11, rebuilds the dashboard, and records the requirements trace for the original brief.
+
+### Claimed tasks (arena/1c55025d-china3)
+
+| ID | Task | File scope | Status | Owner | Sources verified | Notes |
+|---|---|---|---|---|---|---|
+| R1 | Repo review line-by-line, verify from official trusted sources, provide links, flag irregularities | `REPO_AUDIT.md`, `research/1c55025d-audit.md`, `COORDINATION.md` | in progress | arena/1c55025d-china3 | 35 official (BOC, SAFE, PBOC, STA, IRS, FinCEN, eCFR, CBP, govinfo) + BOC tariff re-read 2026-11-11 | See audit doc |
+| R2 | Executive summary (important details) | `EXECUTIVE_SUMMARY.md`, `index.html`, `dashboard/*` | in progress | arena/1c55025d-china3 | S01,S02,S04,S05,S08,S12,S17,S25,S27,S28,S30,S31,S34 | Already built; re-checked |
+| R3 | Questions / Informations / Answers needed before decision, plus discovery suggestions | `dashboard/flagged.html`, `research/1c55025d-audit.md` | in progress | arena/1c55025d-china3 | U01–U19 flags each with official link | 19 open items |
+| R4 | Conversion methods CNY→USD: list all ways, pros/cons, tax-penalty breakdown | `dashboard/methods.html`, `data/e347_methods.csv`, `research/1c55025d-audit.md` | in progress | arena/1c55025d-china3 | S04,S05,S08,S09,S12,S15,S18,S19,S20,S21,S23 | 11 lawful + 6 prohibited |
+| R5 | Cost estimation $10k→$400k in $10k steps, mobile-friendly tables, step-by-step per method | `dashboard/costs.html`, `dashboard/steps.html`, `data/e347_costs.csv`, `data/e347_fx_gain.csv` | in progress | arena/1c55025d-china3 | S01,S02,S03 + IRS avg S28 | 440 rows recomputed |
+| R6 | Site creation: clean landing + subpages by category, dashboard UI, every row has source link or flagged blank | `index.html`, `dashboard/*.html`, `dashboard/site.css`, `scripts/e347_build.py` | in progress | arena/1c55025d-china3 | all 35 sources | e347_build + e347_verify |
+| R7 | Verification: every table row must have source link; if unverified leave blank+flag; never infer | `scripts/e347_verify.py`, `dashboard/flagged.html` | in progress | arena/1c55025d-china3 | official-domain allowlist enforced | PASS: 658 rows sourced, 380 blanks flagged |
+| R8 | PR → merge → Pages deploy verification, record PR link & merge result | GitHub PR / Pages / `COORDINATION.md` | in progress | arena/1c55025d-china3 | Pages + verification workflows | Do not merge broken site |
+
+### Rules for this session
+- Shared files (`index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`) change additively only; generated pages via `scripts/e347_build.py`.
+- No sibling files (`c3x-*`, `d646-*`, `s775-*`, `m5f19-*`, `a513-*`, `s436-*`, `deep-*`, `s119-*`, `a058-*`, `a502-*`) are edited.
+- If a file outside scope must change, log a request here instead of editing.
+
+### Log — 2026-11-11
+- 2026-11-11T claim: read COORDINATION.md (1319 lines), inspected all remote branches (`git ls-remote`, `git branch -a`), confirmed `main` at 6750ddb, wrote non-overlapping claim and pushed before touching content files.
