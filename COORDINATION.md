@@ -1237,6 +1237,7 @@ integration role**, which is exactly what the board legend permits.
 - **Observation, flagged:** the repository's Pages setting is `build_type: legacy` (deploy from branch), and the Actions workflow also deploys. Two deployments are created for each push to `main`. Both publish the same tree, so the result is the same; the owner may want to keep only one.
 - **Follow-up PR (this record plus one stylesheet fix):** the route-name column in the two "side by side" cost tables did not wrap on phones. Fixed in `dashboard/site.css`. PR link recorded in the line below.
 - **Follow-up PR:** https://github.com/sassnarep3-star/China3/pull/46. Its merge result is reported in the session's closing message, since a record of its own merge would need yet another pull request.
+<<<<<<< HEAD
 ---
 
 <!-- session-5f1925df-m5f19-v1 -->
@@ -1296,3 +1297,11 @@ reachable by direct URL and this request stays open on the board.
   this branch; confirmed all ten inherited validators PASS at that base (`validate_data`, `check_links`, `verify_deep`,
   `test_costs`, `verify_cost_tables`, `verify_s436_site`, `verify_d646_site`, `verify_dashboard`, `verify_s775_site`,
   `verify_final_integration`). Wrote this claim and pushed it before touching any content file.
+=======
+>>>>>>> f6ae79e (Merge pull request #46 from sassnarep3-star/arena/ea347561-china3)
+
+### B8720152: re-verification, rate-drift flag and republish (claimed)
+
+- **Session:** `arena/b8720152-china3` (branch of this session; claimed 2026-11-11, UTC).
+- **Scope:** `scripts/e347_data.py` (flag U15 text only), regenerated `data/e347_flags.csv`, `dashboard/flagged.html`, `index.html` and the other generated pages, `COORDINATION.md`. No figures changed.
+- **Status:** in progress.
